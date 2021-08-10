@@ -1,0 +1,108 @@
+<!doctype html>
+<html amp lang="vi">
+<head>
+<title>Trang-web LHBội</title>
+<meta name="description" content="Trang-web cá-nhân Lê Hồng Bội, chia-sẻ những thông-tin hữu-ích nhằm làm cho xã-hội tốt hơn" />
+<meta name="keywords" content="hữu-ích, tài-chính-cá-nhân, đầu-tư, tiết-kiệm, làm giàu chắc-chắn">
+<link rel="canonical" href="https://www.lhboi.name.vn/">
+<link rel="alternate" href="https://sites.google.com/view/le-hong-boi/home">
+<!--#include virtual="head.shtml" -->
+<!--#include virtual="flex.css" -->
+
+</style>
+</head>
+
+<body>
+<!--#include virtual="menu.shtml" -->
+<div class="body">
+  <div class="title">Giới-thiệu</div>
+<!--#set var="url" value="\"https://www.lhboi.name.vn\"" -->
+<!--#include virtual="share.shtml" -->
+
+  <div class="container">
+    <div class="mbr-row mbr-justify-content-center">
+      <div class="mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12 resizeblock vcenter">
+        <div class="lrsp">
+          <h1>Tổng-quát</h1>
+          <p class="mbr-text style display-7">
+Đây là trang-web cá-nhân của <a href="home/cv">Lê Hồng Bội</a>, nơi chia-sẻ những kiến-thức-quản-lý <a href="/huu-ich/">tài-chính-gia-đình</a>, kinh-nghiệm sử-dụng máy-tính và vài thứ trong cuộc-sống…
+<br>Đặc-biệt nhất là công-cụ tính <a href="huu-ich/ke-hoach-tai-chinh/">lộ-trình-tài-chính tối-ưu cho suốt cuộc-đời</a>. Mỗi người đều tự tính được tổng-số tài-sản cần có ở mỗi thời-điểm trong suốt cuộc-đời, và cách tích-luỹ để có số tài-sản đó.
+          </p>
+        </div>
+      </div>
+      <div class="mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12 resize vcenter">
+        <div class="lrsp">
+          <div class="vcenter">
+            <a href="huu-ich/ke-hoach-tai-chinh/"><amp-img src="images/KHTCp1.png" alt="Lộ-trình-tài-chính điển-hình" width="600" height="371" layout="responsive"></amp-img></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h1>Các nội-dung nổi-bật của website:</h1>
+
+  <div class="container">
+    <div class="mbr-row mbr-justify-content-center">
+      <div class="mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4">
+        <div class="lrsp">
+          <a href="huu-ich/nghi-luc"><amp-img src="images/bookkeeping.jpeg" layout="responsive" height="233" width="350" alt="Ghi sổ"></amp-img></a>
+          <div class="center"><h2>Nghị-lực để có dư tiền</h2></div>
+          <p>Nghị-lực để chọn giữa sự thoả-mãn trước-mắt và lợi-ích lâu-dài.
+	  <br><a href="huu-ich/nghi-luc">Nghị-lực</a> sẽ giúp bạn lập ngân-sách, kiểm-soát chi-tiêu, tích-luỹ đầu-tư lâu-dài và trở nên giàu.
+          </p>
+        </div>
+      </div>
+
+      <div class="mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 last-child">
+        <div class="lrsp">
+          <a href="huu-ich/hieu-qua-dau-tu"><amp-img src="images/goldcoingrow.jpg" layout="responsive" height="233" width="350" alt="Long-term investment"></amp-img></a>
+          <div class="center"><h2>Tính hiệu-quả khi đầu-tư</h2></div>
+          <p>So-sánh <a href="huu-ich/hieu-qua-dau-tu">hiệu-quả các vụ đầu-tư</a> từ năm 2002 của tôi.
+          <br>Hiệu-quả của việc đầu-tư được tính bằng tốc-độ tăng tài-sản chứ không phải lượng tài-sản tăng thêm.
+          </p>
+        </div>
+      </div>
+
+      <div class="mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 last-child">
+        <div class="lrsp">
+          <a href="huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu"><amp-img src="data/VFM.png" layout="responsive" height="233" width="350" alt="Kết-quả quỹ-đầu-tư"></amp-img></a>
+          <div class="center"><h2>Gửi ngân-hàng hay quỹ-đầu-tư</h2></div>
+          <p>So-sánh lợi-nhuận của <a href="huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu">gửi tiết-kiệm và quỹ-đầu-tư</a>.
+          <br>Gửi ngân-hàng ngắn-hạn và gửi quỹ-đầu-tư dài-hạn là thích-hợp nhất.
+          </p>
+        </div>
+      </div>
+
+      <div class="mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 last-child">
+        <div class="lrsp">
+          <a href="kinh-nghiem/may-tinh/privcloudstor"><amp-img src="images/Nextcloud.png" layout="responsive" height="233" width="350" alt="Nextcloud"></amp-img></a>
+          <div class="center"><h2>Tự làm cloud storage server</h2></div>
+          <p>Dùng một máy-tính cũ và yếu làm một <a href="kinh-nghiem/may-tinh/privcloudstor">cloud storage server</a> cho cá-nhân hoặc nhóm ít người như gia-đình với dung-lượng-lưu-trữ tuỳ theo nhu-cầu, từ vài trăm GB trở lên đến vài TB.
+          </p>
+        </div>
+      </div>
+
+      <div class="mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 last-child">
+        <div class="lrsp">
+          <a href="kinh-nghiem/may-tinh/protect"><amp-img src="images/fidokey.png" layout="responsive" height="233" width="350" alt="FIDO keys"></amp-img></a>
+          <div class="center"><h2>Bảo-vệ tài-sản-số</h2></div>
+          <p>Tìm-hiểu kỹ hơn về những loại tài-sản trong thời-đại số-hoá, những rủi-ro làm mất những tài-sản đó, và <a href="kinh-nghiem/may-tinh/protect">những cách bảo-vệ</a> tài-khoản-ngân-hàng và tài-khoản-dịch-vụ-online, và cách chuyển-giao tài-sản-số lại cho người khác.
+          </p>
+        </div>
+      </div>
+
+      <div class="mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 last-child">
+        <div class="lrsp">
+          <a href="kinh-nghiem/may-tinh/pi-network"><amp-img src="images/pi-networks.jpg" layout="responsive" width="350" height="233" alt="Pi"></amp-img></a>
+          <div class="center"><h2>Tiền-mật-mã Pi</h2></div>
+          <p>Bài <strong><span class="red">MỚI</span></strong>: Giới-thiệu <a href="kinh-nghiem/may-tinh/pi-network">tiền-mật-mã cho mọi người: Pi</a>.
+          <br>Một loại tiền-mật-mã mà mọi người trên toàn thế-giới đều dùng được một cách dễ-dàng.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<!--#include virtual="/ads1.inc" -->
+<!--#include virtual="/foot.shtml" -->
