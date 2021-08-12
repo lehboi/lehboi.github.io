@@ -1,11 +1,11 @@
 <!doctype html>
 <html amp lang="en">
 <head>
-<title>Personal Financial Roadmap</title>
-<meta name="description" content="Guide to Personal financial planning" />
-<meta name="keywords" content="financial, planning, personal, family, saving, retirement">
-<link rel="canonical" href="http://en.lhboi.name.vn/fa/pfr/">
-<link rel="alternate" href="http://www.lhboi.name.vn/huu-ich/ke-hoach-tai-chinh/" hreflang="vi">
+<title>Personal Financial Roadmap (Working Years)</title>
+<meta name="description" content="Spreadsheet and script to draw a financial roadmap for whole life, part one for working years" />
+<meta name="keywords" content="planning, financial, roadmap, family, personal, saving, retirement">
+<link rel="canonical" href="http://en.lhboi.name.vn/fa/pfr/pfr1">
+<link rel="alternate" href="http://www.lhboi.name.vn/huu-ich/ke-hoach-tai-chinh/khtcp1" hreflang="vi">
 
 <!-- in head of html file -->
 
@@ -17,6 +17,7 @@
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
 
 
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
@@ -183,13 +184,13 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     </div>
   </div>
   
- 
+  
 
 
   <div class="body">
-    <div class="title">Personal Financial Roadmap</div>
-<div class="right">First draft in February 2019.</div>
-<div class="right">(More in <a href="http://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/">Vietnamese</a>)</div>
+    <div class="title">Personal Financial Roadmap (working years)</div>
+<div class="right">First draft in February, 2019.</div>
+<div class="right">(More in <a href="http://lhboi.name.vn/huu-ich/ke-hoach-tai-chinh/khtcp1">Vietnamese</a>)</div>
 
   <div>
     <amp-social-share type="email" height="32"></amp-social-share>
@@ -208,31 +209,141 @@ http://en.lhboi.name.vn/fa/pfr/
     </amp-facebook-like>
   </div>
 
-<p>Easy come, easy go? We make it easy come, easy save.</p>
-<p>Ever wonder why saving money seems to be so much harder than spending it? You are not alone if you raise that question. Establish financial discipline with <b>Personal Financial Roadmap</b> (PFR) to help you achieve your financial goals and plans. We can also help you to avoid living the “Scrooge” life, where may make your life miserable from saving too much, and the restrictions you place on your expenditures are not compatible with your lifestyle. So the question here is, how much is too much saving?
+<h2>In your working years</h2>
+<p>You are working and earning money for daily expenses, paying mortgages and saving for future expenses such as your children's college fund, and your retirement, etc.
+<br>This is the tool you need to find an optimized roadmap running through all of those targets smoothly and avoiding struggle times lacking money. Using this tool you can keep a relatively stable spending over income ratio and living condition in your whole life.
+<br>This tool helps you quickly respond to any change in income, expenses, inflation, etc.
 </p>
-<p>
-PFR financial budgeting tool will help you organize and allocate your funds appropriately to prepare you for a stable financial future.
+<p>This page gives step-by-step instructions on how to use the spreadsheet <b><a href="https://docs.google.com/spreadsheets/d/1QsMiRTOE4PA7rneoMt5tuiI6c_50cmGbkG64RKk0MQo/edit?usp=sharing" target="_blank">PFRp1</a></b> in financial planning. When you retire, you need to use the spreadsheet <a href="pfr2.html">PFRp2</a> to monitor your retirement fund.
 </p>
-<h1>Why Financial Planning?</h1>
-<p>We all have different lifestyles. As a result, all of us will have different financial planning styles to best suit our lifestyles. Regardless if it’s the paycheque-to-paycheque life or the collecting change in a jar life, without the proper planning, it is very easy for debt to accumulate if you are not aware of how much of your money is going and where it is going, specifically.
-<br>Without a proper method and plan to save your money, it will be very hard to achieve your financial goals.
-</p>
-<p>
-Designing a long-term savings plan can be quite difficult. There are numerous variables that can influence the outcome of that plan in unexpected ways: duration of saving, economic downturn, political change, inflation, employment rates, and so much more. This could change your original plans to send your children to soccer practice and ballet lessons; to fund your teen’s college tuition and pay for their textbooks; to go on that dream vacation that you always wanted; to retire with a generous amount of money to live comfortably.
-<br>No sweat. PFR will take care of it. PFR does all the hard work for you, bypassing the difficulties associated with long-term financial planning to help you take back control of your life. Be more confident about your future finances and watch the pennies that you save today grow into dollars that you will have in abundance when you need it the most.
+<amp-accordion>
+<section>
+<h3>About the calculation (click here to read the details)</h4>
+<div>
+<p>The formulas in this tools based on following simple principles:</p>
+<ul>
+<li>The Spending S gradually increases at the rate of inflation to keep a stable living condition.</li>
+<li>The Income I minuses the Spending S and the Installment N is the Investment V.</li>
+<li>The Income I increases and the Installment N changes over time, therefore the Investment V changes too.</li>
+<li>The big Planned Money amounts M needed at every target time T are the result of every small Investment V.</li>
+<li>If the Money M is not enough at the target time T, we have to defer the time T or we have to decrease the Planned Money M.</li>
+<li>If the Income I in the calculated result is higher than it is in real life, we have to decrease the Installment N and the Spending S and the Planned Money M.</li>
+<li>If the Income I in the calculated result is lower than it is in real life, we may increase the Installment N and the Spending S and the Planned Money M, or shorten the time that means retire early.</li>
+<li>Any change in any above numbers at any time affects the whole roadmap.</li>
+</ul>
+</div>
+</section>
+</amp-accordion>
+<amp-accordion>
+<section>
+<h3>Sheets in PFRp1 (click here to see the details)</h3>
+<ul><li>Instruction: some important notices</li>
+<li>Common: basic data for calculation</li>
+<li>Retirement: calculate the retirement fund, the ultimate target in financial roadmap</li>
+<li>Installments: children expenses, long term mortgages, house, car, etc.</li>
+<li>Targets: other financial targets, house, children college funds, etc.</li>
+<li>Insurance: spending to protect your financial plan</li>
+<li>Roadmap: detailed result of calculating</li>
+<li>Expense: template to list your expense</li>
+</ul>
+</section>
+</amp-accordion>
+
+<h2>Step-by-step instruction</h2>
+<amp-accordion>
+<section>
+<h3>Make a copy of PFRp1, read the instruction (click here to read)</h3>
+<div>
+<p>Click <a href="https://docs.google.com/spreadsheets/d/1QsMiRTOE4PA7rneoMt5tuiI6c_50cmGbkG64RKk0MQo/edit?usp=sharing" target="_blank">here</a> to open the template spreadsheet, then use the menu <b>File→Make a copy</b> to have a copy of PFRp1 in your Google Drive, <i>Noted that</i>: use the menu under the name <b>PFRp1</b> in the web browser windows, don't use the menu of the web browser, don't download PFRp1 to your local disk, it can't be used in Excel.
+On the mobile app Google Sheets, please use the menu <b>⋮→Share & export</b> to <b>Make a copy</b>.
+Then, you rename your new file to PFRyyyymm after the starting month of this plan.</p>
+<p>Please read the Instruction sheet thoroughly before starting the following steps.</p>
+</div>
+</section>
+</amp-accordion>
+
+
+<h3>The basic data</h3>
+<p>Please fill in your name, your year of birth, and the year to start the plan (normally it is the current year or next year) in B3, B4, B5 of the sheet Common.
+<br>Write the total balance of your portfolio (estates, stocks, mutual funds, 401(k), IRA, etc.) to B6. Your portfolio are to be topped up monthly until your retirement. The value of the house which you are living in is not counted in until you sell it.
+<br>Write the estimated average return on investment in B7.
+<br>Write the percentage of year to year increment of savings amount in B8. You can increase the savings amount when your income is raised over time.
+Increasing the saving amount over time is the trick that helps you start building your wealth easily. You can start with a moderate amount and increase it over time.
+<br>B10 is your family average monthly spending. It does not include spending foryour children, house rent or house installment (if any). It does include irregular spending such as a vacation, a new phone/TV, home fixing, etc.
+<br>B11 is the average inflation rate in recent years.
 </p>
 
-<h2>2 Step Process: Let’s break it down</h2>
-<p>This tool is based on 2 principles, modeled after 2 phases of a person’s life:
+<h3>Your retirement fund</h3>
+<p>The sheet Retirement will calculate the volume of your retirement fund that will be enough to keep your living condition equivalent to the present. That amount is affected by the inflation rate.
+<br>Write into B4 cell your planned retirement age. You can retire early when your retirement fund is big enough.
+<br>Write your expected lifespan in B6 cell. It should be more than 90 to be sure that your retirement fund will last long enough.
+<br>B7 is the estimated average inflation rate when you retire. It can be approximately the same as the present.
+<br>Your spending in retirement may be more than at present. For example, you may need to spend more on health care. Please write a ratio between 1 and 2 in B8 to reflect that increment.
+<br>B13 is your income in retirement. It includes your pension, house rental, benefit from life insurance policies, etc. It does not include withdrawal of your 401(k) fund.
+<br>B14 is the lump sum of money you will get when you start retiring. It may be benefit from some term life insurance policies.
+<br>B15 is the amount of money you plan to leave after passing away. If you plan to leave your house, this amount is not necessarily big.
+<br>B16 is the volume of your needed retirement fund. It is calculated from the above information.
 </p>
-<p>Phase 1: <a href="pfr1.html">PFRp1</a>
-<br>1. Work and earn money to pay for your daily expenses E.g. utility bills, mortgage, car payments, groceries
-<br>2. Save for future expenses e.g. children’s college tuition, retirement 
+
+
+<h3>List of installments</h3>
+<p>Fill the sheet Installments with your current and planned installments. For example a car, a house, college debt, etc.
+<br>What makes this tool different is that we count the monthly children expenses as installments from birthday to college graduation. You fill in as many lines as your (planned) number of children.
+<br>If you are living in a rental house and you plan to buy a house in the future, write rental expense in this sheet as an installment. However, if you decide not buying house forever, count your rental expense in monthly expenses in the sheet Common.
+<br>Try to elaborate your list as detailed as possible. You can write at most 40 lines in this sheet.
 </p>
-<p>Phase 2: <a href="pfr2.html">PFRp2</a>
-<br>Spend the money you have accumulated in your long-term savings plan, whether it be pension or retirement savings.
+
+<h3>List your financial targets</h3>
+<p>Your saving targets are listed in the sheet Targets. They are some needed amounts of money at some specific times in the future. They can be money to give birth your children, college funds for your children, down payment for your future house, money to fix your house, etc.
+<p>You will write the necessary amount in the column C, and the inflation rate of every expenses in the column D. The future value of this expense will be calculated and shown in the column E. You can write the value ready for every expense, for example an insurance policy or jewellery in the column F. This tool will deduct that value from column E when calculating.
+<br>You can write at most 20 targets in this sheet.
 </p>
+
+<h3>Insurance expenses</h3>
+<p>You will list in the sheet Insurance all of your current and planned insurance policies.
+<br>Annually premiums will be listed in the column E. Those values are counted as your expense when calculating.
+<br>Rows 1&2 summarize the values of all policies. Some of them may be part of your children's college fund, and will appear in the column F of the sheet Targets. Another value, H2, is the total annual benefit you will receive from the year you retire, this value will appear in B13 of the sheet Retirement.
+</p>
+
+<h3>Notice</h3>
+<p>Your first roadmap should have moderate targets, and you will increase these targets over time.
+</p>
+<p>All sheets in this file are connected. For example:
+</p>
+<ul>
+<li>No target ends after the year you retire. This tool will overstrike any target or installment or insurance policy which lasts after the year you retire. In this case, you should shorten your targets, installments, insurance policies.
+</li>
+<li>Expenses for raising a child follow giving birth and is followed by college fund for that child.
+</li>
+</ul>
+
+<h3>View and adjust your roadmap</h3>
+<h4>Calculating</h4>
+<p>After filling in all necessary information, please move to the sheet Roadmap and choose the value <b>frm1</b> in the cell <b>F1</b>, this tool will start calculating and showing the roadmap.
+<br>The sheet Roadmap has six columns: Year, Portfolio value (at the end of year), Monthly Expense, Installment per month (and insurance premiums), Invest per month, Monthly income. Each row has numbers for one year in the plan.
+<br>The bold line on top of this sheet tells you how much you can spend from your income. This ratio will be unchanged in this whole roadmap. This is the advantage of this tool.
+</p>
+<div><amp-img alt="Personal Financial Roadmap" src="/images/PFRp1.png" width="600" height="371" layout="responsive"></amp-img></a></div>
+<p>The next sheet is the Chart with two lines: portfolio value in blue and invest per month in red.
+<br>The portfolio value increases gradually and reaches your target at your planned retirement year. After that year, it may increase for some years then decreases. In your working years, the portfolio value may go down at some point, the reason is you reach a target in that year and spend the planned amount of money.
+<br>If the portfolio value goes down under zero at some point, this roadmap is <b>impractical</b>. In that case, you should lower your expenses, lower your installment and lower or postpone your targets.
+<br>The invest per month also increases gradually until your retire year, thank to your increased income, and it is zero after your retire. There are some turning points on this red line. Those are years you start or end an installment. The invest per month may be negative in some years, that means you have to spend money from your portfolio in those years. This situation is normal as long as your portfolio value is positive.
+</p>
+<h4>Adjust your roadmap</h4>
+<p>Please pay attention to the cell <b>F3</b>!
+<br>If your actual monthly income is greater than that number, congratulations! You have room for improvement. You can spend more, increase your target values, retire earlier. You may try to make these adjustments and recalculate your roadmap.
+<br>If your actual monthly income is less than that number, your roadmap is impractical. You must spend less, lower or postpone your target, lower or postpone your installments. Please make these adjustments and recalculate your roadmap.
+</p>
+<p>To spend less, you must know where your money goes and cut the less necessary expenses. You may use the template in the sheet Expenses to sort your expenses.
+</p>
+
+<h3>Plan-Do-Check-Act</h3>
+<p>The calculation in this tool depends on variable inputs such as inflation rate, return on investment, income and expenses. You should renew your roadmap whenever any of those inputs changes  or at least once per year. You should make a copy of the latest file and work on the new file.
+</p>
+
+<h2>Scenarios</h2>
+<p>You should make several roadmaps for different scenarios and choose the best one. The different scenarios are: own a house or not, house in big city or suburb area, one child or many children, etc.
+
 
   <hr>
 
