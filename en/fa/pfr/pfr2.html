@@ -1,0 +1,301 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+<title>Personal Financial Planning (Retirement)</title>
+<meta name="description" content="Spreadsheet and script to draw a financial roadmap for whole life, part two for retire years" />
+<meta name="keywords" content="planning, financial, roadmap, family, personal, saving, retirement">
+<link rel="canonical" href="http://en.lhboi.name.vn/fa/pfr/pfr2">
+<link rel="alternate" href="http://www.lhboi.name.vn/huu-ich/ke-hoach-tai-chinh/khtcp2" hreflang="vi">
+
+<!-- in head of html file -->
+
+<meta charset='utf-8'>
+
+<script async custom-element="amp-analytics"
+    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+
+<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+
+<!--
+  Import the `amp-sidebar` component.
+-->
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+<script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+<style amp-custom>
+html {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vmin - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+amp-sidebar {
+  width: 240px;
+  padding-right: 2px;
+  background: blue;
+  color: #006699;
+  font-size: 100%;
+  font-family: Montserrat, sans-serif;
+}
+.close-sidebar{width: 30px;height: 30px;position: relative;cursor: pointer;background-color: transparent;border: none;}
+.close-sidebar:focus{outline: 2px auto #f06060;}
+.close-sidebar span{position: absolute;left: 0;width: 30px;height: 2px;border-right: 5px;background-color: #004d00;}
+.close-sidebar span:nth-child(1){transform: rotate(45deg);}
+.close-sidebar span:nth-child(2){transform: rotate(-45deg);}
+
+#menu { margin-left: -40px; }
+#menu li {
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  margin: 0px;
+  padding: 3px 0px 3px 0px;
+}
+#menu ul {
+  width: 100%;
+  display: block;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+}
+#menu ul li,
+#menu ul ul li {
+  width: 100%;
+  border-bottom: 0;
+  padding-left: 10px;
+}
+#menu ul ul ul li {
+  padding-left: 10px;
+}
+
+div.mwidth {max-width:1004px;margin: auto;}
+
+body {background-color:dimgray;}
+div.body {max-width:1004px;margin: auto; padding-left:8px; padding-right:8px; text-align:justify;color:white;background-color:black;font-family:sans-serif}
+div.title {text-align:center;font-size:160%;font-weight:bold;color:#cc0066;font-family:sans-serif}
+div.right {text-align:right;}
+div.lrsp {margin: 0px 5px 0px 5px;}
+.todiscuss {color:lightskyblue;}
+div.center {text-align:center;}
+div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
+h1 {color:lawngreen;font-family:sans-serif}
+h2 {color:lime;font-family:sans-serif}
+h3 {color:limegreen;font-family:sans-serif}
+h4 {color:lightgreen;font-family:sans-serif}
+a {color:mediumspringgreen;}
+a:visited {color:gold;}
+table.noborder {
+  border-collapse: collapse;
+  width: 100%;
+  border: 0px;
+  text-align: left;
+  padding: 4px;
+}
+
+.myheader {
+    background-color:blue; 
+}
+
+th, td {
+  text-align: left;
+  padding: 2px;
+  vertical-align: top;
+}
+tr:nth-child(even){background-color: darkslategray}
+table.withborder {
+  width: 100%;
+  border: 2px;
+  border-color: #111111;
+  text-align: left;
+  padding: 4px;
+}
+.fbold { font-weight:bold; }
+.tmark {background-color:crimson;}
+
+div.even {background-color: darkslategray}
+.red {color:red;}
+.tblue {color:deepskyblue;}
+div.footer { font-size: 80%; color: red; text-align: center; }
+
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
+@media (max-width: 399px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:10px; }
+}
+@media (min-width: 400px) and (max-width: 499px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:20px; }
+}
+@media (min-width: 500px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+}
+@media (min-width: 1260px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+}
+
+
+
+</style>
+</head>
+
+<body>
+  <!-- top of body -->
+  <!-- sidebar menu -->
+  <amp-sidebar id="sidebar" layout="nodisplay" side="left">
+            <button on="tap:sidebar.close" class="close-sidebar">
+                <span></span>
+                <span></span>
+            </button>
+    <amp-accordion>
+<section expanded>
+  <h3 class="myheader">Financial Advice</h3>
+    <amp-accordion>
+    <section expanded>
+      <h4 class="myheader">Personal Financial Roadmap</h4>
+      <p>
+        <a href='/fa/pfr/'>Overview</a><br>
+        <a href='/fa/pfr/pfr1'>In working years</a><br>
+        <a href='/fa/pfr/pfr2'>In retire years</a><br>
+      </p>
+    </section>
+  </div>
+</section>
+</amp-accordion>
+
+  </amp-sidebar>
+<main>
+  <div class="mwidth">
+    <div class="mbutton">
+      <button on="tap:sidebar.toggle" class="ampstart-btn caps ml1" style="font-size:90%;font-weight:bold;background-color: blue; color: white;">MENU
+      </button>
+    </div>
+  </div>
+  
+
+
+
+  <div class="body">
+    <div class="title">Personal Financial Roadmap (retirement)</div>
+<div class="right">First draft in February, 2019.</div>
+<div class="right">(More in <a href="http://lhboi.name.vn/huu-ich/ke-hoach-tai-chinh/khtcp2">Vietnamese</a>)</div>
+
+  <div>
+    <amp-social-share type="email" height="32"></amp-social-share>
+    <amp-social-share type="whatsapp" height="32"></amp-social-share>
+    <amp-social-share type="linkedin" height="32"></amp-social-share>
+    <amp-social-share type="twitter" height="32"></amp-social-share>
+    <amp-social-share type="tumblr" height="32"></amp-social-share>
+    <amp-social-share type="line" height="32"></amp-social-share>
+    <amp-social-share type="facebook" height="32" data-param-app_id="1879212745697311"></amp-social-share>
+    <amp-facebook-like height=32 width=90
+      layout="fixed"
+      data-layout="button_count"
+      data-href=
+http://en.lhboi.name.vn/fa/pfr/
+    >
+    </amp-facebook-like>
+  </div>
+
+<h2>Your retirement life</h2>
+<p>Now, you do not need to use your time to earn money anymore. You have no debt, no obligation to support your children (you may give them some money though). You are spending money from your pension income, your retirement fund withdrawal, etc.
+<br>This is the tool to help you calculate the withdrawing speed from your retirement fund. The purpose is to stabilize your living condition from now on.
+<br>The economy always changes continuously. Those changes affect your life. This tool will minimize those effects.
+</p>
+<p>This webpage gives step-by-step instructions to use the spreadsheet <b><a href="https://docs.google.com/spreadsheets/d/1UE8qEMVIAOgsw8N88rFKjq-IqN0drnJT_KtZjuwmaUA/edit?usp=sharing" target="_blank">PFRp2</a></b> for the above purpose.
+</p>
+<p>Sheets in PFRp2:</p>
+<ul><li>Instruction: some important notices</li>
+<li>Common: basic data for calculation</li>
+<li>Retirement: calculate the retirement fund</li>
+<li>Roadmap: detailed result of calculating</li>
+<li>Expense: template to list your expense</li>
+</ul>
+
+<h2>Step-by-step instructions</h2>
+<h3>Make a copy of PFRp2, read the instruction</h3>
+<div>
+<p>Click <a href="https://docs.google.com/spreadsheets/d/1UE8qEMVIAOgsw8N88rFKjq-IqN0drnJT_KtZjuwmaUA/edit?usp=sharing" target="_blank">here</a> to open the template spreadsheet, then use the menu <b>File→Make a copy</b> to make a copy of PFRp2 in your Google Drive, <i>Noted that</i>: use the menu under the name <b>PFRp2</b> in the web browser windows. Don't use the menu of the web browser. Don't download PFRp2 to your local disk, it can't be used in Excel.
+On the mobile app Google Sheets, please use the menu <b>⋮→Share & export</b> to <b>Make a copy</b>.
+Then, you rename your new file to PFRyyyymm after the starting month of this plan.</p>
+<p>Please read the Instruction sheet thoroughly before starting the following steps.</p>
+</div>
+
+
+<h3>The basic data</h3>
+<p>Please fill your name, year of birth, and the year to start the plan (normally it is the current year or next year) in B2, B3, B4 of the sheet Common.
+<br>Write the total value of your portfolio (estates, stocks, mutual funds, 401(k), IRA, etc.) to B6. The value of the house which you are living in is not counted in until you sell it.
+<br>Write the estimated average return on investment in B7.
+<br>Write your current average monthly passive income to B8. It includes your pension, house rental, benefit from life insurance policies, etc.
+<br>B9 is your current family average monthly spending. It does include irregular spending like a vacation, a new phone-TV, home fixing, etc.
+<br>B10 is the average inflation rate in recent years.
+</p>
+
+<h3>Your retirement fund</h3>
+<p>The sheet Retirement will calculate the volume of your retirement fund, that will be enough to keep your living condition equivalent to present.
+<br>Write your expected lifespan in B4 cell. It should be more than 90 to be sure that your retirement fund will last long enough.
+<br>Your spending may be more than present, for example, you may need to spend more on health care. Please write a ratio between 1 and 2 in B5 to reflect that increment.
+<br>B9 is the amount of money you plan to leave after passing away. If you plan to leave your house, this amount is not necessarily big.
+<br>B10 is the volume of your needed retirement fund. It is calculated from the basic data and the above information. If this number is greater than your portfolio value, you must reduce your expenses. If this number is less than your portfolio value, you may increase your expenses.
+</p>
+<p>To spend less, you must know where your money goes and cut the less necessary expenses. You may use the template in the sheet Expenses to sort your expenses.</p>
+
+<h3>View and adjust your roadmap</h3>
+<div><amp-img alt="Personal Financial Roadmap" src="/images/PFRp2.png" width="600" height="371" layout="responsive"></amp-img></a></div>
+<p>After adjusting your expenses in the previous step, you can see your whole life detailed financial roadmap. Please go to the sheet Roadmap, choose the value <b>frm2</b> in the cell <b>C1</b>, this tool will start calculating and showing the roadmap.
+<br>This sheet has three columns: Year, Portfolio value (at the end of year), Monthly Expense. Your expense may increase over time because of the inflation.
+</p>
+<p>The next sheet is the Chart with two lines: portfolio value in blue and invest per month in red.
+</p>
+
+
+
+<h3>Plan-Do-Check-Act</h3>
+<p>The calculation in this tool depends on variable inputs such as inflation rate, return on investment, income and expenses. You should renew your roadmap whenever any of those inputs changes or at least once per year. You should make a copy of the latest file and work on the new file.</p>
+
+
+  <hr>
+
+  <div class="footer">
+  Click one of following buttons to contact
+  <br>
+  <a href="http://twitter.com/GiauCham" target="_blank"><amp-img src="/images/icons/Twitter-256.png" layout="fixed" width="40" height="40" alt="Twiter"></amp-img></a> 
+  <a href="http://m.me/lamgiauchacchan" target="_blank"><amp-img src="/images/icons/Fb-Messenger-128.png" layout="fixed" width="40" height="40" alt="Facebook"></amp-img></a> 
+  <a href="viber://add?number=84989760570"><amp-img src="/images/icons/Viber-128.png" layout="fixed" width="40" height="40" alt="Viber"></amp-img></a>
+  <a href="http://zaloapp.com/qr/p/lzfbyqlwzn9u"><amp-img src="/images/icons/Zalo.webp" layout="fixed" width="40" height="40" alt="Zalo"></amp-img></a> 
+  <a href="tel:+84989760570"><amp-img src="/images/icons/Cell-Phone-256.png" layout="fixed" width="40" height="40" alt="điện thoại"></amp-img></a>
+  <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
+  <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
+  <br>
+  © 2020 Le Hong Boi. All rights reserved.
+  </div>
+</div>
+<amp-analytics type="googleanalytics">
+  <script type="application/json">
+  {
+  "vars": { "account": "UA-25268996-1" },
+  "triggers": {
+  "trackPageview": {
+  "on": "visible",
+  "request": "pageview"
+    }
+   }
+  }
+  </script>
+</amp-analytics>
+
+</main>
+</body>
+</html>
+
