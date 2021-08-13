@@ -73,5 +73,30 @@
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/dau-tu-co-phieu/thi-truong-xuong-doc.html</loc>
+		<lastmod>2021-13-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cac-loai-bao-hiem/</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cac-loai-bao-hiem-2</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cac-loai-bao-hiem-3</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
 
 </urlset>
