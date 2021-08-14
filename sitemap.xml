@@ -37,6 +37,49 @@
 		<priority>1.00</priority>
 	</url>
 	<url>
+		<loc>https://lehboi.github.io/huu-ich/chi-tieu.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/tich-luy.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/tich-luy-2.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/tich-luy-3.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/tich-luy-4.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/tich-luy-5.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/tich-luy-6.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	
+	<url>
 		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/</loc>
 		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
@@ -70,6 +113,12 @@
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/dau-tu-co-phieu/quy-dau-tu.html</loc>
 		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu.html</loc>
+		<lastmod>2021-08-13T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
