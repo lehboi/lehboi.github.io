@@ -17,6 +17,121 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
+<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+
+<!--
+  Import the `amp-sidebar` component.
+-->
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+<script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+
+<!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
+<style amp-custom>
+html {
+  font-size: 17px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(17px + 7 * ((100vmin - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+amp-sidebar {
+  width: 240px;
+  padding-right: 2px;
+  background: darkblue;
+  color: blue;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+.close-sidebar{width: 30px;height: 30px;position: relative;cursor: pointer;background-color: transparent;border: none;}
+.close-sidebar:focus{outline: 2px auto #f06060;}
+.close-sidebar span{position: absolute;left: 0;width: 30px;height: 2px;border-right: 5px;background-color: #004d00;}
+.close-sidebar span:nth-child(1){transform: rotate(45deg);}
+.close-sidebar span:nth-child(2){transform: rotate(-45deg);}
+
+#menu { margin-left: -40px; }
+#menu li {
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  margin: 0px;
+  padding: 3px 0px 3px 0px;
+}
+#menu ul {
+  width: 100%;
+  display: block;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+}
+#menu ul li,
+#menu ul ul li {
+  width: 100%;
+  border-bottom: 0;
+  padding-left: 10px;
+}
+#menu ul ul ul li {
+  padding-left: 10px;
+}
+
+div.mwidth {max-width:1004px;margin: auto;}
+
+body {background-color:dimgray;}
+div.body {max-width:1004px;margin: auto; padding-left:8px; padding-right:8px; text-align:justify;color:white;background-color:black;font-family:sans-serif}
+div.title {text-align:center;font-size:160%;font-weight:bold;color:#ffe033;font-family:serif}
+div.right {text-align:right;}
+div.lrsp {margin: 0px 5px 0px 5px;}
+.todiscuss {color:lightskyblue;}
+div.center {text-align:center;}
+div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
+h1 {color:#c2ff66;font-family:serif}
+h2 {color:#adff33;font-family:serif}
+h3 {color:#a3ff1a;font-family:serif}
+h4 {color:#8ae600;font-family:serif}
+a {color:#ffd700;}
+a:visited {color:#e6c300;}
+table.noborder {
+  border-collapse: collapse;
+  width: 100%;
+  border: 0px;
+  text-align: left;
+  padding: 4px;
+}
+
+.myheader {
+    background-color:darkblue; 
+}
+
+th, td {
+  text-align: left;
+  padding: 2px;
+  vertical-align: top;
+}
+tr:nth-child(even){background-color: darkslategray}
+table.withborder {
+  width: 100%;
+  border: 2px;
+  border-color: #111111;
+  text-align: left;
+  padding: 4px;
+}
+.fbold { font-weight:bold; }
+.tmark {background-color:navy;}
+
+div.even {background-color: darkslategray}
+.red {color:red;}
+.tblue {color:deepskyblue;}
+div.footer { font-size: 80%; color: red; text-align: center; }
+
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:right;padding-top:7px;padding-left:10px; }
 }
