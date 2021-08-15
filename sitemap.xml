@@ -263,4 +263,53 @@
 		<priority>1.00</priority>
 	</url>
 	
+	<url>
+		<loc>https://lehboi.github.io/y-kien/bat-ca-hai-tay.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/su-giau-co.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/xa-hoi-thong-tin.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/dung-hang-viet-nam.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/gia-tra.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/nhung-cai-nem.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/khac-nguoi.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/da-len-bao.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	
 </urlset>
