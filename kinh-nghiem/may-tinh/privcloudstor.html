@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html amp="" lang="vi">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Hướng dẫn làm cloud storage server riêng</title>
+<meta name="description" content="Hướng dẫn làm cloud storage server cho một nhóm ít người dùng">
+<meta name="keywords" content="cloud, storage, linux, synchronize">
+
+<!-- in head of html file -->
+
+<meta charset='utf-8'>
+
+<script async custom-element="amp-analytics"
+    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+
+<!--
+  Import the `amp-sidebar` component.
+-->
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+<script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+
+<!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
+<style amp-custom>
+html {
+  font-size: 17px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(17px + 7 * ((100vmin - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+amp-sidebar {
+  width: 240px;
+  padding-right: 2px;
+  background: darkblue;
+  color: blue;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+.close-sidebar{width: 30px;height: 30px;position: relative;cursor: pointer;background-color: transparent;border: none;}
+.close-sidebar:focus{outline: 2px auto #f06060;}
+.close-sidebar span{position: absolute;left: 0;width: 30px;height: 2px;border-right: 5px;background-color: #004d00;}
+.close-sidebar span:nth-child(1){transform: rotate(45deg);}
+.close-sidebar span:nth-child(2){transform: rotate(-45deg);}
+
+#menu { margin-left: -40px; }
+#menu li {
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  margin: 0px;
+  padding: 3px 0px 3px 0px;
+}
+#menu ul {
+  width: 100%;
+  display: block;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+}
+#menu ul li,
+#menu ul ul li {
+  width: 100%;
+  border-bottom: 0;
+  padding-left: 10px;
+}
+#menu ul ul ul li {
+  padding-left: 10px;
+}
+
+div.mwidth {max-width:1004px;margin: auto;}
+
+body {background-color:dimgray;}
+div.body {max-width:1004px;margin: auto; padding-left:8px; padding-right:8px; text-align:justify;color:white;background-color:black;font-family:sans-serif}
+div.title {text-align:center;font-size:160%;font-weight:bold;color:#ffe033;font-family:serif}
+div.right {text-align:right;}
+div.lrsp {margin: 0px 5px 0px 5px;}
+.todiscuss {color:lightskyblue;}
+div.center {text-align:center;}
+div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
+h1 {color:#c2ff66;font-family:serif}
+h2 {color:#adff33;font-family:serif}
+h3 {color:#a3ff1a;font-family:serif}
+h4 {color:#8ae600;font-family:serif}
+a {color:#ffd700;}
+a:visited {color:#e6c300;}
+table.noborder {
+  border-collapse: collapse;
+  width: 100%;
+  border: 0px;
+  text-align: left;
+  padding: 4px;
+}
+
+.myheader {
+    background-color:darkblue; 
+}
+
+th, td {
+  text-align: left;
+  padding: 2px;
+  vertical-align: top;
+}
+tr:nth-child(even){background-color: darkslategray}
+table.withborder {
+  width: 100%;
+  border: 2px;
+  border-color: #111111;
+  text-align: left;
+  padding: 4px;
+}
+.fbold { font-weight:bold; }
+.tmark {background-color:navy;}
+
+div.even {background-color: darkslategray}
+.red {color:red;}
+.tblue {color:deepskyblue;}
+div.footer { font-size: 80%; color: red; text-align: center; }
+
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
+
+@media (max-width: 399px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:10px; }
+}
+@media (min-width: 400px) and (max-width: 499px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:20px; }
+}
+@media (min-width: 500px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+}
+@media (min-width: 1260px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+}
+
+</style>
+</head>
+
+<body>
+  <!-- top of body -->
+  
+  <!-- sidebar menu -->
+  <amp-sidebar id="sidebar" layout="nodisplay" side="left">
+            <button on="tap:sidebar.close" class="close-sidebar">
+                <span></span>
+                <span></span>
+            </button>
+    <amp-accordion>
+<section>
+  <h3 class="myheader">Giới-thiệu</h3>
+  <p>
+    <a href='/'>Trang-bìa</a><br>
+    <a href='/home/about.html'>Thân-thế</a><br>
+    <a href='/home/cv.html'>Thành-tích</a><br>
+  </p>
+</section>
+<section>
+  <h3 class="myheader">Hữu-ích</h3>
+  <div>
+    <amp-accordion>
+    <section>
+      <h4 class="myheader">Lập-kế-hoạch-tài-chính</h4>
+      <p>
+        <a href='/huu-ich/ke-hoach-tai-chinh/'>Giới-thiệu</a><br>
+        <a href='/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han.html'>Ghi-chép kết-quả-đầu-tư-dài-hạn</a><br>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Đầu-tư-cổ-phiếu</h4>
+      <p>
+        <a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/quy-dau-tu.html'>Quỹ-đầu-tư</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu.html'>Sổ-tiết-kiệm hay Quỹ-đầu-tư?</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/thi-truong-xuong-doc.html'>Làm gì khi thị-trường xuống-dốc?</a>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Các loại bảo-hiểm</h4>
+      <p>
+        <a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a><br>
+        <a href='/huu-ich/cac-loai-bao-hiem/phi-bao-hiem-nhan-tho.html'>Phí-bảo-hiểm-nhân-thọ</a><br>
+        <a href='/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung.html'>Bảo-hiểm-nhân-thọ-liên-kết-chung</a><br>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Câu-chuyện</h4>
+      <p>
+        <a href='/huu-ich/cau-chuyen/bat-dau-dau-tu.html'>Bắt-đầu đầu-tư</a><br>
+        <a href='/huu-ich/cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia.html'>Những quyết-định tốt cho tuổi-già</a><br>
+        <a href='/huu-ich/cau-chuyen/nghi-huu-som.html'>Về-hưu trước 40 tuổi</a><br>
+        <a href='/huu-ich/cau-chuyen/tranh-mang-no.html'>Tránh mang nợ</a><br>
+        <a href='/huu-ich/cau-chuyen/mua-nha-hay-dau-tu.html'>Để tiền mua-nhà hay đầu-tư</a><br>
+        <a href='/huu-ich/cau-chuyen/bot-lo-ve-tien.html'>6 điều giúp tôi bớt lo-lắng về tiền-bạc</a><br>
+      </p>
+    </section>
+    </amp-accordion>
+    <a href='/huu-ich/chi-tieu.html'>Chi-tiêu có kế-hoạch</a><br>
+    <a href='/huu-ich/nghi-luc.html'>Nghị-lực để có dư tiền</a><br>
+    <a href='/huu-ich/lam-phat-loi-song.html'>Lạm-phát-lối-sống</a><br>
+    <a href='/huu-ich/tich-luy.html'>Tích-luỹ-tài-sản</a><br>
+    <a href='/huu-ich/de-tien-vao-dau.html'>Để tiền vào đâu</a><br>
+    <a href='/huu-ich/cach-dau-tu.html'>Những cách đầu-tư</a><br>
+    <a href='/huu-ich/dung-so-dau-tu.html'>Đừng sợ chữ đầu-tư</a><br>
+    <a href='/huu-ich/hieu-qua-dau-tu.html'>Tính hiệu-quả-đầu-tư</a><br>
+    <a href='/huu-ich/tich-luy-dai-han.html'>So-sánh công-cụ tích-luỹ-dài-hạn</a><br>
+  </div>
+</section>
+<section>
+  <h3 class="myheader">Kinh-nghiệm</h3>
+  <amp-accordion>
+  <section>
+    <h4 class="myheader">Máy-tính</h4>
+    <p>
+      <a href='/kinh-nghiem/may-tinh/pi-network.html'>Tiền-mật-mã Pi</a><br>
+      <a href='/kinh-nghiem/may-tinh/gnucash.html'>GnuCash</a><br>
+      <a href='/kinh-nghiem/may-tinh/ham-tai-chinh.html'>Các phép-tính-tài-chính cần biết</a><br>
+      <a href='/kinh-nghiem/may-tinh/cloudstorage.html'>Kinh-nghiệm dùng cloud storage</a><br>
+      <a href='/kinh-nghiem/may-tinh/privcloudstor.html'>Hướng-dẫn làm cloud storage server</a><br>
+      <a href="/kinh-nghiem/may-tinh/vi-dien-tu.html">Nhận-xét các ví-điện-tử</a><br>
+      <a href='/kinh-nghiem/may-tinh/googlemaps.html'>Kinh-nghiệm dùng Google Maps ở Việt-Nam</a><br>
+      <a href='/kinh-nghiem/may-tinh/spam-call.html'>Chặn những cuộc-gọi-tiếp-thị</a><br>
+      <a href='/kinh-nghiem/may-tinh/raspberrypi.html'>RaspberryPi</a><br>
+      <a href='/kinh-nghiem/may-tinh/spam.html'>Chặn spam mail</a><br>
+      <a href='/kinh-nghiem/may-tinh/toys.html'>Home server cũ</a><br>
+      <a href='/kinh-nghiem/may-tinh/cryptocurrency.html'>Tìm-hiểu Bitcoin</a><br>
+      <a href='/kinh-nghiem/may-tinh/protect.html'>Bảo vệ tài sản số</a>
+    </p>
+  </section>
+
+  <section>
+
+    <h4 class="myheader">Chữ Việt</h4>
+    <p>
+      <a href='/kinh-nghiem/chu-viet/ghi-dau-thanh-1.html'>Vị trí dấu thanh</a><br>
+      <a href='/kinh-nghiem/chu-viet/unicode.html'>Unicode</a><br>
+      <a href='/kinh-nghiem/chu-viet/utf-8.html'>UTF-8</a><br>
+      <a href='/kinh-nghiem/chu-viet/web.html'>Web Việt</a>
+    </p>
+  </section>
+
+  <section>
+
+    <h4 class="myheader">Linh tinh</h4>
+    <p>
+      <a href='/kinh-nghiem/linh-tinh/bep.html'>Bếp</a><br>
+      <a href='/kinh-nghiem/linh-tinh/ac-dc.html'>Điện một chiều và điện xoay chiều</a><br>
+      <a href='/kinh-nghiem/linh-tinh/tieu-thu-dien.html'>Tiêu thụ điện</a><br>
+      <a href='/kinh-nghiem/linh-tinh/dien-standby.html'>Điện standby</a><br>
+      <a href='/kinh-nghiem/linh-tinh/magchan.html'>Dùng thử Magchan để giặt</a><br>
+      <a href='/kinh-nghiem/linh-tinh/may-lanh.html'>Máy lạnh</a><br>
+      <a href='/kinh-nghiem/linh-tinh/may-lanh-inverter.html'>Máy lạnh inverter</a><br>
+      <a href='/kinh-nghiem/linh-tinh/nong.html'>Nóng</a><br>
+      <a href='/kinh-nghiem/linh-tinh/nhiet-do.html'>Nhiệt độ một ngày</a><br>
+      <a href='/kinh-nghiem/linh-tinh/tan-so-cua-tv.html'>Tần số của TV</a><br>
+      <a href='/kinh-nghiem/linh-tinh/hong-ngoai.html'>Hồng ngoại</a><br>
+    </p>
+  </section>
+  </amp-accordion>
+</section>
+<section>
+  <h3 class="myheader">Ý kiến</h3>
+  <p>
+    <a href='/y-kien/bat-ca-hai-tay.html'>Bắt cá hai tay</a><br>
+    <a href='/y-kien/su-giau-co.html'>Nguồn gốc sự giàu có</a><br>
+    <a href='/y-kien/xa-hoi-thong-tin.html'>Xã hội thông tin</a><br>
+    <a href='/y-kien/dung-hang-viet-nam.html'>Dùng hàng Việt</a><br>
+    <a href='/y-kien/gia-tra.html'>Giả trá</a><br>
+    <a href='/y-kien/nhung-cai-nem.html'>Những cái nêm</a><br>
+    <a href='/y-kien/khac-nguoi.html'>Khác người</a><br>
+    <a href='/y-kien/da-len-bao.html'>Đã lên báo</a>
+  </p>
+</section>
+
+<section>
+
+  <h3 class="myheader">Danh mục</h3>
+  <p>
+    <a href='/download/'>Download</a><br>
+    <a href='/sitemap.html'>Mục lục</a>
+  </p>
+</section>
+
+<section>
+  <h3 class="myheader"></h3>
+  <p>
+  <br>
+  <br>
+  <br>
+  <br>
+  </p>
+</section>
+</amp-accordion>
+
+  </amp-sidebar>
+<main>
+  <div class="mwidth">
+    <div class="mbutton">
+      <button on="tap:sidebar.toggle" class="ampstart-btn caps ml1" style="font-size:90%;font-weight:bold;background-color: blue; color: white;">MENU
+      </button>
+    </div>
+  </div>
+  <div class="body">
+    <div class="title">Hướng dẫn làm cloud storage server riêng</div>
+
+  <div>
+    <amp-social-share type="email" height="32"></amp-social-share>
+    <amp-social-share type="whatsapp" height="32"></amp-social-share>
+    <amp-social-share type="linkedin" height="32"></amp-social-share>
+    <amp-social-share type="twitter" height="32"></amp-social-share>
+    <amp-social-share type="tumblr" height="32"></amp-social-share>
+    <amp-social-share type="line" height="32"></amp-social-share>
+    <amp-social-share type="facebook" height="32" data-param-app_id="1879212745697311"></amp-social-share>
+    <amp-facebook-like height=32 width=90
+      layout="fixed"
+      data-layout="button_count"
+      data-href=
+"https://www.lhboi.name.vn/kinh-nghiem/may-tinh/privcloudstor"
+    >
+    </amp-facebook-like>
+  </div>
+
+<!-- body here -->
+<p>Tài liệu này hướng dẫn làm một cloud storage server từ một máy tính cũ và yếu. Cloud storage server này có thể được dùng cho cá nhân hoặc nhóm ít người như gia đình. Bạn có thể tuỳ ý chọn dung lượng lưu trữ của cloud server theo nhu cầu, từ vài trăm GB trở lên đến vài TB tuỳ theo đĩa cứng gắn vào server. Dung lượng đó sẽ lớn hơn rất nhiều so với các account cloud storage server miễn phí và lớn hơn cả các account cloud storage có thu phí.</p>
+
+<h1>Tính năng</h1>
+<div class="flright"><amp-img alt="Nextcloud logo" src="/images/Nextcloud.png" width="500" height="500" layout="responsive"></amp-img></a></div>
+<p>Cloud storage server này dùng <b>Nextcloud</b> chạy trên Ubuntu Server 18.04, dùng được đồng thời trong mạng LAN lẫn Internet.
+<br>User có thể share file và folder trong cloud server với nhau để cùng làm việc chung.
+<br>User có thể share file cho người ngoài download, share folder cho người ngoài upload file vào.</p>
+<p>Các máy client dùng cloud storage server qua:</p>
+<ul>
+<li>Web interface (Windows, Mac, Linux, iOS, Android): upload, download, quản lý file và folder, dùng các app mở rộng tính năng,</li>
+<li>Desktop client application (Windows, Mac, Linux): synchronize file và folder giữa client và server,</li>
+<li>Mobile app (iOS, Android): upload, download, synchronize và quản lý file và folder.</li>
+</ul>
+<p>Với cloud storage server, tất cả hình chụp bằng smartphone được tự động upload vào cloud server, tất cả các file làm việc trên các computer đều được synchronize tức thời vào cloud server. Nextcloud tự động nhớ lại từng version của file sau mỗi lần file được sửa, user có thể chọn dùng lại hoặc download lại các version cũ qua web browser.</p>
+
+<h2>Multimedia</h2>
+<p>Các file hình được xem trực tiếp trong web browser và mobile app.
+<br>Các file âm thanh được stream (phát trực tiếp) trong mobile app.
+<br>Một số file video được stream (phát trực tiếp) trong web browser và mobile app.
+<br>Bạn cũng có thể dùng các app chuyên để thưởng thức video và audio để phát các file trong cloud server.</p>
+
+<h2>Apps</h2>
+<p>Ngoài việc làm cloud storage, Nextcloud có rất nhiều <a href="https://apps.nextcloud.com/" target='_blank'>apps</a> thêm vào để trở thành cloud server đa năng: Calendar, Contacts, Mail, Talk, Office Suite, Project Management…</p>
+
+<h1>Dụng cụ cần có</h1>
+<p>Một máy tính có ít nhất 512MB RAM, dung lượng đĩa cứng tuỳ nhu cầu lưu trữ, Ethernet port. Tôi dùng một máy laptop cũ, vừa nhỏ gọn vừa ít hao điện.
+<br>Nếu máy tính cũ mà bạn định dùng làm cloud storagre server có đĩa cứng nhỏ, bạn có thể gắn thêm một đĩa cứng nữa qua USB.</p>
+<p>Một đĩa cứng external dùng để backup file từ storage server. Dung lượng đĩa external lớn hơn gấp rưỡi cloud storage server.</p>
+<p>LAN và FTTH Internet connection để nối mạng LAN với Internet. Đặt NAT/port-forwarding ở router để nối từ bên ngoài đến cloud storage server qua IPv4. Nếu FTTH router được ISP cấp IPv6 thì càng tốt, không cần NAT.</p>
+<p>Một USB flash drive 2GB trở lên.</p>
+
+<h1>Cài đặt server</h1>
+
+<h2>Làm USB boot</h2>
+<p>Download file ISO khoảng 850MB của Ubuntu Server 18.04 từ <a href="https://ubuntu.com/download/server" target="_blank">Ubuntu</a>.</p>
+
+<h3>Tạo bootable USB flash drive từ file ISO</h3>
+<p>Từ Ubuntu Desktop Linux: dùng <i>Startup Disk Creator</i> trong <i>System Tools</i> menu.
+<br>Từ Windows: theo hướng dẫn ở <a href="https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows#0" target="_blank">link này</a>.</p>
+
+<h2>Boot và install</h2>
+<p>Có hai cách install Nextcloud: install Nextcloud và các thành phần kèm theo trong một gói <b>snap</b> hoặc install riêng Nextcloud và các thành phần kèm theo. Install trong gói snap thì gọn nhưng bạn không thay đổi được các thông số của Nextcloud. Tôi đã install trong snap, sau đó phải gỡ bỏ snap và install riêng Nextcloud và các thành phần kèm theo. Phần dưới đây hướng dẫn install trong snap.</p>
+<p>Cắm USB flash drive đã làm ở bước trên vào máy để cài cloud storage server.</p>
+<p>Bật máy lên và chọn boot từ USB drive rồi lần lượt làm theo hướng dẫn ở <a href="https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-server#0" target="_blank">link này</a>.</p>
+<p>Ở bước 7, <i>Networking</i>, chương trình install sẽ tự động chọn địa chỉ DHCPv4 cho máy. Vì máy này sẽ được dùng làm server, bạn phải chọn địa chỉ IPv4 cố định bằng cách dùng phím Tab để đưa cursor đến tên Ethernet interface rồi bấm Enter, rồi chọn Edit IPv4. Bạn nên chọn một địa chỉ IPv4 nội bộ có số cuối dễ nhớ, ví dụ số cuối là 100 hoặc 200 hoặc 254.</p>
+<p>Ở bước 8, <i>Configure storage</i>, bạn có thể chọn <i>Manual</i> để chia đĩa theo cách riêng nếu bạn có nhiều kinh nghiệm với Linux, hoặc chọn default là <i>Use An Entire Disk</i>. Nếu chọn <i>Manual</i> thì bạn nên chia một partition 1GB làm boot filesystem chứa boot loader, một partition 5GB làm root filesystem chứa hệ điều hành, một partition khoảng 1GB làm swap và toàn bộ phần đĩa còn lại trong một partition làm data storage. Bạn cũng có thể chọn dùng LVM (Logical Volume Manager) khi chia đĩa, với LVM bạn có thể thêm dung lượng vào cloud storage dễ dàng. Nếu máy này có nhiều đĩa cứng thì bạn nên dùng LVM để nối các đĩa cứng đó lại.</p>
+<p>Bước 12, <i>Set up a Profile</i>, sẽ tạo một user account trong Linux với tên người, tên account và password. Máy Linux có một user account đặc biệt là root, root có toàn quyền làm mọi việc trong máy. Trong Ubuntu Linux, account root không có password và user không trực tiếp login vào account root mà user login vào account thường rồi dùng lệnh <code>sudo</code> để làm việc với quyền root.</p>
+<p>Ở bước 13, <i>Install software</i>, chương trình install sẽ hỏi bạn cần các software nào. Bạn cần install:</p>
+<ol>
+<li>OpenSSH server. Không Import SSH identity.</li>
+<li>Nextcloud</li>
+<li>Canonical-livepatch</li>
+</ol>
+<p>Chương trình install sẽ chạy một lúc lâu để install và update hệ điều hành, sau đó bạn reboot. Lần boot đầu tiên lâu hơn bình thường vì các service phải tạo các file config trong lần chạy đầu tiên, bạn hãy chờ đến khi đĩa cứng ngừng hoạt động hẳn trong vài phút để các service đã sẵn sàng. Kế tiếp bạn làm một số việc sau.</p>
+
+<h3>Đổi storage location</h3>
+<p>Nếu bạn đã chọn chia đĩa Manual ở bước 8 thì bạn phải đổi chỗ chứa file của Nextcloud để dùng đúng partition. Bạn phải tạo filesystem trong partition (hoặc logical volume nếu bạn dùng LVM) dành riêng cho data storage. Bạn thêm một dòng vào file /etc/fstab để mount filesystem đó vào chỗ Nextcloud chứa file là /var/snap/nextcloud/common/nextcloud. Nhưng trước khi boot lại để mount filesystem đó vào đúng chỗ, bạn cần mount filesystem đó vào một chỗ tạm và dời các file đang có trong /var/snap/nextcloud/common/nextcloud vào filesystem đó.</p>
+
+<h3>Tạo vùng swap trong RAM</h3>
+<p>Nếu máy của bạn có ít hơn 4GB RAM hoặc có nhiều người dùng cloud server này thì sẽ có lúc server cần dùng vùng swap để phụ thêm cho RAM. Ở bước 8 phía trên, chương trình install đã tạo một vùng swap trong đĩa cứng. Đĩa cứng thì chạy chậm hơn RAM gần một trăm lần nên server sẽ rất chậm mỗi khi dùng đến vùng swap.
+<br>Có một cách để cải thiện đôi chút trong trường hợp này, đó là đổi vai trò của một phần RAM. Khi hệ điều hành Linux hoạt động, nó luôn luôn lấy một phần RAM để cache hệ thống file và folder trong đĩa cứng, chúng ta sẽ giảm bớt phần RAM dùng làm cache đó để lấy một ít RAM làm <i>swap nén</i>. Khi tạo swap nén rồi, lúc nào server cần swap nó sẽ nén <i>memory page</i> cần swap lại (khoảng 3 lần) và ghi vào vùng swap nén trong RAM nên sẽ nhanh hơn swap trong đĩa cứng rất nhiều.
+<br>Để tạo swap nén thì bạn <code>apt install zram-config</code> và điều chỉnh một số parameter của kernel Linux theo hướng dẫn ở <a href="https://haydenjames.io/linux-performance-almost-always-add-swap-part2-zram/" target='_blank'>link này</a>.
+<br>Nếu máy của bạn có quá ít RAM thì việc tạo vùng swap trong RAM cũng không loại trừ hết những lúc dùng đến vùng swap trong đĩa, máy vẫn chậm nhưng đỡ chậm hơn.</p>
+
+<h2>Tạo admin account cho Nextcloud</h2>
+<p>Tạo admin account cho Nextcloud trong lần đầu tiên nối đến server. Dùng browser nối đến https://cloud.server.ip.addr, cloud.server.ip.addr là địa chỉ IPv4 nội bộ đã chọn ở trên. Nextcloud sẽ hiện ra form để tạo user name và password cho admin account. User name và password này không liên quan đến user account đã tạo khi install server, bạn cũng có thể chọn cùng tên, cùng password.</p>
+<p>Đến đây cloud storage server đã sẵn sàng để dùng trong mạng LAN. Bạn có thể tạo thêm các user khác cùng dùng cloud storage bằng cách bấm icon ở góc trên bên phải trong cửa sổ web browser. Để có thể dùng cloud storage từ Internet bạn cần làm tiếp phần dưới đây.</p>
+
+<h2>Cài đặt router, dynamic DNS và SSL certificate</h2>
+
+<h3>Cài đặt NAT ở router</h3>
+<p>Để dùng cloud storage server từ Internet với địa chỉ IPv4 nội bộ, bạn phải cho router tiếp nhận connection trên port 80 và port 443 ở địa chỉ public IPv4 toàn cầu và chuyển tiếp connection đó đến địa chỉ IPv4 nội bộ của cloud storage server.</p>
+<p>Bạn không cần NAT với IPv6 nhưng bạn cần đặt cho router mở port 80 và port 443 cho kết nối theo IPv6 từ bên ngoài vào.</p>
+
+<h3>Dynamic DNS</h3>
+<p>Để cho dễ tìm đến server, bạn sẽ đăng ký một domain name dễ nhớ cho cloud storage server và dùng dịch vụ dynamic DNS để đổi domain name đó thành địa chỉ IPv4 toàn cầu của FTTH router. Tôi đề nghị dùng dịch vụ miễn phí dynv6.com. Dynv6.com cho phép đổi domain name của bạn thành một địa chỉ IPv4 và một địa chỉ IPv6. Bạn sẽ cho cloud server chạy một script dynv6.sh để ghi hai địa chỉ đó vào database của dynv6.com mỗi lần cổng Ethernet của server bật lên. Script dynv6.sh được download từ <a href="https://dynv6.com/docs/apis" target='_blank'>Dynv6</a> và đặt vào folder /etc/networkd-dispatcher/routable.d/. Bạn cần <code>chmod</code> để script dynv6.sh được quyền executable và bạn cũng cần phải sửa vài dòng đầu script để đặt giá trị cho các variable <var>hostname</var>, <var>device</var>, <var>token</var>. <var>Hostname</var> là domain name mà bạn đã đăng ký với dynv6.com, <var>device</var> là tên của Ethernet port (xem tên đó bằng cách đánh lệnh <code>ip addr</code>), <var>token</var> do dynv6.com cấp cho domain name của bạn.</p>
+<p>Script dynv6.sh sẽ ghi địa chỉ IPv6 của cloud storage server và địa chỉ IPv4 toàn cầu của router vào domain name tại dynv6.com. Với cách làm trên thì cloud storage server không biết khi router bị đổi địa chỉ IPv4 (kết nối Internet bị ngắt ra và nối lại) và không ghi lại, vì vậy bạn cần cho script dynv6.sh chạy lặp lại vài lần mỗi ngày bằng cách copy/link nó vào /etc/cron.hourly/.</p>
+
+<h3>SSL certificate</h3>
+<p>Để cho an toàn khi gõ password login server, server phải dùng mã hoá SSL. Bạn có thể xin SSL certificate miễn phí cho server bằng cách chạy lệnh <code>sudo nextcloud.enable-https lets-encrypt</code> ở console của server. Lệnh đó sẽ hỏi domain name mà bạn đã đăng ký ở dynv6.com và xin một SSL certificate cho domain name đó từ dịch vụ <i>Let’s encrypt</i>.</p>
+
+<h1>Sử dụng</h1>
+
+<h2>Cài đặt client</h2>
+<p>Download client applications từ <a href="https://nextcloud.com/install/#" target='_blank'>Nextcloud</a>.
+</p>
+<p>Client trên desktop computer chỉ có chức năng synchronize file giữa client và cloud server.</p>
+<p>Mobile app cũng có chức năng synchronize file giữa client và cloud server, ngoài ra nó còn tự động upload file hình mới tạo ra trong mobile và play một số file audio và video.</p>
+
+<h3>Web interface</h3>
+<p>Bạn có thể quản lý file của bạn trong cloud server: upload, download, delete, move, copy, rename files.
+<br>Bạn có thể edit text files, xem pdf files.
+<br>Bạn có thể cài thêm các app vào Nextcloud server để làm được nhiều việc khác với Web Interface:
+</p>
+<ul>
+<li>edit word, spreadsheet, presentation files,</li>
+<li>vẽ mind map, diagram,</li>
+<li>đọc ebook,</li>
+<li>extract file nén ngay trong cloud,</li>
+<li>OCR: đọc chữ từ file bitmap,</li>
+<li>workflow: xử lý file theo một kịch bản</li>
+<li>CMS: tự tạo và host website trong cloud server,</li>
+<li>Chat, video & audio conferencing,</li>
+<li>video convert,</li>
+<li>project management,</li>
+<li>…</li>
+</ul>
+
+<h3>Share files</h3>
+<p>Từ web interface và mobile app, bạn có thể share file hoặc folder bằng cách tạo một link đến file hay folder đó rồi gửi cho người được share. Người được share có thể download file hoặc nếu được bạn cho phép thêm thì họ có thể upload file vào cloud server của bạn.</p>
+
+<h3>Multimedia Streaming</h3>
+<p>Bạn có thể dùng các multimedia player để thưởng thức nội dung trong cloud server qua WebDAV. Tuy nhiên streaming qua WebDAV tốn nhiều công sức nên máy yếu sẽ không làm nổi.
+<br>Cái máy laptop cũ CPU Atom N570 2 core 4 thread 1666MHz và 2GB RAM của tôi có thể streaming audio file nhưng không streaming nổi video file. Khi streaming video file, server sinh ra hơn 20 process php_fpm để gửi file ra, hậu quả là máy không đủ RAM và tốn nhiều thời gian swap các process.</p>
+<p>Thay vì streaming qua WebDAV, tôi share đĩa cứng qua NFS cho app Kodi phát thật nhẹ nhàng. Thật ra khi quyết định dùng máy laptop cũ này làm server, tôi đã nghĩ đến chức năng NFS file server, rồi tìm thấy Nextcloud với những tính năng vượt quá mong đợi. Bây giờ tôi dùng Nextcloud với những file làm việc trên máy tính và hình chụp trên smartphone, NFS để share multimedia file.</p>
+
+<h2>Administrating</h2>
+<h3>Backup</h3>
+<p>Để đề phòng mất file khi đĩa cứng trong cloud storage bị hư hoặc do lỡ tay xoá thì bạn cần backup file trong cloud storage ra một chỗ khác, external hard disk với cổng USB là thích hợp nhất. Hard disk đó cần được format theo dạng NTFS hoặc ext2/3/4 của Linux.</p>
+<p>Dùng lệnh rsync có sẵn trong Linux để thực hiện incremental backup.
+Mỗi lần backup rsync sẽ chép cloud storage ra một folder mới trong external disk. Trong lần backup đầu tiên, gọi là full backup, rsync chép tất cả file. Trong mỗi lần backup sau, rsync chỉ chép những file có thay đổi trong khoảng thời gian từ lần backup trước và link những file không thay đổi từ folder backup trước sang folder backup sau, nhờ vậy tất cả các file đều có trong mỗi folder backup nhưng không tốn nhiều chỗ trong đĩa.</p>
+<p>Tổ chức các folder trong đĩa backup như sau:
+<br><i>Folder backup
+<br>&nbsp;&nbsp;User i
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Set j
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yyww</i></p>
+<p>File của mỗi user được backup riêng dưới từng nhánh folder <var>user i</var>. Trong nhánh <var>user i</var> có nhiều bộ backup <var>set j</var>, mỗi <var>set j</var> gồm một folder full backup và nhiều folder incremental backup, mỗi folder được đặt tên gồm hai số cuối của năm và hai số thứ tự của tuần trong năm. <var>User i</var> là username trong Nextcloud. <var>Set j</var> là tên của một bộ backup, có thề đặt tên theo năm bắt đầu full backup của bộ đó.</p>
+<p>Nên chạy lại full backup sau một thời gian dài (khoảng vài năm) để bản full backup mới không chứa những file đã bị cố ý xoá trong vài năm qua.</p>
+<amp-accordion>
+<section>
+<h4>Bấm vào đây để xem script backup (chạy mỗi tuần)</h4>
+<div>
+<pre>
+#!/bin/bash -e
+# incremental backup
+# incbackup.sh user set
+
+user=$1
+backupset=$2
+thisweek=`date +'%y%U'`
+sourcefolder="/var/snap/nextcloud/common/nextcloud/data/$user/files/"
+dest="/mnt/WD2TB/Backup/$user"
+#dest="/tmp/Backup/$user"
+#testoption='--dry-run'
+testoption=''
+
+fullbackup ()
+{
+  printf "Full backup for %s to set %s\n" $user $backupset;
+  mkdir $dest/$backupset/$thisweek;
+  rsync -avh $testoption $sourcefolder $dest/$backupset/$thisweek
+}
+
+incrementalbackup ()
+{
+  printf "Incremental backup for %s to set %s\n" $user $backupset;
+  mkdir $dest/$backupset/$thisweek;
+  rsync -avh $testoption --link-dest=$dest/$backupset/$lasttime $sourcefolder $dest/$backupset/$thisweek
+}
+
+if [ ! -d $dest ]
+then
+  printf "Destination %s not found!\n" $dest;
+  exit 1
+fi
+if [ -d $dest/$backupset ]
+then
+  lasttime=`ls -a $dest/$backupset | sort | tail -1`;
+  if [ $lasttime == $thisweek ] # 
+  then
+    echo "You have already backed up this week. Wait until Sunday!"
+  else
+    if [ $lasttime == ".." ] # not any backup exists
+    then # full backup
+      fullbackup
+    else # incremental backup
+      incrementalbackup
+    fi
+  fi
+else
+  mkdir $dest/$backupset;
+  fullbackup;
+fi
+
+</pre>
+</div>
+</section>
+</amp-accordion>
+
+<h3>Restore</h3>
+<p>Nếu bạn cần lấy lại một version trước đây của file đang còn trong cloud storage (và local disk), bạn chỉ cần dùng Nextcloud web interface để chọn dùng lại version đó.</p>
+<p>Để restore lại file hoặc folder đã bị lỡ tay xoá mất, bạn cũng dùng web interface để lấy lại. Nếu file đã lỡ bị xoá vĩnh viễn khỏi cloud server thì bạn cắm đĩa backup vào máy client, chép file hoặc folder cần thiết từ folder backup mới nhất vào máy client.</p>
+
+<h3>Shutdown</h3>
+Shutdown server bằng cách chạy lệnh <code>sudo init 0</code> ở console của server.
+
+<h2>Chi phí</h2>
+Chi phí sử dụng cloud storage server này chỉ gồm tiền điện server dùng 24/7. Máy laptop cỡ nhỏ chỉ tốn khoảng 15W-20W, mỗi ngày tốn khoảng 360Wh-480Wh, mỗi tháng tốn khoảng 10,8kWh-14,4kWh. Tính theo giá điện sinh hoạt bậc 6 là 3219,7₫/kWh thì mỗi tháng tốn khoảng 35K₫-46K₫.
+<br>Chú ý: máy desktop hao điện hơn máy laptop rất nhiều, có thể hao gấp 3-5 lần.
+
+<hr>
+Nếu không tìm được một máy laptop cũ để làm cloud storage server, bạn cũng có thể mua một máy tính nhỏ như <a href="raspberrypi.html">RaspberryPi</a>. RaspberryPi dùng SD card thay cho đĩa cứng chứa hệ điều hành, và bạn có thể gắn thêm đĩa cứng ngoài qua USB để chứa file.
+
+
+  <hr>
+
+  <div class="footer">
+  Bấm các nút sau để liên-lạc 
+  <br>
+  <a href="http://twitter.com/GiauCham" target="_blank"><amp-img src="/images/icons/Twitter-256.png" layout="fixed" width="40" height="40" alt="Twiter"></amp-img></a> 
+  <a href="http://m.me/lamgiauchacchan" target="_blank"><amp-img src="/images/icons/Fb-Messenger-128.png" layout="fixed" width="40" height="40" alt="Facebook"></amp-img></a> 
+  <a href="viber://add?number=84989760570"><amp-img src="/images/icons/Viber-128.png" layout="fixed" width="40" height="40" alt="Viber"></amp-img></a>
+  <a href="http://zaloapp.com/qr/p/lzfbyqlwzn9u"><amp-img src="/images/icons/Zalo.webp" layout="fixed" width="40" height="40" alt="Zalo"></amp-img></a> 
+  <a href="tel:+84989760570"><amp-img src="/images/icons/Cell-Phone-256.png" layout="fixed" width="40" height="40" alt="điện thoại"></amp-img></a>
+  <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
+  <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
+  <br>
+  Nếu bạn chép lại những trang web này, hãy ghi nguồn-gốc <a href="https://www.lhboi.name.vn">https://WWW.LHBOI.NAME.VN</a> để người-đọc có-thể tìm được nội-dung mới cập-nhật.
+  </div>
+</div>
+<amp-analytics type="googleanalytics">
+  <script type="application/json">
+  {
+  "vars": { "account": "UA-25268996-1" },
+  "triggers": {
+  "trackPageview": {
+  "on": "visible",
+  "request": "pageview"
+    }
+   }
+  }
+  </script>
+</amp-analytics>
+
+</main>
+</body>
+</html>
+
