@@ -43,6 +43,18 @@
 		<priority>1.00</priority>
 	</url>
 	<url>
+		<loc>https://lehboi.github.io/huu-ich/nghi-luc.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/lam-phat-loi-song.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
 		<loc>https://lehboi.github.io/huu-ich/tich-luy.html</loc>
 		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
@@ -74,6 +86,60 @@
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/tich-luy-6.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/de-tien-vao-dau.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/de-tien-vao-dau-2.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/de-tien-vao-dau-3.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cach-dau-tu.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/dung-so-dau-tu.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/hieu-qua-dau-tu.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/tich-luy-dai-han.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/tich-luy-dai-han-2.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/tich-luy-dai-han-3.html</loc>
 		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
@@ -147,5 +213,54 @@
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cac-loai-bao-hiem/phi-bao-hiem-nhan-tho.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
 
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/bat-dau-dau-tu.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/nghi-huu-som.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/tranh-mang-no.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/mua-nha-hay-dau-tu.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/bot-lo-ve-tien.html</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	
 </urlset>
