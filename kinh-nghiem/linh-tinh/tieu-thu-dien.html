@@ -1,0 +1,746 @@
+<!doctype html>
+<html amp lang="vi">
+<head>
+<title>Tiêu thụ điện (Trang web LHBội)</title>
+<meta name="description" content="Đo lượng điện tiêu thụ của các thiết bị điện tử" />
+<meta name="keywords" content="hữu ích, tài chính, cá nhân">
+<link rel="canonical" href="https://www.lhboi.name.vn/kinh-nghiem/linh-tinh/tieu-thu-dien">
+
+<!-- in head of html file -->
+
+<meta charset='utf-8'>
+
+<script async custom-element="amp-analytics"
+    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+
+<!--
+  Import the `amp-sidebar` component.
+-->
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+<script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+
+<!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
+<style amp-custom>
+html {
+  font-size: 17px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(17px + 7 * ((100vmin - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+amp-sidebar {
+  width: 240px;
+  padding-right: 2px;
+  background: darkblue;
+  color: blue;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+.close-sidebar{width: 30px;height: 30px;position: relative;cursor: pointer;background-color: transparent;border: none;}
+.close-sidebar:focus{outline: 2px auto #f06060;}
+.close-sidebar span{position: absolute;left: 0;width: 30px;height: 2px;border-right: 5px;background-color: #004d00;}
+.close-sidebar span:nth-child(1){transform: rotate(45deg);}
+.close-sidebar span:nth-child(2){transform: rotate(-45deg);}
+
+#menu { margin-left: -40px; }
+#menu li {
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  margin: 0px;
+  padding: 3px 0px 3px 0px;
+}
+#menu ul {
+  width: 100%;
+  display: block;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+}
+#menu ul li,
+#menu ul ul li {
+  width: 100%;
+  border-bottom: 0;
+  padding-left: 10px;
+}
+#menu ul ul ul li {
+  padding-left: 10px;
+}
+
+div.mwidth {max-width:1004px;margin: auto;}
+
+body {background-color:dimgray;}
+div.body {max-width:1004px;margin: auto; padding-left:8px; padding-right:8px; text-align:justify;color:white;background-color:black;font-family:sans-serif}
+div.title {text-align:center;font-size:160%;font-weight:bold;color:#ffe033;font-family:serif}
+div.right {text-align:right;}
+div.lrsp {margin: 0px 5px 0px 5px;}
+.todiscuss {color:lightskyblue;}
+div.center {text-align:center;}
+div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
+h1 {color:#c2ff66;font-family:serif}
+h2 {color:#adff33;font-family:serif}
+h3 {color:#a3ff1a;font-family:serif}
+h4 {color:#8ae600;font-family:serif}
+a {color:#ffd700;}
+a:visited {color:#e6c300;}
+table.noborder {
+  border-collapse: collapse;
+  width: 100%;
+  border: 0px;
+  text-align: left;
+  padding: 4px;
+}
+
+.myheader {
+    background-color:darkblue; 
+}
+
+th, td {
+  text-align: left;
+  padding: 2px;
+  vertical-align: top;
+}
+tr:nth-child(even){background-color: darkslategray}
+table.withborder {
+  width: 100%;
+  border: 2px;
+  border-color: #111111;
+  text-align: left;
+  padding: 4px;
+}
+.fbold { font-weight:bold; }
+.tmark {background-color:navy;}
+
+div.even {background-color: darkslategray}
+.red {color:red;}
+.tblue {color:deepskyblue;}
+div.footer { font-size: 80%; color: red; text-align: center; }
+
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
+
+@media (max-width: 399px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:10px; }
+}
+@media (min-width: 400px) and (max-width: 499px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:20px; }
+}
+@media (min-width: 500px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+}
+@media (min-width: 1260px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+}
+
+</style>
+</head>
+
+<body>
+  <!-- top of body -->
+  
+  <!-- sidebar menu -->
+  <amp-sidebar id="sidebar" layout="nodisplay" side="left">
+            <button on="tap:sidebar.close" class="close-sidebar">
+                <span></span>
+                <span></span>
+            </button>
+    <amp-accordion>
+<section>
+  <h3 class="myheader">Giới-thiệu</h3>
+  <p>
+    <a href='/'>Trang-bìa</a><br>
+    <a href='/home/about.html'>Thân-thế</a><br>
+    <a href='/home/cv.html'>Thành-tích</a><br>
+  </p>
+</section>
+<section>
+  <h3 class="myheader">Hữu-ích</h3>
+  <div>
+    <amp-accordion>
+    <section>
+      <h4 class="myheader">Lập-kế-hoạch-tài-chính</h4>
+      <p>
+        <a href='/huu-ich/ke-hoach-tai-chinh/'>Giới-thiệu</a><br>
+        <a href='/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han.html'>Ghi-chép kết-quả-đầu-tư-dài-hạn</a><br>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Đầu-tư-cổ-phiếu</h4>
+      <p>
+        <a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/quy-dau-tu.html'>Quỹ-đầu-tư</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu.html'>Sổ-tiết-kiệm hay Quỹ-đầu-tư?</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/thi-truong-xuong-doc.html'>Làm gì khi thị-trường xuống-dốc?</a>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Các loại bảo-hiểm</h4>
+      <p>
+        <a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a><br>
+        <a href='/huu-ich/cac-loai-bao-hiem/phi-bao-hiem-nhan-tho.html'>Phí-bảo-hiểm-nhân-thọ</a><br>
+        <a href='/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung.html'>Bảo-hiểm-nhân-thọ-liên-kết-chung</a><br>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Câu-chuyện</h4>
+      <p>
+        <a href='/huu-ich/cau-chuyen/bat-dau-dau-tu.html'>Bắt-đầu đầu-tư</a><br>
+        <a href='/huu-ich/cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia.html'>Những quyết-định tốt cho tuổi-già</a><br>
+        <a href='/huu-ich/cau-chuyen/nghi-huu-som.html'>Về-hưu trước 40 tuổi</a><br>
+        <a href='/huu-ich/cau-chuyen/tranh-mang-no.html'>Tránh mang nợ</a><br>
+        <a href='/huu-ich/cau-chuyen/mua-nha-hay-dau-tu.html'>Để tiền mua-nhà hay đầu-tư</a><br>
+        <a href='/huu-ich/cau-chuyen/bot-lo-ve-tien.html'>6 điều giúp tôi bớt lo-lắng về tiền-bạc</a><br>
+      </p>
+    </section>
+    </amp-accordion>
+    <a href='/huu-ich/chi-tieu.html'>Chi-tiêu có kế-hoạch</a><br>
+    <a href='/huu-ich/nghi-luc.html'>Nghị-lực để có dư tiền</a><br>
+    <a href='/huu-ich/lam-phat-loi-song.html'>Lạm-phát-lối-sống</a><br>
+    <a href='/huu-ich/tich-luy.html'>Tích-luỹ-tài-sản</a><br>
+    <a href='/huu-ich/de-tien-vao-dau.html'>Để tiền vào đâu</a><br>
+    <a href='/huu-ich/cach-dau-tu.html'>Những cách đầu-tư</a><br>
+    <a href='/huu-ich/dung-so-dau-tu.html'>Đừng sợ chữ đầu-tư</a><br>
+    <a href='/huu-ich/hieu-qua-dau-tu.html'>Tính hiệu-quả-đầu-tư</a><br>
+    <a href='/huu-ich/tich-luy-dai-han.html'>So-sánh công-cụ tích-luỹ-dài-hạn</a><br>
+  </div>
+</section>
+<section>
+  <h3 class="myheader">Kinh-nghiệm</h3>
+  <amp-accordion>
+  <section>
+    <h4 class="myheader">Máy-tính</h4>
+    <p>
+      <a href='/kinh-nghiem/may-tinh/pi-network.html'>Tiền-mật-mã Pi</a><br>
+      <a href='/kinh-nghiem/may-tinh/gnucash.html'>GnuCash</a><br>
+      <a href='/kinh-nghiem/may-tinh/ham-tai-chinh.html'>Các phép-tính-tài-chính cần biết</a><br>
+      <a href='/kinh-nghiem/may-tinh/cloudstorage.html'>Kinh-nghiệm dùng cloud storage</a><br>
+      <a href='/kinh-nghiem/may-tinh/privcloudstor.html'>Hướng-dẫn làm cloud storage server</a><br>
+      <a href="/kinh-nghiem/may-tinh/vi-dien-tu.html">Nhận-xét các ví-điện-tử</a><br>
+      <a href='/kinh-nghiem/may-tinh/googlemaps.html'>Kinh-nghiệm dùng Google Maps ở Việt-Nam</a><br>
+      <a href='/kinh-nghiem/may-tinh/spam-call.html'>Chặn những cuộc-gọi-tiếp-thị</a><br>
+      <a href='/kinh-nghiem/may-tinh/raspberrypi.html'>RaspberryPi</a><br>
+      <a href='/kinh-nghiem/may-tinh/spam.html'>Chặn spam mail</a><br>
+      <a href='/kinh-nghiem/may-tinh/toys.html'>Home server cũ</a><br>
+      <a href='/kinh-nghiem/may-tinh/cryptocurrency.html'>Tìm-hiểu Bitcoin</a><br>
+      <a href='/kinh-nghiem/may-tinh/protect.html'>Bảo vệ tài sản số</a>
+    </p>
+  </section>
+
+  <section>
+
+    <h4 class="myheader">Chữ Việt</h4>
+    <p>
+      <a href='/kinh-nghiem/chu-viet/ghi-dau-thanh-1.html'>Vị trí dấu thanh</a><br>
+      <a href='/kinh-nghiem/chu-viet/unicode.html'>Unicode</a><br>
+      <a href='/kinh-nghiem/chu-viet/utf-8.html'>UTF-8</a><br>
+      <a href='/kinh-nghiem/chu-viet/web.html'>Web Việt</a>
+    </p>
+  </section>
+
+  <section>
+
+    <h4 class="myheader">Linh tinh</h4>
+    <p>
+      <a href='/kinh-nghiem/linh-tinh/bep.html'>Bếp</a><br>
+      <a href='/kinh-nghiem/linh-tinh/ac-dc.html'>Điện một chiều và điện xoay chiều</a><br>
+      <a href='/kinh-nghiem/linh-tinh/tieu-thu-dien.html'>Tiêu thụ điện</a><br>
+      <a href='/kinh-nghiem/linh-tinh/dien-standby.html'>Điện standby</a><br>
+      <a href='/kinh-nghiem/linh-tinh/magchan.html'>Dùng thử Magchan để giặt</a><br>
+      <a href='/kinh-nghiem/linh-tinh/may-lanh.html'>Máy lạnh</a><br>
+      <a href='/kinh-nghiem/linh-tinh/may-lanh-inverter.html'>Máy lạnh inverter</a><br>
+      <a href='/kinh-nghiem/linh-tinh/nong.html'>Nóng</a><br>
+      <a href='/kinh-nghiem/linh-tinh/nhiet-do.html'>Nhiệt độ một ngày</a><br>
+      <a href='/kinh-nghiem/linh-tinh/tan-so-cua-tv.html'>Tần số của TV</a><br>
+      <a href='/kinh-nghiem/linh-tinh/hong-ngoai.html'>Hồng ngoại</a><br>
+    </p>
+  </section>
+  </amp-accordion>
+</section>
+<section>
+  <h3 class="myheader">Ý kiến</h3>
+  <p>
+    <a href='/y-kien/bat-ca-hai-tay.html'>Bắt cá hai tay</a><br>
+    <a href='/y-kien/su-giau-co.html'>Nguồn gốc sự giàu có</a><br>
+    <a href='/y-kien/xa-hoi-thong-tin.html'>Xã hội thông tin</a><br>
+    <a href='/y-kien/dung-hang-viet-nam.html'>Dùng hàng Việt</a><br>
+    <a href='/y-kien/gia-tra.html'>Giả trá</a><br>
+    <a href='/y-kien/nhung-cai-nem.html'>Những cái nêm</a><br>
+    <a href='/y-kien/khac-nguoi.html'>Khác người</a><br>
+    <a href='/y-kien/da-len-bao.html'>Đã lên báo</a>
+  </p>
+</section>
+
+<section>
+
+  <h3 class="myheader">Danh mục</h3>
+  <p>
+    <a href='/download/'>Download</a><br>
+    <a href='/sitemap.html'>Mục lục</a>
+  </p>
+</section>
+
+<section>
+  <h3 class="myheader"></h3>
+  <p>
+  <br>
+  <br>
+  <br>
+  <br>
+  </p>
+</section>
+</amp-accordion>
+
+  </amp-sidebar>
+<main>
+  <div class="mwidth">
+    <div class="mbutton">
+      <button on="tap:sidebar.toggle" class="ampstart-btn caps ml1" style="font-size:90%;font-weight:bold;background-color: blue; color: white;">MENU
+      </button>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="title">Tiêu thụ điện</div>
+
+  <div>
+    <amp-social-share type="email" height="32"></amp-social-share>
+    <amp-social-share type="whatsapp" height="32"></amp-social-share>
+    <amp-social-share type="linkedin" height="32"></amp-social-share>
+    <amp-social-share type="twitter" height="32"></amp-social-share>
+    <amp-social-share type="tumblr" height="32"></amp-social-share>
+    <amp-social-share type="line" height="32"></amp-social-share>
+    <amp-social-share type="facebook" height="32" data-param-app_id="1879212745697311"></amp-social-share>
+    <amp-facebook-like height=32 width=90
+      layout="fixed"
+      data-layout="button_count"
+      data-href=
+https://www.lhboi.name.vn/kinh-nghiem/linh-tinh/tieu-thu-dien
+    >
+    </amp-facebook-like>
+  </div>
+
+<h3>Công suất tiêu thụ điện một số máy nhỏ thường gặp</h3>
+<p>Mới mua một máy đo công suất để đo thử mức tiêu thụ điện trong nhà, nhất là ở tình trạng <a href="dien-standby.html">stand-by</a>.</p>
+<div>
+<table class="withborder">
+<tbody>
+<tr>
+<th>Máy</th>
+<th>Trạng thái</th>
+<th>Công suất (W)</th>
+<th>Hệ số công suất cos φ</th>
+<th>Tiêu thụ mỗi năm (kWh)</th>
+<th>Ghi chú</th>
+</tr>
+<tr>
+<td rowspan="3">cục sạc Sony, để sạc tai nghe bluetooth</td>
+<td>không tải</td>
+<td>&lt; 1</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cắm điện thoại pin đầy và mở web</td>
+<td>4</td>
+<td>0,8</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>cắm điện thoại pin đầy, tắt màn hình</td>
+<td>2</td>
+<td>0,8</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>Set-top box AVG DTT</td>
+<td>không phụ thuộc là tắt hay mở</td>
+<td>7</td>
+<td>0,77</td>
+<td>61,32</td>
+<td></td>
+</tr>
+<tr>
+<td>TV Plasma Panasonic 42"</td>
+<td>stand-by</td>
+<td>24</td>
+<td></td>
+<td>210,24</td>
+<td>nên rút điện ngay sau khi dùng</td>
+</tr>
+<tr>
+<td rowspan="2">AV Receiver Onkyo TX-SR309</td>
+<td>stand-by</td>
+<td>&lt; 1 </td>
+<td> </td>
+<td> </td>
+<td>rất tiết kiệm</td>
+</tr>
+<tr>
+<td>tắt loa</td>
+<td>35 </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td rowspan="3">PC AMD Opteron X3, LCD 22", máy in Epson T11, power supply AC Bell</td>
+<td>tắt hẳn</td>
+<td>9</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>suspend</td>
+<td>14</td>
+<td>1</td>
+<td>122,64</td>
+<td> </td>
+</tr>
+<tr>
+<td>hoạt động</td>
+<td>120-200</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td rowspan="2">Máy Netbook Gateway LT27 Atom 1,66GHz, 2GB RAM, HD WD 320GB</td>
+<td>Tắt</td>
+<td>2</td>
+<td>1</td>
+<td><br />
+</td>
+<td rowspan="2"><br />
+</td>
+</tr>
+<tr>
+<td>full load</td>
+<td>25</td>
+<td>0,8</td>
+<td>144,54</td>
+</tr>
+<tr>
+<td>UPS Santak 1000VA</td>
+<td>không tải</td>
+<td>11</td>
+<td><br />
+</td>
+<td>96,36</td>
+<td> </td>
+</tr>
+<tr>
+<td>Quạt máy Quatvina</td>
+<td></td>
+<td>32..36</td>
+<td>1..0,98</td>
+<td><br />
+</td>
+<td>cos φ quá tốt, tụ bù vừa đủ để triệt tiêu dòng điện cảm kháng</td>
+</tr>
+<tr>
+<td>Bếp từ Midea 1800W</td>
+<td>tắt</td>
+<td>16</td>
+<td>1</td>
+<td>140,16</td>
+<td>nên rút điện ngay sau khi dùng</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>Phần dưới đây được viết gần 10 năm trước, lúc chưa có máy đo công suất.</p>
+<p>Đo công suất tiêu thụ điện các máy nhỏ bằng 1 cầu diode (1A, 600V giá 1000₫ ở chợ Nhật tảo) và VOM meter. Cần dùng cầu diode vì thang đo AC Ampere thường vào cỡ vài Ampere, không thể đo dòng điện qua các máy nhỏ, phải dùng thang đo DC miliampere.</p>
+<blockquote>
+<p>Cái đồng hồ VOM (Volt-Ohm-Miliampere) chỉ thị kim của tôi là thứ ít gặp ngoài thị trường:</p>
+<ul><li>hiệu Alcron, model 460-C,</li>
+<li>điện trở trong 100KΩ/VDC (thường chỉ gặp loại 20KΩ/VDC trên thị trường),</li>
+<li>các thang đo thấp nhất là 250mVDC và 10μADC, ở thang đo này chỉ có khung quay được nối vào mạch điện, không có các điện trở song song và nối tiếp với khung quay, điện trở của đồng hồ lúc đó là 25KΩ,</li>
+<li>kế tiếp là các thang đo 2,5VDC và 2,5mADC, 5VAC</li>
+<li>các thang đo cao nhất là 1000V DC và AC, 10A DC và AC,</li>
+<li>kế tiếp là các thang 250V DC và AC, 500mADC,</li>
+<li>có khả năng đo độ khuếch đại và dòng rò của transitor, đo điện dung của tụ điện.</li></ul>
+<p>Tôi dùng cái đồng hồ đo này từ năm 1983, khi đang học đại học.</p>
+</blockquote>
+<p>Kết quả đo (điện áp 220V; không biết hệ số công suất, tạm tính là 1):</p>
+<div>
+<table class="withborder">
+<tbody>
+<tr>
+<th>Máy</th>
+<th>Trạng thái</th>
+<th>Dòng điện (mA)</th>
+<th>Công suất (W | VA)</th>
+<th>Tiêu thụ mỗi năm (kWh)</th>
+<th>Ghi chú</th>
+</tr>
+<tr>
+<td>Adaptor AC-DC 500mA <em>made in Nhật tảo</em></td>
+<td>Không tải, chỉ có LED</td>
+<td>33</td>
+<td>7,26</td>
+<td>63,60</td>
+<td>Tổn hao quá lớn, có lẽ là sắt không cách điện và sắt được cắt ra từ tôn lợp nhà <big>☹</big></td>
+</tr>
+<tr>
+<td rowspan="2">External voice modem V90 dùng adapter AC 9V</td>
+<td>Tắt</td>
+<td>13</td>
+<td>2,86</td>
+<td>25,05</td>
+<td rowspan="4">Dòng không tải phần lớn là dòng điện cảm kháng, cần phải kiếm tụ bù gắn vào. <br />
+Nhãn ghi Input 240VAC/95mA, Output 9VAC/1A.</td>
+</tr>
+<tr>
+<td>Bật</td>
+<td>20</td>
+<td>4,40</td>
+<td>38,54</td>
+</tr>
+<tr>
+<td rowspan="2">ADSL Router ZyXel 660 1 Ethernet port dùng adapter AC 9V</td>
+<td>Tắt</td>
+<td>13</td>
+<td>2,86</td>
+<td>25,05</td>
+</tr>
+<tr>
+<td>Bật</td>
+<td>20</td>
+<td>4,40</td>
+<td>38,54</td>
+</tr>
+<tr>
+<td rowspan="2">Wi-fi Access Point Planet WRT-414 4 Ethernet LAN port, 1 Ethernet WAN port dùng adapter DC 12V</td>
+<td>Tắt</td>
+<td>17</td>
+<td>3,74</td>
+<td>32,76</td>
+<td rowspan="2">Dòng không tải phần lớn là dòng điện cảm kháng, cần phải kiếm tụ bù gắn vào. <br />
+Nhãn ghi Input 240VAC/100mA, Output 12VDC/1A.</td>
+</tr>
+<tr>
+<td>Bật</td>
+<td>30</td>
+<td>6,60</td>
+<td>57,82</td>
+</tr>
+<tr>
+<td rowspan="2">Máy Pentium 100MHz, 64MB RAM, 2 Ethernet NIC (không VGA, keyboard, mouse, FD, CD)</td>
+<td>không HD</td>
+<td>87</td>
+<td>19,14</td>
+<td>167,67</td>
+<td rowspan="2">Dùng làm <a href="../may-tinh/toys.html">server</a>.<br />
+Nhãn HD ghi 5V/12V 600mA/900mA!</td>
+</tr>
+<tr>
+<td>HD Quantum 5GB</td>
+<td>100</td>
+<td>22,00</td>
+<td>192,72</td>
+</tr>
+<tr>
+<td rowspan="4">Máy Pentium 4 2,6GHz, 512MB RAM, FD, CD, HD Maxtor 60GB, nVidia GeForce 64MB RAM AGP 8x, Ethernet NIC, card 1394, analog TV</td>
+<td>Tắt</td>
+<td>27</td>
+<td>5,94</td>
+<td>21,2</td>
+<td rowspan="4">Ít hao điện hơn mình vẫn nghĩ.<br />
+CPU thay đổi tốc độ bằng <a href="https://lhboi.name.vn/kinh-nghiem/may-tinh/nhiet-do">driver P4 clockmod</a></td>
+</tr>
+<tr>
+<td>Linux runlevel 1</td>
+<td>250</td>
+<td>55,00</td>
+<td>481,80</td>
+</tr>
+<tr>
+<td>Linux runlevel 5 CPU 325MHz</td>
+<td>270</td>
+<td>59,40</td>
+<td>520,34</td>
+</tr>
+<tr>
+<td>Linux runlevel 5 CPU 2,6GHz</td>
+<td>330</td>
+<td>72,6</td>
+<td>635,98</td>
+</tr>
+<tr>
+<td rowspan="3">Monitor ADI ProVista E55 17"</td>
+<td>Chờ</td>
+<td>40</td>
+<td>8,80</td>
+<td>77,08</td>
+<td rowspan="3">Hơi hao điện trong trạng thái chờ <big>☹</big></td>
+</tr>
+<tr>
+<td>Text nền đen</td>
+<td>150</td>
+<td>33,00</td>
+<td>289,08</td>
+</tr>
+<tr>
+<td>Graphic nền sáng</td>
+<td>220</td>
+<td>48,40</td>
+<td>423,98</td>
+</tr>
+<tr>
+<td rowspan="2">Điện thoại di động Siemens CF62 dùng adapter DC 5V</td>
+<td>pin đầy</td>
+<td>0,5</td>
+<td>0,11</td>
+<td>0,96</td>
+<td rowspan="2">Khi pin đầy và máy hoạt động, dòng điện thay đổi từ 0,5 lên 10, lên 13, lên 16mA, rồi quay lại 0,5mA; chu kỳ khoảng 40 giây. Có lẽ máy phát tín hiệu để duy trì liên lạc với trạm.<br />
+Nhãn ghi Input 100-240VAC/100mA, Output 5VDC/620mA; tại sao không ghi Input 40mA thôi?</td>
+</tr>
+<tr>
+<td>đang nạp pin</td>
+<td>16</td>
+<td>3,52</td>
+<td>30,83</td>
+</tr>
+<tr>
+<td rowspan="4">VCR Sharp</td>
+<td>Tắt, không hiện đồng hồ</td>
+<td>9</td>
+<td>1,98</td>
+<td>17,34</td>
+<td rowspan="4"><a href="/huu-ich/ke-hoach-tai-chinh/">Tiết kiệm</a> điện nhất (không so với ĐTDĐ Siemens vì nó quá nhỏ) <big>☺</big>. Chưa đo trường hợp bật máy nhưng motor tự tắt sau một thời gian không dùng.</td>
+</tr>
+<tr>
+<td>Tắt, có hiện đồng hồ</td>
+<td>16</td>
+<td>3,52</td>
+<td>30,83</td>
+</tr>
+<tr>
+<td>Bật, Stop</td>
+<td>45</td>
+<td>9,90</td>
+<td>86,72</td>
+</tr>
+<tr>
+<td>Bật, Play</td>
+<td>49</td>
+<td>10,78</td>
+<td>94,43</td>
+</tr>
+<tr>
+<td rowspan="2">Audio system Kenwood 5 CD</td>
+<td>Chờ</td>
+<td>80</td>
+<td>17,60</td>
+<td>154,18</td>
+<td rowspan="2">Công suất tiêu thụ không phụ thuộc nguồn âm thanh (radio, CD…), và volume. Kém tiết kiệm điện, có lẽ do máy thế hệ cũ<big>☹</big></td>
+</tr>
+<tr>
+<td>Bật</td>
+<td>160</td>
+<td>35,20</td>
+<td>308,35</td>
+</tr>
+<tr>
+<td rowspan="2">TV Toshiba 25"</td>
+<td>Chờ</td>
+<td>30</td>
+<td>6,60</td>
+<td>57,81</td>
+<td rowspan="2"></td>
+</tr>
+<tr>
+<td>Bật</td>
+<td>350</td>
+<td>77,00</td>
+<td>674,52</td>
+</tr>
+<tr>
+<td>Đồng hồ báo thức radio Watson</td>
+<td></td>
+<td>13,5</td>
+<td>2,97</td>
+<td>26,02</td>
+<td>Công suất tiêu thụ không phụ thuộc việc radio tắt hay mở, và volume. Made in China. Không tiết kiệm điện <big>☹</big></td>
+</tr>
+<tr>
+<td>Lò microwave LG</td>
+<td>Tắt</td>
+<td>16</td>
+<td>3,52</td>
+<td>30,83</td>
+<td>Khi lò không được dùng, nó hiện đồng hồ</td>
+</tr>
+<tr>
+<td>Quạt treo tường Asia 55W</td>
+<td>Bật số 1</td>
+<td>220</td>
+<td>48,40</td>
+<td>423,98</td>
+<td></td>
+</tr>
+<tr>
+<td>Bóng đèn compact 11W hiệu Corso</td>
+<td>Bật</td>
+<td>27</td>
+<td>5,94</td>
+<td>52,03</td>
+<td>Đèn ghi 11W mà chỉ dùng chưa tới 6W, nhà sản xuất gian!</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+  <hr>
+
+  <div class="footer">
+  Bấm các nút sau để liên-lạc 
+  <br>
+  <a href="http://twitter.com/GiauCham" target="_blank"><amp-img src="/images/icons/Twitter-256.png" layout="fixed" width="40" height="40" alt="Twiter"></amp-img></a> 
+  <a href="http://m.me/lamgiauchacchan" target="_blank"><amp-img src="/images/icons/Fb-Messenger-128.png" layout="fixed" width="40" height="40" alt="Facebook"></amp-img></a> 
+  <a href="viber://add?number=84989760570"><amp-img src="/images/icons/Viber-128.png" layout="fixed" width="40" height="40" alt="Viber"></amp-img></a>
+  <a href="http://zaloapp.com/qr/p/lzfbyqlwzn9u"><amp-img src="/images/icons/Zalo.webp" layout="fixed" width="40" height="40" alt="Zalo"></amp-img></a> 
+  <a href="tel:+84989760570"><amp-img src="/images/icons/Cell-Phone-256.png" layout="fixed" width="40" height="40" alt="điện thoại"></amp-img></a>
+  <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
+  <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
+  <br>
+  Nếu bạn chép lại những trang web này, hãy ghi nguồn-gốc <a href="https://www.lhboi.name.vn">https://WWW.LHBOI.NAME.VN</a> để người-đọc có-thể tìm được nội-dung mới cập-nhật.
+  </div>
+</div>
+<amp-analytics type="googleanalytics">
+  <script type="application/json">
+  {
+  "vars": { "account": "UA-25268996-1" },
+  "triggers": {
+  "trackPageview": {
+  "on": "visible",
+  "request": "pageview"
+    }
+   }
+  }
+  </script>
+</amp-analytics>
+
+</main>
+</body>
+</html>
+
