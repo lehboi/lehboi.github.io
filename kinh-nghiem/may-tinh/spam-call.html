@@ -1,0 +1,414 @@
+<!doctype html>
+<html amp lang="vi">
+<head>
+<title>Chặn những cuộc gọi tiếp thị (Trang web LHBội)</title>
+<meta name="description" content="Chặn những cuộc gọi tiếp thị bằng sự hợp tác trong đám mây" />
+<meta name="keywords" content="spam, truecaller, showcaller,  sms, email">
+<link rel="canonical" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/spam-call">
+
+<!-- in head of html file -->
+
+<meta charset='utf-8'>
+
+<script async custom-element="amp-analytics"
+    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+
+<!--
+  Import the `amp-sidebar` component.
+-->
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+<script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+
+<!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
+<style amp-custom>
+html {
+  font-size: 17px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(17px + 7 * ((100vmin - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+amp-sidebar {
+  width: 240px;
+  padding-right: 2px;
+  background: darkblue;
+  color: blue;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+.close-sidebar{width: 30px;height: 30px;position: relative;cursor: pointer;background-color: transparent;border: none;}
+.close-sidebar:focus{outline: 2px auto #f06060;}
+.close-sidebar span{position: absolute;left: 0;width: 30px;height: 2px;border-right: 5px;background-color: #004d00;}
+.close-sidebar span:nth-child(1){transform: rotate(45deg);}
+.close-sidebar span:nth-child(2){transform: rotate(-45deg);}
+
+#menu { margin-left: -40px; }
+#menu li {
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  margin: 0px;
+  padding: 3px 0px 3px 0px;
+}
+#menu ul {
+  width: 100%;
+  display: block;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+}
+#menu ul li,
+#menu ul ul li {
+  width: 100%;
+  border-bottom: 0;
+  padding-left: 10px;
+}
+#menu ul ul ul li {
+  padding-left: 10px;
+}
+
+div.mwidth {max-width:1004px;margin: auto;}
+
+body {background-color:dimgray;}
+div.body {max-width:1004px;margin: auto; padding-left:8px; padding-right:8px; text-align:justify;color:white;background-color:black;font-family:sans-serif}
+div.title {text-align:center;font-size:160%;font-weight:bold;color:#ffe033;font-family:serif}
+div.right {text-align:right;}
+div.lrsp {margin: 0px 5px 0px 5px;}
+.todiscuss {color:lightskyblue;}
+div.center {text-align:center;}
+div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
+h1 {color:#c2ff66;font-family:serif}
+h2 {color:#adff33;font-family:serif}
+h3 {color:#a3ff1a;font-family:serif}
+h4 {color:#8ae600;font-family:serif}
+a {color:#ffd700;}
+a:visited {color:#e6c300;}
+table.noborder {
+  border-collapse: collapse;
+  width: 100%;
+  border: 0px;
+  text-align: left;
+  padding: 4px;
+}
+
+.myheader {
+    background-color:darkblue; 
+}
+
+th, td {
+  text-align: left;
+  padding: 2px;
+  vertical-align: top;
+}
+tr:nth-child(even){background-color: darkslategray}
+table.withborder {
+  width: 100%;
+  border: 2px;
+  border-color: #111111;
+  text-align: left;
+  padding: 4px;
+}
+.fbold { font-weight:bold; }
+.tmark {background-color:navy;}
+
+div.even {background-color: darkslategray}
+.red {color:red;}
+.tblue {color:deepskyblue;}
+div.footer { font-size: 80%; color: red; text-align: center; }
+
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
+
+@media (max-width: 399px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:10px; }
+}
+@media (min-width: 400px) and (max-width: 499px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:20px; }
+}
+@media (min-width: 500px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+}
+@media (min-width: 1260px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+}
+
+</style>
+</head>
+
+<body>
+  <!-- top of body -->
+  
+  <!-- sidebar menu -->
+  <amp-sidebar id="sidebar" layout="nodisplay" side="left">
+            <button on="tap:sidebar.close" class="close-sidebar">
+                <span></span>
+                <span></span>
+            </button>
+    <amp-accordion>
+<section>
+  <h3 class="myheader">Giới-thiệu</h3>
+  <p>
+    <a href='/'>Trang-bìa</a><br>
+    <a href='/home/about.html'>Thân-thế</a><br>
+    <a href='/home/cv.html'>Thành-tích</a><br>
+  </p>
+</section>
+<section>
+  <h3 class="myheader">Hữu-ích</h3>
+  <div>
+    <amp-accordion>
+    <section>
+      <h4 class="myheader">Lập-kế-hoạch-tài-chính</h4>
+      <p>
+        <a href='/huu-ich/ke-hoach-tai-chinh/'>Giới-thiệu</a><br>
+        <a href='/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han.html'>Ghi-chép kết-quả-đầu-tư-dài-hạn</a><br>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Đầu-tư-cổ-phiếu</h4>
+      <p>
+        <a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/quy-dau-tu.html'>Quỹ-đầu-tư</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu.html'>Sổ-tiết-kiệm hay Quỹ-đầu-tư?</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/thi-truong-xuong-doc.html'>Làm gì khi thị-trường xuống-dốc?</a>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Các loại bảo-hiểm</h4>
+      <p>
+        <a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a><br>
+        <a href='/huu-ich/cac-loai-bao-hiem/phi-bao-hiem-nhan-tho.html'>Phí-bảo-hiểm-nhân-thọ</a><br>
+        <a href='/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung.html'>Bảo-hiểm-nhân-thọ-liên-kết-chung</a><br>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Câu-chuyện</h4>
+      <p>
+        <a href='/huu-ich/cau-chuyen/bat-dau-dau-tu.html'>Bắt-đầu đầu-tư</a><br>
+        <a href='/huu-ich/cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia.html'>Những quyết-định tốt cho tuổi-già</a><br>
+        <a href='/huu-ich/cau-chuyen/nghi-huu-som.html'>Về-hưu trước 40 tuổi</a><br>
+        <a href='/huu-ich/cau-chuyen/tranh-mang-no.html'>Tránh mang nợ</a><br>
+        <a href='/huu-ich/cau-chuyen/mua-nha-hay-dau-tu.html'>Để tiền mua-nhà hay đầu-tư</a><br>
+        <a href='/huu-ich/cau-chuyen/bot-lo-ve-tien.html'>6 điều giúp tôi bớt lo-lắng về tiền-bạc</a><br>
+      </p>
+    </section>
+    </amp-accordion>
+    <a href='/huu-ich/chi-tieu.html'>Chi-tiêu có kế-hoạch</a><br>
+    <a href='/huu-ich/nghi-luc.html'>Nghị-lực để có dư tiền</a><br>
+    <a href='/huu-ich/lam-phat-loi-song.html'>Lạm-phát-lối-sống</a><br>
+    <a href='/huu-ich/tich-luy.html'>Tích-luỹ-tài-sản</a><br>
+    <a href='/huu-ich/de-tien-vao-dau.html'>Để tiền vào đâu</a><br>
+    <a href='/huu-ich/cach-dau-tu.html'>Những cách đầu-tư</a><br>
+    <a href='/huu-ich/dung-so-dau-tu.html'>Đừng sợ chữ đầu-tư</a><br>
+    <a href='/huu-ich/hieu-qua-dau-tu.html'>Tính hiệu-quả-đầu-tư</a><br>
+    <a href='/huu-ich/tich-luy-dai-han.html'>So-sánh công-cụ tích-luỹ-dài-hạn</a><br>
+  </div>
+</section>
+<section>
+  <h3 class="myheader">Kinh-nghiệm</h3>
+  <amp-accordion>
+  <section>
+    <h4 class="myheader">Máy-tính</h4>
+    <p>
+      <a href='/kinh-nghiem/may-tinh/pi-network.html'>Tiền-mật-mã Pi</a><br>
+      <a href='/kinh-nghiem/may-tinh/gnucash.html'>GnuCash</a><br>
+      <a href='/kinh-nghiem/may-tinh/ham-tai-chinh.html'>Các phép-tính-tài-chính cần biết</a><br>
+      <a href='/kinh-nghiem/may-tinh/cloudstorage.html'>Kinh-nghiệm dùng cloud storage</a><br>
+      <a href='/kinh-nghiem/may-tinh/privcloudstor.html'>Hướng-dẫn làm cloud storage server</a><br>
+      <a href="/kinh-nghiem/may-tinh/vi-dien-tu.html">Nhận-xét các ví-điện-tử</a><br>
+      <a href='/kinh-nghiem/may-tinh/googlemaps.html'>Kinh-nghiệm dùng Google Maps ở Việt-Nam</a><br>
+      <a href='/kinh-nghiem/may-tinh/spam-call.html'>Chặn những cuộc-gọi-tiếp-thị</a><br>
+      <a href='/kinh-nghiem/may-tinh/raspberrypi.html'>RaspberryPi</a><br>
+      <a href='/kinh-nghiem/may-tinh/spam.html'>Chặn spam mail</a><br>
+      <a href='/kinh-nghiem/may-tinh/toys.html'>Home server cũ</a><br>
+      <a href='/kinh-nghiem/may-tinh/cryptocurrency.html'>Tìm-hiểu Bitcoin</a><br>
+      <a href='/kinh-nghiem/may-tinh/protect.html'>Bảo vệ tài sản số</a>
+    </p>
+  </section>
+
+  <section>
+
+    <h4 class="myheader">Chữ Việt</h4>
+    <p>
+      <a href='/kinh-nghiem/chu-viet/ghi-dau-thanh-1.html'>Vị trí dấu thanh</a><br>
+      <a href='/kinh-nghiem/chu-viet/unicode.html'>Unicode</a><br>
+      <a href='/kinh-nghiem/chu-viet/utf-8.html'>UTF-8</a><br>
+      <a href='/kinh-nghiem/chu-viet/web.html'>Web Việt</a>
+    </p>
+  </section>
+
+  <section>
+
+    <h4 class="myheader">Linh tinh</h4>
+    <p>
+      <a href='/kinh-nghiem/linh-tinh/bep.html'>Bếp</a><br>
+      <a href='/kinh-nghiem/linh-tinh/ac-dc.html'>Điện một chiều và điện xoay chiều</a><br>
+      <a href='/kinh-nghiem/linh-tinh/tieu-thu-dien.html'>Tiêu thụ điện</a><br>
+      <a href='/kinh-nghiem/linh-tinh/dien-standby.html'>Điện standby</a><br>
+      <a href='/kinh-nghiem/linh-tinh/magchan.html'>Dùng thử Magchan để giặt</a><br>
+      <a href='/kinh-nghiem/linh-tinh/may-lanh.html'>Máy lạnh</a><br>
+      <a href='/kinh-nghiem/linh-tinh/may-lanh-inverter.html'>Máy lạnh inverter</a><br>
+      <a href='/kinh-nghiem/linh-tinh/nong.html'>Nóng</a><br>
+      <a href='/kinh-nghiem/linh-tinh/nhiet-do.html'>Nhiệt độ một ngày</a><br>
+      <a href='/kinh-nghiem/linh-tinh/tan-so-cua-tv.html'>Tần số của TV</a><br>
+      <a href='/kinh-nghiem/linh-tinh/hong-ngoai.html'>Hồng ngoại</a><br>
+    </p>
+  </section>
+  </amp-accordion>
+</section>
+<section>
+  <h3 class="myheader">Ý kiến</h3>
+  <p>
+    <a href='/y-kien/bat-ca-hai-tay.html'>Bắt cá hai tay</a><br>
+    <a href='/y-kien/su-giau-co.html'>Nguồn gốc sự giàu có</a><br>
+    <a href='/y-kien/xa-hoi-thong-tin.html'>Xã hội thông tin</a><br>
+    <a href='/y-kien/dung-hang-viet-nam.html'>Dùng hàng Việt</a><br>
+    <a href='/y-kien/gia-tra.html'>Giả trá</a><br>
+    <a href='/y-kien/nhung-cai-nem.html'>Những cái nêm</a><br>
+    <a href='/y-kien/khac-nguoi.html'>Khác người</a><br>
+    <a href='/y-kien/da-len-bao.html'>Đã lên báo</a>
+  </p>
+</section>
+
+<section>
+
+  <h3 class="myheader">Danh mục</h3>
+  <p>
+    <a href='/download/'>Download</a><br>
+    <a href='/sitemap.html'>Mục lục</a>
+  </p>
+</section>
+
+<section>
+  <h3 class="myheader"></h3>
+  <p>
+  <br>
+  <br>
+  <br>
+  <br>
+  </p>
+</section>
+</amp-accordion>
+
+  </amp-sidebar>
+<main>
+  <div class="mwidth">
+    <div class="mbutton">
+      <button on="tap:sidebar.toggle" class="ampstart-btn caps ml1" style="font-size:90%;font-weight:bold;background-color: blue; color: white;">MENU
+      </button>
+    </div>
+  </div>
+
+<div class="body">
+  <div class="title">Chặn những cuộc gọi tiếp thị</div>
+
+  <div>
+    <amp-social-share type="email" height="32"></amp-social-share>
+    <amp-social-share type="whatsapp" height="32"></amp-social-share>
+    <amp-social-share type="linkedin" height="32"></amp-social-share>
+    <amp-social-share type="twitter" height="32"></amp-social-share>
+    <amp-social-share type="tumblr" height="32"></amp-social-share>
+    <amp-social-share type="line" height="32"></amp-social-share>
+    <amp-social-share type="facebook" height="32" data-param-app_id="1879212745697311"></amp-social-share>
+    <amp-facebook-like height=32 width=90
+      layout="fixed"
+      data-layout="button_count"
+      data-href=
+https://www.lhboi.name.vn/kinh-nghiem/may-tinh/spam-call
+    >
+    </amp-facebook-like>
+  </div>
+
+  <p>Xã hội hiện đại đem đến cho người ta nhiều tiện nghi và cả những phiền toái. Khi những tiện nghi bị người này lạm dụng thì nó trở thành sự phiền toái của người khác ngay. Email dùng để thông tin với nhau, lạm dụng email thì gây ra sự phiền toái của <a href="spam.html">spam mail</a>. Khi điện thoại trở nên phổ biến thì người ta lạm dụng nó để ép thông tin tiếp thị đến bất kỳ người nào có điện thoại, không phải một lần mà lặp lại nhiều lần.</p>
+  <p>Ở Việt Nam hiện nay, người dùng điện thoại thường bị làm phiền bởi các dịch vụ ngân hàng (mời làm thẻ tín dụng, mời vay tiền, mời gửi tiết kiệm), bất động sản, đầu tư cổ phiếu nước ngoài, bảo hiểm nhân thọ… Các dịch vụ khác cũng làm phiền ở mức độ thấp hơn là khách sạn, nhà hàng, rượu, thiết kế web. Ngoài ra còn phải kể đến những kẻ lừa đảo như bán mật ong rừng, thông báo trúng thưởng…</p>
+  <h1>Tại sao chúng ta bị gọi làm phiền?</h1>
+  <p>Vì số điện thoại của chúng ta đã bị bán cho những kẻ bán danh sách điện thoại. Có hàng trăm kẻ như vậy. Và mỗi kẻ đó bán lại cho cả ngàn người khác. Các bạn thử dùng Google tìm "Miễn phí" "Danh sách khách hàng" sẽ thấy vô số nơi bán danh sách, những nơi đó còn cho không một vài bộ danh sách để hút khách.
+  <br>Những kẻ bán danh sách điện thoại sưu tầm số điện thoại của đủ các loại khách hàng: khách hàng đã mua nhà dự án, khách hàng đã gửi tiền tiết kiệm, khách hàng đã đi du lịch, phụ huynh học sinh… Do đó, không sớm thì muộn số điện thoại của bạn sẽ bị đưa vào các danh sách đó. Thật buồn cười là số điện thoại của tôi xuất hiện hai lần với hai tên khác nhau trong danh sách khách hàng đã mua nhà.
+  <br>Khi số điện thoại của chúng ta đã bị như vậy rồi thì không thể nào ngăn người lạ gọi đến, hết người này gọi đến người khác gọi.
+Những người gọi điện thoại đó hành động riêng rẽ, không ai biết ai, không có tổ chức hay công ty nào chịu trách nhiệm về những cuộc gọi đó.
+Chúng ta có mắng chửi hay đề nghị người gọi xoá số thì vẫn còn cả chục ngàn người khác gọi đến.</p>
+  <p>Ai là người đầu tiên bán số điện thoại của bạn?
+  <br>Những nhân viên tham tiền ở các nơi cung cấp dịch vụ (công ty địa ốc, ngân hàng, công ty du lịch, trường học…) đã lén lấy danh sách khách hàng bán cho những đầu nậu. Chính vì vậy trong danh sách có ghi rõ bạn đã từng mua nhà ở dự án nào, bạn đã từng giao dịch ở chi nhánh ngân hàng nào, con bạn học trường nào…</p>
+  <p>Bị làm phiền thì người dùng phải tìm cách ngăn ngừa. Nhưng người ta vốn rất linh hoạt trong việc vận dụng/lạm dụng mọi phương tiện để đạt được mục tiêu cho nên luôn luôn tìm những cách để vượt qua những biện pháp ngăn ngừa. Những biện pháp ngăn ngừa đơn độc của từng người đã tỏ ra không hiệu quả. Bây giờ, qua mạng Internet, mọi người có thể hợp sức ngăn chặn những cuộc gọi tiếp thị không mong muốn hiệu quả hơn. Số điện thoại của nạn nhân bị rao bán trên Internet thì nạn nhân sẽ đưa số điện thoại của spammer vào Internet luôn 😄.</p>
+
+  <h1>Đưa spammer vào đám mây</h1>
+  <div class="flright"><amp-img alt="Màn hình app Showcaller" src="/images/BlockedCall.jpg" width="360" height="240" layout="responsive"></amp-img></div>
+  <p>Truecaller và <a href="https://www.show-caller.com/" target='_blank'>Showcaller</a> là những app để chống những cuộc gọi tiếp thị không mong muốn bằng sự hợp tác trong cộng đồng. App này cho phép gắn thêm thông tin vào mỗi số điện thoại: tên và dấu spam.
+  <br>Điều đặc biệt là tất cả thông tin được tập trung lại trong server trong Internet mà không hề làm rối sổ điện thoại cá nhân của người dùng. Khi tôi gắn tên 'An BĐS' cho một số điện thoại rồi thì khi An gọi đến một người khác có dùng app thì tên 'An BĐS' sẽ tự hiện ra (nếu máy điện thoại người bị gọi đang nối mạng, tốt nhất là Wi-Fi vì mobile Internet có thể bị gián đoạn khi nhận cuộc gọi) và người bị gọi sẽ không trả lời khi thấy chữ BĐS. Nếu một số điện thoại bị đánh dấu là spam bởi 10 người dùng sẽ tự động bị chặn ở tất cả mọi người dùng. Từng người dùng có thể bỏ chặn những spammer cụ thể, ví dụ tôi không chặn số điện thoại của ngân hàng mà tôi có tài khoản mặc dù số đó bị xếp vào spammer.</p>
+  <p>Sau hơn hai năm dùng Truecaller, tôi chuyển sang dùng Showcaller vì nó gọn nhẹ hơn.</p>
+  <p>Hãy cài Showcaller vào và bỏ vài giây ghi tên và đánh dấu spam cho những cuộc gọi không mong muốn. Hơn hai năm qua, tôi đã đặt tên cho hàng ngàn số đó với các chữ rất dễ nhận như là 'BĐS', 'Dai Ichi', 'Tín dụng', 'Chứng Khoán Mỹ', 'Hotel'. Nên ghi ngành kinh doanh trong tên để mọi người dễ nhận biết mục đích người gọi, đừng ghi những chữ chung chung như 'Quấy rối', 'Phiền phức', 'Mất lịch sự'. Showcaller có chỗ để người dùng ghi chú vào từng số điện thoại, chúng ta có thể ghi nhiều thông tin hơn vài chữ ngắn ngủi trong tên.</p>
+  <p>Ngay khi mới cài Showcaller, bạn đã được chặn các cuộc gọi từ hàng ngàn spammer có sẵn trong server Showcaller. Danh sách các spammer ở Việt Nam có các số gọi giới thiệu bất động sản, ngân hàng, bảo hiểm, phòng tập thể dục, cho vay, thẻ thành viên khách sạn…</p>
+  <h1>Và hơn nữa</h1>
+  <p>Để cho những số điện thoại spam mau trở thành spammer, chúng ta hãy cùng nhau chia sẻ những số spam mà mình đã báo cáo. Một người nhận được cuộc gọi spam xong, đánh dấu số đó là spam và gửi vào mạng xã hội <a href="https://www.facebook.com/boi.hong.le/posts/1118587198233629" target='_blank'>Facebook</a> cùng với mô tả về người gọi (tiếp thị ngành gì, tên gì…), nhiều người khác cùng đánh dấu nó là spam ngay cả khi chưa bị gọi.
+  <br>Nếu chịu khó hơn nữa, mỗi khi nhận được SMS hoặc email tiếp thị, ngoài việc đánh dấu đó là thư rác, các bạn mở ra xem và lấy các số điện thoại trong đó ra để báo cáo là số spam. Chính các số điện thoại trong email, SMS mới là số điện thoại spammer dùng nhiều nhất, còn số gửi SMS chỉ là số gửi thuê. Nhiều người cùng làm như vậy thì sẽ đến lúc những người phát tán thông tin tiếp thị không mong muốn sẽ nhận được kết quả là số điện thoại của họ gọi đi đâu cũng chỉ nghe tín hiệu bận. Những số điện thoại thường dùng là số đã được lựa chọn, số đẹp. Nếu người chủ của số đẹp đó biết rằng hành động spam sẽ bị trả giá bằng việc số đẹp của họ bị chặn ở nhiều nơi thì họ sẽ ngừng spam.
+  <br>Các spammer thường dùng một số điện thoại khác để gọi, ngoài số chính của họ. Các số điện thoại đó cũng sẽ nhanh chóng bị chặn nếu cộng đồng chống spam tích cực. Tóm lại là, nếu chúng ta cùng tích cực ngăn chặn thì sự lạm dụng sẽ bị vô hiệu hoá.</p>
+
+<amp-accordion>
+<section>
+  <h1>Giới hạn của Truecaller</h1>
+  <div>
+  <p>Sau khi dùng Truecaller hơn hai năm trên máy Android 4 và Android 7, tôi đang gặp một rắc rối. Vấn đề là bản Truecaller 10 chạy trên Android 7 giữ lại trong máy một danh sách những số điện thoại mà app này đã từng tìm từ đám mây, danh sách đó gọi là Identified Contacts list. Về lý thuyết, việc giữ Identified Contacts list trong máy sẽ giúp app tìm được thông tin về số điện thoại nhanh hơn so với việc tìm từ đám mây. Nhưng thời gian để CPU của smartphone tìm càng lâu khi danh sách đó càng dài ra, trong khi thời gian để tìm trong đám mây gần như không đổi do server đủ mạnh để tìm trong hàng tỷ số điện thoại. Cụ thể thì máy Android 7 của tôi chứa hơn 2.000 số điện thoại trong Identified Contacts list, trong đó có hơn 800 số thuộc Block list, máy của tôi (thuộc hạng <i>cận trung cấp</i> tức là entry level) mất gần 10 giây để tìm một số điện thoại trong danh sách đó, và mỗi lần tôi sửa tên hay ngành kinh doanh của một số thì mất hơn 15 giây. Khó hiểu hơn nữa là Truecaller xoá tin nhắn cũng chậm hơn bình thường.
+  <br>Tôi sẽ đề nghị Truecaller cho user giới hạn độ dài Identified Contacts list sao cho thời gian xử lý vừa đủ nhanh, mức giới hạn đó tuỳ vào sức mạnh của từng smartphone, khi danh sách dài đến mức giới hạn thì Truecaller sẽ tự động xoá bớt những số điện thoại cũ nhất trong danh sách. Trong khi chờ Truecaller làm như vậy, mỗi người cần phải tự xoá bớt những số điện thoại quá cũ trong Block list và Identified Contacts list.</p>
+  <p>Xoá bớt bằng cách nào? Cách nhanh nhất là:</p>
+  <ol>
+    <li>mở <b>Settings→Apps</b>,</li>
+    <li>chọn Truecaller,</li>
+    <li>trong màn hình App Info, chọn Storage,</li>
+    <li>trong màn hình Storage, chọn Clear Data và Clear Cache,</li>
+    <li>quay trở lại màn hình App Info, chọn Force Stop,</li>
+    <li>quay trở lại màn hình Home, chạy Truecaller. Nếu Truecaller hỏi bạn có muốn restore data từ đám mây thì hãy chọn Skip. Truecaller sẽ đọc thông tin các cuộc gọi đang lưu trong máy và tìm tên của từng số từ đám mây để tạo lại một Identified Contacts list và Block list mới, nhỏ hơn trước khi bị xoá.
+  </ol>
+  <p>Tôi vừa xoá data của Truecaller trong máy theo cách trên. Trước khi xoá, Truecaller có hơn 20MB data. Sau khi xoá, Truecaller tạo lại khoảng 5MB data, Block list chứa 250 số, mọi việc tìm và sửa được làm nhanh như chớp.
+  <br>P.S. Tôi đã chuyển sang dùng <a href="https://www.show-caller.com/" target='_blank'>Showcaller</a> vì nó gọn nhẹ hơn Truecaller.</p>
+  </div>
+</section>
+</amp-accordion>
+
+  <hr>
+
+  <div class="footer">
+  Bấm các nút sau để liên-lạc 
+  <br>
+  <a href="http://twitter.com/GiauCham" target="_blank"><amp-img src="/images/icons/Twitter-256.png" layout="fixed" width="40" height="40" alt="Twiter"></amp-img></a> 
+  <a href="http://m.me/lamgiauchacchan" target="_blank"><amp-img src="/images/icons/Fb-Messenger-128.png" layout="fixed" width="40" height="40" alt="Facebook"></amp-img></a> 
+  <a href="viber://add?number=84989760570"><amp-img src="/images/icons/Viber-128.png" layout="fixed" width="40" height="40" alt="Viber"></amp-img></a>
+  <a href="http://zaloapp.com/qr/p/lzfbyqlwzn9u"><amp-img src="/images/icons/Zalo.webp" layout="fixed" width="40" height="40" alt="Zalo"></amp-img></a> 
+  <a href="tel:+84989760570"><amp-img src="/images/icons/Cell-Phone-256.png" layout="fixed" width="40" height="40" alt="điện thoại"></amp-img></a>
+  <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
+  <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
+  <br>
+  Nếu bạn chép lại những trang web này, hãy ghi nguồn-gốc <a href="https://www.lhboi.name.vn">https://WWW.LHBOI.NAME.VN</a> để người-đọc có-thể tìm được nội-dung mới cập-nhật.
+  </div>
+</div>
+<amp-analytics type="googleanalytics">
+  <script type="application/json">
+  {
+  "vars": { "account": "UA-25268996-1" },
+  "triggers": {
+  "trackPageview": {
+  "on": "visible",
+  "request": "pageview"
+    }
+   }
+  }
+  </script>
+</amp-analytics>
+
+</main>
+</body>
+</html>
+
