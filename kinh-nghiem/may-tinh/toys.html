@@ -1,0 +1,456 @@
+<!doctype html>
+<html amp lang="vi">
+<head>
+<title>Home server (Trang web LHBội)</title>
+<meta name="description" content="Một server nhiều dịch vụ trong gia đình: chuẩn đồng hồ, trả lời điện thoại và nhận tin nhắn…" />
+<meta name="keywords" content="hữu ích, tài chính, cá nhân">
+<link rel="canonical" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/toys">
+
+<!-- in head of html file -->
+
+<meta charset='utf-8'>
+
+<script async custom-element="amp-analytics"
+    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+
+<!--
+  Import the `amp-sidebar` component.
+-->
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+<script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+
+<!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
+<style amp-custom>
+html {
+  font-size: 17px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(17px + 7 * ((100vmin - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+amp-sidebar {
+  width: 240px;
+  padding-right: 2px;
+  background: darkblue;
+  color: blue;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+.close-sidebar{width: 30px;height: 30px;position: relative;cursor: pointer;background-color: transparent;border: none;}
+.close-sidebar:focus{outline: 2px auto #f06060;}
+.close-sidebar span{position: absolute;left: 0;width: 30px;height: 2px;border-right: 5px;background-color: #004d00;}
+.close-sidebar span:nth-child(1){transform: rotate(45deg);}
+.close-sidebar span:nth-child(2){transform: rotate(-45deg);}
+
+#menu { margin-left: -40px; }
+#menu li {
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  margin: 0px;
+  padding: 3px 0px 3px 0px;
+}
+#menu ul {
+  width: 100%;
+  display: block;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+}
+#menu ul li,
+#menu ul ul li {
+  width: 100%;
+  border-bottom: 0;
+  padding-left: 10px;
+}
+#menu ul ul ul li {
+  padding-left: 10px;
+}
+
+div.mwidth {max-width:1004px;margin: auto;}
+
+body {background-color:dimgray;}
+div.body {max-width:1004px;margin: auto; padding-left:8px; padding-right:8px; text-align:justify;color:white;background-color:black;font-family:sans-serif}
+div.title {text-align:center;font-size:160%;font-weight:bold;color:#ffe033;font-family:serif}
+div.right {text-align:right;}
+div.lrsp {margin: 0px 5px 0px 5px;}
+.todiscuss {color:lightskyblue;}
+div.center {text-align:center;}
+div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
+h1 {color:#c2ff66;font-family:serif}
+h2 {color:#adff33;font-family:serif}
+h3 {color:#a3ff1a;font-family:serif}
+h4 {color:#8ae600;font-family:serif}
+a {color:#ffd700;}
+a:visited {color:#e6c300;}
+table.noborder {
+  border-collapse: collapse;
+  width: 100%;
+  border: 0px;
+  text-align: left;
+  padding: 4px;
+}
+
+.myheader {
+    background-color:darkblue; 
+}
+
+th, td {
+  text-align: left;
+  padding: 2px;
+  vertical-align: top;
+}
+tr:nth-child(even){background-color: darkslategray}
+table.withborder {
+  width: 100%;
+  border: 2px;
+  border-color: #111111;
+  text-align: left;
+  padding: 4px;
+}
+.fbold { font-weight:bold; }
+.tmark {background-color:navy;}
+
+div.even {background-color: darkslategray}
+.red {color:red;}
+.tblue {color:deepskyblue;}
+div.footer { font-size: 80%; color: red; text-align: center; }
+
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
+
+@media (max-width: 399px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:10px; }
+}
+@media (min-width: 400px) and (max-width: 499px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:20px; }
+}
+@media (min-width: 500px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+}
+@media (min-width: 1260px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+}
+
+</style>
+</head>
+
+<body>
+  <!-- top of body -->
+  
+  <!-- sidebar menu -->
+  <amp-sidebar id="sidebar" layout="nodisplay" side="left">
+            <button on="tap:sidebar.close" class="close-sidebar">
+                <span></span>
+                <span></span>
+            </button>
+    <amp-accordion>
+<section>
+  <h3 class="myheader">Giới-thiệu</h3>
+  <p>
+    <a href='/'>Trang-bìa</a><br>
+    <a href='/home/about.html'>Thân-thế</a><br>
+    <a href='/home/cv.html'>Thành-tích</a><br>
+  </p>
+</section>
+<section>
+  <h3 class="myheader">Hữu-ích</h3>
+  <div>
+    <amp-accordion>
+    <section>
+      <h4 class="myheader">Lập-kế-hoạch-tài-chính</h4>
+      <p>
+        <a href='/huu-ich/ke-hoach-tai-chinh/'>Giới-thiệu</a><br>
+        <a href='/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han.html'>Ghi-chép kết-quả-đầu-tư-dài-hạn</a><br>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Đầu-tư-cổ-phiếu</h4>
+      <p>
+        <a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/quy-dau-tu.html'>Quỹ-đầu-tư</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu.html'>Sổ-tiết-kiệm hay Quỹ-đầu-tư?</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/thi-truong-xuong-doc.html'>Làm gì khi thị-trường xuống-dốc?</a>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Các loại bảo-hiểm</h4>
+      <p>
+        <a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a><br>
+        <a href='/huu-ich/cac-loai-bao-hiem/phi-bao-hiem-nhan-tho.html'>Phí-bảo-hiểm-nhân-thọ</a><br>
+        <a href='/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung.html'>Bảo-hiểm-nhân-thọ-liên-kết-chung</a><br>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Câu-chuyện</h4>
+      <p>
+        <a href='/huu-ich/cau-chuyen/bat-dau-dau-tu.html'>Bắt-đầu đầu-tư</a><br>
+        <a href='/huu-ich/cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia.html'>Những quyết-định tốt cho tuổi-già</a><br>
+        <a href='/huu-ich/cau-chuyen/nghi-huu-som.html'>Về-hưu trước 40 tuổi</a><br>
+        <a href='/huu-ich/cau-chuyen/tranh-mang-no.html'>Tránh mang nợ</a><br>
+        <a href='/huu-ich/cau-chuyen/mua-nha-hay-dau-tu.html'>Để tiền mua-nhà hay đầu-tư</a><br>
+        <a href='/huu-ich/cau-chuyen/bot-lo-ve-tien.html'>6 điều giúp tôi bớt lo-lắng về tiền-bạc</a><br>
+      </p>
+    </section>
+    </amp-accordion>
+    <a href='/huu-ich/chi-tieu.html'>Chi-tiêu có kế-hoạch</a><br>
+    <a href='/huu-ich/nghi-luc.html'>Nghị-lực để có dư tiền</a><br>
+    <a href='/huu-ich/lam-phat-loi-song.html'>Lạm-phát-lối-sống</a><br>
+    <a href='/huu-ich/tich-luy.html'>Tích-luỹ-tài-sản</a><br>
+    <a href='/huu-ich/de-tien-vao-dau.html'>Để tiền vào đâu</a><br>
+    <a href='/huu-ich/cach-dau-tu.html'>Những cách đầu-tư</a><br>
+    <a href='/huu-ich/dung-so-dau-tu.html'>Đừng sợ chữ đầu-tư</a><br>
+    <a href='/huu-ich/hieu-qua-dau-tu.html'>Tính hiệu-quả-đầu-tư</a><br>
+    <a href='/huu-ich/tich-luy-dai-han.html'>So-sánh công-cụ tích-luỹ-dài-hạn</a><br>
+  </div>
+</section>
+<section>
+  <h3 class="myheader">Kinh-nghiệm</h3>
+  <amp-accordion>
+  <section>
+    <h4 class="myheader">Máy-tính</h4>
+    <p>
+      <a href='/kinh-nghiem/may-tinh/pi-network.html'>Tiền-mật-mã Pi</a><br>
+      <a href='/kinh-nghiem/may-tinh/gnucash.html'>GnuCash</a><br>
+      <a href='/kinh-nghiem/may-tinh/ham-tai-chinh.html'>Các phép-tính-tài-chính cần biết</a><br>
+      <a href='/kinh-nghiem/may-tinh/cloudstorage.html'>Kinh-nghiệm dùng cloud storage</a><br>
+      <a href='/kinh-nghiem/may-tinh/privcloudstor.html'>Hướng-dẫn làm cloud storage server</a><br>
+      <a href="/kinh-nghiem/may-tinh/vi-dien-tu.html">Nhận-xét các ví-điện-tử</a><br>
+      <a href='/kinh-nghiem/may-tinh/googlemaps.html'>Kinh-nghiệm dùng Google Maps ở Việt-Nam</a><br>
+      <a href='/kinh-nghiem/may-tinh/spam-call.html'>Chặn những cuộc-gọi-tiếp-thị</a><br>
+      <a href='/kinh-nghiem/may-tinh/raspberrypi.html'>RaspberryPi</a><br>
+      <a href='/kinh-nghiem/may-tinh/spam.html'>Chặn spam mail</a><br>
+      <a href='/kinh-nghiem/may-tinh/toys.html'>Home server cũ</a><br>
+      <a href='/kinh-nghiem/may-tinh/cryptocurrency.html'>Tìm-hiểu Bitcoin</a><br>
+      <a href='/kinh-nghiem/may-tinh/protect.html'>Bảo vệ tài sản số</a>
+    </p>
+  </section>
+
+  <section>
+
+    <h4 class="myheader">Chữ Việt</h4>
+    <p>
+      <a href='/kinh-nghiem/chu-viet/ghi-dau-thanh-1.html'>Vị trí dấu thanh</a><br>
+      <a href='/kinh-nghiem/chu-viet/unicode.html'>Unicode</a><br>
+      <a href='/kinh-nghiem/chu-viet/utf-8.html'>UTF-8</a><br>
+      <a href='/kinh-nghiem/chu-viet/web.html'>Web Việt</a>
+    </p>
+  </section>
+
+  <section>
+
+    <h4 class="myheader">Linh tinh</h4>
+    <p>
+      <a href='/kinh-nghiem/linh-tinh/bep.html'>Bếp</a><br>
+      <a href='/kinh-nghiem/linh-tinh/ac-dc.html'>Điện một chiều và điện xoay chiều</a><br>
+      <a href='/kinh-nghiem/linh-tinh/tieu-thu-dien.html'>Tiêu thụ điện</a><br>
+      <a href='/kinh-nghiem/linh-tinh/dien-standby.html'>Điện standby</a><br>
+      <a href='/kinh-nghiem/linh-tinh/magchan.html'>Dùng thử Magchan để giặt</a><br>
+      <a href='/kinh-nghiem/linh-tinh/may-lanh.html'>Máy lạnh</a><br>
+      <a href='/kinh-nghiem/linh-tinh/may-lanh-inverter.html'>Máy lạnh inverter</a><br>
+      <a href='/kinh-nghiem/linh-tinh/nong.html'>Nóng</a><br>
+      <a href='/kinh-nghiem/linh-tinh/nhiet-do.html'>Nhiệt độ một ngày</a><br>
+      <a href='/kinh-nghiem/linh-tinh/tan-so-cua-tv.html'>Tần số của TV</a><br>
+      <a href='/kinh-nghiem/linh-tinh/hong-ngoai.html'>Hồng ngoại</a><br>
+    </p>
+  </section>
+  </amp-accordion>
+</section>
+<section>
+  <h3 class="myheader">Ý kiến</h3>
+  <p>
+    <a href='/y-kien/bat-ca-hai-tay.html'>Bắt cá hai tay</a><br>
+    <a href='/y-kien/su-giau-co.html'>Nguồn gốc sự giàu có</a><br>
+    <a href='/y-kien/xa-hoi-thong-tin.html'>Xã hội thông tin</a><br>
+    <a href='/y-kien/dung-hang-viet-nam.html'>Dùng hàng Việt</a><br>
+    <a href='/y-kien/gia-tra.html'>Giả trá</a><br>
+    <a href='/y-kien/nhung-cai-nem.html'>Những cái nêm</a><br>
+    <a href='/y-kien/khac-nguoi.html'>Khác người</a><br>
+    <a href='/y-kien/da-len-bao.html'>Đã lên báo</a>
+  </p>
+</section>
+
+<section>
+
+  <h3 class="myheader">Danh mục</h3>
+  <p>
+    <a href='/download/'>Download</a><br>
+    <a href='/sitemap.html'>Mục lục</a>
+  </p>
+</section>
+
+<section>
+  <h3 class="myheader"></h3>
+  <p>
+  <br>
+  <br>
+  <br>
+  <br>
+  </p>
+</section>
+</amp-accordion>
+
+  </amp-sidebar>
+<main>
+  <div class="mwidth">
+    <div class="mbutton">
+      <button on="tap:sidebar.toggle" class="ampstart-btn caps ml1" style="font-size:90%;font-weight:bold;background-color: blue; color: white;">MENU
+      </button>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="title">Home server</div>
+
+  <div>
+    <amp-social-share type="email" height="32"></amp-social-share>
+    <amp-social-share type="whatsapp" height="32"></amp-social-share>
+    <amp-social-share type="linkedin" height="32"></amp-social-share>
+    <amp-social-share type="twitter" height="32"></amp-social-share>
+    <amp-social-share type="tumblr" height="32"></amp-social-share>
+    <amp-social-share type="line" height="32"></amp-social-share>
+    <amp-social-share type="facebook" height="32" data-param-app_id="1879212745697311"></amp-social-share>
+    <amp-facebook-like height=32 width=90
+      layout="fixed"
+      data-layout="button_count"
+      data-href=
+https://www.lhboi.name.vn/kinh-nghiem/may-tinh/toys
+    >
+    </amp-facebook-like>
+  </div>
+
+<h3>Máy tính</h3>
+<p>Trong những năm khoảng 2006-2011 tôi host web site này ở nhà dưới tên <a href="https://web.archive.org/web/20070321125103/https://lhboi.homelinux.net:80/main" target='_blank'>lhboi.homelinux.net</a>. Web server đó cũng là gateway, và máy trả lời điện thoại của chúng tôi. Trước đó, một số nội dung trong website này được đưa vào Internet lần đầu trong những năm 1998-2005 ở <a href="https://web.archive.org/web/20040120014114/https://lhboi.tripod.com:80/" target='_blank'>lhboi.tripod.com</a>. Bây giờ cả hai domain đó đều không còn, nhưng các bạn có thể tìm lại trong dịch vụ <a href="https://web.archive.org" target='_blank'>lưu trữ web</a>. Từ năm 2011, những bài viết của tôi xuất hiện trong www.lhboi.name.vn bằng dịch vụ <a href="https://sites.google.com/" target='_blank'>Google Sites</a>. Bây giờ domain lhboi.name.vn được đặt ở một nhà cung cấp dịch vụ web hosting ở Việt Nam với chi phí thấp hơn <a href="../linh-tinh/tieu-thu-dien">tiền điện</a> cho máy tinh nhỏ xíu <a href="raspberrypi">Raspberry Pi</a> và router.<br>
+Phần dưới đây viết trong những năm 2006-2007.</p>
+<p>Tất cả các phần mềm dùng trong server lhboi.homelinux.net đều là phần mềm mã nguồn mở:</p>
+<table class="noborder">
+<tbody>
+<tr>
+<td>
+<dl><dt><b>Hệ điều hành</b></dt>
+<dd> <a href="https://www.kernel.org/" target='_blank'>Linux</a></dd>
+<dt><b>Web server</b></dt>
+<dd><a href="https://httpd.apache.org/" target='_blank'>Apache</a></dd>
+<dt><b>Mail Transfer Agent</b></dt>
+<dd><a href="https://www.postfix.org/" target='_blank'>Postfix</a></dd>
+<dt><b>DNS cache</b></dt>
+<dd>BIND</dd>
+</dl>
+</td>
+<td>
+<dl><dt><b>Soạn web</b></dt>
+<dd>vi</dd>
+<dt><b>Máy trả lời</b></dt>
+<dd>mgetty-voice</dd>
+<dt><b>ADSL connection</b></dt>
+<dd>Roaring Penguin</dd>
+<dt><b>Firewall</b></dt>
+<dd><a href="https://www.netfilter.org/" target='_blank'>Netfilter</a></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Các phần mềm trên được cắt gọt lại cho gọn để chạy tốt trên một máy Intel Pentium 100MHz với 64MByte RAM, đĩa cứng 5GB, 2 card mạng Ethernet, không có ổ đĩa mềm, ổ CD-ROM, bàn phím, chuột, VGA card và màn hình. Server này chỉ <a href="../linh-tinh/tieu-thu-dien.html">tốn</a> có 22W điện. <br />
+Hệ thống được nối mạng bằng một ADSL PPPoE bridge ZyXel và một modem voice V90 Acorp.</p>
+
+<h4>Máy trả lời điện thoại</h4>
+<p>Khi có cuộc gọi điện thoại đến mà người trong nhà chưa thể trả lời thì mgetty-voice sẽ phát lời chào, ghi lại lời nhắn vào file trong web server này, và gửi mail chứa URL của file đó cho chủ nhà biết. Với URL đó, lời nhắn có thể nghe được từ bất cứ nơi nào trong Internet.</p>
+<h4>Đồng hồ chính xác</h4>
+<p>Đồng hồ của server này được canh theo đồng hồ chuẩn ở <a href="https://www.ntp.org/" target="_blank">asia.pool.ntp.org</a>. Server này cũng cung cấp lại dịch vụ đồng hồ chuẩn, các bạn có thể để cho máy tính của các bạn canh giờ theo server này bằng <em>ntp</em>. ntp chỉnh đồng hồ máy tính chính xác tới hàng phần triệu giây. Tôi cung cấp dịch vụ này vì ở Việt nam <em>chưa có</em> server nào trong hệ thống pool.ntp.org. Tôi cũng muốn server này trở thành vn.pool.ntp.org nhưng không được vì không có địa chỉ IP cố định. Đáng ngạc nhiên là ở Việt nam không còn Internet server nào cung cấp tín hiệu thời gian chuẩn. Tổng cục Tiêu chuẩn Đo lường chất lượng có một đồng hồ chuẩn, trước kia, có cung cấp tín hiệu ở www.tcvn.gov.vn, nay không thể nào đến trang web đó nữa. Ở home.vnn.vn/netclock trước đây có chương trình đồng hồ (không chính xác) nay thì đồng hồ ngưng hẳn rồi.</p>
+<p>Gần đây, đã có một máy vn.pool.ntp.org đầu tiên.</p>
+<h4>Từ điển</h4>
+<p>Server này chạy chương trình <a href="https://www.dict.org/links.html" target="_blank">dictd</a> với các bộ từ điển lấy từ <a href="https://www.informatik.uni-leipzig.de/~duc/Dict/" target="_blank">Từ điển Hồ Ngọc Đức</a>. Các bạn có thể dùng chương trình dict để tra từ điển trong server này.</p>
+
+<h4>Mạng gia đình</h4>
+<p>Đằng sau server này là mạng gia đình, gồm có:</p>
+<ul><li>Ethernet switch 4-port 10/100 kết hợp với 802.11g Access Point,</li>
+<li>máy desktop Pentium 4 2,6GHz Hyperthread. Mỗi khi tôi bật máy desktop, nó sẽ gọi script <em>/sbin/ifup-local</em> để canh giờ theo server này.</li>
+<li>IBM Thinkpad R50e (của công ty vợ tôi làm việc),</li>
+<li>máy <a href="https://lhboi.name.vn/kinh-nghiem/linh-tinh/anh">in</a> và scan Epson CX1500</li></ul>
+<p>Trên máy desktop tôi thường dùng các chương trình:</p>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td>
+<dl><dt><b>Web browser</dt>
+<dd>Firefox</dd>
+<dt><b>Sổ kế toán cá nhân</dt>
+<dd><a href="gnucash.html">GnuCash</a></dd>
+</dl>
+</td>
+<td>
+<dl><dt><b>album</dt>
+<dd>gThumb và GIMP</dd>
+<dt><b>Sửa video</dt>
+<dd>Kino</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Máy desktop được gắn card AGP 8x nVidia GeForce FX5500 có các đầu ra VGA, DVI, SVIDEO. Thêm một cái DVI-VGA adapter, tôi gắn 2 màn hình VGA vào máy desktop. Gắn thêm keyboard, mouse và audio USB vào, phần mềm <a href="https://userful.com/products/free-2-user-license" target="_blank">Desktop Multiplier</a> làm cho tôi và con gái có thể dùng máy cùng một lúc. Mỗi người có đủ một bộ màn hình, bàn phím, chuột, một người dùng loa, một người dùng headphone. Hai người cùng đọc web, xem TV, nghe nhạc, soạn tài liệu… vẫn còn dư sức cho CPU chạy BOINC. Trong máy Linux có thể chạy một máy ảo VMware là Windows. Hình chụp ở cuối trang.</p>
+<p>Linux nhìn thấy CPU Pentium 4 Hyperthread như 2 CPU, nếu có hai hay nhiều process cần dùng CPU mà CPU đang tạm thời không thể xử lý tiếp lệnh của process đang chạy (có nhiều lý do, ví dụ như gặp lệnh rẽ nhánh đến 1 đoạn code không có sẵn trong cache) thì nó sẽ đưa process khác vào làm. Thực ra thì 1 CPU hyperthread không thể làm nhiều việc như 2 CPU thật. Khi tôi chạy chương trình encode video gồm 4 process pipe với nhau; nhờ máy có nhiều RAM nên CPU không phải chờ đọc ghi đĩa, 4 process đó cần rất nhiều khả năng tính toán của CPU, trung bình có hơn 2,5 process chờ làm việc mà CPU chỉ bận rộn khoảng chừng 120-140%.</p>
+<h4>Máy tính bận rộn suốt ngày</h4>
+<p>CPU Pentium không có khả năng tiết kiệm điện bằng cách tự <a href="https://lhboi.name.vn/kinh-nghiem/may-tinh/nhiet-do">thay đổi tần số</a>. Như vậy, dù có việc làm hay đang ở không, nó cũng <a href="../linh-tinh/tieu-thu-dien.html">tốn điện</a> như nhau. Để khỏi phí lượng điện tốn cho server này, tôi cho nó chạy <a href="https://setiathome.berkeley.edu/" target='_blank'>SETI@home</a>. SETI@home là chương trình ít đòi hỏi nhất trong số các chương trình <a href="https://boinc.berkeley.edu/" target='_blank'>BOINC</a>. Máy server này không đủ sức chạy các chương trình BOINC khác. Bây giờ thì CPU của server này luôn luôn dùng hết khả năng của nó.</p>
+<p>Để tận dụng máy desktop, tôi cho nó chạy chương trình <a href="https://www.worldcommunitygrid.org/" target="_blank">FightAIDS@home</a> trong số các chương trình BOINC.</p>
+
+<h4>IPv6</h4>
+<p>Mạng gia đình của tôi dùng <a href="https://www.ipv6.org/" target="_blank">IPv6</a>. Gateway có 1 địa chỉ IPv6 và mạng gia đình có prefix 48 bit, tất cả đều là địa chỉ IPv6 global cố định được cấp (miễn phí) bởi <a href="https://www.freenet6.net/" target="_blank">Freenet6</a>. Nếu các bạn có truy xuất được vào mạng IPv6 global, xin mời thử đến <a href="https://lhboi.broker.freenet6.net/" target="_blank">server này</a>. Do tất cả đều là địa chỉ IPv6 global cố định nên nếu thích tôi có thể cho tất cả các máy trong mạng gia đình làm server, và bất kỳ máy IPv6 nào trong Internet cũng có thể liên lạc với bất kỳ máy nào trong mạng gia đình tôi. Việc liên lạc diễn ra qua tunnel của IPv6 trong IPv4 (dùng UDP port 3653), tunnel nối từ máy gateway của tôi đến 1 server của mạng Freenet6. Nếu router của ISP biết IPv6 thì dùng protocol IPv6 (41) để liên lạc thẳng. ISP Việt nam không mở protocol 41 trên firewall nên tôi dùng UDP port 3653. <br />
+Mạng có prefix 48 bit có 2⁸⁰ (hơn 1,2*10²⁴) địa chỉ. Nó được chia thành 65.536 mạng có prefix 64 bit, mỗi mạng có 2⁶⁴ (hơn 18*10¹⁸) địa chỉ. Một mình tôi làm gì cho hết số địa chỉ này! <br />
+Tôi đang chuyển hết các hoạt động trong mạng gia đình sang IPv6: web proxy Apache và ssh chạy tốt với IPv6, time server ntpd được dịch lại để chạy được trên IPv6. Bên trong mạng gia đình chỉ có IPv6, giữa mạng gia đình và Internet thì có IPv4 và IPv6 chui trong IPv4. Tôi tin rằng đây là mạng IPv6 đầu tiên thật sự hoạt động ở Việt Nam.</p>
+<h3>Các thứ đồ chơi khác</h3>
+<p>Tôi dùng cable USB-to-serial để nối điện thoại Siemens CF62 với máy desktop, và máy desktop thấy máy điện thoại như là 1 modem cắm vào ngõ serial. Tôi viết 1 script để đồng bộ giờ trong máy điện thoại với giờ của máy desktop, và ghi các địa chỉ trong Evolution vào máy ĐT. Script đó gọi <em>chat</em> để gửi các lệnh AT xuống máy điện thoại.</p>
+<p>Viettel đã cung cấp dịch vụ GPRS, máy Siemens CF62 có thể xem được các trang web html và wml.</p>
+<p>Trong máy desktop có gắn card TV Bt878. Tôi thử dùng <a href="https://sector17.tvand.net/cabletv/" target="_blank">CableTV</a> và <a href="https://cube.dyndns.org/~rsnel/cc2y4m/" target="_blank">cc2y4m</a> để xem HTVC nhưng không được.</p>
+<p>Đây là hình chụp những thứ kể trên. Ở giữa trên cao là máy nhạc Kenwood màu đen, âm thanh của máy tính phát qua máy này. Phía trên bên phải là máy in và scan <a href="https://lhboi.name.vn/kinh-nghiem/linh-tinh/anh">Epson CX1500</a>. Máy server nằm ở ngăn dưới và quay ngang ra (để dễ cắm dây). Máy desktop nằm bên phải, cũng quay ngang ra. Hai màn hình cùng gắn vào máy desktop, màn hình bên trái đang hiện Windows XP trong VMware, màn hình bên phải là X Window được quay 90° để hợp với khổ giấy dọc, rất tiện khi đọc web hay soạn tài liệu. MS Windows đâu dễ gì làm được như vậy!</p>
+<div><amp-img alt="Máy tính 2 đầu" src="/images/computers0707.jpg" width="640" height="480" layout="responsive" /></div>
+
+  <hr>
+
+  <div class="footer">
+  Bấm các nút sau để liên-lạc 
+  <br>
+  <a href="http://twitter.com/GiauCham" target="_blank"><amp-img src="/images/icons/Twitter-256.png" layout="fixed" width="40" height="40" alt="Twiter"></amp-img></a> 
+  <a href="http://m.me/lamgiauchacchan" target="_blank"><amp-img src="/images/icons/Fb-Messenger-128.png" layout="fixed" width="40" height="40" alt="Facebook"></amp-img></a> 
+  <a href="viber://add?number=84989760570"><amp-img src="/images/icons/Viber-128.png" layout="fixed" width="40" height="40" alt="Viber"></amp-img></a>
+  <a href="http://zaloapp.com/qr/p/lzfbyqlwzn9u"><amp-img src="/images/icons/Zalo.webp" layout="fixed" width="40" height="40" alt="Zalo"></amp-img></a> 
+  <a href="tel:+84989760570"><amp-img src="/images/icons/Cell-Phone-256.png" layout="fixed" width="40" height="40" alt="điện thoại"></amp-img></a>
+  <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
+  <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
+  <br>
+  Nếu bạn chép lại những trang web này, hãy ghi nguồn-gốc <a href="https://www.lhboi.name.vn">https://WWW.LHBOI.NAME.VN</a> để người-đọc có-thể tìm được nội-dung mới cập-nhật.
+  </div>
+</div>
+<amp-analytics type="googleanalytics">
+  <script type="application/json">
+  {
+  "vars": { "account": "UA-25268996-1" },
+  "triggers": {
+  "trackPageview": {
+  "on": "visible",
+  "request": "pageview"
+    }
+   }
+  }
+  </script>
+</amp-analytics>
+
+</main>
+</body>
+</html>
+
