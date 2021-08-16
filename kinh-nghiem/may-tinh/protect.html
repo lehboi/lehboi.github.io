@@ -1,0 +1,517 @@
+<!doctype html>
+<html amp lang="vi">
+<head>
+<title>Bảo vệ tài sản trong thời đại số hoá</title>
+<meta name="description" content="Bảo vệ tài sản trong thời đại số hoá" />
+<meta name="keywords" content="hữu ích, ngân hàng, cá nhân, password, OTP">
+<link rel="canonical" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/protect">
+
+<!-- in head of html file -->
+
+<meta charset='utf-8'>
+
+<script async custom-element="amp-analytics"
+    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+
+<!--
+  Import the `amp-sidebar` component.
+-->
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+<script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+
+<!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
+<style amp-custom>
+html {
+  font-size: 17px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(17px + 7 * ((100vmin - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+amp-sidebar {
+  width: 240px;
+  padding-right: 2px;
+  background: darkblue;
+  color: blue;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+.close-sidebar{width: 30px;height: 30px;position: relative;cursor: pointer;background-color: transparent;border: none;}
+.close-sidebar:focus{outline: 2px auto #f06060;}
+.close-sidebar span{position: absolute;left: 0;width: 30px;height: 2px;border-right: 5px;background-color: #004d00;}
+.close-sidebar span:nth-child(1){transform: rotate(45deg);}
+.close-sidebar span:nth-child(2){transform: rotate(-45deg);}
+
+#menu { margin-left: -40px; }
+#menu li {
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  margin: 0px;
+  padding: 3px 0px 3px 0px;
+}
+#menu ul {
+  width: 100%;
+  display: block;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+}
+#menu ul li,
+#menu ul ul li {
+  width: 100%;
+  border-bottom: 0;
+  padding-left: 10px;
+}
+#menu ul ul ul li {
+  padding-left: 10px;
+}
+
+div.mwidth {max-width:1004px;margin: auto;}
+
+body {background-color:dimgray;}
+div.body {max-width:1004px;margin: auto; padding-left:8px; padding-right:8px; text-align:justify;color:white;background-color:black;font-family:sans-serif}
+div.title {text-align:center;font-size:160%;font-weight:bold;color:#ffe033;font-family:serif}
+div.right {text-align:right;}
+div.lrsp {margin: 0px 5px 0px 5px;}
+.todiscuss {color:lightskyblue;}
+div.center {text-align:center;}
+div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
+h1 {color:#c2ff66;font-family:serif}
+h2 {color:#adff33;font-family:serif}
+h3 {color:#a3ff1a;font-family:serif}
+h4 {color:#8ae600;font-family:serif}
+a {color:#ffd700;}
+a:visited {color:#e6c300;}
+table.noborder {
+  border-collapse: collapse;
+  width: 100%;
+  border: 0px;
+  text-align: left;
+  padding: 4px;
+}
+
+.myheader {
+    background-color:darkblue; 
+}
+
+th, td {
+  text-align: left;
+  padding: 2px;
+  vertical-align: top;
+}
+tr:nth-child(even){background-color: darkslategray}
+table.withborder {
+  width: 100%;
+  border: 2px;
+  border-color: #111111;
+  text-align: left;
+  padding: 4px;
+}
+.fbold { font-weight:bold; }
+.tmark {background-color:navy;}
+
+div.even {background-color: darkslategray}
+.red {color:red;}
+.tblue {color:deepskyblue;}
+div.footer { font-size: 80%; color: red; text-align: center; }
+
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
+
+@media (max-width: 399px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:10px; }
+}
+@media (min-width: 400px) and (max-width: 499px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:20px; }
+}
+@media (min-width: 500px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+}
+@media (min-width: 1260px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+}
+
+</style>
+</head>
+
+<body>
+  <!-- top of body -->
+  
+  <!-- sidebar menu -->
+  <amp-sidebar id="sidebar" layout="nodisplay" side="left">
+            <button on="tap:sidebar.close" class="close-sidebar">
+                <span></span>
+                <span></span>
+            </button>
+    <amp-accordion>
+<section>
+  <h3 class="myheader">Giới-thiệu</h3>
+  <p>
+    <a href='/'>Trang-bìa</a><br>
+    <a href='/home/about.html'>Thân-thế</a><br>
+    <a href='/home/cv.html'>Thành-tích</a><br>
+  </p>
+</section>
+<section>
+  <h3 class="myheader">Hữu-ích</h3>
+  <div>
+    <amp-accordion>
+    <section>
+      <h4 class="myheader">Lập-kế-hoạch-tài-chính</h4>
+      <p>
+        <a href='/huu-ich/ke-hoach-tai-chinh/'>Giới-thiệu</a><br>
+        <a href='/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han.html'>Ghi-chép kết-quả-đầu-tư-dài-hạn</a><br>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Đầu-tư-cổ-phiếu</h4>
+      <p>
+        <a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/quy-dau-tu.html'>Quỹ-đầu-tư</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu.html'>Sổ-tiết-kiệm hay Quỹ-đầu-tư?</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/thi-truong-xuong-doc.html'>Làm gì khi thị-trường xuống-dốc?</a>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Các loại bảo-hiểm</h4>
+      <p>
+        <a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a><br>
+        <a href='/huu-ich/cac-loai-bao-hiem/phi-bao-hiem-nhan-tho.html'>Phí-bảo-hiểm-nhân-thọ</a><br>
+        <a href='/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung.html'>Bảo-hiểm-nhân-thọ-liên-kết-chung</a><br>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Câu-chuyện</h4>
+      <p>
+        <a href='/huu-ich/cau-chuyen/bat-dau-dau-tu.html'>Bắt-đầu đầu-tư</a><br>
+        <a href='/huu-ich/cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia.html'>Những quyết-định tốt cho tuổi-già</a><br>
+        <a href='/huu-ich/cau-chuyen/nghi-huu-som.html'>Về-hưu trước 40 tuổi</a><br>
+        <a href='/huu-ich/cau-chuyen/tranh-mang-no.html'>Tránh mang nợ</a><br>
+        <a href='/huu-ich/cau-chuyen/mua-nha-hay-dau-tu.html'>Để tiền mua-nhà hay đầu-tư</a><br>
+        <a href='/huu-ich/cau-chuyen/bot-lo-ve-tien.html'>6 điều giúp tôi bớt lo-lắng về tiền-bạc</a><br>
+      </p>
+    </section>
+    </amp-accordion>
+    <a href='/huu-ich/chi-tieu.html'>Chi-tiêu có kế-hoạch</a><br>
+    <a href='/huu-ich/nghi-luc.html'>Nghị-lực để có dư tiền</a><br>
+    <a href='/huu-ich/lam-phat-loi-song.html'>Lạm-phát-lối-sống</a><br>
+    <a href='/huu-ich/tich-luy.html'>Tích-luỹ-tài-sản</a><br>
+    <a href='/huu-ich/de-tien-vao-dau.html'>Để tiền vào đâu</a><br>
+    <a href='/huu-ich/cach-dau-tu.html'>Những cách đầu-tư</a><br>
+    <a href='/huu-ich/dung-so-dau-tu.html'>Đừng sợ chữ đầu-tư</a><br>
+    <a href='/huu-ich/hieu-qua-dau-tu.html'>Tính hiệu-quả-đầu-tư</a><br>
+    <a href='/huu-ich/tich-luy-dai-han.html'>So-sánh công-cụ tích-luỹ-dài-hạn</a><br>
+  </div>
+</section>
+<section>
+  <h3 class="myheader">Kinh-nghiệm</h3>
+  <amp-accordion>
+  <section>
+    <h4 class="myheader">Máy-tính</h4>
+    <p>
+      <a href='/kinh-nghiem/may-tinh/pi-network.html'>Tiền-mật-mã Pi</a><br>
+      <a href='/kinh-nghiem/may-tinh/gnucash.html'>GnuCash</a><br>
+      <a href='/kinh-nghiem/may-tinh/ham-tai-chinh.html'>Các phép-tính-tài-chính cần biết</a><br>
+      <a href='/kinh-nghiem/may-tinh/cloudstorage.html'>Kinh-nghiệm dùng cloud storage</a><br>
+      <a href='/kinh-nghiem/may-tinh/privcloudstor.html'>Hướng-dẫn làm cloud storage server</a><br>
+      <a href="/kinh-nghiem/may-tinh/vi-dien-tu.html">Nhận-xét các ví-điện-tử</a><br>
+      <a href='/kinh-nghiem/may-tinh/googlemaps.html'>Kinh-nghiệm dùng Google Maps ở Việt-Nam</a><br>
+      <a href='/kinh-nghiem/may-tinh/spam-call.html'>Chặn những cuộc-gọi-tiếp-thị</a><br>
+      <a href='/kinh-nghiem/may-tinh/raspberrypi.html'>RaspberryPi</a><br>
+      <a href='/kinh-nghiem/may-tinh/spam.html'>Chặn spam mail</a><br>
+      <a href='/kinh-nghiem/may-tinh/toys.html'>Home server cũ</a><br>
+      <a href='/kinh-nghiem/may-tinh/cryptocurrency.html'>Tìm-hiểu Bitcoin</a><br>
+      <a href='/kinh-nghiem/may-tinh/protect.html'>Bảo vệ tài sản số</a>
+    </p>
+  </section>
+
+  <section>
+
+    <h4 class="myheader">Chữ Việt</h4>
+    <p>
+      <a href='/kinh-nghiem/chu-viet/ghi-dau-thanh-1.html'>Vị trí dấu thanh</a><br>
+      <a href='/kinh-nghiem/chu-viet/unicode.html'>Unicode</a><br>
+      <a href='/kinh-nghiem/chu-viet/utf-8.html'>UTF-8</a><br>
+      <a href='/kinh-nghiem/chu-viet/web.html'>Web Việt</a>
+    </p>
+  </section>
+
+  <section>
+
+    <h4 class="myheader">Linh tinh</h4>
+    <p>
+      <a href='/kinh-nghiem/linh-tinh/bep.html'>Bếp</a><br>
+      <a href='/kinh-nghiem/linh-tinh/ac-dc.html'>Điện một chiều và điện xoay chiều</a><br>
+      <a href='/kinh-nghiem/linh-tinh/tieu-thu-dien.html'>Tiêu thụ điện</a><br>
+      <a href='/kinh-nghiem/linh-tinh/dien-standby.html'>Điện standby</a><br>
+      <a href='/kinh-nghiem/linh-tinh/magchan.html'>Dùng thử Magchan để giặt</a><br>
+      <a href='/kinh-nghiem/linh-tinh/may-lanh.html'>Máy lạnh</a><br>
+      <a href='/kinh-nghiem/linh-tinh/may-lanh-inverter.html'>Máy lạnh inverter</a><br>
+      <a href='/kinh-nghiem/linh-tinh/nong.html'>Nóng</a><br>
+      <a href='/kinh-nghiem/linh-tinh/nhiet-do.html'>Nhiệt độ một ngày</a><br>
+      <a href='/kinh-nghiem/linh-tinh/tan-so-cua-tv.html'>Tần số của TV</a><br>
+      <a href='/kinh-nghiem/linh-tinh/hong-ngoai.html'>Hồng ngoại</a><br>
+    </p>
+  </section>
+  </amp-accordion>
+</section>
+<section>
+  <h3 class="myheader">Ý kiến</h3>
+  <p>
+    <a href='/y-kien/bat-ca-hai-tay.html'>Bắt cá hai tay</a><br>
+    <a href='/y-kien/su-giau-co.html'>Nguồn gốc sự giàu có</a><br>
+    <a href='/y-kien/xa-hoi-thong-tin.html'>Xã hội thông tin</a><br>
+    <a href='/y-kien/dung-hang-viet-nam.html'>Dùng hàng Việt</a><br>
+    <a href='/y-kien/gia-tra.html'>Giả trá</a><br>
+    <a href='/y-kien/nhung-cai-nem.html'>Những cái nêm</a><br>
+    <a href='/y-kien/khac-nguoi.html'>Khác người</a><br>
+    <a href='/y-kien/da-len-bao.html'>Đã lên báo</a>
+  </p>
+</section>
+
+<section>
+
+  <h3 class="myheader">Danh mục</h3>
+  <p>
+    <a href='/download/'>Download</a><br>
+    <a href='/sitemap.html'>Mục lục</a>
+  </p>
+</section>
+
+<section>
+  <h3 class="myheader"></h3>
+  <p>
+  <br>
+  <br>
+  <br>
+  <br>
+  </p>
+</section>
+</amp-accordion>
+
+  </amp-sidebar>
+<main>
+  <div class="mwidth">
+    <div class="mbutton">
+      <button on="tap:sidebar.toggle" class="ampstart-btn caps ml1" style="font-size:90%;font-weight:bold;background-color: blue; color: white;">MENU
+      </button>
+    </div>
+  </div>
+  <div class="body">
+    <div class="title">Bảo vệ tài sản trong thời đại số hoá</div>
+<div class="right">Viết lần đầu trong Tháng Ba, 2020.</div>
+
+  <div>
+    <amp-social-share type="email" height="32"></amp-social-share>
+    <amp-social-share type="whatsapp" height="32"></amp-social-share>
+    <amp-social-share type="linkedin" height="32"></amp-social-share>
+    <amp-social-share type="twitter" height="32"></amp-social-share>
+    <amp-social-share type="tumblr" height="32"></amp-social-share>
+    <amp-social-share type="line" height="32"></amp-social-share>
+    <amp-social-share type="facebook" height="32" data-param-app_id="1879212745697311"></amp-social-share>
+    <amp-facebook-like height=32 width=90
+      layout="fixed"
+      data-layout="button_count"
+      data-href=
+"https://www.lhboi.name.vn/kinh-nghiem/may-tinh/protect"
+    >
+    </amp-facebook-like>
+  </div>
+
+<!-- body here -->
+<h1>Tài sản trong thời đại số hoá có gì khác?</h1>
+<p>Thời nay đa số người ta đều có một thứ tài sản đặc biệt cần giữ là các file: file hình/video chụp bằng camera/phone, file nhạc để nghe bằng phone/computer, tài liệu soạn ra khi làm việc và ghi chép cá nhân… Mặc dù cách dùng các file đó khác nhau nhưng bên trong mỗi file chỉ chứa toàn các số 0 và 1 cho nên chúng ta gọi đó là <b>tài sản số hoá</b>. Những tài sản số hoá đều có một giá trị vật chất hoặc tinh thần nào đó. Chúng có giá trị vật chất khi chúng ta có thể bán, cho thuê, ví dụ như bán những tấm hình đẹp, cho người ta xem những video clip để thu tiền quảng cáo… Một vài loại tài sản số hoá có giá trị vật chất rất cụ thể là tài khoản ngân hàng, ví điện tử, giá trị của những tài sản này bằng số tiền có trong tài_khoản hoặc ví.
+<br>Những tài sản số hoá đó được tạo ra và giữ trong thẻ nhớ, USB drive, ổ đĩa cứng, smartphone… và chúng rất dễ bị mất đi vì vật chứa bị mất hay hư bất ngờ hoặc người chủ lỡ tay xoá mất.
+</p>
+<p>Ngoài ra, ngày càng có nhiều file do chúng ta tạo ra nhưng không được giữ trong tay chúng ta mà nằm trong các cloud server của các nhà cung cấp dịch vụ như Google, Facebook, Dropbox… Chúng ta giữ những file đó bằng password, mất password là mất hết file. Password giống như một cái chìa khoá để mở cái tủ chứa tài sản số hoá.
+</p>
+
+<h2>Chống rủi ro hư hoặc mất</h2>
+<p>Những tài sản số hoá do cá nhân tự giữ trong thẻ nhớ, USB drive, ổ đĩa cứng… có thể bị hư hoặc mất. Để phòng ngừa hư và mất thì chúng ta chép các file đó ra nhiều nơi, nhưng chép ra nhiều nơi rồi thì chúng ta phải nhớ nơi nào chứa file mới nhất, nơi nào cũ hơn. Cách tiện lợi nhất bây giờ là để cho file tự động được chép vào đám mây, các dịch vụ đám mây tự động giữ nhiều version của từng file từ cũ đến mới nhất. Chúng ta có thể dùng các dịch vụ <a href="cloudstorage.html">cloud storage</a> miễn phí, hoặc có trả tiền hàng tháng hay hàng năm, hoặc trả tiền một lần để dùng mãi mãi, hoặc chúng ta <a href="privcloudstor.html">tự tạo một cloud storage</a> để dùng.
+</p>
+
+<h2>Đề phòng rủi ro mất trộm</h2>
+<p>Các file của cá nhân tạo ra có thể có giá trị nào đó đủ để kẻ xấu muốn lấy trộm. Mỗi loại file có giá trị khác nhau:</p>
+<ul>
+<li>Ví tiền mật mã (cryptocurrency) có giá trị bằng số tiền trong ví</li>
+<li>File tài liệu bí mật kinh doanh chỉ có giá trị khi ở trong tay người biết kinh doanh</li>
+<li>File chứa thông tin riêng tư có thể gây hại cho danh dự thì có giá trị trong tay kẻ xấu</li>
+</ul>
+Mỗi người có tài sản số hoá đều cần phải chú ý giữ cho đừng bị mất trộm:</p>
+<ul>
+<li>tránh để smartphone bị trộm hoặc cướp. Giá trị vật chất của smartphone cũng đáng kể nhưng có khi giá trị của những file chứa trong smartphone còn cao hơn nhiều,</li>
+<li>tránh đừng để password bị lộ hoặc quên.</li>
+</ul>
+</p>
+
+<h1>Bảo vệ password</h1>
+<p>Bây giờ có quá nhiều dịch vụ được cung cấp (miễn phí hoặc có thu phí) qua Internet. Để sử dụng dịch vụ thì chúng ta phải được server xác nhận bằng cách trả lời password. Dùng máy tính và smartphone cá nhân cũng cần password. Một số file đặc biệt quan trọng trong máy cá nhân cũng cần password riêng để mở.
+</p>
+<p>Những người mới làm quen với máy tính và smartphone thường dùng những password đơn giản. Kẻ gian cũng biết điều đó nên chúng có một danh sách rất dài những password thường gặp và chúng dùng phần mềm để thử lần lượt các password đó để cố login vào các server nhằm tìm kiếm những thông tin riêng tư. Để tránh bị mất tài sản số hoá do password quá đơn giản thì mỗi người phải tập dùng password rắc rối hơn, một số server cũng chỉ cho dùng password không quá đơn giản. 
+</p>
+<p>Làm sao nhớ hết được quá nhiều password thật rắc rối ở quá nhiều nơi như vậy?
+</p>
+
+<h2>Chống quên</h2>
+<p>Một cách đơn giản để nhớ hết password là dùng chung một password ở tất cả các nơi 😉.
+<br>Bạn đừng làm theo cách đơn giản này nha. Một lý do mà nhiều người thường nói đến để cản bạn là “khi bị lộ password thì tất cả các dịch vụ đều bị xâm phạm”. Còn một lý do thực tế hơn nữa, đó là “không thể giữ password giống nhau mãi ở tất cả mọi nơi”. Ban đầu bạn chọn một password tốt và dễ nhớ để dùng ở tất cả mọi nơi, mọi việc khá đơn giản. Sau một thời gian, bạn gặp một server nào đó yêu cầu bạn phải dùng password rắc rối hơn, thế là bạn có hơn một password phải nhớ. Sau một thời gian nữa, một server nào đó yêu cầu bạn đổi password định kỳ, thế là bạn có cả đống password phải nhớ. Không thể áp dụng cách đơn giản này được lâu đâu.
+</p>
+<p>Một cách cũng đơn giản khác nữa là bạn có thể không cần nhớ tất cả password, chỉ cần nhớ password của một dịch vụ email để dùng địa chỉ email nhận password mới mỗi khi quên password ở các dịch vụ khác. Làm theo cách này cũng không dở, tuy nhiên bạn sẽ tốn thời gian để lấy password mới và trong nhiều trường hợp bạn cần phải nhớ câu trả lời cho câu hỏi riêng tư như là họ của mẹ bạn, tên trường tiểu học đầu tiên của bạn, tên con chó đầu tiên của bạn…
+</p>
+
+<h3>KeePass</h3>
+<p>Một cách chống quên chắc chắn nhất là bạn ghi chép tất cả password, nhưng không phải ghi vào sổ tay hay ghi vào file bình thường đâu. Việc ghi password vào sổ tay hay ghi vào file bình thường cũng có những rủi ro, ví dụ như có thể bị lộ.
+</p>
+<p>Bạn hãy dùng phần mềm quản lý password để ghi tất cả các password và các thông tin quan trọng khác (ví dụ số thẻ ngân hàng, activation key của software). Tất cả những thứ đó được ghi vào một file, bạn bảo vệ file đó bằng một password thật tốt và thật dài, và bạn chỉ cần nhớ một password cuối cùng đó thôi. Password thật dài đó không nhất thiết phải thật rắc rối với những ký hiệu khó nhớ như <i>!@#$%^&</i>, nó có thể là một câu thơ bạn rất thích, được viết hoa vài chữ, và được thêm con số có ý nghĩa riêng tư nào đó. <a href="https://keepass.info/" target=' blank'>KeePass</a> là một phần mềm như vậy, nó có thể dùng được trên Linux, Windows, <a href="https://play.google.com/store/apps/details?id=keepass2android.keepass2android" target=' blank'>Android</a>, iOS.
+</p>
+<p>Các thông tin trong KeePass được sắp xếp thành nhiều nhóm, ví dụ như nhóm công việc, nhóm ngân hàng, nhóm giải trí, nhóm mua sắm… Các thông tin ghi trong file KeePass đều được mã hoá bằng password của file nên dù kẻ gian có chép được file và đọc từng byte trong file đó cũng không thể thấy được những gì ghi trong đó. KeePass có một password generator để tạo ra những password khó đoán để bạn dùng ở những server có yêu cầu cao, tôi tin rằng các password đó là không thể đoán được và cũng không thể nhớ được, để dùng những password đó bạn chỉ có cách mở KeePass ra và copy rồi paste. KeePass giữ lại lịch sử những lần đổi password.
+</p>
+<p>Tôi đang dùng phần mềm KeePass để giữ tất cả thông tin như vậy. Để tiện dùng những thông tin đó mọi lúc và mọi nơi, tôi để file KeePass của tôi trong một <a href="cloudstorage.html">cloud storage</a> và đồng bộ nó về máy tính cũng như smartphone. Mặc dù để file KeePass trong Internet nhưng tôi không lo ngại gì hết vì kẻ gian phải qua hai lớp khoá mới lấy được file đó: password của cloud storage và password của file đó (ai mà biết được tôi thích câu thơ nào).
+</p>
+
+<h2>Đề phòng bị trộm password</h2>
+<p>Ngoài rủi ro quên mất password, còn có rủi ro bị người khác biết được password. Việc mất trộm password thường là do bị lừa:</p>
+<ul>
+<li>Bạn bị lừa đến một trang web giả, trông rất giống trang web cung cấp dịch vụ (ngân hàng, email, Facebook…) mà bạn định mở ra dùng, bạn gõ tên và password vào trang web giả đó, thế là bạn đã bị mất password.</li>
+<li>Bạn mở một trang web nào đó có một số thông tin mà bạn đang quan tâm, bạn download một file tài liệu hay phần mềm từ trang web đó vào máy, thế là một malware vào nằm trong máy của bạn, lặng lẽ gửi những gì bạn gõ trên bàn phím cho kẻ gian, kẻ gian sẽ lọc ra để lấy tên và password của các dịch vụ bạn thường dùng.</li>
+<li>Bạn nhận được một email từ một <i>người quen</i>, trong email đó có một file tài liệu hay hình ảnh, bạn mở file đó ra, thế là một malware vào nằm trong máy của bạn.</li>
+</ul>
+<p>Để tránh bị lừa thì bạn hãy bình tĩnh đọc kỹ những thông báo nhận được, và tránh cài những phần mềm không rõ nguồn gốc (phần mềm đã crack), cân nhắc cẩn thận khi mở những file đính kèm email.
+<br>Bạn cũng nên nhớ rằng <b>không bao giờ</b> gõ password của mình ở máy của người khác. Lý do là bạn không thể biết chắc rằng máy đó không có malware trộm password. Khi tôi cần dùng máy ở tiệm in, tôi luôn luôn chuẩn bị sẵn những thứ cần in thành các file pdf, và để các file đó trong một <a href="cloudstorage.html">cloud storage</a> mà không cần password.
+</p>
+<p>Một trường hợp bị mất password khác là server dịch vụ bị hacker xâm nhập và lấy hàng loạt thông tin người dùng, bao gồm tên tài khoản, địa chỉ email, password… Bạn có thể đến trang web <a href="https://haveibeenpwned.com/" target=' blank'>have i been pwned?</a> dò xem những địa chỉ email nào của bạn đã bị lộ tại những dịch vụ nào.
+<p>Và bạn hãy luôn luôn dùng lớp bảo vệ thứ hai (được giải thích <a href="#twofactor">dưới đây</a>) để khỏi bị mất tài khoản khi password đã bị trộm mất.</p>
+
+<h2>Password ở những chỗ khác</h2>
+Ngoài việc dùng password để login vào các dịch vụ web, password còn được dùng ở nhiều chỗ khác nữa:
+<ul>
+<li>
+Để bật máy tính: người chủ máy tính có thể đặt password để người lạ không thể bật máy lên dùng khi không có password. Nếu lỡ quên password này thì người chủ máy có thể xoá BIOS Settings để máy không hỏi password nữa. Tôi chưa bao giờ dùng đến loại password này.
+</li>
+<li>
+Để mã hoá nguyên ổ đĩa cứng: người chủ máy tính có thể đặt password để mã hoá tất cả các sector được ghi vào ổ đĩa cứng, mỗi lần khởi động ổ đĩa cứng đều hỏi password. Việc mã hoá được thực hiện trong mạch điện của đĩa cứng. Nếu người chủ lỡ quên password thì xem như vứt đi cả ổ đĩa cứng lẫn nội dung trong đó vì không có cách gì để dùng được nữa.
+</li>
+<li>
+Để mã hoá nguyên file system volume: các hệ điều hành mới đều cho phép người chủ máy đặt password để mã hoá nguyên file system volume giống như mã hoá nguyên ổ đĩa cứng.
+</li>
+<li>
+Để mã hoá một file: các file chứa thông tin quan trọng như file ví tiền mật mã, file KeePass cần được mã hoá bằng một password để người khác không thể biết được nội dung.
+</li>
+<li>
+Để khoá máy điện thoại
+</li>
+<li>
+Để khoá SIM điện thoại di động: mỗi SIM có hai lớp PIN để hạn chế sử dụng.
+</li>
+<li>
+Để mở cửa với khoá điện tử
+</li>
+</ul>
+
+<h1 id="twofactor">Bảo vệ hai lớp (Two Factor Authentication)</h1>
+<p>Một số dịch vụ tăng mức độ bảo vệ lên bằng cách dùng thêm password thứ hai, sau khi server đã nhận được password thứ nhất đúng rồi, nó hỏi thêm password thứ hai để chắc chắn rằng người trả lời thật sự là chủ tài khoản, <i>không những <b>biết</b> password mà còn đang <b>giữ</b> một vật của riêng chủ tài khoản</i>. Password thứ hai thay đổi liên tục theo thời gian và mỗi password chỉ có hiệu lực trong vài phút, nó gọi là One Time Password. Có hai cách để có OTP mà gõ vào.</p>
+
+<h2>Nhận OTP qua SMS</h2>
+<p>Sau khi nhận được password thứ nhất đúng, server sẽ gửi cho user một OTP qua SMS đến một số điện thoại di động của user.
+<br>Với những dịch vụ có giá trị lớn (liên quan đến nhiều tiền), kẻ gian sẽ cố tìm cách chiếm được cả password thứ nhất và số điện thoại của nạn nhân để chiếm quyền sử dụng dịch vụ. Nhiều vụ như vậy đã xảy ra trên <a href="https://edition.cnn.com/2020/03/13/tech/sim-hack-million-dollars/index.html" target=' blank'>thế giới</a> và ở <a href="https://vnexpress.net/kinh-doanh/mat-so-dien-thoai-bay-luon-hang-chuc-trieu-trong-ngan-hang-2850388.html" target=' blank'>Việt Nam</a>.
+</p>
+
+<h2>OTP tự tạo</h2>
+<p>Để tránh bị chiếm mất OTP trên đường truyền đến người dùng, một số dịch vụ cho người dùng tạo OTP bằng một máy tạo OTP nhỏ như ngón tay gọi là token, hoặc tạo OTP bằng một app trong smartphone. App tạo OTP có thể là app của riêng từng dịch vụ (ví dụ như app của riêng mỗi ngân hàng), hoặc app dùng chung cho nhiều dịch vụ (ví dụ <a href="https://authy.com/" target=' blank'>Authy</a>, Google Authenticator dùng chung cho Google, Microsoft, Facebook). KeePass cũng có thể tạo ra OTP. Tôi đang dùng Authy để tạo OTP cho các account Google, Microsoft Outlook và Facebook.
+</p>
+<h3>Authy</h3>
+<p>Authy là app chạy trong smartphone (và Linux, Mac, Windows) để tạo OTP cho nhiều dịch vụ trong Internet. Sau khi cài Authy vào máy, bạn đăng ký sử dụng bằng một địa chỉ email và cung cấp một số điện thoại để bắt đầu dùng, sau đó bạn bảo vệ app Authy của bạn bằng một password và một PIN. Bạn nên ghi các thông tin đó vào KeePass để dùng khi cần cài lại Authy.
+<br>Sau khi cài và đăng ký account Authy, bạn bắt đầu đưa các dịch vụ cần bảo vệ bằng OTP vào Authy. Các dịch vụ phổ biến dùng được với Authy là Google, Facebook, Microsoft, Firefox, pCloud. Danh sách đầy đủ các dịch vụ được ghi ở <a href="https://twofactorauth.org/" target=' blank'>Two Factor Auth</a>.
+</p>
+<p>Bạn có thể cài Authy trên vài máy cá nhân với cùng một account Authy. Khi đó OTP cho các dịch vụ được bảo vệ sẽ đồng bộ ở tất cả những máy đó. Nếu bạn lỡ mất hoặc xoá Authy ở  một máy thì vẫn dùng được Authy ở các máy khác.
+<br>Nếu bạn chỉ có một máy cài Authy mà bị mất, bạn phải cài lại Authy để dùng. Khi cài lại Authy bạn sẽ dùng lại địa chỉ email, password đã ghi nhớ lúc trước, và bạn phải xác nhận bằng một OTP nhận qua số điện thoại đã đăng ký.
+</p>
+<h1>Vật xác nhận nhân thân</h1>
+<p>Ở mức độ an toàn hơn password và  OTP, các server yêu cầu người dùng chứng tỏ không giả mạo bằng một vật không thể sao chép được, ví dụ như vân tay hay <a href="https://fidoalliance.org/how-fido-works/" target=' blank'>authenticator</a> (security key, chìa khoá an ninh kỹ thuật số). Khi dùng phương pháp xác nhận này thì password không còn cần thiết nữa.
+<br>Phần mềm của dịch vụ sẽ liên lạc với đầu đọc vân tay (có sẵn trong máy hoặc nối với máy tính qua USB hoặc Bluetooth) để đọc vân tay của người dùng trước khi bắt đầu giao dịch.
+</p>
+<div class="flright"><div class="right">Hình từ <a href="https://www.theverge.com/2019/2/22/18235173/the-best-hardware-security-keys-yubico-titan-key-u2f" target=' blank'>TheVerge.com</a></div><amp-img alt="Fido keys" src="/images/fidokey.png" width="452" height="254" layout="responsive"></amp-img></div>
+<p>Authenticator là một máy mã hoá nhỏ như cái móng tay. Nó chứa chìa khoá riêng (private key) của người dùng trong cặp chìa khoá public-key cryptography đã đăng ký với server của dịch vụ. Mỗi khi người dùng login vào dịch vụ thì server dịch vụ gửi đến máy của người dùng một chuỗi thử thách (challenge), máy của người dùng giao chuỗi thử thách đó cho authenticator qua USB hoặc NFC hoặc Bluetooth, authenticator <a href="cryptocurrency.html">ký</a> chuỗi thử thách bằng private key rồi gửi trở lại server, server dùng public key của người dùng để kiểm xem chữ ký đó có khớp không. Private key của người dùng không bao giờ xuất hiện bên ngoài authenticator nên không sợ bị lộ. Authenticator có thể chứa vô số private key nên một người dùng với một authenticator có thể tạo tài khoản ở vô số dịch vụ, nhiều tài khoản ở cùng một dịch vụ. Authenticator đang dần trở nên phổ biến, đến một lúc nào đó người ta không cần password ở mọi nơi.
+<br>Biện pháp này chặt chẽ như vậy nhưng cũng không bảo vệ tuyệt đối được. Đã có trường hợp trong khi ngủ chủ tài khoản bị người cùng nhà dùng đầu ngón tay để thực hiện giao dịch chuyển tiền đi mất. Trong trường hợp không tin tưởng người cùng nhà thì nên tắt hoặc cất smartphone vào trong két sắt khi đi ngủ.
+</p>
+
+<h1>Di sản số</h1>
+<p>Những tài sản có một giá trị nào đó (vật chất hay tinh thần) đều cần phải được truyền lại khi người chủ tài sản qua đời, không nên để bị quên lãng giống như những trường hợp chôn vàng dưới nền nhà mà người nhà không biết.
+<br>Người chôn vàng dưới nền nhà nên viết rõ chỗ chôn vào di chúc. Di chúc được niêm phong và cất cẩn thận, người thân sẽ mở di chúc sau khi người viết qua đời.
+<br>Với tài sản số hoá thì viết vào di chúc như thế nào? Viết tên và password lên giấy rồi niêm phong lại ư? Mỗi khi có một password cần phải đổi thì lại phải chép lại di chúc sao? Mất công quá, hãy làm di chúc số!
+<br>Google có một khả năng gọi là Inactive Account Manager rất tiện cho việc để lại tài sản số hoá. Khi Google thấy bạn không dùng tài khoản của bạn từ ba tháng trở lên, Inactive Account Manager sẽ gửi một email báo cho một vài người thân mà bạn đã chọn sẵn và cho những người đó dùng một vài loại tài sản số hoá mà bạn đang để trong Google. 
+</p>
+<p>Còn tài sản số hoá trong những dịch vụ khác thì làm sao để truyền lại? Tôi sẽ dùng Inactive Account Manager bắc cầu qua dịch vụ cloud storage để truyền lại tất cả tài sản số hoá như sau:
+</p>
+<ul>
+<li>Để trong Google Drive một file chứa link chỉ đến file KeePass trong một cloud storage server và password của file đó.</li>
+<li>Khi người thân của tôi nhận được quyền dùng gmail hoặc Google Drive của tôi sẽ mở được file KeePass đó và thấy tất cả password ở tất cả các dịch vụ tôi đã từng dùng.</li>
+</ul>
+
+<h1>Tài khoản ở ngân hàng</h1>
+<p>Tài khoản của bạn ở ngân hàng cũng là tài sản số hoá, nhưng là số tiền, cụ thể hơn loại tài sản số hoá ở trên.</p>
+<p>Đối với loại tài sản số hoá là tài khoản trong ngân hàng thì chìa khoá gồm có một cái thẻ gắn liền với PIN (Personal Identification Number) và số điện thoại di động. Số điện thoại di động được dùng để nhận OTP (One Time Password) qua SMS khi dùng thẻ qua Internet (để trả tiền mua hàng hoặc chuyển tiền sang tài khoản khác). Kẻ gian đã tìm ra những cách để chiếm quyền sử dụng số điện thoại của chủ tài khoản, hoặc lén cài phần mềm gián điệp vào smartphone để lấy cắp OTP trong SMS và chuyển hết tiền sang tài khoản khác. Gần đây các ngân hàng đã dùng loại chìa khoá tốt hơn số điện thoại di động, đó là app tạo ra OTP trên smartphone. Tuy nhiên, kẻ gian vẫn nghĩ ra nhiều kịch bản để lừa chủ tài khoản giao OTP cho bọn chúng và các ngân_hàng đã liên_tục nhắc_nhở “không giao OTP cho bất_cứ ai, kể_cả nhân_viên ngân_hàng”.
+</p>
+<p>
+Đối với thẻ, khi dùng thẻ để rút tiền ở ATM thì máy luôn luôn hỏi PIN. Nhưng khi dùng thẻ để trả tiền mua hàng qua máy POS thì có trường hợp máy hỏi PIN (thường là thẻ debit), có trường hợp máy không hỏi PIN (thường là thẻ credit). Khi thẻ credit của bạn bị mất, kẻ gian sẽ cầm thẻ đi mua những món đắt tiền rồi đem bán lại. Ở nước ngoài, khi bạn báo cho ngân hàng biết rằng bạn bị mất thẻ thì ngân hàng không bắt bạn trả những món tiền đã chi tiêu từ lúc mất thẻ. Ở VN, bạn phải trả tiền cho ngân hàng trước rồi khiếu nại sau, do đó việc mất thẻ credit mà không kịp khoá thẻ tương đương với mất tiền. Bây giờ, các ngân hàng thường có app để khách hàng cài vào smartphone, qua app đó có thể khoá thẻ ngay lập tức mà không cần phải gọi đến ngân hàng như hồi xưa.
+<br>Một kiểu mất thẻ khác là thẻ bị sao chép. Thẻ ngân hàng loại cũ dùng dải từ để ghi thông tin thì rất dễ bị sao chép. Khi thẻ đã bị sao chép rồi, kẻ xấu có thể dùng bản sao đó đi mua hàng, hoặc đi rút tiền nếu chép được cả PIN. Thẻ từ có thể bị sao chép trong những trường hợp sau:
+</p>
+<ul>
+<li>
+Chép ở ATM: kẻ xấu gắn một máy đọc thẻ rất gọn ra trước khe nhét thẻ ở ATM và một camera để ghi PIN. Khi người ta đưa thẻ vào thì hai bộ phận đó sẽ chép nội dung dải từ và số PIN rồi gửi cho kẻ xấu để ghi ra một thẻ khác. Để tránh bị sao chép như vậy thì luôn luôn để ý khe nhét thẻ phải bình thường và che bàn phím khi bấm PIN.</li>
+<li>
+Chép ở máy POS: những cửa hàng gian lận sẽ dùng máy đọc thẻ của khách hàng. Để tránh bị thì khách mua hàng không được để người bán hàng cầm thẻ đi khỏi tầm mắt của mình.</li>
+</ul>
+Có trường hợp nhân viên tính tiền ở cửa hàng cố nhớ hết thông tin trên hai mặt thẻ rồi sau đó ghi lại vào sổ tay, rồi dùng thông tin đó để mua hàng online ở những cửa hàng không kiểm soát chặt.
+
+<p>Ngoài tài khoản ngân hàng, tôi còn có <a href="vi-dien-tu.html">ví tiền điện tử</a>, tài khoản đầu tư <a href="/huu-ich/dau-tu-co-phieu/quy-dau-tu.html">quỹ đầu tư</a>.</p>
+
+  <hr>
+
+  <div class="footer">
+  Bấm các nút sau để liên-lạc 
+  <br>
+  <a href="http://twitter.com/GiauCham" target="_blank"><amp-img src="/images/icons/Twitter-256.png" layout="fixed" width="40" height="40" alt="Twiter"></amp-img></a> 
+  <a href="http://m.me/lamgiauchacchan" target="_blank"><amp-img src="/images/icons/Fb-Messenger-128.png" layout="fixed" width="40" height="40" alt="Facebook"></amp-img></a> 
+  <a href="viber://add?number=84989760570"><amp-img src="/images/icons/Viber-128.png" layout="fixed" width="40" height="40" alt="Viber"></amp-img></a>
+  <a href="http://zaloapp.com/qr/p/lzfbyqlwzn9u"><amp-img src="/images/icons/Zalo.webp" layout="fixed" width="40" height="40" alt="Zalo"></amp-img></a> 
+  <a href="tel:+84989760570"><amp-img src="/images/icons/Cell-Phone-256.png" layout="fixed" width="40" height="40" alt="điện thoại"></amp-img></a>
+  <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
+  <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
+  <br>
+  Nếu bạn chép lại những trang web này, hãy ghi nguồn-gốc <a href="https://www.lhboi.name.vn">https://WWW.LHBOI.NAME.VN</a> để người-đọc có-thể tìm được nội-dung mới cập-nhật.
+  </div>
+</div>
+<amp-analytics type="googleanalytics">
+  <script type="application/json">
+  {
+  "vars": { "account": "UA-25268996-1" },
+  "triggers": {
+  "trackPageview": {
+  "on": "visible",
+  "request": "pageview"
+    }
+   }
+  }
+  </script>
+</amp-analytics>
+
+</main>
+</body>
+</html>
+
