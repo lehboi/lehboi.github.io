@@ -1,0 +1,454 @@
+<!doctype html>
+<html amp lang="vi">
+<head>
+<title>Web chữ Việt (Trang web LHBội)</title>
+<meta name="description" content="Web chữ Việt trong các bộ chữ khác nhau. Hãy chọn đúng Unicode khi ghi chữ Việt." />
+<meta name="keywords" content="hữu ích, tài chính, cá nhân">
+<link rel="canonical" href="https://www.lhboi.name.vn/kinh-nghiem/chu-viet/web">
+
+<!-- in head of html file -->
+
+<meta charset='utf-8'>
+
+<script async custom-element="amp-analytics"
+    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+
+<!--
+  Import the `amp-sidebar` component.
+-->
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+<script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+
+<!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
+<style amp-custom>
+html {
+  font-size: 17px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(17px + 7 * ((100vmin - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+amp-sidebar {
+  width: 240px;
+  padding-right: 2px;
+  background: darkblue;
+  color: blue;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+.close-sidebar{width: 30px;height: 30px;position: relative;cursor: pointer;background-color: transparent;border: none;}
+.close-sidebar:focus{outline: 2px auto #f06060;}
+.close-sidebar span{position: absolute;left: 0;width: 30px;height: 2px;border-right: 5px;background-color: #004d00;}
+.close-sidebar span:nth-child(1){transform: rotate(45deg);}
+.close-sidebar span:nth-child(2){transform: rotate(-45deg);}
+
+#menu { margin-left: -40px; }
+#menu li {
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  margin: 0px;
+  padding: 3px 0px 3px 0px;
+}
+#menu ul {
+  width: 100%;
+  display: block;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+}
+#menu ul li,
+#menu ul ul li {
+  width: 100%;
+  border-bottom: 0;
+  padding-left: 10px;
+}
+#menu ul ul ul li {
+  padding-left: 10px;
+}
+
+div.mwidth {max-width:1004px;margin: auto;}
+
+body {background-color:dimgray;}
+div.body {max-width:1004px;margin: auto; padding-left:8px; padding-right:8px; text-align:justify;color:white;background-color:black;font-family:sans-serif}
+div.title {text-align:center;font-size:160%;font-weight:bold;color:#ffe033;font-family:serif}
+div.right {text-align:right;}
+div.lrsp {margin: 0px 5px 0px 5px;}
+.todiscuss {color:lightskyblue;}
+div.center {text-align:center;}
+div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
+h1 {color:#c2ff66;font-family:serif}
+h2 {color:#adff33;font-family:serif}
+h3 {color:#a3ff1a;font-family:serif}
+h4 {color:#8ae600;font-family:serif}
+a {color:#ffd700;}
+a:visited {color:#e6c300;}
+table.noborder {
+  border-collapse: collapse;
+  width: 100%;
+  border: 0px;
+  text-align: left;
+  padding: 4px;
+}
+
+.myheader {
+    background-color:darkblue; 
+}
+
+th, td {
+  text-align: left;
+  padding: 2px;
+  vertical-align: top;
+}
+tr:nth-child(even){background-color: darkslategray}
+table.withborder {
+  width: 100%;
+  border: 2px;
+  border-color: #111111;
+  text-align: left;
+  padding: 4px;
+}
+.fbold { font-weight:bold; }
+.tmark {background-color:navy;}
+
+div.even {background-color: darkslategray}
+.red {color:red;}
+.tblue {color:deepskyblue;}
+div.footer { font-size: 80%; color: red; text-align: center; }
+
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
+
+@media (max-width: 399px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:10px; }
+}
+@media (min-width: 400px) and (max-width: 499px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:20px; }
+}
+@media (min-width: 500px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+}
+@media (min-width: 1260px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+}
+
+</style>
+</head>
+
+<body>
+  <!-- top of body -->
+  
+  <!-- sidebar menu -->
+  <amp-sidebar id="sidebar" layout="nodisplay" side="left">
+            <button on="tap:sidebar.close" class="close-sidebar">
+                <span></span>
+                <span></span>
+            </button>
+    <amp-accordion>
+<section>
+  <h3 class="myheader">Giới-thiệu</h3>
+  <p>
+    <a href='/'>Trang-bìa</a><br>
+    <a href='/home/about.html'>Thân-thế</a><br>
+    <a href='/home/cv.html'>Thành-tích</a><br>
+  </p>
+</section>
+<section>
+  <h3 class="myheader">Hữu-ích</h3>
+  <div>
+    <amp-accordion>
+    <section>
+      <h4 class="myheader">Lập-kế-hoạch-tài-chính</h4>
+      <p>
+        <a href='/huu-ich/ke-hoach-tai-chinh/'>Giới-thiệu</a><br>
+        <a href='/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han.html'>Ghi-chép kết-quả-đầu-tư-dài-hạn</a><br>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Đầu-tư-cổ-phiếu</h4>
+      <p>
+        <a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/quy-dau-tu.html'>Quỹ-đầu-tư</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu.html'>Sổ-tiết-kiệm hay Quỹ-đầu-tư?</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/thi-truong-xuong-doc.html'>Làm gì khi thị-trường xuống-dốc?</a>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Các loại bảo-hiểm</h4>
+      <p>
+        <a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a><br>
+        <a href='/huu-ich/cac-loai-bao-hiem/phi-bao-hiem-nhan-tho.html'>Phí-bảo-hiểm-nhân-thọ</a><br>
+        <a href='/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung.html'>Bảo-hiểm-nhân-thọ-liên-kết-chung</a><br>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Câu-chuyện</h4>
+      <p>
+        <a href='/huu-ich/cau-chuyen/bat-dau-dau-tu.html'>Bắt-đầu đầu-tư</a><br>
+        <a href='/huu-ich/cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia.html'>Những quyết-định tốt cho tuổi-già</a><br>
+        <a href='/huu-ich/cau-chuyen/nghi-huu-som.html'>Về-hưu trước 40 tuổi</a><br>
+        <a href='/huu-ich/cau-chuyen/tranh-mang-no.html'>Tránh mang nợ</a><br>
+        <a href='/huu-ich/cau-chuyen/mua-nha-hay-dau-tu.html'>Để tiền mua-nhà hay đầu-tư</a><br>
+        <a href='/huu-ich/cau-chuyen/bot-lo-ve-tien.html'>6 điều giúp tôi bớt lo-lắng về tiền-bạc</a><br>
+      </p>
+    </section>
+    </amp-accordion>
+    <a href='/huu-ich/chi-tieu.html'>Chi-tiêu có kế-hoạch</a><br>
+    <a href='/huu-ich/nghi-luc.html'>Nghị-lực để có dư tiền</a><br>
+    <a href='/huu-ich/lam-phat-loi-song.html'>Lạm-phát-lối-sống</a><br>
+    <a href='/huu-ich/tich-luy.html'>Tích-luỹ-tài-sản</a><br>
+    <a href='/huu-ich/de-tien-vao-dau.html'>Để tiền vào đâu</a><br>
+    <a href='/huu-ich/cach-dau-tu.html'>Những cách đầu-tư</a><br>
+    <a href='/huu-ich/dung-so-dau-tu.html'>Đừng sợ chữ đầu-tư</a><br>
+    <a href='/huu-ich/hieu-qua-dau-tu.html'>Tính hiệu-quả-đầu-tư</a><br>
+    <a href='/huu-ich/tich-luy-dai-han.html'>So-sánh công-cụ tích-luỹ-dài-hạn</a><br>
+  </div>
+</section>
+<section>
+  <h3 class="myheader">Kinh-nghiệm</h3>
+  <amp-accordion>
+  <section>
+    <h4 class="myheader">Máy-tính</h4>
+    <p>
+      <a href='/kinh-nghiem/may-tinh/pi-network.html'>Tiền-mật-mã Pi</a><br>
+      <a href='/kinh-nghiem/may-tinh/gnucash.html'>GnuCash</a><br>
+      <a href='/kinh-nghiem/may-tinh/ham-tai-chinh.html'>Các phép-tính-tài-chính cần biết</a><br>
+      <a href='/kinh-nghiem/may-tinh/cloudstorage.html'>Kinh-nghiệm dùng cloud storage</a><br>
+      <a href='/kinh-nghiem/may-tinh/privcloudstor.html'>Hướng-dẫn làm cloud storage server</a><br>
+      <a href="/kinh-nghiem/may-tinh/vi-dien-tu.html">Nhận-xét các ví-điện-tử</a><br>
+      <a href='/kinh-nghiem/may-tinh/googlemaps.html'>Kinh-nghiệm dùng Google Maps ở Việt-Nam</a><br>
+      <a href='/kinh-nghiem/may-tinh/spam-call.html'>Chặn những cuộc-gọi-tiếp-thị</a><br>
+      <a href='/kinh-nghiem/may-tinh/raspberrypi.html'>RaspberryPi</a><br>
+      <a href='/kinh-nghiem/may-tinh/spam.html'>Chặn spam mail</a><br>
+      <a href='/kinh-nghiem/may-tinh/toys.html'>Home server cũ</a><br>
+      <a href='/kinh-nghiem/may-tinh/cryptocurrency.html'>Tìm-hiểu Bitcoin</a><br>
+      <a href='/kinh-nghiem/may-tinh/protect.html'>Bảo vệ tài sản số</a>
+    </p>
+  </section>
+
+  <section>
+
+    <h4 class="myheader">Chữ Việt</h4>
+    <p>
+      <a href='/kinh-nghiem/chu-viet/ghi-dau-thanh-1.html'>Vị trí dấu thanh</a><br>
+      <a href='/kinh-nghiem/chu-viet/unicode.html'>Unicode</a><br>
+      <a href='/kinh-nghiem/chu-viet/utf-8.html'>UTF-8</a><br>
+      <a href='/kinh-nghiem/chu-viet/web.html'>Web Việt</a>
+    </p>
+  </section>
+
+  <section>
+
+    <h4 class="myheader">Linh tinh</h4>
+    <p>
+      <a href='/kinh-nghiem/linh-tinh/bep.html'>Bếp</a><br>
+      <a href='/kinh-nghiem/linh-tinh/ac-dc.html'>Điện một chiều và điện xoay chiều</a><br>
+      <a href='/kinh-nghiem/linh-tinh/tieu-thu-dien.html'>Tiêu thụ điện</a><br>
+      <a href='/kinh-nghiem/linh-tinh/dien-standby.html'>Điện standby</a><br>
+      <a href='/kinh-nghiem/linh-tinh/magchan.html'>Dùng thử Magchan để giặt</a><br>
+      <a href='/kinh-nghiem/linh-tinh/may-lanh.html'>Máy lạnh</a><br>
+      <a href='/kinh-nghiem/linh-tinh/may-lanh-inverter.html'>Máy lạnh inverter</a><br>
+      <a href='/kinh-nghiem/linh-tinh/nong.html'>Nóng</a><br>
+      <a href='/kinh-nghiem/linh-tinh/nhiet-do.html'>Nhiệt độ một ngày</a><br>
+      <a href='/kinh-nghiem/linh-tinh/tan-so-cua-tv.html'>Tần số của TV</a><br>
+      <a href='/kinh-nghiem/linh-tinh/hong-ngoai.html'>Hồng ngoại</a><br>
+    </p>
+  </section>
+  </amp-accordion>
+</section>
+<section>
+  <h3 class="myheader">Ý kiến</h3>
+  <p>
+    <a href='/y-kien/bat-ca-hai-tay.html'>Bắt cá hai tay</a><br>
+    <a href='/y-kien/su-giau-co.html'>Nguồn gốc sự giàu có</a><br>
+    <a href='/y-kien/xa-hoi-thong-tin.html'>Xã hội thông tin</a><br>
+    <a href='/y-kien/dung-hang-viet-nam.html'>Dùng hàng Việt</a><br>
+    <a href='/y-kien/gia-tra.html'>Giả trá</a><br>
+    <a href='/y-kien/nhung-cai-nem.html'>Những cái nêm</a><br>
+    <a href='/y-kien/khac-nguoi.html'>Khác người</a><br>
+    <a href='/y-kien/da-len-bao.html'>Đã lên báo</a>
+  </p>
+</section>
+
+<section>
+
+  <h3 class="myheader">Danh mục</h3>
+  <p>
+    <a href='/download/'>Download</a><br>
+    <a href='/sitemap.html'>Mục lục</a>
+  </p>
+</section>
+
+<section>
+  <h3 class="myheader"></h3>
+  <p>
+  <br>
+  <br>
+  <br>
+  <br>
+  </p>
+</section>
+</amp-accordion>
+
+  </amp-sidebar>
+<main>
+  <div class="mwidth">
+    <div class="mbutton">
+      <button on="tap:sidebar.toggle" class="ampstart-btn caps ml1" style="font-size:90%;font-weight:bold;background-color: blue; color: white;">MENU
+      </button>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="title">Web chữ Việt</div>
+
+  <div>
+    <amp-social-share type="email" height="32"></amp-social-share>
+    <amp-social-share type="whatsapp" height="32"></amp-social-share>
+    <amp-social-share type="linkedin" height="32"></amp-social-share>
+    <amp-social-share type="twitter" height="32"></amp-social-share>
+    <amp-social-share type="tumblr" height="32"></amp-social-share>
+    <amp-social-share type="line" height="32"></amp-social-share>
+    <amp-social-share type="facebook" height="32" data-param-app_id="1879212745697311"></amp-social-share>
+    <amp-facebook-like height=32 width=90
+      layout="fixed"
+      data-layout="button_count"
+      data-href=
+https://www.lhboi.name.vn/kinh-nghiem/chu-viet/web
+    >
+    </amp-facebook-like>
+  </div>
+
+<h1>Nhận xét</h1>
+<p>Bài viết này nêu lên nhận xét về chữ Việt trong máy tính. Chủ đề của bài này không phải là <em>Unicode là gì</em> mà là <em>Những gì không phải là Unicode</em>. Những đoạn trong bài viết hơi nhiều chi tiết về kỹ thuật sẽ được đánh dấu ▲, người đọc có thể bỏ qua nếu không muốn đi sâu vào chi tiết.</p>
+<p>Không biết trên thế giới có thứ chữ viết nào mà được thể hiện trong máy tính bằng nhiều cách như chữ Việt không? Trước khi chữ Việt được đưa vào Unicode và khi Unicode chưa được phổ biến trong các phần mềm thông dụng thì có tới vài chục cách để ghi chữ Việt trong máy tính. Nào là VNI, Bách Khoa, Lạc Việt, VSCII, ABC, VPS… (Xem phần cuối bài để biết thêm về chữ trong máy tính trước khi có Unicode.) <br />
+Việc chữ Việt được đưa vào Unicode đã làm giảm bớt tình trạng <em>thập nhị sứ quân</em> trong thế giới phần mềm Việt Nam. Nhưng cho tới lúc này vẫn còn rất nhiều người tiếp tục tạo ra những dòng chữ Việt trong máy tính theo những cách không phải Unicode.<br />
+Tôi đã từng hỏi một người quen là tại sao phải đi tìm font chữ VNI về cài vào máy để soạn ra những tài liệu theo VNI mà không dùng font chữ Unicode có sẵn trong máy (Arial, Times New Roman, Courier New). Câu trả lời là font chữ VNI đẹp hơn!<br />
+Thậm chí có những tài liệu chữ Việt chứa những câu lẫn lộn vài chữ kiểu VNI với vài chữ kiểu Unicode. Gặp tài liệu kiểu này thì tôi không dám hỏi tại sao nữa!</p>
+<table class="withborder">
+<tbody>
+<tr>
+<td>
+<h3><a name="TOC-Unicode-l-g-"></a>Unicode là gì?</h3>
+<blockquote>Unicode là bộ chữ được thiết kế để chứa hết tất cả các chữ cái của tất cả các ngôn ngữ trên thế giới và còn chứa thêm những ký hiệu như ký hiệu toán, nhạc, kỹ thuật, chữ nổi… Theo thiết kế thì mỗi chữ cái trong Unicode được thể hiện bằng 32 bit, như vậy người ta có thể vẽ ra hơn 4 tỉ chữ cái và các ký hiệu. Hiện nay Unicode mới chỉ dùng có 3 khối 16-bit đầu tiên, tức là mới vẽ ra có chừng 190.000 chữ cái và ký hiệu, trong đó phần lớn là các chữ Hoa, Nhật, Hàn. Nhưng chỉ có 16 bit đầu tiên là thông dụng nhất, gọi là Unicode 16-bit.</blockquote>
+<h3><a name="TOC-C-c-c-ch-th-hi-n-c-a-Unicode-trong-m-y-t-nh"></a>▲ Các cách thể hiện của Unicode trong máy tính</h3>
+<blockquote>Với Unicode 16-bit các phần mềm mới xử lý được Unicode sẽ ghi mỗi chữ cái như là 16 bit, đó là dạng UCS2 tức là Unicode 2 byte. Một số các phần mềm khác cũng xử lý được Unicode nhưng để tương thích với những chữ cái 8-bit hồi xưa nên ghi chữ cái theo dạng UTF-8 (mỗi chữ 16-bit được đổi thành một dãy từ 1 tới 3 byte 8-bit liền nhau, phần lớn các nguyên âm Việt mang dấu thanh đều được ghi thành 3 byte trong UTF-8). <br />
+Để ghi chữ cái 32-bit thì máy tính dùng UCS4 hoặc là UTF-16 (một chữ 32-bit được ghi thành một dãy vài chữ 16-bit, UCS2 là tập hợp con của UTF-16) hoặc là UTF-8 (mỗi chữ 32-bit được đổi thành một dãy từ 1 tới 6 byte 8-bit liền nhau). Hiện nay UTF-8 là thông dụng nhất trên Internet.<br />
+Một ví dụ của UCS2 là chữ Việt trong tin nhắn SMS của điện thoại di động, khi ta soạn SMS với chữ Việt có dấu thì mỗi tin nhắn chỉ viết được chừng 70 chữ cái thay vì 160 chữ cái nếu ghi chữ Việt không dấu; dù gửi SMS với đủ dấu hơi tốn tiền nhưng dễ đọc hơn nhiều.</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+
+Bây giờ, Unicode đã phổ biến rồi nhưng cũng còn hiện tượng <em>nhiều kiểu chữ Việt Unicode</em>! Sao? Đã là Uni (nghĩa là duy nhất, hợp nhất) rồi mà còn nhiều Uni nữa là sao? <br />
+Đúng vậy, thật sự là đang có nhiều thứ chữ Việt <strong>được gọi là</strong> Unicode trong các server Internet; được gọi là Unicode nhưng không thật sự là Unicode.
+<p><u>Kiểu Unicode giả thứ nhất</u> là do sự lầm lẫn giữa Unicode với hai bộ chữ (character set) của Microsoft cũng có khả năng thể hiện chữ Việt. Đó là bộ chữ Windows-1252 và Windows-1258. Đây là hai bộ chữ 8-bit (tức là mỗi chữ cái được ghi trong máy tính với 8 bit). Microsoft soạn ra bộ chữ Windows-1252 dành cho các chữ viết của các ngôn ngữ Tây Âu, và bộ chữ Windows-1258 dành cho chữ Việt.</p>
+<p>Làm sao mà lầm được khi có nhiều người dùng đã biết là phải dùng chữ Việt Unicode?</p>
+<blockquote>Bởi vì các chương trình của Microsoft như là Microsoft Office sẽ dùng bộ chữ của Microsoft một cách mặc định để tạo ra tài liệu. Nếu chạy trên môi trường Windows tiếng Anh thì bộ chữ mặc định là Windows-1252, nếu chạy trên môi trường Windows tiếng Việt thì bộ chữ mặc định là Windows-1258. Hầu hết các máy tính ở Việt Nam dùng bản Windows tiếng Anh, rất hiếm khi thấy máy tính có bản Windows chữ Việt, nên hầu hết các tài liệu tạo ra theo bộ chữ Windows-1252.</blockquote>
+<p>Thế làm sao mà bộ chữ 8-bit lại chứa được chữ Việt Unicode 16-bit?</p>
+<blockquote>Bộ chữ Việt Windows-1258 chỉ dùng 8-bit để thể hiện chữ Việt vì nó dùng nguyên tắc tổ hợp, tức là dấu thanh rời ra khỏi nguyên âm. Theo cách tổ hợp này thì 8-bit cũng đủ để thể hiện tất cả chữ Việt có dấu. Mặc dù chữ Việt trong Unicode cũng có kiểu thể hiện dấu thanh rời ra khỏi nguyên âm nhưng chữ Việt Windows-1258 không phải là chữ Việt Unicode.</blockquote>
+<p>Thế còn bộ chữ Windows-1252 thì sao, nó đâu có được thiết kế để chứa các nguyên âm và dấu thanh chữ Việt?<br />
+Và tại sao người ta vẫn có thể gõ chữ Việt với nguyên âm và dấu thanh dựng sẵn (cần 16-bit) vào trong tài liệu Windows?</p>
+<blockquote>Đó là vì các chương trình ứng dụng Microsoft Office sẽ tự động ghi những chữ đó theo kiểu Unicode lẫn vào trong tài liệu kiểu Windows. Những chữ Unicode đó được ghi theo một cách riêng để chương trình Microsoft Office biết mà hiện ra cho đúng.</blockquote>
+<p>Tóm lại, hầu hết các tài liệu soạn ra trên Windows đều không phải là Unicode thuần. Có một chương trình của Microsoft trên Windows (NT, XP) soạn ra được tài liệu Unicode thuần, đó là Notepad. Khi ta gõ chữ Việt vào Notepad rồi lưu lại, nó sẽ hỏi là ta có muốn lưu lại theo dạng Unicode không. Nhưng Notepad lại rất ít được dùng để soạn tài liệu vì khả năng của nó quá hạn chế.</p>
+<p>Vậy việc gì xảy ra khi những tài liệu Unicode <em>ba rọi</em> đó được đưa lên Internet?</p>
+<blockquote>Dạng tài liệu phổ biến nhất trên Internet là HTML. Trong phần đầu của tài liệu HTML có một dòng cho biết bộ chữ được dùng trong tài liệu. Ví dụ:<br />
+<tt>&lt;meta content="text/html; charset=UTF-8" http-equiv="content-type"&gt;</tt><br />
+dòng này có nghĩa là tài liệu dùng bộ chữ Unicode dưới dạng UTF-8. <br />
+Gần như tất cả các trang web chữ Việt đều có ghi chú là <u>trang web này dùng bộ chữ Unicode</u> nhưng trong số đó có rất nhiều trang web dùng Windows-1252. Trang web tiếng Việt theo Windows-1252 sẽ có dòng: <br />
+<tt>&lt;meta content="text/html; charset=windows-1252" http-equiv="content-type"&gt;</tt><br />
+và những chữ Việt trong đó sẽ được ghi theo cách đặc biệt gọi là <em>HTML entities</em> có dạng như sau: c&amp;aacute;ch thi&amp;#7871;t k&amp;#7871; ph&amp;#7847;n m&amp;#7873;m h&amp;#432;&amp;#7899;ng <br />
+với cách ghi này, hầu như chúng ta không thể đọc-hiểu được nếu không có web browser diễn dịch lại thành chữ Việt bình thường.</blockquote>
+<p>Nếu tài liệu được viết bằng đúng Unicode thuần (UCS2 hoặc UTF-8) thì không cần web browser chúng ta cũng đọc-hiểu được. Các bạn có thể thử chọn menu View source của web browser khi đang xem các trang web chữ Việt sẽ thấy một số trang viết theo kiểu Unicode thuần còn một số trang viết theo kiểu Windows-1252.</p>
+<p>Tuy nhiên cũng có một số trang web dùng Unicode nhưng không viết dưới dạng UTF-8 mà lại viết theo kiểu HTML entities. Đó là <u>kiểu Unicode giả thứ hai</u>.</p>
+<blockquote><u>Các web site chữ Việt dùng đúng UTF-8</u>: lhboi.homelinux.net, mail.google.com, mail.yahoo.com, vnoss.org, eab.com.vn, www.bidv.com.vn, www.baoviet.com.vn, www.manulife.com.vn, vietnamnet.vn, www.nld.com.vn, www.thanhnien.com.vn, tuoitre.com.vn, www.pcworld.com.vn, www.sgtt.com.vn… <br />
+<u>Các web site chữ Việt dùng HTML entities</u>: google.com, acb.com.vn, vnexpress.net, www.htv.com.vn <br />
+<u>Các web site chữ Việt dùng Windows-1252</u>: www.vietcombank.com.vn, www.vcbs.com.vn, vietnamgiapha.com, basao.com.vn, www.voh.org.vn <br />
+<u>Các web site chữ Việt dùng Windows-1258</u>: livefeeling.com/viet/index.htm</blockquote>
+<h5><a name="TOC-Nh-ng-nh-c-i-m-c-a-nh-ng-trang-web-kh-ng-d-ng-ng-UTF-8:"></a>Những nhược điểm của những trang web không dùng đúng UTF-8:</h5>
+<blockquote>Nhược điểm thứ nhất là tốn chỗ, tốn thời gian truyền qua Internet.<br />
+Nhược điểm thứ hai đã nói ở trên là không đọc được nếu không có web browser.<br />
+Thậm chí một số web browser đặc biệt cũng không đọc được kiểu HTML entities trong các trang web chữ Việt theo Windows-1252 hay Windows-1258. Đó là những micro browser trong các máy điện thoại di động, do khả năng giới hạn nên nó chỉ đọc được đúng một loại Unicode. Như vậy những trang web chữ Việt theo Windows-1252 hay Windows-1258 sẽ <strong>không được xem trên các máy di động</strong>.</blockquote>
+Nhân nói về web browser và điện thoại di động, ta cũng nhắc đến một kiểu thể hiện chữ Việt trong Internet nữa là chữ Việt không dấu. Mặc dù phần lớn các máy điện thoại di động được bán ra trong những năm gần đây trên thị trường Việt Nam đều hiện được chữ Việt Unicode, nhưng hầu hết các trang wml ở Việt Nam đều được viết dưới dạng chữ Việt không dấu, rất khó coi.
+<p>▲Các bạn sẽ hỏi làm sao server biết được điện thoại nào có chữ Việt để gửi ra đủ dấu?</p>
+<blockquote>Có đấy. Khi micro browser trong máy điện thoại gửi yêu cầu xem 1 trang đến server nó cũng cho server biết luôn là nó muốn xem ngôn ngữ gì theo bộ chữ nào, đó là các Header. Ví dụ: Accept-Language: vi, Accept-Charset: UTF-8. Nếu server làm việc đúng cách nó phải xem các Header để biết khi nào nên gửi chữ Việt cho máy điện thoại.</blockquote>
+
+<table border="1">
+<tbody>
+<tr>
+<td>
+<h3><a name="TOC-Tr-c-khi-c-Unicode-th-ch-c-th-hi-n-nh-th-n-o-trong-m-y-t-nh-"></a>▲Trước khi có Unicode thì chữ được thể hiện như thế nào trong máy tính?</h3>
+<blockquote>Trước khi điện tín được số hoá thì người ta dùng bộ mã Morse để truyền điện tín. Trong bộ mã Morse, mỗi chữ cái hoặc số được thể hiện bằng 1 cho tới 5 tín hiệu ngắn và dài. Tín hiệu ngắn được ghi dưới dạng một dấu chấm và được truyền đi bằng một xung điện ngắn, tín hiệu dài được ghi dưới dạng một gạch ngang và được truyền đi bằng một xung điện dài. Bộ mã Morse cũng được dùng để truyền tin qua các phương tiện khác như còi, đèn chớp. Một thông báo nổi tiếng thể hiện qua bộ mã Morse là ··· --- ···, nghĩa là SOS. <br />
+Khi mới bắt đầu số hoá điện tín (chưa có máy tính) thì người ta chỉ dùng có 5 bit để thể hiện một chữ cái (bộ chữ Baudot, theo tên nhà phát minh người Pháp Jean-Maurice-Émile Baudot). 5 bit đủ để thể hiện 26 chữ in hoa. Còn các chữ số từ 0 đến 9 thì sao? Để thể hiện thêm các chữ số và các dấu ngắt câu, bộ chữ Baudot có cơ chế dời (Shift), khi dời thì chữ cái được thay bằng chữ số, dấu ngắt câu (tương tự như phím Shift trên bàn phím hiện nay). Như vậy với 5 bit và dời thì bộ chữ Baudot thể hiện được 55 chữ và ký hiệu. Tại sao phải làm theo kiểu dời cho phiền mà không dùng luôn 6 bit? Vì lúc đó (thế kỷ 19) bàn phím để nhập điện tín là bàn phím cơ có 5 phím để ấn bằng 5 ngón tay của 1 bàn tay, việc chế tạo bàn phím sinh ra 6 bit phức tạp hơn nhiều. <br />
+Đến thập kỷ 50 của thế kỷ 20, máy tính đã được đưa vào sử dụng làm phát sinh nhu cầu có một bộ chữ <i>đầy đủ</i> hơn bộ chữ Baudot. Cơ quan chuẩn hoá của Mỹ đề ra bộ chữ ASCII 7-bit chứa chữ Latin in hoa, chữ in thường. Tại sao lại là 7 bit mà không dùng luôn 8 bit của 1 byte? Tại vì đối với Anh ngữ thì 7 bit đã đủ rồi và người ta muốn tiết kiệm, để bit cuối cùng dùng làm parity bit, để kiểm tra xem thông tin trong byte này có đúng không hay đã bị sai khi truyền từ môi trường này qua môi trường khác. <br />
+ASCII là bộ chữ chuẩn của Mỹ, nhưng vào thời gian đó hãng IBM lại không dùng ASCII mà dùng bộ chữ 8-bit riêng là EBCDIC. Đó là một cách để ràng buộc khách hàng của IBM, đã lỡ chứa dữ liệu theo dạng EBCDIC rồi thì cứ phải tiếp tục dùng phần cứng và phần mềm của IBM để xử lý. <br />
+Khi máy tính được bán đến những nước khác nước Mỹ, bộ chữ ASCII 7-bit được mở rộng lên thành 8-bit để thêm các chữ cái Latin của các nước châu Âu. Trong khi đó IBM phải chế thêm các biến thể của EBCDIC, có tới 57 bộ EBCDIC cho các nước khác nhau! Tổ chức tiêu chuẩn quốc tế đặt ra tiêu chuẩn ISO 2022 để quy định cách chế ra các bộ chữ 7-bit và 8-bit khác, và cách chuyển từ bộ chữ này sang bộ chữ khác (trong trường hợp cần dùng nhiều bộ chữ trong một tài liệu). Từ đó các bộ chữ ISO 8859 được chế ra cho các chữ cái Latin, Hy lạp, Do thái, Ả rập, và Đông Âu. Ngoài ra các hãng phần mềm cũng liên tục đặt ra các bộ chữ theo nhu cầu của họ, ví dụ như Windows-1252 của Microsoft. <br />
+Còn các chữ Hoa, Nhật, Hàn thì sao? Thời gian đầu, Nhật dùng <strong>một</strong> bộ chữ 8-bit, trong đó một nửa là chữ Latin, một nửa là chữ katakana. Sau đó, Nhật soạn ra các bộ chữ 8-bit theo chuẩn ISO 2022 để chứa hết hàng ngàn chữ kanji của họ. Đó là các bộ chữ JIS. Tương tự, ở Trung quốc và Hàn quốc cũng có các bộ chữ theo tiêu chuẩn ISO 2022 của riêng mỗi nước. <br />
+Cuối cùng là chữ Việt! So với tiếng Anh, tiếng Việt có thêm 6 nguyên âm và 1 phụ âm và có tới 6 thanh. Tất cả những thanh và nguyên âm tổ hợp lại sinh ra thêm 134 ký tự. Và như vậy là không thể đặt một bộ chữ Việt 8-bit theo đúng chuẩn ISO 2022 (mà cần tới 2 bộ chữ 8-bit). Tuy nhiên, người Việt lại ít có phần mềm viết riêng để xử lý một bộ chữ ISO 2022 riêng giống như các nước Hoa, Nhật, Hàn. Do phải dùng đỡ các phần mềm chuyên xử lý các bộ chữ 8-bit của Mỹ và Tây Âu, nên người Việt phải cố ép tất cả chữ Việt vào một bộ chữ 8-bit, thế là không theo chuẩn ISO 2022. Và vì không có bộ nào đúng theo chuẩn nên không ai chịu nhường ai, mỗi nơi chế ra một bộ chữ Việt. Cuối cùng cũng có một bộ chữ TCVN theo chuẩn ISO 2022, nhưng vì thiếu phần mềm xử lý nên không đưa vào thực tế được. <br />
+Có một cách để làm một bộ chữ Việt 8-bit, Microsoft đã dùng để làm bộ chữ Windows-1258, đó là cách để dấu thanh và nguyên âm là 2 ký tự riêng, khi vẽ ra màn hình hay giấy in thì đặt dấu trùng lên vị trí của nguyên âm. Nhưng cách này chỉ thực hiện được trên các phần mềm có giao diện đồ hoạ gần đây thôi, không thể thực hiện được trên các phần mềm của 10 năm về trước. <br />
+Thế giới máy tính trước khi có Unicode thật là rối rắm phải không?</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<h3><a name="TOC-C-c-l-i-kh-c-trong-c-c-trang-web-Vi-t"></a>Các lỗi khác trong các trang web Việt</h3>
+<h5><a name="TOC-L-i-vi-t-sai-c-c-k-hi-u-superscript-v-subscript"></a>Lỗi viết sai các ký hiệu superscript và subscript</h5>
+<p>Các ký hiệu phải viết kiểu superscript và subscript như độ, mét vuông, mét khối rất thường gặp nhưng cũng rất thường bị viết một cách <strong>cẩu thả</strong> như:</p>
+<ul><li>29oC hay 29OC thay vì <em>29<sup>o</sup>C</em>, hay <em>29°C</em></li>
+<li>quay 180O thay vì quay <em>180<sup>o</sup></em> hay <em>180°</em></li>
+<li>4m2 thay vì <em>4m<sup>2</sup></em> hay <em>4m²</em>, 5 triệu đồng/m2 thay vì 5 triệu đồng/m²</li>
+<li>12m3 thay vì <em>12m³</em></li>
+<li>H2O thay vì <em>H<sub>2</sub>O</em> hay <em>H₂O</em></li></ul>
+Đối với những người không chuyên soạn tài liệu trên máy tính sẽ không biết cách trình bày những ký hiệu đó cho đúng cách. Khi đó cách tốt nhất là ghi ra thành chữ thay vì ghi ký hiệu. Ví dụ như 29 độ C, quay 180 độ, 4 mét vuông, 12 mét khối. Tuy nhiên đã viết ra chữ thì phải viết đủ chứ không nên viết kiểu 4 m vuông. <br />
+Đối với những nơi chuyên nghiệp như các báo mà cũng viết sai thì thật là đáng chê. <br />
+Có hai cách ghi đúng những ký hiệu đó. Cách thứ nhất là dùng lệnh định dạng chữ cao (superscript) hay chữ thấp (subscript). Cách thứ hai là dùng các ký hiệu có sẵn trong bộ chữ Unicode, viết theo cách này đẹp hơn.
+<div class="right">Bài này được đăng trong e-CHIP số Tháng Sáu, 2007.</div>
+
+  <hr>
+
+  <div class="footer">
+  Bấm các nút sau để liên-lạc 
+  <br>
+  <a href="http://twitter.com/GiauCham" target="_blank"><amp-img src="/images/icons/Twitter-256.png" layout="fixed" width="40" height="40" alt="Twiter"></amp-img></a> 
+  <a href="http://m.me/lamgiauchacchan" target="_blank"><amp-img src="/images/icons/Fb-Messenger-128.png" layout="fixed" width="40" height="40" alt="Facebook"></amp-img></a> 
+  <a href="viber://add?number=84989760570"><amp-img src="/images/icons/Viber-128.png" layout="fixed" width="40" height="40" alt="Viber"></amp-img></a>
+  <a href="http://zaloapp.com/qr/p/lzfbyqlwzn9u"><amp-img src="/images/icons/Zalo.webp" layout="fixed" width="40" height="40" alt="Zalo"></amp-img></a> 
+  <a href="tel:+84989760570"><amp-img src="/images/icons/Cell-Phone-256.png" layout="fixed" width="40" height="40" alt="điện thoại"></amp-img></a>
+  <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
+  <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
+  <br>
+  Nếu bạn chép lại những trang web này, hãy ghi nguồn-gốc <a href="https://www.lhboi.name.vn">https://WWW.LHBOI.NAME.VN</a> để người-đọc có-thể tìm được nội-dung mới cập-nhật.
+  </div>
+</div>
+<amp-analytics type="googleanalytics">
+  <script type="application/json">
+  {
+  "vars": { "account": "UA-25268996-1" },
+  "triggers": {
+  "trackPageview": {
+  "on": "visible",
+  "request": "pageview"
+    }
+   }
+  }
+  </script>
+</amp-analytics>
+
+</main>
+</body>
+</html>
+
