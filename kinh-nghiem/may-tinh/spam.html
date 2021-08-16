@@ -1,0 +1,429 @@
+<!doctype html>
+<html amp lang="vi">
+<head>
+<title>Spam (Trang web LHBội)</title>
+<meta name="description" content="Phân loại thư spam và Phối hợp các cách chặn thư spam" />
+<meta name="keywords" content="hữu ích, tài chính, cá nhân">
+<link rel="canonical" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/spam">
+
+<!-- in head of html file -->
+
+<meta charset='utf-8'>
+
+<script async custom-element="amp-analytics"
+    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+
+<!--
+  Import the `amp-sidebar` component.
+-->
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+<script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+
+<!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
+<style amp-custom>
+html {
+  font-size: 17px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(17px + 7 * ((100vmin - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+amp-sidebar {
+  width: 240px;
+  padding-right: 2px;
+  background: darkblue;
+  color: blue;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+.close-sidebar{width: 30px;height: 30px;position: relative;cursor: pointer;background-color: transparent;border: none;}
+.close-sidebar:focus{outline: 2px auto #f06060;}
+.close-sidebar span{position: absolute;left: 0;width: 30px;height: 2px;border-right: 5px;background-color: #004d00;}
+.close-sidebar span:nth-child(1){transform: rotate(45deg);}
+.close-sidebar span:nth-child(2){transform: rotate(-45deg);}
+
+#menu { margin-left: -40px; }
+#menu li {
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  margin: 0px;
+  padding: 3px 0px 3px 0px;
+}
+#menu ul {
+  width: 100%;
+  display: block;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+}
+#menu ul li,
+#menu ul ul li {
+  width: 100%;
+  border-bottom: 0;
+  padding-left: 10px;
+}
+#menu ul ul ul li {
+  padding-left: 10px;
+}
+
+div.mwidth {max-width:1004px;margin: auto;}
+
+body {background-color:dimgray;}
+div.body {max-width:1004px;margin: auto; padding-left:8px; padding-right:8px; text-align:justify;color:white;background-color:black;font-family:sans-serif}
+div.title {text-align:center;font-size:160%;font-weight:bold;color:#ffe033;font-family:serif}
+div.right {text-align:right;}
+div.lrsp {margin: 0px 5px 0px 5px;}
+.todiscuss {color:lightskyblue;}
+div.center {text-align:center;}
+div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
+h1 {color:#c2ff66;font-family:serif}
+h2 {color:#adff33;font-family:serif}
+h3 {color:#a3ff1a;font-family:serif}
+h4 {color:#8ae600;font-family:serif}
+a {color:#ffd700;}
+a:visited {color:#e6c300;}
+table.noborder {
+  border-collapse: collapse;
+  width: 100%;
+  border: 0px;
+  text-align: left;
+  padding: 4px;
+}
+
+.myheader {
+    background-color:darkblue; 
+}
+
+th, td {
+  text-align: left;
+  padding: 2px;
+  vertical-align: top;
+}
+tr:nth-child(even){background-color: darkslategray}
+table.withborder {
+  width: 100%;
+  border: 2px;
+  border-color: #111111;
+  text-align: left;
+  padding: 4px;
+}
+.fbold { font-weight:bold; }
+.tmark {background-color:navy;}
+
+div.even {background-color: darkslategray}
+.red {color:red;}
+.tblue {color:deepskyblue;}
+div.footer { font-size: 80%; color: red; text-align: center; }
+
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
+
+@media (max-width: 399px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:10px; }
+}
+@media (min-width: 400px) and (max-width: 499px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:20px; }
+}
+@media (min-width: 500px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+}
+@media (min-width: 1260px) {
+  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+}
+
+</style>
+</head>
+
+<body>
+  <!-- top of body -->
+  
+  <!-- sidebar menu -->
+  <amp-sidebar id="sidebar" layout="nodisplay" side="left">
+            <button on="tap:sidebar.close" class="close-sidebar">
+                <span></span>
+                <span></span>
+            </button>
+    <amp-accordion>
+<section>
+  <h3 class="myheader">Giới-thiệu</h3>
+  <p>
+    <a href='/'>Trang-bìa</a><br>
+    <a href='/home/about.html'>Thân-thế</a><br>
+    <a href='/home/cv.html'>Thành-tích</a><br>
+  </p>
+</section>
+<section>
+  <h3 class="myheader">Hữu-ích</h3>
+  <div>
+    <amp-accordion>
+    <section>
+      <h4 class="myheader">Lập-kế-hoạch-tài-chính</h4>
+      <p>
+        <a href='/huu-ich/ke-hoach-tai-chinh/'>Giới-thiệu</a><br>
+        <a href='/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han.html'>Ghi-chép kết-quả-đầu-tư-dài-hạn</a><br>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Đầu-tư-cổ-phiếu</h4>
+      <p>
+        <a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/quy-dau-tu.html'>Quỹ-đầu-tư</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu.html'>Sổ-tiết-kiệm hay Quỹ-đầu-tư?</a><br>
+        <a href='/huu-ich/dau-tu-co-phieu/thi-truong-xuong-doc.html'>Làm gì khi thị-trường xuống-dốc?</a>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Các loại bảo-hiểm</h4>
+      <p>
+        <a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a><br>
+        <a href='/huu-ich/cac-loai-bao-hiem/phi-bao-hiem-nhan-tho.html'>Phí-bảo-hiểm-nhân-thọ</a><br>
+        <a href='/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung.html'>Bảo-hiểm-nhân-thọ-liên-kết-chung</a><br>
+      </p>
+    </section>
+    <section>
+      <h4 class="myheader">Câu-chuyện</h4>
+      <p>
+        <a href='/huu-ich/cau-chuyen/bat-dau-dau-tu.html'>Bắt-đầu đầu-tư</a><br>
+        <a href='/huu-ich/cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia.html'>Những quyết-định tốt cho tuổi-già</a><br>
+        <a href='/huu-ich/cau-chuyen/nghi-huu-som.html'>Về-hưu trước 40 tuổi</a><br>
+        <a href='/huu-ich/cau-chuyen/tranh-mang-no.html'>Tránh mang nợ</a><br>
+        <a href='/huu-ich/cau-chuyen/mua-nha-hay-dau-tu.html'>Để tiền mua-nhà hay đầu-tư</a><br>
+        <a href='/huu-ich/cau-chuyen/bot-lo-ve-tien.html'>6 điều giúp tôi bớt lo-lắng về tiền-bạc</a><br>
+      </p>
+    </section>
+    </amp-accordion>
+    <a href='/huu-ich/chi-tieu.html'>Chi-tiêu có kế-hoạch</a><br>
+    <a href='/huu-ich/nghi-luc.html'>Nghị-lực để có dư tiền</a><br>
+    <a href='/huu-ich/lam-phat-loi-song.html'>Lạm-phát-lối-sống</a><br>
+    <a href='/huu-ich/tich-luy.html'>Tích-luỹ-tài-sản</a><br>
+    <a href='/huu-ich/de-tien-vao-dau.html'>Để tiền vào đâu</a><br>
+    <a href='/huu-ich/cach-dau-tu.html'>Những cách đầu-tư</a><br>
+    <a href='/huu-ich/dung-so-dau-tu.html'>Đừng sợ chữ đầu-tư</a><br>
+    <a href='/huu-ich/hieu-qua-dau-tu.html'>Tính hiệu-quả-đầu-tư</a><br>
+    <a href='/huu-ich/tich-luy-dai-han.html'>So-sánh công-cụ tích-luỹ-dài-hạn</a><br>
+  </div>
+</section>
+<section>
+  <h3 class="myheader">Kinh-nghiệm</h3>
+  <amp-accordion>
+  <section>
+    <h4 class="myheader">Máy-tính</h4>
+    <p>
+      <a href='/kinh-nghiem/may-tinh/pi-network.html'>Tiền-mật-mã Pi</a><br>
+      <a href='/kinh-nghiem/may-tinh/gnucash.html'>GnuCash</a><br>
+      <a href='/kinh-nghiem/may-tinh/ham-tai-chinh.html'>Các phép-tính-tài-chính cần biết</a><br>
+      <a href='/kinh-nghiem/may-tinh/cloudstorage.html'>Kinh-nghiệm dùng cloud storage</a><br>
+      <a href='/kinh-nghiem/may-tinh/privcloudstor.html'>Hướng-dẫn làm cloud storage server</a><br>
+      <a href="/kinh-nghiem/may-tinh/vi-dien-tu.html">Nhận-xét các ví-điện-tử</a><br>
+      <a href='/kinh-nghiem/may-tinh/googlemaps.html'>Kinh-nghiệm dùng Google Maps ở Việt-Nam</a><br>
+      <a href='/kinh-nghiem/may-tinh/spam-call.html'>Chặn những cuộc-gọi-tiếp-thị</a><br>
+      <a href='/kinh-nghiem/may-tinh/raspberrypi.html'>RaspberryPi</a><br>
+      <a href='/kinh-nghiem/may-tinh/spam.html'>Chặn spam mail</a><br>
+      <a href='/kinh-nghiem/may-tinh/toys.html'>Home server cũ</a><br>
+      <a href='/kinh-nghiem/may-tinh/cryptocurrency.html'>Tìm-hiểu Bitcoin</a><br>
+      <a href='/kinh-nghiem/may-tinh/protect.html'>Bảo vệ tài sản số</a>
+    </p>
+  </section>
+
+  <section>
+
+    <h4 class="myheader">Chữ Việt</h4>
+    <p>
+      <a href='/kinh-nghiem/chu-viet/ghi-dau-thanh-1.html'>Vị trí dấu thanh</a><br>
+      <a href='/kinh-nghiem/chu-viet/unicode.html'>Unicode</a><br>
+      <a href='/kinh-nghiem/chu-viet/utf-8.html'>UTF-8</a><br>
+      <a href='/kinh-nghiem/chu-viet/web.html'>Web Việt</a>
+    </p>
+  </section>
+
+  <section>
+
+    <h4 class="myheader">Linh tinh</h4>
+    <p>
+      <a href='/kinh-nghiem/linh-tinh/bep.html'>Bếp</a><br>
+      <a href='/kinh-nghiem/linh-tinh/ac-dc.html'>Điện một chiều và điện xoay chiều</a><br>
+      <a href='/kinh-nghiem/linh-tinh/tieu-thu-dien.html'>Tiêu thụ điện</a><br>
+      <a href='/kinh-nghiem/linh-tinh/dien-standby.html'>Điện standby</a><br>
+      <a href='/kinh-nghiem/linh-tinh/magchan.html'>Dùng thử Magchan để giặt</a><br>
+      <a href='/kinh-nghiem/linh-tinh/may-lanh.html'>Máy lạnh</a><br>
+      <a href='/kinh-nghiem/linh-tinh/may-lanh-inverter.html'>Máy lạnh inverter</a><br>
+      <a href='/kinh-nghiem/linh-tinh/nong.html'>Nóng</a><br>
+      <a href='/kinh-nghiem/linh-tinh/nhiet-do.html'>Nhiệt độ một ngày</a><br>
+      <a href='/kinh-nghiem/linh-tinh/tan-so-cua-tv.html'>Tần số của TV</a><br>
+      <a href='/kinh-nghiem/linh-tinh/hong-ngoai.html'>Hồng ngoại</a><br>
+    </p>
+  </section>
+  </amp-accordion>
+</section>
+<section>
+  <h3 class="myheader">Ý kiến</h3>
+  <p>
+    <a href='/y-kien/bat-ca-hai-tay.html'>Bắt cá hai tay</a><br>
+    <a href='/y-kien/su-giau-co.html'>Nguồn gốc sự giàu có</a><br>
+    <a href='/y-kien/xa-hoi-thong-tin.html'>Xã hội thông tin</a><br>
+    <a href='/y-kien/dung-hang-viet-nam.html'>Dùng hàng Việt</a><br>
+    <a href='/y-kien/gia-tra.html'>Giả trá</a><br>
+    <a href='/y-kien/nhung-cai-nem.html'>Những cái nêm</a><br>
+    <a href='/y-kien/khac-nguoi.html'>Khác người</a><br>
+    <a href='/y-kien/da-len-bao.html'>Đã lên báo</a>
+  </p>
+</section>
+
+<section>
+
+  <h3 class="myheader">Danh mục</h3>
+  <p>
+    <a href='/download/'>Download</a><br>
+    <a href='/sitemap.html'>Mục lục</a>
+  </p>
+</section>
+
+<section>
+  <h3 class="myheader"></h3>
+  <p>
+  <br>
+  <br>
+  <br>
+  <br>
+  </p>
+</section>
+</amp-accordion>
+
+  </amp-sidebar>
+<main>
+  <div class="mwidth">
+    <div class="mbutton">
+      <button on="tap:sidebar.toggle" class="ampstart-btn caps ml1" style="font-size:90%;font-weight:bold;background-color: blue; color: white;">MENU
+      </button>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="title">Phối hợp các cách chặn thư spam</div>
+
+  <div>
+    <amp-social-share type="email" height="32"></amp-social-share>
+    <amp-social-share type="whatsapp" height="32"></amp-social-share>
+    <amp-social-share type="linkedin" height="32"></amp-social-share>
+    <amp-social-share type="twitter" height="32"></amp-social-share>
+    <amp-social-share type="tumblr" height="32"></amp-social-share>
+    <amp-social-share type="line" height="32"></amp-social-share>
+    <amp-social-share type="facebook" height="32" data-param-app_id="1879212745697311"></amp-social-share>
+    <amp-facebook-like height=32 width=90
+      layout="fixed"
+      data-layout="button_count"
+      data-href=
+https://www.lhboi.name.vn/kinh-nghiem/may-tinh/spam
+    >
+    </amp-facebook-like>
+  </div>
+
+<h3>Phân loại thư spam</h3>
+Thư spam là thư gửi cùng một nội dung đến <i>rất nhiều</i> (hàng ngàn hoặc hơn) hộp thư cùng một lúc để giới thiệu một sản phẩm hay dịch vụ gì đó, hoặc có ý định lừa người nhận thư.
+<p>Phần lớn thư spam được gửi bởi những kẻ chuyên gửi thư thuê, những kẻ này không dùng máy tính của chính chúng mà dùng những máy tính đã bị chúng kiểm soát từ xa bằng cách cho nhiễm một phần mềm. Phần mềm đã nhiễm vào máy gọi là sâu (worm), ngựa Troa (Trojan horse), hay cửa sau (backdoor). Máy bị nhiễm phần mềm đó gọi là zombie (thây ma bị điều khiển) hay là bot (ro-bot).
+Tập hợp những máy bị điều khiển từ cùng một kẻ gọi là botnet, và kẻ điều khiển gọi là <i>kẻ chăn bot</i>. Kẻ chăn bot tạo ra botnet bằng cách viết những chương trình lợi dụng lỗi của phần mềm máy tính, để những chương trình đó vào các trang web và dụ nhiều người đến xem bằng những nội dung hấp dẫn. Zombie còn có khả năng lây sang những máy khác qua mạng, qua file dùng chung trong ổ USB.
+Người ta ước tính cứ bốn máy tính trên thế giới thì có một zombie. Botnet có thể gồm hàng chục ngàn tới hàng triệu máy tính. Zombie thường xuyên liên lạc với một kênh liên lạc của kẻ chăn bot để nhận lệnh. Lệnh đó có thể là đồng loạt truy xuất đến một server nào đó để làm tắc nghẽn server đó, hoặc gửi một thư spam đến những hộp thư trong danh sách hàng triệu hộp thư. Thư có thể được gửi thẳng từ zombie đến mail server của hộp thư nhận hoặc đi qua một mail server trung gian trước khi đến mail server của hộp thư nhận.</p>
+<p>Thư spam cũng có thể được gửi thẳng từ các doanh nghiệp để giới thiệu sản phẩm hay dịch vụ của doanh nghiệp. Thư spam loại này thường được gửi từ một máy. Loại thư spam này rất khó chặn vì chúng có ít điểm khác thường để phân biệt.</p>
+<p>Loại thư spam thứ ba là thư lừa đảo thì thường được gửi từ những mail server công cộng như yahoo, hotmail, gmail.</p>
+<p>Cần phải dùng nhiều lớp hàng rào sau đây để chặn thư spam.</p>
+
+<h3>Giới hạn số lần nhận thư từ mỗi địa chỉ IP</h3>
+Những chương trình gửi thư spam sẽ gửi thư liên tiếp tới từng hộp thư trong mail server, có khi gửi tới những hộp thư không có thật trong mail server nữa. Ở lớp hàng rào này, mail server sẽ chỉ nhận một số thư hạn chế từ mỗi địa chỉ IP trong từng khoảng thời gian, ví dụ chỉ nhận 1 thư trong vòng 5 phút. Khi một địa chỉ IP gửi liên tiếp nhiều thư đến và vượt con số hạn chế thì nó sẽ bị từ chối cho đến hết khoảng thời gian đã định rồi mới gửi tiếp được. Những mail server bình thường sẽ chỉ gửi một số thư vừa phải nên ít khi bị vượt hạn mức. Mail server có một danh sách đặc biệt để đặc cách cho các mail server lớn và đáng tin cậy không bị hạn chế.
+<p>Hàng rào này giúp ngăn chặn sự hao tổn vô ích của tài nguyên máy và mạng.</p>
+<h3>Chặn theo địa chỉ IP của máy gửi thư</h3>
+Hầu hết những địa chỉ IP thường gửi thư spam đều đã bị đưa vào các blacklist trong các DNS server chuyên chứa blacklist như spamcop, spamhaus, sorbs. Mail server sẽ từ chối SMTP connection sau khi trao đổi vài packet từ những máy trong các blacklist do đó tài nguyên máy và mạng rất ít hao tổn.<br />
+Hàng rào này sẽ chặn khoảng 90% số thư spam. Hầu hết các thư gửi từ botnet đều bị chặn bởi hàng rào này. Chỉ những thư gửi từ những mail server đáng tin cậy hoặc những địa chỉ IP ít gửi spam mới qua được hàng rào này.<br />
+Có thể chặn luôn những SMTP connection từ những địa chỉ IP không có tên (không có PTR record trong DNS). <i>Hầu hết</i> địa chỉ IP của những mail server nghiêm chỉnh đều có tên, những mail server nào mà dùng địa chỉ IP không tên thì cũng đáng bị từ chối dù cho nó gửi thư spam hay không.
+<h3>Chặn theo địa chỉ hộp thư gửi</h3>
+Những domain thường gửi thư spam đã bị đưa vào các blacklist trong các DNS server chuyên chứa blacklist như rfc-ignorant, sorbs. Mail server sẽ từ chối SMTP connection sau khi trao đổi vài packet khi thấy địa chỉ hộp thư gửi trong các blacklist nên tài nguyên máy và mạng rất ít hao tổn.<br />
+Lớp hàng rào này cũng ngăn những thư mà hộp thư gửi không nhận thư trả lời. Phần lớn những địa chỉ hộp thư mà không chịu nhận thư vào là địa chỉ hộp thư không có thật do những chương trình gửi thư spam bịa ra. Một số ít những thư gửi tin tức tự động từ những công ty cũng có địa chỉ hộp thư gửi không nhận thư trả lời, muốn nhận những thư tin tức đó thì phải đưa tên domain của các công ty đó vào một danh sách riêng để mail server không từ chối.<br />
+Mail server sẽ lập một danh sách các địa chỉ hộp thư nhận trả lời và không nhận trả lời. Khi có một thư gửi tới, mail server sẽ tra danh sách để quyết định nhận hay từ chối thư. Nếu địa chỉ thư gửi chưa có trong danh sách thì mail server sẽ gửi thử một thư đến địa chỉ đó để xem nó thuộc hạng nào.
+<p>Hàng rào này sẽ chặn hơn 60% số thư spam đã vượt qua được hàng rào trước.</p>
+
+<h3>Spamassassin</h3>
+Những cách chặn trên không cần xem đến nội dung của thư mà đã chặn được hơn 95% số thư spam. Do không cần phải xem nội dung thư nên không hao tốn tài nguyên máy. Vẫn còn một ít spam mail đi qua được các hàng rào trên. Để lọc những thư này, mail server dùng Spamassassin để đọc qua nội dung thư và đánh giá mức độ spam dựa trên nhiều đặc điểm của từng thư. Những đặc điểm đó là:
+<ul><li>thư từ nơi gửi đã đi qua các máy nào để đến nơi nhận, các máy đó có đáng tin cậy không</li>
+<li>các dòng header là bình thường hay có dấu hiệu của các chương trình gửi thư hàng loạt</li>
+<li>dòng Subject có khác thường không: toàn chữ hoa, nhiều khoảng trắng liền nhau…</li>
+<li>nội dung có chứa nhiều từ quảng cáo khiêu dâm, thuốc, trúng số…</li>
+<li>…</li></ul>
+Số các đặc điểm trên là hữu hạn, trong khi đặc điểm của thư spam lại thay đổi rất nhanh. Để phát hiện ra những thư spam mới thì Spamassassin tạo ra một database các từ và nhóm từ thường gặp trong thư spam và thư thường, đó là database Bayes. Mỗi thư nhận vào sẽ được tra xem các từ và nhóm từ trong thư đã có trong database Bayes không để chấm điểm, và mỗi khi đánh giá một thư là sạch Spamassassin cũng sẽ đưa các từ và nhóm từ của thư đó vào database Bayes. Những từ và nhóm từ ở trong database Bayes quá lâu (64 ngày) mà không gặp lại thì cũng bị loại ra khỏi database. Nội dung database Bayes không có sẵn khi mới cài đặt Spamassassin, trước khi dùng database Bayes thì Spamassassin phải có ít nhất 200 thư spam và 200 thư thường. Số thư thường thì Spamassassin tự học như đã ghi ở trên còn số thư spam thì người dùng phải dạy cho Spamassassin. Khi đã được dạy đủ 200 thư spam thì database Bayes mới bắt đầu có tác dụng. Để có đủ 200 thư spam thì người dùng phải cất lại những thư spam đã nhận, hoặc nếu chưa có sẵn thì phải gửi những thư spam sắp nhận được cho Spamassassin học theo cách dưới đây.
+<p>Spamassassin cần mở thư ra và phân tích nội dung thư nên nó cần dùng nhiều tài nguyên máy hơn các hàng rào trên. Như vậy ta thấy rằng mail server tốn rất ít công để chặn hơn 90% thư spam nhưng lại tốn nhiều công hơn để chặn vài phần trăm còn lại. Mặc dù tốn nhiều công, Spamassassin cũng không thể phát hiện hết mọi thư spam, vẫn còn vài thư spam đi được đến hộp thư người dùng. Để giúp Spamassassin phát hiện những thư spam tương tự sắp gửi đến, người dùng phải tích cực phản hồi những trường hợp lọt lưới đó. <i>Nếu người dùng không phản hồi thì Spamassassin vẫn tưởng lầm rằng những thư spam đã lọt lưới là thư sạch</i>.<br />
+Để phản hồi những thư lọt lưới thì người quản trị mail server phải đặt một hộp thư để người dùng phải <i>chuyển</i> thư spam đến hộp thư, ví dụ <b>spammail@mydomain.com.vn</b> theo cách trong trang sau <a href="https://wiki.apache.org/spamassassin/ResendingMailWithHeaders" title="https://wiki.apache.org/spamassassin/ResendingMailWithHeaders" target='_blank'>ResendingMailWithHeaders</a> (rất tiếc là Outlook Express không làm được theo cách này, mà phần lớn người dùng lại dùng Outlook Express).<br />
+Với Outlook Express thì phải làm theo cách trong trang sau <a href="https://wiki.apache.org/spamassassin/SiteWideBayesFeedback" title="https://wiki.apache.org/spamassassin/SiteWideBayesFeedback" target='_blank'>SiteWideBayesFeedback</a>. Đoạn liên quan đến Outlook Express được chép lại dưới đây:<br />
+</p>
+<blockquote>Create a *new* mail message in Outlook/Express. Resize the windows so that you can see both your new message as well as the main O/OE window. Select the messages you want to send as Spam or Ham (probably not both in the same message) and drag them "into" the new message. This will send all the messages as attachments to the main email.</blockquote>
+Thư gửi đến spammail@mydomain.com.vn sẽ được giao cho sa-learn để đưa vào database Bayes. Nếu người quản trị cẩn thận thì nên mở từng thư trong spammail@mydomain.com.vn ra coi trước khi giao cho sa-learn.<br />
+Ngoài database Bayes, Spamassassin còn có thể tra và báo thư spam vào các database trong Internet là Razor, Pyzor, Dcc.
+
+<p>Trên đây là những cách chặn thư spam <i>đơn giản</i>, ít tốn công của người quản trị và người dùng. Nếu các cách trên vẫn chưa chặn hết thư spam, có thể dùng thêm các access list của mail server để chặn những thư có dấu hiệu cụ thể. Để dùng access list thì phải tốn công đọc và nhận ra dấu hiệu riêng của thư spam.<br />
+Dù cho đã làm hết mọi cách, vẫn có thể còn khoảng 1% thư spam lọt vào được đến hộp thư của người dùng vì thư spam luôn luôn thay đổi, rất khó đoán trước được.</p>
+<p>Phần trên là cách chặn thư spam đi vào mail server. Để không bị đưa vào các blacklist thì mail server cũng cần phải chặn thư spam đi ra. Điều này đặc biệt cần thiết nếu là mail server công cộng như mail server của các ISP.</p>
+<p>Việt Nam đã có luật về chống thư rác. Những người gửi thư quảng cáo không đúng luật sẽ bị xử phạt. Để nhắc nhở cho những người gửi thư vô tư đó, tôi trả lời thư quảng cáo như sau:</p>
+<blockquote>Quý vị đã gửi thư quảng cáo đến hộp thư của tôi. Đây là lần thứ nhất (hai, ba) tôi yêu cầu quí vị chấm dứt việc này. <br />
+Trích Nghị định 90/2008/NĐ-CP của Chính phủ Về chống thư rác: <br />
+Khoản 3 Điều 34: Phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng đối với hành vi: <br />
+a) Sử dụng địa chỉ thư điện tử đã thu thập không đúng mục đích, phạm vi đã được người sở hữu địa chỉ đó cho phép; <br />
+b) Làm sai lệch thông tin tiêu đề của thư điện tử, tin nhắn. <br />
+Điều 35: Phạt tiền từ 10.000.000 đồng đến 20.000.000 đồng đối với hành vi: <br />
+1. Gắn nhãn thư điện tử quảng cáo không đúng hoặc không đầy đủ theo quy định tại khoản 2 và khoản 3 Điều 10 Nghị định này; <br />
+Khoản 1 Điều 36: Phạt tiền từ 2.000.000 đồng đến 5.000.000 đồng đối với hành vi: <br />
+a) Gửi thư điện tử quảng cáo không có phần thông tin cho phép người nhận từ chối nhận thư điện tử quảng cáo hoặc có phần thông tin cho phép người nhận từ chối nhận thư điện tử quảng cáo nhưng không đáp ứng đầy đủ các điều kiện quy định tại khoản 1 Điều 12 Nghị định này; <br />
+Khoản 2 Điều 38: Phạt tiền từ 2.000.000 đồng đến 5.000.000 đồng đối với hành vi: <br />
+a) Gửi thư điện tử quảng cáo không có hoặc không đầy đủ thông tin về người quảng cáo theo quy định tại khoản 1 Điều 11 Nghị định này; <br />
+Khoản 4 Điều 38: Phạt tiền từ 20.000.000 đồng đến 40.000.000 đồng đối với hành vi: <br />
+a) Không phải nhà cung cấp dịch vụ quảng cáo mà vẫn gửi thư điện tử quảng cáo hoặc tin nhắn quảng cáo khi chưa được sự đồng ý của người nhận; <br />
+b) Gửi thư điện tử hoặc tin nhắn quảng cáo từ hệ thống có các thông số kỹ thuật chưa đăng ký với Bộ Thông tin và Truyền thông; <br />
+c) Gửi thư điện tử quảng cáo hoặc tin nhắn quảng cáo không có nhãn. <br />
+Xem thêm ở https://antispam.vncert.gov.vn</blockquote>
+<p>Đồng thời forward nguyên vẹn thư rác đến canhbaothurac@gmail.com để VNCert có bằng chứng về việc gửi thư rác.</p>
+
+  <hr>
+
+  <div class="footer">
+  Bấm các nút sau để liên-lạc 
+  <br>
+  <a href="http://twitter.com/GiauCham" target="_blank"><amp-img src="/images/icons/Twitter-256.png" layout="fixed" width="40" height="40" alt="Twiter"></amp-img></a> 
+  <a href="http://m.me/lamgiauchacchan" target="_blank"><amp-img src="/images/icons/Fb-Messenger-128.png" layout="fixed" width="40" height="40" alt="Facebook"></amp-img></a> 
+  <a href="viber://add?number=84989760570"><amp-img src="/images/icons/Viber-128.png" layout="fixed" width="40" height="40" alt="Viber"></amp-img></a>
+  <a href="http://zaloapp.com/qr/p/lzfbyqlwzn9u"><amp-img src="/images/icons/Zalo.webp" layout="fixed" width="40" height="40" alt="Zalo"></amp-img></a> 
+  <a href="tel:+84989760570"><amp-img src="/images/icons/Cell-Phone-256.png" layout="fixed" width="40" height="40" alt="điện thoại"></amp-img></a>
+  <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
+  <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
+  <br>
+  Nếu bạn chép lại những trang web này, hãy ghi nguồn-gốc <a href="https://www.lhboi.name.vn">https://WWW.LHBOI.NAME.VN</a> để người-đọc có-thể tìm được nội-dung mới cập-nhật.
+  </div>
+</div>
+<amp-analytics type="googleanalytics">
+  <script type="application/json">
+  {
+  "vars": { "account": "UA-25268996-1" },
+  "triggers": {
+  "trackPageview": {
+  "on": "visible",
+  "request": "pageview"
+    }
+   }
+  }
+  </script>
+</amp-analytics>
+
+</main>
+</body>
+</html>
+
