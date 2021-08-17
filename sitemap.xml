@@ -227,6 +227,12 @@
 	</url>
 
 	<url>
+		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/</loc>
+		<lastmod>2021-08-17T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
 		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/bat-dau-dau-tu.html</loc>
 		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
@@ -264,6 +270,12 @@
 	</url>
 	
 	<url>
+		<loc>https://lehboi.github.io/y-kien/</loc>
+		<lastmod>2021-08-17T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
 		<loc>https://lehboi.github.io/y-kien/bat-ca-hai-tay.html</loc>
 		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
@@ -278,6 +290,12 @@
 	<url>
 		<loc>https://lehboi.github.io/y-kien/xa-hoi-thong-tin.html</loc>
 		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/bi-mat-doi-tu.html</loc>
+		<lastmod>2021-08-17T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
@@ -313,6 +331,12 @@
 	</url>
 
 	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/chu-viet/</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/chu-viet/ghi-dau-thanh-1.html</loc>
 		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
@@ -337,6 +361,12 @@
 		<priority>1.00</priority>
 	</url>
 
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
 	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/bep.html</loc>
 		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
@@ -428,6 +458,12 @@
 		<priority>1.00</priority>
 	</url>
 
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/</loc>
+		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
 	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/pi-network.html</loc>
 		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
