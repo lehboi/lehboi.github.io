@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<gnc-v2
+     xmlns:gnc="http://www.gnucash.org/XML/gnc"
+     xmlns:act="http://www.gnucash.org/XML/act"
+     xmlns:book="http://www.gnucash.org/XML/book"
+     xmlns:cd="http://www.gnucash.org/XML/cd"
+     xmlns:cmdty="http://www.gnucash.org/XML/cmdty"
+     xmlns:price="http://www.gnucash.org/XML/price"
+     xmlns:slot="http://www.gnucash.org/XML/slot"
+     xmlns:split="http://www.gnucash.org/XML/split"
+     xmlns:sx="http://www.gnucash.org/XML/sx"
+     xmlns:trn="http://www.gnucash.org/XML/trn"
+     xmlns:ts="http://www.gnucash.org/XML/ts"
+     xmlns:fs="http://www.gnucash.org/XML/fs"
+     xmlns:bgt="http://www.gnucash.org/XML/bgt"
+     xmlns:recurrence="http://www.gnucash.org/XML/recurrence"
+     xmlns:lot="http://www.gnucash.org/XML/lot"
+     xmlns:addr="http://www.gnucash.org/XML/addr"
+     xmlns:owner="http://www.gnucash.org/XML/owner"
+     xmlns:billterm="http://www.gnucash.org/XML/billterm"
+     xmlns:bt-days="http://www.gnucash.org/XML/bt-days"
+     xmlns:bt-prox="http://www.gnucash.org/XML/bt-prox"
+     xmlns:cust="http://www.gnucash.org/XML/cust"
+     xmlns:employee="http://www.gnucash.org/XML/employee"
+     xmlns:entry="http://www.gnucash.org/XML/entry"
+     xmlns:invoice="http://www.gnucash.org/XML/invoice"
+     xmlns:job="http://www.gnucash.org/XML/job"
+     xmlns:order="http://www.gnucash.org/XML/order"
+     xmlns:taxtable="http://www.gnucash.org/XML/taxtable"
+     xmlns:tte="http://www.gnucash.org/XML/tte"
+     xmlns:vendor="http://www.gnucash.org/XML/vendor">
+<gnc:count-data cd:type="book">1</gnc:count-data>
+<gnc:book version="2.0.0">
+<book:id type="guid">68d74c500e4c319519dd0eebbdb82408</book:id>
+<book:slots>
+  <slot>
+    <slot:key>options</slot:key>
+    <slot:value type="frame">
+      <slot>
+        <slot:key>Budgeting</slot:key>
+        <slot:value type="frame"/>
+      </slot>
+    </slot:value>
+  </slot>
+</book:slots>
+<gnc:count-data cd:type="commodity">4</gnc:count-data>
+<gnc:count-data cd:type="account">48</gnc:count-data>
+<gnc:commodity version="2.0.0">
+  <cmdty:space>ISO4217</cmdty:space>
+  <cmdty:id>VND</cmdty:id>
+  <cmdty:get_quotes/>
+  <cmdty:quote_source>currency</cmdty:quote_source>
+  <cmdty:quote_tz/>
+</gnc:commodity>
+<gnc:commodity version="2.0.0">
+  <cmdty:space>VN</cmdty:space>
+  <cmdty:id>MBBF</cmdty:id>
+  <cmdty:name>MBBF</cmdty:name>
+  <cmdty:fraction>10000</cmdty:fraction>
+</gnc:commodity>
+<gnc:commodity version="2.0.0">
+  <cmdty:space>VN</cmdty:space>
+  <cmdty:id>VF1</cmdty:id>
+  <cmdty:name>VF1</cmdty:name>
+  <cmdty:fraction>10000</cmdty:fraction>
+</gnc:commodity>
+<gnc:commodity version="2.0.0">
+  <cmdty:space>VN</cmdty:space>
+  <cmdty:id>VNM</cmdty:id>
+  <cmdty:name>VNM</cmdty:name>
+  <cmdty:fraction>1</cmdty:fraction>
+</gnc:commodity>
+<gnc:commodity version="2.0.0">
+  <cmdty:space>template</cmdty:space>
+  <cmdty:id>template</cmdty:id>
+  <cmdty:name>template</cmdty:name>
+  <cmdty:xcode>template</cmdty:xcode>
+  <cmdty:fraction>1</cmdty:fraction>
+</gnc:commodity>
+<gnc:account version="2.0.0">
+  <act:name>Root Account</act:name>
+  <act:id type="guid">8cf75d898fee4c0694f1143148eba8ff</act:id>
+  <act:type>ROOT</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>1. Tài sản sở hữu</act:name>
+  <act:id type="guid">5b4560d4393e52b63af27bf742c69051</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Assets</act:description>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+    <slot>
+      <slot:key>placeholder</slot:key>
+      <slot:value type="string">true</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">8cf75d898fee4c0694f1143148eba8ff</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Bảo hiểm nhân thọ</act:name>
+  <act:id type="guid">ce774b6038c415899de63a955e07dce6</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">5b4560d4393e52b63af27bf742c69051</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Bảo Việt</act:name>
+  <act:id type="guid">0578fc2546e6094373fa5ac7df7de0fa</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:parent type="guid">ce774b6038c415899de63a955e07dce6</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Cha</act:name>
+  <act:id type="guid">3d66deaf3e8b1d74a16c04a94f92671c</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">0578fc2546e6094373fa5ac7df7de0fa</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Mẹ</act:name>
+  <act:id type="guid">e4970b6b596742bf2abc26e5d367a716</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">0578fc2546e6094373fa5ac7df7de0fa</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Con đầu</act:name>
+  <act:id type="guid">28c33662f38a25be4aaf4de4bdd0042b</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">0578fc2546e6094373fa5ac7df7de0fa</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Con út</act:name>
+  <act:id type="guid">2b8e5492cc1c9acf0ec2f30ab3309a04</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">0578fc2546e6094373fa5ac7df7de0fa</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Manulife</act:name>
+  <act:id type="guid">813794b4503b33e332c767dbd41adada</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:parent type="guid">ce774b6038c415899de63a955e07dce6</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Cha.1</act:name>
+  <act:id type="guid">7af079311d8023e48d6d17273f8a11a7</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">813794b4503b33e332c767dbd41adada</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Cha.2</act:name>
+  <act:id type="guid">d3928fe6da7d03f104965fcdaf045b12</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">813794b4503b33e332c767dbd41adada</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Cha.3</act:name>
+  <act:id type="guid">57b14bcbaeccd3db2b271b65a0b9802f</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">813794b4503b33e332c767dbd41adada</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Mẹ.1</act:name>
+  <act:id type="guid">bd9a31107d773f0bfcf19beb571f9df6</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">813794b4503b33e332c767dbd41adada</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Mẹ.2</act:name>
+  <act:id type="guid">c58b13b6bb23bee25446bc9230d170c1</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">813794b4503b33e332c767dbd41adada</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Con út.1</act:name>
+  <act:id type="guid">8bec78cc7c980aaeb6eb469bfa97660d</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">813794b4503b33e332c767dbd41adada</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Con đầu.1</act:name>
+  <act:id type="guid">90a06327146f710a85e9dc78c8467ad5</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">813794b4503b33e332c767dbd41adada</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Con đầu.2</act:name>
+  <act:id type="guid">fafad5f1a572320b439ad65a4525ce73</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">813794b4503b33e332c767dbd41adada</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Thị trường</act:name>
+  <act:id type="guid">5628862f4fb414746b8022d2e457042b</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">5b4560d4393e52b63af27bf742c69051</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Quĩ đầu tư cổ phiếu</act:name>
+  <act:id type="guid">fae888d59a2bd3c4b90363cc7e5f7474</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">5628862f4fb414746b8022d2e457042b</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>VF1</act:name>
+  <act:id type="guid">364fc59b10c6f62a925d2cbf4d2b9ab6</act:id>
+  <act:type>MUTUAL</act:type>
+  <act:commodity>
+    <cmdty:space>VN</cmdty:space>
+    <cmdty:id>VF1</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>10000</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">fae888d59a2bd3c4b90363cc7e5f7474</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Cổ phiếu</act:name>
+  <act:id type="guid">9234c68709c44b5fa50f44d173b56ad5</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">5628862f4fb414746b8022d2e457042b</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>VNM</act:name>
+  <act:id type="guid">da247f1335756edeb38126a8a42b288b</act:id>
+  <act:type>STOCK</act:type>
+  <act:commodity>
+    <cmdty:space>VN</cmdty:space>
+    <cmdty:id>VNM</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>1</act:commodity-scu>
+  <act:code>VNM</act:code>
+  <act:description>VNM</act:description>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">9234c68709c44b5fa50f44d173b56ad5</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Quĩ đầu tư trái phiếu</act:name>
+  <act:id type="guid">b5246898f0631dcafeaddb3f8a4ec1e9</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">5628862f4fb414746b8022d2e457042b</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>MBBF</act:name>
+  <act:id type="guid">0df7cc893bb6a9f6c56bcf8b4b762194</act:id>
+  <act:type>MUTUAL</act:type>
+  <act:commodity>
+    <cmdty:space>VN</cmdty:space>
+    <cmdty:id>MBBF</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>10000</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">b5246898f0631dcafeaddb3f8a4ec1e9</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>BĐS</act:name>
+  <act:id type="guid">3180f007361598681def7bb4126478e5</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">5b4560d4393e52b63af27bf742c69051</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>4. Chi phí</act:name>
+  <act:id type="guid">72304b4cb8ca04983014a4902d80f13f</act:id>
+  <act:type>EXPENSE</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Expenses</act:description>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">8cf75d898fee4c0694f1143148eba8ff</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Bảo hiểm</act:name>
+  <act:id type="guid">ef9471c1923ea2429b4cdba374f786fe</act:id>
+  <act:type>EXPENSE</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">72304b4cb8ca04983014a4902d80f13f</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>3. Đưa vào</act:name>
+  <act:id type="guid">32955f6b0c8a6d10a9ab46de17c562a4</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">8cf75d898fee4c0694f1143148eba8ff</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Bảo hiểm</act:name>
+  <act:id type="guid">fd0fa85ca8f63fe0561144e5e920fe7a</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">32955f6b0c8a6d10a9ab46de17c562a4</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Thị trường</act:name>
+  <act:id type="guid">bdd7c2f248ecbb6988b11cd2d21ea6d8</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">32955f6b0c8a6d10a9ab46de17c562a4</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Quĩ đầu tư trái phiếu</act:name>
+  <act:id type="guid">baaaa23ab52f88075617b6094c5fa936</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">bdd7c2f248ecbb6988b11cd2d21ea6d8</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Cổ phiếu</act:name>
+  <act:id type="guid">9bb1aa2069d18dc8a0e88b5ebe749f2d</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">bdd7c2f248ecbb6988b11cd2d21ea6d8</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Quĩ đầu tư cổ phiếu</act:name>
+  <act:id type="guid">10102512846cadbd74a1d01d0de3fdb2</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">bdd7c2f248ecbb6988b11cd2d21ea6d8</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>BĐS</act:name>
+  <act:id type="guid">9716ce760f43130da0fb3c0784ed51a6</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">32955f6b0c8a6d10a9ab46de17c562a4</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Orphaned Gains-VND</act:name>
+  <act:id type="guid">146c6c966e6152a535e3bf6c44dd1ad2</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Realized Gain/Loss</act:description>
+  <act:slots>
+    <slot>
+      <slot:key>notes</slot:key>
+      <slot:value type="string">Realized Gains or Losses from Commodity or Trading Accounts that haven't been recorded elsewhere.</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">8cf75d898fee4c0694f1143148eba8ff</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Imbalance-VND</act:name>
+  <act:id type="guid">8ac3209b6bc6bad9381de57175775d2b</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:parent type="guid">8cf75d898fee4c0694f1143148eba8ff</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>2. Đã rút ra</act:name>
+  <act:id type="guid">ad607a36164ef805e85ac02200cc3312</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">8cf75d898fee4c0694f1143148eba8ff</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Cổ phiếu</act:name>
+  <act:id type="guid">9f281210654ea19ccc46549e6e541b73</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">ad607a36164ef805e85ac02200cc3312</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>VNM</act:name>
+  <act:id type="guid">c2c38ddbe6a7fbaa771344a464ebbf4d</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">9f281210654ea19ccc46549e6e541b73</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Quĩ đầu tư cổ phiếu</act:name>
+  <act:id type="guid">e1814ef9eda59c46318141b0c62df97d</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">ad607a36164ef805e85ac02200cc3312</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>VF1</act:name>
+  <act:id type="guid">d5505b87f534732ebf9e9ded6d916320</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">e1814ef9eda59c46318141b0c62df97d</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Quĩ đầu tư trái phiếu</act:name>
+  <act:id type="guid">43f8deb1b076d1a6ca31a7d6b0f0bf5d</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">ad607a36164ef805e85ac02200cc3312</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>MBBF</act:name>
+  <act:id type="guid">ef0d5056fdd05c6993f644e071da33f3</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">43f8deb1b076d1a6ca31a7d6b0f0bf5d</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Bảo hiểm nhân thọ</act:name>
+  <act:id type="guid">0ac8744d737a5e7e347da6f0434d751c</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">ad607a36164ef805e85ac02200cc3312</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>BĐS</act:name>
+  <act:id type="guid">21db34b570df712190e6db60eb4f5a3a</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">ad607a36164ef805e85ac02200cc3312</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>5. Lợi nhuận</act:name>
+  <act:id type="guid">9431c297442265db7e9f1c6b051f2749</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">8cf75d898fee4c0694f1143148eba8ff</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Cổ tức</act:name>
+  <act:id type="guid">d4cfb9d7afdb99b5a5adec11c280ed7c</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">9431c297442265db7e9f1c6b051f2749</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Cho thuê</act:name>
+  <act:id type="guid">078449fc003d0ecaa143b97ecf860338</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>ISO4217</cmdty:space>
+    <cmdty:id>VND</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">9431c297442265db7e9f1c6b051f2749</act:parent>
+</gnc:account>
+</gnc:book>
+</gnc-v2>
+
+<!-- Local variables: -->
+<!-- mode: xml        -->
+<!-- End:             -->
