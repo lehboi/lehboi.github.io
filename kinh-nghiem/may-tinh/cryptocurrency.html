@@ -17,6 +17,7 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 
@@ -132,19 +133,27 @@ div.even {background-color: darkslategray}
 div.footer { font-size: 80%; color: red; text-align: center; }
 
 .flright { float:right; margin:0px 0px 0px 5px; width:45%; }
-
 @media (max-width: 399px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:10px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 400px) and (max-width: 499px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:20px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 500px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 1260px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 }
+
 
 </style>
 </head>
@@ -158,151 +167,37 @@ div.footer { font-size: 80%; color: red; text-align: center; }
                 <span></span>
                 <span></span>
             </button>
-    <amp-accordion>
-<section>
-  <h3 class="myheader">Giới-thiệu</h3>
-  <p>
-    <a href='/'>Trang-bìa</a><br>
+  <h3 class="myheader"><a href='/'>Giới-thiệu</a></h3>
     <a href='/home/about.html'>Thân-thế</a><br>
     <a href='/home/cv.html'>Thành-tích</a><br>
-  </p>
-</section>
-<section>
-  <h3 class="myheader">Hữu-ích</h3>
-  <div>
-    <amp-accordion>
-    <section>
-      <h4 class="myheader">Lập-kế-hoạch-tài-chính</h4>
-      <p>
-        <a href='/huu-ich/ke-hoach-tai-chinh/'>Giới-thiệu</a><br>
-        <a href='/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han.html'>Ghi-chép kết-quả-đầu-tư-dài-hạn</a><br>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Đầu-tư-cổ-phiếu</h4>
-      <p>
-        <a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/quy-dau-tu.html'>Quỹ-đầu-tư</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu.html'>Sổ-tiết-kiệm hay Quỹ-đầu-tư?</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/thi-truong-xuong-doc.html'>Làm gì khi thị-trường xuống-dốc?</a>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Các loại bảo-hiểm</h4>
-      <p>
-        <a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a><br>
-        <a href='/huu-ich/cac-loai-bao-hiem/phi-bao-hiem-nhan-tho.html'>Phí-bảo-hiểm-nhân-thọ</a><br>
-        <a href='/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung.html'>Bảo-hiểm-nhân-thọ-liên-kết-chung</a><br>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Câu-chuyện</h4>
-      <p>
-        <a href='/huu-ich/cau-chuyen/bat-dau-dau-tu.html'>Bắt-đầu đầu-tư</a><br>
-        <a href='/huu-ich/cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia.html'>Những quyết-định tốt cho tuổi-già</a><br>
-        <a href='/huu-ich/cau-chuyen/nghi-huu-som.html'>Về-hưu trước 40 tuổi</a><br>
-        <a href='/huu-ich/cau-chuyen/tranh-mang-no.html'>Tránh mang nợ</a><br>
-        <a href='/huu-ich/cau-chuyen/mua-nha-hay-dau-tu.html'>Để tiền mua-nhà hay đầu-tư</a><br>
-        <a href='/huu-ich/cau-chuyen/bot-lo-ve-tien.html'>6 điều giúp tôi bớt lo-lắng về tiền-bạc</a><br>
-      </p>
-    </section>
-    </amp-accordion>
-    <a href='/huu-ich/chi-tieu.html'>Chi-tiêu có kế-hoạch</a><br>
-    <a href='/huu-ich/nghi-luc.html'>Nghị-lực để có dư tiền</a><br>
-    <a href='/huu-ich/lam-phat-loi-song.html'>Lạm-phát-lối-sống</a><br>
-    <a href='/huu-ich/tich-luy.html'>Tích-luỹ-tài-sản</a><br>
-    <a href='/huu-ich/de-tien-vao-dau.html'>Để tiền vào đâu</a><br>
-    <a href='/huu-ich/cach-dau-tu.html'>Những cách đầu-tư</a><br>
-    <a href='/huu-ich/dung-so-dau-tu.html'>Đừng sợ chữ đầu-tư</a><br>
-    <a href='/huu-ich/hieu-qua-dau-tu.html'>Tính hiệu-quả-đầu-tư</a><br>
-    <a href='/huu-ich/tich-luy-dai-han.html'>So-sánh công-cụ tích-luỹ-dài-hạn</a><br>
-  </div>
-</section>
-<section>
+  <h3 class="myheader"><a href='/huu-ich/'>Hữu-ích</a></h3>
+
+      <h4 class="myheader"><a href='/huu-ich/ke-hoach-tai-chinh/'>Lập-kế-hoạch-tài-chính</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/cau-chuyen/'>Câu-chuyện</a></h4>
+
   <h3 class="myheader">Kinh-nghiệm</h3>
-  <amp-accordion>
-  <section>
-    <h4 class="myheader">Máy-tính</h4>
-    <p>
-      <a href='/kinh-nghiem/may-tinh/pi-network.html'>Tiền-mật-mã Pi</a><br>
-      <a href='/kinh-nghiem/may-tinh/gnucash.html'>GnuCash</a><br>
-      <a href='/kinh-nghiem/may-tinh/ham-tai-chinh.html'>Các phép-tính-tài-chính cần biết</a><br>
-      <a href='/kinh-nghiem/may-tinh/cloudstorage.html'>Kinh-nghiệm dùng cloud storage</a><br>
-      <a href='/kinh-nghiem/may-tinh/privcloudstor.html'>Hướng-dẫn làm cloud storage server</a><br>
-      <a href="/kinh-nghiem/may-tinh/vi-dien-tu.html">Nhận-xét các ví-điện-tử</a><br>
-      <a href='/kinh-nghiem/may-tinh/googlemaps.html'>Kinh-nghiệm dùng Google Maps ở Việt-Nam</a><br>
-      <a href='/kinh-nghiem/may-tinh/spam-call.html'>Chặn những cuộc-gọi-tiếp-thị</a><br>
-      <a href='/kinh-nghiem/may-tinh/raspberrypi.html'>RaspberryPi</a><br>
-      <a href='/kinh-nghiem/may-tinh/spam.html'>Chặn spam mail</a><br>
-      <a href='/kinh-nghiem/may-tinh/toys.html'>Home server cũ</a><br>
-      <a href='/kinh-nghiem/may-tinh/cryptocurrency.html'>Tìm-hiểu Bitcoin</a><br>
-      <a href='/kinh-nghiem/may-tinh/protect.html'>Bảo vệ tài sản số</a>
-    </p>
-  </section>
+    <h4 class="myheader"><a href='/kinh-nghiem/may-tinh/'>Máy-tính</a></h4>
 
-  <section>
+    <h4 class="myheader"><a href='/kinh-nghiem/chu-viet/'>Chữ-Việt</a></h4>
 
-    <h4 class="myheader">Chữ Việt</h4>
-    <p>
-      <a href='/kinh-nghiem/chu-viet/ghi-dau-thanh-1.html'>Vị trí dấu thanh</a><br>
-      <a href='/kinh-nghiem/chu-viet/unicode.html'>Unicode</a><br>
-      <a href='/kinh-nghiem/chu-viet/utf-8.html'>UTF-8</a><br>
-      <a href='/kinh-nghiem/chu-viet/web.html'>Web Việt</a>
-    </p>
-  </section>
+    <h4 class="myheader"><a href='/kinh-nghiem/linh-tinh/'>Linh tinh</a></h4>
 
-  <section>
-
-    <h4 class="myheader">Linh tinh</h4>
-    <p>
-      <a href='/kinh-nghiem/linh-tinh/bep.html'>Bếp</a><br>
-      <a href='/kinh-nghiem/linh-tinh/ac-dc.html'>Điện một chiều và điện xoay chiều</a><br>
-      <a href='/kinh-nghiem/linh-tinh/tieu-thu-dien.html'>Tiêu thụ điện</a><br>
-      <a href='/kinh-nghiem/linh-tinh/dien-standby.html'>Điện standby</a><br>
-      <a href='/kinh-nghiem/linh-tinh/magchan.html'>Dùng thử Magchan để giặt</a><br>
-      <a href='/kinh-nghiem/linh-tinh/may-lanh.html'>Máy lạnh</a><br>
-      <a href='/kinh-nghiem/linh-tinh/may-lanh-inverter.html'>Máy lạnh inverter</a><br>
-      <a href='/kinh-nghiem/linh-tinh/nong.html'>Nóng</a><br>
-      <a href='/kinh-nghiem/linh-tinh/nhiet-do.html'>Nhiệt độ một ngày</a><br>
-      <a href='/kinh-nghiem/linh-tinh/tan-so-cua-tv.html'>Tần số của TV</a><br>
-      <a href='/kinh-nghiem/linh-tinh/hong-ngoai.html'>Hồng ngoại</a><br>
-    </p>
-  </section>
-  </amp-accordion>
-</section>
-<section>
-  <h3 class="myheader">Ý kiến</h3>
-  <p>
-    <a href='/y-kien/bat-ca-hai-tay.html'>Bắt cá hai tay</a><br>
-    <a href='/y-kien/su-giau-co.html'>Nguồn gốc sự giàu có</a><br>
-    <a href='/y-kien/xa-hoi-thong-tin.html'>Xã hội thông tin</a><br>
-    <a href='/y-kien/dung-hang-viet-nam.html'>Dùng hàng Việt</a><br>
-    <a href='/y-kien/gia-tra.html'>Giả trá</a><br>
-    <a href='/y-kien/nhung-cai-nem.html'>Những cái nêm</a><br>
-    <a href='/y-kien/khac-nguoi.html'>Khác người</a><br>
-    <a href='/y-kien/da-len-bao.html'>Đã lên báo</a>
-  </p>
-</section>
-
-<section>
+  <h3 class="myheader"><a href='/y-kien/'>Ý kiến</a></h3>
 
   <h3 class="myheader">Danh mục</h3>
-  <p>
     <a href='/download/'>Download</a><br>
     <a href='/sitemap.html'>Mục lục</a>
-  </p>
-</section>
-
-<section>
   <h3 class="myheader"></h3>
-  <p>
   <br>
   <br>
   <br>
   <br>
-  </p>
-</section>
-</amp-accordion>
+
 
   </amp-sidebar>
 <main>
@@ -311,6 +206,29 @@ div.footer { font-size: 80%; color: red; text-align: center; }
       <button on="tap:sidebar.toggle" class="ampstart-btn caps ml1" style="font-size:90%;font-weight:bold;background-color: blue; color: white;">MENU
       </button>
     </div>
+  </div>
+
+  <div class="leftads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+
+  </div>
+  <div class="rightads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+
   </div>
 
   <div class="body">
@@ -342,6 +260,31 @@ https://www.lhboi.name.vn/kinh-nghiem/may-tinh/cryptocurrency
 <p>Khi giao-dịch tiền trong ngân hàng thường, mỗi sự chuyển dịch của tiền đều được ghi lại bằng một dòng đại khái như “An chuyển x đồng cho Bình” trong server của ngân hàng. Trong mạng ngang hàng, không có một server tập trung thông tin, mà mọi thành viên trong mạng lưới (gọi là node) đều có một bản sao tất-cả sổ-cái-ghi-chép-giao-dịch. Phát-minh của Satoshi là cách để mọi bản sao đều đồng nhất với nhau. Satoshi gọi đồng tiền điện tử mới đó là Bitcoin. Trong hệ thống Bitcoin, dòng “An chuyển x bitcoin cho Bình” phải được ký bởi chữ ký điện tử (private key) của An rồi được truyền đến tất cả các node trong mạng. Giao dịch đó còn phải chờ được các node phê-chuẩn rồi mới được thực-hiện. Các node phải kiểm-tra để chắc-chắn rằng x bitcoin thật sự là của An.
 </p>
 <p>Các máy tính node, còn gọi là miner, sẽ kiểm tra, xử lý các dòng giao dịch đó để gói các giao dịch vào một block theo thuật toán SHA 256 và nối block đó với các block đã có trước. Khi quá trình đó hoàn thành thì giao dịch mới được xác nhận. Miner nào gói được một block đạt yêu-cầu sớm nhất sẽ được thưởng bằng những bitcoin mới sinh ra.
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 <h2>Ký bằng chữ ký điện tử thế nào?</h2>
 <p><a href="https://en.wikipedia.org/wiki/Digital_signature" target='_blank'>Chữ ký điện tử</a> là một cặp hai con số rất lớn: private key và public key. Tên gọi của hai con số đó đã cho biết: phải giữ kín private key và để public key cho mọi người biết.<br>
@@ -354,6 +297,31 @@ Khi ký một thông điệp m, máy tính sẽ tính ra một chữ ký s từ 
 <p>Tiền giấy và tiền kim loại thông thường được chính phủ phát hành theo những mệnh giá cố định. Bitcoin không như vậy. Những lượng Bitcoin lớn nhỏ khác nhau lưu hành trong mạng. Mỗi lượng Bitcoin là một chuỗi data ghi những giao dịch nó đã trải qua từ lúc được tạo ra. Khi một lượng Bitcoin x được chuyển từ wallet A sang wallet B, thì x được ghi thêm địa chỉ B và được ký bằng private key của A.
 <br>Tổng số tiền có trong wallet là tổng các lượng Bitcoin mang các địa chỉ của wallet. Khi một wallet A cần chuyển một lượng Bitcoin x sang wallet B mà không có lượng Bitcoin bằng đúng x có sẵn trong wallet A thì nó lấy một hoặc nhiều lượng Bitcoin có tổng lớn hơn hoặc bằng x đưa vào giao dịch, tạo ra một lượng Bitcoin x mới mang địa chỉ B và một lượng Bitcoin mới mang địa chỉ A chứa phần dư sau khi trừ x (nếu có). Phần dư cũng có thể mang một địa chỉ khác A được tạo ra và software wallet phải ghi cặp public key và private key của lượng Bitcoin dư đó vào file dữ liệu.
 </p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 Wallet có thể được đặt trong
 <ol>
@@ -378,6 +346,31 @@ Giao dịch trên sàn thì tốn phí giao dịch, phí chuyển Bitcoin vào v
 </ol>
 <p>Mua bán cách nào cũng tốn phí trả cho miner.<br>
 Khi lượng Bitcoin cần chuyển ra khỏi wallet không bằng bất cứ một lượng Bitcoin nào có sẵn trong wallet thì việc chuyển Bitcoin sẽ có thêm bước tách/nhập các lượng Bitcoin có sẵn thành lượng Bitcon cần chuyển. Bước tách/nhập làm tốn công miner hơn nên tốn phí nhiều hơn.
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 <h1>Giữ wallet thế nào để khỏi mất?</h1>
 <p>Wallet trong web server là mục tiêu của hacker. Hacker luôn tìm cách chiếm đoạt toàn bộ wallet trong từng server. Lượng Bitcoin chưa định bán thì nên chuyển từ web wallet vào cold wallet để tránh bị hack.
@@ -389,6 +382,31 @@ Khi lượng Bitcoin cần chuyển ra khỏi wallet không bằng bất cứ m�
 <h1>Mặt trái của Bitcoin</h1>
 <h2>Sự đầu cơ</h2>
 <p>Mặc dù nó được gọi là currency, coin nhưng tôi thấy hiện nay nó không phải là một loại tiền vì không tiện để dùng nó mua các thứ khác. Mỗi lần chuyển một lượng Bitcoin dù nhỏ hay lớn đều tốn trung bình 10 phút, lâu hơn việc thanh toán bằng thẻ. Tôi cho rằng Bitcoin là một loại tài sản để <a href="/huu-ich/cach-dau-tu.html">đầu cơ</a>.
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 <h2>Hao tốn năng lượng</h2>
 <p>Các máy tính miner tranh nhau xử lý các giao dịch để cuối cùng chỉ có một miner được thưởng Bitcoin mới, việc tranh giành làm hao tốn rất nhiều điện năng. Có người tính rằng hiện nay để xử lý một giao dịch Bitcoin thì hao mất 200kWh điện. Và lượng điện đó ngày càng tăng vì càng có nhiều miner mới tham gia.</p>
