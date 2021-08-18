@@ -17,7 +17,7 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
-
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 
@@ -134,19 +134,25 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 
 .flright { float:right; margin:0px 0px 0px 5px; width:45%; }
 @media (max-width: 399px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:10px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 400px) and (max-width: 499px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:20px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 500px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 1260px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 }
-
-
 
 </style>
 <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
@@ -161,153 +167,36 @@ div.footer { font-size: 80%; color: red; text-align: center; }
                 <span></span>
                 <span></span>
             </button>
-    <amp-accordion>
-<section>
-  <h3 class="myheader">Giới-thiệu</h3>
-  <p>
-    <a href='/'>Trang-bìa</a><br>
+  <h3 class="myheader"><a href='/'>Giới-thiệu</a></h3>
     <a href='/home/about.html'>Thân-thế</a><br>
     <a href='/home/cv.html'>Thành-tích</a><br>
-  </p>
-</section>
-<section>
-  <h3 class="myheader">Hữu-ích</h3>
-  <div>
-    <amp-accordion>
-    <section>
-      <h4 class="myheader">Lập-kế-hoạch-tài-chính</h4>
-      <p>
-        <a href='/huu-ich/ke-hoach-tai-chinh/'>Giới-thiệu</a><br>
-        <a href='/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han.html'>Ghi-chép kết-quả-đầu-tư-dài-hạn</a><br>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Đầu-tư-cổ-phiếu</h4>
-      <p>
-        <a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/quy-dau-tu.html'>Quỹ-đầu-tư</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu.html'>Sổ-tiết-kiệm hay Quỹ-đầu-tư?</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/thi-truong-xuong-doc.html'>Làm gì khi thị-trường xuống-dốc?</a>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Các loại bảo-hiểm</h4>
-      <p>
-        <a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a><br>
-        <a href='/huu-ich/cac-loai-bao-hiem/phi-bao-hiem-nhan-tho.html'>Phí-bảo-hiểm-nhân-thọ</a><br>
-        <a href='/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung.html'>Bảo-hiểm-nhân-thọ-liên-kết-chung</a><br>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Câu-chuyện</h4>
-      <p>
-        <a href='/huu-ich/cau-chuyen/bat-dau-dau-tu.html'>Bắt-đầu đầu-tư</a><br>
-        <a href='/huu-ich/cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia.html'>Những quyết-định tốt cho tuổi-già</a><br>
-        <a href='/huu-ich/cau-chuyen/nghi-huu-som.html'>Về-hưu trước 40 tuổi</a><br>
-        <a href='/huu-ich/cau-chuyen/tranh-mang-no.html'>Tránh mang nợ</a><br>
-        <a href='/huu-ich/cau-chuyen/mua-nha-hay-dau-tu.html'>Để tiền mua-nhà hay đầu-tư</a><br>
-        <a href='/huu-ich/cau-chuyen/bot-lo-ve-tien.html'>6 điều giúp tôi bớt lo-lắng về tiền-bạc</a><br>
-      </p>
-    </section>
-    </amp-accordion>
-    <a href='/huu-ich/chi-tieu.html'>Chi-tiêu có kế-hoạch</a><br>
-    <a href='/huu-ich/nghi-luc.html'>Nghị-lực để có dư tiền</a><br>
-    <a href='/huu-ich/lam-phat-loi-song.html'>Lạm-phát-lối-sống</a><br>
-    <a href='/huu-ich/tich-luy.html'>Tích-luỹ-tài-sản</a><br>
-    <a href='/huu-ich/de-tien-vao-dau.html'>Để tiền vào đâu</a><br>
-    <a href='/huu-ich/cach-dau-tu.html'>Những cách đầu-tư</a><br>
-    <a href='/huu-ich/dung-so-dau-tu.html'>Đừng sợ chữ đầu-tư</a><br>
-    <a href='/huu-ich/hieu-qua-dau-tu.html'>Tính hiệu-quả-đầu-tư</a><br>
-    <a href='/huu-ich/tich-luy-dai-han.html'>So-sánh công-cụ tích-luỹ-dài-hạn</a><br>
-  </div>
-</section>
-<section>
+  <h3 class="myheader"><a href='/huu-ich/'>Hữu-ích</a></h3>
+
+      <h4 class="myheader"><a href='/huu-ich/ke-hoach-tai-chinh/'>Lập-kế-hoạch-tài-chính</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/cau-chuyen/'>Câu-chuyện</a></h4>
+
   <h3 class="myheader">Kinh-nghiệm</h3>
-  <amp-accordion>
-  <section>
-    <h4 class="myheader">Máy-tính</h4>
-    <p>
-      <a href='/kinh-nghiem/may-tinh/pi-network.html'>Tiền-mật-mã Pi</a><br>
-      <a href='/kinh-nghiem/may-tinh/gnucash.html'>GnuCash</a><br>
-      <a href='/kinh-nghiem/may-tinh/ham-tai-chinh.html'>Các phép-tính-tài-chính cần biết</a><br>
-      <a href='/kinh-nghiem/may-tinh/cloudstorage.html'>Kinh-nghiệm dùng cloud storage</a><br>
-      <a href='/kinh-nghiem/may-tinh/privcloudstor.html'>Hướng-dẫn làm cloud storage server</a><br>
-      <a href="/kinh-nghiem/may-tinh/vi-dien-tu.html">Nhận-xét các ví-điện-tử</a><br>
-      <a href='/kinh-nghiem/may-tinh/googlemaps.html'>Kinh-nghiệm dùng Google Maps ở Việt-Nam</a><br>
-      <a href='/kinh-nghiem/may-tinh/spam-call.html'>Chặn những cuộc-gọi-tiếp-thị</a><br>
-      <a href='/kinh-nghiem/may-tinh/raspberrypi.html'>RaspberryPi</a><br>
-      <a href='/kinh-nghiem/may-tinh/spam.html'>Chặn spam mail</a><br>
-      <a href='/kinh-nghiem/may-tinh/toys.html'>Home server cũ</a><br>
-      <a href='/kinh-nghiem/may-tinh/cryptocurrency.html'>Tìm-hiểu Bitcoin</a><br>
-      <a href='/kinh-nghiem/may-tinh/protect.html'>Bảo vệ tài sản số</a>
-    </p>
-  </section>
+    <h4 class="myheader"><a href='/kinh-nghiem/may-tinh/'>Máy-tính</a></h4>
 
-  <section>
+    <h4 class="myheader"><a href='/kinh-nghiem/chu-viet/'>Chữ-Việt</a></h4>
 
-    <h4 class="myheader">Chữ Việt</h4>
-    <p>
-      <a href='/kinh-nghiem/chu-viet/ghi-dau-thanh-1.html'>Vị trí dấu thanh</a><br>
-      <a href='/kinh-nghiem/chu-viet/unicode.html'>Unicode</a><br>
-      <a href='/kinh-nghiem/chu-viet/utf-8.html'>UTF-8</a><br>
-      <a href='/kinh-nghiem/chu-viet/web.html'>Web Việt</a>
-    </p>
-  </section>
+    <h4 class="myheader"><a href='/kinh-nghiem/linh-tinh/'>Linh tinh</a></h4>
 
-  <section>
-
-    <h4 class="myheader">Linh tinh</h4>
-    <p>
-      <a href='/kinh-nghiem/linh-tinh/bep.html'>Bếp</a><br>
-      <a href='/kinh-nghiem/linh-tinh/ac-dc.html'>Điện một chiều và điện xoay chiều</a><br>
-      <a href='/kinh-nghiem/linh-tinh/tieu-thu-dien.html'>Tiêu thụ điện</a><br>
-      <a href='/kinh-nghiem/linh-tinh/dien-standby.html'>Điện standby</a><br>
-      <a href='/kinh-nghiem/linh-tinh/magchan.html'>Dùng thử Magchan để giặt</a><br>
-      <a href='/kinh-nghiem/linh-tinh/may-lanh.html'>Máy lạnh</a><br>
-      <a href='/kinh-nghiem/linh-tinh/may-lanh-inverter.html'>Máy lạnh inverter</a><br>
-      <a href='/kinh-nghiem/linh-tinh/nong.html'>Nóng</a><br>
-      <a href='/kinh-nghiem/linh-tinh/nhiet-do.html'>Nhiệt độ một ngày</a><br>
-      <a href='/kinh-nghiem/linh-tinh/tan-so-cua-tv.html'>Tần số của TV</a><br>
-      <a href='/kinh-nghiem/linh-tinh/hong-ngoai.html'>Hồng ngoại</a><br>
-    </p>
-  </section>
-  </amp-accordion>
-</section>
-<section>
-  <h3 class="myheader">Ý kiến</h3>
-  <p>
-    <a href='/y-kien/bat-ca-hai-tay.html'>Bắt cá hai tay</a><br>
-    <a href='/y-kien/su-giau-co.html'>Nguồn gốc sự giàu có</a><br>
-    <a href='/y-kien/xa-hoi-thong-tin.html'>Xã hội thông tin</a><br>
-    <a href='/y-kien/dung-hang-viet-nam.html'>Dùng hàng Việt</a><br>
-    <a href='/y-kien/gia-tra.html'>Giả trá</a><br>
-    <a href='/y-kien/nhung-cai-nem.html'>Những cái nêm</a><br>
-    <a href='/y-kien/khac-nguoi.html'>Khác người</a><br>
-    <a href='/y-kien/da-len-bao.html'>Đã lên báo</a>
-  </p>
-</section>
-
-<section>
+  <h3 class="myheader"><a href='/y-kien/'>Ý kiến</a></h3>
 
   <h3 class="myheader">Danh mục</h3>
-  <p>
     <a href='/download/'>Download</a><br>
     <a href='/sitemap.html'>Mục lục</a>
-  </p>
-</section>
-
-<section>
   <h3 class="myheader"></h3>
-  <p>
   <br>
   <br>
   <br>
   <br>
-  </p>
-</section>
-
-
-</amp-accordion>
 
   </amp-sidebar>
 <main>
@@ -318,6 +207,28 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     </div>
   </div>
   
+  <div class="leftads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+
+  </div>
+  <div class="rightads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+
+  </div>
 
 
   <div class="body">
@@ -346,6 +257,31 @@ Nếu bạn đang trả nợ góp thì cũng dùng bảo hiểm để bảo vệ
 Tương tự như vậy, nếu bạn dự định để dành 2,5 tỉ đồng cho con du học sau 15 năm nữa, mỗi tháng bạn để dành 5 triệu đồng. Để chắc chắn có số tiền 2,5 tỉ đồng đó đúng lúc dù cho lúc đó bạn không còn bên cạnh con mình, bạn cần số tiền bảo hiểm tử vong khoảng 470 triệu đồng và bảo hiểm tai nạn hơn 500 triệu đồng với mức phí khoảng 2,1 triệu đồng / năm, khoảng 3,5% số tiền bạn tiết kiệm.<br>
 Nếu có khả năng thì mua thêm bảo hiểm bệnh nghiêm trọng để bù đắp thiệt hại còn lại sau khi được BH y tế chi trả trong trường hợp mắc những bệnh tốn nhiều tiền.<br>
 Sau khi đã chọn những thứ bảo hiểm cần có rồi, bước tiếp theo là sắp xếp độ ưu tiên để chọn mua những thứ hợp với ngân sách gia đình, nếu ngân sách cho phép thì mua hết.</p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 <p>Thử so sánh phí bảo hiểm với phí gửi xe. Để gửi một chiếc xe gắn máy trị giá 30 triệu đồng người ta tốn ít nhất 3 ngàn đồng một ngày, hơn 1 triệu đồng mỗi năm. Tính ra chi phí cả năm là 3,65% giá trị chiếc xe. Tốn phí như vậy nhưng khi chiếc xe bị mất đi, người chủ xe không đòi được đủ số tiền 30 triệu đồng một cách dễ dàng, sẽ bị bớt vì xe đã cũ… Trong khi đó, với số tiền tương đương tiền giữ xe đó người ta được bảo hiểm sinh mạng 300 triệu đồng, không bị bớt đi chút nào khi bồi thường.
 <br>Sự khác nhau giữa tỉ lệ phí trong hai trường hợp trên nằm ở chỗ xác suất để rủi ro xảy ra. Xác suất của rủi ro mất xe cao hơn rủi ro mất mạng.
@@ -354,6 +290,31 @@ Sau khi đã chọn những thứ bảo hiểm cần có rồi, bước tiếp t
 <p>Vậy mỗi ngày tôi để ra 10.000 đồng để khi tôi không còn thì các con tôi có 1 tỉ đồng ăn học. Nếu tôi vẫn mạnh khoẻ đến 20 năm sau thì tôi hạnh phúc khi biết rằng 10.000 đồng của tôi đã góp thành hàng tỉ đồng cho những gia đình không may khác. Số tiền mua bảo hiểm có hai tác dụng: bảo vệ tương lai gia đình và giúp đỡ người khác. Người mua bảo hiểm thường xuyên đóng góp cho quỹ từ thiện, không cần đợi đến đợt vận động, không cần xem báo để tìm những hoàn cảnh khó khăn.</p>
 <p><i>Tôi nghĩ rằng số tiền để dành mỗi ngày để đóng bảo hiểm giống như tiền mời bạn bè uống cafe. Một người bạn tốt hiếm có, khi gia đình tôi gặp vấn đề khó khăn như là tai nạn, bệnh tật… bạn đem đến vài trăm triệu đồng giúp ngay. Không những vậy, khi tôi về già, bạn lại đem hết số tiền cafe trong mấy chục năm đến trả cho tôi.</i></p>
 
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 <h1>Lời kết</h1>
 <p>Xin trích lời bài hát <b><a href="http://mp3.zing.vn/bai-hat/Neu-Nhu-Anh-Khong-Ve-Thanh-Thao/ZWZA7DWI.html" target='_blank'>Nếu như anh không về</a></b> để nhắc lại hình ảnh còn lại sau khi một người ra đi.</p>
@@ -379,6 +340,31 @@ Bạn có muốn để lại nỗi đau cho người thân yêu của mình khô
 Mọi ý kiến thảo luận xin ghi vào các trang: <a href="https://twitter.com/GiauCham/status/1132804613009051648" target="_blank">Twitter</a> hoặc <a href="https://www.facebook.com/lamgiauchacchan/posts/376045612561053" rel="nofollow" target="_blank">Facebook</a>
 </div>
 
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
   <hr>
 
