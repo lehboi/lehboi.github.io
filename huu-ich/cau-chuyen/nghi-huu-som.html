@@ -17,6 +17,7 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 
@@ -132,19 +133,27 @@ div.even {background-color: darkslategray}
 div.footer { font-size: 80%; color: red; text-align: center; }
 
 .flright { float:right; margin:0px 0px 0px 5px; width:45%; }
-
 @media (max-width: 399px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:10px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 400px) and (max-width: 499px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:20px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 500px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 1260px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 }
+
 
 </style>
 </head>
@@ -158,151 +167,37 @@ div.footer { font-size: 80%; color: red; text-align: center; }
                 <span></span>
                 <span></span>
             </button>
-    <amp-accordion>
-<section>
-  <h3 class="myheader">Giới-thiệu</h3>
-  <p>
-    <a href='/'>Trang-bìa</a><br>
+  <h3 class="myheader"><a href='/'>Giới-thiệu</a></h3>
     <a href='/home/about.html'>Thân-thế</a><br>
     <a href='/home/cv.html'>Thành-tích</a><br>
-  </p>
-</section>
-<section>
-  <h3 class="myheader">Hữu-ích</h3>
-  <div>
-    <amp-accordion>
-    <section>
-      <h4 class="myheader">Lập-kế-hoạch-tài-chính</h4>
-      <p>
-        <a href='/huu-ich/ke-hoach-tai-chinh/'>Giới-thiệu</a><br>
-        <a href='/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han.html'>Ghi-chép kết-quả-đầu-tư-dài-hạn</a><br>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Đầu-tư-cổ-phiếu</h4>
-      <p>
-        <a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/quy-dau-tu.html'>Quỹ-đầu-tư</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu.html'>Sổ-tiết-kiệm hay Quỹ-đầu-tư?</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/thi-truong-xuong-doc.html'>Làm gì khi thị-trường xuống-dốc?</a>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Các loại bảo-hiểm</h4>
-      <p>
-        <a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a><br>
-        <a href='/huu-ich/cac-loai-bao-hiem/phi-bao-hiem-nhan-tho.html'>Phí-bảo-hiểm-nhân-thọ</a><br>
-        <a href='/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung.html'>Bảo-hiểm-nhân-thọ-liên-kết-chung</a><br>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Câu-chuyện</h4>
-      <p>
-        <a href='/huu-ich/cau-chuyen/bat-dau-dau-tu.html'>Bắt-đầu đầu-tư</a><br>
-        <a href='/huu-ich/cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia.html'>Những quyết-định tốt cho tuổi-già</a><br>
-        <a href='/huu-ich/cau-chuyen/nghi-huu-som.html'>Về-hưu trước 40 tuổi</a><br>
-        <a href='/huu-ich/cau-chuyen/tranh-mang-no.html'>Tránh mang nợ</a><br>
-        <a href='/huu-ich/cau-chuyen/mua-nha-hay-dau-tu.html'>Để tiền mua-nhà hay đầu-tư</a><br>
-        <a href='/huu-ich/cau-chuyen/bot-lo-ve-tien.html'>6 điều giúp tôi bớt lo-lắng về tiền-bạc</a><br>
-      </p>
-    </section>
-    </amp-accordion>
-    <a href='/huu-ich/chi-tieu.html'>Chi-tiêu có kế-hoạch</a><br>
-    <a href='/huu-ich/nghi-luc.html'>Nghị-lực để có dư tiền</a><br>
-    <a href='/huu-ich/lam-phat-loi-song.html'>Lạm-phát-lối-sống</a><br>
-    <a href='/huu-ich/tich-luy.html'>Tích-luỹ-tài-sản</a><br>
-    <a href='/huu-ich/de-tien-vao-dau.html'>Để tiền vào đâu</a><br>
-    <a href='/huu-ich/cach-dau-tu.html'>Những cách đầu-tư</a><br>
-    <a href='/huu-ich/dung-so-dau-tu.html'>Đừng sợ chữ đầu-tư</a><br>
-    <a href='/huu-ich/hieu-qua-dau-tu.html'>Tính hiệu-quả-đầu-tư</a><br>
-    <a href='/huu-ich/tich-luy-dai-han.html'>So-sánh công-cụ tích-luỹ-dài-hạn</a><br>
-  </div>
-</section>
-<section>
+  <h3 class="myheader"><a href='/huu-ich/'>Hữu-ích</a></h3>
+
+      <h4 class="myheader"><a href='/huu-ich/ke-hoach-tai-chinh/'>Lập-kế-hoạch-tài-chính</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/cau-chuyen/'>Câu-chuyện</a></h4>
+
   <h3 class="myheader">Kinh-nghiệm</h3>
-  <amp-accordion>
-  <section>
-    <h4 class="myheader">Máy-tính</h4>
-    <p>
-      <a href='/kinh-nghiem/may-tinh/pi-network.html'>Tiền-mật-mã Pi</a><br>
-      <a href='/kinh-nghiem/may-tinh/gnucash.html'>GnuCash</a><br>
-      <a href='/kinh-nghiem/may-tinh/ham-tai-chinh.html'>Các phép-tính-tài-chính cần biết</a><br>
-      <a href='/kinh-nghiem/may-tinh/cloudstorage.html'>Kinh-nghiệm dùng cloud storage</a><br>
-      <a href='/kinh-nghiem/may-tinh/privcloudstor.html'>Hướng-dẫn làm cloud storage server</a><br>
-      <a href="/kinh-nghiem/may-tinh/vi-dien-tu.html">Nhận-xét các ví-điện-tử</a><br>
-      <a href='/kinh-nghiem/may-tinh/googlemaps.html'>Kinh-nghiệm dùng Google Maps ở Việt-Nam</a><br>
-      <a href='/kinh-nghiem/may-tinh/spam-call.html'>Chặn những cuộc-gọi-tiếp-thị</a><br>
-      <a href='/kinh-nghiem/may-tinh/raspberrypi.html'>RaspberryPi</a><br>
-      <a href='/kinh-nghiem/may-tinh/spam.html'>Chặn spam mail</a><br>
-      <a href='/kinh-nghiem/may-tinh/toys.html'>Home server cũ</a><br>
-      <a href='/kinh-nghiem/may-tinh/cryptocurrency.html'>Tìm-hiểu Bitcoin</a><br>
-      <a href='/kinh-nghiem/may-tinh/protect.html'>Bảo vệ tài sản số</a>
-    </p>
-  </section>
+    <h4 class="myheader"><a href='/kinh-nghiem/may-tinh/'>Máy-tính</a></h4>
 
-  <section>
+    <h4 class="myheader"><a href='/kinh-nghiem/chu-viet/'>Chữ-Việt</a></h4>
 
-    <h4 class="myheader">Chữ Việt</h4>
-    <p>
-      <a href='/kinh-nghiem/chu-viet/ghi-dau-thanh-1.html'>Vị trí dấu thanh</a><br>
-      <a href='/kinh-nghiem/chu-viet/unicode.html'>Unicode</a><br>
-      <a href='/kinh-nghiem/chu-viet/utf-8.html'>UTF-8</a><br>
-      <a href='/kinh-nghiem/chu-viet/web.html'>Web Việt</a>
-    </p>
-  </section>
+    <h4 class="myheader"><a href='/kinh-nghiem/linh-tinh/'>Linh tinh</a></h4>
 
-  <section>
-
-    <h4 class="myheader">Linh tinh</h4>
-    <p>
-      <a href='/kinh-nghiem/linh-tinh/bep.html'>Bếp</a><br>
-      <a href='/kinh-nghiem/linh-tinh/ac-dc.html'>Điện một chiều và điện xoay chiều</a><br>
-      <a href='/kinh-nghiem/linh-tinh/tieu-thu-dien.html'>Tiêu thụ điện</a><br>
-      <a href='/kinh-nghiem/linh-tinh/dien-standby.html'>Điện standby</a><br>
-      <a href='/kinh-nghiem/linh-tinh/magchan.html'>Dùng thử Magchan để giặt</a><br>
-      <a href='/kinh-nghiem/linh-tinh/may-lanh.html'>Máy lạnh</a><br>
-      <a href='/kinh-nghiem/linh-tinh/may-lanh-inverter.html'>Máy lạnh inverter</a><br>
-      <a href='/kinh-nghiem/linh-tinh/nong.html'>Nóng</a><br>
-      <a href='/kinh-nghiem/linh-tinh/nhiet-do.html'>Nhiệt độ một ngày</a><br>
-      <a href='/kinh-nghiem/linh-tinh/tan-so-cua-tv.html'>Tần số của TV</a><br>
-      <a href='/kinh-nghiem/linh-tinh/hong-ngoai.html'>Hồng ngoại</a><br>
-    </p>
-  </section>
-  </amp-accordion>
-</section>
-<section>
-  <h3 class="myheader">Ý kiến</h3>
-  <p>
-    <a href='/y-kien/bat-ca-hai-tay.html'>Bắt cá hai tay</a><br>
-    <a href='/y-kien/su-giau-co.html'>Nguồn gốc sự giàu có</a><br>
-    <a href='/y-kien/xa-hoi-thong-tin.html'>Xã hội thông tin</a><br>
-    <a href='/y-kien/dung-hang-viet-nam.html'>Dùng hàng Việt</a><br>
-    <a href='/y-kien/gia-tra.html'>Giả trá</a><br>
-    <a href='/y-kien/nhung-cai-nem.html'>Những cái nêm</a><br>
-    <a href='/y-kien/khac-nguoi.html'>Khác người</a><br>
-    <a href='/y-kien/da-len-bao.html'>Đã lên báo</a>
-  </p>
-</section>
-
-<section>
+  <h3 class="myheader"><a href='/y-kien/'>Ý kiến</a></h3>
 
   <h3 class="myheader">Danh mục</h3>
-  <p>
     <a href='/download/'>Download</a><br>
     <a href='/sitemap.html'>Mục lục</a>
-  </p>
-</section>
-
-<section>
   <h3 class="myheader"></h3>
-  <p>
   <br>
   <br>
   <br>
   <br>
-  </p>
-</section>
-</amp-accordion>
+
 
   </amp-sidebar>
 <main>
@@ -311,6 +206,29 @@ div.footer { font-size: 80%; color: red; text-align: center; }
       <button on="tap:sidebar.toggle" class="ampstart-btn caps ml1" style="font-size:90%;font-weight:bold;background-color: blue; color: white;">MENU
       </button>
     </div>
+  </div>
+
+  <div class="leftads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+
+  </div>
+  <div class="rightads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+
   </div>
 
   <div class="body">
@@ -341,6 +259,31 @@ https://www.lhboi.name.vn/huu-ich/cau-chuyen/nghi-huu-som
 <br>Khi anh dọn nhà từ Chicago sang Seattle, chuyển sang làm cho Microsoft, lương tăng lên đến 85 ngàn đô-la mỗi năm, anh ta lại lặp lại những quyết định cũ (bây giờ anh ta gọi đó là những sai lầm): mua nhà, nhà ở xa chỗ làm, không đi nghỉ. Sau ba năm, một bạn gái khuyên anh nên đi nghỉ dài ngày tới Philippines. Anh ta dành tuần đầu tiên cho công việc, xem email. Nhưng trái cây và biển nhiệt đới bắt đầu có tác dụng, đến tuần thứ ba anh ta nghĩ xem làm sao để có thể sống cuộc sống dễ chịu như vậy quanh năm.
 <br>Anh bán căn nhà đi, thuê nhà ở gần chỗ làm, đi làm bằng xe đạp. Chi tiêu giảm xuống, anh ta có thể để dành được. Trong một kỳ hội thảo ở Bắc Kinh, anh gặp người vợ tương lai của mình, Winnie, đến từ Đài Loan, đang để dành được đến 50% thu nhập để đi du lịch. Bây giờ Jeremy 40 tuổi, Winnie 36 tuổi đã tự chủ tài chính, đi du lịch quanh thế giới, viết blog về cuộc sống đáng ghen tị của họ trên <a href="http://gocurrycracker.com/" target="_blank">GoCurryCracker.com</a>.
 <br>Dưới đây là câu chuyện về cách họ để dành đủ tiền để về hưu trước 40 tuổi (khi về hưu Jeremy 38 tuổi và Winnie 33 tuổi) và cách họ tiêu tiền và dùng thời gian sau đó.</p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 <h4>Anh chị đạt đến mục tiêu về hưu sớm như thế nào?</h4>
 <p><u>Jeremy</u>: Khi tôi làm ở Motorola, mỗi xu của tôi đều dùng để trả nợ. Nếu tháng nào tôi dư 10$, tôi sẽ trả thêm 10$ vào khoản nợ tiền học. Tôi có để dành quỹ hưu trí tự nguyện <a href="/huu-ich/tich-luy-6.html">401(k)</a> nhưng tôi lại vay từ đó để mua nhà, khi tôi bán nhà để chuyển đến Seattle thì tôi trả món nợ đó.
@@ -352,6 +295,31 @@ https://www.lhboi.name.vn/huu-ich/cau-chuyen/nghi-huu-som
 <br><u>Winnie</u>: Tôi làm cùng ngành: điện thoại và máy tính, công việc cuối cùng của tôi là quản lý dự án ở Dell. Tôi kiếm được 32 ngàn đô-la ở Đài Loan.
 <br><u>Jeremy</u>: Chúng tôi cưới được 5 năm rồi, Winnie nghỉ làm và dọn đến Seattle sau khi cưới, nên khoảng 3-4 năm trước khi chúng tôi về hưu, lúc lương tôi đạt đến cao nhất thì cô ấy không đi làm.
 <br><u>Winnie</u>: Tôi là người ăn bám.</p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 <h4>Winnie, khi chị làm với Dell ở Đài Bắc, thói quen tiết kiệm của chị như thế nào?</h4>
 <p><u>Winnie</u>: Mức sống ở đó rất rẻ nếu bạn muốn tiết kiệm, cho nên tôi có thể để dành được hơn nửa thu nhập.</p>
@@ -365,6 +333,31 @@ https://www.lhboi.name.vn/huu-ich/cau-chuyen/nghi-huu-som
 <br><u>Winnie</u>: Chúng tôi đã cố nghĩ cách kiếm tiền khi đi du lịch.
 <br><u>Jeremy</u>: Sau đó, chúng tôi nói chuyện với những huấn luyện viên lặn bị sa lầy ở các nước đang phát triển vì không kiếm đủ tiền để mua vé về nước.
 <br>Chúng tôi vào thư viện và đọc những sách về đầu tư, học được quy luật 4% (khoản tiền hưu trí đủ lớn để lợi tức 4% sinh ra đủ để sống mỗi năm thì sẽ ổn trong thời gian dài), thế là chúng tôi đặt ra kế hoạch nhiều bước. Ví dụ, chúng tôi có thể thấy khi khoản đầu tư đã đủ để sống ở Philippines. Sau đó, đủ để sống ở Thái Lan. Chúng tôi thực hiện đến khi đủ để sống ở Mỹ. Khoản đó bằng 25 lần chi tiêu hàng năm của chúng tôi.</p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 <h4>Cách sống của anh chị như thế nào? Và những người khác nghĩ gì về cách sống đó?</h4>
 <p><u>Winnie</u>: Chúng tôi làm tiệc ở nhà theo kiểu góp (potluck), mỗi người đem một món đến rồi cùng ăn.
@@ -373,6 +366,31 @@ https://www.lhboi.name.vn/huu-ich/cau-chuyen/nghi-huu-som
 <br>Một người bạn của chúng tôi ở căn nhà 600 mét vuông bên bờ hồ. Căn nhà của người bạn có sân để làm tiệc thì 180 mét vuông. Bạn chúng tôi thường ở những căn nhà 180-200 mét vuông. Chúng tôi chỉ phải trả 980 đô-la thuê nhà. Thuê một căn hộ nhỏ hơn ở khu đông đúc là 1800 đô-la, thuê nguyên căn nhà sẽ tốn khoảng 2000-3000 đô-la.</p>
 <h4>Chiến lược đầu tư của anh chị là gì?</h4>
 <p><u>Jeremy</u>: Chúng tôi thay đổi hoài, phần lớn là các quỹ đầu tư theo chỉ số. Phần lớn tiền chúng tôi cho vào quỹ Vanguard Total Stock Market Index Fund và Vanguard Total International Stock Index Fund. Tôi đọc những tài liệu online về về hưu sớm, những lời khuyên của Jack Bogle và Warren Buffett về đầu tư chỉ số thụ động. Phân chia tài sản theo cách hiện đại: một phần nhỏ vào trái phiếu, một phần nhỏ vào các công ty đầu tư bất động sản, phần còn lại chia vào hai quỹ trên. Vì chúng tôi muốn có cuộc sống hưu hơn 60 năm, chúng tôi đầu tư phần lớn vào cổ phiếu để có lợi nhuận cao trong dài hạn.</p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 <h4>Khi khủng hoảng tài chính, kế hoạch của anh chị bị ảnh hưởng thế nào?</h4>
 <p><u>Jeremy</u>: Trên giấy tờ thì chúng tôi lỗ mất 400 ngàn đô-la, nhưng tôi buồn là lúc đó không có nhiều tiền để mua thêm. Lúc đó tôi thấy cổ phiếu như là bán đổ bán tháo, và tôi muốn mua thêm. Lúc đó tôi vét hết tiền để mua, tôi còn nghĩ có nên vay tiền để mua không. Hai năm sau, chúng tôi giàu hơn nhiều so với lúc đầu. Bạn đừng sợ hãi bán hết cổ phiếu ở đáy để rút ra khỏi thị trường thì thị trường không ảnh hưởng đến bạn nhiều. Thậm chí, chúng ta còn mạnh hơn nữa. Có thể khủng hoảng có ảnh hưởng đến quyết định làm việc lâu hơn vài năm, một phần là dự án lúc đó cũng hay, một phần là tôi muốn vượt qua lúc thị trường xấu và tiết kiệm nhiều hơn.</p>
@@ -381,6 +399,31 @@ https://www.lhboi.name.vn/huu-ich/cau-chuyen/nghi-huu-som
 <h4>Anh chị có cần chuyển đến những nước ít tốn kém hơn để đủ sống?</h4>
 <p><u>Winnie</u>: Ở Seattle chúng tôi cũng chỉ tiêu 40 ngàn mỗi năm.
 <br><u>Jeremy</u>: Chúng tôi tiêu ít hơn 3 ngàn mỗi tháng khi ở Mexico. Chúng tôi ở trong căn nhà 3 phòng ngủ ở trung tâm San Miguel de Allende. Chúng tôi suýt mua một căn nhà ở đó. Chúng tôi ăn tiệm hai-ba lần mỗi ngày, đi uống với bạn bè, thuê người làm vườn và dọn nhà, tất cả chỉ hết 2500 đô-la. Nếu sống như vậy ở Mỹ thì sẽ tốn hơn nhiều, nên chúng tôi phải thay đổi, không ra ngoài uống nữa. Không nên trả 15$ để uống một ly rượu, bạn có thể uống trong sân nhà. Nếu sống như vậy ở Manhattan thì còn tốn hơn nữa.</p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 <h4>Bây giờ anh chị có một thu nhập nào không?</h4>
 <p>Năm ngoái, thu được từ trang blog 2000 đô-la. Đó là tiền quảng cáo, đủ để trả tiền thuê server. Ngoài ra, tất cả thu nhập của chúng tôi chỉ từ cổ tức và lãi. Chúng tôi sống hoàn toàn từ các khoản đó. Tôi quản lý thuế rất kỹ cho các tài sản đó, nhờ vậy năm 2013 và 2014, không phải trả đồng thuế nào mà mỗi năm còn chuyển 20 ngàn đô-la sang tài khoản hưu Roth IRA để được miễn thuế. Tôi đã đưa các báo cáo thuế lên blog để mọi người thấy thực tế như thế nào. Kế hoạch của chúng tôi là trong 30 năm tới sẽ chuyển hết tiền từ tài khoản hưu 401(k) sang tài khoản hưu Roth IRA để không chịu thuế, tóm lại là chúng tôi sẽ có 3 triệu đô-la trong 30 năm tới mà không phải đóng thuế.
@@ -397,6 +440,31 @@ https://www.lhboi.name.vn/huu-ich/cau-chuyen/nghi-huu-som
 <br><u>Jeremy</u>: Sau đó chúng tôi về Mỹ, cắm trại và dã ngoại phía Tây Washington và Oregon, rồi lại đi Mexico. Rồi chúng tôi bàn về chuyện có con, đi Đài Loan để thụ tinh nhân tạo vì ở đó rẻ bằng 20-30% so với ở Mỹ. Dự định là thụ tinh xong rồi thì đi du lịch tiếp và sẽ sinh con ở châu Âu, nhưng vì Winnie động thai nên phải nghỉ ngơi một thời gian, nên chúng tôi cẩn thận hơn cho đến khi sinh con xong. Chúng tôi không định ở đây luôn.
 <br><u>Winnie</u>: Kế hoạch của chúng tôi thay đổi rất nhanh.
 <br><u>Jeremy</u>: Chúng tôi nghĩ ra nhiều kế hoạch. Đến Tây-ban-nha ở một năm, dùng nhà di động RV đi vòng quanh nước Mỹ, hay Mexico. Chúng tôi phải đợi việc sinh con và xem tính cách của con mình ra sao đã.</p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 <h4>Bài học từ câu chuyện:</h4>
 <ol><li>Hai vợ chồng có một mục đích rõ ràng và mọi quyết định đều hướng tới mục đích đó. Mục đích là về hưu sớm để đi du lịch nên quyết định không mua nhà, không ở nhà lớn hơn nhu cầu, chọn nơi ở thuận tiện để không cần xe hơi, đỡ tốn tiền xăng và để xe.<br />
