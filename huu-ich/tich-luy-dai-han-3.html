@@ -16,7 +16,7 @@
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 
@@ -132,19 +132,27 @@ div.even {background-color: darkslategray}
 div.footer { font-size: 80%; color: red; text-align: center; }
 
 .flright { float:right; margin:0px 0px 0px 5px; width:45%; }
-
 @media (max-width: 399px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:10px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 400px) and (max-width: 499px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:20px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 500px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 1260px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 }
+
 
 </style>
 </head>
@@ -158,151 +166,37 @@ div.footer { font-size: 80%; color: red; text-align: center; }
                 <span></span>
                 <span></span>
             </button>
-    <amp-accordion>
-<section>
-  <h3 class="myheader">Giới-thiệu</h3>
-  <p>
-    <a href='/'>Trang-bìa</a><br>
+  <h3 class="myheader"><a href='/'>Giới-thiệu</a></h3>
     <a href='/home/about.html'>Thân-thế</a><br>
     <a href='/home/cv.html'>Thành-tích</a><br>
-  </p>
-</section>
-<section>
-  <h3 class="myheader">Hữu-ích</h3>
-  <div>
-    <amp-accordion>
-    <section>
-      <h4 class="myheader">Lập-kế-hoạch-tài-chính</h4>
-      <p>
-        <a href='/huu-ich/ke-hoach-tai-chinh/'>Giới-thiệu</a><br>
-        <a href='/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han.html'>Ghi-chép kết-quả-đầu-tư-dài-hạn</a><br>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Đầu-tư-cổ-phiếu</h4>
-      <p>
-        <a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/quy-dau-tu.html'>Quỹ-đầu-tư</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu.html'>Sổ-tiết-kiệm hay Quỹ-đầu-tư?</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/thi-truong-xuong-doc.html'>Làm gì khi thị-trường xuống-dốc?</a>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Các loại bảo-hiểm</h4>
-      <p>
-        <a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a><br>
-        <a href='/huu-ich/cac-loai-bao-hiem/phi-bao-hiem-nhan-tho.html'>Phí-bảo-hiểm-nhân-thọ</a><br>
-        <a href='/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung.html'>Bảo-hiểm-nhân-thọ-liên-kết-chung</a><br>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Câu-chuyện</h4>
-      <p>
-        <a href='/huu-ich/cau-chuyen/bat-dau-dau-tu.html'>Bắt-đầu đầu-tư</a><br>
-        <a href='/huu-ich/cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia.html'>Những quyết-định tốt cho tuổi-già</a><br>
-        <a href='/huu-ich/cau-chuyen/nghi-huu-som.html'>Về-hưu trước 40 tuổi</a><br>
-        <a href='/huu-ich/cau-chuyen/tranh-mang-no.html'>Tránh mang nợ</a><br>
-        <a href='/huu-ich/cau-chuyen/mua-nha-hay-dau-tu.html'>Để tiền mua-nhà hay đầu-tư</a><br>
-        <a href='/huu-ich/cau-chuyen/bot-lo-ve-tien.html'>6 điều giúp tôi bớt lo-lắng về tiền-bạc</a><br>
-      </p>
-    </section>
-    </amp-accordion>
-    <a href='/huu-ich/chi-tieu.html'>Chi-tiêu có kế-hoạch</a><br>
-    <a href='/huu-ich/nghi-luc.html'>Nghị-lực để có dư tiền</a><br>
-    <a href='/huu-ich/lam-phat-loi-song.html'>Lạm-phát-lối-sống</a><br>
-    <a href='/huu-ich/tich-luy.html'>Tích-luỹ-tài-sản</a><br>
-    <a href='/huu-ich/de-tien-vao-dau.html'>Để tiền vào đâu</a><br>
-    <a href='/huu-ich/cach-dau-tu.html'>Những cách đầu-tư</a><br>
-    <a href='/huu-ich/dung-so-dau-tu.html'>Đừng sợ chữ đầu-tư</a><br>
-    <a href='/huu-ich/hieu-qua-dau-tu.html'>Tính hiệu-quả-đầu-tư</a><br>
-    <a href='/huu-ich/tich-luy-dai-han.html'>So-sánh công-cụ tích-luỹ-dài-hạn</a><br>
-  </div>
-</section>
-<section>
+  <h3 class="myheader"><a href='/huu-ich/'>Hữu-ích</a></h3>
+
+      <h4 class="myheader"><a href='/huu-ich/ke-hoach-tai-chinh/'>Lập-kế-hoạch-tài-chính</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/cau-chuyen/'>Câu-chuyện</a></h4>
+
   <h3 class="myheader">Kinh-nghiệm</h3>
-  <amp-accordion>
-  <section>
-    <h4 class="myheader">Máy-tính</h4>
-    <p>
-      <a href='/kinh-nghiem/may-tinh/pi-network.html'>Tiền-mật-mã Pi</a><br>
-      <a href='/kinh-nghiem/may-tinh/gnucash.html'>GnuCash</a><br>
-      <a href='/kinh-nghiem/may-tinh/ham-tai-chinh.html'>Các phép-tính-tài-chính cần biết</a><br>
-      <a href='/kinh-nghiem/may-tinh/cloudstorage.html'>Kinh-nghiệm dùng cloud storage</a><br>
-      <a href='/kinh-nghiem/may-tinh/privcloudstor.html'>Hướng-dẫn làm cloud storage server</a><br>
-      <a href="/kinh-nghiem/may-tinh/vi-dien-tu.html">Nhận-xét các ví-điện-tử</a><br>
-      <a href='/kinh-nghiem/may-tinh/googlemaps.html'>Kinh-nghiệm dùng Google Maps ở Việt-Nam</a><br>
-      <a href='/kinh-nghiem/may-tinh/spam-call.html'>Chặn những cuộc-gọi-tiếp-thị</a><br>
-      <a href='/kinh-nghiem/may-tinh/raspberrypi.html'>RaspberryPi</a><br>
-      <a href='/kinh-nghiem/may-tinh/spam.html'>Chặn spam mail</a><br>
-      <a href='/kinh-nghiem/may-tinh/toys.html'>Home server cũ</a><br>
-      <a href='/kinh-nghiem/may-tinh/cryptocurrency.html'>Tìm-hiểu Bitcoin</a><br>
-      <a href='/kinh-nghiem/may-tinh/protect.html'>Bảo vệ tài sản số</a>
-    </p>
-  </section>
+    <h4 class="myheader"><a href='/kinh-nghiem/may-tinh/'>Máy-tính</a></h4>
 
-  <section>
+    <h4 class="myheader"><a href='/kinh-nghiem/chu-viet/'>Chữ-Việt</a></h4>
 
-    <h4 class="myheader">Chữ Việt</h4>
-    <p>
-      <a href='/kinh-nghiem/chu-viet/ghi-dau-thanh-1.html'>Vị trí dấu thanh</a><br>
-      <a href='/kinh-nghiem/chu-viet/unicode.html'>Unicode</a><br>
-      <a href='/kinh-nghiem/chu-viet/utf-8.html'>UTF-8</a><br>
-      <a href='/kinh-nghiem/chu-viet/web.html'>Web Việt</a>
-    </p>
-  </section>
+    <h4 class="myheader"><a href='/kinh-nghiem/linh-tinh/'>Linh tinh</a></h4>
 
-  <section>
-
-    <h4 class="myheader">Linh tinh</h4>
-    <p>
-      <a href='/kinh-nghiem/linh-tinh/bep.html'>Bếp</a><br>
-      <a href='/kinh-nghiem/linh-tinh/ac-dc.html'>Điện một chiều và điện xoay chiều</a><br>
-      <a href='/kinh-nghiem/linh-tinh/tieu-thu-dien.html'>Tiêu thụ điện</a><br>
-      <a href='/kinh-nghiem/linh-tinh/dien-standby.html'>Điện standby</a><br>
-      <a href='/kinh-nghiem/linh-tinh/magchan.html'>Dùng thử Magchan để giặt</a><br>
-      <a href='/kinh-nghiem/linh-tinh/may-lanh.html'>Máy lạnh</a><br>
-      <a href='/kinh-nghiem/linh-tinh/may-lanh-inverter.html'>Máy lạnh inverter</a><br>
-      <a href='/kinh-nghiem/linh-tinh/nong.html'>Nóng</a><br>
-      <a href='/kinh-nghiem/linh-tinh/nhiet-do.html'>Nhiệt độ một ngày</a><br>
-      <a href='/kinh-nghiem/linh-tinh/tan-so-cua-tv.html'>Tần số của TV</a><br>
-      <a href='/kinh-nghiem/linh-tinh/hong-ngoai.html'>Hồng ngoại</a><br>
-    </p>
-  </section>
-  </amp-accordion>
-</section>
-<section>
-  <h3 class="myheader">Ý kiến</h3>
-  <p>
-    <a href='/y-kien/bat-ca-hai-tay.html'>Bắt cá hai tay</a><br>
-    <a href='/y-kien/su-giau-co.html'>Nguồn gốc sự giàu có</a><br>
-    <a href='/y-kien/xa-hoi-thong-tin.html'>Xã hội thông tin</a><br>
-    <a href='/y-kien/dung-hang-viet-nam.html'>Dùng hàng Việt</a><br>
-    <a href='/y-kien/gia-tra.html'>Giả trá</a><br>
-    <a href='/y-kien/nhung-cai-nem.html'>Những cái nêm</a><br>
-    <a href='/y-kien/khac-nguoi.html'>Khác người</a><br>
-    <a href='/y-kien/da-len-bao.html'>Đã lên báo</a>
-  </p>
-</section>
-
-<section>
+  <h3 class="myheader"><a href='/y-kien/'>Ý kiến</a></h3>
 
   <h3 class="myheader">Danh mục</h3>
-  <p>
     <a href='/download/'>Download</a><br>
     <a href='/sitemap.html'>Mục lục</a>
-  </p>
-</section>
-
-<section>
   <h3 class="myheader"></h3>
-  <p>
   <br>
   <br>
   <br>
   <br>
-  </p>
-</section>
-</amp-accordion>
+
 
   </amp-sidebar>
 <main>
@@ -312,6 +206,30 @@ div.footer { font-size: 80%; color: red; text-align: center; }
       </button>
     </div>
   </div>
+
+  <div class="leftads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+
+  </div>
+  <div class="rightads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+
+  </div>
+
 
 <div class="body">
   <div class="title">So sánh công cụ tích luỹ dài hạn (3)</div>
@@ -337,6 +255,31 @@ https://www.lhboi.name.vn/huu-ich/tich-luy-dai-han
   <p>Ngoài cách hùn vốn như trên, cũng còn một cách giữ tiền khác, đó là đất. Tài nguyên đất thì có hạn trong khi nhu cầu của con người cứ tăng mãi cho nên giá của đất tăng không ngừng. Tuy nhiên không phải ai cũng có thể mua đất để làm của để dành được, nhất là những người mới bắt đầu để dành tiền. Và mua đất cũng không đơn giản như hùn vốn vào quỹ đầu tư, cho nên hãy bắt đầu bằng sổ tiết kiệm, quỹ đầu tư rồi tiếp theo là đất, hoặc là đầu tư vào các quỹ đầu tư chuyên về bất động sản.</p>
   <h3>Ngoại tệ</h3>
   <p>Cũng có người tin tưởng vào sức mạnh của đô-la Mỹ nên quyết định tích luỹ dài hạn bằng đô-la Mỹ. Nếu giữ đô-la Mỹ trong tủ thì còn dở hơn giữ vàng vì đô-la Mỹ thật sự có mất giá theo thời gian. Nếu gửi tiết kiệm bằng đô-la Mỹ thì dở hơn gửi tiết kiệm bằng tiền Việt Nam vì ngân hàng nhà nước có chính sách bảo vệ tiền Việt Nam. Tóm lại đô-la Mỹ cũng giống như vàng, chỉ thích hợp để đầu cơ chứ không thích hợp để giữ lâu dài. Ngay cả dân Mỹ cũng không gửi nhiều tiền trong các tài khoản tiết kiệm thì dân Việt Nam càng không nên (theo <a href="http://www.statisticbrain.com/american-family-financial-statistics/" target='_blank'>American Family Financial Statistics</a> trung bình số dư tài khoản tiết kiệm của dân Mỹ chỉ vào khoảng một tháng lương).</p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
   <h2>An toàn</h2>
   <p>Trên đây là phần bàn về khả năng chống trượt giá của các công cụ trong mục đích tích luỹ dài hạn. Chúng ta tiếp tục bàn về tính an toàn hay là rủi ro mất trắng hoặc lỗ nặng của các công cụ. Chúng ta không bàn về những nguy cơ lỗ nhẹ do biến động nhất thời như giá vàng giảm, giá cổ phiếu giảm… vì những biến động đó được bù trừ trong dài hạn.<br>
@@ -352,6 +295,31 @@ https://www.lhboi.name.vn/huu-ich/tich-luy-dai-han
     <li>thay đổi chính sách</li>
     <li>phá sản</li>
   </ol>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
   <h2>Thanh khoản</h2>
   <p>Bàn về tính thanh khoản hay là khả năng chuyển đổi tài sản tích luỹ thành tiền đúng lúc và đúng số lượng cần thiết thì ta có thể xếp theo thứ tự từ cao đến thấp như sau:</p>
@@ -368,6 +336,31 @@ https://www.lhboi.name.vn/huu-ich/tich-luy-dai-han
   <div class="center">sang trang <a href="tich-luy-dai-han.html">1</a> - <a href="tich-luy-dai-han-2.html">2</a> - 3</div>
 
   <div class="todiscuss">Mọi ý kiến thảo luận xin ghi vào các trang: <a href="https://twitter.com/GiauCham/status/1132940074973188096" target="_blank">Twitter</a> hoặc <a href="https://www.facebook.com/lamgiauchacchan/posts/376057329226548" rel="nofollow" target="_blank">Facebook</a></div>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
   <hr>
 
