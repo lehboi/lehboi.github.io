@@ -134,17 +134,26 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 
 .flright { float:right; margin:0px 0px 0px 5px; width:45%; }
 @media (max-width: 399px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:10px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 400px) and (max-width: 499px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:20px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 500px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 1260px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 }
+
 
 </style>
 </head>
@@ -158,151 +167,37 @@ div.footer { font-size: 80%; color: red; text-align: center; }
                 <span></span>
                 <span></span>
             </button>
-    <amp-accordion>
-<section>
-  <h3 class="myheader">Giới-thiệu</h3>
-  <p>
-    <a href='/'>Trang-bìa</a><br>
+  <h3 class="myheader"><a href='/'>Giới-thiệu</a></h3>
     <a href='/home/about.html'>Thân-thế</a><br>
     <a href='/home/cv.html'>Thành-tích</a><br>
-  </p>
-</section>
-<section>
-  <h3 class="myheader">Hữu-ích</h3>
-  <div>
-    <amp-accordion>
-    <section>
-      <h4 class="myheader">Lập-kế-hoạch-tài-chính</h4>
-      <p>
-        <a href='/huu-ich/ke-hoach-tai-chinh/'>Giới-thiệu</a><br>
-        <a href='/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han.html'>Ghi-chép kết-quả-đầu-tư-dài-hạn</a><br>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Đầu-tư-cổ-phiếu</h4>
-      <p>
-        <a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/quy-dau-tu.html'>Quỹ-đầu-tư</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu.html'>Sổ-tiết-kiệm hay Quỹ-đầu-tư?</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/thi-truong-xuong-doc.html'>Làm gì khi thị-trường xuống-dốc?</a>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Các loại bảo-hiểm</h4>
-      <p>
-        <a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a><br>
-        <a href='/huu-ich/cac-loai-bao-hiem/phi-bao-hiem-nhan-tho.html'>Phí-bảo-hiểm-nhân-thọ</a><br>
-        <a href='/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung.html'>Bảo-hiểm-nhân-thọ-liên-kết-chung</a><br>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Câu-chuyện</h4>
-      <p>
-        <a href='/huu-ich/cau-chuyen/bat-dau-dau-tu.html'>Bắt-đầu đầu-tư</a><br>
-        <a href='/huu-ich/cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia.html'>Những quyết-định tốt cho tuổi-già</a><br>
-        <a href='/huu-ich/cau-chuyen/nghi-huu-som.html'>Về-hưu trước 40 tuổi</a><br>
-        <a href='/huu-ich/cau-chuyen/tranh-mang-no.html'>Tránh mang nợ</a><br>
-        <a href='/huu-ich/cau-chuyen/mua-nha-hay-dau-tu.html'>Để tiền mua-nhà hay đầu-tư</a><br>
-        <a href='/huu-ich/cau-chuyen/bot-lo-ve-tien.html'>6 điều giúp tôi bớt lo-lắng về tiền-bạc</a><br>
-      </p>
-    </section>
-    </amp-accordion>
-    <a href='/huu-ich/chi-tieu.html'>Chi-tiêu có kế-hoạch</a><br>
-    <a href='/huu-ich/nghi-luc.html'>Nghị-lực để có dư tiền</a><br>
-    <a href='/huu-ich/lam-phat-loi-song.html'>Lạm-phát-lối-sống</a><br>
-    <a href='/huu-ich/tich-luy.html'>Tích-luỹ-tài-sản</a><br>
-    <a href='/huu-ich/de-tien-vao-dau.html'>Để tiền vào đâu</a><br>
-    <a href='/huu-ich/cach-dau-tu.html'>Những cách đầu-tư</a><br>
-    <a href='/huu-ich/dung-so-dau-tu.html'>Đừng sợ chữ đầu-tư</a><br>
-    <a href='/huu-ich/hieu-qua-dau-tu.html'>Tính hiệu-quả-đầu-tư</a><br>
-    <a href='/huu-ich/tich-luy-dai-han.html'>So-sánh công-cụ tích-luỹ-dài-hạn</a><br>
-  </div>
-</section>
-<section>
+  <h3 class="myheader"><a href='/huu-ich/'>Hữu-ích</a></h3>
+
+      <h4 class="myheader"><a href='/huu-ich/ke-hoach-tai-chinh/'>Lập-kế-hoạch-tài-chính</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/cau-chuyen/'>Câu-chuyện</a></h4>
+
   <h3 class="myheader">Kinh-nghiệm</h3>
-  <amp-accordion>
-  <section>
-    <h4 class="myheader">Máy-tính</h4>
-    <p>
-      <a href='/kinh-nghiem/may-tinh/pi-network.html'>Tiền-mật-mã Pi</a><br>
-      <a href='/kinh-nghiem/may-tinh/gnucash.html'>GnuCash</a><br>
-      <a href='/kinh-nghiem/may-tinh/ham-tai-chinh.html'>Các phép-tính-tài-chính cần biết</a><br>
-      <a href='/kinh-nghiem/may-tinh/cloudstorage.html'>Kinh-nghiệm dùng cloud storage</a><br>
-      <a href='/kinh-nghiem/may-tinh/privcloudstor.html'>Hướng-dẫn làm cloud storage server</a><br>
-      <a href="/kinh-nghiem/may-tinh/vi-dien-tu.html">Nhận-xét các ví-điện-tử</a><br>
-      <a href='/kinh-nghiem/may-tinh/googlemaps.html'>Kinh-nghiệm dùng Google Maps ở Việt-Nam</a><br>
-      <a href='/kinh-nghiem/may-tinh/spam-call.html'>Chặn những cuộc-gọi-tiếp-thị</a><br>
-      <a href='/kinh-nghiem/may-tinh/raspberrypi.html'>RaspberryPi</a><br>
-      <a href='/kinh-nghiem/may-tinh/spam.html'>Chặn spam mail</a><br>
-      <a href='/kinh-nghiem/may-tinh/toys.html'>Home server cũ</a><br>
-      <a href='/kinh-nghiem/may-tinh/cryptocurrency.html'>Tìm-hiểu Bitcoin</a><br>
-      <a href='/kinh-nghiem/may-tinh/protect.html'>Bảo vệ tài sản số</a>
-    </p>
-  </section>
+    <h4 class="myheader"><a href='/kinh-nghiem/may-tinh/'>Máy-tính</a></h4>
 
-  <section>
+    <h4 class="myheader"><a href='/kinh-nghiem/chu-viet/'>Chữ-Việt</a></h4>
 
-    <h4 class="myheader">Chữ Việt</h4>
-    <p>
-      <a href='/kinh-nghiem/chu-viet/ghi-dau-thanh-1.html'>Vị trí dấu thanh</a><br>
-      <a href='/kinh-nghiem/chu-viet/unicode.html'>Unicode</a><br>
-      <a href='/kinh-nghiem/chu-viet/utf-8.html'>UTF-8</a><br>
-      <a href='/kinh-nghiem/chu-viet/web.html'>Web Việt</a>
-    </p>
-  </section>
+    <h4 class="myheader"><a href='/kinh-nghiem/linh-tinh/'>Linh tinh</a></h4>
 
-  <section>
-
-    <h4 class="myheader">Linh tinh</h4>
-    <p>
-      <a href='/kinh-nghiem/linh-tinh/bep.html'>Bếp</a><br>
-      <a href='/kinh-nghiem/linh-tinh/ac-dc.html'>Điện một chiều và điện xoay chiều</a><br>
-      <a href='/kinh-nghiem/linh-tinh/tieu-thu-dien.html'>Tiêu thụ điện</a><br>
-      <a href='/kinh-nghiem/linh-tinh/dien-standby.html'>Điện standby</a><br>
-      <a href='/kinh-nghiem/linh-tinh/magchan.html'>Dùng thử Magchan để giặt</a><br>
-      <a href='/kinh-nghiem/linh-tinh/may-lanh.html'>Máy lạnh</a><br>
-      <a href='/kinh-nghiem/linh-tinh/may-lanh-inverter.html'>Máy lạnh inverter</a><br>
-      <a href='/kinh-nghiem/linh-tinh/nong.html'>Nóng</a><br>
-      <a href='/kinh-nghiem/linh-tinh/nhiet-do.html'>Nhiệt độ một ngày</a><br>
-      <a href='/kinh-nghiem/linh-tinh/tan-so-cua-tv.html'>Tần số của TV</a><br>
-      <a href='/kinh-nghiem/linh-tinh/hong-ngoai.html'>Hồng ngoại</a><br>
-    </p>
-  </section>
-  </amp-accordion>
-</section>
-<section>
-  <h3 class="myheader">Ý kiến</h3>
-  <p>
-    <a href='/y-kien/bat-ca-hai-tay.html'>Bắt cá hai tay</a><br>
-    <a href='/y-kien/su-giau-co.html'>Nguồn gốc sự giàu có</a><br>
-    <a href='/y-kien/xa-hoi-thong-tin.html'>Xã hội thông tin</a><br>
-    <a href='/y-kien/dung-hang-viet-nam.html'>Dùng hàng Việt</a><br>
-    <a href='/y-kien/gia-tra.html'>Giả trá</a><br>
-    <a href='/y-kien/nhung-cai-nem.html'>Những cái nêm</a><br>
-    <a href='/y-kien/khac-nguoi.html'>Khác người</a><br>
-    <a href='/y-kien/da-len-bao.html'>Đã lên báo</a>
-  </p>
-</section>
-
-<section>
+  <h3 class="myheader"><a href='/y-kien/'>Ý kiến</a></h3>
 
   <h3 class="myheader">Danh mục</h3>
-  <p>
     <a href='/download/'>Download</a><br>
     <a href='/sitemap.html'>Mục lục</a>
-  </p>
-</section>
-
-<section>
   <h3 class="myheader"></h3>
-  <p>
   <br>
   <br>
   <br>
   <br>
-  </p>
-</section>
-</amp-accordion>
+
 
   </amp-sidebar>
 <main>
@@ -311,6 +206,29 @@ div.footer { font-size: 80%; color: red; text-align: center; }
       <button on="tap:sidebar.toggle" class="ampstart-btn caps ml1" style="font-size:90%;font-weight:bold;background-color: blue; color: white;">MENU
       </button>
     </div>
+  </div>
+
+  <div class="leftads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+
+  </div>
+  <div class="rightads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+
   </div>
 
   <div class="body">
@@ -339,6 +257,31 @@ Dịch từ bài <a href="http://www.getrichslowly.org/blog/2014/12/10/how-to-ta
 <p>Điều quan sát được rõ ràng nhất trong bài viết gần đây liên quan đến việc <a href="http://www.getrichslowly.org/blog/2014/12/04/what-is-your-investment-strategy/" target='_blank'>điều tra về cách mọi người đầu tư</a> là trên 70% số người tham gia điều tra mà chưa trải qua một cuộc suy thoái thì không đầu tư một chút nào hết. Cuộc khảo sát đã không ghi lại độ tuổi của người trả lời, nhưng cũng khá chắc để kết luận rằng những người chưa trải qua một cuộc suy thoái ở độ tuổi vào giữa hai mươi và ba mươi.</p>
 <p>Tại sao nhóm người này không đầu tư? Một số lý do đã được nêu ra trong các ý kiến và các bài viết khác về hiện tượng này. Một số người có thể cảm thấy họ không có đủ tiền để đầu tư, trong khi những người khác có thể sợ đầu tư. Nhưng bất kể lý do gì, dạy về đầu tư có thể giúp giải quyết một số những mối lo và hy vọng đưa nhiều người bắt đầu con đường đầu tư của họ - và điều này đặc biệt quan trọng với những người trẻ bởi vì họ được lợi nhiều nhất.</p>
 <p>Vậy họ cần phải học những gì?</p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 <h2>Bạn PHẢI đầu tư</h2>
 <p>Hãy nhìn bất cứ người nào trên 60 hoặc 70 xung quanh bạn. Họ sống thế nào? Rất có thể bạn sẽ nhìn thấy hoặc biết một số người sống chật vật, và những người khác đang sống tốt. Sự khác biệt giữa họ là gì? Câu trả lời khá chắc là, sự khác biệt giữa những người sống tốt và những người chật vật là một nhóm có đầu tư và nhóm kia thì không. Bạn muốn có tương lai nào trong hai tương lai trên? Chỉ có một cách để có được tương lai tốt là: Bạn phải đầu tư.</p>
@@ -348,6 +291,31 @@ Dịch từ bài <a href="http://www.getrichslowly.org/blog/2014/12/10/how-to-ta
 Màu cam là số tiền bỏ vào, màu xanh dương là số tiền thu được.</div>
 <p>Ví dụ nếu bạn trì hoãn việc đầu tư năm năm, bạn tưởng rằng bạn sẽ bị giảm đi 9300$, tức là giá trị của khoản đầu tư của mình sau năm năm đầu tiên. Nhưng bạn đã lầm, rất sai lầm. Năm năm bạn bỏ lỡ không phải là năm năm đầu, mà là năm năm cuối. Nói cách khác, bạn sẽ bị giảm đi 21.000$, đó là hiệu số giữa giá trị 60.000$ sau 20 năm và giá trị 39.000$ sau 15 năm. Đó là hơn 50% giá trị của khoản đầu tư của mình sau 15 năm.</p>
 <p>Điều đó được gọi là sức mạnh của lãi kép - và đó là một điều tuyệt vời, nhưng nó cần thời gian để làm việc kỳ diệu của nó. Để có được đầy đủ giá trị của sự kỳ diệu, bạn phải bắt đầu sớm.</p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 <p>Bạn lấy tiền từ đâu để đầu tư, đặc biệt là nếu bạn vẫn đang còn trẻ, thu nhập chưa cao? Tiền đầu tư phải đến từ việc chi tiêu ít hơn bạn kiếm được. Đó không phải là một câu trả lời bình thường, mà đó là câu trả lời duy nhất. Lựa chọn siết thắt lưng của bạn ngay bây giờ thì tốt hơn để đến khi bạn không có một sự lựa chọn sau này.</p>
 <h3>Làm thế nào để bạn bắt đầu?</h3>
@@ -357,6 +325,31 @@ Màu cam là số tiền bỏ vào, màu xanh dương là số tiền thu đư�
 <li>Nếu bạn không được bên sử dụng lao động thưởng, hãy xem xét mở một <b>IRA</b> (tài khoản hưu trí cá nhân có ưu đãi thuế). Hầu hết các công ty môi giới trực tuyến cung cấp việc mở tài khoản này miễn phí, nhưng bạn phải đóng vào một số tiền ban đầu đầu nho nhỏ. Nếu bên sử dụng lao động của bạn chuyển tiền lương  trực tuyến cho bạn, họ thường sẽ trả trực tiếp số tiền bạn chỉ định vào IRA của bạn - đó là một cách để trả tiền cho mình trước.</li>
 <li>Một điều ít người nói, nhưng mà cuối cùng là một trong những điều tốt nhất tôi và vợ tôi đã làm, đơn giản là mở ra một tài khoản tiết kiệm và cho tất cả các khoản tiền bất ngờ chúng tôi nhận được vào đó. Tất cả mọi người mà tôi đã nói chuyện xác nhân điều này, và bạn sẽ ngạc nhiên trước số tiền bất ngờ bạn tích luỹ được. Trong tuần này, chúng tôi đã nhận được một giảm giá 21$ từ công ty bảo hiểm của chúng tôi vì một số thay đổi chúng tôi chọn trên hợp đồng của chúng tôi. Trong quá khứ, khoản đó đã được tiêu hết ngay không cần suy nghĩ; nhưng kể từ khi chúng tôi mở tài khoản tiết kiệm đặc biệt đó, tất cả các khoản như vậy tự động đi vào tài khoản đó. Vào cuối mỗi năm, khoản "tiền thưởng" đó được đưa vào một trong các tài khoản hưu IRA của chúng tôi. Qua thời gian, những vụn bánh mì nhỏ đó dồn lại đến số lượng đáng ngạc nhiên. Chúng tôi cũng quan sát thấy một hiện tượng buồn cười: Một khi bạn bắt đầu tìm kiếm vụn bánh mì, thì nó càng xuất hiện nhiều. Bạn thấy nhiều cơ hội ghi những món tiền thưởng nhỏ khi bạn luôn luôn tìm chúng.</li>
 </ul>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 <h3>Theo đúng lộ trình</h3>
 <p>Mọi nhà đầu tư thành công đều sẽ cho bạn biết một điều: đầu tư thành công là việc nhàm chán. Thành công đến từ sự kiên nhẫn, siêng năng và kiên trì hơn bất cứ thứ gì khác. Đặc biệt và năng nổ thường làm tăng chi phí cho bạn hơn là tăng tích luỹ cho bạn. Ngay cả Warren Buffett nổi tiếng thừa nhận rằng bí quyết thành công của ông là ông làm chủ "nghệ thuật không làm gì", cụm từ của ông nói về những việc đơn giản và kiên nhẫn. Tóm lại, để cho lãi kép làm công việc của mình bằng cách cho nó thời gian và đừng can thiệp đến nó.</p>
@@ -369,6 +362,31 @@ Màu cam là số tiền bỏ vào, màu xanh dương là số tiền thu đư�
 <p>Bạn có ngạc nhiên khi biết rằng người dân ở các nước giàu cũng phải <a href="../tich-luy-6.html">tự để dành tiền cho tuổi già</a>?
 <p><a href="../dau-tu-co-phieu/quy-dau-tu.html">Quỹ đầu tư</a> đã có mặt ở Việt Nam từ năm 2004. Quỹ đầu tư dạng mở có mặt ở Việt Nam từ năm 2008. Quỹ đầu tư dạng mở rất tiện cho người dân để dành tiền.</p>
 <p>Kế hoạch hưu trí tự nguyện đã có ở Việt Nam từ năm 2013 nhưng có ít doanh nghiệp <a href="https://lhboi.name.vn/huu-ich/tien-thuong-cuoi-nam">thưởng cho nhân viên</a> theo cách này. Khi người chủ không giúp bạn thì bạn phải tự trả tiền cho mình trước.</p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 <p>Để biết được cần phải <b>trả tiền cho mình trước</b> bao nhiêu cho đủ thì hãy dùng bảng tính <a href="../ke-hoach-tai-chinh/">KHTC</a> để tính. KHTC có tính đến yếu tố thu nhập tăng dần nên sẽ tính ra mức trả tiền cho mình tăng dần, khi lương thấp thì trả cho mình thấp sau đó tăng dần lên.</p>
 <div class="todiscuss">
