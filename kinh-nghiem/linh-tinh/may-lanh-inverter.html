@@ -17,8 +17,8 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 
 <!--
   Import the `amp-sidebar` component.
@@ -132,19 +132,27 @@ div.even {background-color: darkslategray}
 div.footer { font-size: 80%; color: red; text-align: center; }
 
 .flright { float:right; margin:0px 0px 0px 5px; width:45%; }
-
 @media (max-width: 399px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:10px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 400px) and (max-width: 499px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:20px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 500px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 }
 @media (min-width: 1260px) {
-  .mbutton { display:inline;float:right;padding-top:7px;padding-left:40px; }
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 }
+
 
 </style>
 </head>
@@ -158,151 +166,30 @@ div.footer { font-size: 80%; color: red; text-align: center; }
                 <span></span>
                 <span></span>
             </button>
-    <amp-accordion>
-<section>
-  <h3 class="myheader">Giới-thiệu</h3>
-  <p>
-    <a href='/'>Trang-bìa</a><br>
+  <h3 class="myheader"><a href='/'>Giới-thiệu</a></h3>
     <a href='/home/about.html'>Thân-thế</a><br>
     <a href='/home/cv.html'>Thành-tích</a><br>
-  </p>
-</section>
-<section>
-  <h3 class="myheader">Hữu-ích</h3>
-  <div>
-    <amp-accordion>
-    <section>
-      <h4 class="myheader">Lập-kế-hoạch-tài-chính</h4>
-      <p>
-        <a href='/huu-ich/ke-hoach-tai-chinh/'>Giới-thiệu</a><br>
-        <a href='/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han.html'>Ghi-chép kết-quả-đầu-tư-dài-hạn</a><br>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Đầu-tư-cổ-phiếu</h4>
-      <p>
-        <a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/quy-dau-tu.html'>Quỹ-đầu-tư</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu.html'>Sổ-tiết-kiệm hay Quỹ-đầu-tư?</a><br>
-        <a href='/huu-ich/dau-tu-co-phieu/thi-truong-xuong-doc.html'>Làm gì khi thị-trường xuống-dốc?</a>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Các loại bảo-hiểm</h4>
-      <p>
-        <a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a><br>
-        <a href='/huu-ich/cac-loai-bao-hiem/phi-bao-hiem-nhan-tho.html'>Phí-bảo-hiểm-nhân-thọ</a><br>
-        <a href='/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung.html'>Bảo-hiểm-nhân-thọ-liên-kết-chung</a><br>
-      </p>
-    </section>
-    <section>
-      <h4 class="myheader">Câu-chuyện</h4>
-      <p>
-        <a href='/huu-ich/cau-chuyen/bat-dau-dau-tu.html'>Bắt-đầu đầu-tư</a><br>
-        <a href='/huu-ich/cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia.html'>Những quyết-định tốt cho tuổi-già</a><br>
-        <a href='/huu-ich/cau-chuyen/nghi-huu-som.html'>Về-hưu trước 40 tuổi</a><br>
-        <a href='/huu-ich/cau-chuyen/tranh-mang-no.html'>Tránh mang nợ</a><br>
-        <a href='/huu-ich/cau-chuyen/mua-nha-hay-dau-tu.html'>Để tiền mua-nhà hay đầu-tư</a><br>
-        <a href='/huu-ich/cau-chuyen/bot-lo-ve-tien.html'>6 điều giúp tôi bớt lo-lắng về tiền-bạc</a><br>
-      </p>
-    </section>
-    </amp-accordion>
-    <a href='/huu-ich/chi-tieu.html'>Chi-tiêu có kế-hoạch</a><br>
-    <a href='/huu-ich/nghi-luc.html'>Nghị-lực để có dư tiền</a><br>
-    <a href='/huu-ich/lam-phat-loi-song.html'>Lạm-phát-lối-sống</a><br>
-    <a href='/huu-ich/tich-luy.html'>Tích-luỹ-tài-sản</a><br>
-    <a href='/huu-ich/de-tien-vao-dau.html'>Để tiền vào đâu</a><br>
-    <a href='/huu-ich/cach-dau-tu.html'>Những cách đầu-tư</a><br>
-    <a href='/huu-ich/dung-so-dau-tu.html'>Đừng sợ chữ đầu-tư</a><br>
-    <a href='/huu-ich/hieu-qua-dau-tu.html'>Tính hiệu-quả-đầu-tư</a><br>
-    <a href='/huu-ich/tich-luy-dai-han.html'>So-sánh công-cụ tích-luỹ-dài-hạn</a><br>
-  </div>
-</section>
-<section>
+  <h3 class="myheader"><a href='/huu-ich/'>Hữu-ích</a></h3>
+      <h4 class="myheader"><a href='/huu-ich/ke-hoach-tai-chinh/'>Lập-kế-hoạch-tài-chính</a></h4>
+      <h4 class="myheader"><a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a></h4>
+      <h4 class="myheader"><a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a></h4>
+      <h4 class="myheader"><a href='/huu-ich/cau-chuyen/'>Câu-chuyện</a></h4>
+
   <h3 class="myheader">Kinh-nghiệm</h3>
-  <amp-accordion>
-  <section>
-    <h4 class="myheader">Máy-tính</h4>
-    <p>
-      <a href='/kinh-nghiem/may-tinh/pi-network.html'>Tiền-mật-mã Pi</a><br>
-      <a href='/kinh-nghiem/may-tinh/gnucash.html'>GnuCash</a><br>
-      <a href='/kinh-nghiem/may-tinh/ham-tai-chinh.html'>Các phép-tính-tài-chính cần biết</a><br>
-      <a href='/kinh-nghiem/may-tinh/cloudstorage.html'>Kinh-nghiệm dùng cloud storage</a><br>
-      <a href='/kinh-nghiem/may-tinh/privcloudstor.html'>Hướng-dẫn làm cloud storage server</a><br>
-      <a href="/kinh-nghiem/may-tinh/vi-dien-tu.html">Nhận-xét các ví-điện-tử</a><br>
-      <a href='/kinh-nghiem/may-tinh/googlemaps.html'>Kinh-nghiệm dùng Google Maps ở Việt-Nam</a><br>
-      <a href='/kinh-nghiem/may-tinh/spam-call.html'>Chặn những cuộc-gọi-tiếp-thị</a><br>
-      <a href='/kinh-nghiem/may-tinh/raspberrypi.html'>RaspberryPi</a><br>
-      <a href='/kinh-nghiem/may-tinh/spam.html'>Chặn spam mail</a><br>
-      <a href='/kinh-nghiem/may-tinh/toys.html'>Home server cũ</a><br>
-      <a href='/kinh-nghiem/may-tinh/cryptocurrency.html'>Tìm-hiểu Bitcoin</a><br>
-      <a href='/kinh-nghiem/may-tinh/protect.html'>Bảo vệ tài sản số</a>
-    </p>
-  </section>
+    <h4 class="myheader"><a href='/kinh-nghiem/may-tinh/'>Máy-tính</a></h4>
+    <h4 class="myheader"><a href='/kinh-nghiem/chu-viet/'>Chữ-Việt</a></h4>
+    <h4 class="myheader"><a href='/kinh-nghiem/linh-tinh/'>Linh tinh</a></h4>
 
-  <section>
-
-    <h4 class="myheader">Chữ Việt</h4>
-    <p>
-      <a href='/kinh-nghiem/chu-viet/ghi-dau-thanh-1.html'>Vị trí dấu thanh</a><br>
-      <a href='/kinh-nghiem/chu-viet/unicode.html'>Unicode</a><br>
-      <a href='/kinh-nghiem/chu-viet/utf-8.html'>UTF-8</a><br>
-      <a href='/kinh-nghiem/chu-viet/web.html'>Web Việt</a>
-    </p>
-  </section>
-
-  <section>
-
-    <h4 class="myheader">Linh tinh</h4>
-    <p>
-      <a href='/kinh-nghiem/linh-tinh/bep.html'>Bếp</a><br>
-      <a href='/kinh-nghiem/linh-tinh/ac-dc.html'>Điện một chiều và điện xoay chiều</a><br>
-      <a href='/kinh-nghiem/linh-tinh/tieu-thu-dien.html'>Tiêu thụ điện</a><br>
-      <a href='/kinh-nghiem/linh-tinh/dien-standby.html'>Điện standby</a><br>
-      <a href='/kinh-nghiem/linh-tinh/magchan.html'>Dùng thử Magchan để giặt</a><br>
-      <a href='/kinh-nghiem/linh-tinh/may-lanh.html'>Máy lạnh</a><br>
-      <a href='/kinh-nghiem/linh-tinh/may-lanh-inverter.html'>Máy lạnh inverter</a><br>
-      <a href='/kinh-nghiem/linh-tinh/nong.html'>Nóng</a><br>
-      <a href='/kinh-nghiem/linh-tinh/nhiet-do.html'>Nhiệt độ một ngày</a><br>
-      <a href='/kinh-nghiem/linh-tinh/tan-so-cua-tv.html'>Tần số của TV</a><br>
-      <a href='/kinh-nghiem/linh-tinh/hong-ngoai.html'>Hồng ngoại</a><br>
-    </p>
-  </section>
-  </amp-accordion>
-</section>
-<section>
-  <h3 class="myheader">Ý kiến</h3>
-  <p>
-    <a href='/y-kien/bat-ca-hai-tay.html'>Bắt cá hai tay</a><br>
-    <a href='/y-kien/su-giau-co.html'>Nguồn gốc sự giàu có</a><br>
-    <a href='/y-kien/xa-hoi-thong-tin.html'>Xã hội thông tin</a><br>
-    <a href='/y-kien/dung-hang-viet-nam.html'>Dùng hàng Việt</a><br>
-    <a href='/y-kien/gia-tra.html'>Giả trá</a><br>
-    <a href='/y-kien/nhung-cai-nem.html'>Những cái nêm</a><br>
-    <a href='/y-kien/khac-nguoi.html'>Khác người</a><br>
-    <a href='/y-kien/da-len-bao.html'>Đã lên báo</a>
-  </p>
-</section>
-
-<section>
-
+  <h3 class="myheader"><a href='/y-kien/'>Ý kiến</a></h3>
   <h3 class="myheader">Danh mục</h3>
-  <p>
     <a href='/download/'>Download</a><br>
     <a href='/sitemap.html'>Mục lục</a>
-  </p>
-</section>
-
-<section>
   <h3 class="myheader"></h3>
-  <p>
   <br>
   <br>
   <br>
   <br>
-  </p>
-</section>
-</amp-accordion>
+
 
   </amp-sidebar>
 <main>
@@ -311,6 +198,27 @@ div.footer { font-size: 80%; color: red; text-align: center; }
       <button on="tap:sidebar.toggle" class="ampstart-btn caps ml1" style="font-size:90%;font-weight:bold;background-color: blue; color: white;">MENU
       </button>
     </div>
+  </div>
+
+  <div class="leftads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+  </div>
+  <div class="rightads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
   </div>
 
   <div class="body">
@@ -337,6 +245,31 @@ https://www.lhboi.name.vn/kinh-nghiem/linh-tinh/may-lanh-inverter
 <p>Các hãng sản xuất vẫn quảng cáo là máy lạnh inverter <a href="/huu-ich/chi-tieu.html">tiết kiệm</a> đến vài chục % tiền điện so với máy lạnh thường.</p>
 <p>Trong mỗi máy lạnh (loại 1 cục hay 2 cục, loại inverter hay loại thường đều như nhau) có 4 cái động cơ chính là động cơ nén, quạt làm mát dàn nóng, quạt đối lưu trong phòng và động cơ đảo hướng gió. Quạt đối lưu trong phòng thì quay không ngừng trong suốt thời gian dùng máy lạnh, theo tốc độ mà người dùng máy chọn (hoặc khi nhanh khi chậm trong chế độ auto). Động cơ đảo hướng gió thì ngừng hay chạy tùy theo người dùng chọn. Động cơ nén và quạt làm mát dàn nóng thì chạy hay nghỉ cùng lúc. Động cơ nén của máy lạnh loại thường sẽ chạy theo kiểu đóng/mở, tức là chạy ở công suất tối đa hoặc không chạy.</p>
 <p>Trong 4 động cơ đó, động cơ nén dùng nhiều điện nhất. Việc tiết kiệm điện tập trung vào chỗ này.</p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
 <p>Inverter là gì?</p>
 Động cơ điện xoay chiều bình thường sẽ có tốc độ gần như không đổi, công suất gần như không đổi. Tốc độ của động cơ tỉ lệ với tần số điện xoay chiều (ở Việt Nam là 50Hz). Tốc độ có thay đổi chút ít theo tải của động cơ, tức là lực cản trên trục động cơ, tải nặng thì tốc độ giảm. Quạt máy có thể thay đổi tốc độ đôi chút bằng cách thay đổi cường độ dòng điện, cũng là thay đổi công suất của động cơ.<br>
@@ -357,6 +290,31 @@ https://www.lhboi.name.vn/kinh-nghiem/linh-tinh/may-lanh-inverter
 <p>Như vậy sự khác nhau giữa 2 loại máy lạnh là thời gian chạy và công suất chạy. Máy lạnh thường thì có công suất không đổi nhưng thời gian chạy thì không liên tục. Máy lạnh inverter thì thay đổi công suất nhưng thời gian chạy thì liên tục.</p>
 <p>Theo wiki thì mạch điện inverter chỉ giúp tiết kiệm điện khi máy lạnh inverter chạy dưới công suất tối đa và máy lạnh inverter tiết kiệm điện hơn loại máy thường do nó dùng loại bơm nhiệt với chất làm lạnh R410A có áp suất hoá lỏng và hiệu suất cao hơn loại R22 trong máy lạnh thường. Như vậy nếu dùng máy lạnh inverter trong tình trạng thiếu công suất thì không tiết kiệm nhiều. Ví dụ <a href="nong.html">nhiệt lượng truyền vào phòng</a> trong buổi trưa gần 3kW mà gắn máy lạnh inverter 9000Btu/h thì không tiết kiệm được nhiều điện so với máy lạnh thường.</p>
 <p>Xem thêm trang <a href="https://en.wikipedia.org/wiki/Inverter_(air_conditioning)" target="_blank">wikipedia</a> và trang web về <a href="nong.html">nóng</a> và <a href="/huu-ich/ke-hoach-tai-chinh/">tiết kiệm</a>.</p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
 
   <hr>
 
