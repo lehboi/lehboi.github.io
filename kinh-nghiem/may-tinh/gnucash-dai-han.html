@@ -1,0 +1,373 @@
+<!doctype html>
+<html amp lang="vi">
+<head>
+<title>GnuCash dài hạn (Trang web LHBội)</title>
+<meta name="description" content="Dùng GnuCash ghi chép những tài sản dài hạn" />
+<meta name="keywords" content="hữu ích, tài chính, cá nhân">
+<link rel="canonical" href="https://lehboi.github.io/kinh-nghiem/may-tinh/gnucash-dai-han">
+<link rel="alternate" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/gnucash-dai-han">
+
+<!-- in head of html file -->
+<meta charset='utf-8'>
+
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+
+<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+<script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+
+<!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
+<style amp-custom>
+html {
+  font-size: 17px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(17px + 7 * ((100vmin - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+amp-sidebar {
+  width: 240px;
+  padding-right: 2px;
+  background: darkblue;
+  color: blue;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+.close-sidebar{width: 30px;height: 30px;position: relative;cursor: pointer;background-color: transparent;border: none;}
+.close-sidebar:focus{outline: 2px auto #f06060;}
+.close-sidebar span{position: absolute;left: 0;width: 30px;height: 2px;border-right: 5px;background-color: #004d00;}
+.close-sidebar span:nth-child(1){transform: rotate(45deg);}
+.close-sidebar span:nth-child(2){transform: rotate(-45deg);}
+
+div.mwidth {max-width:1004px;margin: auto;}
+
+body {background-color:dimgray;}
+div.body {max-width:1004px;margin: auto; padding-left:8px; padding-right:8px; text-align:justify;color:white;background-color:black;font-family:sans-serif}
+div.title {text-align:center;font-size:160%;font-weight:bold;color:#ffe033;font-family:serif}
+div.right {text-align:right;}
+div.lrsp {margin: 0px 5px 0px 5px;}
+.todiscuss {color:lightskyblue;}
+div.center {text-align:center;}
+div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
+h1 {color:#c2ff66;font-family:serif}
+h2 {color:#adff33;font-family:serif}
+h3 {color:#a3ff1a;font-family:serif}
+h4 {color:#8ae600;font-family:serif}
+a {color:#ffd700;}
+a:visited {color:#e6c300;}
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
+
+table.noborder {
+  border-collapse: collapse;
+  width: 100%;
+  border: 0px;
+  text-align: left;
+  padding: 4px;
+}
+
+.myheader {
+    background-color:darkblue; 
+}
+
+th, td {
+  text-align: left;
+  padding: 2px;
+  vertical-align: top;
+}
+tr:nth-child(even){background-color: darkslategray}
+table.withborder {
+  width: 100%;
+  border: 2px;
+  border-color: #111111;
+  text-align: left;
+  padding: 4px;
+}
+.fbold { font-weight:bold; }
+.tmark {background-color:navy;}
+
+div.even {background-color: darkslategray}
+.red {color:red;}
+.tblue {color:deepskyblue;}
+div.footer { font-size: 80%; color: red; text-align: center; }
+
+@media (max-width: 399px) {
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
+
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
+}
+@media (min-width: 400px) and (max-width: 499px) {
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
+
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
+}
+@media (min-width: 500px) {
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
+}
+@media (min-width: 1260px) {
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
+  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
+
+}
+
+</style>
+</head>
+
+<body>
+  <!-- top of body -->
+  <!-- sidebar menu -->
+  <amp-sidebar id="sidebar" layout="nodisplay" side="left">
+            <button on="tap:sidebar.close" class="close-sidebar">
+                <span></span>
+                <span></span>
+            </button>
+  <h3 class="myheader"><a href='/'>Giới-thiệu</a></h3>
+    <a href='/home/about'>Thân-thế</a><br>
+    <a href='/home/cv'>Thành-tích</a><br>
+  <h3 class="myheader"><a href='/huu-ich/'>Hữu-ích</a></h3>
+
+      <h4 class="myheader"><a href='/huu-ich/ke-hoach-tai-chinh/'>Lập-kế-hoạch-tài-chính</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/cau-chuyen/'>Câu-chuyện</a></h4>
+
+  <h3 class="myheader">Kinh-nghiệm</h3>
+    <h4 class="myheader"><a href='/kinh-nghiem/may-tinh/'>Máy-tính</a></h4>
+
+    <h4 class="myheader"><a href='/kinh-nghiem/chu-viet/'>Chữ-Việt</a></h4>
+
+    <h4 class="myheader"><a href='/kinh-nghiem/linh-tinh/'>Linh tinh</a></h4>
+
+  <h3 class="myheader"><a href='/y-kien/'>Ý kiến</a></h3>
+
+  <h3 class="myheader">Danh mục</h3>
+    <a href='/download/'>Download</a><br>
+    <a href='/sitemap'>Mục lục</a>
+  <h3 class="myheader"></h3>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  </amp-sidebar>
+<main>
+  <div class="mwidth">
+    <div class="mbutton">
+      <button on="tap:sidebar.toggle" class="ampstart-btn caps ml1" style="font-size:90%;font-weight:bold;background-color: blue; color: white;">MENU
+      </button>
+    </div>
+  </div>
+  
+  <div class="leftads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+
+  </div>
+  <div class="rightads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+
+  </div>
+  
+  <div class="body">
+    <div class="right">Website LHBoi.name.vn đang được chuyển đến địa chỉ mới LeHBoi.github.io.
+    </div>
+  </div>
+
+
+  <div class="body">
+    <div class="title">GnuCash dài hạn</div>
+
+  <div>
+    <amp-social-share type="email" height="32"></amp-social-share>
+    <amp-social-share type="whatsapp" height="32"></amp-social-share>
+    <amp-social-share type="linkedin" height="32"></amp-social-share>
+    <amp-social-share type="twitter" height="32"></amp-social-share>
+    <amp-social-share type="tumblr" height="32"></amp-social-share>
+    <amp-social-share type="line" height="32"></amp-social-share>
+    <amp-social-share type="facebook" height="32" data-param-app_id="1879212745697311"></amp-social-share>
+    <amp-facebook-like height=32 width=90
+      layout="fixed"
+      data-layout="button_count"
+      data-href=
+https://lehboi.github.io/kinh-nghiem/may-tinh/gnucash-dai-han
+    >
+    </amp-facebook-like>
+  </div>
+
+<p><b>Nội dung dưới đây không còn thích hợp, mời bạn xem trang <a href="../../huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han">Đầu tư dài hạn</a></b>.
+<hr>
+<p>Theo cách ghi sổ kế toán thông thường thì sổ ghi bằng GnuCash cũng nên được kết sổ định kỳ mỗi năm, ví dụ như kết sổ vào ngày 31 Tháng Mười Hai mỗi năm. Kết sổ tức là mở một file GnuCash mới với danh sách tài khoản giống như năm trước, các tài khoản trong nhóm Tài sản sở hữu và nhóm Khoản phải trả sẽ có số dư mở sổ bằng đúng số dư cuối cùng của năm trước, các tài khoản thuộc nhóm Thu nhập và nhóm Chi tiêu đều rỗng.</p>
+<p>Về mặt kỹ thuật thì việc kết sổ năm cũ, mở sổ năm mới giúp cho số liệu trong file GnuCash không quá dài, dễ xử lý hơn. Bạn thử tưởng tượng xem nếu giữ một file GnuCash suốt đời, từ năm 18 tuổi đến năm 81 tuổi thì mỗi lần mở sổ ra khó thế nào.
+<br>Tuy nhiên việc kết sổ hàng năm làm cho khó theo dõi các kế hoạch tích luỹ dài hạn. <a href="/huu-ich/tich-luy">Tích luỹ dài hạn</a> là đều đặn mỗi tháng cất tiền vào một chỗ để nó sinh lời đến khi cần dùng sau 10-15-30-40 năm.
+<br>Để theo dõi các kế hoạch tích luỹ dài hạn, tôi dùng một file GnuCash riêng, không kết sổ hàng năm. Đây là kinh nghiệm của tôi sau gần 20 năm dùng GnuCash.</p>
+<p>Nói một cách ngắn gọn là mỗi gia đình dùng ít nhất hai file GnuCash:</p>
+<ol><li>File ghi chép thu nhập và chi tiêu hàng ngày trong một năm. Cách ghi đã được hướng dẫn trong <a href="bat-dau-gnucash">trang web này</a>.</li>
+<li>File ghi chép các kế hoạch tích luỹ dài hạn. File mẫu tên là Dautu.gnucash, được download từ <a href="/download/" target="_blank">đây</a>. Việc tích luỹ phải gắn với đầu tư sinh lợi, dù là cách <a href="/huu-ich/dung-so-dau-tu" target="_blank">đầu tư đơn giản nhất</a> như là gửi tiết kiệm ở ngân hàng, do đó tên phai được đặt là Dautu. Đừng tích luỹ mà <a href="/huu-ich/tich-luy-dai-han" target="_blank">không sinh lợi</a>.</li>
+</ol>
+<p>Phần dưới đây là hướng dẫn cách ghi chép khi tích luỹ.</p>
+<h3>1. Các nhóm tài khoản trong Dautu.gnucash</h3>
+<p>Sổ ghi chép việc đầu tư dài hạn gồm có 5 nhóm tài khoản:</p>
+<ol><li>Nhóm <b>Tài sản sở hữu</b> gồm các loại tài sản tích luỹ dài hạn như các hợp đồng bảo hiểm nhân thọ, các tài khoản quỹ đầu tư trái phiếu, các tài khoản quỹ đầu tư cổ phiếu, các tài khoản giao dịch chứng khoán, các căn nhà, lô đất.<br />
+Tôi không ghi các sổ tiết kiệm vào file này vì tôi không dùng sổ tiết kiệm từ mấy năm nay rồi. Tôi dùng quỹ đầu tư trái phiếu thay cho các sổ tiết kiệm, nó hay hơn sổ tiết kiệm ở chỗ không có kỳ hạn, muốn rút lúc nào cũng được, chưa rút thì nó tiếp tục sinh lời.</li>
+<li>Nhóm tài khoản ghi nhận số tiền <b>Đã rút ra</b> từ các khoản tích luỹ, đó là các khoản tiền nhận được từ các hợp đồng bảo hiểm nhân thọ (phiếu tiền mặt, bảo tức…), cổ tức, bán cổ phiếu, bán đơn vị quỹ đầu tư… Giới đầu tư tài chính chuyên nghiệp thường gọi những khoản tiền này là khoản đã hiện thực hoá (realized)</li>
+<li>Nhóm tài khoản ghi nhận từng món tiền <b>Đưa vào</b> tích luỹ. Ứng với các loại tài sản ở nhóm 1, trong nhóm này có các tài khoản ghi nhận tiền được đưa vào để đóng bảo hiểm nhân thọ, mua cổ phiếu, mua đơn vị quỹ đầu tư.</li>
+<li>Nhóm tài khoản ghi nhận các <b>Chi phí</b> liên quan đến việc tích luỹ, đó là các chi phí trong hợp đồng bảo hiểm nhân thọ.<br />
+Khi mua và bán cổ phiếu, người đầu tư cũng tốn phí giao dịch; khi bán cổ phiếu hoặc nhận cổ tức người đầu tư còn phải đóng thuế thu nhập cá nhân. Khi mua và bán đơn vị quỹ đầu tư, người đầu tư cũng tốn phí; khi bán đơn vị quỹ, người đầu tư cũng phải đóng thuế thu nhập cá nhân. Tuy nhiên để dễ làm báo cáo về hiệu quả đầu tư thì tôi không ghi riêng các khoản chi phí này mà tính luôn vào giá mua, giá bán, hoặc cổ tức nhận được.</li>
+<li>Nhóm tài khoản ghi nhận <b>Lợi nhuận</b> từ tài sản đầu tư như là cổ tức, tiền cho thuê nhà… với mục đích chỉ để ghi sổ và xem báo cáo.</li>
+</ol>
+<p>Sau khi download file mẫu Dautu.gnucash từ <a href="/download/" target="_blank">đây</a> về, bạn tạo thêm các tài khoản con trong các nhóm tài khoản tương ứng với các khoản tích luỹ của gia đình.</p>
+<h3>2. Cách ghi mỗi loại giao dịch</h3>
+<p>Mọi giao dịch từ khi <i>bắt đầu tích luỹ</i> đều cần được ghi vào file này. Ghi đầy đủ và chính xác thì các báo cáo càng chính xác. Nếu bạn đang có những khoản tích luỹ trước khi bắt đầu dùng GnuCash thì hãy cố gắng ghi lại từ ngày đầu, nếu không thể ghi đầy đủ các giao dịch đã qua thì đành chấp nhập báo cáo cho khoản đầu tư đó không chính xác tuyệt đối.
+<br>Bên cạnh file Dautu.gnucash này, bạn còn có file ghi chép thu chi hàng ngày trong năm ví dụ giadinh2015.gnucash. Hai file này có liên hệ với nhau:</p>
+<ul><li>Mỗi khoản tiền đưa vào tích luỹ ghi trong file Dautu.gnucash đều phải được ghi như một chi phí trong file giadinh20xx.gnucash</li>
+<li>Mỗi khoản tiền rút ra từ các khoản tích luỹ trong file Dautu.gnucash đều được ghi như một thu nhập trong file giadinh20xx.gnucash</li></ul>
+<h4>2.1. Đóng phí bảo hiểm nhân thọ</h4>
+<p>Mỗi giao dịch đóng phí bảo hiểm nhân thọ thường được ghi làm hai lần:
+<ol><li>Khi đóng tiền thì ghi ngay giao dịch chuyển toàn bộ số tiền đã đóng từ tài khoản <i>Đưa vào:Bảo hiểm</i> sang tài khoản <i>Chi phí:Bảo hiểm</i>.</li>
+<li>Khi nhận được thông báo hàng năm về kết quả của từng hợp đồng bảo hiểm, ghi tăng tài sản bảo hiểm và ghi giảm chi phí bảo hiểm, ví dụ tăng <i>Tài sản sở hữu:Bảo hiểm nhân thọ:Manulife:Cho tuổi thần tiên con đầu</i> và giảm <i>Chi phí:Bảo hiểm</i>, số tiền ghi sổ là khoản chênh lệch giữa kết quả năm nay so với kết quả năm trước.</li>
+<li>Với loại bảo hiểm nhân thọ kiểu <a href="/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung" target="_blank">liên kết chung</a>, thông báo kết quả hợp đồng hàng năm giống như một bản sao kê tài khoản ngân hàng: gồm có số dư đầu kỳ, các giao dịch tăng do đóng thêm tiền, do lãi nhập gốc hàng tháng, các giao dịch giảm do trích phí hàng tháng hoặc rút tiền, số dư cuối kỳ. Chú ý rằng tuỳ theo tổng số tiền tăng lớn hơn hay tổng số tiền giảm lớn hơn, số dư cuối kỳ có thể lớn hơn hoặc nhỏ hơn số dư đầu kỳ.</li>
+<li>Với loại bảo hiểm nhân thọ kiểu truyền thống, thông báo kết quả hợp đồng sẽ ghi các thông tin: <i>giá trị tiền mặt</i> của hợp đồng tại ngày thông báo, bảo tức (hay tiền lời) tích luỹ đến ngày thông báo, phiếu tiền mặt và lãi tích luỹ đến ngày thông báo. Tổng các số tiền trên là giá trị mới của hợp đồng bảo hiểm, lấy tổng đó trừ cho giá trị năm ngoái để ghi tăng tài sản bảo hiểm và ghi giảm chi phí bảo hiểm. Hiệu số đó thường là số dương, nó có thể âm nếu trong năm qua có nhận tiền mặt (bảo tức, phiếu tiền mặt) từ hợp đồng. Cũng có công ty không thông báo giá trị tiền mặt hàng năm vì số đó đã được tính trước cho suốt thời hạn hợp đồng và ghi vào trang hợp đồng, bạn có thể mở bộ hợp đồng ra để đọc số ứng với năm hiện tại.</li>
+<li>Với loại bảo hiểm nhân thọ liên kết quỹ đầu tư thì chúng ta ghi theo kiểu quỹ đầu tư, không ghi kiểu bảo hiểm nhân thọ.</li>
+</ol>
+<h4>2.2. Nhận tiền mặt từ hợp đồng bảo hiểm nhân thọ</h4>
+<p>Một số hợp đồng bảo hiểm nhân thọ cho phép rút một phần tiền khi chưa đáo hạn. Hợp đồng thuộc kiểu truyền thống cho phép rút bảo tức, phiếu tiền mặt. Hợp đồng thuộc kiểu liên kết chung cho phép rút tiền từ tài khoản.
+<br>Khi rút tiền từ hợp đồng bảo hiểm nhân thọ, ta ghi giao dịch chuyển tiền từ tài khoản tài sản bảo hiểm sang tài khoản đã rút ra, ví dụ giảm <i>Tài sản sở hữu:Bảo hiểm nhân thọ:Manulife:Cho tuổi thần tiên con đầu</i> và tăng tài khoản <i>Đã rút ra:Bảo hiểm nhân thọ</i>.</p>
+<h4>2.3. Mua cổ phiếu</h4>
+<p>Khi mua cổ phiếu trên thị trường chứng khoán, tài khoản tiền của ta ở ngân hàng hoặc ở công ty chứng khoán sẽ giảm một lượng bằng giá giao dịch nhân với số cổ phiếu và giảm thêm một lượng tỉ lệ với số tiền giao dịch gọi là phí giao dịch.
+<br>Chúng ta mở tài khoản <i>Tài sản sở hữu:Đầu tư:Cổ phiếu:Tên cổ phiếu</i>, thêm một dòng mới, ghi số cổ phiếu mới mua vào cột Cổ phiếu và ghi tổng số tiền bị trừ trong tài khoản vào cột Bên nợ, Gnucash sẽ tính ra giá mua gồm cả phí, chọn tài khoản <i>Đưa vào:Đầu tư:Cổ phiếu</i> trong dòng đối ứng và số tiền trong cột Bên có bằng số tiền bị trừ trong tài khoản.</p>
+<h4>2.4. Bán cổ phiếu</h4>
+<p>Khi bán cổ phiếu trên thị trường chứng khoán, tài khoản tiền của ta ở ngân hàng hoặc ở công ty chứng khoán sẽ tăng một lượng bằng giá giao dịch nhân với số cổ phiếu và giảm một lượng tỉ lệ với số tiền giao dịch gồm phí giao dịch và thuế thu nhập cá nhân.
+<br>Chúng ta mở tài khoản <i>Tài sản sở hữu:Đầu tư:Cổ phiếu:Tên cổ phiếu</i>, thêm một dòng mới, ghi số cổ phiếu mới bán với dấu trừ vào cột Cổ phiếu và ghi tổng số tiền nhận được trong tài khoản (đã trừ phí và thuế) vào cột Bên có, Gnucash sẽ tính ra giá bán gồm cả phí và thuế, chọn tài khoản <i>Đã rút ra:Cổ phiếu:Tên cổ phiếu</i> trong dòng đối ứng và số tiền trong cột Bên nợ bằng số tiền bị trừ trong tài khoản.</p>
+<h4>2.5. Nhận cổ tức</h4>
+<p>Khi nhận cổ tức, tài khoản tiền của ta ở ngân hàng hoặc ở công ty chứng khoán sẽ tăng một lượng bằng cổ tức nhân với số cổ phiếu và giảm 5% thuế thu nhập cá nhân.
+<br>Chúng ta mở tài khoản <i>Đã rút ra:Cổ phiếu:Tên cổ phiếu,</i> thêm một dòng mới, ghi số tiền thực nhận vào cột Bên nợ, chọn tài khoản đối ứng là <i>Lợi nhuận:Cổ tức</i> và ghi số tiền thực nhận vào cột Bên có.</p>
+<h4>2.6. Mua đơn vị quỹ đầu tư</h4>
+<p>Cách ghi khi mua đơn vị quỹ đầu tư gần giống như khi mua cổ phiếu, chỉ hơi khác là:</p>
+<ul><li>nhà đầu tư đặt lệnh mua với số tiền đã biết và chỉ biết số đơn vị quỹ mua được sau khi công ty quản lý quỹ xử lý phiên giao dịch</li>
+<li>số đơn vị quỹ mua được là số lẻ đến 1/100 hay 1/10000 đơn vị</li></ul>
+<p>Khi ghi thì chọn tên tài khoản quỹ đầu tư thay vì chọn tên cổ phiếu, và tài khoản <i>Đưa vào:Đầu tư:Quỹ đầu tư</i>.</p>
+<h4>2.7. Bán đơn vị quỹ đầu tư</h4>
+<p>Cũng tương tự như bán cổ phiếu.</p>
+<h4>2.8. Ghi chi phí trong hợp đồng bảo hiểm nhân thọ liên kết quỹ đầu tư</h4>
+<p>Ngoài giao dịch mua/bán đơn vị quỹ, tài khoản đơn vị quỹ trong hợp đồng BHNT liên kết quỹ đầu tư còn bị giảm số đơn vị quỹ hàng tháng để trả phí bảo hiểm rủi ro và phí quản lý hợp đồng.
+<br>Mỗi năm công ty bảo hiểm gửi một báo cáo về hợp đồng, trong đó có ghi rõ số đơn vị quỹ giảm mỗi tháng. Chúng ta ghi giảm vào tài khoản <i>Tài sản sở hữu:Đầu tư:Cổ phiếu:Tên quỹ</i> như bán đơn vị quỹ nhưng tài khoản đối ứng không phải là <i>Đã rút ra:</i> mà là <i>Chi phí:Bảo hiểm</i>.</p>
+<h4>2.9. Mua bất động sản</h4>
+<p>Khi mua một bất động sản mới, tạo một tài khoản con dưới <i>Tài sản sở hữu:BĐS</i> và ghi chuyển món tiền từ tài khoản <i>Đưa vào:BĐS</i> sang tài khoản mới tạo.
+<br>Khi phải chi thêm tiền cho bất động sản trong thời gian sở hữu nó, ví dụ như sửa nhà, nộp thuế…, ta cũng ghi thêm một dòng chuyển tiền như trên.</p>
+<h4>2.10. Thu nhập từ bất động sản</h4>
+<p>Nếu bất động sản đem lại thu nhập, ví dụ như cho thuê, thì ghi tương tự như khi nhận cổ tức: ghi chuyển món tiền từ tài khoản <i>Lợi nhuận:Cho thuê</i> sang tài khoản <i>Đã rút ra:BĐS:tên bđs</i>.</p>
+<h4>2.11. Định giá lại bất động sản</h4>
+<p>Khi giá trị của bất động sản thay đổi, ta ghi chuyển món tiền chênh lệch từ tài khoản <i>Orphaned Gains-VND</i> sang tài khoản <i>Tài sản sở hữu:BĐS:tên tài sản</i>.</p>
+<h4>2.12. Bán bất động sản</h4>
+<p>Trước khi ghi giao dịch bán bất động sản, ta ghi một giao dịch định giá lại BĐS cho đúng với giá giao dịch. Kế đó, ghi chuyển món tiền từ tài khoản <i>Tài sản sở hữu:BĐS:tên tài sản</i> sang <i>Đã rút ra:BĐS</i>.</p>
+
+<h3>3. Xem báo cáo kết quả đầu tư</h3>
+<h4>3.1. Kết quả của một khoản đầu tư</h4>
+<p>Kết quả của một việc đầu tư tài sản được thể hiện bằng tổng số tiền đã đưa vào tài sản đó từ đầu đến lúc báo cáo, giá trị tài sản đó ở thời điểm báo cáo, tổng lợi nhuận đã rút ra từ tài sản đó từ đầu đến lúc báo cáo.
+<br>Để xem được ba con số trên trong một bản báo cáo thì ta dùng loại báo cáo nhiều phần, mỗi phần cho một con số.</p>
+<ul><li>Trong menu <b>Báo cáo</b>, chọn <b>Mẫu và tự chọn</b><b>→Báo cáo đa cột tự chọn</b>,</li>
+<li>trong trang báo cáo mới tạo, bấm nút <b>Tuỳ chọn</b>,</li>
+<li>gõ vào Tên báo cáo, ví dụ Báo cáo cổ phiếu VNM</li>
+<li>bấm vào tab Nội dung</li>
+<li>chọn Tóm tắt tài khoản ở bảng bên trái, bấm Thêm</li>
+<li>chọn Báo cáo giao dịch ở bảng bên trái, bấm Thêm, rồi thêm một lần nữa, bấm Ok</li>
+<li>bấm vào Tuỳ chọn sửa ở cuối phần Tóm tắt tài khoản trong trang báo cáo, bấm vào tab Tài khoản rồi chọn tài sản cần xem báo cáo, ví dụ VNM, bấm Ok</li>
+<li>bấm vào Tuỳ chọn sửa ở cuối phần Báo cáo giao dịch thứ nhất, bấm vào tab Chung, ghi Tên  báo cáo là Tiền vào, chọn Ngày bắt đầu là ngày đầu tiên đưa tiền vào tài sản này, Ngày kết thúc là ngày cuối cùng bán hết tài sản hoặc ngày hôm nay nếu chưa bán hết, bấm tab Tài khoản, chọn tài khoản con dưới <i>Đưa vào</i> ghi tiền đưa vào tài sản đầu tư cần xem, chọn tài khoản cần xem báo cáo trong danh sách Lọc theo, chọn kiểu lọc là Bao gồm giao dịch, bấm Ok</li>
+<li>bấm vào Tuỳ chọn sửa ở cuối phần Báo cáo giao dịch thứ hai, bấm vào tab Chung, ghi Tên  báo cáo là Tiền ra, chọn Ngày bắt đầu là ngày đầu tiên đưa tiền vào tài sản này, Ngày kết thúc là ngày cuối cùng bán hết tài sản hoặc ngày hôm nay nếu chưa bán hết, bấm tab Tài khoản, chọn tài khoản con dưới <i>Đã rút ra</i> ghi tiền rút ra từ tài sản đầu tư cần xem, bấm Ok</li></ul>
+<h4>3.2. Kết quả toàn bộ việc tích luỹ</h4>
+<p>Tổng tài sản tích luỹ được phải tăng dần theo thời gian giống như mô hình tính toán ở <a href="/huu-ich/tich-luy-4">trang này</a>. Để xem tài sản của bạn tăng như thế nào thì tạo report như sau:</p>
+<ul><li>Trong menu <b>Báo cáo</b>, chọn <b>Tài sản và Tài sản nợ</b><b>→Đồ thị thanh Tài sản</b>,</li>
+<li>trong trang báo cáo mới tạo, bấm nút <b>Tuỳ chọn</b>,</li>
+<li>bấm vào tab Chung</li>
+<li>Chọn Ngày bắt đầu là ngày bạn bắt đầu tích luỹ, chọn ngày kết thúc là Hôm nay trong list bên phải</li>
+<li>Chọn Cỡ bước là năm, chọn Nguồn giá là Gần nhất trong thời gian</li>
+<li>Chọn tab Tài khoản, chọn các tài khoản trong nhóm <b>Tài sản sở hữu</b>, có thể bớt những tài khoản con ứng với những tài sản đã bán hết</li>
+<li>Bấm <b>Ok</b> để xem báo cáo.</li></ul>
+
+<div class="todiscuss">
+Các bài liên quan:
+<br>* <a href="bat-dau-gnucash">Hướng dẫn bắt đầu dùng GnuCash</a>
+<br>* <a href="/huu-ich/tich-luy">Tích luỹ tiền để đủ sống trọn đời</a>
+<br>* <a href="/huu-ich/tich-luy-dai-han">So sánh các cách tích luỹ tài sản dài hạn</a>
+<br>* <a href="/huu-ich/dung-so-dau-tu">Đừng sợ đầu tư</a>
+<br>* <a href="/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung">BHNT liên kết chung là gì?</a>
+<br>Mọi ý kiến thảo luận xin ghi vào các trang: <a href="https://twitter.com/GiauCham/status/1132799550911987712" target="_blank">Twitter</a> hoặc <a href="https://www.facebook.com/lamgiauchacchan/posts/497985833700363" rel="nofollow" target="_blank">Facebook</a></div>
+
+  <hr>
+Hit count <amp-iframe width="120" height="30" frameborder="0" 
+srcdoc="<img width='100' height='24' src='https://c.statcounter.com/12598906/0/9a8e736a/0/'>">
+</amp-iframe> by <a href="https://statcounter.com" target='_blank'>statcounter.com</a>.
+  <div class="footer">
+  Bấm các nút sau để liên-lạc 
+  <br>
+  <a href="http://twitter.com/GiauCham" target="_blank"><amp-img src="/images/icons/Twitter-256.png" layout="fixed" width="40" height="40" alt="Twiter"></amp-img></a> 
+  <a href="http://m.me/lamgiauchacchan" target="_blank"><amp-img src="/images/icons/Fb-Messenger-128.png" layout="fixed" width="40" height="40" alt="Facebook"></amp-img></a> 
+  <a href="viber://add?number=84989760570"><amp-img src="/images/icons/Viber-128.png" layout="fixed" width="40" height="40" alt="Viber"></amp-img></a>
+  <a href="http://zaloapp.com/qr/p/lzfbyqlwzn9u"><amp-img src="/images/icons/Zalo.webp" layout="fixed" width="40" height="40" alt="Zalo"></amp-img></a> 
+  <a href="tel:+84989760570"><amp-img src="/images/icons/Cell-Phone-256.png" layout="fixed" width="40" height="40" alt="điện thoại"></amp-img></a>
+  <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
+  <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
+  <br>
+  Nếu bạn chép lại những trang-web này, hãy ghi nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a> để người-đọc có-thể tìm được nội-dung mới nhất.
+  </div>
+</div>
+<amp-analytics type="googleanalytics">
+  <script type="application/json">
+  {
+  "vars": { "account": "UA-25268996-1" },
+  "triggers": {
+  "trackPageview": {
+  "on": "visible",
+  "request": "pageview"
+    }
+   }
+  }
+  </script>
+</amp-analytics>
+
+</main>
+</body>
+</html>
+

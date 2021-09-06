@@ -4,14 +4,13 @@
 <title>Sổ tiết kiệm hay Quỹ đầu tư? (Trang web LHBội)</title>
 <meta name="description" content="So sánh tiền lời giữa sổ tiết kiệm và quỹ đầu tư trong 12 năm qua" />
 <meta name="keywords" content="hữu ích, tài chính, cá nhân, tiết kiệm, đầu tư, lợi nhuận">
-<link rel="canonical" href="https://www.lhboi.name.vn/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu">
+<link rel="alternate" href="https://www.lhboi.name.vn/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu">
+<link rel="canonical" href="https://lehboi.github.io/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu">
 
 <!-- in head of html file -->
-
 <meta charset='utf-8'>
 
-<script async custom-element="amp-analytics"
-    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -19,14 +18,13 @@
 
 
 <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<!--
-  Import the `amp-sidebar` component.
--->
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 
 <script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 
 <!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
 <style amp-custom>
@@ -58,31 +56,6 @@ amp-sidebar {
 .close-sidebar span:nth-child(1){transform: rotate(45deg);}
 .close-sidebar span:nth-child(2){transform: rotate(-45deg);}
 
-#menu { margin-left: -40px; }
-#menu li {
-  list-style: none;
-  line-height: 1;
-  display: block;
-  position: relative;
-  margin: 0px;
-  padding: 3px 0px 3px 0px;
-}
-#menu ul {
-  width: 100%;
-  display: block;
-  margin: 0px;
-  padding: 0px 0px 0px 0px;
-}
-#menu ul li,
-#menu ul ul li {
-  width: 100%;
-  border-bottom: 0;
-  padding-left: 10px;
-}
-#menu ul ul ul li {
-  padding-left: 10px;
-}
-
 div.mwidth {max-width:1004px;margin: auto;}
 
 body {background-color:dimgray;}
@@ -99,6 +72,8 @@ h3 {color:#a3ff1a;font-family:serif}
 h4 {color:#8ae600;font-family:serif}
 a {color:#ffd700;}
 a:visited {color:#e6c300;}
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
+
 table.noborder {
   border-collapse: collapse;
   width: 100%;
@@ -132,28 +107,34 @@ div.even {background-color: darkslategray}
 .tblue {color:deepskyblue;}
 div.footer { font-size: 80%; color: red; text-align: center; }
 
-.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
   .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
-}
 
+}
 
 </style>
 <script type="application/ld+json">
@@ -175,7 +156,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 
 <body>
   <!-- top of body -->
-  
   <!-- sidebar menu -->
   <amp-sidebar id="sidebar" layout="nodisplay" side="left">
             <button on="tap:sidebar.close" class="close-sidebar">
@@ -213,7 +193,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
   <br>
   <br>
 
-
   </amp-sidebar>
 <main>
   <div class="mwidth">
@@ -222,7 +201,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
       </button>
     </div>
   </div>
-
+  
   <div class="leftads">
   <!-- AMP Responsive Skyscrapper -->
 <amp-ad
@@ -245,6 +224,12 @@ data-ad-slot="5275186684">
 </amp-ad>
 
   </div>
+  
+  <div class="body">
+    <div class="right">Website LHBoi.name.vn đang được chuyển đến địa chỉ mới LeHBoi.github.io.
+    </div>
+  </div>
+
 
   <div class="body">
     <div class="title">Sổ tiết kiệm hay Quỹ đầu tư?</div>
@@ -261,20 +246,20 @@ data-ad-slot="5275186684">
       layout="fixed"
       data-layout="button_count"
       data-href=
-https://www.lhboi.name.vn/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu
+https://lehboi.github.io/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu
     >
     </amp-facebook-like>
   </div>
 
 <!-- body here -->
-<p>Giả sử bạn bắt đầu để dành tiền cho tương lai gia đình theo kế hoạch dài hạn được lập bằng <a href="../ke-hoach-tai-chinh/">KHTC</a>, bạn sẽ giữ tiền bằng cách nào?
-<br>Cách chắc chắn nhất để thực hiện kế hoạch hàng tỉ đồng là <a href="../cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia">để dành đều đặn mỗi tháng</a>. Với việc tích luỹ dần như vậy thì bạn có hai phương tiện:</p>
-<ol>
-<li>Gửi tiết kiệm ngân hàng</li>
-<li>Gửi vào <a href="quy-dau-tu">quỹ đầu tư</a></li>
-</ol>
-<p>(Đừng mua vàng hay USD để dành, lý do được giải thích trong <a href="../tich-luy-dai-han">bài này</a>.)</p>
-<p>Các nhà kinh tế nói rằng đầu tư dài hạn vào quỹ đầu tư sẽ có lợi hơn gửi tiết kiệm ở ngân hàng. Lý thuyết đó có đúng trong thực tế không, và nhất là có đúng với thị trường Việt Nam không?</p>
+  <p>Giả sử bạn bắt đầu để dành tiền cho tương lai gia đình theo kế hoạch dài hạn được lập bằng <a href="../ke-hoach-tai-chinh/">KHTC</a>, bạn sẽ giữ tiền bằng cách nào?
+  <br>Cách chắc chắn nhất để thực hiện kế hoạch hàng tỉ đồng là <a href="../cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia">để dành đều đặn mỗi tháng</a>. Với việc tích luỹ dần như vậy thì bạn có hai phương tiện:</p>
+  <ol>
+    <li>Gửi tiết kiệm ngân hàng</li>
+    <li>Gửi vào <a href="quy-dau-tu">quỹ đầu tư</a></li>
+  </ol>
+  <p>(Đừng mua vàng hay USD để dành, lý do được giải thích trong <a href="../tich-luy-dai-han">bài này</a>.)</p>
+  <p>Các nhà kinh tế nói rằng đầu tư dài hạn vào quỹ đầu tư sẽ có lợi hơn gửi tiết kiệm ở ngân hàng. Lý thuyết đó có đúng trong thực tế không, và nhất là có đúng với thị trường Việt Nam không?</p>
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -301,23 +286,23 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<h1>Kết quả thực tế</h1>
-<p>Trong bài này, tôi sẽ so sánh kết quả giữa hai phương tiện trên bằng những tính toán trên những số liệu thực tế trong một thời gian dài hơn 12 năm.
-<br>Thời điểm bắt đầu tính là đầu năm 2009. Từ ngày đó đến ngày 
-05/08/2021
+  <h1>Kết quả thực tế</h1>
+  <p>Trong bài này, tôi sẽ so sánh kết quả giữa hai phương tiện trên bằng những tính toán trên những số liệu thực tế trong một thời gian dài hơn 12 năm.
+  <br>Thời điểm bắt đầu tính là đầu năm 2009. Từ ngày đó đến ngày 
+19/08/2021
 
 là hơn 12 năm.</p>
-<p>Giả sử anh A tích luỹ tiền bằng cách gửi tiết kiệm ở ngân hàng. Bắt đầu từ đầu năm 2009, mỗi 4 tuần (mỗi năm 13 lần ứng với 13 tháng lương) anh A gửi một triệu đồng vào một sổ tiết kiệm kỳ hạn 12 tháng ở Ngân hàng Ngoại thương Việt Nam, khi đáo hạn sổ đó thì nhập lãi vào gốc để gửi tiếp kỳ mới. Số tiền anh A đã gửi vào là 164
- triệu đồng. Vào ngày 15/07/2021
- tổng giá trị gốc và lãi là <b> 250,017
- triệu đồng</b>, tính ra lợi nhuận trung bình của việc tích luỹ này là <b> 6,51%/năm
+  <p>Giả sử anh A tích luỹ tiền bằng cách gửi tiết kiệm ở ngân hàng. Bắt đầu từ đầu năm 2009, mỗi 4 tuần (mỗi năm 13 lần ứng với 13 tháng lương) anh A gửi một triệu đồng vào một sổ tiết kiệm kỳ hạn 12 tháng ở Ngân hàng Ngoại thương Việt Nam, khi đáo hạn sổ đó thì nhập lãi vào gốc để gửi tiếp kỳ mới. Số tiền anh A đã gửi vào là 165
+ triệu đồng. Vào ngày 12/08/2021
+ tổng giá trị gốc và lãi là <b> 252,456
+ triệu đồng</b>, tính ra lợi nhuận trung bình của việc tích luỹ này là <b> 6,52%/năm
 
 </b>. Mặc dù trong 12 năm qua có những lúc lãi suất tiết kiệm lên đến 14%/năm, nhưng do anh A gửi góp theo thời gian nên những khoản tiền gửi trễ sinh ra ít tiền lãi hơn những khoản tiền gửi sớm. Lợi nhuận trung bình đó đang giảm dần vì lãi suất tiết kiệm đã thấp hơn số trung bình đó từ 7 năm nay. Số liệu tính toán <a href="https://docs.google.com/spreadsheets/d/18V3oTFprwoRy8HCdTxz9IOY2x6nqvk3-k52NguxqZhc/edit?usp=sharing" target='_blank'>ở đây</a>.</p>
 
-<p>Giả sử anh B tích luỹ tiền bằng quĩ đầu tư VF1. Bắt đầu từ đầu năm 2009 mỗi 4 tuần anh B gửi một triệu đồng vào quỹ <b>VF1</b>. Số tiền anh B đã gửi vào cũng là 164
- triệu đồng như anh A. Vào ngày 05/08/2021
- giá trị tài khoản đầu tư của anh B là <b> 526,360
- triệu đồng</b>. Lợi nhuận trung bình của việc tích luỹ này là <span class="red"><b> 17,20%/năm
+  <p>Giả sử anh B tích luỹ tiền bằng quĩ đầu tư VF1. Bắt đầu từ đầu năm 2009 mỗi 4 tuần anh B gửi một triệu đồng vào quỹ <b>VF1</b>. Số tiền anh B đã gửi vào cũng là 165
+ triệu đồng như anh A. Vào ngày 19/08/2021
+ giá trị tài khoản đầu tư của anh B là <b> 544,027
+ triệu đồng</b>. Lợi nhuận trung bình của việc tích luỹ này là <span class="red"><b> 17,55%/năm
  </b></span>.</p>
 
 <!-- AMP In-article 1 -->
@@ -346,23 +331,24 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<p>Bảng dưới đây cho biết lợi nhuận trung bình của mọi khoản đầu tư đều đặn vào những quỹ đầu tư trong 10/5/3/2/1 năm qua.</p>
-<div><amp-img alt="Kết quả đầu tư đều đặn" src="/data/VFM.png" height="281" width="565" layout="responsive"></amp-img></a></div>
+  <p>Bảng dưới đây cho biết lợi nhuận trung bình của mọi khoản đầu tư đều đặn vào những quỹ đầu tư trong 10/5/3/2/1 năm qua.</p>
+  <div><amp-img alt="Kết quả đầu tư đều đặn" src="/data/VFM.png" height="281" width="565" layout="responsive"></amp-img></a></div>
 
-<p>Trong thực tế thì số tiền anh A có chắc chắn phải thấp hơn 250,017
+  <p>Trong thực tế thì số tiền anh A có chắc chắn phải thấp hơn 252,456
  triệu đồng vì:</p>
-<ol>
-<li>Tiền lãi khi đáo hạn sẽ bị làm tròn xuống đến hàng ngàn, và những tiền lẻ dưới chục ngàn hoặc trăm ngàn sẽ không được nhập vào gốc để sinh lời tiếp vì anh A thấy nó lẻ.</li>
-<li>Rất khó để đều đặn mỗi 4 tuần mở một sổ tiết kiệm, gần đây có Internet banking thì dễ hơn, nhưng cũng không dễ để nhớ làm việc đó đều đặn. Trong khi đó, đầu tư vào quỹ đầu tư thì có người nhắc.</li>
-<li>Không dễ để nhớ gửi tiền tiết kiệm đều đặn nhưng lại rất dễ để rút tiền ra dùng khi cần mua sắm iPhone, LED TV, scooter làm cho số tiền bị hao hụt nhiều.</li>
-</ol>
+  <ol>
+    <li>Tiền lãi khi đáo hạn sẽ bị làm tròn xuống đến hàng ngàn, và những tiền lẻ dưới chục ngàn hoặc trăm ngàn sẽ không được nhập vào gốc để sinh lời tiếp vì anh A thấy nó lẻ.</li>
+    <li>Rất khó để đều đặn mỗi 4 tuần mở một sổ tiết kiệm, gần đây có Internet banking thì dễ hơn, nhưng cũng không dễ để nhớ làm việc đó đều đặn. Trong khi đó, đầu tư vào quỹ đầu tư thì có người nhắc.</li>
+    <li>Không dễ để nhớ gửi tiền tiết kiệm đều đặn nhưng lại rất dễ để rút tiền ra dùng khi cần mua sắm iPhone, LED TV, scooter làm cho số tiền bị hao hụt nhiều.</li>
+  </ol>
 
-<p>Ngoài ra, khi gửi ngân hàng kiểu đó thì anh A phải giữ từ 14 đến 164
+  <p>Ngoài ra, khi gửi ngân hàng kiểu đó thì anh A phải giữ từ 14 đến 165
  sổ tiết kiệm. Có thời gian tôi cũng làm như vậy (online) và tôi cảm thấy vô cùng lúng túng với hàng loạt con số trên màn hình. Trong khi đó đầu tư vào quỹ đầu tư thì mỗi người chỉ cần biết 1 vài con số.
-<br>Ngân hàng cũng có một loại tiết kiệm mà không tạo ra nhiều sổ, đó là tiết kiệm gửi góp. Tôi khuyên các bạn đừng dùng các loại tiết kiệm gửi góp của các ngân hàng. Mặc dù nó có vẻ giống như các kế hoạch đầu tư ở chỗ góp tiền vào một tài khoản, nhưng các ngân hàng không chuyên quản lý sổ tiết kiệm dài hạn và họ cũng không thích việc đó nên lãi suất dạng đó thấp hơn lãi suất 12 tháng. Tôi đã có một kinh nghiệm không vui với loại tiết kiệm gửi góp đó, sẽ kể lại trong một trang khác.</p>
+  <br>Ngân hàng cũng có một loại tiết kiệm mà không tạo ra nhiều sổ, đó là tiết kiệm gửi góp. Tôi khuyên các bạn đừng dùng các loại tiết kiệm gửi góp của các ngân hàng. Mặc dù nó có vẻ giống như các kế hoạch đầu tư ở chỗ góp tiền vào một tài khoản, nhưng các ngân hàng không chuyên quản lý sổ tiết kiệm dài hạn và họ cũng không thích việc đó nên lãi suất dạng đó thấp hơn lãi suất 12 tháng. Tôi đã có một kinh nghiệm không vui với loại tiết kiệm gửi góp đó, sẽ kể lại trong một trang khác.</p>
 
-<p>Một ưu điểm khác của quỹ đầu tư là nó không có kỳ hạn, nghĩa là anh B hoặc anh C muốn rút tiền ra lúc nào cũng được, không bị mất khoản lãi khi chưa đến hạn như gửi tiết kiệm.
-<br>Tính chất có kỳ hạn của sổ tiết kiệm cũng ảnh hưởng đến lợi nhuận trung bình của cách tích luỹ tiền ở ngân hàng: mỗi khi lãi suất tiến kiệm ở ngân hàng tăng hay giảm thì một năm sau mới thể hiện trên lợi nhuận trung bình. Ở phía bên kia, giá đơn vị quỹ đầu tư thay đổi hàng tuần thể hiện ngay trên lợi nhuận trung bình.</p>
+  <p>Một ưu điểm khác của quỹ đầu tư là nó không có kỳ hạn, nghĩa là anh B hoặc anh C muốn rút tiền ra lúc nào cũng được, không bị mất khoản lãi khi chưa đến hạn như gửi tiết kiệm.
+  <br>Tính chất có kỳ hạn của sổ tiết kiệm cũng ảnh hưởng đến lợi nhuận trung bình của cách tích luỹ tiền ở ngân hàng: mỗi khi lãi suất tiến kiệm ở ngân hàng tăng hay giảm thì một năm sau mới thể hiện trên lợi nhuận trung bình. Ở phía bên kia, giá đơn vị quỹ đầu tư thay đổi hàng tuần thể hiện ngay trên lợi nhuận trung bình.</p>
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -389,24 +375,28 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<h1>Lợi ích trong tương lai xa</h1>
-<p>Các con số lãi suất ở trên là lãi kép nên thời gian càng dài thì kết quả càng lớn. Ví dụ với lãi suất như trên, gửi mỗi 4 tuần 1 triệu đồng sau 30 năm sẽ từ 390 triệu đồng:</p>
-<span class="red"><ul><li>được khoảng 1,245
+  <h1>Lợi ích trong tương lai xa</h1>
+  <p>Các con số lãi suất ở trên là lãi kép nên thời gian càng dài thì kết quả càng lớn. Ví dụ với lãi suất như trên, gửi mỗi 4 tuần 1 triệu đồng sau 30 năm sẽ từ 390 triệu đồng:</p>
+  <span class="red">
+  <ul>
+    <li>được khoảng 1,245
  tỉ đồng nếu gửi ngân hàng</li>
-<li>được khoảng 12,807
- tỉ đồng nếu gửi quỹ đầu tư, <b>bằng 10,28
+    <li>được khoảng 13,941
+ tỉ đồng nếu gửi quỹ đầu tư, <b>bằng 11,18
  lần gửi ngân hàng</b></li>
-</ul></span>
+  </ul>
+  </span>
 
-<p>Nhìn từ một hướng khác, những người thực hành công thức <a href="../chi-tieu">"Thu nhập - Tiết kiệm = Chi tiêu"</a> sẽ thấy dễ sống hơn với mức lợi nhuận cao của quỹ đầu tư. Lợi nhuận cao thì chỉ cần tiết kiệm ít hơn, chi tiêu nhiều hơn mà vẫn đạt kế hoạch tài chính tương lai. Ví dụ, để có 5 tỉ đồng sau 30 năm, người ta phải tiết kiệm:</p>
-<ul>
-<li>2,532 triệu đồng mỗi tháng và tăng dần 5% sau mỗi năm, nếu lợi nhuận trung bình 7%/năm như gửi tiết kiệm ở ngân hàng</li>
-<li>1,587 triệu đồng mỗi tháng và tăng dần 5% sau mỗi năm, nếu lợi nhuận trung bình 10%/năm như gửi quỹ đầu tư</li>
-</ul>
+  <p>Nhìn từ một hướng khác, những người thực hành công thức <a href="../chi-tieu">"Thu nhập - Tiết kiệm = Chi tiêu"</a> sẽ thấy dễ sống hơn với mức lợi nhuận cao của quỹ đầu tư. Lợi nhuận cao thì chỉ cần tiết kiệm ít hơn, chi tiêu nhiều hơn mà vẫn đạt kế hoạch tài chính tương lai. Ví dụ, để có 5 tỉ đồng sau 30 năm, người ta phải tiết kiệm:</p>
+  <ul>
+    <li>2,532 triệu đồng mỗi tháng và tăng dần 5% sau mỗi năm, nếu lợi nhuận trung bình 7%/năm như gửi tiết kiệm ở ngân hàng</li>
+    <li>1,587 triệu đồng mỗi tháng và tăng dần 5% sau mỗi năm, nếu lợi nhuận trung bình 10%/năm như gửi quỹ đầu tư</li>
+  </ul>
 
-<h1>Tại sao quỹ đầu tư cho lời cao hơn ngân hàng?</h1>
-<p>Quỹ đầu tư là gì mà nó sinh lời nhiều hơn gửi tiết kiệm ở ngân hàng?
-<br>Mời bạn xem bài giải thích về <a href="quy-dau-tu">quỹ đầu tư</a>.</p>
+  <h1>Tại sao quỹ đầu tư cho lời cao hơn ngân hàng?</h1>
+  <p>Quỹ đầu tư là gì mà nó sinh lời nhiều hơn gửi tiết kiệm ở ngân hàng?
+  <br>Mời bạn xem bài giải thích về <a href="quy-dau-tu">quỹ đầu tư</a>.</p>
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -433,23 +423,26 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<p>Gửi mỗi 4 tuần 1 triệu đồng trong hơn 12 năm thì lời như vậy, nhưng nếu chị D có 50 triệu đồng hay 5 tỉ đồng thì gửi vào quỹ đầu tư theo cách nào để có lời?
-<br>Chị D nên chia số tiền đó ra làm nhiều phần bằng nhau để gửi vào quỹ đầu tư một cách đều đặn (mỗi tháng một phần) trong 3-6 tháng liên tiếp, rồi để yên đó một thời gian đủ dài (hơn 5 năm) để nó sinh lời.
-</p>
+  <p>Gửi mỗi 4 tuần 1 triệu đồng trong hơn 12 năm thì lời như vậy, nhưng nếu chị D có 50 triệu đồng hay 5 tỉ đồng thì gửi vào quỹ đầu tư theo cách nào để có lời?
+  <br>Chị D nên chia số tiền đó ra làm nhiều phần bằng nhau để gửi vào quỹ đầu tư một cách đều đặn (mỗi tháng một phần) trong 3-6 tháng liên tiếp, rồi để yên đó một thời gian đủ dài (hơn 5 năm) để nó sinh lời.</p>
 
-<p>Kết quả của quỹ đầu tư cao hơn sổ tiết kiệm có vài phần trăm mỗi năm vì lãi suất tiết kiệm (và lãi suất cho vay) ở Việt Nam quá cao. Ở Singapore, gửi tiết kiệm kỳ hạn 3 năm lãi 0,65%/năm còn quỹ đầu tư cổ phiếu thì được khoảng 7,5%/năm sau 10 năm, chênh lệch gấp 10 lần. Hy vọng kinh tế Việt Nam sẽ thay đổi theo hướng đó: lãi suất ngân hàng giảm xuống để giảm chi phí cho các doanh nghiệp và người đi vay.</p>
-<p>Trang web này được cập nhật hàng tuần. Mời các bạn đến xem kết quả đầu tư mỗi tuần.</p>
+  <p>Kết quả của quỹ đầu tư cao hơn sổ tiết kiệm có vài phần trăm mỗi năm vì lãi suất tiết kiệm (và lãi suất cho vay) ở Việt Nam quá cao. Ở Singapore, gửi tiết kiệm kỳ hạn 3 năm lãi 0,65%/năm còn quỹ đầu tư cổ phiếu thì được khoảng 7,5%/năm sau 10 năm, chênh lệch gấp 10 lần. Hy vọng kinh tế Việt Nam sẽ thay đổi theo hướng đó: lãi suất ngân hàng giảm xuống để giảm chi phí cho các doanh nghiệp và người đi vay.</p>
+  <p>Trang web này được cập nhật hàng tuần. Mời các bạn đến xem kết quả đầu tư mỗi tuần.</p>
 
-<div class="todiscuss">
-Các bài liên quan:
-<br>* <a href="../chi-tieu">Chi tiêu có kế hoạch để tự do tài chính</a>
-<br>* <a href="../ke-hoach-tai-chinh/">Lập kế hoạch ổn định tài chính suốt đời thật đơn giản</a>
-<br>* <a href="../tich-luy-dai-han">So sánh các cách tích luỹ dài hạn</a>
-<br>* <a href="quy-dau-tu">Tìm hiểu về quỹ đầu tư</a>
-<br>* <a href="../cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia">Những quyết định tốt cho tuổi già</a>
-<br>Mọi ý kiến thảo luận xin ghi vào các trang: <a href="https://twitter.com/GiauCham/status/1132808171318173697" target="_blank">Twitter</a> hoặc <a href="https://www.facebook.com/lamgiauchacchan/posts/627783754053903" rel="nofollow" target="_blank">Facebook</a></div>
+  <div class="todiscuss">
+  Các bài liên quan:
+  <br>* <a href="../chi-tieu">Chi tiêu có kế hoạch để tự do tài chính</a>
+  <br>* <a href="../ke-hoach-tai-chinh/">Lập kế hoạch ổn định tài chính suốt đời thật đơn giản</a>
+  <br>* <a href="../tich-luy-dai-han">So sánh các cách tích luỹ dài hạn</a>
+  <br>* <a href="quy-dau-tu">Tìm hiểu về quỹ đầu tư</a>
+  <br>* <a href="../cac-loai-bao-hiem/diem-tua-dau-tu">Điểm Tựa Đầu Tư</a>
+  <br>* <a href="../cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia">Những quyết định tốt cho tuổi già</a>
+  <br>Mọi ý kiến thảo luận xin ghi vào các trang: <a href="https://twitter.com/GiauCham/status/1132808171318173697" target="_blank">Twitter</a> hoặc <a href="https://www.facebook.com/lamgiauchacchan/posts/627783754053903" rel="nofollow" target="_blank">Facebook</a></div>
 
   <hr>
+Hit count <amp-iframe width="120" height="30" frameborder="0" 
+srcdoc="<img width='100' height='24' src='https://c.statcounter.com/12598906/0/9a8e736a/0/'>">
+</amp-iframe> by <a href="https://statcounter.com" target='_blank'>statcounter.com</a>.
   <div class="footer">
   Bấm các nút sau để liên-lạc 
   <br>
@@ -461,7 +454,7 @@ Các bài liên quan:
   <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   <br>
-  Nếu bạn chép lại những trang web này, hãy ghi nguồn-gốc <a href="https://www.lhboi.name.vn">https://WWW.LHBOI.NAME.VN</a> để người-đọc có-thể tìm được nội-dung mới cập-nhật.
+  Nếu bạn chép lại những trang-web này, hãy ghi nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a> để người-đọc có-thể tìm được nội-dung mới nhất.
   </div>
 </div>
 <amp-analytics type="googleanalytics">

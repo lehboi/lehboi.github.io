@@ -4,28 +4,27 @@
 <title>GnuCash (Trang web LHBội)</title>
 <meta name="description" content="Giới thiệu GnuCash, phần mềm để kiểm soát thu chi, quản lý tài sản gia đình" />
 <meta name="keywords" content="hữu ích, tài chính, cá nhân">
-<link rel="canonical" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/gnucash">
+<link rel="alternate" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/gnucash">
+<link rel="canonical" href="https://lehboi.github.io/kinh-nghiem/may-tinh/gnucash">
 
 <!-- in head of html file -->
-
 <meta charset='utf-8'>
 
-<script async custom-element="amp-analytics"
-    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
+
 <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<!--
-  Import the `amp-sidebar` component.
--->
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 
 <script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 
 <!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
 <style amp-custom>
@@ -57,31 +56,6 @@ amp-sidebar {
 .close-sidebar span:nth-child(1){transform: rotate(45deg);}
 .close-sidebar span:nth-child(2){transform: rotate(-45deg);}
 
-#menu { margin-left: -40px; }
-#menu li {
-  list-style: none;
-  line-height: 1;
-  display: block;
-  position: relative;
-  margin: 0px;
-  padding: 3px 0px 3px 0px;
-}
-#menu ul {
-  width: 100%;
-  display: block;
-  margin: 0px;
-  padding: 0px 0px 0px 0px;
-}
-#menu ul li,
-#menu ul ul li {
-  width: 100%;
-  border-bottom: 0;
-  padding-left: 10px;
-}
-#menu ul ul ul li {
-  padding-left: 10px;
-}
-
 div.mwidth {max-width:1004px;margin: auto;}
 
 body {background-color:dimgray;}
@@ -98,6 +72,8 @@ h3 {color:#a3ff1a;font-family:serif}
 h4 {color:#8ae600;font-family:serif}
 a {color:#ffd700;}
 a:visited {color:#e6c300;}
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
+
 table.noborder {
   border-collapse: collapse;
   width: 100%;
@@ -131,35 +107,40 @@ div.even {background-color: darkslategray}
 .tblue {color:deepskyblue;}
 div.footer { font-size: 80%; color: red; text-align: center; }
 
-.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
   .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
-}
 
+}
 
 </style>
 </head>
 
 <body>
   <!-- top of body -->
-  
   <!-- sidebar menu -->
   <amp-sidebar id="sidebar" layout="nodisplay" side="left">
             <button on="tap:sidebar.close" class="close-sidebar">
@@ -197,7 +178,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
   <br>
   <br>
 
-
   </amp-sidebar>
 <main>
   <div class="mwidth">
@@ -206,7 +186,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
       </button>
     </div>
   </div>
-
+  
   <div class="leftads">
   <!-- AMP Responsive Skyscrapper -->
 <amp-ad
@@ -231,6 +211,12 @@ data-ad-slot="5275186684">
   </div>
   
   <div class="body">
+    <div class="right">Website LHBoi.name.vn đang được chuyển đến địa chỉ mới LeHBoi.github.io.
+    </div>
+  </div>
+
+
+  <div class="body">
     <div class="title">GnuCash</div>
 <div class="right">Viết lần đầu trong Tháng Hai, 2012.</div>
 
@@ -246,7 +232,7 @@ data-ad-slot="5275186684">
       layout="fixed"
       data-layout="button_count"
       data-href=
-https://www.lhboi.name.vn/kinh-nghiem/may-tinh/gnucash
+https://lehboi.github.io/kinh-nghiem/may-tinh/gnucash
     >
     </amp-facebook-like>
   </div>
@@ -282,7 +268,7 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<p>Tiếp theo tôi tạo ngân sách trong GnuCash cho các khoản chi đó, nhập các số tiền  theo <a href="/huu-ich/ke-hoach-tai-chinh/khtcp1">tỉ lệ đã định</a> vào trong tab <i>Ngân sách: Ngân sách tháng</i>.</p>
+<p>Tiếp theo tôi tạo ngân sách trong GnuCash cho các khoản chi đó, nhập các số tiền  theo <a href="/huu-ich/ke-hoach-tai-chinh/ke-hoach">tỉ lệ đã định</a> vào trong tab <i>Ngân sách: Ngân sách tháng</i>.</p>
 <div><amp-img alt="Ngân sách trong GnuCash" src="/images/budget.png" width="1058" height="772" layout="responsive"></amp-img></div>
 <p>Giả sử khi năm triệu đồng tiền lương được chuyển vào tài khoản ở ngân hàng, tôi ghi một dòng vào GnuCash rằng đã thu được năm triệu đồng tiền lương.
 <br>Tiếp theo, tôi trích một phần tiền ứng với khoản chi 4 và 6 từ tài khoản thanh toán ở ngân hàng sang khoản chi Đầu tư để gửi bảo hiểm nhân thọ, mua cổ phiếu, <a href="/huu-ich/dau-tu-co-phieu/quy-dau-tu">quỹ đầu tư</a>, sau đó ghi thêm một dòng vào file <a href="/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han">Đầu tư dài hạn</a> ứng với việc trích tiền đó. Kết quả: tài khoản thanh toán ở ngân hàng giảm, các tài sản trong Đầu tư dài hạn tăng.</p>
@@ -325,11 +311,14 @@ data-ad-slot="3830899615">
 Các bài liên quan:
 <br>* <a href="/huu-ich/chi-tieu">Chi tiêu có kế hoạch để tự do tài chính</a>
 <br>* <a href="/huu-ich/dau-tu-co-phieu/quy-dau-tu">Tìm hiểu về quỹ đầu tư</a>
-<br>* <a href="/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han">Ghi sổ các khoản đầu tư dài hạn</a>
+<br>* <a href="gnucash-dai-han">Ghi sổ các khoản đầu tư dài hạn</a>
 <br>* <a href="bat-dau-gnucash">Hướng dẫn bắt đầu dùng GnuCash</a>
 <br>Mọi ý kiến thảo luận xin ghi vào các trang: <a href="https://twitter.com/GiauCham/status/1133596398413393920" target="_blank">Twitter</a> hoặc <a href="https://www.facebook.com/lamgiauchacchan/posts/376820392483575" rel="nofollow" target="_blank">Facebook</a></div>
 
   <hr>
+Hit count <amp-iframe width="120" height="30" frameborder="0" 
+srcdoc="<img width='100' height='24' src='https://c.statcounter.com/12598906/0/9a8e736a/0/'>">
+</amp-iframe> by <a href="https://statcounter.com" target='_blank'>statcounter.com</a>.
   <div class="footer">
   Bấm các nút sau để liên-lạc 
   <br>
@@ -341,7 +330,7 @@ Các bài liên quan:
   <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   <br>
-  Nếu bạn chép lại những trang web này, hãy ghi nguồn-gốc <a href="https://www.lhboi.name.vn">https://WWW.LHBOI.NAME.VN</a> để người-đọc có-thể tìm được nội-dung mới cập-nhật.
+  Nếu bạn chép lại những trang-web này, hãy ghi nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a> để người-đọc có-thể tìm được nội-dung mới nhất.
   </div>
 </div>
 <amp-analytics type="googleanalytics">

@@ -1,0 +1,604 @@
+<!doctype html>
+<html amp lang="vi">
+<head>
+<title>Phần mềm tự do (Trang web LHBội)</title>
+<meta name="description" content="Hỏi và Đáp về phần mềm mã nguồn mở và phần mềm tự do" />
+<meta name="keywords" content="hữu ích, tài chính, cá nhân">
+<link rel="canonical" href="https://lehboi.github.io/kinh-nghiem/may-tinh/phan-mem-tu-do">
+<link rel="alternate" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/phan-mem-tu-do">
+
+<!-- in head of html file -->
+<meta charset='utf-8'>
+
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+
+<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+<script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+
+<!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
+<style amp-custom>
+html {
+  font-size: 17px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(17px + 7 * ((100vmin - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+amp-sidebar {
+  width: 240px;
+  padding-right: 2px;
+  background: darkblue;
+  color: blue;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+.close-sidebar{width: 30px;height: 30px;position: relative;cursor: pointer;background-color: transparent;border: none;}
+.close-sidebar:focus{outline: 2px auto #f06060;}
+.close-sidebar span{position: absolute;left: 0;width: 30px;height: 2px;border-right: 5px;background-color: #004d00;}
+.close-sidebar span:nth-child(1){transform: rotate(45deg);}
+.close-sidebar span:nth-child(2){transform: rotate(-45deg);}
+
+div.mwidth {max-width:1004px;margin: auto;}
+
+body {background-color:dimgray;}
+div.body {max-width:1004px;margin: auto; padding-left:8px; padding-right:8px; text-align:justify;color:white;background-color:black;font-family:sans-serif}
+div.title {text-align:center;font-size:160%;font-weight:bold;color:#ffe033;font-family:serif}
+div.right {text-align:right;}
+div.lrsp {margin: 0px 5px 0px 5px;}
+.todiscuss {color:lightskyblue;}
+div.center {text-align:center;}
+div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
+h1 {color:#c2ff66;font-family:serif}
+h2 {color:#adff33;font-family:serif}
+h3 {color:#a3ff1a;font-family:serif}
+h4 {color:#8ae600;font-family:serif}
+a {color:#ffd700;}
+a:visited {color:#e6c300;}
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
+
+table.noborder {
+  border-collapse: collapse;
+  width: 100%;
+  border: 0px;
+  text-align: left;
+  padding: 4px;
+}
+
+.myheader {
+    background-color:darkblue; 
+}
+
+th, td {
+  text-align: left;
+  padding: 2px;
+  vertical-align: top;
+}
+tr:nth-child(even){background-color: darkslategray}
+table.withborder {
+  width: 100%;
+  border: 2px;
+  border-color: #111111;
+  text-align: left;
+  padding: 4px;
+}
+.fbold { font-weight:bold; }
+.tmark {background-color:navy;}
+
+div.even {background-color: darkslategray}
+.red {color:red;}
+.tblue {color:deepskyblue;}
+div.footer { font-size: 80%; color: red; text-align: center; }
+
+@media (max-width: 399px) {
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
+
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
+}
+@media (min-width: 400px) and (max-width: 499px) {
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
+
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
+}
+@media (min-width: 500px) {
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
+}
+@media (min-width: 1260px) {
+  .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
+  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
+
+}
+
+</style>
+</head>
+
+<body>
+  <!-- top of body -->
+  <!-- sidebar menu -->
+  <amp-sidebar id="sidebar" layout="nodisplay" side="left">
+            <button on="tap:sidebar.close" class="close-sidebar">
+                <span></span>
+                <span></span>
+            </button>
+  <h3 class="myheader"><a href='/'>Giới-thiệu</a></h3>
+    <a href='/home/about'>Thân-thế</a><br>
+    <a href='/home/cv'>Thành-tích</a><br>
+  <h3 class="myheader"><a href='/huu-ich/'>Hữu-ích</a></h3>
+
+      <h4 class="myheader"><a href='/huu-ich/ke-hoach-tai-chinh/'>Lập-kế-hoạch-tài-chính</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a></h4>
+
+      <h4 class="myheader"><a href='/huu-ich/cau-chuyen/'>Câu-chuyện</a></h4>
+
+  <h3 class="myheader">Kinh-nghiệm</h3>
+    <h4 class="myheader"><a href='/kinh-nghiem/may-tinh/'>Máy-tính</a></h4>
+
+    <h4 class="myheader"><a href='/kinh-nghiem/chu-viet/'>Chữ-Việt</a></h4>
+
+    <h4 class="myheader"><a href='/kinh-nghiem/linh-tinh/'>Linh tinh</a></h4>
+
+  <h3 class="myheader"><a href='/y-kien/'>Ý kiến</a></h3>
+
+  <h3 class="myheader">Danh mục</h3>
+    <a href='/download/'>Download</a><br>
+    <a href='/sitemap'>Mục lục</a>
+  <h3 class="myheader"></h3>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  </amp-sidebar>
+<main>
+  <div class="mwidth">
+    <div class="mbutton">
+      <button on="tap:sidebar.toggle" class="ampstart-btn caps ml1" style="font-size:90%;font-weight:bold;background-color: blue; color: white;">MENU
+      </button>
+    </div>
+  </div>
+  
+  <div class="leftads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+
+  </div>
+  <div class="rightads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+
+  </div>
+  
+  <div class="body">
+    <div class="right">Website LHBoi.name.vn đang được chuyển đến địa chỉ mới LeHBoi.github.io.
+    </div>
+  </div>
+
+
+  <div class="body">
+    <div class="title">Hỏi và Đáp về phần mềm mã nguồn mở và phần mềm tự do</div>
+
+  <div>
+    <amp-social-share type="email" height="32"></amp-social-share>
+    <amp-social-share type="whatsapp" height="32"></amp-social-share>
+    <amp-social-share type="linkedin" height="32"></amp-social-share>
+    <amp-social-share type="twitter" height="32"></amp-social-share>
+    <amp-social-share type="tumblr" height="32"></amp-social-share>
+    <amp-social-share type="line" height="32"></amp-social-share>
+    <amp-social-share type="facebook" height="32" data-param-app_id="1879212745697311"></amp-social-share>
+    <amp-facebook-like height=32 width=90
+      layout="fixed"
+      data-layout="button_count"
+      data-href=
+https://lehboi.github.io/kinh-nghiem/may-tinh/phan-mem-tu-do
+    >
+    </amp-facebook-like>
+  </div>
+
+<h3>Giải thích các từ <i>lạ</i></h3>
+<u>Sở hữu trí tuệ (intellectual property)</u>: là thuật ngữ nói về quyền của người sở hữu các kết quả của sự sáng tạo, nghệ thuật, bằng sáng chế, thương hiệu, bí mật thương mại.
+<p>
+<u>Bằng sáng chế (patent)</u>: cấp cho người sáng chế quyền được độc quyền khai thác một kiến thức trong một thời hạn (thường là 20 năm). Người sáng chế phải nộp hồ sơ mô tả điều mình làm ra, nếu điều đó là chưa hề có thì được cấp bằng sáng chế. Ví dụ cấu trúc FAT để lưu trữ file là sáng chế của Microsoft, cách nén ảnh GIF và nén nhạc MP3 là hai sáng chế được cấp bằng. Số bằng sáng chế được cấp trên khắp thế giới rất lớn nhưng những bằng sáng chế chưa tìm được nơi áp dụng thì không đem lại lợi gì cho người sáng chế.</p>
+<p>
+<u>Bản quyền (copyright)</u>: copyright là "the right to copy", bản quyền là quyền của người sở hữu được quyết định việc dùng/sao chép/thay đổi một <i>cách thể hiện</i> cụ thể của một <i>ý tưởng</i> hay <i>thông tin</i> nào đó. Những thứ đó có thể là thơ, luận văn, kịch, sách, phim, vở múa, nhạc, sản phẩm nghe-nhìn, hoạ phẩm, tượng, ảnh chụp, phần mềm, chương trình phát thanh-truyền hình… Bản quyền có hiệu lực tới 50-70 năm sau khi tác giả qua đời. Một chuyện thật như đùa về bản quyền: một người đàn ông Mỹ vi phạm luật giao thông, khi cảnh sát sắp ghi giấy phạt, ông này tuyên bố "Tôi đang giữ bản quyền về tên của mình, anh không được sao chép nó lên tờ giấy đó!"<br />
+Bản quyền không bảo vệ ý tưởng nhưng cách thể hiện ý tưởng đó thì được bảo vệ. Ví dụ hai nhạc sĩ khác nhau đều có bản quyền trên tác phẩm ca ngợi mùa thu của mỗi người, và không ai có bản quyền về ý tưởng ca ngợi mùa thu.
+</p>
+<p>
+<u>Quyền sử dụng phần mềm (software license)</u>: là những điều được phép và không được phép mà người sở hữu phần mềm đặt ra đối với người được cấp phần mềm hợp pháp (người mua hay người dùng, trong bài này gọi chung là người dùng).</p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+
+<p>
+<u>Hợp đồng sử dụng phần mềm (software license agreement, End-User License Agreement)</u>: Hợp đồng giữa bên làm ra phần mềm và bên mua phần mềm. Phần lớn các hợp đồng sử dụng các phần mềm đóng hộp sẵn được hiện ra cho người dùng xem khi cài đặt phần mềm và người dùng chỉ có quyền chấp nhận hay không chấp nhận hợp đồng. Ngoài các điều khoản về quyền sử dụng phần mềm, hợp đồng  sử dụng phần mềm còn quy định trách nhiệm của hai bên, chế độ bảo hành… Ví dụ EULA của Microsoft Windows XP nêu rõ Microsoft và những người bán sản phẩm này không chịu trách nhiệm về bất kỳ thiệt hại nào xảy ra khi dùng sản phẩm hoặc do sản phẩm không làm việc…<br />
+Qua hợp đồng sử dụng phần mềm, nhiều quyền lợi của người dùng bị tước bỏ. Ví dụ như nếu một phần mềm có lỗi, người dùng không được quyền tự sửa lỗi đó, chỉ có thể báo cho công ty sở hữu nó và chờ sửa; thử tưởng tượng phần mềm như xe gắn máy, chúng ta mua một xe gắn máy, khi chạy ở đường ướt thì bị nước văng sau lưng, ta liền gắn thêm một tấm cản vào, đến một ngày nào đó ta nhận được thư của hãng bán xe thông báo là ta bị mất quyền sử dụng xe vì đã tự sửa lỗi! Thường thì các hợp đồng sử dụng phần mềm chỉ cho phép người dùng cài đặt phần mềm đó trên một máy hay một số máy nhất định, một số phần mềm còn quy định rõ số CPU tối đa trong một máy. Người dùng không được quyền bán hay cho phần mềm này, điều này quá ngặt nghèo so với sách in: sách đọc xong có thể đem bán lại hoặc đem cho. Nếu người dùng vi phạm các điều không được phép thì có thể dẫn tới việc chấm dứt quyền sử dụng; tức là người dùng hợp pháp trở thành bất hợp pháp.</p>
+<p>
+<u>Copyleft</u> (Việt ngữ chưa có từ này): copyleft không phải là một loại bản quyền, nó là một cách tổng quát để một phần mềm hay một sản phẩm nào đó được <i>tự do</i> và bảo đảm rằng <i>tất cả những sửa đổi tiếp theo</i> của phần mềm đó cũng được tự do. Để copyleft một phần mềm (tức là để nó được tự do), đầu tiên người sở hữu tuyên bố rằng nó đã được bảo vệ dưới <b>bản quyền</b>, kế đó thêm vào <i>điều khoản phân phối</i> quy định rằng <i>mọi người</i> có quyền dùng, sửa đổi và phân phối lại phần mềm này hay những bản sửa đổi tiếp theo của nó <b>với điều kiện là không được thay đổi điều khoản phân phối</b>. Copyleft do Phong trào Phần mềm Tự do đề ra.
+</p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+
+<h3>Phong trào Phần mềm Tự do là gì?</h3>
+Khoảng năm 1976 trở về trước, phần mềm thường được bán cả mã nguồn lẫn mã nhị phân, và lập trình viên thường truyền cho nhau những mã nguồn để giúp nhau trong công việc. Nhưng công nghiệp phần mềm phát triển lên, các công ty phần mềm bảo vệ lợi nhuận bằng cách gia tăng việc bảo vệ mã nguồn, lập trình viên phải ký với công ty bản cam kết không tiết lộ bí mật (gồm có mã nguồn). Năm 1985, Richard Stallman khởi xướng Phong trào Phần mềm Tự do để vận động cho tự do sử dụng phần mềm, gồm cả việc sửa đổi, phân phối lại phần mềm.
+<h3>Copyleft có gì hay?</h3>
+Copyleft bảo đảm rằng <i>tất cả</i> mọi người có quyền dùng-phân phối-sửa đổi các phần mềm tự do. Không một người nào có quyền sở hữu phần mềm tự do.
+<p>
+Copyleft giúp người ta có cơ hội đóng góp cho sự phát triển của phần mềm tự do. Những lập trình viên làm việc cho các công ty hay tổ chức có thể dùng phần mềm tự do vào công việc của họ, có thể sửa đổi để làm ra sản phẩm mới. Khi đó người chủ không thể biến sản phẩm đó thành tài sản riêng của công ty được, họ chỉ có thể <b>bán</b> sản phẩm theo kiểu phần mềm tự do hoặc họ vứt bỏ sản phẩm đó.
+</p>
+<h3>Tại sao lại có quyền BÁN phần mềm tự do?</h3>
+Nhiều người vẫn <strong>hiểu lầm</strong> rằng tinh thần của phần mềm tự do là không ai được thu tiền trên các bản phần mềm, hoặc chỉ được thu một ít tiền để bù vào chi phí phân phối. Nhưng chữ <i>tự do</i> của phần mềm tự do không mang nghĩa <i>miễn phí</i>. Nó mang nghĩa là không bị sở hữu bởi bất kỳ người nào. Thử so với phần mềm bị sở hữu, phần mềm bị sở hữu thường được bán với giá cao nhưng cũng có khi đem cho không, nhưng người dùng không được toàn quyền (tự do) đối với phần mềm cho không đó.
+<p>
+Vậy mọi người đều có quyền bán phần mềm tự do, ngay cả những phần mềm <strong>không tự làm ra</strong> và được khuyến khích thu nhiều tiền khi phân phối phần mềm tự do, nhiều đến mức có thể thu được. Nghe lạ quá phải không! Mọi người được khuyến khích kiếm lời từ phần mềm tự do và trích một phần lợi nhuận đó đóng góp cho Phong trào Phần mềm Tự do.
+</p>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+
+<h3>Vậy nếu bán phần mềm tự do với giá cao thì làm sao phần mềm tự do được phổ biến đến nhiều người?</h3>
+Một phần mềm bị sở hữu được bán với giá cao thì sẽ có ít người được dùng. Nhưng phần mềm tự do được bán với giá cao vẫn có thể có nhiều người dùng. Đó là vì có nhiều cách hợp pháp để có được phần mềm tự do. Người ta có thể chép lại từ bạn mình, hoặc nhiều người hùn nhau lại mua một bản về để tất cả đều được dùng.
+<p>
+Vì có nhiều cách để được dùng phần mềm tự do nên giá cao không cản trở sự phổ biến của phần mềm tự do. Sự phổ biến của phần mềm tự do được quyết định bởi sự <i>hữu dụng</i> của nó. Khi nào mà phần mềm tự do còn chưa đủ hữu dụng thì người ta còn phải dùng đến phần mềm bị sở hữu. Vậy cách tốt nhất để phổ biến phần mềm tự do là nâng cao tính năng của nó chứ không phải là hạ thấp giá bán. Mọi người đều có thể góp sức vào việc đó bằng cách lập trình, viết tài liệu hướng dẫn, hoặc quyên góp cho người khác làm.
+</p>
+<h3>Phần mềm mã nguồn mở có phải là phần mềm tự do?</h3>
+Có một số quy định (ràng buộc) về quyền sử dụng phần mềm mã nguồn mở không được Phong trào Phần mềm Tự do chấp nhận. Tuy nhiên trong thực tế thì hai loại này rất gần nhau và hầu hết các phần mềm mã nguồn mở là phần mềm tự do. Và GNU General Public License của Phong trào Phần mềm Tự do chính là một trong những giấy phép theo định nghĩa của phần mềm mã nguồn mở.
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+
+<h3>Có bao nhiêu giấy phép sử dụng phần mềm mã nguồn mở?</h3>
+Có hơn 50 giấy phép sử dụng phần mềm mã nguồn mở đã được đặt ra bởi các tổ chức khác nhau. Sau đây là một vài giấy phép của các tổ chức nổi tiếng nhất:
+<ul><li>GNU General Public License (GPL), khoảng 2/3 trong tất cả các phần mềm mã nguồn mở và phần mềm tự do được bảo vệ bằng GPL,</li>
+<li>GNU Library or Lesser General Public License (LGPL)</li>
+<li>Apache License 2.0 (không copyleft)</li>
+<li>IBM Public License</li>
+<li>Mozilla Public License (MPL)</li>
+<li>Nokia Open Source License</li>
+<li>PHP License</li>
+<li>Sun Public License</li>
+<li>BSD License<br />
+</li></ul>
+<p>Những điểm chung của các giấy phép sử dụng phần mềm mã nguồn mở:</p>
+<ol><li>Mọi người có quyền bán hay cho phần mềm, và không phải trả một phí nào về việc bán phần mềm (so sánh với một ví dụ trong thế giới phần mềm bị sở hữu: chủ sở hữu của một số software library bắt người làm phần mềm với library đó phải trả tiền trên mỗi bản phần mềm bán ra).</li>
+<li>Khi phân phối phần mềm thì phải kèm theo mã nguồn, trong trường hợp không kèm theo mã nguồn thì phải có một phương pháp thông dụng để mã nguồn có thể lấy được với một chi phí hợp lý hoặc phải cho phép tải về từ Internet một cách miễn phí. Và mã nguồn phải để dưới dạng mà lập trình viên dùng được ngay.</li>
+<li>Được phép sửa đổi, làm tiếp và được phép phân phối những bản sửa đổi này theo cùng một điều khoản như bản gốc.</li>
+<li>Có thể bắt buộc trong trường hợp phân phối lại thì phải phân phối mã nguồn nguyên gốc nhưng phải cho phép đưa bản vá vào mã nguồn trước khi tạo ra bản mã máy.</li>
+<li>Không giới hạn phạm vi hay mục đích sử dụng của phần mềm (một số phần mềm bị sở hữu được bán với các mức giá khác nhau cho các mục đích sử dụng khác nhau nên giấy phép của nó quy định rõ mục đích sử dụng, ví dụ giấy phép sử dụng riêng cho giáo dục, cho gia đình, cho doanh nghiệp…)</li>
+</ol>
+<p>Một số điểm khác nhau của vài giấy phép sử dụng phần mềm mã nguồn mở:</p>
+<div>
+<table class="withborder">
+<tbody>
+<tr>
+<td rowspan="2">Những ràng buộc của giấy phép<br />
+</td>
+<td colspan="4">Phần mềm gốc<br />
+</td>
+<td colspan="4">Phiên bản<br />
+</td>
+</tr>
+<tr>
+<td width="11%">Về nguyên tắc, có phải phân phối kèm với mã nguồn?<br />
+</td>
+<td width="11%">Nếu được phân phối không kèm mã nguồn, nhà phân phối mã nguồn có được phép thu tiền nhiều hơn chi phí vận chuyển vật liệu?<br />
+</td>
+<td width="11%">Nếu được phân phối kèm mã nguồn, nhà phân phối có được phép thu tiền nhiều hơn chi phí vận chuyển vật liệu?</td>
+<td width="11%">Sub-license</td>
+<td width="11%">Phiên bản có phải tuân theo cùng một giấy phép như bản gốc?<br />
+</td>
+<td width="11%">Có phải mở mã nguồn?<br />
+</td>
+<td width="11%">Có phải đính kèm ghi chú về bản quyền của phần mềm gốc?<br />
+</td>
+<td width="11%">Có phải cung cấp tài liệu?<br />
+</td>
+</tr>
+<tr>
+<td width="11%">GNU GPL v2<br />
+</td>
+<td width="11%">Có<br />
+</td>
+<td width="11%">Không<br />
+</td>
+<td width="11%">Có<br />
+</td>
+<td width="11%">Không<br />
+</td>
+<td width="11%">Có<br />
+</td>
+<td width="11%">Có<br />
+</td>
+<td width="11%">Có<br />
+</td>
+<td width="11%">Có<br />
+</td>
+</tr>
+<tr>
+<td rowspan="4">LGPL v2.1<br />
+</td>
+<td rowspan="4">Có<br />
+</td>
+<td rowspan="4">Không<br />
+</td>
+<td rowspan="4">Có<br />
+</td>
+<td rowspan="4">Không<br />
+</td>
+<td colspan="4">Phát triển từ phần mềm gốc<br />
+</td>
+</tr>
+<tr>
+<td width="11%">Có<br />
+</td>
+<td width="11%">Có<br />
+</td>
+<td width="11%">Có<br />
+</td>
+<td width="11%">Có<br />
+</td>
+</tr>
+<tr>
+<td colspan="4">Dùng phần mềm gốc<br />
+</td>
+</tr>
+<tr>
+<td width="11%">Không<br />
+</td>
+<td width="11%">Không<br />
+</td>
+<td width="11%">Có<br />
+</td>
+<td width="11%">Có<br />
+</td>
+</tr>
+<tr>
+<td>BSD License<br />
+</td>
+<td>Có<br />
+</td>
+<td>Không<br />
+</td>
+<td>Không<br />
+</td>
+<td>Có<br />
+</td>
+<td>Không<br />
+</td>
+<td>Không<br />
+</td>
+<td>Có<br />
+</td>
+<td>Không<br />
+</td>
+</tr>
+<tr>
+<td>Apache License v2.0<br />
+</td>
+<td>Không<br />
+</td>
+<td>Có<br />
+</td>
+<td>Có<br />
+</td>
+<td>Không<br />
+</td>
+<td>Không<br />
+</td>
+<td>Không<br />
+</td>
+<td>Có<br />
+</td>
+<td>Không<br />
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+
+<h3>Những điều cần chú ý khi dùng phần mềm tự do</h3>
+Người dùng không rành phần mềm sẽ cần giúp đỡ khi dùng. Nếu người dùng lấy được phần mềm tự do một cách miễn phí thì sẽ không có ai có trách nhiệm giúp đỡ, chỉ có thể tìm sự giúp đỡ tự nguyện ở các cộng đồng người dùng phần mềm tự do. Nếu cần một sự giúp đỡ chuyên nghiệp, thì người dùng nên mua phần mềm tự do từ các nhà phân phối để nhận được sự bảo đảm giúp đỡ khi cần.
+<p>
+Khi người dùng (là pháp nhân) cần thuê một nơi nào đó sửa đổi phần mềm cho phù hợp với nhu cầu hơn, thì phải ghi rõ trong hợp đồng là bên sửa đổi phải chịu hoàn toàn trách nhiệm về tính hợp pháp của phần mềm sau khi sửa và phải bồi thường những thiệt hại xảy ra cho người dùng nếu có sự vi phạm bản quyền.</p>
+<p>
+Những nhà sản xuất phần mềm có ý định dùng các thành phần mã nguồn mở trong sản phẩm của mình phải biết các thành phần đó đang được bảo vệ dưới giấy phép sử dụng nào và phải hiểu rõ từng điều khoản của giấy phép đó, tốt hơn hết là nên nhờ sự tư vấn của chuyên viên về sở hữu trí tuệ.</p>
+<p>
+Vi phạm thường gặp nhất là phân phối phần mềm (nguyên gốc hay đã có sửa đổi) mà không cung cấp mã nguồn. Và đương nhiên kèm theo đó là vi phạm khi không công bố quyền sử dụng với các điều khoản giống như bản gốc. Người dùng không có ý định phân phối lại thì không lo vi phạm quyền sử dụng phần mềm mã nguồn mở cho dù có sửa mã nguồn.</p>
+<p>
+Dùng các mã nguồn mở có sẵn để làm sản phẩm dự thi mà không công bố thì chắc chắn là vi phạm quyền sử dụng phần mềm mã nguồn mở rồi; vì hành động đem nộp sản phẩm dự thi bao gồm việc sao chép phần mềm cho người khác dùng, và sao chép mà không kèm theo các điều khoản sử dụng giống như bản gốc là vi phạm.</p>
+<p>
+LGPL là một trường hợp đặc biệt, LGPL cho phép tạo ra các phần mềm bị sở hữu từ các thành phần mã nguồn mở. Một phần mềm A được viết mới và có <strong>dùng</strong> các thành phần được bảo vệ bởi LGPL thì A vẫn có thể là một phần mềm bị sở hữu. <strong>Dùng</strong> có nghĩa là được dịch và liên kết với các phần mềm LGPL chứ không được cải tiến từ mã nguồn. Còn nếu A được phát triển từ mã nguồn các thành phần LGPL thì người sở hữu A phải cho phép người dùng tự sửa đổi và khôi phục lại mã nguồn cho mục đích riêng. Và quan trọng hơn nữa là phần mềm A phải dùng được với các version tương lai của các thành phần LGPL của nó.</p>
+<p>
+Một số phần mềm dùng trong các cơ quan nhà nước, hay các tổ chức đặc biệt như ngân hàng, cần được giữ bí mật về cấu trúc dữ liệu và giải thuật. Những phần mềm đó nên được thuê viết riêng cho cơ quan sử dụng, và vẫn có thể dùng những thành phần được bảo vệ dưới giấy phép LPGL.
+</p>
+<p>Bài này được đăng trên e-CHIP số Tháng Tám, 2007.</p>
+
+  <hr>
+Hit count <amp-iframe width="120" height="30" frameborder="0" 
+srcdoc="<img width='100' height='24' src='https://c.statcounter.com/12598906/0/9a8e736a/0/'>">
+</amp-iframe> by <a href="https://statcounter.com" target='_blank'>statcounter.com</a>.
+  <div class="footer">
+  Bấm các nút sau để liên-lạc 
+  <br>
+  <a href="http://twitter.com/GiauCham" target="_blank"><amp-img src="/images/icons/Twitter-256.png" layout="fixed" width="40" height="40" alt="Twiter"></amp-img></a> 
+  <a href="http://m.me/lamgiauchacchan" target="_blank"><amp-img src="/images/icons/Fb-Messenger-128.png" layout="fixed" width="40" height="40" alt="Facebook"></amp-img></a> 
+  <a href="viber://add?number=84989760570"><amp-img src="/images/icons/Viber-128.png" layout="fixed" width="40" height="40" alt="Viber"></amp-img></a>
+  <a href="http://zaloapp.com/qr/p/lzfbyqlwzn9u"><amp-img src="/images/icons/Zalo.webp" layout="fixed" width="40" height="40" alt="Zalo"></amp-img></a> 
+  <a href="tel:+84989760570"><amp-img src="/images/icons/Cell-Phone-256.png" layout="fixed" width="40" height="40" alt="điện thoại"></amp-img></a>
+  <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
+  <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
+  <br>
+  Nếu bạn chép lại những trang-web này, hãy ghi nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a> để người-đọc có-thể tìm được nội-dung mới nhất.
+  </div>
+</div>
+<amp-analytics type="googleanalytics">
+  <script type="application/json">
+  {
+  "vars": { "account": "UA-25268996-1" },
+  "triggers": {
+  "trackPageview": {
+  "on": "visible",
+  "request": "pageview"
+    }
+   }
+  }
+  </script>
+</amp-analytics>
+
+</main>
+</body>
+</html>
+

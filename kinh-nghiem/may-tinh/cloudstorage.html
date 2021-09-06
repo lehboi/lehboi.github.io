@@ -4,28 +4,27 @@
 <title>Giữ file trong nhiều máy và nhiều Cloud Storage</title>
 <meta name="description" content="Giữ file trong nhiều máy và nhiều Cloud Storage sao cho an toàn và không bị rối loạn" />
 <meta name="keywords" content="cloud storage, smartphone, picture, hình, backup">
-<link rel="canonical" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/cloudstorage">
+<link rel="alternate" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/cloudstorage">
+<link rel="canonical" href="https://lehboi.github.io/kinh-nghiem/may-tinh/cloudstorage">
 
 <!-- in head of html file -->
-
 <meta charset='utf-8'>
 
-<script async custom-element="amp-analytics"
-    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
+
 <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<!--
-  Import the `amp-sidebar` component.
--->
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 
 <script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 
 <!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
 <style amp-custom>
@@ -57,31 +56,6 @@ amp-sidebar {
 .close-sidebar span:nth-child(1){transform: rotate(45deg);}
 .close-sidebar span:nth-child(2){transform: rotate(-45deg);}
 
-#menu { margin-left: -40px; }
-#menu li {
-  list-style: none;
-  line-height: 1;
-  display: block;
-  position: relative;
-  margin: 0px;
-  padding: 3px 0px 3px 0px;
-}
-#menu ul {
-  width: 100%;
-  display: block;
-  margin: 0px;
-  padding: 0px 0px 0px 0px;
-}
-#menu ul li,
-#menu ul ul li {
-  width: 100%;
-  border-bottom: 0;
-  padding-left: 10px;
-}
-#menu ul ul ul li {
-  padding-left: 10px;
-}
-
 div.mwidth {max-width:1004px;margin: auto;}
 
 body {background-color:dimgray;}
@@ -98,6 +72,8 @@ h3 {color:#a3ff1a;font-family:serif}
 h4 {color:#8ae600;font-family:serif}
 a {color:#ffd700;}
 a:visited {color:#e6c300;}
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
+
 table.noborder {
   border-collapse: collapse;
   width: 100%;
@@ -131,35 +107,40 @@ div.even {background-color: darkslategray}
 .tblue {color:deepskyblue;}
 div.footer { font-size: 80%; color: red; text-align: center; }
 
-.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
   .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
-}
 
+}
 
 </style>
 </head>
 
 <body>
   <!-- top of body -->
-  
   <!-- sidebar menu -->
   <amp-sidebar id="sidebar" layout="nodisplay" side="left">
             <button on="tap:sidebar.close" class="close-sidebar">
@@ -197,7 +178,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
   <br>
   <br>
 
-
   </amp-sidebar>
 <main>
   <div class="mwidth">
@@ -206,7 +186,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
       </button>
     </div>
   </div>
-
+  
   <div class="leftads">
   <!-- AMP Responsive Skyscrapper -->
 <amp-ad
@@ -229,6 +209,12 @@ data-ad-slot="5275186684">
 </amp-ad>
 
   </div>
+  
+  <div class="body">
+    <div class="right">Website LHBoi.name.vn đang được chuyển đến địa chỉ mới LeHBoi.github.io.
+    </div>
+  </div>
+
 
   <div class="body">
     <div class="title">Giữ file trong nhiều máy và nhiều Cloud Storage</div>
@@ -245,15 +231,15 @@ data-ad-slot="5275186684">
       layout="fixed"
       data-layout="button_count"
       data-href=
-"https://www.lhboi.name.vn/kinh-nghiem/may-tinh/cloudstorage"
+"https://lehboi.github.io/kinh-nghiem/may-tinh/cloudstorage"
     >
     </amp-facebook-like>
   </div>
 
 <!-- body here -->
-<p>Bây giờ đa số người ta đều có một thứ tài sản đặc biệt cần giữ là các file: file hình/video chụp bằng camera/phone, file nhạc để nghe bằng phone/computer, tài liệu soạn ra khi làm việc và ghi chép cá nhân… Các file đó được tạo ra và giữ trong thẻ nhớ, USB drive, ổ đĩa cứng… và chúng rất dễ bị mất đi vì vật chứa bị hư bất ngờ hoặc người chủ lỡ tay xoá mất.</p>
-<h1>Backup</h1>
-<p>Từ vài chục năm trước, những người dùng máy tính cẩn thận đều định kỳ làm một việc quan trọng là backup, chép các file cần giữ sang một hoặc nhiều vật chứa khác, giữ nhiều bản sao ở các ngày khác nhau, thậm chí những bản sao đó còn được đem đi cất ở toà nhà khác hoặc địa phương khác để lỡ khi hoả hoạn hay thiên tai xảy ra thì không bị mất tất cả các bản sao. Ban đầu, dân máy tính chuyên nghiệp sao chép các file ra băng từ. Chép file vào băng từ và đọc từ băng ra chậm hơn đọc từ đĩa cứng rất nhiều nhưng băng từ rẻ hơn đĩa cứng nhiều lần nên có thể dùng để sao chép nhiều bản mà không quá tốn kém. Dân không chuyên thì không có ổ đọc/ghi băng và cũng không cần chép file ra nhiều bản nên đã chép ra đĩa mềm, rồi CD-Recordable, CD-Rewritable, DVD-Recordable, DVD-Rewritable rồi USB drive hoặc portable hard drive.</p>
+  <p>Bây giờ đa số người ta đều có một thứ tài sản đặc biệt cần giữ là các file: file hình/video chụp bằng camera/phone, file nhạc để nghe bằng phone/computer, tài liệu soạn ra khi làm việc và ghi chép cá nhân… Các file đó được tạo ra và giữ trong thẻ nhớ, USB drive, ổ đĩa cứng… và chúng rất dễ bị mất đi vì vật chứa bị hư bất ngờ hoặc người chủ lỡ tay xoá mất.</p>
+  <h1>Backup</h1>
+  <p>Từ vài chục năm trước, những người dùng máy tính cẩn thận đều định kỳ làm một việc quan trọng là backup, chép các file cần giữ sang một hoặc nhiều vật chứa khác, giữ nhiều bản sao ở các ngày khác nhau, thậm chí những bản sao đó còn được đem đi cất ở toà nhà khác hoặc địa phương khác để lỡ khi hoả hoạn hay thiên tai xảy ra thì không bị mất tất cả các bản sao. Ban đầu, dân máy tính chuyên nghiệp sao chép các file ra băng từ. Chép file vào băng từ và đọc từ băng ra chậm hơn đọc từ đĩa cứng rất nhiều nhưng băng từ rẻ hơn đĩa cứng nhiều lần nên có thể dùng để sao chép nhiều bản mà không quá tốn kém. Dân không chuyên thì không có ổ đọc/ghi băng và cũng không cần chép file ra nhiều bản nên đã chép ra đĩa mềm, rồi CD-Recordable, CD-Rewritable, DVD-Recordable, DVD-Rewritable rồi USB drive hoặc portable hard drive.</p>
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -280,13 +266,13 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<p>Khoảng 30 năm trước, do ở Việt Nam không có đủ phương tiện, nhiều người dùng máy tính dù là chuyên nghiệp cũng không làm việc backup quan trọng đó và không ít người phải chịu hậu quả của việc mất file.
-Tôi cũng đã hơn một lần bị như vậy. Lần đầu tiên tôi bị mất file là khi làm đồ án tốt nghiệp ngành máy tính ở trường Đại học Bách Khoa năm 1987. Hồi đó các thầy cấp cho hai sinh viên dùng chung một đĩa mềm 360KB. Máy tính của trường thì chỉ có một ổ đĩa mềm, máy sẽ nhắc người dùng khi thì cho đĩa chứa compiler vào ổ đĩa, khi thì cho đĩa chứa program đang soạn vào ổ đĩa.
-Trường cũng không có nhiều máy nên sinh viên thường phải chia giờ làm việc qua đêm, mà làm việc đêm thì mệt và dễ làm lộn. Một đêm nọ, người bạn dùng chung đĩa mềm với tôi đưa lộn đĩa vào ổ khi máy tính yêu cầu, thế là tất cả file trong đó bị ghi đè lên, bao nhiêu công lao soạn program biến mất không còn một chút dấu vết.</p>
-<p>Bắt đầu phổ biến từ vài năm nay là dịch vụ sao chép lên mây, cloud storage. Hiện nay, có rất nhiều nhà cung cấp dịch vụ cloud storage. Nhà cung cấp nào cũng cho người dùng được dùng miễn phí một mức nào đó. Khi cần dùng nhiều hơn thì người dùng phải trả tiền, trả theo tháng, theo năm hoặc trả một lần để dùng 99 năm. Mức dùng miễn phí nhiều hay ít khác nhau tùy theo nhà cung cấp. Có nhà cung cấp chỉ cho dùng vài GB miễn phí, cũng có những nhà cung cấp cho đến vài chục GB.</p>
-<p>Dùng những dịch vụ cloud storage rất tiện: có thể lấy file của mình ra dùng mọi lúc, mọi nơi miễn là có nối Internet, mà bây giờ thì quá dễ để được nối vào Internet với sóng di động 3G/4G. Càng tiện hơn nữa khi file được tạo ra trong máy của người dùng được tự động synchronize vào cloud và ngược lại, tiện hơn so với việc phải định kỳ chép từ bản chính sang bản sao. Một số cloud storage còn tạo ra một ổ đĩa cloud trong máy tính để các phần mềm trong máy làm việc thẳng với file trong cloud như file đang nằm trong máy (nhưng chậm hơn một chút, chỉ một chút thôi vì phần mềm cloud có cách cache rất tốt).
-<br>Từ khi dùng cloud storage tôi không còn lo đĩa cứng hay USB drive bị hư bất ngờ nữa. Tôi cũng không sợ việc xoá nhầm file vì cloud storage giữ lại nhiều version của từng file.
-<br>Một điều tiện lợi nữa khi dùng cloud storage là ta có thể cài lại máy nhanh chóng vì tất cả các file cần giữ đã luôn luôn được backup sẵn.</p>
+  <p>Khoảng 30 năm trước, do ở Việt Nam không có đủ phương tiện, nhiều người dùng máy tính dù là chuyên nghiệp cũng không làm việc backup quan trọng đó và không ít người phải chịu hậu quả của việc mất file.
+  Tôi cũng đã hơn một lần bị như vậy. Lần đầu tiên tôi bị mất file là khi làm đồ án tốt nghiệp ngành máy tính ở trường Đại học Bách Khoa năm 1987. Hồi đó các thầy cấp cho hai sinh viên dùng chung một đĩa mềm 360KB. Máy tính của trường thì chỉ có một ổ đĩa mềm, máy sẽ nhắc người dùng khi thì cho đĩa chứa compiler vào ổ đĩa, khi thì cho đĩa chứa program đang soạn vào ổ đĩa.
+  Trường cũng không có nhiều máy nên sinh viên thường phải chia giờ làm việc qua đêm, mà làm việc đêm thì mệt và dễ làm lộn. Một đêm nọ, người bạn dùng chung đĩa mềm với tôi đưa lộn đĩa vào ổ khi máy tính yêu cầu, thế là tất cả file trong đó bị ghi đè lên, bao nhiêu công lao soạn program biến mất không còn một chút dấu vết.</p>
+  <p>Bắt đầu phổ biến từ vài năm nay là dịch vụ sao chép lên mây, cloud storage. Hiện nay, có rất nhiều nhà cung cấp dịch vụ cloud storage. Nhà cung cấp nào cũng cho người dùng được dùng miễn phí một mức nào đó. Khi cần dùng nhiều hơn thì người dùng phải trả tiền, trả theo tháng, theo năm hoặc trả một lần để dùng 99 năm. Mức dùng miễn phí nhiều hay ít khác nhau tùy theo nhà cung cấp. Có nhà cung cấp chỉ cho dùng vài GB miễn phí, cũng có những nhà cung cấp cho đến vài chục GB.</p>
+  <p>Dùng những dịch vụ cloud storage rất tiện: có thể lấy file của mình ra dùng mọi lúc, mọi nơi miễn là có nối Internet, mà bây giờ thì quá dễ để được nối vào Internet với sóng di động 3G/4G. Càng tiện hơn nữa khi file được tạo ra trong máy của người dùng được tự động synchronize vào cloud và ngược lại, tiện hơn so với việc phải định kỳ chép từ bản chính sang bản sao. Một số cloud storage còn tạo ra một ổ đĩa cloud trong máy tính để các phần mềm trong máy làm việc thẳng với file trong cloud như file đang nằm trong máy (nhưng chậm hơn một chút, chỉ một chút thôi vì phần mềm cloud có cách cache rất tốt).
+  <br>Từ khi dùng cloud storage tôi không còn lo đĩa cứng hay USB drive bị hư bất ngờ nữa. Tôi cũng không sợ việc xoá nhầm file vì cloud storage giữ lại nhiều version của từng file.
+  <br>Một điều tiện lợi nữa khi dùng cloud storage là ta có thể cài lại máy nhanh chóng vì tất cả các file cần giữ đã luôn luôn được backup sẵn.</p>
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -313,15 +299,15 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<p>Dịch vụ cloud storage miễn phí cũng có một vấn đề là một ngày nào đó nhà cung cấp chấm dứt hoạt động. Khoảng 4-5 năm trước tôi dùng cloud storage copy.com, đến Tháng 3/2016 họ thông báo rằng sẽ ngưng hoạt động vào Tháng 5/2016, tôi đã phải di cư sang pcloud.com. Rút kinh nghiệm lần đó, bây giờ tôi không trung thành với một nhà cung cấp cloud storage nữa mà dùng nhiều hơn một. Nhưng để dùng nhiều hơn một cloud storage thì phải cẩn thận, phải làm sao cho các bản của file ở trong máy và trong từng cloud là giống nhau. Và việc này càng rắc rối hơn khi người dùng có nhiều máy: máy điện thoại, máy tính xách tay, máy tính để bàn… Phải làm sao cho khi dùng bất kỳ máy nào cũng dùng được đúng file có nội dung mới nhất.</p>
-<h1>Quy tắc sử dụng</h1>
-<p>Tôi đang dùng hai smartphone, một máy tính để bàn, một máy tính di động và hai cloud storage với quy tắc đơn giản sau đây để tránh rối loạn. Nguyên tắc là làm sao cho nội dung mới nhất dù được tạo ra ở đâu cũng chỉ được truyền đến mỗi chỗ chứa khác theo một đường mà thôi. Nếu có một chỗ chứa nhận được một file mới theo hai đường khác nhau thì rối loạn xảy ra. Quy tắc này áp dụng được cho nhiều smartphone, nhiều máy tính và nhiều cloud storage.</p>
-<ol>
-<li>Điều đầu tiên của quy tắc này là phải chọn một máy tính thường dùng nhất làm máy tính chính và một cloud storage có chức năng tạo ổ đĩa cloud trong máy tính và synchronize tốt nhất làm cloud storage chính; các smartphone thì đều như nhau, không chính không phụ, vì không synchronize storage mà luôn luôn dùng file trong cloud. Sau khi chọn xong máy tính chính và cloud storage chính, chúng ta sẽ cài các phần mềm cloud synchronize của cloud chính vào tất cả máy tính, cài tất cả các phần mềm cloud synchronize vào máy tính chính, và cài app cloud chính vào tất cả các phone.</li>
-<li>Điều thứ hai của quy tắc là: luôn luôn tạo/sửa/xoá file trong ổ đĩa cloud dù cho đang làm việc trên bất kỳ máy tính nào. File được tạo/sửa/xoá file trong ổ đĩa cloud sẽ được synchronize ra tất cả các nơi theo sơ đồ sau. Đúng ra, theo thiết kế thì file được tạo/sửa/xoá trong ổ đĩa cứng sẽ được synchronize vào cloud, nhưng đôi khi không biết do lý do gì mà việc synchronize bị trục trặc làm file được giữ không phải là bản mới nhất, do đó tạo/sửa/xoá file ngay trong ổ đĩa cloud thì hơn.</li>
-</ol>
-<div><amp-img alt="Files in clouds" src="/images/FileInCloud.svg" width="960" height="600" layout="responsive"></amp-img></div>
-<p>Trong sơ đồ trên, mũi tên chỉ hướng di chuyển của nội dung; máy tính và cloud tô màu xanh là chính, màu vàng là phụ, chính thì chỉ có một nhưng phụ thì có thể có nhiều.</p>
+  <p>Dịch vụ cloud storage miễn phí cũng có một vấn đề là một ngày nào đó nhà cung cấp chấm dứt hoạt động. Khoảng 4-5 năm trước tôi dùng cloud storage copy.com, đến Tháng 3/2016 họ thông báo rằng sẽ ngưng hoạt động vào Tháng 5/2016, tôi đã phải di cư sang pcloud.com. Rút kinh nghiệm lần đó, bây giờ tôi không trung thành với một nhà cung cấp cloud storage nữa mà dùng nhiều hơn một. Nhưng để dùng nhiều hơn một cloud storage thì phải cẩn thận, phải làm sao cho các bản của file ở trong máy và trong từng cloud là giống nhau. Và việc này càng rắc rối hơn khi người dùng có nhiều máy: máy điện thoại, máy tính xách tay, máy tính để bàn… Phải làm sao cho khi dùng bất kỳ máy nào cũng dùng được đúng file có nội dung mới nhất.</p>
+  <h1>Quy tắc sử dụng</h1>
+  <p>Tôi đang dùng hai smartphone, một máy tính để bàn, một máy tính di động và hai cloud storage với quy tắc đơn giản sau đây để tránh rối loạn. Nguyên tắc là làm sao cho nội dung mới nhất dù được tạo ra ở đâu cũng chỉ được truyền đến mỗi chỗ chứa khác theo một đường mà thôi. Nếu có một chỗ chứa nhận được một file mới theo hai đường khác nhau thì rối loạn xảy ra. Quy tắc này áp dụng được cho nhiều smartphone, nhiều máy tính và nhiều cloud storage.</p>
+  <ol>
+    <li>Điều đầu tiên của quy tắc này là phải chọn một máy tính thường dùng nhất làm máy tính chính và một cloud storage có chức năng tạo ổ đĩa cloud trong máy tính và synchronize tốt nhất làm cloud storage chính; các smartphone thì đều như nhau, không chính không phụ, vì không synchronize storage mà luôn luôn dùng file trong cloud. Sau khi chọn xong máy tính chính và cloud storage chính, chúng ta sẽ cài các phần mềm cloud synchronize của cloud chính vào tất cả máy tính, cài tất cả các phần mềm cloud synchronize vào máy tính chính, và cài app cloud chính vào tất cả các phone.</li>
+    <li>Điều thứ hai của quy tắc là: luôn luôn tạo/sửa/xoá file trong ổ đĩa cloud dù cho đang làm việc trên bất kỳ máy tính nào. File được tạo/sửa/xoá file trong ổ đĩa cloud sẽ được synchronize ra tất cả các nơi theo sơ đồ sau. Đúng ra, theo thiết kế thì file được tạo/sửa/xoá trong ổ đĩa cứng sẽ được synchronize vào cloud, nhưng đôi khi không biết do lý do gì mà việc synchronize bị trục trặc làm file được giữ không phải là bản mới nhất, do đó tạo/sửa/xoá file ngay trong ổ đĩa cloud thì hơn.</li>
+  </ol>
+  <div><amp-img alt="Files in clouds" src="/images/FileInCloud.svg" width="960" height="600" layout="responsive"></amp-img></div>
+  <p>Trong sơ đồ trên, mũi tên chỉ hướng di chuyển của nội dung; máy tính và cloud tô màu xanh là chính, màu vàng là phụ, chính thì chỉ có một nhưng phụ thì có thể có nhiều.</p>
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -348,24 +334,25 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<p>Quy trình cụ thể với file hình:</p>
-<ul>
-<li>Hình chụp bằng phone được upload vào cloud bằng chính phone đó rồi từ đó sẽ được synchronize đến khắp nơi,</li>
-<li>Hình chụp bằng camera sẽ được chép vào ổ đĩa cloud tại một máy tính bất kỳ rồi từ đó sẽ được synchronize đến khắp nơi.</li>
-</ul>
-<p>Để đỡ tốn công cho các phần mềm synchronize, ta có thể tắt lựa chọn synchronize những folder không cần sửa nữa. Ví dụ như những folder chứa ảnh của các năm trước, sau khi tất cả ảnh cũ đã được chép ra các cloud thì tắt lựa chọn synchronize.</p>
-<h1>Các cloud có thể dùng</h1>
-<p>Hiện nay tôi đang dùng <a href="https://my.pcloud.com/#page=register&invite=sxchZHAAiHy" target='_blank'>pCloud</a> làm cloud chính và <a href="http://mega.nz" target='_blank'>Mega</a> làm cloud phụ. pCloud cho dùng miễn phí đến 20GB. Mega cho dùng miễn phí đến 100GB.</p>
-<p>Ngoài ra còn có Google Drive dùng để tạo và giữ những file Doc và Sheet không hạn chế số lượng, Google Photos dùng để giữ ảnh đã được Google nén cũng không hạn chế số lượng. Có thể soạn các file Doc và Sheet trên máy tính với web browser hoặc trên điện thoại với app. Hình chụp bằng Android phone có thể được tự động cất vào Google Photos. Một nhược điểm của Google Drive là không có phần mềm synchronize với máy tính Linux.</p>
-<p>Tôi cũng đã dùng một máy laptop cũ yếu để làm cloud storage server riêng. Các bạn cũng có thể thử theo <a href="privcloudstor">cách này</a>.</p>
+  <p>Quy trình cụ thể với file hình:</p>
+  <ul>
+    <li>Hình chụp bằng phone được upload vào cloud bằng chính phone đó rồi từ đó sẽ được synchronize đến khắp nơi,</li>
+    <li>Hình chụp bằng camera sẽ được chép vào ổ đĩa cloud tại một máy tính bất kỳ rồi từ đó sẽ được synchronize đến khắp nơi.</li>
+  </ul>
+  <p>Để đỡ tốn công cho các phần mềm synchronize, ta có thể tắt lựa chọn synchronize những folder không cần sửa nữa. Ví dụ như những folder chứa ảnh của các năm trước, sau khi tất cả ảnh cũ đã được chép ra các cloud thì tắt lựa chọn synchronize.</p>
+  <h1>Các cloud có thể dùng</h1>
+  <p>Hiện nay tôi đang dùng <a href="https://my.pcloud.com/#page=register&invite=sxchZHAAiHy" target='_blank'>pCloud</a> làm cloud chính và <a href="http://mega.nz" target='_blank'>Mega</a> làm cloud phụ. pCloud cho dùng miễn phí đến 20GB. Mega cho dùng miễn phí đến 100GB.</p>
+  <p>Ngoài ra còn có Google Drive dùng để tạo và giữ những file Doc và Sheet không hạn chế số lượng, Google Photos dùng để giữ ảnh đã được Google nén cũng không hạn chế số lượng. Có thể soạn các file Doc và Sheet trên máy tính với web browser hoặc trên điện thoại với app. Hình chụp bằng Android phone có thể được tự động cất vào Google Photos. Một nhược điểm của Google Drive là không có phần mềm synchronize với máy tính Linux.</p>
+  <p>Tôi cũng đã dùng một máy laptop cũ yếu để làm cloud storage server riêng. Các bạn cũng có thể thử theo <a href="privcloudstor">cách này</a>.</p>
 
-<h1>Dùng chung file với người khác</h1>
-<p>Tôi có thể dùng chung một phần cloud storage với người khác theo những cách sau:</p>
-<ul>
-<li>Gửi URL của file hoặc folder cho người khác download file của tôi thay vì phải đính kèm vào email.</li>
-<li>Tạo một folder để người khác upload file vào thay vì người đó phải đính kèm file vào email và gửi cho tôi.</li>
-<li>Cho người khác quyền sửa hoặc thêm nhận xét vào file Doc hoặc Sheet trong Google Drive của tôi.</li>
-</ul>
+  <h1>Dùng chung file với người khác</h1>
+  <p>Tôi có thể dùng chung một phần cloud storage với người khác theo những cách sau:</p>
+  <ul>
+    <li>Gửi URL của file hoặc folder cho người khác download file của tôi thay vì phải đính kèm vào email.</li>
+    <li>Tạo một folder để người khác upload file vào thay vì người đó phải đính kèm file vào email và gửi cho tôi.</li>
+    <li>Cho người khác quyền sửa hoặc thêm nhận xét vào file Doc hoặc Sheet trong Google Drive của tôi.</li>
+  </ul>
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -393,6 +380,9 @@ data-ad-slot="3830899615">
 </amp-ad>
 
   <hr>
+Hit count <amp-iframe width="120" height="30" frameborder="0" 
+srcdoc="<img width='100' height='24' src='https://c.statcounter.com/12598906/0/9a8e736a/0/'>">
+</amp-iframe> by <a href="https://statcounter.com" target='_blank'>statcounter.com</a>.
   <div class="footer">
   Bấm các nút sau để liên-lạc 
   <br>
@@ -404,7 +394,7 @@ data-ad-slot="3830899615">
   <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   <br>
-  Nếu bạn chép lại những trang web này, hãy ghi nguồn-gốc <a href="https://www.lhboi.name.vn">https://WWW.LHBOI.NAME.VN</a> để người-đọc có-thể tìm được nội-dung mới cập-nhật.
+  Nếu bạn chép lại những trang-web này, hãy ghi nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a> để người-đọc có-thể tìm được nội-dung mới nhất.
   </div>
 </div>
 <amp-analytics type="googleanalytics">

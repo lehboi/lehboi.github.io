@@ -4,28 +4,27 @@
 <title>Tần số của TV (Trang web LHBội) </title>
 <meta name="description" content="Phân biệt các con số về tần số của TV, LCD, plasma" />
 <meta name="keywords" content="hữu ích, tài chính, cá nhân">
-<link rel="canonical" href="https://www.lhboi.name.vn/kinh-nghiem/linh-tinh/tan-so-cua-tv">
+<link rel="alternate" href="https://www.lhboi.name.vn/kinh-nghiem/linh-tinh/tan-so-cua-tv">
+<link rel="canonical" href="https://lehboi.github.io/kinh-nghiem/linh-tinh/tan-so-cua-tv">
 
 <!-- in head of html file -->
-
 <meta charset='utf-8'>
 
-<script async custom-element="amp-analytics"
-    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
+
 <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<!--
-  Import the `amp-sidebar` component.
--->
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 
 <script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 
 <!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
 <style amp-custom>
@@ -57,31 +56,6 @@ amp-sidebar {
 .close-sidebar span:nth-child(1){transform: rotate(45deg);}
 .close-sidebar span:nth-child(2){transform: rotate(-45deg);}
 
-#menu { margin-left: -40px; }
-#menu li {
-  list-style: none;
-  line-height: 1;
-  display: block;
-  position: relative;
-  margin: 0px;
-  padding: 3px 0px 3px 0px;
-}
-#menu ul {
-  width: 100%;
-  display: block;
-  margin: 0px;
-  padding: 0px 0px 0px 0px;
-}
-#menu ul li,
-#menu ul ul li {
-  width: 100%;
-  border-bottom: 0;
-  padding-left: 10px;
-}
-#menu ul ul ul li {
-  padding-left: 10px;
-}
-
 div.mwidth {max-width:1004px;margin: auto;}
 
 body {background-color:dimgray;}
@@ -98,6 +72,8 @@ h3 {color:#a3ff1a;font-family:serif}
 h4 {color:#8ae600;font-family:serif}
 a {color:#ffd700;}
 a:visited {color:#e6c300;}
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
+
 table.noborder {
   border-collapse: collapse;
   width: 100%;
@@ -131,35 +107,40 @@ div.even {background-color: darkslategray}
 .tblue {color:deepskyblue;}
 div.footer { font-size: 80%; color: red; text-align: center; }
 
-.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
   .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
-}
 
+}
 
 </style>
 </head>
 
 <body>
   <!-- top of body -->
-  
   <!-- sidebar menu -->
   <amp-sidebar id="sidebar" layout="nodisplay" side="left">
             <button on="tap:sidebar.close" class="close-sidebar">
@@ -170,17 +151,24 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     <a href='/home/about'>Thân-thế</a><br>
     <a href='/home/cv'>Thành-tích</a><br>
   <h3 class="myheader"><a href='/huu-ich/'>Hữu-ích</a></h3>
+
       <h4 class="myheader"><a href='/huu-ich/ke-hoach-tai-chinh/'>Lập-kế-hoạch-tài-chính</a></h4>
+
       <h4 class="myheader"><a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a></h4>
+
       <h4 class="myheader"><a href='/huu-ich/cac-loai-bao-hiem/'>Các loại bảo-hiểm</a></h4>
+
       <h4 class="myheader"><a href='/huu-ich/cau-chuyen/'>Câu-chuyện</a></h4>
 
   <h3 class="myheader">Kinh-nghiệm</h3>
     <h4 class="myheader"><a href='/kinh-nghiem/may-tinh/'>Máy-tính</a></h4>
+
     <h4 class="myheader"><a href='/kinh-nghiem/chu-viet/'>Chữ-Việt</a></h4>
+
     <h4 class="myheader"><a href='/kinh-nghiem/linh-tinh/'>Linh tinh</a></h4>
 
   <h3 class="myheader"><a href='/y-kien/'>Ý kiến</a></h3>
+
   <h3 class="myheader">Danh mục</h3>
     <a href='/download/'>Download</a><br>
     <a href='/sitemap'>Mục lục</a>
@@ -190,7 +178,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
   <br>
   <br>
 
-
   </amp-sidebar>
 <main>
   <div class="mwidth">
@@ -199,7 +186,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
       </button>
     </div>
   </div>
-
+  
   <div class="leftads">
   <!-- AMP Responsive Skyscrapper -->
 <amp-ad
@@ -209,6 +196,7 @@ type="adsense"
 data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="5275186684">
 </amp-ad>
+
   </div>
   <div class="rightads">
   <!-- AMP Responsive Skyscrapper -->
@@ -219,7 +207,14 @@ type="adsense"
 data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="5275186684">
 </amp-ad>
+
   </div>
+  
+  <div class="body">
+    <div class="right">Website LHBoi.name.vn đang được chuyển đến địa chỉ mới LeHBoi.github.io.
+    </div>
+  </div>
+
 
   <div class="body">
     <div class="title">Tần số của TV</div>
@@ -236,19 +231,19 @@ data-ad-slot="5275186684">
       layout="fixed"
       data-layout="button_count"
       data-href=
-https://www.lhboi.name.vn/kinh-nghiem/linh-tinh/tan-so-cua-tv
+https://lehboi.github.io/kinh-nghiem/linh-tinh/tan-so-cua-tv
     >
     </amp-facebook-like>
   </div>
 
-<p>Nếu đang chọn mua một cái TV LCD hoặc Plasma bạn sẽ phải bối rối trước các con số Hz khác nhau liên quan đến các TV này. Bài này tóm tắt những thông tin chính về các con số đó.</p>
-<p>Để cho vấn đề được trình bày có đầu, có đuôi, chúng ta sẽ bắt đầu từ một con số có từ trước khi có cái TV đầu tiên trên thế giới: đó là 24 hình mỗi giây.
-<br>Đa số phim nhựa được chiếu lên màn ảnh ở tốc độ 24 hình mỗi giây. Lúc ban đầu, phim chưa có tiếng thì có thể được chiếu ở tốc độ khoảng 16-23 hình mỗi giây, đủ cho người xem có cảm giác hình ảnh chuyển động tự nhiên. Từ những năm 1920, khi bắt đầu sản xuất phim có tiếng thì tốc độ được chọn là 24 hình mỗi giây. 24 là con số nhỏ nhất để tiếng trong phim có chất lượng đủ tốt. (<a href="https://en.wikipedia.org/wiki/Film" target="_blank">Xem wikipedia</a>)</p>
-<p>Máy TV không chiếu được nguyên một hình ngay một lúc như máy chiếu phim nhựa. Máy TV vẽ lần lượt từng điểm trên màn hình theo thứ tự từ trái sang phải thành một dòng, vẽ lần lượt xong dòng trên đến dòng dưới, khi vẽ xong dòng dưới cùng là tương đương với việc chiếu được một hình. Việc vẽ lần lượt như vậy gọi là <i>quét hình</i>.
-<br>50Hz và 60Hz là tần số điện xoay chiều dân dụng ở các nước khác nhau trên thế giới và cũng là tần số quét hình của TV trắng đen.
-Người ta cố ý chọn tần số điện làm tần số quét hình của TV để cho nhiễu từ điện lưới vào TV sẽ không hiện lên màn hình hoặc nếu có hiện lên thì nó hầu như đứng yên hoặc trôi rất chậm trên màn hình theo chiều thẳng đứng. Mục đích là ít gây khó chịu cho người xem. Tần số 50Hz được dùng ở phần lớn châu Âu, châu Á. Tần số 60Hz được dùng ở <a href="https://en.wikipedia.org/wiki/File:WorldMap_Voltage%26Frequency.png" target="_blank">Bắc Mỹ, Nhật</a>.
-Để tiết kiệm băng thông và chi phí, đài truyền hình không phát liên tục tất cả các dòng trong cùng một hình mà phát những dòng lẻ của một hình rồi phát những dòng chẵn của hình đó. TV quét hình theo cách này gọi là quét xen kẽ (interlacing).
-<br>Khi kỹ thuật truyền hình màu phát triển, hầu hết những nước dùng điện 50Hz đều chọn kỹ thuật truyền hình màu PAL (một số chọn kỹ thuật SECAM), hầu hết những nước dùng điện 60Hz đều chọn kỹ thuật NTSC. Do băng thông 6MHz của một kênh truyền hình NTSC chật chội, khi đưa thêm màu vào truyền hình, tần số quét trong NTSC giảm đi một phần ngàn để tránh nhiễu giữa hình và tiếng. Tần số quét trong NTSC thực sự là 59,94Hz nhưng vẫn thường được nói một cách gần đúng là 60Hz <a href="https://www.tvtechnology.com/article/60026" target="_blank">như trước</a>.</p>
+  <p>Nếu đang chọn mua một cái TV LCD hoặc Plasma bạn sẽ phải bối rối trước các con số Hz khác nhau liên quan đến các TV này. Bài này tóm tắt những thông tin chính về các con số đó.</p>
+  <p>Để cho vấn đề được trình bày có đầu, có đuôi, chúng ta sẽ bắt đầu từ một con số có từ trước khi có cái TV đầu tiên trên thế giới: đó là 24 hình mỗi giây.
+  <br>Đa số phim nhựa được chiếu lên màn ảnh ở tốc độ 24 hình mỗi giây. Lúc ban đầu, phim chưa có tiếng thì có thể được chiếu ở tốc độ khoảng 16-23 hình mỗi giây, đủ cho người xem có cảm giác hình ảnh chuyển động tự nhiên. Từ những năm 1920, khi bắt đầu sản xuất phim có tiếng thì tốc độ được chọn là 24 hình mỗi giây. 24 là con số nhỏ nhất để tiếng trong phim có chất lượng đủ tốt. (<a href="https://en.wikipedia.org/wiki/Film" target="_blank">Xem wikipedia</a>)</p>
+  <p>Máy TV không chiếu được nguyên một hình ngay một lúc như máy chiếu phim nhựa. Máy TV vẽ lần lượt từng điểm trên màn hình theo thứ tự từ trái sang phải thành một dòng, vẽ lần lượt xong dòng trên đến dòng dưới, khi vẽ xong dòng dưới cùng là tương đương với việc chiếu được một hình. Việc vẽ lần lượt như vậy gọi là <i>quét hình</i>.
+  <br>50Hz và 60Hz là tần số điện xoay chiều dân dụng ở các nước khác nhau trên thế giới và cũng là tần số quét hình của TV trắng đen.
+  Người ta cố ý chọn tần số điện làm tần số quét hình của TV để cho nhiễu từ điện lưới vào TV sẽ không hiện lên màn hình hoặc nếu có hiện lên thì nó hầu như đứng yên hoặc trôi rất chậm trên màn hình theo chiều thẳng đứng. Mục đích là ít gây khó chịu cho người xem. Tần số 50Hz được dùng ở phần lớn châu Âu, châu Á. Tần số 60Hz được dùng ở <a href="https://en.wikipedia.org/wiki/File:WorldMap_Voltage%26Frequency.png" target="_blank">Bắc Mỹ, Nhật</a>.
+  Để tiết kiệm băng thông và chi phí, đài truyền hình không phát liên tục tất cả các dòng trong cùng một hình mà phát những dòng lẻ của một hình rồi phát những dòng chẵn của hình đó. TV quét hình theo cách này gọi là quét xen kẽ (interlacing).
+  <br>Khi kỹ thuật truyền hình màu phát triển, hầu hết những nước dùng điện 50Hz đều chọn kỹ thuật truyền hình màu PAL (một số chọn kỹ thuật SECAM), hầu hết những nước dùng điện 60Hz đều chọn kỹ thuật NTSC. Do băng thông 6MHz của một kênh truyền hình NTSC chật chội, khi đưa thêm màu vào truyền hình, tần số quét trong NTSC giảm đi một phần ngàn để tránh nhiễu giữa hình và tiếng. Tần số quét trong NTSC thực sự là 59,94Hz nhưng vẫn thường được nói một cách gần đúng là 60Hz <a href="https://www.tvtechnology.com/article/60026" target="_blank">như trước</a>.</p>
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -275,13 +270,13 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<p>Khoảng hơn 10 năm trước, tiến bộ trong kỹ thuật điện tử cho phép người ta làm ra những TV có thể quét hình nhanh gấp đôi tín hiệu của đài truyền hình, những TV 100Hz ra đời (được gọi là TV 120Hz ở những nước dùng kỹ thuật NTSC).
-Những TV này vẫn nhận tín hiệu 50/60Hz bình thường nhưng nó vẽ mỗi hình lên màn hình hai lần liên tiếp để giảm sự nhấp nháy của hình. Một số TV 100/120Hz gần đây không lặp lại hình hai lần một cách đơn giản mà vẽ ra một hình trung gian giữa hai hình nhận được liên tiếp (Sony gọi là <b>Motionflow</b>, Panasonic gọi là <b>Motion Picture Pro</b>, Samsung gọi là <b>Motion Plus</b>), như vậy thì hình ảnh chuyển động sẽ đẹp hơn.
-Tính năng này thường gặp ở các TV LCD, nhưng không phải TV LCD 100/120Hz nào cũng có tính năng này. Và cũng cần chú ý rằng TV 100/120Hz không thể nhận được tín hiệu 100/120Hz mà chỉ nhận tín hiệu 50/60Hz. Nhiều người dùng TV LCD với máy tính cứ lầm tưởng rằng TV 120HZ thì có thể nhận tín hiệu lên tới 120Hz từ máy tính. Những TV LCD đời mới nhất có tần số quét lên đến 200/240Hz, đây là sự nâng cao của kỹ thuật 100/120Hz.</p>
-<p>Để cạnh tranh với các con số 120Hz, 240Hz của TV LCD, các nhà sản xuất TV Plasma khoe ra các con số sub-field driving 480Hz, 600Hz, 660Hz, 840Hz. Nhưng ý nghĩa của những con số sub-field driving này hoàn toàn khác với tần số quét của TV LCD.
-Đặc tính của màn hình Plasma là từng điểm sáng có thể sáng lên và tối đi nhanh hơn nhiều lần so với LCD và các điểm sáng của màn hình Plasma thay đổi độ sáng bằng cách thay đổi thời gian phát sáng, tổng số thời gian sáng của mỗi điểm sẽ ứng với độ sáng mà mắt người cảm thấy ở điểm đó.
-Do đó, màn hình Plasma sẽ quét qua các điểm nhiều lần cho mỗi hình, điểm sáng được bật hay tắt trong các lần quét sao cho điểm đó có độ sáng phù hợp với hình cần vẽ. Nhân số lần quét với tần số 60Hz ta sẽ thấy các con số sub-field driving 480, 600, 660, 840 như trên (với 50Hz thì kết quả là 400, 500, 550, 700).
-Như vậy, số sub-field driving càng lớn thì càng có khả năng thể hiện nhiều mức sáng (hay là độ tương phản), số này không thể đem so với tần số quét của TV LCD. (<a href="https://www.avsforum.com/avs-vb/showthread.php?t=1047145" target="_blank">Xem thảo luận</a>)</p>
+  <p>Khoảng hơn 10 năm trước, tiến bộ trong kỹ thuật điện tử cho phép người ta làm ra những TV có thể quét hình nhanh gấp đôi tín hiệu của đài truyền hình, những TV 100Hz ra đời (được gọi là TV 120Hz ở những nước dùng kỹ thuật NTSC).
+  Những TV này vẫn nhận tín hiệu 50/60Hz bình thường nhưng nó vẽ mỗi hình lên màn hình hai lần liên tiếp để giảm sự nhấp nháy của hình. Một số TV 100/120Hz gần đây không lặp lại hình hai lần một cách đơn giản mà vẽ ra một hình trung gian giữa hai hình nhận được liên tiếp (Sony gọi là <b>Motionflow</b>, Panasonic gọi là <b>Motion Picture Pro</b>, Samsung gọi là <b>Motion Plus</b>), như vậy thì hình ảnh chuyển động sẽ đẹp hơn.
+  Tính năng này thường gặp ở các TV LCD, nhưng không phải TV LCD 100/120Hz nào cũng có tính năng này. Và cũng cần chú ý rằng TV 100/120Hz không thể nhận được tín hiệu 100/120Hz mà chỉ nhận tín hiệu 50/60Hz. Nhiều người dùng TV LCD với máy tính cứ lầm tưởng rằng TV 120HZ thì có thể nhận tín hiệu lên tới 120Hz từ máy tính. Những TV LCD đời mới nhất có tần số quét lên đến 200/240Hz, đây là sự nâng cao của kỹ thuật 100/120Hz.</p>
+  <p>Để cạnh tranh với các con số 120Hz, 240Hz của TV LCD, các nhà sản xuất TV Plasma khoe ra các con số sub-field driving 480Hz, 600Hz, 660Hz, 840Hz. Nhưng ý nghĩa của những con số sub-field driving này hoàn toàn khác với tần số quét của TV LCD.
+  Đặc tính của màn hình Plasma là từng điểm sáng có thể sáng lên và tối đi nhanh hơn nhiều lần so với LCD và các điểm sáng của màn hình Plasma thay đổi độ sáng bằng cách thay đổi thời gian phát sáng, tổng số thời gian sáng của mỗi điểm sẽ ứng với độ sáng mà mắt người cảm thấy ở điểm đó.
+  Do đó, màn hình Plasma sẽ quét qua các điểm nhiều lần cho mỗi hình, điểm sáng được bật hay tắt trong các lần quét sao cho điểm đó có độ sáng phù hợp với hình cần vẽ. Nhân số lần quét với tần số 60Hz ta sẽ thấy các con số sub-field driving 480, 600, 660, 840 như trên (với 50Hz thì kết quả là 400, 500, 550, 700).
+  Như vậy, số sub-field driving càng lớn thì càng có khả năng thể hiện nhiều mức sáng (hay là độ tương phản), số này không thể đem so với tần số quét của TV LCD. (<a href="https://www.avsforum.com/avs-vb/showthread.php?t=1047145" target="_blank">Xem thảo luận</a>)</p>
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -308,12 +303,15 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<p>TV Plasma và LCD thường được dùng để xem phim (từ máy phát đĩa Blue-ray, HTPC, HD player, hay HDTV set-top box). Những phim có nguồn gốc phim nhựa thường có tốc độ 24 hình mỗi giây. Nếu phim được số hoá theo cách tương thích với thiết bị NTSC thì tốc độ chính xác là 23,976 hình mỗi giây, nhưng vẫn được gọi gần đúng là 24. Để xem phim tốt nhất, một số TV có chế độ 24p (quét 24 hình mỗi giây).
-Mặc dù 120 là bội số của 24 nhưng không phải tất cả TV 120Hz đều có chế độ 24p. Cũng giống như có nhiều cách xử lý tín hiệu 50Hz, có nhiều mức độ thực hiện 24p. Mức độ đơn giản nhất là vẽ 24 hình mỗi giây, mức độ cao hơn là lặp lại mỗi hình để vẽ 48 hoặc 96 hình mỗi giây để hình đỡ nhấp nháy, cao nhất là vẽ ra một hoặc ba hình trung gian giữa hai hình liên tiếp để ra 48 hoặc 96 hình khác nhau mỗi giây (Panasonic gọi là <b>24p Smooth Film</b>, Samsung gọi là <b>Cinema Smooth</b>).
+  <p>TV Plasma và LCD thường được dùng để xem phim (từ máy phát đĩa Blue-ray, HTPC, HD player, hay HDTV set-top box). Những phim có nguồn gốc phim nhựa thường có tốc độ 24 hình mỗi giây. Nếu phim được số hoá theo cách tương thích với thiết bị NTSC thì tốc độ chính xác là 23,976 hình mỗi giây, nhưng vẫn được gọi gần đúng là 24. Để xem phim tốt nhất, một số TV có chế độ 24p (quét 24 hình mỗi giây).
+  Mặc dù 120 là bội số của 24 nhưng không phải tất cả TV 120Hz đều có chế độ 24p. Cũng giống như có nhiều cách xử lý tín hiệu 50Hz, có nhiều mức độ thực hiện 24p. Mức độ đơn giản nhất là vẽ 24 hình mỗi giây, mức độ cao hơn là lặp lại mỗi hình để vẽ 48 hoặc 96 hình mỗi giây để hình đỡ nhấp nháy, cao nhất là vẽ ra một hoặc ba hình trung gian giữa hai hình liên tiếp để ra 48 hoặc 96 hình khác nhau mỗi giây (Panasonic gọi là <b>24p Smooth Film</b>, Samsung gọi là <b>Cinema Smooth</b>).
 Nếu TV không có chế độ 24p thì nguồn phát (máy phát đĩa Blue-ray, HTPC, HD player, hay HDTV set-top box) sẽ phải lặp lại một số hình từ 24 hình mỗi giây để đưa cho TV 50 hay 60 hình mỗi giây, việc này gọi là pull-down, hình ảnh chuyển động trên TV sẽ không được tự nhiên. Đối với những người hay xem phim thì chế độ 24p có giá trị hơn chế độ 100/120Hz. Khi đã có một TV có chế độ 24p thì đừng bỏ phí nó khi xem phim, hãy chọn đúng chế độ 24p ở nguồn phát và đừng tắt chế độ 24p trên TV.</p>
-<p>Bài này đã được gửi vào diễn đàn <a href="https://www.hdvietnam.com/diendan/31-hd-cho-nguoi-moi-bat-dau/40977-cac-con-so-hz-quanh-nhung.html" target="_blank">hdvietnam.com</a> ngày 29-12-2009.</p>
+  <p>Bài này đã được gửi vào diễn đàn <a href="https://www.hdvietnam.com/diendan/31-hd-cho-nguoi-moi-bat-dau/40977-cac-con-so-hz-quanh-nhung.html" target="_blank">hdvietnam.com</a> ngày 29-12-2009.</p>
 
   <hr>
+Hit count <amp-iframe width="120" height="30" frameborder="0" 
+srcdoc="<img width='100' height='24' src='https://c.statcounter.com/12598906/0/9a8e736a/0/'>">
+</amp-iframe> by <a href="https://statcounter.com" target='_blank'>statcounter.com</a>.
   <div class="footer">
   Bấm các nút sau để liên-lạc 
   <br>
@@ -325,7 +323,7 @@ Nếu TV không có chế độ 24p thì nguồn phát (máy phát đĩa Blue-ra
   <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   <br>
-  Nếu bạn chép lại những trang web này, hãy ghi nguồn-gốc <a href="https://www.lhboi.name.vn">https://WWW.LHBOI.NAME.VN</a> để người-đọc có-thể tìm được nội-dung mới cập-nhật.
+  Nếu bạn chép lại những trang-web này, hãy ghi nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a> để người-đọc có-thể tìm được nội-dung mới nhất.
   </div>
 </div>
 <amp-analytics type="googleanalytics">

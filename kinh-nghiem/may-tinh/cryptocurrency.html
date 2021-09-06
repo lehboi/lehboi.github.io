@@ -4,28 +4,27 @@
 <title>Hỏi đáp về Cryptocurrency (Trang web LHBội)</title>
 <meta name="description" content="Tìm hiểu Cryptocurrency: là gì, giữ như thế nào, trao đổi như thế nào, lợi/hại" />
 <meta name="keywords" content="cryptocurrency, bitcoin">
-<link rel="canonical" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/cryptocurrency">
+<link rel="alternate" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/cryptocurrency">
+<link rel="canonical" href="https://lehboi.github.io/kinh-nghiem/may-tinh/cryptocurrency">
 
 <!-- in head of html file -->
-
 <meta charset='utf-8'>
 
-<script async custom-element="amp-analytics"
-    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
+
 <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<!--
-  Import the `amp-sidebar` component.
--->
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 
 <script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 
 <!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
 <style amp-custom>
@@ -57,31 +56,6 @@ amp-sidebar {
 .close-sidebar span:nth-child(1){transform: rotate(45deg);}
 .close-sidebar span:nth-child(2){transform: rotate(-45deg);}
 
-#menu { margin-left: -40px; }
-#menu li {
-  list-style: none;
-  line-height: 1;
-  display: block;
-  position: relative;
-  margin: 0px;
-  padding: 3px 0px 3px 0px;
-}
-#menu ul {
-  width: 100%;
-  display: block;
-  margin: 0px;
-  padding: 0px 0px 0px 0px;
-}
-#menu ul li,
-#menu ul ul li {
-  width: 100%;
-  border-bottom: 0;
-  padding-left: 10px;
-}
-#menu ul ul ul li {
-  padding-left: 10px;
-}
-
 div.mwidth {max-width:1004px;margin: auto;}
 
 body {background-color:dimgray;}
@@ -98,6 +72,8 @@ h3 {color:#a3ff1a;font-family:serif}
 h4 {color:#8ae600;font-family:serif}
 a {color:#ffd700;}
 a:visited {color:#e6c300;}
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
+
 table.noborder {
   border-collapse: collapse;
   width: 100%;
@@ -131,35 +107,40 @@ div.even {background-color: darkslategray}
 .tblue {color:deepskyblue;}
 div.footer { font-size: 80%; color: red; text-align: center; }
 
-.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
   .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
-}
 
+}
 
 </style>
 </head>
 
 <body>
   <!-- top of body -->
-  
   <!-- sidebar menu -->
   <amp-sidebar id="sidebar" layout="nodisplay" side="left">
             <button on="tap:sidebar.close" class="close-sidebar">
@@ -197,7 +178,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
   <br>
   <br>
 
-
   </amp-sidebar>
 <main>
   <div class="mwidth">
@@ -206,7 +186,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
       </button>
     </div>
   </div>
-
+  
   <div class="leftads">
   <!-- AMP Responsive Skyscrapper -->
 <amp-ad
@@ -229,6 +209,12 @@ data-ad-slot="5275186684">
 </amp-ad>
 
   </div>
+  
+  <div class="body">
+    <div class="right">Website LHBoi.name.vn đang được chuyển đến địa chỉ mới LeHBoi.github.io.
+    </div>
+  </div>
+
 
   <div class="body">
     <div class="title">Hỏi đáp về Cryptocurrency</div>
@@ -245,7 +231,7 @@ data-ad-slot="5275186684">
       layout="fixed"
       data-layout="button_count"
       data-href=
-https://www.lhboi.name.vn/kinh-nghiem/may-tinh/cryptocurrency
+https://lehboi.github.io/kinh-nghiem/may-tinh/cryptocurrency
     >
     </amp-facebook-like>
   </div>
@@ -254,11 +240,9 @@ https://www.lhboi.name.vn/kinh-nghiem/may-tinh/cryptocurrency
 <h1>Cryptocurrency là gì?</h1>
 <div class="inlineleft"><amp-img alt="Bitcoin" width="200" src="/images/bitcoin-chip.jpg" height="128" layout="fixed"></amp-img></div>
 
-<p>Cryptocurrency (tiền mật mã) là một phát-minh của Satoshi Nakamoto trong năm 2008 về tiền-điện-tử trong mạng-lưới-ngang-hàng (A Peer-to-Peer Electronic Cash System.)
-</p>
-<p>Khi giao-dịch tiền trong ngân hàng thường, mỗi sự chuyển dịch của tiền đều được ghi lại bằng một dòng đại khái như “An chuyển x đồng cho Bình” trong server của ngân hàng. Trong mạng ngang hàng, không có một server tập trung thông tin, mà mọi thành viên trong mạng lưới (gọi là node) đều có một bản sao tất-cả sổ-cái-ghi-chép-giao-dịch. Phát-minh của Satoshi là cách để mọi bản sao đều đồng nhất với nhau. Satoshi gọi đồng tiền điện tử mới đó là Bitcoin. Trong hệ thống Bitcoin, dòng “An chuyển x bitcoin cho Bình” phải được ký bởi chữ ký điện tử (private key) của An rồi được truyền đến tất cả các node trong mạng. Giao dịch đó còn phải chờ được các node phê-chuẩn rồi mới được thực-hiện. Các node phải kiểm-tra để chắc-chắn rằng x bitcoin thật sự là của An.
-</p>
-<p>Các máy tính node, còn gọi là miner, sẽ kiểm tra, xử lý các dòng giao dịch đó để gói các giao dịch vào một block theo thuật toán SHA 256 và nối block đó với các block đã có trước. Khi quá trình đó hoàn thành thì giao dịch mới được xác nhận. Miner nào gói được một block đạt yêu-cầu sớm nhất sẽ được thưởng bằng những bitcoin mới sinh ra.
+<p>Cryptocurrency (tiền mật mã) là một phát-minh của Satoshi Nakamoto trong năm 2008 về tiền-điện-tử trong mạng-lưới-ngang-hàng (A Peer-to-Peer Electronic Cash System.)</p>
+<p>Khi giao-dịch tiền trong ngân hàng thường, mỗi sự chuyển dịch của tiền đều được ghi lại bằng một dòng đại khái như “An chuyển x đồng cho Bình” trong server của ngân hàng. Trong mạng ngang hàng, không có một server tập trung thông tin, mà mọi thành viên trong mạng lưới (gọi là node) đều có một bản sao tất-cả sổ-cái-ghi-chép-giao-dịch. Phát-minh của Satoshi là cách để mọi bản sao đều đồng nhất với nhau. Satoshi gọi đồng tiền điện tử mới đó là Bitcoin. Trong hệ thống Bitcoin, dòng “An chuyển x bitcoin cho Bình” phải được ký bởi chữ ký điện tử (private key) của An rồi được truyền đến tất cả các node trong mạng. Giao dịch đó còn phải chờ được các node phê-chuẩn rồi mới được thực-hiện. Các node phải kiểm-tra để chắc-chắn rằng x bitcoin thật sự là của An.</p>
+<p>Các máy tính node, còn gọi là miner, sẽ kiểm tra, xử lý các dòng giao dịch đó để gói các giao dịch vào một block theo thuật toán SHA 256 và nối block đó với các block đã có trước. Khi quá trình đó hoàn thành thì giao dịch mới được xác nhận. Miner nào gói được một block đạt yêu-cầu sớm nhất sẽ được thưởng bằng những bitcoin mới sinh ra.</p>
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -286,16 +270,14 @@ data-ad-slot="3830899615">
 </amp-ad>
 
 <h2>Ký bằng chữ ký điện tử thế nào?</h2>
-<p><a href="https://en.wikipedia.org/wiki/Digital_signature" target='_blank'>Chữ ký điện tử</a> là một cặp hai con số rất lớn: private key và public key. Tên gọi của hai con số đó đã cho biết: phải giữ kín private key và để public key cho mọi người biết.<br>
-Khi ký một thông điệp m, máy tính sẽ tính ra một chữ ký s từ m và private key rồi gửi s kèm theo m. Bên nhận được thông điệp sẽ dùng public key và m để tính ra xem kết quả có khớp với s hay không. Nếu không khớp nghĩa là m đã bị tráo trên đường truyền.
-<p>Một ứng dụng khác của chữ ký điện tử là mã hoá thông điệp để giữ bí mật. Khi A muốn gửi một thông điệp hay file m cho B mà không cho bất kỳ ai khác dùng được thì A dùng public key của B để mã hoá thông điệp m thành m'. B nhận được thông điệp m' sẽ dùng private key để giải mã trở lại thành m. Bất kỳ người nào khác chép được m' trên đường truyền đều không thể giải mã được. 
+<p><a href="https://en.wikipedia.org/wiki/Digital_signature" target='_blank'>Chữ ký điện tử</a> là một cặp hai con số rất lớn: private key và public key. Tên gọi của hai con số đó đã cho biết: phải giữ kín private key và để public key cho mọi người biết.
+<br>Khi ký một thông điệp m, máy tính sẽ tính ra một chữ ký s từ m và private key rồi gửi s kèm theo m. Bên nhận được thông điệp sẽ dùng public key và m để tính ra xem kết quả có khớp với s hay không. Nếu không khớp nghĩa là m đã bị tráo trên đường truyền.</p>
+<p>Một ứng dụng khác của chữ ký điện tử là mã hoá thông điệp để giữ bí mật. Khi A muốn gửi một thông điệp hay file m cho B mà không cho bất kỳ ai khác dùng được thì A dùng public key của B để mã hoá thông điệp m thành m'. B nhận được thông điệp m' sẽ dùng private key để giải mã trở lại thành m. Bất kỳ người nào khác chép được m' trên đường truyền đều không thể giải mã được.</p>
 <h1>Bitcoin được giữ như thế nào?</h1>
 <p>Bitcoin được 'giữ' trong các wallet. Wallet gồm một software và file dữ liệu chứa những cặp public key và private key do software tạo ra. Public key là địa chỉ của wallet.
-<br>Private key là một con số nhị phân dài 256/128/512 bit được tự động sinh ra một cách ngẫu nhiên bằng software wallet cho người chủ của wallet. Software còn giúp tạo ra một dãy từ gợi nhớ gồm những từ có trong từ điển (mnemonic phrase, recovery phrase) mà từ dãy đó tìm trở lại private key của wallet. Mnemonic phrase cần được viết ra giấy và cất kỹ ở vài nơi để có thể lấy ra dùng khi cần.
-</p>
+<br>Private key là một con số nhị phân dài 256/128/512 bit được tự động sinh ra một cách ngẫu nhiên bằng software wallet cho người chủ của wallet. Software còn giúp tạo ra một dãy từ gợi nhớ gồm những từ có trong từ điển (mnemonic phrase, recovery phrase) mà từ dãy đó tìm trở lại private key của wallet. Mnemonic phrase cần được viết ra giấy và cất kỹ ở vài nơi để có thể lấy ra dùng khi cần.</p>
 <p>Tiền giấy và tiền kim loại thông thường được chính phủ phát hành theo những mệnh giá cố định. Bitcoin không như vậy. Những lượng Bitcoin lớn nhỏ khác nhau lưu hành trong mạng. Mỗi lượng Bitcoin là một chuỗi data ghi những giao dịch nó đã trải qua từ lúc được tạo ra. Khi một lượng Bitcoin x được chuyển từ wallet A sang wallet B, thì x được ghi thêm địa chỉ B và được ký bằng private key của A.
-<br>Tổng số tiền có trong wallet là tổng các lượng Bitcoin mang các địa chỉ của wallet. Khi một wallet A cần chuyển một lượng Bitcoin x sang wallet B mà không có lượng Bitcoin bằng đúng x có sẵn trong wallet A thì nó lấy một hoặc nhiều lượng Bitcoin có tổng lớn hơn hoặc bằng x đưa vào giao dịch, tạo ra một lượng Bitcoin x mới mang địa chỉ B và một lượng Bitcoin mới mang địa chỉ A chứa phần dư sau khi trừ x (nếu có). Phần dư cũng có thể mang một địa chỉ khác A được tạo ra và software wallet phải ghi cặp public key và private key của lượng Bitcoin dư đó vào file dữ liệu.
-</p>
+<br>Tổng số tiền có trong wallet là tổng các lượng Bitcoin mang các địa chỉ của wallet. Khi một wallet A cần chuyển một lượng Bitcoin x sang wallet B mà không có lượng Bitcoin bằng đúng x có sẵn trong wallet A thì nó lấy một hoặc nhiều lượng Bitcoin có tổng lớn hơn hoặc bằng x đưa vào giao dịch, tạo ra một lượng Bitcoin x mới mang địa chỉ B và một lượng Bitcoin mới mang địa chỉ A chứa phần dư sau khi trừ x (nếu có). Phần dư cũng có thể mang một địa chỉ khác A được tạo ra và software wallet phải ghi cặp public key và private key của lượng Bitcoin dư đó vào file dữ liệu.</p>
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -324,27 +306,26 @@ data-ad-slot="3830899615">
 
 Wallet có thể được đặt trong
 <ol>
-<li>máy tính Linux, Windows, Mac
-<li>smartphone
-<li>trong thiết bị USB đặc biệt, gồm có một bộ xử lý và bộ nhớ riêng như một <a href="https://en.wikipedia.org/wiki/Smart_card" target='_blank'>Smartcard</a> để chứa wallet và ký các lệnh chuyển tiền. Lệnh chuyển tiền được ký trong thiết bị nên không lo private key bị ăn cắp bởi các malware trong máy tính.
-<li>web server trong Internet
+<li>máy tính Linux, Windows, Mac</li>
+<li>smartphone</li>
+<li>trong thiết bị USB đặc biệt, gồm có một bộ xử lý và bộ nhớ riêng như một <a href="https://en.wikipedia.org/wiki/Smart_card" target='_blank'>Smartcard</a> để chứa wallet và ký các lệnh chuyển tiền. Lệnh chuyển tiền được ký trong thiết bị nên không lo private key bị ăn cắp bởi các malware trong máy tính.</li>
+<li>web server trong Internet</li>
 </ol>
 Có loại wallet còn giữ luôn tất cả các block dữ liệu giao dịch của toàn hệ thống, đó là full node. Cho tới năm 2021 thì toàn bộ các block Bitcoin chiếm 350GB.
-<p>Ở hệ thống ngân hàng thường, tiền nằm trong các file trong hệ thống máy tính còn chữ ký thì nằm trên tay chủ tài khoản hoặc private key của chữ ký điện tử nằm trong máy hay USB do chủ tài khoản giữ. Tiền và chữ ký ở hai nơi khác nhau. Hacker phải biết được địa chỉ của tiền (số tài khoản) và chữ ký thì mới chuyển tiền đi nơi khác được.<br>
-Trong hệ thống Bitcoin, wallet chứa cả địa chỉ các Bitcoin lẫn private key. Hacker chép được file wallet là trở thành chủ của số Bitcoin trong wallet; hacker sẽ nhanh chóng chuyển hết Bitcoin trong wallet sang chỗ khác trước khi chủ wallet kịp biết.
-</p>
+<p>Ở hệ thống ngân hàng thường, tiền nằm trong các file trong hệ thống máy tính còn chữ ký thì nằm trên tay chủ tài khoản hoặc private key của chữ ký điện tử nằm trong máy hay USB do chủ tài khoản giữ. Tiền và chữ ký ở hai nơi khác nhau. Hacker phải biết được địa chỉ của tiền (số tài khoản) và chữ ký thì mới chuyển tiền đi nơi khác được.
+<br>Trong hệ thống Bitcoin, wallet chứa cả địa chỉ các Bitcoin lẫn private key. Hacker chép được file wallet là trở thành chủ của số Bitcoin trong wallet; hacker sẽ nhanh chóng chuyển hết Bitcoin trong wallet sang chỗ khác trước khi chủ wallet kịp biết.</p>
 <h1>Mua bán Bitcoin như thế nào?</h1>
 <p>Người mua chuyển tiền cho người bán rồi người bán chuyển lượng Bitcoin vào địa chỉ do wallet của người mua sinh ra. Bên mua Bitcoin chỉ cần cho biết địa chỉ dưới dạng dãy chữ số hoặc một QR code là đủ.
-<br>Nếu bên bán Bitcoin gõ dãy chữ số địa chỉ sai thì Bitcoin sẽ quay trở lại wallet của bên bán trong hầu hết các trường hợp, có một xác suất rất nhỏ là địa chỉ gõ sai đó có thật và địa chỉ đó sẽ nhận được lượng Bitcoin thay vì người mua nhận được. Việc này tương tự như chuyển khoản giữa hai ngân hàng khác nhau: hầu hết các lệnh chuyển sai tên hoặc số tài khoản bên nhận đều không được thực hiện, chỉ có trường hợp tình cờ mà tên và số tài khoản sai lại trùng với một tài khoản thật thì tiền sẽ chuyển cho người đó. Người chuyển khoản sai có thể nhờ ngân hàng thu hồi lại tiền, chuyển sai Bitcoin thì không thể thu hồi lại được. Trong những hệ thống cryptocurrency không có cơ chế kiểm tra địa chỉ như Ethereum thì gửi tiền gửi sai địa chỉ luôn luôn đi mất.
-<p>Việc ghi nhận Bitcoin chuyển địa chỉ khá chậm cho nên chỉ giao dịch với đối tác tin cậy để tránh mất tiền vì bị lừa.
+<br>Nếu bên bán Bitcoin gõ dãy chữ số địa chỉ sai thì Bitcoin sẽ quay trở lại wallet của bên bán trong hầu hết các trường hợp, có một xác suất rất nhỏ là địa chỉ gõ sai đó có thật và địa chỉ đó sẽ nhận được lượng Bitcoin thay vì người mua nhận được. Việc này tương tự như chuyển khoản giữa hai ngân hàng khác nhau: hầu hết các lệnh chuyển sai tên hoặc số tài khoản bên nhận đều không được thực hiện, chỉ có trường hợp tình cờ mà tên và số tài khoản sai lại trùng với một tài khoản thật thì tiền sẽ chuyển cho người đó. Người chuyển khoản sai có thể nhờ ngân hàng thu hồi lại tiền, chuyển sai Bitcoin thì không thể thu hồi lại được. Trong những hệ thống cryptocurrency không có cơ chế kiểm tra địa chỉ như Ethereum thì gửi tiền gửi sai địa chỉ luôn luôn đi mất.</p>
+<p>Việc ghi nhận Bitcoin chuyển địa chỉ khá chậm cho nên chỉ giao dịch với đối tác tin cậy để tránh mất tiền vì bị lừa.</p>
 <ol>
 <li>Mua bán trên sàn giao dịch
 Mua bán giữa các wallet đặt trong cùng một web server.
-Giao dịch trên sàn thì tốn phí giao dịch, phí chuyển Bitcoin vào và ra. Ví dụ mỗi lần rút Bitcoin từ sàn Remitano ra đều tốn 0,0005 Bitcoin, theo giá giao dịch hiện nay là hơn 200 ngàn đồng phí.
-<li>Mua bán trực tiếp giữa những người quen thân
+Giao dịch trên sàn thì tốn phí giao dịch, phí chuyển Bitcoin vào và ra. Ví dụ mỗi lần rút Bitcoin từ sàn Remitano ra đều tốn 0,0005 Bitcoin, theo giá giao dịch hiện nay là hơn 200 ngàn đồng phí.</li>
+<li>Mua bán trực tiếp giữa những người quen thân</li>
 </ol>
-<p>Mua bán cách nào cũng tốn phí trả cho miner.<br>
-Khi lượng Bitcoin cần chuyển ra khỏi wallet không bằng bất cứ một lượng Bitcoin nào có sẵn trong wallet thì việc chuyển Bitcoin sẽ có thêm bước tách/nhập các lượng Bitcoin có sẵn thành lượng Bitcon cần chuyển. Bước tách/nhập làm tốn công miner hơn nên tốn phí nhiều hơn.
+<p>Mua bán cách nào cũng tốn phí trả cho miner.
+<br>Khi lượng Bitcoin cần chuyển ra khỏi wallet không bằng bất cứ một lượng Bitcoin nào có sẵn trong wallet thì việc chuyển Bitcoin sẽ có thêm bước tách/nhập các lượng Bitcoin có sẵn thành lượng Bitcon cần chuyển. Bước tách/nhập làm tốn công miner hơn nên tốn phí nhiều hơn.</p>
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -372,15 +353,15 @@ data-ad-slot="3830899615">
 </amp-ad>
 
 <h1>Giữ wallet thế nào để khỏi mất?</h1>
-<p>Wallet trong web server là mục tiêu của hacker. Hacker luôn tìm cách chiếm đoạt toàn bộ wallet trong từng server. Lượng Bitcoin chưa định bán thì nên chuyển từ web wallet vào cold wallet để tránh bị hack.
-<p>Wallet trong máy tính và smartphone dễ bị mất cắp qua các phần mềm gián điệp. Để an toàn hơn, người ta để wallet trong các máy tính sạch và không nối mạng, gọi là cold wallet. Người ta đặt ra các thủ tục rất chặt chẽ khi dùng cold wallet trong máy tính để tránh bị mất cắp.
-<p>Một rủi ro khác là hư hoặc mất vật chứa wallet: hư đĩa cứng máy tính, hư/mất smartphone, mất USB wallet. Do đó cần phải backup wallet trên một vật chứa khác, hoặc chép public key và private key ra giấy. Luôn luôn phải backup sau mỗi giao dịch, nếu restore từ bản backup cũ có thể bị mất những lượng Bitcoin mới có sau lần backup đó. Hư/mất wallet cũng giống như khi bị rớt mất bóp tiền hoặc khi tủ tiền giấy bị cháy. Bóp tiền hay tờ tiền thật bị rớt ngoài đường thì người qua đường có thể lượm được. Bitcoin bị mất do hư file wallet thì không có người nào lượm được, nó không bao giờ được dùng nữa.
+<p>Wallet trong web server là mục tiêu của hacker. Hacker luôn tìm cách chiếm đoạt toàn bộ wallet trong từng server. Lượng Bitcoin chưa định bán thì nên chuyển từ web wallet vào cold wallet để tránh bị hack.</p>
+<p>Wallet trong máy tính và smartphone dễ bị mất cắp qua các phần mềm gián điệp. Để an toàn hơn, người ta để wallet trong các máy tính sạch và không nối mạng, gọi là cold wallet. Người ta đặt ra các thủ tục rất chặt chẽ khi dùng cold wallet trong máy tính để tránh bị mất cắp.</p>
+<p>Một rủi ro khác là hư hoặc mất vật chứa wallet: hư đĩa cứng máy tính, hư/mất smartphone, mất USB wallet. Do đó cần phải backup wallet trên một vật chứa khác, hoặc chép public key và private key ra giấy. Luôn luôn phải backup sau mỗi giao dịch, nếu restore từ bản backup cũ có thể bị mất những lượng Bitcoin mới có sau lần backup đó. Hư/mất wallet cũng giống như khi bị rớt mất bóp tiền hoặc khi tủ tiền giấy bị cháy. Bóp tiền hay tờ tiền thật bị rớt ngoài đường thì người qua đường có thể lượm được. Bitcoin bị mất do hư file wallet thì không có người nào lượm được, nó không bao giờ được dùng nữa.</p>
 <h1>Fork là gì?</h1>
-<p>Khi một nhóm người tham gia hệ thống cryptocurrency quyết định thay đổi các thông số của thuật toán cho một nhu cầu nào đó thì một loại cryptocurrency mới ra đời từ loại cryptocurrency đang có. Điều này gọi là fork.
-<p>Loại tiền mới ra đời có giá trị trao đổi ban đầu rất thấp, tuỳ theo thị hiếu mà nó tăng giá hay là bị lãng quên luôn. Thường thì sau khi fork, những người sở hữu lượng tiền gốc sẽ được tặng một lượng tiền mới.
+<p>Khi một nhóm người tham gia hệ thống cryptocurrency quyết định thay đổi các thông số của thuật toán cho một nhu cầu nào đó thì một loại cryptocurrency mới ra đời từ loại cryptocurrency đang có. Điều này gọi là fork.</p>
+<p>Loại tiền mới ra đời có giá trị trao đổi ban đầu rất thấp, tuỳ theo thị hiếu mà nó tăng giá hay là bị lãng quên luôn. Thường thì sau khi fork, những người sở hữu lượng tiền gốc sẽ được tặng một lượng tiền mới.</p>
 <h1>Mặt trái của Bitcoin</h1>
 <h2>Sự đầu cơ</h2>
-<p>Mặc dù nó được gọi là currency, coin nhưng tôi thấy hiện nay nó không phải là một loại tiền vì không tiện để dùng nó mua các thứ khác. Mỗi lần chuyển một lượng Bitcoin dù nhỏ hay lớn đều tốn trung bình 10 phút, lâu hơn việc thanh toán bằng thẻ. Tôi cho rằng Bitcoin là một loại tài sản để <a href="/huu-ich/cach-dau-tu">đầu cơ</a>.
+<p>Mặc dù nó được gọi là currency, coin nhưng tôi thấy hiện nay nó không phải là một loại tiền vì không tiện để dùng nó mua các thứ khác. Mỗi lần chuyển một lượng Bitcoin dù nhỏ hay lớn đều tốn trung bình 10 phút, lâu hơn việc thanh toán bằng thẻ. Tôi cho rằng Bitcoin là một loại tài sản để <a href="/huu-ich/cach-dau-tu">đầu cơ</a>.</p>
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -418,6 +399,9 @@ data-ad-slot="3830899615">
 <div class="todiscuss">
 <br>Mọi ý kiến thảo luận xin ghi vào các trang: <a href="https://www.facebook.com/boi.hong.le/posts/1540582892700722?pnref=story" rel="nofollow" target="_blank">Facebook</a></div>
   <hr>
+Hit count <amp-iframe width="120" height="30" frameborder="0" 
+srcdoc="<img width='100' height='24' src='https://c.statcounter.com/12598906/0/9a8e736a/0/'>">
+</amp-iframe> by <a href="https://statcounter.com" target='_blank'>statcounter.com</a>.
   <div class="footer">
   Bấm các nút sau để liên-lạc 
   <br>
@@ -429,7 +413,7 @@ data-ad-slot="3830899615">
   <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   <br>
-  Nếu bạn chép lại những trang web này, hãy ghi nguồn-gốc <a href="https://www.lhboi.name.vn">https://WWW.LHBOI.NAME.VN</a> để người-đọc có-thể tìm được nội-dung mới cập-nhật.
+  Nếu bạn chép lại những trang-web này, hãy ghi nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a> để người-đọc có-thể tìm được nội-dung mới nhất.
   </div>
 </div>
 <amp-analytics type="googleanalytics">

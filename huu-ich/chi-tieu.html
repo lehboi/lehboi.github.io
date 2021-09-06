@@ -4,28 +4,27 @@
 <title>Chi-tiêu có kế-hoạch (Trang web LHBội)</title>
 <meta name="description" content="Chi-tiêu có kế-hoạch để tự-do-tài-chính, không cần đi-làm kiếm-tiền." />
 <meta name="keywords" content="hữu-ích, tài-chính, cá-nhân, chi-tiêu, tự-do, sáu cái lọ">
-<link rel="canonical" href="https://www.lhboi.name.vn/huu-ich/chi-tieu">
+<link rel="alternate" href="https://www.lhboi.name.vn/huu-ich/chi-tieu">
+<link rel="canonical" href="https://lehboi.github.io/huu-ich/chi-tieu">
 
 <!-- in head of html file -->
-
 <meta charset='utf-8'>
 
-<script async custom-element="amp-analytics"
-    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
+
 <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<!--
-  Import the `amp-sidebar` component.
--->
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 
 <script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 
 <!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
 <style amp-custom>
@@ -57,31 +56,6 @@ amp-sidebar {
 .close-sidebar span:nth-child(1){transform: rotate(45deg);}
 .close-sidebar span:nth-child(2){transform: rotate(-45deg);}
 
-#menu { margin-left: -40px; }
-#menu li {
-  list-style: none;
-  line-height: 1;
-  display: block;
-  position: relative;
-  margin: 0px;
-  padding: 3px 0px 3px 0px;
-}
-#menu ul {
-  width: 100%;
-  display: block;
-  margin: 0px;
-  padding: 0px 0px 0px 0px;
-}
-#menu ul li,
-#menu ul ul li {
-  width: 100%;
-  border-bottom: 0;
-  padding-left: 10px;
-}
-#menu ul ul ul li {
-  padding-left: 10px;
-}
-
 div.mwidth {max-width:1004px;margin: auto;}
 
 body {background-color:dimgray;}
@@ -98,6 +72,8 @@ h3 {color:#a3ff1a;font-family:serif}
 h4 {color:#8ae600;font-family:serif}
 a {color:#ffd700;}
 a:visited {color:#e6c300;}
+.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
+
 table.noborder {
   border-collapse: collapse;
   width: 100%;
@@ -131,35 +107,40 @@ div.even {background-color: darkslategray}
 .tblue {color:deepskyblue;}
 div.footer { font-size: 80%; color: red; text-align: center; }
 
-.flright { float:right; margin:0px 0px 0px 5px; width:45%; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
   .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
   .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
   .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
-}
 
+}
 
 </style>
 </head>
 
 <body>
   <!-- top of body -->
-  
   <!-- sidebar menu -->
   <amp-sidebar id="sidebar" layout="nodisplay" side="left">
             <button on="tap:sidebar.close" class="close-sidebar">
@@ -197,7 +178,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
   <br>
   <br>
 
-
   </amp-sidebar>
 <main>
   <div class="mwidth">
@@ -206,7 +186,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
       </button>
     </div>
   </div>
-
+  
   <div class="leftads">
   <!-- AMP Responsive Skyscrapper -->
 <amp-ad
@@ -230,6 +210,11 @@ data-ad-slot="5275186684">
 
   </div>
   
+  <div class="body">
+    <div class="right">Website LHBoi.name.vn đang được chuyển đến địa chỉ mới LeHBoi.github.io.
+    </div>
+  </div>
+
 
 <div class="body">
   <div class="title">Chi-tiêu có kế-hoạch</div>
@@ -247,7 +232,7 @@ data-ad-slot="5275186684">
       layout="fixed"
       data-layout="button_count"
       data-href=
-https://www.lhboi.name.vn/huu-ich/chi-tieu
+https://lehboi.github.io/huu-ich/chi-tieu
     >
     </amp-facebook-like>
   </div>
@@ -256,7 +241,7 @@ https://www.lhboi.name.vn/huu-ich/chi-tieu
 
   <p>Tại-sao phải nghĩ đến tuổi-già khi bạn còn quá trẻ, còn quá nhiều thời-gian để <a href="tich-luy">tích-luỹ</a> tiền-bạc, tài-sản?</p>
   <blockquote>
-    Bạn có biết rằng theo <a href="http://web.archive.org/web/20130731094951/http://t5g.org.vn/?u=dt&amp;id=3026" target="_blank">kết-quả-thống-kê năm 2010</a>, 70% số người-cao-tuổi ở Việt-Nam vẫn phải làm-việc để kiếm-sống, chỉ có 20% số người-cao-tuổi có lương-hưu hay trợ-cấp-xã-hội. Bạn có biết rằng với đà lạm-phát hàng năm thì mình sẽ cần bao-nhiêu tiền khi về-hưu để có mức-sống ngang với mức hiện-nay? Và bạn có biết mình sẽ nhận được bao-nhiêu tiền lương-hưu mỗi tháng? Hãy tính <a href="ke-hoach-tai-chinh/">số tiền hưu-trí cho riêng bạn ở đây</a>.
+    Bạn có biết rằng theo <a href="http://web.archive.org/web/20130731094951/http://t5g.org.vn/?u=dt&amp;id=3026" target="_blank">kết-quả-thống-kê năm 2010</a>, 70% số người-cao-tuổi ở Việt-Nam vẫn phải làm-việc để kiếm-sống, chỉ có 20% số người-cao-tuổi có lương-hưu hay trợ-cấp-xã-hội. Bạn có biết rằng với đà lạm-phát hàng năm thì mình sẽ cần bao-nhiêu tiền khi về-hưu để có mức-sống ngang với mức hiện-nay? Và bạn có biết mình sẽ nhận được bao-nhiêu tiền lương-hưu mỗi tháng? Hãy tính <a href="ke-hoach-tai-chinh/huu-tri">số tiền hưu-trí cho riêng bạn ở đây</a>.
   </blockquote>
 <!-- AMP In-article 1 -->
 <amp-ad
@@ -301,7 +286,7 @@ data-ad-slot="3830899615">
     <li><strong><span class="tblue">FFA</span></strong>: Để dành cho mục-đích <b><span class="tblue">tự-do-tài-chính</span></b> (khoảng <strong><span class="tblue">10%</span></strong>), tiền này sẽ được đem đi đầu-tư sinh lời, không bao giờ tiêu khoản-tiền này cho tới khi đạt được sự-tự-do về tài-chính</li>
   </ol>
   <p>Kế-hoạch-chi-tiêu này sẽ giúp bạn thoả-mãn các nhu-cầu thiết-yếu, nhu-cầu hưởng-thụ trước mắt, nhu-cầu hưởng-thụ lớn mà vẫn còn có để nâng-cao trình-độ, giúp-đỡ người quanh mình và <span class="tblue">đầu-tư cho tương-lai chính mình</span>. Khi <i>tất cả</i> những nhu-cầu đều được thoả-mãn thì bạn sẽ cảm-thấy <i>hạnh-phúc</i> với thu-nhập của mình dù cho thu-nhập đó ít hay nhiều.</p>
-  <p>Điều quan-trọng trong cách chi-tiêu này là phải có đủ 6 khoản trên; không nhất-thiết phải chia theo đúng tỉ-lệ như trên. Tỉ-lệ trên chỉ là một gợi-ý cho những trường-hợp chung; bạn có thể thay-đổi đôi-chút cho phù-hợp với khả-năng và mục-đích trong những <a href="https://lhboi.name.vn/huu-ich/cac-giai-doan">giai-đoạn khác-nhau của cuộc-đời</a>.
+  <p>Điều quan-trọng trong cách chi-tiêu này là phải có đủ 6 khoản trên; không nhất-thiết phải chia theo đúng tỉ-lệ như trên. Tỉ-lệ trên chỉ là một gợi-ý cho những trường-hợp chung; bạn có thể thay-đổi đôi-chút cho phù-hợp với khả-năng và mục-đích trong những <a href="cac-giai-doan">giai-đoạn khác-nhau của cuộc-đời</a>.
   Bạn có-thể dùng bảng-tính KHTC để lập những khoản phải chi trong tương lai xem để bao-nhiêu phần thu-nhập vào <i>tự-do tài-chính</i> là đủ cho tương-lai (xem <a href="ke-hoach-tai-chinh/">Kế-hoạch-tài-chính</a>). Sau khi tính-toán được các tỉ lệ phân bổ cho 6 khoản trên rồi thì bạn hãy thực hiện nó một cách <i>kỷ luật</i>, đừng tuỳ tiện co giãn theo sự <i>chi tiêu tự do</i> hàng tháng. Để bớt bị cám dỗ chi tiêu tự do thì nên trích tiền gửi đầu tư ngay khi có thu nhập, đừng đợi chi tiêu xong rồi mới đem phần dư gửi đầu tư. Đó gọi là <a href="cau-chuyen/bat-dau-dau-tu">trả tiền cho chính mình trước</a>.</p>
 <!-- AMP In-article 1 -->
 <amp-ad
@@ -336,9 +321,9 @@ data-ad-slot="3830899615">
     <li>Quỹ dài-hạn cho mục-đích tự-do-tài-chính (mục số 6 ở trên)</li>
     <li>Quỹ trung-hạn cho những mục-đích như mua nhà, cho con học đại-học</li>
   </ol>
-  <p>Nên dùng công-cụ khác-nhau cho mỗi quỹ để <a href="dau-tu-co-phieu/so-tk-hay-dau-tu">tối-ưu-hoá lợi-nhuận</a>. Nên thực-hiện tiết-kiệm cho các quỹ trên <b>sớm</b>, <b><a href="https://lhboi.name.vn/huu-ich/cau-chuyen/nhung-hon-da">cùng lúc</a></b> và <b>tách-bạch</b>. <b>Đừng</b> nghĩ rằng ta cố-gắng hoàn-thành sớm những kế-hoạch ngắn hạn, rồi bắt-đầu tiết-kiệm cho kế-hoạch trung-hạn, hoàn-thành kế-hoạch trung-hạn rồi bắt-đầu tiết-kiệm cho kế-hoạch dài-hạn.<br>
-  Khi bạn hoàn-thành một kế-hoạch ngắn-hạn là mua TV LED rồi, bạn sẽ có nhu-cầu ngắn-hạn kế tiếp là mua xe tay ga, mua xe hơi, đến khi bạn nhớ đến kế-hoạch trung-hạn thì thời-gian để thực-hiện nó không còn đủ dài để gọi là trung-hạn rồi.<br />
-  Tương-tự như-vậy, khi bạn nuôi con thành-tài rồi thì thời-gian để tích-luỹ tiền cho tuổi-già của bạn chỉ còn không quá 10 năm, quá ngắn cho kế-hoạch dài-hạn. Tôi biết có những người đã cố hết sức cho con đi du-học rồi sống <a href="tich-luy">hưu-trí</a> chỉ bằng lương-hưu ít ỏi của bảo-hiểm-xã-hội.</p>
+  <p>Nên dùng công-cụ khác-nhau cho mỗi quỹ để <a href="dau-tu-co-phieu/so-tk-hay-dau-tu">tối-ưu-hoá lợi-nhuận</a>. Nên thực-hiện tiết-kiệm cho các quỹ trên <b>sớm</b>, <b><a href="cau-chuyen/nhung-hon-da">cùng lúc</a></b> và <b>tách-bạch</b>. <b>Đừng</b> nghĩ rằng ta cố-gắng hoàn-thành sớm những kế-hoạch ngắn hạn, rồi bắt-đầu tiết-kiệm cho kế-hoạch trung-hạn, hoàn-thành kế-hoạch trung-hạn rồi bắt-đầu tiết-kiệm cho kế-hoạch dài-hạn.
+  <br>Khi bạn hoàn-thành một kế-hoạch ngắn-hạn là mua TV LED rồi, bạn sẽ có nhu-cầu ngắn-hạn kế tiếp là mua xe tay ga, mua xe hơi, đến khi bạn nhớ đến kế-hoạch trung-hạn thì thời-gian để thực-hiện nó không còn đủ dài để gọi là trung-hạn rồi.
+  <br>Tương-tự như-vậy, khi bạn nuôi con thành-tài rồi thì thời-gian để tích-luỹ tiền cho tuổi-già của bạn chỉ còn không quá 10 năm, quá ngắn cho kế-hoạch dài-hạn. Tôi biết có những người đã cố hết sức cho con đi du-học rồi sống <a href="tich-luy">hưu-trí</a> chỉ bằng lương-hưu ít ỏi của bảo-hiểm-xã-hội.</p>
   <p>Cũng như mọi kế-hoạch khác, kế-hoạch chi-tiêu cũng sẽ được điều-chỉnh khi có những thay-đổi lớn về thu-nhập, chi-tiêu.</p>
 
   <h1>Hỏi-Đáp</h1>
@@ -388,23 +373,20 @@ data-ad-slot="3830899615">
 </amp-ad>
 
   <h1>Phân-biệt kiếm-tiền và giữ-tiền</h1>
-  <p>Khoản-tiền cần phải có để <b><span class="tblue">Tự-do-tài-chính</span></b> rất lớn nên dù cho người giỏi kiếm-tiền cũng không-thể nhanh-chóng kiếm ra ngay số-tiền đó được mà phải tích-luỹ trong thời-gian dài. Thật-vậy, quỹ-tự-do-tài-chính phải lớn hơn 300 lần chi-tiêu hàng tháng, cần ít-nhất bao-nhiêu năm để tạo ra quỹ đó? Cách chắc-chắn nhất để có quỹ đó là giữ-tiền trong những công-cụ có <a href="tich-luy-dai-han">độ an-toàn và sinh-lợi cao nhất</a>, và đều-đặn gửi thêm tiền vào. Bạn hãy thử dùng bảng-tính <a href="https://lhboi.name.vn/huu-ich/ke-hoach-tai-chinh/tk-m-co-dinh">TK-M-cố-định</a> để tính xem sau-này bạn sẽ có bao-nhiêu <b><span class="tblue">tỉ đồng</span></b> từ 10% thu-nhập đó.</p>
-  <p>Những người có khả-năng kinh-doanh thường không muốn tiền nằm một chỗ an-toàn, mà muốn đưa nhiều tiền vào kinh-doanh để đem lại lợi-nhuận nhiều hơn. Làm như-vậy sẽ có một nguy-cơ không kịp rút tiền từ kinh-doanh về để dùng khi có nhu-cầu cấp-thiết trong gia-đình, hoặc tệ hơn nữa là khi việc kinh-doanh gặp khó-khăn thì tương-lai của gia-đình sụp-đổ. Một-số người bạn của tôi đã lâm vào cảnh này, gom hết tiền nhà lập doanh-nghiệp, doanh-nghiệp bị khách-hàng nợ, tiền của tích-luỹ hàng chục năm mất sạch. Doanh-nhân thông-minh sẽ không dùng vốn riêng để kinh-doanh mà <i>dùng vốn của người khác</i>. Người ta lập ra doanh-nghiệp để gọi vốn của người khác, vay vốn ngân-hàng, không bao giờ đem hết vốn riêng đặt vào một doanh-nghiệp. Nếu doanh-nghiệp có thua-lỗ, phá-sản thì doanh-nhân cũng không phải đem tiền nhà ra đền vì doanh-nghiệp là một pháp-nhân độc-lập với doanh-nhân.<br />
-  Nếu chưa thể dùng vốn của người khác trong kinh-doanh, buộc phải dùng vốn nhà thì bạn hãy lập <a href="ke-hoach-tai-chinh/">kế-hoạch-tài-chính</a> cho gia-đình, đều-đặn trích lợi-nhuận đưa vào quỹ-tự-do-tài-chính theo kế-hoạch, phần lợi-nhuận còn lại mới đưa vào vốn kinh-doanh. Và đừng bao giờ đụng vào quỹ-tự-do-tài-chính dù cho tình-hình kinh-doanh đang thuận-lợi hay khó-khăn.</p>
+  <p>Khoản-tiền cần phải có để <b><span class="tblue">Tự-do-tài-chính</span></b> rất lớn nên dù cho người giỏi kiếm-tiền cũng không-thể nhanh-chóng kiếm ra ngay số-tiền đó được mà phải tích-luỹ trong thời-gian dài. Thật-vậy, quỹ-tự-do-tài-chính phải lớn hơn 300 lần chi-tiêu hàng tháng, cần ít-nhất bao-nhiêu năm để tạo ra quỹ đó? Cách chắc-chắn nhất để có quỹ đó là giữ-tiền trong những công-cụ có <a href="tich-luy-dai-han">độ an-toàn và sinh-lợi cao nhất</a>, và đều-đặn gửi thêm tiền vào. Bạn hãy thử dùng bảng-tính <a href="ke-hoach-tai-chinh/tk-m-co-dinh">TK-M-cố-định</a> để tính xem sau-này bạn sẽ có bao-nhiêu <b><span class="tblue">tỉ đồng</span></b> từ 10% thu-nhập đó.</p>
+  <p>Những người có khả-năng kinh-doanh thường không muốn tiền nằm một chỗ an-toàn, mà muốn đưa nhiều tiền vào kinh-doanh để đem lại lợi-nhuận nhiều hơn. Làm như-vậy sẽ có một nguy-cơ không kịp rút tiền từ kinh-doanh về để dùng khi có nhu-cầu cấp-thiết trong gia-đình, hoặc tệ hơn nữa là khi việc kinh-doanh gặp khó-khăn thì tương-lai của gia-đình sụp-đổ. Một-số người bạn của tôi đã lâm vào cảnh này, gom hết tiền nhà lập doanh-nghiệp, doanh-nghiệp bị khách-hàng nợ, tiền của tích-luỹ hàng chục năm mất sạch. Doanh-nhân thông-minh sẽ không dùng vốn riêng để kinh-doanh mà <i>dùng vốn của người khác</i>. Người ta lập ra doanh-nghiệp để gọi vốn của người khác, vay vốn ngân-hàng, không bao giờ đem hết vốn riêng đặt vào một doanh-nghiệp. Nếu doanh-nghiệp có thua-lỗ, phá-sản thì doanh-nhân cũng không phải đem tiền nhà ra đền vì doanh-nghiệp là một pháp-nhân độc-lập với doanh-nhân.
+  <br>Nếu chưa thể dùng vốn của người khác trong kinh-doanh, buộc phải dùng vốn nhà thì bạn hãy lập <a href="ke-hoach-tai-chinh/">kế-hoạch-tài-chính</a> cho gia-đình, đều-đặn trích lợi-nhuận đưa vào quỹ-tự-do-tài-chính theo kế-hoạch, phần lợi-nhuận còn lại mới đưa vào vốn kinh-doanh. Và đừng bao giờ đụng vào quỹ-tự-do-tài-chính dù cho tình-hình kinh-doanh đang thuận-lợi hay khó-khăn.</p>
   <p>Trong bài này có hai chữ <i>tự-do</i>: tự-do-tài-chính và chi-tiêu-tự-do.</p>
   <ul>
-    <li>
-      <i>Tự-do-tài-chính</i> là khi mà bạn không cần phải kiếm-tiền nữa, tiền từ các khoản-đầu-tư đủ cho các nhu-cầu hợp-lý của bạn đến hết đời, bạn cũng không còn phải lo-lắng khi có những biến-cố xảy ra thì tiền đâu mà dùng. Nói cách khác, tự-do-tài-chính là khi bạn có-thể hưởng-thụ cuộc-sống an-nhàn. Nếu chi-tiêu một cách khôn-ngoan thì bạn có-thể về-hưu để hưởng-thụ cuộc-sống sớm hơn những người khác.
-    </li>
-    <li><i>Chi-tiêu-tự-do</i> là chi-tiêu không kiểm-soát, chi-tiền cho những thứ <i>thích</i> chứ không phải những thứ <i>cần</i>.
-    </li>
+    <li><i>Tự-do-tài-chính</i> là khi mà bạn không cần phải kiếm-tiền nữa, tiền từ các khoản-đầu-tư đủ cho các nhu-cầu hợp-lý của bạn đến hết đời, bạn cũng không còn phải lo-lắng khi có những biến-cố xảy ra thì tiền đâu mà dùng. Nói cách khác, tự-do-tài-chính là khi bạn có-thể hưởng-thụ cuộc-sống an-nhàn. Nếu chi-tiêu một cách khôn-ngoan thì bạn có-thể về-hưu để hưởng-thụ cuộc-sống sớm hơn những người khác.</li>
+    <li><i>Chi-tiêu-tự-do</i> là chi-tiêu không kiểm-soát, chi-tiền cho những thứ <i>thích</i> chứ không phải những thứ <i>cần</i>.</li>
   </ul>
   <div class="title">
-    Kiểm&nbsp;soát&nbsp;chi&nbsp;tiêu → Bảo&nbsp;vệ&nbsp;nguồn&nbsp;thu&nbsp;nhập → Tăng&nbsp;nguồn&nbsp;thu&nbsp;nhập → Tự&nbsp;do&nbsp;tài&nbsp;chính
+    <a href="ke-hoach-tai-chinh/ke-hoach">Kiểm&nbsp;soát&nbsp;chi&nbsp;tiêu</a> → <a href="ke-hoach-tai-chinh/bao-ve">Bảo&nbsp;vệ&nbsp;nguồn&nbsp;thu&nbsp;nhập</a> → <a href="ke-hoach-tai-chinh/tang-thu-nhap">Tăng&nbsp;nguồn&nbsp;thu&nbsp;nhập</a> → Tự&nbsp;do&nbsp;tài&nbsp;chính
   </div>
   <div class="center">
-    <b><span>Tôi đã đạt đến Tự-do-tài-chính rồi!</span></b><br />
-    Bạn thì sao? Hãy thử tính theo <a href="ke-hoach-tai-chinh/">cách này</a> xem sao!
+    <b><span>Tôi đã đạt đến Tự-do-tài-chính rồi!</span></b>
+    <br>Bạn thì sao? Hãy thử tính theo <a href="ke-hoach-tai-chinh/">cách này</a> xem sao!
   </div>
 
 <!-- AMP In-article 1 -->
@@ -434,20 +416,25 @@ data-ad-slot="3830899615">
 </amp-ad>
 
   <h1>Công-cụ thực-hành kế-hoạch chi-tiêu</h1>
-  <p>Theo tài-liệu tham-khảo dưới đây thì người-ta dùng sáu cái lọ để đựng tiền dùng cho sáu khoản trên; khi chi-tiền thì nhớ lấy tiền từ đúng lọ. Bạn có-thể dùng sáu cái phong-bì đựng tiền thay cho sáu cái lọ. Thật-ra thì những khoản số 4 và 6 rất lớn nên không-thể để trong lọ hay phong-bì được mà là tài-khoản đầu-tư hay bất-động-sản. Nếu bạn để tiền trong tài-khoản ngân-hàng giống như tôi thì không-thể dùng lọ hay phong-bì cho những khoản-chi khác-nhau. Để quản-lý các tài-khoản đó phải dùng chương-trình máy-tính. Bạn có-thể xem thêm kinh-nghiệm dùng <a href="/kinh-nghiem/may-tinh/gnucash">gnucash</a> để quản-lý thu-chi. Tất-nhiên bạn cũng có-thể dùng gnucash khi bạn không có tài-khoản ngân-hàng; khi dùng gnucash, bạn không phải đếm xem trong mỗi lọ hay phong-bì còn bao-nhiêu tiền, chỉ cần nhìn vào báo-cáo của gnucash là biết ngay.<br>
-  Những phần-mềm khác được đề-cập trong bài báo <a href="http://vietbao.vn/Khoa-hoc/Quan-ly-tai-chinh-gia-dinh-bang-cac-phan-mem/70093545/188/" target='_blank'>Quản-lý tài-chính gia-đình bằng các phần-mềm</a> là Quicken, Microsoft Money, AceMoney.<br>
+  <p>Theo tài-liệu tham-khảo dưới đây thì người-ta dùng sáu cái lọ để đựng tiền dùng cho sáu khoản trên; khi chi-tiền thì nhớ lấy tiền từ đúng lọ. Bạn có-thể dùng sáu cái phong-bì đựng tiền thay cho sáu cái lọ. Thật-ra thì những khoản số 4 và 6 rất lớn nên không-thể để trong lọ hay phong-bì được mà là tài-khoản đầu-tư hay bất-động-sản. Nếu bạn để tiền trong tài-khoản ngân-hàng giống như tôi thì không-thể dùng lọ hay phong-bì cho những khoản-chi khác-nhau. Để quản-lý các tài-khoản đó phải dùng chương-trình máy-tính. Bạn có-thể xem thêm kinh-nghiệm dùng <a href="/kinh-nghiem/may-tinh/gnucash">gnucash</a> để quản-lý thu-chi. Tất-nhiên bạn cũng có-thể dùng gnucash khi bạn không có tài-khoản ngân-hàng; khi dùng gnucash, bạn không phải đếm xem trong mỗi lọ hay phong-bì còn bao-nhiêu tiền, chỉ cần nhìn vào báo-cáo của gnucash là biết ngay.
+  <br>Những phần-mềm khác được đề-cập trong bài báo <a href="http://vietbao.vn/Khoa-hoc/Quan-ly-tai-chinh-gia-dinh-bang-cac-phan-mem/70093545/188/" target='_blank'>Quản-lý tài-chính gia-đình bằng các phần-mềm</a> là Quicken, Microsoft Money, AceMoney.<br>
   Tài-liệu tham-khảo: <a href="http://www.getrichslowly.org/blog/2009/07/08/learning-to-budget-with-the-jars-system/" target='_blank'>Learning to Budget with the JARS System</a>, <a href="http://www.freedomeducation.ca/2007/11/13/managing-money-the-jars-system/" target='_blank'>Managing Money – The JARS System</a>.
   </p>
   <div class="todiscuss">
     Các bài liên quan:
     <br>* <a href="tich-luy">Tích-luỹ tiền để đủ sống trọn-đời</a>
     <br>* <a href="ke-hoach-tai-chinh/">Lập kế-hoạch ổn-định tài-chính suốt-đời thật đơn-giản</a>
+    <br>* <a href="cac-giai-doan">Các giai-đoạn trong cuộc-đời</a>
     <br>* <a href="cau-chuyen/bat-dau-dau-tu">Đầu-tư để ổn-định tương-lai</a>
+    <br>* <a href="cau-chuyen/nhung-hon-da">Độ ưu-tiên của các kế-hoạch tài-chính</a>
     <br>* <a href="dau-tu-co-phieu/so-tk-hay-dau-tu">Quỹ-đầu-tư cho lợi-nhuận cao hơn gửi ngân-hàng</a>
     <br>Mọi ý-kiến thảo-luận xin ghi vào các trang: <a href="https://twitter.com/GiauCham/status/1132935883924037632" target="_blank">Twitter</a> hoặc <a href="https://www.facebook.com/lamgiauchacchan/posts/376062922559322" rel="nofollow" target="_blank">Facebook</a>
   </div>
 
   <hr>
+Hit count <amp-iframe width="120" height="30" frameborder="0" 
+srcdoc="<img width='100' height='24' src='https://c.statcounter.com/12598906/0/9a8e736a/0/'>">
+</amp-iframe> by <a href="https://statcounter.com" target='_blank'>statcounter.com</a>.
   <div class="footer">
   Bấm các nút sau để liên-lạc 
   <br>
@@ -459,7 +446,7 @@ data-ad-slot="3830899615">
   <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   <br>
-  Nếu bạn chép lại những trang web này, hãy ghi nguồn-gốc <a href="https://www.lhboi.name.vn">https://WWW.LHBOI.NAME.VN</a> để người-đọc có-thể tìm được nội-dung mới cập-nhật.
+  Nếu bạn chép lại những trang-web này, hãy ghi nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a> để người-đọc có-thể tìm được nội-dung mới nhất.
   </div>
 </div>
 <amp-analytics type="googleanalytics">
