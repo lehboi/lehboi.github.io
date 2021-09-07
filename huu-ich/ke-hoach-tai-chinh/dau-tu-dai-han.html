@@ -1,7 +1,7 @@
 <!doctype html>
 <html amp lang="vi">
 <head>
-<title>Đầu tư dài hạn (Trang web LHBội)</title>
+<title>Đầu tư dài hạn</title>
 <meta name="description" content="Cách ghi chép số liệu và tính hiệu quả các vụ đầu tư dài hạn: bảo hiểm nhân thọ, quỹ đầu tư, bất động sản" />
 <meta name="keywords" content="hữu ích, tài chính, cá nhân, đầu tư">
 <link rel="alternate" href="https://www.lhboi.name.vn/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han">
@@ -66,7 +66,7 @@ div.lrsp {margin: 0px 5px 0px 5px;}
 .todiscuss {color:lightskyblue;}
 div.center {text-align:center;}
 div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
-h1 {color:#c2ff66;font-family:serif}
+h1 {text-align:center;color:#ffe033;font-family:serif}
 h2 {color:#adff33;font-family:serif}
 h3 {color:#a3ff1a;font-family:serif}
 h4 {color:#8ae600;font-family:serif}
@@ -139,6 +139,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </style>
 </head>
 
+
 <body>
   <!-- top of body -->
   <!-- sidebar menu -->
@@ -210,15 +211,8 @@ data-ad-slot="5275186684">
 
   </div>
   
-  <div class="body">
-    <div class="right">Website LHBoi.name.vn đang được chuyển đến địa chỉ mới LeHBoi.github.io.
-    </div>
-  </div>
-
 
   <div class="body">
-    <div class="title">Đầu tư dài hạn</div>
-
   <div>
     <amp-social-share type="email" height="32"></amp-social-share>
     <amp-social-share type="whatsapp" height="32"></amp-social-share>
@@ -236,6 +230,7 @@ https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han
     </amp-facebook-like>
   </div>
 
+  <h1>Đầu tư dài hạn</h1>
   <p>Trang này hướng dẫn cách ghi chép và tính hiệu quả các khoản tích luỹ lâu năm như <a href="/huu-ich/cac-loai-bao-hiem/">bảo hiểm nhân thọ</a>, <a href="/huu-ich/dau-tu-co-phieu/quy-dau-tu">quỹ đầu tư</a>, bất động sản… Chúng ta sẽ dùng các phần mềm spreadsheet  để ghi chép và dùng hàm <a href="/kinh-nghiem/may-tinh/ham-tai-chinh">XIRR</a> để tính hiệu quả. Tôi đã dùng cách này để <a href="../hieu-qua-dau-tu">so sánh các vụ đầu tư</a> của tôi.</p>
   <p>Các bạn có thể xem và chép <a href="https://docs.google.com/spreadsheets/d/1ZwOJE5qAzLFzQoZZci4XJGP0YN0JktclOYgJIAp6As8/edit?usp=sharing" target='_blank'>file mẫu ĐTDH</a> về tài khoản Google Drive của riêng bạn để dùng. Trong file mẫu ĐTDH này có ba ví dụ về ba cách tích luỹ: bảo hiểm nhân thọ, quỹ đầu tư, bất động sản.</p>
   <p>Mỗi khoản tích luỹ (mỗi hợp đồng bảo hiểm, mỗi tài khoản quỹ đầu tư, mỗi căn nhà, mỗi miếng đất…) được ghi thành một trang trong file ĐTDH. Cột A ghi ngày giao dịch, cột B ghi số tiền giao dịch (đưa tiền vào thì ghi số âm, rút tiền ra dùng thì ghi số dương). Ô B1 chứa kết quả của hàm XIRR, công thức trong ô này cần được bao gồm tất cả các dòng ghi giao dịch bên dưới. Ô A2 là ngày hôm nay (hàm today) hoặc ngày cuối cùng dùng hết khoản tích luỹ. Các giao dịch nên ghi theo thứ tự mới trên, cũ dưới.
@@ -269,14 +264,14 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-  <h3>1. Cách ghi mỗi loại tích luỹ</h3>
+  <h2>1. Cách ghi mỗi loại tích luỹ</h2>
   <p>Mọi giao dịch từ khi <i>bắt đầu tích luỹ</i> đều cần được ghi vào file này. Ghi đầy đủ và chính xác thì các báo cáo càng chính xác. Nếu bạn đang có những khoản tích luỹ trước đây thì hãy cố gắng ghi lại từ ngày đầu, nếu không thể ghi đầy đủ các giao dịch đã qua thì đành chấp nhận báo cáo cho khoản đầu tư đó không chính xác tuyệt đối.
   <br>Bên cạnh file ĐTDH này, bạn còn có file ghi chép thu chi hàng ngày trong năm ví dụ <a href="/kinh-nghiem/may-tinh/gnucash">giadinh2015.gnucash</a>. Hai file này có liên hệ với nhau:</p>
   <ul>
     <li>Mỗi khoản tiền đưa vào tích luỹ ghi trong file ĐTDH đều phải được ghi như một chi phí trong file giadinh20xx.gnucash</li>
     <li>Mỗi khoản tiền rút ra từ các khoản tích luỹ trong file ĐTDH đều được ghi như một thu nhập trong file giadinh20xx.gnucash</li>
   </ul>
-  <h4>1.1. Bảo hiểm nhân thọ</h4>
+  <h3>1.1. Bảo hiểm nhân thọ</h3>
   <p>Các giao dịch của một hợp đồng bảo hiểm nhân thọ:
   <ul>
     <li>Đóng tiền (đóng phí định kỳ, trả khoản vay): khi đóng tiền thì ghi thêm một dòng vào dưới dòng 2 của trang của hợp đồng bảo hiểm, ghi ngày đóng tiền vào A3, số tiền (mang dấu trừ) vào B3.</li>
@@ -315,7 +310,7 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-  <h4>1.2. Quỹ đầu tư</h4>
+  <h3>1.2. Quỹ đầu tư</h3>
   <p>Cột C của trang tính quỹ đầu tư dùng để ghi giá đơn vị quỹ. Khi chưa rút hết tiền từ tài khoản quỹ đầu tư thì ô C2 ghi giá mới nhất đơn vị quỹ, và ô B2 là công thức nhân số đơn vị quỹ với giá trong ô C2.
   <p>Các giao dịch của một tài khoản quỹ đầu tư:
   <ul>
@@ -328,7 +323,7 @@ data-ad-slot="3830899615">
     ghi ngày nộp tiền vào ô A, số tiền đã rút khỏi quỹ vào ô B, giá đơn vị quỹ vào ô C.</li>
   </ul>
   <p>Với tài khoản quỹ đầu tư có nhiều loại quỹ (hợp đồng bảo hiểm nhân thọ liên kết quỹ đầu tư có nhiều quỹ) cho phép chuyển quỹ dễ dàng thì ta có thể ghi chú loại quỹ của mỗi giao dịch trong cột C.
-  <h4>1.3. Bất động sản</h4>
+  <h3>1.3. Bất động sản</h3>
   <p>Dòng 2 dùng để ghi giá trị sau cùng của bất động sản. Nếu ta vẫn còn nợ tiền mua bất động sản này thì giá trị B2 là giá thị trường của bất động sản trừ đi khoản nợ.
   <p>Các giao dịch liên quan:
   <ul>
