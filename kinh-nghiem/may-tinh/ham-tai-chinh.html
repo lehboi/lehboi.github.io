@@ -1,7 +1,7 @@
 <!doctype html>
 <html amp lang="vi">
 <head>
-<title>Các phép tính tài chính (Trang web LHBội)</title>
+<title>Các phép tính tài chính cần biết</title>
 <meta name="description" content="Các phép tính tài chính cần biết trong spreadsheet, áp dụng trong cuộc sống" />
 <meta name="keywords" content="hữu ích, tài chính, cá nhân, spreadsheet">
 <link rel="alternate" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/ham-tai-chinh">
@@ -66,7 +66,7 @@ div.lrsp {margin: 0px 5px 0px 5px;}
 .todiscuss {color:lightskyblue;}
 div.center {text-align:center;}
 div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
-h1 {color:#c2ff66;font-family:serif}
+h1 {text-align:center;color:#ffe033;font-family:serif}
 h2 {color:#adff33;font-family:serif}
 h3 {color:#a3ff1a;font-family:serif}
 h4 {color:#8ae600;font-family:serif}
@@ -139,6 +139,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </style>
 </head>
 
+
 <body>
   <!-- top of body -->
   <!-- sidebar menu -->
@@ -210,17 +211,8 @@ data-ad-slot="5275186684">
 
   </div>
   
-  <div class="body">
-    <div class="right">Website LHBoi.name.vn đang được chuyển đến địa chỉ mới LeHBoi.github.io.
-    </div>
-  </div>
-
 
   <div class="body">
-    <div class="title">Các phép tính tài chính cần biết</div>
-<!-- body here -->
-<div class="right">Viết lần đầu trong Tháng Năm, 2016.</div>
-
   <div>
     <amp-social-share type="email" height="32"></amp-social-share>
     <amp-social-share type="whatsapp" height="32"></amp-social-share>
@@ -238,15 +230,18 @@ https://lehboi.github.io/kinh-nghiem/may-tinh/ham-tai-chinh
     </amp-facebook-like>
   </div>
 
+<!-- body here -->
+  <h1>Các phép tính tài chính cần biết</h1>
+<div class="right">Viết lần đầu trong Tháng Năm, 2016.</div>
 <p>Trong các phần mềm bảng tính (spreadsheet) có một nhóm hàm để tính các thông số về tài chính và đầu tư. Sau đây là các hàm nên biết để dùng trong các trường hợp thường gặp trong cuộc sống.</p>
-<h3>PV Present Value</h3>
+<h2>PV Present Value</h2>
 <p>PV tính số tiền cần đầu tư để có thể rút ra một số tiền bằng nhau ở các thời điểm cách đều nhau khi biết trước lãi suất không đổi trong suốt thời gian đầu tư.</p>
 <p>Ví dụ: tính số tiền cần có khi con bạn bắt đầu học đại học sao cho có thể rút ra 120 triệu đồng mỗi năm trong 5 năm, phần còn lại gửi tiết kiệm lãi suất 7%/năm, sau 5 năm đó vẫn còn lại 50 triệu đồng để mua sắm cho con chuẩn bị bắt đầu đi làm.
 <br>Kết quả PV(7%;5;120.000.000;50.000.000;1)=-562.114.659,75₫.
 <br>Kết quả này khác xa con số 650.000.000₫ (5*120.000.000+50.000.000). Khác xa như vậy nhờ tận dụng việc đầu tư, đầu tư càng <a href="/huu-ich/tich-luy-dai-han">dài hạn</a> thì kết quả càng cách xa, bạn có tận dụng việc <a href="/huu-ich/cach-dau-tu">đầu tư</a> không?
 <br>Dấu trừ trong kết quả có nghĩa là ta phải xuất số tiền đó ra vào đầu năm thứ 1.</p>
  
-<h3>PMT Payment</h3>
+<h2>PMT Payment</h2>
 <p>PMT tính số tiền phải trả đều đặn để sau một số chu kỳ, với một lãi suất cố định sẽ nhận được một số tiền trong tương lai.</p>
 <p>Ví dụ: tính số tiền cần góp hàng tháng sao cho sau 18 năm, từ 10 triệu đồng ban đầu, với lãi suất 7%/năm sẽ có được số tiền tính ra ở ví dụ trên.
 <br>Kết quả PMT(7%/12;18*12;-10.000.000;562.114.659,75;1)=-1.216.409,13₫
@@ -279,18 +274,18 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<h3>FV Future Value</h3>
+<h2>FV Future Value</h2>
 <p>FV tính số tiền sẽ có trong tương lai khi biết số tiền hiện có, lãi suất, và số tiền rút ra hoặc thêm vào mỗi chu kỳ.</p>
 <p>Ví dụ: bạn đang có 20 triệu đồng, mỗi tháng bạn tiết kiệm thêm 1 triệu đồng, với lãi suất 7%/năm thì sau 5 năm bạn có bao nhiêu tiền?
 <br>Kết quả FV(7%/12;5*12;-1.000.000;-20.000.000;1)=100.363.032,10 đ
 <br>Chú ý dấu trừ ở số tiền ban đầu 20 triệu và số tiền tiết kiệm thêm 1 triệu mỗi tháng. Nếu bạn rút tiền ra dùng hàng tháng thay vì thêm vào thì số đó không có dấu trừ.</p>
 
-<h3>NPER Number of Period</h3>
+<h2>NPER Number of Period</h2>
 <p>NPER tính số chu kỳ rút tiền từ một khoản tiết kiệm với lãi suất đã biết.</p>
 <p>Ví dụ: sau khi trúng số 1,35 tỉ đồng, bạn đem gửi tiết kiệm 7%/năm và mỗi tháng rút 30 triệu đồng dùng thì bao lâu sẽ hết tiền?
 <br>Kết quả NPER(7%/12;30.000.000;-1.350.000.000;0;1)=51,9957107, chưa tới 4 năm 4 tháng.</p>
 
-<h3>RATE</h3>
+<h2>RATE</h2>
 <p>RATE tính lãi suất của một loạt rút/trả tiền đều đặn</p>
 <p>Ví dụ: bạn đi vay 500 triệu để xây nhà, ngân hàng đưa ra kế hoạch trả nợ mỗi tháng 8,5 triệu trong 7 năm, vậy lãi suất là bao nhiêu?
 <br>Kết quả RATE(7*12;-8.500.000;500.000.000;0;0;0)=0,9%/tháng</p>
@@ -321,7 +316,7 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<h3>XIRR</h3>
+<h2>XIRR</h2>
 <p>Các hàm trên tính trong trường hợp lãi suất, chu kỳ, số tiền tiết kiệm hoặc trả nợ không đổi trong suốt thời gian. Trong thực tế thì mọi thứ đều có thể thay đổi. Ví dụ bạn <a href="/huu-ich/dung-so-dau-tu">đầu tư</a> hoặc gửi tiền tiết kiệm không đều, có tháng gửi nhiều, có tháng gửi ít, có tháng gửi sớm, có tháng gửi trễ, sau 5 năm bạn thu lại được một số tiền. Hỏi lãi suất trung bình trong suốt 5 năm đó là bao nhiêu? Không thể lấy trung bình cộng của lãi suất tiết kiệm. Nếu không phải là gửi tiền tiết kiệm mà mua đơn vị <a href="/huu-ich/dau-tu-co-phieu/quy-dau-tu">quỹ đầu tư</a> thì tính như thế nào?
 <br>Hàm XIRR sẽ giúp bạn tính lãi suất trung bình của quá trình đầu tư đó.
 <br>XIRR(cashflow_amounts, cashflow_dates, rate_guess)</p>
@@ -329,7 +324,7 @@ data-ad-slot="3830899615">
 <br>XIRR(B2:B62;A2:A62;0,1) sẽ cho biết lãi suất trung bình của quá trình đầu tư này.<br>
 Các bạn có thể chép file spreadsheet mẫu <a href="/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han">Đầu tư dài hạn</a> để bắt đầu ghi chép các khoản tích luỹ lâu năm.</p>
 
-<h3>Kế hoạch tài chính</h3>
+<h2>Kế hoạch tài chính</h2>
 <p>Để tính PMT, FV, PV trong trường hợp số tiền tăng dần theo thời giá thì hãy dùng bảng tính <a href="/huu-ich/ke-hoach-tai-chinh/">KHTC</a>.</p>
 
 <div class="todiscuss">

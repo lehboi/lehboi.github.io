@@ -1,7 +1,7 @@
 <!doctype html>
 <html amp lang="vi">
 <head>
-<title>Spam mail (Trang web LHBội)</title>
+<title>Phối hợp các cách chặn thư spam</title>
 <meta name="description" content="Phân loại thư spam và Phối hợp các cách chặn thư spam" />
 <meta name="keywords" content="hữu ích, tài chính, cá nhân">
 <link rel="alternate" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/spam">
@@ -66,7 +66,7 @@ div.lrsp {margin: 0px 5px 0px 5px;}
 .todiscuss {color:lightskyblue;}
 div.center {text-align:center;}
 div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
-h1 {color:#c2ff66;font-family:serif}
+h1 {text-align:center;color:#ffe033;font-family:serif}
 h2 {color:#adff33;font-family:serif}
 h3 {color:#a3ff1a;font-family:serif}
 h4 {color:#8ae600;font-family:serif}
@@ -139,6 +139,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </style>
 </head>
 
+
 <body>
   <!-- top of body -->
   <!-- sidebar menu -->
@@ -210,15 +211,8 @@ data-ad-slot="5275186684">
 
   </div>
   
-  <div class="body">
-    <div class="right">Website LHBoi.name.vn đang được chuyển đến địa chỉ mới LeHBoi.github.io.
-    </div>
-  </div>
-
 
   <div class="body">
-    <div class="title">Phối hợp các cách chặn thư spam</div>
-
   <div>
     <amp-social-share type="email" height="32"></amp-social-share>
     <amp-social-share type="whatsapp" height="32"></amp-social-share>
@@ -236,7 +230,8 @@ https://lehboi.github.io/kinh-nghiem/may-tinh/spam
     </amp-facebook-like>
   </div>
 
-<h3>Phân loại thư spam</h3>
+  <h1>Phối hợp các cách chặn thư spam</h1>
+<h2>Phân loại thư spam</h2>
 Thư spam là thư gửi cùng một nội dung đến <i>rất nhiều</i> (hàng ngàn hoặc hơn) hộp thư cùng một lúc để giới thiệu một sản phẩm hay dịch vụ gì đó, hoặc có ý định lừa người nhận thư.
 <p>Phần lớn thư spam được gửi bởi những kẻ chuyên gửi thư thuê, những kẻ này không dùng máy tính của chính chúng mà dùng những máy tính đã bị chúng kiểm soát từ xa bằng cách cho nhiễm một phần mềm. Phần mềm đã nhiễm vào máy gọi là sâu (worm), ngựa Troa (Trojan horse), hay cửa sau (backdoor). Máy bị nhiễm phần mềm đó gọi là zombie (thây ma bị điều khiển) hay là bot (ro-bot).
 Tập hợp những máy bị điều khiển từ cùng một kẻ gọi là botnet, và kẻ điều khiển gọi là <i>kẻ chăn bot</i>. Kẻ chăn bot tạo ra botnet bằng cách viết những chương trình lợi dụng lỗi của phần mềm máy tính, để những chương trình đó vào các trang web và dụ nhiều người đến xem bằng những nội dung hấp dẫn. Zombie còn có khả năng lây sang những máy khác qua mạng, qua file dùng chung trong ổ USB.
@@ -270,14 +265,14 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<h3>Giới hạn số lần nhận thư từ mỗi địa chỉ IP</h3>
+<h2>Giới hạn số lần nhận thư từ mỗi địa chỉ IP</h2>
 Những chương trình gửi thư spam sẽ gửi thư liên tiếp tới từng hộp thư trong mail server, có khi gửi tới những hộp thư không có thật trong mail server nữa. Ở lớp hàng rào này, mail server sẽ chỉ nhận một số thư hạn chế từ mỗi địa chỉ IP trong từng khoảng thời gian, ví dụ chỉ nhận 1 thư trong vòng 5 phút. Khi một địa chỉ IP gửi liên tiếp nhiều thư đến và vượt con số hạn chế thì nó sẽ bị từ chối cho đến hết khoảng thời gian đã định rồi mới gửi tiếp được. Những mail server bình thường sẽ chỉ gửi một số thư vừa phải nên ít khi bị vượt hạn mức. Mail server có một danh sách đặc biệt để đặc cách cho các mail server lớn và đáng tin cậy không bị hạn chế.
 <p>Hàng rào này giúp ngăn chặn sự hao tổn vô ích của tài nguyên máy và mạng.</p>
-<h3>Chặn theo địa chỉ IP của máy gửi thư</h3>
+<h2>Chặn theo địa chỉ IP của máy gửi thư</h2>
 Hầu hết những địa chỉ IP thường gửi thư spam đều đã bị đưa vào các blacklist trong các DNS server chuyên chứa blacklist như spamcop, spamhaus, sorbs. Mail server sẽ từ chối SMTP connection sau khi trao đổi vài packet từ những máy trong các blacklist do đó tài nguyên máy và mạng rất ít hao tổn.<br />
 Hàng rào này sẽ chặn khoảng 90% số thư spam. Hầu hết các thư gửi từ botnet đều bị chặn bởi hàng rào này. Chỉ những thư gửi từ những mail server đáng tin cậy hoặc những địa chỉ IP ít gửi spam mới qua được hàng rào này.<br />
 Có thể chặn luôn những SMTP connection từ những địa chỉ IP không có tên (không có PTR record trong DNS). <i>Hầu hết</i> địa chỉ IP của những mail server nghiêm chỉnh đều có tên, những mail server nào mà dùng địa chỉ IP không tên thì cũng đáng bị từ chối dù cho nó gửi thư spam hay không.
-<h3>Chặn theo địa chỉ hộp thư gửi</h3>
+<h2>Chặn theo địa chỉ hộp thư gửi</h2>
 Những domain thường gửi thư spam đã bị đưa vào các blacklist trong các DNS server chuyên chứa blacklist như rfc-ignorant, sorbs. Mail server sẽ từ chối SMTP connection sau khi trao đổi vài packet khi thấy địa chỉ hộp thư gửi trong các blacklist nên tài nguyên máy và mạng rất ít hao tổn.<br />
 Lớp hàng rào này cũng ngăn những thư mà hộp thư gửi không nhận thư trả lời. Phần lớn những địa chỉ hộp thư mà không chịu nhận thư vào là địa chỉ hộp thư không có thật do những chương trình gửi thư spam bịa ra. Một số ít những thư gửi tin tức tự động từ những công ty cũng có địa chỉ hộp thư gửi không nhận thư trả lời, muốn nhận những thư tin tức đó thì phải đưa tên domain của các công ty đó vào một danh sách riêng để mail server không từ chối.<br />
 Mail server sẽ lập một danh sách các địa chỉ hộp thư nhận trả lời và không nhận trả lời. Khi có một thư gửi tới, mail server sẽ tra danh sách để quyết định nhận hay từ chối thư. Nếu địa chỉ thư gửi chưa có trong danh sách thì mail server sẽ gửi thử một thư đến địa chỉ đó để xem nó thuộc hạng nào.
@@ -308,7 +303,7 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<h3>Spamassassin</h3>
+<h2>Spamassassin</h2>
 Những cách chặn trên không cần xem đến nội dung của thư mà đã chặn được hơn 95% số thư spam. Do không cần phải xem nội dung thư nên không hao tốn tài nguyên máy. Vẫn còn một ít spam mail đi qua được các hàng rào trên. Để lọc những thư này, mail server dùng Spamassassin để đọc qua nội dung thư và đánh giá mức độ spam dựa trên nhiều đặc điểm của từng thư. Những đặc điểm đó là:
 <ul><li>thư từ nơi gửi đã đi qua các máy nào để đến nơi nhận, các máy đó có đáng tin cậy không</li>
 <li>các dòng header là bình thường hay có dấu hiệu của các chương trình gửi thư hàng loạt</li>

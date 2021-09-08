@@ -1,7 +1,7 @@
 <!doctype html>
 <html amp lang="vi">
 <head>
-<title>Linux (3) (Trang web LHBội)</title>
+<title>Linux (3)</title>
 <meta name="description" content="Trang 3: Một vài kinh nghiệm dùng máy Linux: kernel, RAID, LVM, file system" />
 <meta name="keywords" content="hữu ích, tài chính, cá nhân">
 <link rel="canonical" href="https://lehboi.github.io/kinh-nghiem/may-tinh/linux-3">
@@ -66,7 +66,7 @@ div.lrsp {margin: 0px 5px 0px 5px;}
 .todiscuss {color:lightskyblue;}
 div.center {text-align:center;}
 div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
-h1 {color:#c2ff66;font-family:serif}
+h1 {text-align:center;color:#ffe033;font-family:serif}
 h2 {color:#adff33;font-family:serif}
 h3 {color:#a3ff1a;font-family:serif}
 h4 {color:#8ae600;font-family:serif}
@@ -139,6 +139,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </style>
 </head>
 
+
 <body>
   <!-- top of body -->
   <!-- sidebar menu -->
@@ -210,15 +211,8 @@ data-ad-slot="5275186684">
 
   </div>
   
-  <div class="body">
-    <div class="right">Website LHBoi.name.vn đang được chuyển đến địa chỉ mới LeHBoi.github.io.
-    </div>
-  </div>
-
 
   <div class="body">
-    <div class="title">Linux (3)</div>
-
   <div>
     <amp-social-share type="email" height="32"></amp-social-share>
     <amp-social-share type="whatsapp" height="32"></amp-social-share>
@@ -236,7 +230,8 @@ https://lehboi.github.io/kinh-nghiem/may-tinh/linux
     </amp-facebook-like>
   </div>
 
-<h3>Tăng kích thước file system trong logical volume</h3>
+  <h1>Linux (3)</h1>
+<h2>Tăng kích thước file system trong logical volume</h2>
 <p>Dùng Logical Volume (LVM) để chứa file system rất tiện ở chỗ là có thể tăng kích thước khi file system bị hết chỗ. Nếu các đĩa cứng đang dùng còn dư chỗ chưa dùng đến thì cho nó vào volume group rồi cho logical volume đang đầy nở đến chỗ đó. Nếu các đĩa cứng đang dùng đã hết chỗ thì mua thêm ổ cứng mới gắn vào volume group.</p>
 <p>Để tăng kích thước thì làm các lệnh sau:</p>
 <ol><li>umount file system</li>
@@ -276,16 +271,16 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<h3>Tạo các file định tính địa phương trong Linux</h3>
+<h2>Tạo các file định tính địa phương trong Linux</h2>
 <p>Trong Linux, biến môi trường LANG dùng để thay đổi các tính chất địa phương (kiểu ngày tháng, tên tháng, ký hiệu tiền, thứ tự từ điển…) của môi trường làm việc. Để chọn địa phương Việt nam thì ta đặt LANG=vi_VN.UTF-8.<br />
 Nếu cần thì ta còn phải dịch lại các file mô tả tính chất địa phương. Làm như sau trên Fedora Core 2:</p>
 <pre>cd /usr/share/i18n/locales/
 localedef --verbose --force -f UTF-8 -i vi_VN vi_VN.UTF-8</pre>
 <p>Các file trong /usr/lib/locale/vi_VN không bị thay đổi. Không rõ output vào đâu nhưng những thay đổi có tác dụng!</p>
-<h3>Configure kernel để dùng IDE ATA nhanh nhất</h3>
+<h2>Configure kernel để dùng IDE ATA nhanh nhất</h2>
 <p>Phải xem tài liệu kèm theo mainboard để biết nó dùng PCI IDE chipset nào và config kernel cho đúng. Luôn luôn chọn configuration parameter CONFIG_BLK_DEV_IDEPCI=y và CONFIG_IDEDMA_PCI_AUTO=y.</p>
 <p>Với mainboard dùng chip Intel PIIX, thì chọn CONFIG_BLK_DEV_PIIX=y. Với ổ cứng Maxtor ATA-100, thì <tt>hdparm -t /dev/hda</tt> sẽ cho buffered disk read lên đến 34MB/s. Đáng lẽ ATA-100 thì phải được 100MB/sec. Nếu không dùng configuration đúng thì buffered disk read sẽ nhỏ hơn 5MB/s.</p>
-<h3>Sửa udev rule để các device node có access mode cần thiết</h3>
+<h2>Sửa udev rule để các device node có access mode cần thiết</h2>
 <p>Sửa MODE trong các file trong /etc/udev/rules.d</p>
 <div class="center">sang trang <a href="linux">1</a> - <a href="linux-2">2</a> - 3</div>
 

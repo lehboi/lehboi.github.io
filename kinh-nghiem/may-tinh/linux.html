@@ -1,7 +1,7 @@
 <!doctype html>
 <html amp lang="vi">
 <head>
-<title>Linux (Trang web LHBội)</title>
+<title>Linux</title>
 <meta name="description" content="Một vài kinh nghiệm dùng máy Linux: kernel, RAID, LVM, file system" />
 <meta name="keywords" content="hữu ích, tài chính, cá nhân">
 <link rel="canonical" href="https://lehboi.github.io/kinh-nghiem/may-tinh/linux">
@@ -66,7 +66,7 @@ div.lrsp {margin: 0px 5px 0px 5px;}
 .todiscuss {color:lightskyblue;}
 div.center {text-align:center;}
 div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
-h1 {color:#c2ff66;font-family:serif}
+h1 {text-align:center;color:#ffe033;font-family:serif}
 h2 {color:#adff33;font-family:serif}
 h3 {color:#a3ff1a;font-family:serif}
 h4 {color:#8ae600;font-family:serif}
@@ -210,14 +210,9 @@ data-ad-slot="5275186684">
 
   </div>
   
-  <div class="body">
-    <div class="right">Website LHBoi.name.vn đang được chuyển đến địa chỉ mới LeHBoi.github.io.
-    </div>
-  </div>
 
 
   <div class="body">
-    <div class="title">Linux</div>
 
   <div>
     <amp-social-share type="email" height="32"></amp-social-share>
@@ -236,7 +231,8 @@ https://lehboi.github.io/kinh-nghiem/may-tinh/linux
     </amp-facebook-like>
   </div>
 
-<h3>Để máy Linux không bao giờ bị treo cứng lâu</h3>
+  <h1>Linux</h1>
+<h2>Để máy Linux không bao giờ bị treo cứng lâu</h2>
 <p>Kernel của Linux có các module để điều khiển các mạch watchdog trong máy. Các mạch watchdog đó có tính chất là một khi đã được bật lên rồi thì phải đụng đến nó đều đặn. Nếu nó thấy để lâu không đụng tới thì nó sẽ khởi động lại máy giống như ta bấm nút Reset.</p>
 <p>Các máy PC trong khoảng 10 năm tuổi trở xuống thường có mạch watchdog sẵn trong mainboard. Có nhiều mạch watchdog tích hợp trong các chipset khác nhau, ví dụ như chip 8xx ICH của Intel, chip 83627HF của Winbond, chip M1535 của Ali… Để biết mainboard đang dùng có mạch watchdog nào thì phải biết nó dùng chipset nào bằng cách xem tài liệu hoặc lấy kính lúp coi số hiệu mấy con chip trên mainboard. Mainboard tôi đang dùng có chip ICH5 của Intel và có luôn chip 83627HF của Winbond, chỉ có watchdog trong ICH5 được dùng còn watchdog trong Winbond không dùng. Mainboard Pentium 100 thì cũng có chip 83877 của Winbond nhưng lại không được nối tới mạch reset nên không dùng được.</p>
 <p>Kernel tạo sẵn trong các distribution thường có sẵn module watchdog driver cho nhiều loại chip. Ví dụ với máy cài FC6, kernel được build sẵn với các module driver sau:</p>

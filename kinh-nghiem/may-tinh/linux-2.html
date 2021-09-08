@@ -1,7 +1,7 @@
 <!doctype html>
 <html amp lang="vi">
 <head>
-<title>Linux (2) (Trang web LHBội)</title>
+<title>Linux (2)</title>
 <meta name="description" content="Trang 2: Một vài kinh nghiệm dùng máy Linux: kernel, RAID, LVM, file system" />
 <meta name="keywords" content="hữu ích, tài chính, cá nhân">
 <link rel="canonical" href="https://lehboi.github.io/kinh-nghiem/may-tinh/linux-2">
@@ -66,7 +66,7 @@ div.lrsp {margin: 0px 5px 0px 5px;}
 .todiscuss {color:lightskyblue;}
 div.center {text-align:center;}
 div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
-h1 {color:#c2ff66;font-family:serif}
+h1 {text-align:center;color:#ffe033;font-family:serif}
 h2 {color:#adff33;font-family:serif}
 h3 {color:#a3ff1a;font-family:serif}
 h4 {color:#8ae600;font-family:serif}
@@ -139,6 +139,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </style>
 </head>
 
+
 <body>
   <!-- top of body -->
   <!-- sidebar menu -->
@@ -210,15 +211,8 @@ data-ad-slot="5275186684">
 
   </div>
   
-  <div class="body">
-    <div class="right">Website LHBoi.name.vn đang được chuyển đến địa chỉ mới LeHBoi.github.io.
-    </div>
-  </div>
-
 
   <div class="body">
-    <div class="title">Linux (2)</div>
-
   <div>
     <amp-social-share type="email" height="32"></amp-social-share>
     <amp-social-share type="whatsapp" height="32"></amp-social-share>
@@ -236,7 +230,8 @@ https://lehboi.github.io/kinh-nghiem/may-tinh/linux
     </amp-facebook-like>
   </div>
 
-<h3>Cài Linux vào software RAID0</h3>
+  <h1>Linux (2)</h1>
+<h2>Cài Linux vào software RAID0</h2>
 <p>Khi có từ 2 đĩa cứng trở lên trong máy, ta có thể ghép chúng lại thành RAID0 để tăng tốc độ đọc/ghi. RAID0 là một dãy các đĩa cứng được dùng cùng một lúc, khi ghi một file lớn vào RAID0 gồm n đĩa thì file sẽ được chia ra và ghi cùng lúc vào các block của các đĩa cứng, mỗi đĩa cứng chỉ chứa 1/n file do đó thời gian bus hệ thống chờ để ghi data sẽ giảm xuống. Thời gian khi đọc ra cũng nhanh hơn.</p>
 <p>Nếu ta có hardware RAID controller thì không cần làm gì đặc biệt ở hệ điều hành cũng cài được hệ điều hành lên RAID. Nhưng máy ở gia đình thì ít khi có hardware RAID controller mà phải dùng software RAID. Hệ điều hành phải đứng ra tổ chức việc ghi RAID. Khi máy mới boot lên, hệ điều hành chưa chạy thì không thể điều khiển RAID được. Do đó MS Windows không thể cài vào software RAID (trừ dạng đơn giản nhất là RAID1, tức là mirrored). Linux có thể cài vào software RAID bất kỳ nhờ vào việc Linux có thể để nhân hệ điều hành trong 1 file system riêng /boot. Chỉ cần để /boot trong 1 đĩa cứng thường hoặc RAID1 là đủ để Linux boot lên và dùng toàn bộ các file system khác, kể cả /, trong software RAID bất kỳ. Kích thước của /boot rất nhỏ so với toàn bộ hệ điều hành; chỉ cần 20MB là dư dùng, mặc dù khi cài thôi Fedora Core đòi /boot phải từ 75MB trở lên.</p>
 <p>Giả sử máy có 2 đĩa cứng bằng nhau hda và hdc, tạo 20MB /boot file system trên hda, tạo 250MB swap trên hda và 270MB swap trên hdc. Bây giờ, phần còn lại của hai đĩa vẫn bằng nhau. Tạo 2 RAID partition trên toàn bộ phần còn lại. Tạo một RAID0 từ 2 RAID partition đó. Tạo một physical volume trên RAID0 đó. Tạo một volume group từ physical volume. Rồi tạo các file system là các logical volume trong volume group.</p>
@@ -266,14 +261,14 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<h3>Dùng LVM thay RAID0, RAID1</h2>
+<h2>Dùng LVM thay RAID0, RAID1</h2>
 <p>Một cách làm khác là tạo hai physical volume trên hai partition trên hai đĩa cứng, rồi tạo một volume group gồm hai physical volume đó, sau đó tạo các logical volume có hai stripe. Làm như vậy cũng có tác dụng như RAID0.<br />
 Nhưng khi đang cài đặt Linux thì không tạo được logical volume có nhiều stripe, nên cách này không làm được với / file system. / file system chỉ ở trên 1 stripe; nhưng các file system /usr, /home, /var thì có thể ở trên nhiều stripe và tác dụng cũng khá tốt vì / file system chỉ là 1 phần nhỏ trong tất cả các file system.<br />
 Muốn làm vậy thì khi cài Linux phải tạo các file system /usr, /home, /var trên các logical volume của 1 volumegroup. Sau khi cài xong, mở rộng volume group đó ra trên nhiều physical volume, rồi tạo các logical volume mới có nhiều stripe và kích thước lớn hơn hoặc bằng các file system kia, cuối cùng cp -pR tất cả các file từ các file system kia sang và sửa /etc/fstab lại để dùng các file system trên các logical mới. <br />
 LVM cũng có thể làm thay RAID1 (mirror). <br />
 </p>
 Dùng LVM có điểm hay là dễ thay đổi hơn RAID.
-<h3>Tốc độ chép file qua NFS và SMB</h3>
+<h2>Tốc độ chép file qua NFS và SMB</h2>
 <p>Thử chép 703MB của 439 file giữa 2 máy: Pentium 4 2.6GHz/NIC Intel 100Mbps, và Pentium M 1,7GHz NIC Intel 1000Mbps. 2 máy nối với nhau qua switch 100Mbps.</p>
 <table class="noborder">
 <tbody>

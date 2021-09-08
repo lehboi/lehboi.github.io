@@ -1,7 +1,7 @@
 <!doctype html>
 <html amp lang="vi">
 <head>
-<title>Home server (Trang web LHBội)</title>
+<title>Home server</title>
 <meta name="description" content="Một server nhiều dịch vụ trong gia đình: chuẩn đồng hồ, trả lời điện thoại và nhận tin nhắn…" />
 <meta name="keywords" content="hữu ích, tài chính, cá nhân">
 <link rel="alternate" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/toys">
@@ -66,7 +66,7 @@ div.lrsp {margin: 0px 5px 0px 5px;}
 .todiscuss {color:lightskyblue;}
 div.center {text-align:center;}
 div.inlineleft { display:inline;float:left;margin:0px 5px 0px 0px; }
-h1 {color:#c2ff66;font-family:serif}
+h1 {text-align:center;color:#ffe033;font-family:serif}
 h2 {color:#adff33;font-family:serif}
 h3 {color:#a3ff1a;font-family:serif}
 h4 {color:#8ae600;font-family:serif}
@@ -139,6 +139,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </style>
 </head>
 
+
 <body>
   <!-- top of body -->
   <!-- sidebar menu -->
@@ -210,15 +211,8 @@ data-ad-slot="5275186684">
 
   </div>
   
-  <div class="body">
-    <div class="right">Website LHBoi.name.vn đang được chuyển đến địa chỉ mới LeHBoi.github.io.
-    </div>
-  </div>
-
 
   <div class="body">
-    <div class="title">Home server</div>
-
   <div>
     <amp-social-share type="email" height="32"></amp-social-share>
     <amp-social-share type="whatsapp" height="32"></amp-social-share>
@@ -236,7 +230,8 @@ https://lehboi.github.io/kinh-nghiem/may-tinh/toys
     </amp-facebook-like>
   </div>
 
-<h3>Máy tính</h3>
+  <h1>Home server</h1>
+<h2>Máy tính</h2>
 <p>Trong những năm khoảng 2006-2011 tôi host web site này ở nhà dưới tên <a href="https://web.archive.org/web/20150407122250/http://lhboi.homelinux.net/huu-ich.html" target='_blank'>lhboi.homelinux.net</a>. Web server đó cũng là gateway, và máy trả lời điện thoại của chúng tôi. Trước đó, một số nội dung trong website này được đưa vào Internet lần đầu trong những năm 1998-2005 ở <a href="https://web.archive.org/web/20040730232945/http://lhboi.tripod.com/" target='_blank'>lhboi.tripod.com</a>. Bây giờ cả hai domain đó đều không còn, nhưng các bạn có thể tìm lại trong dịch vụ <a href="https://web.archive.org" target='_blank'>lưu trữ web</a>. Từ năm 2011, những bài viết của tôi xuất hiện trong www.lhboi.name.vn bằng dịch vụ <a href="https://sites.google.com/" target='_blank'>Google Sites</a>. Bây giờ domain lhboi.name.vn được đặt ở một nhà cung cấp dịch vụ web hosting ở Việt Nam với chi phí thấp hơn <a href="../linh-tinh/tieu-thu-dien">tiền điện</a> cho máy tinh nhỏ xíu <a href="raspberrypi">Raspberry Pi</a> và router.<br>
 Phần dưới đây viết trong những năm 2006-2007.</p>
 <p>Tất cả các phần mềm dùng trong server lhboi.homelinux.net đều là phần mềm mã nguồn mở:</p>
@@ -296,12 +291,12 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<h4>Máy trả lời điện thoại</h4>
+<h3>Máy trả lời điện thoại</h3>
 <p>Khi có cuộc gọi điện thoại đến mà người trong nhà chưa thể trả lời thì mgetty-voice sẽ phát lời chào, ghi lại lời nhắn vào file trong web server này, và gửi mail chứa URL của file đó cho chủ nhà biết. Với URL đó, lời nhắn có thể nghe được từ bất cứ nơi nào trong Internet.</p>
-<h4>Đồng hồ chính xác</h4>
+<h3>Đồng hồ chính xác</h3>
 <p>Đồng hồ của server này được canh theo đồng hồ chuẩn ở <a href="https://www.ntp.org/" target="_blank">asia.pool.ntp.org</a>. Server này cũng cung cấp lại dịch vụ đồng hồ chuẩn, các bạn có thể để cho máy tính của các bạn canh giờ theo server này bằng <em>ntp</em>. ntp chỉnh đồng hồ máy tính chính xác tới hàng phần triệu giây. Tôi cung cấp dịch vụ này vì ở Việt nam <em>chưa có</em> server nào trong hệ thống pool.ntp.org. Tôi cũng muốn server này trở thành vn.pool.ntp.org nhưng không được vì không có địa chỉ IP cố định. Đáng ngạc nhiên là ở Việt nam không còn Internet server nào cung cấp tín hiệu thời gian chuẩn. Tổng cục Tiêu chuẩn Đo lường chất lượng có một đồng hồ chuẩn, trước kia, có cung cấp tín hiệu ở www.tcvn.gov.vn, nay không thể nào đến trang web đó nữa. Ở home.vnn.vn/netclock trước đây có chương trình đồng hồ (không chính xác) nay thì đồng hồ ngưng hẳn rồi.</p>
 <p>Gần đây, đã có một máy vn.pool.ntp.org đầu tiên.</p>
-<h4>Từ điển</h4>
+<h3>Từ điển</h3>
 <p>Server này chạy chương trình <a href="https://www.dict.org/links.html" target="_blank">dictd</a> với các bộ từ điển lấy từ <a href="https://www.informatik.uni-leipzig.de/~duc/Dict/" target="_blank">Từ điển Hồ Ngọc Đức</a>. Các bạn có thể dùng chương trình dict để tra từ điển trong server này.</p>
 <!-- AMP In-article 1 -->
 <amp-ad
@@ -329,7 +324,7 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<h4>Mạng gia đình</h4>
+<h3>Mạng gia đình</h3>
 <p>Đằng sau server này là mạng gia đình, gồm có:</p>
 <ul><li>Ethernet switch 4-port 10/100 kết hợp với 802.11g Access Point,</li>
 <li>máy desktop Pentium 4 2,6GHz Hyperthread. Mỗi khi tôi bật máy desktop, nó sẽ gọi script <em>/sbin/ifup-local</em> để canh giờ theo server này.</li>
@@ -358,7 +353,7 @@ data-ad-slot="3830899615">
 </table>
 <p>Máy desktop được gắn card AGP 8x nVidia GeForce FX5500 có các đầu ra VGA, DVI, SVIDEO. Thêm một cái DVI-VGA adapter, tôi gắn 2 màn hình VGA vào máy desktop. Gắn thêm keyboard, mouse và audio USB vào, phần mềm <a href="https://userful.com/products/free-2-user-license" target="_blank">Desktop Multiplier</a> làm cho tôi và con gái có thể dùng máy cùng một lúc. Mỗi người có đủ một bộ màn hình, bàn phím, chuột, một người dùng loa, một người dùng headphone. Hai người cùng đọc web, xem TV, nghe nhạc, soạn tài liệu… vẫn còn dư sức cho CPU chạy BOINC. Trong máy Linux có thể chạy một máy ảo VMware là Windows. Hình chụp ở cuối trang.</p>
 <p>Linux nhìn thấy CPU Pentium 4 Hyperthread như 2 CPU, nếu có hai hay nhiều process cần dùng CPU mà CPU đang tạm thời không thể xử lý tiếp lệnh của process đang chạy (có nhiều lý do, ví dụ như gặp lệnh rẽ nhánh đến 1 đoạn code không có sẵn trong cache) thì nó sẽ đưa process khác vào làm. Thực ra thì 1 CPU hyperthread không thể làm nhiều việc như 2 CPU thật. Khi tôi chạy chương trình encode video gồm 4 process pipe với nhau; nhờ máy có nhiều RAM nên CPU không phải chờ đọc ghi đĩa, 4 process đó cần rất nhiều khả năng tính toán của CPU, trung bình có hơn 2,5 process chờ làm việc mà CPU chỉ bận rộn khoảng chừng 120-140%.</p>
-<h4>Máy tính bận rộn suốt ngày</h4>
+<h3>Máy tính bận rộn suốt ngày</h3>
 <p>CPU Pentium không có khả năng tiết kiệm điện bằng cách tự <a href="nhiet-do">thay đổi tần số</a>. Như vậy, dù có việc làm hay đang ở không, nó cũng <a href="../linh-tinh/tieu-thu-dien">tốn điện</a> như nhau. Để khỏi phí lượng điện tốn cho server này, tôi cho nó chạy <a href="https://setiathome.berkeley.edu/" target='_blank'>SETI@home</a>. SETI@home là chương trình ít đòi hỏi nhất trong số các chương trình <a href="https://boinc.berkeley.edu/" target='_blank'>BOINC</a>. Máy server này không đủ sức chạy các chương trình BOINC khác. Bây giờ thì CPU của server này luôn luôn dùng hết khả năng của nó.</p>
 <p>Để tận dụng máy desktop, tôi cho nó chạy chương trình <a href="https://www.worldcommunitygrid.org/" target="_blank">FightAIDS@home</a> trong số các chương trình BOINC.</p>
 <!-- AMP In-article 1 -->
@@ -387,11 +382,11 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
-<h4>IPv6</h4>
+<h3>IPv6</h3>
 <p>Mạng gia đình của tôi dùng <a href="https://www.ipv6.org/" target="_blank">IPv6</a>. Gateway có 1 địa chỉ IPv6 và mạng gia đình có prefix 48 bit, tất cả đều là địa chỉ IPv6 global cố định được cấp (miễn phí) bởi <a href="https://www.freenet6.net/" target="_blank">Freenet6</a>. Nếu các bạn có truy xuất được vào mạng IPv6 global, xin mời thử đến <a href="https://lhboi.broker.freenet6.net/" target="_blank">server này</a>. Do tất cả đều là địa chỉ IPv6 global cố định nên nếu thích tôi có thể cho tất cả các máy trong mạng gia đình làm server, và bất kỳ máy IPv6 nào trong Internet cũng có thể liên lạc với bất kỳ máy nào trong mạng gia đình tôi. Việc liên lạc diễn ra qua tunnel của IPv6 trong IPv4 (dùng UDP port 3653), tunnel nối từ máy gateway của tôi đến 1 server của mạng Freenet6. Nếu router của ISP biết IPv6 thì dùng protocol IPv6 (41) để liên lạc thẳng. ISP Việt nam không mở protocol 41 trên firewall nên tôi dùng UDP port 3653. <br />
 Mạng có prefix 48 bit có 2⁸⁰ (hơn 1,2*10²⁴) địa chỉ. Nó được chia thành 65.536 mạng có prefix 64 bit, mỗi mạng có 2⁶⁴ (hơn 18*10¹⁸) địa chỉ. Một mình tôi làm gì cho hết số địa chỉ này! <br />
 Tôi đang chuyển hết các hoạt động trong mạng gia đình sang IPv6: web proxy Apache và ssh chạy tốt với IPv6, time server ntpd được dịch lại để chạy được trên IPv6. Bên trong mạng gia đình chỉ có IPv6, giữa mạng gia đình và Internet thì có IPv4 và IPv6 chui trong IPv4. Tôi tin rằng đây là mạng IPv6 đầu tiên thật sự hoạt động ở Việt Nam.</p>
-<h3>Các thứ đồ chơi khác</h3>
+<h2>Các thứ đồ chơi khác</h2>
 <p>Tôi dùng cable USB-to-serial để nối điện thoại Siemens CF62 với máy desktop, và máy desktop thấy máy điện thoại như là 1 modem cắm vào ngõ serial. Tôi viết 1 script để đồng bộ giờ trong máy điện thoại với giờ của máy desktop, và ghi các địa chỉ trong Evolution vào máy ĐT. Script đó gọi <em>chat</em> để gửi các lệnh AT xuống máy điện thoại.</p>
 <p>Viettel đã cung cấp dịch vụ GPRS, máy Siemens CF62 có thể xem được các trang web html và wml.</p>
 <p>Trong máy desktop có gắn card TV Bt878. Tôi thử dùng <a href="https://sector17.tvand.net/cabletv/" target="_blank">CableTV</a> và <a href="https://cube.dyndns.org/~rsnel/cc2y4m/" target="_blank">cc2y4m</a> để xem HTVC nhưng không được.</p>
