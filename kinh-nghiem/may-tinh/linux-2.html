@@ -1,7 +1,7 @@
 <!doctype html>
 <html amp lang="vi">
 <head>
-<title>Linux (2)</title>
+<title>Vài kinh nghiệm dùng máy Linux (2)</title>
 <meta name="description" content="Trang 2: Một vài kinh nghiệm dùng máy Linux: kernel, RAID, LVM, file system" />
 <meta name="keywords" content="hữu ích, tài chính, cá nhân">
 <link rel="canonical" href="https://lehboi.github.io/kinh-nghiem/may-tinh/linux-2">
@@ -230,7 +230,6 @@ https://lehboi.github.io/kinh-nghiem/may-tinh/linux
     </amp-facebook-like>
   </div>
 
-  <h1>Linux (2)</h1>
 <h2>Cài Linux vào software RAID0</h2>
 <p>Khi có từ 2 đĩa cứng trở lên trong máy, ta có thể ghép chúng lại thành RAID0 để tăng tốc độ đọc/ghi. RAID0 là một dãy các đĩa cứng được dùng cùng một lúc, khi ghi một file lớn vào RAID0 gồm n đĩa thì file sẽ được chia ra và ghi cùng lúc vào các block của các đĩa cứng, mỗi đĩa cứng chỉ chứa 1/n file do đó thời gian bus hệ thống chờ để ghi data sẽ giảm xuống. Thời gian khi đọc ra cũng nhanh hơn.</p>
 <p>Nếu ta có hardware RAID controller thì không cần làm gì đặc biệt ở hệ điều hành cũng cài được hệ điều hành lên RAID. Nhưng máy ở gia đình thì ít khi có hardware RAID controller mà phải dùng software RAID. Hệ điều hành phải đứng ra tổ chức việc ghi RAID. Khi máy mới boot lên, hệ điều hành chưa chạy thì không thể điều khiển RAID được. Do đó MS Windows không thể cài vào software RAID (trừ dạng đơn giản nhất là RAID1, tức là mirrored). Linux có thể cài vào software RAID bất kỳ nhờ vào việc Linux có thể để nhân hệ điều hành trong 1 file system riêng /boot. Chỉ cần để /boot trong 1 đĩa cứng thường hoặc RAID1 là đủ để Linux boot lên và dùng toàn bộ các file system khác, kể cả /, trong software RAID bất kỳ. Kích thước của /boot rất nhỏ so với toàn bộ hệ điều hành; chỉ cần 20MB là dư dùng, mặc dù khi cài thôi Fedora Core đòi /boot phải từ 75MB trở lên.</p>
@@ -333,7 +332,7 @@ data-ad-slot="3830899615">
 </amp-ad>
 
   <hr>
-Hit count <amp-iframe width="120" height="30" frameborder="0" 
+Hit count <amp-iframe width="120" height="30" frameborder="0"
 srcdoc="<img width='100' height='24' src='https://c.statcounter.com/12598906/0/9a8e736a/0/'>">
 </amp-iframe> by <a href="https://statcounter.com" target='_blank'>statcounter.com</a>.
   <div class="footer">
