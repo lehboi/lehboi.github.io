@@ -10,20 +10,17 @@
 
 <!-- in head of html file -->
 <meta charset='utf-8'>
-
-<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
-
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 
-<script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
 
 <!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
 <style amp-custom>
@@ -58,7 +55,7 @@ amp-sidebar {
 div.mwidth {max-width:1004px;margin: auto;}
 
 body {background-color:dimgray;}
-div.body {max-width:1004px;margin: auto; padding-left:8px; padding-right:8px; text-align:justify;color:white;background-color:black;font-family:sans-serif}
+div.body {max-width:1004px;margin: auto; padding-left:8px; padding-right:8px; text-align:justify;color:gainsboro;background-color:black;font-family:sans-serif}
 div.title {text-align:center;font-size:160%;font-weight:bold;color:#ffe033;font-family:serif}
 div.right {text-align:right;}
 div.lrsp {margin: 0px 5px 0px 5px;}
@@ -140,7 +137,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     <a href='/home/cv'>Thành-tích</a><br>
   <h3 class="myheader"><a href='/huu-ich/'>Hữu-ích</a></h3>
 
-      <h4 class="myheader"><a href='/huu-ich/ke-hoach-tai-chinh/'>Lập-kế-hoạch-tài-chính</a></h4>
+      <h4 class="myheader"><a href='/huu-ich/ke-hoach-tai-chinh/'>Lập-kế-hoạch-tài-chính gia-đình</a></h4>
 
       <h4 class="myheader"><a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a></h4>
 
@@ -178,20 +175,14 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 
   <div class="body">
   <div>
-    <amp-social-share type="email" height="32"></amp-social-share>
+    <amp-social-share type="system" height="32"></amp-social-share>
+    <amp-social-share type="facebook" height="32" data-param-app_id="1879212745697311"></amp-social-share>
     <amp-social-share type="whatsapp" height="32"></amp-social-share>
     <amp-social-share type="linkedin" height="32"></amp-social-share>
     <amp-social-share type="twitter" height="32"></amp-social-share>
     <amp-social-share type="tumblr" height="32"></amp-social-share>
     <amp-social-share type="line" height="32"></amp-social-share>
-    <amp-social-share type="facebook" height="32" data-param-app_id="1879212745697311"></amp-social-share>
-    <amp-facebook-like height=32 width=90
-      layout="fixed"
-      data-layout="button_count"
-      data-href=
-"https://lehboi.github.io/kinh-nghiem/chu-viet/"
-    >
-    </amp-facebook-like>
+    <amp-social-share type="email" height="32"></amp-social-share>
   </div>
 
 <!-- body here -->
@@ -203,7 +194,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
   <dt><a href='/kinh-nghiem/chu-viet/web'>Web Chữ Việt</a></dt>
 </dl>
   <hr>
-Hit count <amp-iframe width="120" height="30" frameborder="0"
+Hit count <amp-iframe width="120" height="30" frameborder="0" scrolling="no"
 srcdoc="<img width='100' height='24' src='https://c.statcounter.com/12598906/0/9a8e736a/0/'>">
 </amp-iframe> by <a href="https://statcounter.com" target='_blank'>statcounter.com</a>.
   <div class="footer">

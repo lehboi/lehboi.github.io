@@ -9,22 +9,19 @@
 
 <!-- in head of html file -->
 <meta charset='utf-8'>
-
-<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
+<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
 <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 
-<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-
-<script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
 <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
 
 <!-- font-size https://css-tricks.com/snippets/css/fluid-typography/ -->
 <style amp-custom>
@@ -59,7 +56,7 @@ amp-sidebar {
 div.mwidth {max-width:1004px;margin: auto;}
 
 body {background-color:dimgray;}
-div.body {max-width:1004px;margin: auto; padding-left:8px; padding-right:8px; text-align:justify;color:white;background-color:black;font-family:sans-serif}
+div.body {max-width:1004px;margin: auto; padding-left:8px; padding-right:8px; text-align:justify;color:gainsboro;background-color:black;font-family:sans-serif}
 div.title {text-align:center;font-size:160%;font-weight:bold;color:#ffe033;font-family:serif}
 div.right {text-align:right;}
 div.lrsp {margin: 0px 5px 0px 5px;}
@@ -136,6 +133,9 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 
 }
 
+.accordion-header {
+  background-color:black;
+}
 </style>
 <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 </head>
@@ -154,7 +154,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     <a href='/home/cv'>Thành-tích</a><br>
   <h3 class="myheader"><a href='/huu-ich/'>Hữu-ích</a></h3>
 
-      <h4 class="myheader"><a href='/huu-ich/ke-hoach-tai-chinh/'>Lập-kế-hoạch-tài-chính</a></h4>
+      <h4 class="myheader"><a href='/huu-ich/ke-hoach-tai-chinh/'>Lập-kế-hoạch-tài-chính gia-đình</a></h4>
 
       <h4 class="myheader"><a href='/huu-ich/dau-tu-co-phieu/'>Đầu-tư-cổ-phiếu</a></h4>
 
@@ -215,20 +215,14 @@ data-ad-slot="5275186684">
 
   <div class="body">
   <div>
-    <amp-social-share type="email" height="32"></amp-social-share>
+    <amp-social-share type="system" height="32"></amp-social-share>
+    <amp-social-share type="facebook" height="32" data-param-app_id="1879212745697311"></amp-social-share>
     <amp-social-share type="whatsapp" height="32"></amp-social-share>
     <amp-social-share type="linkedin" height="32"></amp-social-share>
     <amp-social-share type="twitter" height="32"></amp-social-share>
     <amp-social-share type="tumblr" height="32"></amp-social-share>
     <amp-social-share type="line" height="32"></amp-social-share>
-    <amp-social-share type="facebook" height="32" data-param-app_id="1879212745697311"></amp-social-share>
-    <amp-facebook-like height=32 width=90
-      layout="fixed"
-      data-layout="button_count"
-      data-href=
-"https://lehboi.github.io/kinh-nghiem/may-tinh/pi-network"
-    >
-    </amp-facebook-like>
+    <amp-social-share type="email" height="32"></amp-social-share>
   </div>
 
 <!-- body here -->
@@ -364,7 +358,7 @@ data-ad-slot="3830899615">
 <br>Hiện-nay mỗi ngày có hơn một triệu giao-dịch và khoảng 12 ngàn Node chính-thức xử-lý mỗi giao-dịch hết khoảng 5-8 giây. Số Node sẽ tăng theo số giao-dịch để giữ cho tốc-độ xử-lý giao-dịch đủ nhanh. Tạm cho là một triệu giao-dịch mỗi ngày cần 10 ngàn Node. Giả-sử phí chuyển tiền tối-thiểu là 0,01 pi như bây giờ thì khi chính-thức hoạt-động một triệu giao-dịch sẽ thu phí được 10 ngàn pi mỗi ngày, chia cho 10 ngàn Node thì trung-bình mỗi Node thu được 1 pi mỗi ngày, 30 pi mỗi tháng. Nếu mỗi pi tương-đương 10USD thì đầu-tư một máy-tính 25-30 triệu VND làm Node cũng được.</p>
 <amp-accordion>
 <section>
-<h4>Cài Pi Node</h4>
+<h4 class="accordion-header">Cài Pi Node</h4>
 <div>
 <p>Máy dùng làm Pi Node cần phải có đĩa-cứng SSD để kịp ghi các giao dịch. Pi Node software gồm có hai phần: phần giao-diện cho người-dùng, và phần xử-lý blockchain. Phần xử-lý blockchain chạy trên Linux trong một máy-ảo-Docker, máy-ảo-Docker có thể chạy trên Windows và Mac. Hiện nay Pi Network chỉ phát-hành phần giao-diện cho người-dùng trên Windows và Mac, chưa có trên Linux.</p>
 <p>Đầu tiên, bạn download và cài phần giao-diện cho người-dùng từ <a href="https://minepi.com/node/" target='_blank'>Pi Network</a>. Khi mới cài Pi Node thì phần xử-lý blockchain chưa được cài vào máy cho tới khi bạn chọn xin làm node. Khi đó, bạn sẽ được hướng-dẫn cài Docker vào Windows. Sau khi Docker được cài xong, software Pi Node sẽ download PortsChecker vào Docker và yêu-cầu bạn điều-chỉnh router để từ bên ngoài có thể nối vào node qua các port 31400-31409 trên IPv4.
@@ -489,7 +483,7 @@ Tài-liệu tham-khảo:
 <br>* <a href="https://www.reddit.com/r/PiNetwork/wiki/pi-wiki" target='_blank'>Reddit Pi Network</a>
 <br>Mọi ý-kiến thảo-luận xin ghi vào các trang: <a href="https://www.facebook.com/lamgiauchacchan/posts/1819584918207108" rel="nofollow" target="_blank">Facebook</a></div>
   <hr>
-Hit count <amp-iframe width="120" height="30" frameborder="0"
+Hit count <amp-iframe width="120" height="30" frameborder="0" scrolling="no"
 srcdoc="<img width='100' height='24' src='https://c.statcounter.com/12598906/0/9a8e736a/0/'>">
 </amp-iframe> by <a href="https://statcounter.com" target='_blank'>statcounter.com</a>.
   <div class="footer">
