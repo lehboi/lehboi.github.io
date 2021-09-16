@@ -141,7 +141,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 </head>
 
-
 <body>
   <!-- top of body -->
   <!-- sidebar menu -->
@@ -243,6 +242,7 @@ data-ad-slot="5275186684">
 </ul>
 <p>Với cloud storage server, tất cả hình chụp bằng smartphone được tự động upload vào cloud server, tất cả các file làm việc trên các computer đều được synchronize tức thời vào cloud server. Nextcloud tự động nhớ lại từng version của file sau mỗi lần file được sửa, user có thể chọn dùng lại hoặc download lại các version cũ qua web browser.</p>
 
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -268,6 +268,7 @@ type="adsense"
 data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
+
 
 <h3>Multimedia</h3>
 <p>Các file hình được xem trực tiếp trong web browser và mobile app.
@@ -294,6 +295,7 @@ data-ad-slot="3830899615">
 <p>Từ Ubuntu Desktop Linux: dùng <i>Startup Disk Creator</i> trong <i>System Tools</i> menu.
 <br>Từ Windows: theo hướng dẫn ở <a href="https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows#0" target="_blank">link này</a>.</p>
 
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -319,6 +321,7 @@ type="adsense"
 data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
+
 
 <h3>Boot và install</h3>
 <p>Có hai cách install Nextcloud: install Nextcloud và các thành phần kèm theo trong một gói <b>snap</b> hoặc install riêng Nextcloud và các thành phần kèm theo. Install trong gói snap thì gọn nhưng bạn không thay đổi được các thông số của Nextcloud. Tôi đã install trong snap, sau đó phải gỡ bỏ snap và install riêng Nextcloud và các thành phần kèm theo. Phần dưới đây hướng dẫn install trong snap.</p>
@@ -338,6 +341,7 @@ data-ad-slot="3830899615">
 <h4>Đổi storage location</h4>
 <p>Nếu bạn đã chọn chia đĩa Manual ở bước 8 thì bạn phải đổi chỗ chứa file của Nextcloud để dùng đúng partition. Bạn phải tạo filesystem trong partition (hoặc logical volume nếu bạn dùng LVM) dành riêng cho data storage. Bạn thêm một dòng vào file /etc/fstab để mount filesystem đó vào chỗ Nextcloud chứa file là /var/snap/nextcloud/common/nextcloud. Nhưng trước khi boot lại để mount filesystem đó vào đúng chỗ, bạn cần mount filesystem đó vào một chỗ tạm và dời các file đang có trong /var/snap/nextcloud/common/nextcloud vào filesystem đó.</p>
 
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -363,6 +367,7 @@ type="adsense"
 data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
+
 
 <h4>Tạo vùng swap trong RAM</h4>
 <p>Nếu máy của bạn có ít hơn 4GB RAM hoặc có nhiều người dùng cloud server này thì sẽ có lúc server cần dùng vùng swap để phụ thêm cho RAM. Ở bước 8 phía trên, chương trình install đã tạo một vùng swap trong đĩa cứng. Đĩa cứng thì chạy chậm hơn RAM gần một trăm lần nên server sẽ rất chậm mỗi khi dùng đến vùng swap.
@@ -380,6 +385,7 @@ data-ad-slot="3830899615">
 <p>Để dùng cloud storage server từ Internet với địa chỉ IPv4 nội bộ, bạn phải cho router tiếp nhận connection trên port 80 và port 443 ở địa chỉ public IPv4 toàn cầu và chuyển tiếp connection đó đến địa chỉ IPv4 nội bộ của cloud storage server.</p>
 <p>Bạn không cần NAT với IPv6 nhưng bạn cần đặt cho router mở port 80 và port 443 cho kết nối theo IPv6 từ bên ngoài vào.</p>
 
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -405,6 +411,7 @@ type="adsense"
 data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
+
 
 <h4>Dynamic DNS</h4>
 <p>Để cho dễ tìm đến server, bạn sẽ đăng ký một domain name dễ nhớ cho cloud storage server và dùng dịch vụ dynamic DNS để đổi domain name đó thành địa chỉ IPv4 toàn cầu của FTTH router. Tôi đề nghị dùng dịch vụ miễn phí dynv6.com. Dynv6.com cho phép đổi domain name của bạn thành một địa chỉ IPv4 và một địa chỉ IPv6. Bạn sẽ cho cloud server chạy một script dynv6.sh để ghi hai địa chỉ đó vào database của dynv6.com mỗi lần cổng Ethernet của server bật lên. Script dynv6.sh được download từ <a href="https://dynv6.com/docs/apis" target='_blank'>Dynv6</a> và đặt vào folder /etc/networkd-dispatcher/routable.d/. Bạn cần <code>chmod</code> để script dynv6.sh được quyền executable và bạn cũng cần phải sửa vài dòng đầu script để đặt giá trị cho các variable <var>hostname</var>, <var>device</var>, <var>token</var>. <var>Hostname</var> là domain name mà bạn đã đăng ký với dynv6.com, <var>device</var> là tên của Ethernet port (xem tên đó bằng cách đánh lệnh <code>ip addr</code>), <var>token</var> do dynv6.com cấp cho domain name của bạn.</p>
@@ -421,6 +428,7 @@ data-ad-slot="3830899615">
 <p>Client trên desktop computer chỉ có chức năng synchronize file giữa client và cloud server.</p>
 <p>Mobile app cũng có chức năng synchronize file giữa client và cloud server, ngoài ra nó còn tự động upload file hình mới tạo ra trong mobile và play một số file audio và video.</p>
 
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -446,6 +454,7 @@ type="adsense"
 data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
+
 
 <h4>Web interface</h4>
 <p>Bạn có thể quản lý file của bạn trong cloud server: upload, download, delete, move, copy, rename files.
@@ -474,6 +483,7 @@ data-ad-slot="3830899615">
 <br>Cái máy laptop cũ CPU Atom N570 2 core 4 thread 1666MHz và 2GB RAM của tôi có thể streaming audio file nhưng không streaming nổi video file. Khi streaming video file, server sinh ra hơn 20 process php_fpm để gửi file ra, hậu quả là máy không đủ RAM và tốn nhiều thời gian swap các process.</p>
 <p>Thay vì streaming qua WebDAV, tôi share đĩa cứng qua NFS cho app Kodi phát thật nhẹ nhàng. Thật ra khi quyết định dùng máy laptop cũ này làm server, tôi đã nghĩ đến chức năng NFS file server, rồi tìm thấy Nextcloud với những tính năng vượt quá mong đợi. Bây giờ tôi dùng Nextcloud với những file làm việc trên máy tính và hình chụp trên smartphone, NFS để share multimedia file.</p>
 
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -499,6 +509,7 @@ type="adsense"
 data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
+
 
 <h3>Administrating</h3>
 <h4>Backup</h4>
@@ -605,10 +616,10 @@ srcdoc="<img width='100' height='24' src='https://c.statcounter.com/12598906/0/9
   <a href="viber://add?number=84989760570"><amp-img src="/images/icons/Viber-128.png" layout="fixed" width="40" height="40" alt="Viber"></amp-img></a>
   <a href="http://zaloapp.com/qr/p/lzfbyqlwzn9u"><amp-img src="/images/icons/Zalo.webp" layout="fixed" width="40" height="40" alt="Zalo"></amp-img></a> 
   <a href="tel:+84989760570"><amp-img src="/images/icons/Cell-Phone-256.png" layout="fixed" width="40" height="40" alt="điện thoại"></amp-img></a>
-  <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
+  <a href="mailto:LEHBOI@GMAIL.COM?subject=lehboi.github.io"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   <br>
-  Nếu bạn chép lại những trang-web này, hãy ghi nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a> để người-đọc có-thể tìm được nội-dung mới nhất.
+  Nếu bạn chép lại những trang-web này, hãy ghi nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a> để người-đọc có-thể tìm được nội-dung mới nhất. (Domain name trước đây của website này là LHBOI.NAME.VN.)
   </div>
 </div>
 <amp-analytics type="googleanalytics">

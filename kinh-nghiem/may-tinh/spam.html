@@ -136,7 +136,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </style>
 </head>
 
-
 <body>
   <!-- top of body -->
   <!-- sidebar menu -->
@@ -230,6 +229,7 @@ Người ta ước tính cứ bốn máy tính trên thế giới thì có một
 <p>Thư spam cũng có thể được gửi thẳng từ các doanh nghiệp để giới thiệu sản phẩm hay dịch vụ của doanh nghiệp. Thư spam loại này thường được gửi từ một máy. Loại thư spam này rất khó chặn vì chúng có ít điểm khác thường để phân biệt.</p>
 <p>Loại thư spam thứ ba là thư lừa đảo thì thường được gửi từ những mail server công cộng như yahoo, hotmail, gmail.</p>
 <p>Cần phải dùng nhiều lớp hàng rào sau đây để chặn thư spam.</p>
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -256,6 +256,7 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
+
 <h2>Giới hạn số lần nhận thư từ mỗi địa chỉ IP</h2>
 Những chương trình gửi thư spam sẽ gửi thư liên tiếp tới từng hộp thư trong mail server, có khi gửi tới những hộp thư không có thật trong mail server nữa. Ở lớp hàng rào này, mail server sẽ chỉ nhận một số thư hạn chế từ mỗi địa chỉ IP trong từng khoảng thời gian, ví dụ chỉ nhận 1 thư trong vòng 5 phút. Khi một địa chỉ IP gửi liên tiếp nhiều thư đến và vượt con số hạn chế thì nó sẽ bị từ chối cho đến hết khoảng thời gian đã định rồi mới gửi tiếp được. Những mail server bình thường sẽ chỉ gửi một số thư vừa phải nên ít khi bị vượt hạn mức. Mail server có một danh sách đặc biệt để đặc cách cho các mail server lớn và đáng tin cậy không bị hạn chế.
 <p>Hàng rào này giúp ngăn chặn sự hao tổn vô ích của tài nguyên máy và mạng.</p>
@@ -268,6 +269,7 @@ Những domain thường gửi thư spam đã bị đưa vào các blacklist tro
 Lớp hàng rào này cũng ngăn những thư mà hộp thư gửi không nhận thư trả lời. Phần lớn những địa chỉ hộp thư mà không chịu nhận thư vào là địa chỉ hộp thư không có thật do những chương trình gửi thư spam bịa ra. Một số ít những thư gửi tin tức tự động từ những công ty cũng có địa chỉ hộp thư gửi không nhận thư trả lời, muốn nhận những thư tin tức đó thì phải đưa tên domain của các công ty đó vào một danh sách riêng để mail server không từ chối.<br />
 Mail server sẽ lập một danh sách các địa chỉ hộp thư nhận trả lời và không nhận trả lời. Khi có một thư gửi tới, mail server sẽ tra danh sách để quyết định nhận hay từ chối thư. Nếu địa chỉ thư gửi chưa có trong danh sách thì mail server sẽ gửi thử một thư đến địa chỉ đó để xem nó thuộc hạng nào.
 <p>Hàng rào này sẽ chặn hơn 60% số thư spam đã vượt qua được hàng rào trước.</p>
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -293,6 +295,7 @@ type="adsense"
 data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
+
 
 <h2>Spamassassin</h2>
 Những cách chặn trên không cần xem đến nội dung của thư mà đã chặn được hơn 95% số thư spam. Do không cần phải xem nội dung thư nên không hao tốn tài nguyên máy. Vẫn còn một ít spam mail đi qua được các hàng rào trên. Để lọc những thư này, mail server dùng Spamassassin để đọc qua nội dung thư và đánh giá mức độ spam dựa trên nhiều đặc điểm của từng thư. Những đặc điểm đó là:
@@ -309,6 +312,7 @@ Với Outlook Express thì phải làm theo cách trong trang sau <a href="https
 <blockquote>Create a *new* mail message in Outlook/Express. Resize the windows so that you can see both your new message as well as the main O/OE window. Select the messages you want to send as Spam or Ham (probably not both in the same message) and drag them "into" the new message. This will send all the messages as attachments to the main email.</blockquote>
 Thư gửi đến spammail@mydomain.com.vn sẽ được giao cho sa-learn để đưa vào database Bayes. Nếu người quản trị cẩn thận thì nên mở từng thư trong spammail@mydomain.com.vn ra coi trước khi giao cho sa-learn.<br />
 Ngoài database Bayes, Spamassassin còn có thể tra và báo thư spam vào các database trong Internet là Razor, Pyzor, Dcc.
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -334,6 +338,7 @@ type="adsense"
 data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
+
 
 <p>Trên đây là những cách chặn thư spam <i>đơn giản</i>, ít tốn công của người quản trị và người dùng. Nếu các cách trên vẫn chưa chặn hết thư spam, có thể dùng thêm các access list của mail server để chặn những thư có dấu hiệu cụ thể. Để dùng access list thì phải tốn công đọc và nhận ra dấu hiệu riêng của thư spam.<br />
 Dù cho đã làm hết mọi cách, vẫn có thể còn khoảng 1% thư spam lọt vào được đến hộp thư của người dùng vì thư spam luôn luôn thay đổi, rất khó đoán trước được.</p>
@@ -369,10 +374,10 @@ srcdoc="<img width='100' height='24' src='https://c.statcounter.com/12598906/0/9
   <a href="viber://add?number=84989760570"><amp-img src="/images/icons/Viber-128.png" layout="fixed" width="40" height="40" alt="Viber"></amp-img></a>
   <a href="http://zaloapp.com/qr/p/lzfbyqlwzn9u"><amp-img src="/images/icons/Zalo.webp" layout="fixed" width="40" height="40" alt="Zalo"></amp-img></a> 
   <a href="tel:+84989760570"><amp-img src="/images/icons/Cell-Phone-256.png" layout="fixed" width="40" height="40" alt="điện thoại"></amp-img></a>
-  <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
+  <a href="mailto:LEHBOI@GMAIL.COM?subject=lehboi.github.io"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   <br>
-  Nếu bạn chép lại những trang-web này, hãy ghi nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a> để người-đọc có-thể tìm được nội-dung mới nhất.
+  Nếu bạn chép lại những trang-web này, hãy ghi nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a> để người-đọc có-thể tìm được nội-dung mới nhất. (Domain name trước đây của website này là LHBOI.NAME.VN.)
   </div>
 </div>
 <amp-analytics type="googleanalytics">

@@ -136,7 +136,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </style>
 </head>
 
-
 <body>
   <!-- top of body -->
   <!-- sidebar menu -->
@@ -229,6 +228,7 @@ data-ad-slot="5275186684">
 <p>Cryptocurrency (tiền mật mã) là một phát-minh của Satoshi Nakamoto trong năm 2008 về tiền-điện-tử trong mạng-lưới-ngang-hàng (A Peer-to-Peer Electronic Cash System.)</p>
 <p>Khi giao-dịch tiền trong ngân hàng thường, mỗi sự chuyển dịch của tiền đều được ghi lại bằng một dòng đại khái như “An chuyển x đồng cho Bình” trong server của ngân hàng. Trong mạng ngang hàng, không có một server tập trung thông tin, mà mọi thành viên trong mạng lưới (gọi là node) đều có một bản sao tất-cả sổ-cái-ghi-chép-giao-dịch. Phát-minh của Satoshi là cách để mọi bản sao đều đồng nhất với nhau. Satoshi gọi đồng tiền điện tử mới đó là Bitcoin. Trong hệ thống Bitcoin, dòng “An chuyển x bitcoin cho Bình” phải được ký bởi chữ ký điện tử (private key) của An rồi được truyền đến tất cả các node trong mạng. Giao dịch đó còn phải chờ được các node phê-chuẩn rồi mới được thực-hiện. Các node phải kiểm-tra để chắc-chắn rằng x bitcoin thật sự là của An.</p>
 <p>Các máy tính node, còn gọi là miner, sẽ kiểm tra, xử lý các dòng giao dịch đó để gói các giao dịch vào một block theo thuật toán SHA 256 và nối block đó với các block đã có trước. Khi quá trình đó hoàn thành thì giao dịch mới được xác nhận. Miner nào gói được một block đạt yêu-cầu sớm nhất sẽ được thưởng bằng những bitcoin mới sinh ra.</p>
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -255,6 +255,7 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
+
 <h3>Ký bằng chữ ký điện tử thế nào?</h3>
 <p><a href="https://en.wikipedia.org/wiki/Digital_signature" target='_blank'>Chữ ký điện tử</a> là một cặp hai con số rất lớn: private key và public key. Tên gọi của hai con số đó đã cho biết: phải giữ kín private key và để public key cho mọi người biết.
 <br>Khi ký một thông điệp m, máy tính sẽ tính ra một chữ ký s từ m và private key rồi gửi s kèm theo m. Bên nhận được thông điệp sẽ dùng public key và m để tính ra xem kết quả có khớp với s hay không. Nếu không khớp nghĩa là m đã bị tráo trên đường truyền.</p>
@@ -264,6 +265,7 @@ data-ad-slot="3830899615">
 <br>Private key là một con số nhị phân dài 256/128/512 bit được tự động sinh ra một cách ngẫu nhiên bằng software wallet cho người chủ của wallet. Software còn giúp tạo ra một dãy từ gợi nhớ gồm những từ có trong từ điển (mnemonic phrase, recovery phrase) mà từ dãy đó tìm trở lại private key của wallet. Mnemonic phrase cần được viết ra giấy và cất kỹ ở vài nơi để có thể lấy ra dùng khi cần.</p>
 <p>Tiền giấy và tiền kim loại thông thường được chính phủ phát hành theo những mệnh giá cố định. Bitcoin không như vậy. Những lượng Bitcoin lớn nhỏ khác nhau lưu hành trong mạng. Mỗi lượng Bitcoin là một chuỗi data ghi những giao dịch nó đã trải qua từ lúc được tạo ra. Khi một lượng Bitcoin x được chuyển từ wallet A sang wallet B, thì x được ghi thêm địa chỉ B và được ký bằng private key của A.
 <br>Tổng số tiền có trong wallet là tổng các lượng Bitcoin mang các địa chỉ của wallet. Khi một wallet A cần chuyển một lượng Bitcoin x sang wallet B mà không có lượng Bitcoin bằng đúng x có sẵn trong wallet A thì nó lấy một hoặc nhiều lượng Bitcoin có tổng lớn hơn hoặc bằng x đưa vào giao dịch, tạo ra một lượng Bitcoin x mới mang địa chỉ B và một lượng Bitcoin mới mang địa chỉ A chứa phần dư sau khi trừ x (nếu có). Phần dư cũng có thể mang một địa chỉ khác A được tạo ra và software wallet phải ghi cặp public key và private key của lượng Bitcoin dư đó vào file dữ liệu.</p>
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -289,6 +291,7 @@ type="adsense"
 data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
+
 
 Wallet có thể được đặt trong
 <ol>
@@ -312,6 +315,7 @@ Giao dịch trên sàn thì tốn phí giao dịch, phí chuyển Bitcoin vào v
 </ol>
 <p>Mua bán cách nào cũng tốn phí trả cho miner.
 <br>Khi lượng Bitcoin cần chuyển ra khỏi wallet không bằng bất cứ một lượng Bitcoin nào có sẵn trong wallet thì việc chuyển Bitcoin sẽ có thêm bước tách/nhập các lượng Bitcoin có sẵn thành lượng Bitcon cần chuyển. Bước tách/nhập làm tốn công miner hơn nên tốn phí nhiều hơn.</p>
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -338,6 +342,7 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
+
 <h2>Giữ wallet thế nào để khỏi mất?</h2>
 <p>Wallet trong web server là mục tiêu của hacker. Hacker luôn tìm cách chiếm đoạt toàn bộ wallet trong từng server. Lượng Bitcoin chưa định bán thì nên chuyển từ web wallet vào cold wallet để tránh bị hack.</p>
 <p>Wallet trong máy tính và smartphone dễ bị mất cắp qua các phần mềm gián điệp. Để an toàn hơn, người ta để wallet trong các máy tính sạch và không nối mạng, gọi là cold wallet. Người ta đặt ra các thủ tục rất chặt chẽ khi dùng cold wallet trong máy tính để tránh bị mất cắp.</p>
@@ -348,6 +353,7 @@ data-ad-slot="3830899615">
 <h2>Mặt trái của Bitcoin</h2>
 <h3>Sự đầu cơ</h3>
 <p>Mặc dù nó được gọi là currency, coin nhưng tôi thấy hiện nay nó không phải là một loại tiền vì không tiện để dùng nó mua các thứ khác. Mỗi lần chuyển một lượng Bitcoin dù nhỏ hay lớn đều tốn trung bình 10 phút, lâu hơn việc thanh toán bằng thẻ. Tôi cho rằng Bitcoin là một loại tài sản để <a href="/huu-ich/cach-dau-tu">đầu cơ</a>.</p>
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -373,6 +379,7 @@ type="adsense"
 data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
+
 
 <h3>Hao tốn năng lượng</h3>
 <p>Các máy tính miner tranh nhau xử lý các giao dịch để cuối cùng chỉ có một miner được thưởng Bitcoin mới, việc tranh giành làm hao tốn rất nhiều điện năng. Có người tính rằng hiện nay để xử lý một giao dịch Bitcoin thì hao mất 200kWh điện. Và lượng điện đó ngày càng tăng vì càng có nhiều miner mới tham gia.</p>
@@ -396,10 +403,10 @@ srcdoc="<img width='100' height='24' src='https://c.statcounter.com/12598906/0/9
   <a href="viber://add?number=84989760570"><amp-img src="/images/icons/Viber-128.png" layout="fixed" width="40" height="40" alt="Viber"></amp-img></a>
   <a href="http://zaloapp.com/qr/p/lzfbyqlwzn9u"><amp-img src="/images/icons/Zalo.webp" layout="fixed" width="40" height="40" alt="Zalo"></amp-img></a> 
   <a href="tel:+84989760570"><amp-img src="/images/icons/Cell-Phone-256.png" layout="fixed" width="40" height="40" alt="điện thoại"></amp-img></a>
-  <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
+  <a href="mailto:LEHBOI@GMAIL.COM?subject=lehboi.github.io"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   <br>
-  Nếu bạn chép lại những trang-web này, hãy ghi nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a> để người-đọc có-thể tìm được nội-dung mới nhất.
+  Nếu bạn chép lại những trang-web này, hãy ghi nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a> để người-đọc có-thể tìm được nội-dung mới nhất. (Domain name trước đây của website này là LHBOI.NAME.VN.)
   </div>
 </div>
 <amp-analytics type="googleanalytics">

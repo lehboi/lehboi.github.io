@@ -15,8 +15,6 @@
 
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
-
 
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
@@ -107,35 +105,22 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
-
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
-
-  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 
 }
 
 </style>
 </head>
-
 
 <body>
   <!-- top of body -->
@@ -185,29 +170,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     </div>
   </div>
   
-  <div class="leftads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  <div class="rightads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  
 
   <div class="body">
   <div>
@@ -231,31 +193,7 @@ data-ad-slot="5275186684">
 <p>Nếu chưa thể mua được tủ chống ẩm thì có thể làm theo cách đơn giản sau: dùng silica gel để làm khô không khí trong hộp kín. Trên thị trường có bán các hộp nhựa PP trong do Việt Nam sản xuất, có một lớp đệm cao su silicone quanh nắp, rất kín, có đủ cỡ từ 0,2l tới 8l. Trong hình bên cạnh là một hộp 4,5l để cất máy chụp ảnh, máy quay phim và các cuộn băng. Phần màu xanh dương quanh nắp là cao su silicone. Trong hộp có khoảng 50cc <a href="https://vi.wikipedia.org/wiki/Silica_gel" target="_blank">silica gel</a>. Đặt một ẩm kế vào trong hộp, sau nửa ngày kim ngừng lại ở vạch 40%, trong khi độ ẩm ngoài trời cao như đã ghi ở trên. Ẩm kế vỏ nhựa hình tròn, Made in China, mua ở tiệm bán dụng cụ y khoa, giá 50.000₫. Tất cả tốn chưa tới 100.000₫, lại không tốn điện.</p>
 <p>Sau nhiều lần mở hộp để lấy máy ra dùng và cất máy vào, silica gel sẽ no nước, khi đó phải tái sinh nó bằng cách đưa lên nhiệt độ 150℃ trong 30 phút. Có thể dùng <a href="bep">lò vi ba</a> để nung.</p>
 <p>Nhiều người thường dùng một bóng đèn nhỏ để trong tủ để sưởi những thứ cần chống ẩm. Cách làm này dựa vào nguyên tắc độ ẩm tương đối giảm khi nhiệt độ tăng. Tác dụng của cách làm này không lớn lắm.</p>
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
+
 
 <h2>Quay JPEG file mà vẫn giữ nguyên Exif và chất lượng hình</h2>
 <pre>jpegtran -rotate {90|180|270} -copy all file.jpg &gt; output.jpg</pre>
@@ -286,31 +224,7 @@ data-ad-slot="3830899615">
 scanimage có các option để chỉnh màu khi scan, có option để scan liên tiếp nhiều trang. scanimage chỉ ghi file theo 1 trong 2 kiểu là PNM và TIFF.</p>
 <p>xsane là X software, có thể scan xem thử, chỉnh màu rồi mới scan thiệt ghi vào file theo các kiểu PNM, TIFF, PNG, JPEG, Postscript, PDF.</p>
 <p>gimp có plugin gọi xsane scan hình rồi edit luôn.</p>
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
+
 
 <h2>In hình từ máy Linux</h2>
 <p>Có thể in từ gThumb. gThumb cho phép đặt lề, co giãn hình nhưng mỗi lần gThumb chỉ in có một bản. <br>Với máy in-scan kết hợp thì tôi có thể copy một tờ giấy mà không cần đến máy tính. Nhưng nếu muốn có nhiều bản copy giống nhau thì in từ máy tính nhanh hơn. Khi cần in nhiều bản giống nhau thì dùng GIMP để in. Trong cửa sổ in của GIMP không có ô cho chọn số bản in nhưng có ô để thay đổi dòng lệnh <b>lp</b>, chỉ cần thêm option -n cho lp là có thể in một lần được nhiều bản tuỳ thích. </p>

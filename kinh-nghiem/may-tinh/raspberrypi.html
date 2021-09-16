@@ -136,7 +136,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </style>
 </head>
 
-
 <body>
   <!-- top of body -->
   <!-- sidebar menu -->
@@ -234,6 +233,7 @@ data-ad-slot="5275186684">
 <br>Thật ngạc nhiên là chip màn hình của Raspberry Pi nhỏ xíu đó đủ sức giải nén và phát phim Blu-ray, có thể nói là Raspberry Pi phát phim HD tốt bằng hoặc hơn AMD Phenom!
 <br>Cũng có thể dùng RaspBMC để phát các nội dung từ Internet qua các protocol http, rtsp, mms…
 <br>Ngoài việc dùng Raspberry Pi để phát nhạc và phim, tôi còn bắt nó làm luôn việc chia sẻ phim qua torrent: chép phim về và để cho người khác chép lại. Do Raspberry Pi tốn ít điện, tôi có thể cho nó chạy suốt ngày, luôn luôn sẵn sàng cho mọi người chép phim từ máy của tôi. Raspberry Pi và một ổ cứng 3,5” chỉ tốn không tới 9W điện, ổ đĩa cứng này được đặt chế độ tự giảm tốc độ quay nếu quá 3 phút không đọc/ghi, khi đó tiết kiệm được khoảng 4W điện.</p>
+
 <!-- AMP In-article 1 -->
 <amp-ad
 media="(max-width: 399px)"
@@ -260,12 +260,61 @@ data-ad-client="ca-pub-2242556057278004"
 data-ad-slot="3830899615">
 </amp-ad>
 
+
 <p>Nói thêm về hệ thống giải trí âm thanh+hình ảnh gia đình tôi: thành phần <i>nặng ký</i> nhất trong hệ thống là màn hình plasma Panasonic Full HD 42”, thành phần trung tâm là AV Receiver Onkyo TX-SR309. AV Receiver tiếp nhận nội dung từ 3 nguồn HDMI là An Viên DTT set-top-box, máy tính để bàn, Raspberry Pi. AV Receiver Onkyo được nối với hai bộ loa: một bộ loa surround 5.1 và một bộ loa stereo. Bộ loa surround thì được đặt quanh chỗ ngồi xem TV. Bộ loa stereo thì được đặt trên gác để phát nhạc hoặc chương trình radio ra khắp nhà.</p>
-<p>Trước đây, hệ thống giải trí âm thanh+hình ảnh gia đình tôi chỉ gồm máy AMD chạy Ubuntu, TV plasma và 2 bộ loa stereo analog. Âm thanh surround được phần mềm <a href="https://www.mplayerhq.hu/" target="_blank">mplayer</a> giải nén và đưa ra:
-<ul><li>một bộ loa stereo 2.1 làm front left, front right và sub-woofer</li>
+<p>Trước đây, hệ thống giải trí âm thanh+hình ảnh gia đình tôi chỉ gồm máy AMD chạy Ubuntu, TV plasma và 2 bộ loa stereo analog. Âm thanh surround được phần mềm <a href="https://www.mplayerhq.hu/" target="_blank">mplayer</a> giải nén và đưa ra:</p>
+<ul>
+<li>một bộ loa stereo 2.1 làm front left, front right và sub-woofer</li>
 <li>2 loa trong TV làm center</li>
-<li>một bộ loa stereo làm surround left và surround right</li></ul>
-<div class="center">sang trang 1 - <a href="raspberrypi-2">2</a></div>
+<li>một bộ loa stereo làm surround left và surround right</li>
+</ul>
+<p>Trước khi gắn Raspberry Pi thì máy tính để bàn chạy Ubuntu Linux là nguồn phát phim với 4 ổ đĩa cứng SATA 3,5” có tổng dung lượng là 4,5TB. Để nối các ổ đĩa cứng SATA với Raspberry Pi, tôi đã mua 2 USB ⇔ SATA/PATA bridge <a href="https://www.vitinhphongvu.com/thiet-bi-tin-hoc/khac/card-chuyen-doi/cable-usb--ide--sata-dtech-8003a.html" rel="nofollow" target="_blank">DTech 8003A</a>. Một bridge dùng để nối một ổ đĩa cứng 120GB vào Raspberry Pi thường trực, ổ đó dùng để chia sẻ phim qua torrent. Bridge thứ hai dùng để đọc phim từ một trong các ổ đĩa cứng chứa phim, xem phim xong thì tắt điện ổ cứng, cất vào ngăn kéo.</p>
+<p>Dùng Raspberry Pi để xem phim có vài điều tiện hơn so với dùng máy tính để bàn:</p>
+<ul><li>không cần dùng bàn phím và chuột, dùng ngay cái điều khiển từ xa của TV để điều khiển Raspberry Pi.</li>
+<li>Raspberry Pi luôn luôn sẵn sàng để xem, chỉ cần gắn ổ đĩa cứng vào là xem ngay, không cần chờ bật máy tính để bàn, login rồi mới xem,</li>
+<li>không có tiếng quạt làm mát CPU.</li></ul>
+<p>Không những dùng Raspberry Pi để phát phim ra TV, còn có thể dùng nó như một file server, từ máy tính khác trong nhà mở phim chứa tại Raspberry Pi ra xem qua ftp, http.</p>
+
+<!-- AMP In-article 1 -->
+<amp-ad
+media="(max-width: 399px)"
+height=280
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 400px) and (max-width: 499px)"
+height=250
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+<amp-ad
+media="(min-width: 500px)"
+height=100
+layout="fixed-height"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="3830899615">
+</amp-ad>
+
+
+<p>Mặc dù Raspberry Pi chỉ dùng điện 5V với công suất rất nhỏ nhưng nó đòi hỏi độ ổn định điện thế nguồn. Trong nhà tôi có sẵn 2 cái charger cấp được 5V cho Raspberry Pi dùng, nhưng dùng riêng từng cái charger thì không đủ để cắm thêm thiết bị USB. Mắc song song 2 charger để cấp điện cho Raspberry Pi thì nó chạy được, nhưng mỗi lần cắm thêm thiết bị USB vào thì máy bị reset do điện thế nguồn giảm xuống dưới mức đòi hỏi.
+<br>Khi mua USB ⇔ SATA/PATA bridge DTech về, tôi thấy nó ghi nhãn là cấp được 5Vx2A, trong khi ổ đĩa cứng chỉ dùng chưa tới 0,7A, thế là lấy một phần nguồn 5V từ adapter cấp cho Raspberry Pi. Một mình adapter DTech đó cấp điện cho Raspberry Pi thì vẫn còn hiện tượng máy bị reset khi cắm thêm thiết bị USB và adapter khá nóng (nhiệt độ ngoài vỏ trên 50℃); vậy thì nuôi Raspberry Pi bằng 1 adapter DTech và một charger: tạm ổn.</p>
+<div class="flright"><amp-img alt="RaspberryPi" src="/images/PICT4296f0aa.jpg" width="400" height="300" layout="responsive"></amp-img>
+</div>
+<p>Trong hình này là bộ máy Raspberry Pi đó:</p>
+<ul><li>hơi lệch về bên trái là Raspberry Pi trong hộp nhựa màu đen,</li>
+<li>thẻ nhớ SD chứa phần mềm RaspBMC cắm vào bên phải Raspberry Pi</li>
+<li>phía sau Raspberry Pi cắm dây HDMI nối tới Onkyo AV Receiver</li>
+<li>bên trái Raspberry Pi cắm dây Ethernet và 2 dây USB</li>
+<li>phía trước Raspberry Pi là lỗ cắm analog video và audio</li></ul>
+<p>Hai dây USB được hàn theo dạng chữ Y để vừa nối thiết bị USB vào Raspberry Pi vừa cấp điện 5V cho Raspberry Pi. Một dây nối thường trực đến ổ đĩa cứng 120GB và nguồn 5V từ adapter DTech (phía bên phải trong hình), dây thứ hai lấy nguồn 5V từ charger (cắm trên ổ cắm Lioa ở giữa hình) và sẵn sàng để cắm một ổ đĩa cứng chứa phim.</p>
+<p>Trước khi quyết định dùng USB ⇔ SATA/PATA bridge DTech 8003A, tôi đã thử dock cho 2 ổ đĩa cứng SATA <a href="https://www.unitek-products.com/en/product_detail.php?id=58" rel="nofollow" target="_blank">Unitek Y-2041</a>, trông nó gọn đẹp hơn DTech nhưng nó có một lỗi nặng là khi tháo hay gắn một ổ đĩa cứng thì ổ đĩa cứng đang làm việc ở ngăn kia bị reset.</p>
+
 <div class="todiscuss">Mọi ý kiến thảo luận xin ghi vào các trang: <a href="https://www.facebook.com/boi.hong.le/posts/602325189780868" rel="nofollow" target="_blank">Facebook</a></div>
 
   <hr>
@@ -280,10 +329,10 @@ srcdoc="<img width='100' height='24' src='https://c.statcounter.com/12598906/0/9
   <a href="viber://add?number=84989760570"><amp-img src="/images/icons/Viber-128.png" layout="fixed" width="40" height="40" alt="Viber"></amp-img></a>
   <a href="http://zaloapp.com/qr/p/lzfbyqlwzn9u"><amp-img src="/images/icons/Zalo.webp" layout="fixed" width="40" height="40" alt="Zalo"></amp-img></a> 
   <a href="tel:+84989760570"><amp-img src="/images/icons/Cell-Phone-256.png" layout="fixed" width="40" height="40" alt="điện thoại"></amp-img></a>
-  <a href="mailto:LEHBOI@GMAIL.COM?subject=www.lhboi.name.vn"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
+  <a href="mailto:LEHBOI@GMAIL.COM?subject=lehboi.github.io"><amp-img src="/images/icons/address_blue-128.png" layout="fixed" width="40" height="40" alt="email"></amp-img></a> 
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   <br>
-  Nếu bạn chép lại những trang-web này, hãy ghi nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a> để người-đọc có-thể tìm được nội-dung mới nhất.
+  Nếu bạn chép lại những trang-web này, hãy ghi nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a> để người-đọc có-thể tìm được nội-dung mới nhất. (Domain name trước đây của website này là LHBOI.NAME.VN.)
   </div>
 </div>
 <amp-analytics type="googleanalytics">
