@@ -147,6 +147,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
   <h3 class="myheader"><a href='/'>Giới-thiệu</a></h3>
     <a href='/home/about'>Thân-thế</a><br>
     <a href='/home/cv'>Thành-tích</a><br>
+    <a href='/home/privacy'>Privacy Policy</a><br>
   <h3 class="myheader"><a href='/huu-ich/'>Hữu-ích</a></h3>
 
       <h4 class="myheader"><a href='/huu-ich/ke-hoach-tai-chinh/'>Lập-kế-hoạch-tài-chính gia-đình</a></h4>
@@ -395,6 +396,10 @@ localedef --verbose --force -f UTF-8 -i vi_VN vi_VN.UTF-8</pre>
 <p>Với mainboard dùng chip Intel PIIX, thì chọn CONFIG_BLK_DEV_PIIX=y. Với ổ cứng Maxtor ATA-100, thì <tt>hdparm -t /dev/hda</tt> sẽ cho buffered disk read lên đến 34MB/s. Đáng lẽ ATA-100 thì phải được 100MB/sec. Nếu không dùng configuration đúng thì buffered disk read sẽ nhỏ hơn 5MB/s.</p>
 <h2>Sửa udev rule để các device node có access mode cần thiết</h2>
 <p>Sửa MODE trong các file trong /etc/udev/rules.d</p>
+  <div class="todiscuss">
+  Các bài liên quan:
+  <br>* <a href="/kinh-nghiem/may-tinh/">Những kinh nghiệm khác</a>
+  </div>
 
 
 <!-- AMP In-article 1 -->
