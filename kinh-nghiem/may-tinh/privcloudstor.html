@@ -147,7 +147,8 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     "@type": "WebPage",
     "@id": "https://lehboi.github.io/kinh-nghiem/may-tinh/privcloudstor"
   },
-  "name": "Cách cài-đặt cloud server Nextcloud cho cá-nhân, gia-đình, nhóm riêng",
+  "name": "Cài-đặt cloud server Nextcloud cho cá-nhân, gia-đình, nhóm riêng",
+  "description": "Cách cài-đặt cloud server Nextcloud cho cá-nhân, gia-đình, nhóm riêng. Nextcloud có thể cung cấp các dịch vụ đồng bộ lưu trữ, online office suit, ebook reader, chat, project management…",
   "datePublished": "2020-01-25T08:00:00+08:00",
   "dateModified": "2021-06-01T09:20:00+08:00",
   "author": {
@@ -174,18 +175,22 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     {
       "@type": "HowToStep",
       "name": "Tạo USB drive boot Linux Ubuntu server",
+      "url": "https://lehboi.github.io/kinh-nghiem/may-tinh/privcloudstor#make-boot",
       "text": "Download file .ISO của Linux Ubuntu server và chép ra USB drive"
     }, {
       "@type": "HowToStep",
       "name": "Boot và install Linux Ubuntu server",
+      "url": "https://lehboi.github.io/kinh-nghiem/may-tinh/privcloudstor#install",
       "text": "Boot từ USB drive và theo các bước trên màn hình"
     }, {
       "@type": "HowToStep",
       "name": "Tạo admin account trong Nextcloud",
+      "url": "https://lehboi.github.io/kinh-nghiem/may-tinh/privcloudstor#account",
       "text": "Tạo admin account trong lần đầu tiên dùng web browser nối đến Nextcloud"
     }, {
       "@type": "HowToStep",
       "name": "Port forwarding ở router, tạo dynamic DNS, tạo SSL certificate",
+      "url": "https://lehboi.github.io/kinh-nghiem/may-tinh/privcloudstor#network",
       "text": "Để dùng Nextcloud server từ Internet thì cần đặt tên qua dynamic DNS, tạo SSL certificate cho web server, port forwarding IPv4 từ router đến Nextcloud server"
     }
   ]
@@ -341,7 +346,7 @@ data-ad-slot="3830899615">
 
 <h2>Cài đặt server</h2>
 
-<h3>Làm USB boot</h3>
+<h3 id="make-boot">Làm USB boot</h3>
 <p>Download file ISO khoảng 850MB của Ubuntu Server 18.04 từ <a href="https://ubuntu.com/download/server" target="_blank">Ubuntu</a>.</p>
 
 <h4>Tạo bootable USB flash drive từ file ISO</h4>
@@ -376,7 +381,7 @@ data-ad-slot="3830899615">
 </amp-ad>
 
 
-<h3>Boot và install</h3>
+<h3 id="install">Boot và install</h3>
 <p>Có hai cách install Nextcloud: install Nextcloud và các thành phần kèm theo trong một gói <b>snap</b> hoặc install riêng Nextcloud và các thành phần kèm theo. Install trong gói snap thì gọn nhưng bạn không thay đổi được các thông số của Nextcloud. Tôi đã install trong snap, sau đó phải gỡ bỏ snap và install riêng Nextcloud và các thành phần kèm theo. Phần dưới đây hướng dẫn install trong snap.</p>
 <p>Cắm USB flash drive đã làm ở bước trên vào máy để cài cloud storage server.</p>
 <p>Bật máy lên và chọn boot từ USB drive rồi lần lượt làm theo hướng dẫn ở <a href="https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-server#0" target="_blank">link này</a>.</p>
@@ -428,11 +433,11 @@ data-ad-slot="3830899615">
 <br>Để tạo swap nén thì bạn <code>apt install zram-config</code> và điều chỉnh một số parameter của kernel Linux theo hướng dẫn ở <a href="https://haydenjames.io/linux-performance-almost-always-add-swap-part2-zram/" target='_blank'>link này</a>.
 <br>Nếu máy của bạn có quá ít RAM thì việc tạo vùng swap trong RAM cũng không loại trừ hết những lúc dùng đến vùng swap trong đĩa, máy vẫn chậm nhưng đỡ chậm hơn.</p>
 
-<h3>Tạo admin account cho Nextcloud</h3>
+<h3 id="account">Tạo admin account cho Nextcloud</h3>
 <p>Tạo admin account cho Nextcloud trong lần đầu tiên nối đến server. Dùng browser nối đến https://cloud.server.ip.addr, cloud.server.ip.addr là địa chỉ IPv4 nội bộ đã chọn ở trên. Nextcloud sẽ hiện ra form để tạo user name và password cho admin account. User name và password này không liên quan đến user account đã tạo khi install server, bạn cũng có thể chọn cùng tên, cùng password.</p>
 <p>Đến đây cloud storage server đã sẵn sàng để dùng trong mạng LAN. Bạn có thể tạo thêm các user khác cùng dùng cloud storage bằng cách bấm icon ở góc trên bên phải trong cửa sổ web browser. Để có thể dùng cloud storage từ Internet bạn cần làm tiếp phần dưới đây.</p>
 
-<h3>Cài đặt router, dynamic DNS và SSL certificate</h3>
+<h3 id="network">Cài đặt router, dynamic DNS và SSL certificate</h3>
 
 <h4>Cài đặt NAT ở router</h4>
 <p>Để dùng cloud storage server từ Internet với địa chỉ IPv4 nội bộ, bạn phải cho router tiếp nhận connection trên port 80 và port 443 ở địa chỉ public IPv4 toàn cầu và chuyển tiếp connection đó đến địa chỉ IPv4 nội bộ của cloud storage server.</p>
