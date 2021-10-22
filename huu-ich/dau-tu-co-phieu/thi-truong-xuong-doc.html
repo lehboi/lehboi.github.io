@@ -15,11 +15,10 @@
 
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 
 
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 
@@ -107,29 +106,17 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
-
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
-
-  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 
 }
 
@@ -137,6 +124,9 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </head>
 
 <body>
+  
+  <amp-auto-ads type="adsense" data-ad-client="ca-pub-2242556057278004"></amp-auto-ads>
+  
   <!-- top of body -->
   <!-- sidebar menu -->
   <amp-sidebar id="sidebar" layout="nodisplay" side="left">
@@ -185,29 +175,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     </div>
   </div>
   
-  <div class="leftads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  <div class="rightads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  
 
   <div class="body">
   <div>
@@ -229,72 +196,22 @@ data-ad-slot="5275186684">
   <p>Những người còn đến hàng chục năm nữa mới về hưu thì nên nhớ sự biến động là bản chất của thị trường. Khi bạn đã phân bố tài sản hợp với mức độ chấp nhận rủi ro của bạn, thì bạn có thể bình tĩnh quan sát, lờ đi những biến động hàng ngày và đừng xem tin tức thị trường cổ phiếu rung lắc trên TV.</p>
   <p>Nhưng đối với những người mới vừa về hưu và những người sắp về hưu trong vài năm tới, thị trường xuống đáy là một viễn cảnh đáng sợ. Nếu đó là bạn, bạn cần chuyển một phần tài sản sang những nơi ít rủi ro hơn. Tuy nhiên, lời nhắc nhở đầu tiên: đừng phản ứng quá mạnh với những đợt xuống dốc nhỏ hoặc những dao động hàng ngày, ngay cả khi bạn sắp về hưu. Jonathan Clements, người sáng lập Humble Dollar, viết trên trang <a href="http://time.com/money/5485377/retirement-portfolio-overhal/" target='_blank'>Money.com</a>:
   <br>"Ngay cả khi thị trường đi xuống làm giảm mất 20 hay 30 phần trăm giá trị của khoản đầu tư cổ phiếu của bạn, nó không có nghĩa là tổng tài sản của bạn mất đi nhiều như vậy. Bạn vẫn còn có tiền trong quỹ trái phiếu và tài khoản ngân hàng, còn căn nhà của bạn, còn lương hưu theo chính sách, còn các khoản trợ cấp, và có lẽ quan trọng nhất là còn khả năng kiếm tiền, tất cả những khoản đó đều còn nguyên giá trị."</p>
-
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-
-
   <p>Dirk Cotton, người viết <a href="http://www.theretirementcafe.com/2018/12/my-year-end-review-and-planning-regime.html" target='_blank'>Retirement Café blog</a>, thêm vào: “Đánh giá ảnh hưởng của sự sụt giảm ở thị trường bằng con số phần trăm của tổng tài sản thì đỡ ám ảnh hơn là đánh giá bằng số tiền đã giảm mất”.
   <br>(Bạn cần ghi sổ những khoản đầu tư, tài sản lâu năm của mình để luôn luôn biết rõ tình hình tài chính. Tôi dùng <a href="/kinh-nghiem/may-tinh/gnucash">GnuCash</a> ghi sổ những thu chi hàng ngày, và spreadsheet ghi sổ những <a href="../ke-hoach-tai-chinh/dau-tu-dai-han">tài sản lâu năm</a>.)</p>
+
+
   <p>Tóm những ý trên lại là: ảnh hưởng của việc thị trường đi xuống trong những năm đầu của kế hoạch tích luỹ hưu trí sẽ được bù đắp lại trong quá trình tích luỹ. Nếu bạn bán đi cổ phiếu của bạn khi thị trường xuống thấp để lấy tiền chi tiêu, bạn sẽ còn ít cổ phiếu hơn để sinh lời trong tương lai.</p>
   <p>Mặc dù có sẵn tiền thì tốt, bạn không nhất thiết phải chuyển toàn bộ tài sản thành tiền. Đúng hơn là bạn <strong>không nên</strong> chuyển toàn bộ tài sản thành tiền. Nếu bạn đã vào độ tuổi 60 và đang có sức khoẻ tốt, bạn có tới vài chục năm sống hưu. Bạn vẫn cần phải để tiền sinh lời. Terry Eisert, người sáng lập và là chủ của công ty quản lý quỹ  <a href="http://www.eisertwealthmanagement.com/" target='_blank'>Eisert Wealth Management</a> ở Cincinnati, Ohio nói:
   <br>"Chúng ta không bao giờ có thể nói rằng tôi đã có đủ rồi và ngừng sinh lời. Bạn phải tiếp tục để tiền sinh lời." Tức là phải tiếp tục đầu tư một phần tài sản vào các quỹ đầu tư.</p>
   <p>Tỷ lệ đầu tư bao nhiêu thì tuỳ vào mức độ chấp nhận rủi ro của bạn. Nếu bạn cảm thấy căng thẳng khi thị trường giảm mạnh, thì bạn cần bàn với tư vấn viên tài chính để phân bố lại tài sản. Bạn đang tìm một cách cân bằng giữa quá bảo thủ và quá năng động cho tiền của bạn, việc đó nói thì dễ nhưng không dễ làm. Hãy dùng chiến lược cái xô cho việc đó.</p>
+
+
   <p>Chiến lược cái xô gồm <strong>ba cái xô</strong> đựng tài sản tích luỹ cho hưu trí, theo giải thích của <a href="https://www.kiplinger.com/article/retirement/T037-C000-S002-how-to-implement-the-bucket-system-in-retirement.html" target='_blank'>Kiplinger</a>:<br>
 Bạn chia tiền hưu trí của bạn vào ba cái xô: <strong>Một xô</strong> tiền mặt mà bạn sẽ cần dùng trong 1-2 năm tới, gồm cả những chi tiêu lớn như đi du lịch, mua xe hay sửa nhà. <strong>Xô thứ hai</strong> là chứa những món tiền cần dùng trong 10 năm tới. <strong>Xô cuối cùng</strong> đựng tiền cho thời gian xa hơn nữa, cho bạn và gia tài cho con cháu.</p>
   <p>Ở đây chúng ta chú ý đến khoản tiền mặt. Mặc dù tiền mặt sinh lời rất ít, nhưng nó đem lại cảm giác yên tâm và giữ bình tĩnh trong những giai đoạn khó khăn. Có khoản tiền mặt đó, bạn không cần phải rút tiền từ các quỹ đầu tư khi thị trường xuống dốc, và có thời gian để chờ thị trường hồi phục.</p>
-
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-
-
   <p>Một cách khác để chống đỡ trong lúc thị trường suy giảm là tiếp tục đi làm kiếm tiền, có thể đi làm part-time. Như vậy thì bạn sẽ bớt cần rút tiền từ quỹ đầu tư. Tất nhiên là những người muốn nghỉ ngơi, những người có sức khoẻ kém, và những người thất nghiệp sẽ không chọn làm cách này. Nhưng nếu bạn có thể làm việc thêm 6 tháng thì tác dụng của nó rất đáng kể: giữ được quỹ đầu tư, có thể để dành thêm từ tiền lương, tiền lương hưu theo chính sách sẽ nhiều hơn. Lợi tới ba điều.</p>
+
+
   <p>Nên chú ý đến tốc độ rút tiền từ quỹ hưu trí của bạn. Các tư vấn viên tài chính khuyên mỗi năm chỉ nên rút 4% quỹ hưu trí ra dùng, nhưng không nhất thiết phải cố định con số đó. (Để kiểm soát tốc độ rút tiền từ quỹ hưu trí, bạn cần có <a href="../ke-hoach-tai-chinh/">kế hoạch tài chính</a> từ sớm.)</p>
   <p>Cuối cùng, nên nhìn lại toàn cảnh tình hình tài chính của bạn. Nếu bạn gần đến tuổi hưu hay vừa mới về hưu, bạn nên sắp xếp các khoản đầu tư, thu nhập, chi tiêu, tài sản… Xếp đặt các thứ đó rõ ràng sẽ làm bạn cắt giảm được các chi tiêu không cần thiết và bình tĩnh hơn khi thị trường suy giảm.</p>
   <hr>
@@ -302,34 +219,6 @@ data-ad-slot="3830899615">
 
   <div class="todiscuss">
   <br>Mọi ý kiến thảo luận xin ghi vào các trang: <a href="https://twitter.com/GiauCham/status/1132810158017376256" target="_blank">Twitter</a> hoặc <a href="https://www.facebook.com/notes/l%C3%A0m-gi%C3%A0u-ch%E1%BA%AFc-ch%E1%BA%AFn/l%C3%A0m-g%C3%AC-khi-th%E1%BB%8B-tr%C6%B0%E1%BB%9Dng-xu%E1%BB%91ng-d%E1%BB%91c/1151217168377223/" rel="nofollow" target="_blank">Facebook</a></div>
-
-
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-
 
   <hr>
   <div class="footer">

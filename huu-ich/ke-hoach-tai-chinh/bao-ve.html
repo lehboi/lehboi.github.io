@@ -15,11 +15,10 @@
 
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 
 
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 
@@ -107,29 +106,17 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
-
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
-
-  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 
 }
 
@@ -137,6 +124,9 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </head>
 
 <body>
+  
+  <amp-auto-ads type="adsense" data-ad-client="ca-pub-2242556057278004"></amp-auto-ads>
+  
   <!-- top of body -->
   <!-- sidebar menu -->
   <amp-sidebar id="sidebar" layout="nodisplay" side="left">
@@ -185,29 +175,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     </div>
   </div>
   
-  <div class="leftads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  <div class="rightads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  
 
   <div class="body">
   <div>
@@ -234,34 +201,6 @@ Hoặc bạn đang tích luỹ theo đúng <a href="../ke-hoach-tai-chinh/">kế
   <p>Khi tên cướp này ra tay thì tài sản của bạn sẽ đi theo hắn nhanh chóng dù cho tài sản đó ở dạng khó di chuyển như nhà-đất, doanh nghiệp, dù cho tài sản được cất ở nơi khó thấy như ngân hàng Thuỵ Sĩ. Nếu bạn chưa có nhiều tài sản thì tên cướp này làm cho cả gia đình bạn lâm cảnh nợ nần.</p>
   <p>Để hạn chế những mất mát đó, hãy chia sẻ rủi ro với hàng triệu người khác. Khi có rủi ro, hàng triệu người cùng giúp gia đình bạn vượt qua lúc khó khăn. Đó là <a href="../cac-loai-bao-hiem/">bảo hiểm</a>. Chỉ bớt đi một khoản lợi nhuận nhỏ để bạn được bảo đảm rằng kế hoạch tài chính gia đình bạn không bị tên cướp Thời Gian phá hỏng. Số tiền gửi vào bảo hiểm không mất đi mà sẽ được hoàn lại để cộng thêm vào số tiền bạn có trong tương lai, kế hoạch của bạn càng tốt hơn. Bảo hiểm giúp bạn <b>chắc chắn</b> đạt đến <b><span class="tblue">ước mơ</span></b> của mình bất chấp những rủi ro.</p>
 
-
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-
-
   <h2>Bảo hiểm giúp bạn thực hiện <a href="ke-hoach">ước mơ</a> như thế nào?</h2>
   Giả sử hai vợ chồng tôi vừa mới vay người thân để mua nhà, cả hai đang phải <a href="no-t-co-dinh">trả nợ</a> 700 triệu đồng trong 6 năm. Nếu chẳng may một trong hai người gặp tai nạn qua đời thì người còn lại có thể trả nợ đúng kế hoạch không? Nếu người mà tôi vay cần tiền để dùng vào việc quan trọng như là cho con đi du học thì tôi có thể nào xin khất được, tôi phải đi vay với lãi suất cao hơn để trả nợ người thân. Trả nợ người thân với lãi thấp đã khó, làm sao trả nợ với lãi cao đây, căn nhà mơ ước  lâu nay đã bị đe doạ rồi. Trong trường hợp này <a href="../cac-loai-bao-hiem/">bảo hiểm</a> có thể giúp được. Nếu trước khi vay nợ, mỗi người có một khoản bảo hiểm tai nạn 500 triệu đồng, với mức phí 1 triệu đồng mỗi năm thì đỡ lo biết mấy.
   <br>Trong ví dụ Con-đầu trong <a href="https://docs.google.com/spreadsheets/d/1OFfRiYoJBvQlLakS4QA1RxfMsYtvn7c7FGKFmJK-at0/edit?usp=sharing" target="_blank">KHTC</a>, giả sử tôi cần để dành tiền cho con học đại học, sau 14 năm sẽ cần số tiền hơn 500 triệu đồng để học đại học trong nước. Theo tính toán thì tôi cần để dành mỗi tháng 1,174 triệu đồng, đồng thời tôi mua một hợp đồng bảo hiểm giáo dục để đến lúc đó con tôi nhận được 120 triệu đồng. Giả sử tôi không sống đủ 14 năm thì làm sao dành ra 1,174 triệu đồng mỗi tháng đến ngày đó? Tôi mua thêm quyền lợi bảo hiểm tử vong 250 triệu đồng và bảo hiểm tai nạn 200 triệu đồng (với mức phí 4 ngàn đồng / ngày) để thay cho tiền lương tôi đem về hàng tháng.
@@ -271,6 +210,8 @@ data-ad-slot="3830899615">
   <p>Ô E51 là số tiền dự phòng để điều trị bệnh tật nghiêm trọng như ung thư, đột quỵ… Ô F51 là tổng số tiền bảo hiểm bệnh nghiêm trọng mà bạn đang có. Để tăng số tiền F51 bạn chỉ cần gửi một ít tiền vào các kế hoạch bảo hiểm nhân thọ. Hãy nhớ mua bảo hiểm y tế liên tục, đừng để gián đoạn. Bạn có thể mua bảo hiểm y tế từ cơ quan Bảo hiểm Xã hội của nhà nước, hoặc mua bảo hiểm y tế từ các công ty bảo hiểm. Mọi loại bảo hiểm đều có những hạn chế riêng, bạn có thể phối hợp vài loại bảo hiểm cho gia đình mình.</p>
   <p>Ô E52 là số tiền dự phòng để điều trị tai nạn, số tiền này nên lớn gấp đôi E50 vì tai nạn xảy ra có thể gây ra tốn kém hơn là việc mất sớm. Ô F52 là tổng số tiền bảo hiểm tai nạn mà bạn đang tham gia. Để tăng giá trị F52 thêm 100 triệu đồng bạn chỉ cần chi <b>vài trăm đồng</b> bảo hiểm tai nạn mỗi ngày.</p>
   </blockquote>
+
+
   <p>Ngoài việc bảo vệ nguồn thu nhập là người làm ra tiền trong gia đình, con cái cũng cần được bảo vệ vì con cái là tài sản tinh thần và vật chất quý báu nhất của cha mẹ.</p>
   <p>Hãy cố gắng sao cho các ô G50:G52 nhỏ hơn hoặc bằng 0. <span class="tblue">Như vậy là bạn sẽ không có gì phải lo lắng về gia đình mình dù cho chuyện xấu nhất xảy ra với bạn ngay ngày mai.</span></p>
 
@@ -280,34 +221,6 @@ data-ad-slot="3830899615">
 
   <div class="center">trở về trang <a href="../ke-hoach-tai-chinh/">Kế hoạch tài chính</a></div>
   <div class="todiscuss">Mọi ý kiến thảo luận xin ghi vào các trang: <a href="https://twitter.com/GiauCham/status/1132799550911987712" target="_blank">Twitter</a> hoặc <a href="https://www.facebook.com/lamgiauchacchan/posts/375551315943816" rel="nofollow" target="_blank">Facebook</a></div>
-
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-
-
   <hr>
   <div class="footer">
   Bấm các nút sau để liên-lạc 

@@ -15,11 +15,10 @@
 
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 
 
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 
@@ -107,29 +106,17 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
-
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
-
-  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 
 }
 
@@ -137,6 +124,9 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </head>
 
 <body>
+  
+  <amp-auto-ads type="adsense" data-ad-client="ca-pub-2242556057278004"></amp-auto-ads>
+  
   <!-- top of body -->
   <!-- sidebar menu -->
   <amp-sidebar id="sidebar" layout="nodisplay" side="left">
@@ -185,29 +175,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     </div>
   </div>
   
-  <div class="leftads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  <div class="rightads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  
 
 
 <div class="body">
@@ -233,32 +200,6 @@ data-ad-slot="5275186684">
   <br>Chúng ta thử tính xem sống lâu và tự chủ thì cần bao nhiêu tiền. Giả sử hiện nay bạn đang 25 tuổi, xài mỗi tháng trung bình 4 triệu đồng gồm cả ăn, ở, giải trí… Vậy là ít phải không? 35 năm sau bạn bắt đầu nghỉ làm việc ở tuổi 60. Để sống đến 100 tuổi thì bạn cần một khối tiền khổng lồ để xài suốt 40 năm. Giả sử mức trượt giá giữ nguyên 6%/năm thì lúc 60 tuổi bạn sẽ tiêu gần 31 triệu đồng mỗi tháng và cần khối tiền 9,8 tỉ đồng, hơn 2.440 lần mức chi tiêu hàng tháng hiện nay.</p>
   <p>Với mức chi tiêu 4 triệu đồng mỗi tháng, ráng tiết kiệm lắm thì mỗi tháng dư ra được 1 triệu đồng là giỏi lắm rồi. Để bao lâu mới được 9,8 tỉ đồng? 9.800 tháng tức là hơn 800 năm à? Vậy thì quá khó để đạt đến mức độ đầu tiên của sự giàu!</p>
 
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-
 
   <p>Không quá khó đâu! Chỉ cần gửi tiền một cách đều đặn vào nơi sinh lợi an toàn là bạn chắc chắn có 9,8 tỉ đồng đúng lúc. Mỗi tháng gửi một triệu đồng, với lợi nhuận 12,4%/năm thì bạn sẽ có 9,8 tỉ đồng sau 35 năm chứ không phải 800 năm. Nếu lợi nhuận 15%/năm thì bạn chỉ cần gửi 600 ngàn đồng mỗi tháng.</p>
   <div class="flright">
@@ -268,6 +209,8 @@ data-ad-slot="3830899615">
   <p>Đó là cách <i>làm giàu chậm</i>, chậm nhưng chắc chắn, không lo thất bại, không phải trả giá cho bài học thương trường nào hết, không cần tìm cơ hội, và không cần chờ may mắn. <b>Mọi người đều có thể làm giàu chậm</b>, đây không phải là câu khích lệ suông mà là một hướng dẫn rõ ràng cho mọi người.
   <br>Làm giàu theo cách này, bạn sẽ thấy tài sản của mình tăng dần theo năm tháng. Đây chính là điều quan trọng nhất trong việc làm giàu. Những người có thu nhập cao cũng phải kiểm soát kỹ sao cho tài sản tăng dần lên thì mới giàu được.</p>
   <p>Làm thế nào để một số tiền nhỏ sinh lợi 12%-15%/năm trong khi gửi tiết kiệm ở ngân hàng chỉ được 8%-8,5%/năm? Đó là dùng những công cụ tài chính hiện đại: <a href="dau-tu-co-phieu/quy-dau-tu">quỹ đầu tư</a>.</p>
+
+
   <p>Người xưa nói "Đại phú do thiên, tiểu phú do cần" nghĩa là có may mắn thì giàu lớn, cần cù tiết kiệm thì giàu nhỏ. Trong khi làm giàu chậm một cách chắn chắn, nếu may mắn bạn vẫn có thể làm giàu nhanh, càng hay. Mặt khác, người giàu cũng có thể dùng quỹ đầu tư để <a href="tich-luy-dai-han">cất giữ tài sản</a> an toàn và sinh lợi.</p>
   <p>Những người có thu nhập cao sẽ có nhiều cách sinh lợi khác. Ví dụ như ca sĩ Đàm Vĩnh Hưng đầu tư vào Cháo Cây Thị, kinh doanh hải sản…</p>
   <p>Nhiều người vẫn nghĩ rằng phải là chủ doanh nghiệp mới có thể giàu. Bạn có biết có bao nhiêu người trở thành chủ doanh nghiệp trên thế giới này không? Theo <a href="http://notes.fundersandfounders.com/post/50947479488/what-do-7-billion-people-do" target='_blank'>fundersandfounders.com</a> có 5,7% dân số thế giới là chủ doanh nghiệp. Bạn có ở trong số đó không? Có cần phải là chủ mới trở nên giàu có không?</p>
@@ -278,34 +221,6 @@ data-ad-slot="3830899615">
     <br>* <a href="tich-luy-dai-han">So sánh các cách tích luỹ tài sản dài hạn</a>
     <br>Mọi ý kiến thảo luận xin ghi vào các trang: <a href="https://twitter.com/GiauCham/status/1132933793113706496" target="_blank">Twitter</a> hoặc <a href="https://www.facebook.com/lamgiauchacchan/posts/375512052614409" rel="nofollow" target="_blank">Facebook</a>
   </div>
-
-
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-
 
   <hr>
   <div class="footer">

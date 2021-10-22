@@ -15,11 +15,10 @@
 
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 
 
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 
@@ -107,29 +106,17 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
-
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
-
-  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 
 }
 
@@ -141,6 +128,9 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </head>
 
 <body>
+  
+  <amp-auto-ads type="adsense" data-ad-client="ca-pub-2242556057278004"></amp-auto-ads>
+  
   <!-- top of body -->
   <!-- sidebar menu -->
   <amp-sidebar id="sidebar" layout="nodisplay" side="left">
@@ -189,29 +179,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     </div>
   </div>
   
-  <div class="leftads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  <div class="rightads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  
 
   <div class="body">
   <div>
@@ -228,32 +195,6 @@ data-ad-slot="5275186684">
   <h1>Gói cước di động nội mạng</h1>
 <p>Thông thường thì gọi nội mạng rẻ hơn 200₫/phút so với gọi liên mạng. Có cách gọi nội mạng với giá rất rẻ, chỉ 71₫/phút, rẻ hơn gọi điện thoại cố định nữa, đó là mua những gói cước nội mạng. Để tạo thói quen dùng điện thoại ở các thuê bao ít dùng, các công ty điện thoại di động cung cấp những gói cước gọi, nhắn tin nội mạng, data với giá rất rẻ trong một thời gian nhất định. Khi thuê bao đã quen dùng rồi thì công ty điện thoại không khuyến mãi nữa! Hãy chọn dùng các gói dưới đây một cách hợp lý để <a href="/huu-ich/chi-tieu">tiết kiệm</a> tiền điện thoại.</p>
 <p>Dưới đây là bảng tóm tắt các gói cước đó (có thể có gói không còn được cung cấp, nhắn tin thử mới biết, nếu không mua được cũng không bị trừ tiền trong tài khoản). Bấm vào tên mạng di động để xem các gói của mạng đó.</p>
-
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
 
 
 <amp-accordion>
@@ -534,32 +475,6 @@ data-ad-slot="3830899615">
 </amp-accordion>
 
 
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-
 
 <amp-accordion>
 <section expanded>
@@ -785,32 +700,6 @@ data-ad-slot="3830899615">
 </section>
 </amp-accordion>
 
-
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
 
 
 <amp-accordion>

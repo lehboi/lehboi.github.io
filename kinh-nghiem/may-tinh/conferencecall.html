@@ -15,9 +15,10 @@
 
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
+<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+
 
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 
@@ -123,6 +124,9 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </head>
 
 <body>
+  
+  <amp-auto-ads type="adsense" data-ad-client="ca-pub-2242556057278004"></amp-auto-ads>
+  
   <!-- top of body -->
   <!-- sidebar menu -->
   <amp-sidebar id="sidebar" layout="nodisplay" side="left">
@@ -190,6 +194,8 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 <p>Ví dụ khi A đang nói chuyện qua điện thoại với B và cả 2 cần nghe ý kiến của C, khi đó A hoặc B nói "chờ một chút để tui kêu C tới đây", rồi bấm Hold trên điện thoại (trên màn hình cảm ứng hoặc các nút điều khiển), và bấm nút New call rồi gọi số điện thoại của C (lấy từ sổ điện thoại trong máy hoặc bấm thẳng dãy số), khi C đã trả lời rồi thì bấm Conference hoặc Merge, thế là cả ba đều nói và nghe lẫn nhau.
 <br>A, B, C có thể là người trong gia đình, bạn bè, đồng nghiệp, đối tác…
 <p>Hiện nay Viettel, Mobifone và Vinaphone đều có dịch vụ conference call, không cần đăng ký trước, chỉ trả cước cho mỗi cuộc gọi đi như cuộc gọi bình thường (ai gọi người đó trả). Có thể mở hội nghị cho 50 người cùng dự, trong đó mỗi người gọi đến tối đa 5 người.
+
+
 <p>Nếu có không quá 6 người dự hội nghị thì có thể để lần lượt người được gọi xong sẽ gọi thêm người nữa thành hình một chuỗi, hoặc để người gọi đầu tiên lần lượt gọi thêm mọi người vào thành hình cây một tầng. Nếu có nhiều hơn 6 người dự hội nghị thì phải định trước thứ tự gọi để lập thành hình cây nhiều tầng.
 <div><amp-img alt="Điện thoại hội nghị" src="/images/conferencecall.png" width="610" height="200" layout="responsive"></amp-img></div>
 <p>Người dùng số điện thoại cố định hoặc của hãng di động khác (không có dịch vụ conference call) cũng có thể được gọi vào hội nghị nhưng không thể gọi thêm người vào.

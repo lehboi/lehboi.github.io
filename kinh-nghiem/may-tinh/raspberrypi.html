@@ -15,11 +15,10 @@
 
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 
 
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 
@@ -107,29 +106,17 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
-
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
-
-  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 
 }
 
@@ -137,6 +124,9 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </head>
 
 <body>
+  
+  <amp-auto-ads type="adsense" data-ad-client="ca-pub-2242556057278004"></amp-auto-ads>
+  
   <!-- top of body -->
   <!-- sidebar menu -->
   <amp-sidebar id="sidebar" layout="nodisplay" side="left">
@@ -185,29 +175,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     </div>
   </div>
   
-  <div class="leftads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  <div class="rightads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  
 
   <div class="body">
   <div>
@@ -235,32 +202,6 @@ data-ad-slot="5275186684">
 <br>Cũng có thể dùng RaspBMC để phát các nội dung từ Internet qua các protocol http, rtsp, mms…
 <br>Ngoài việc dùng Raspberry Pi để phát nhạc và phim, tôi còn bắt nó làm luôn việc chia sẻ phim qua torrent: chép phim về và để cho người khác chép lại. Do Raspberry Pi tốn ít điện, tôi có thể cho nó chạy suốt ngày, luôn luôn sẵn sàng cho mọi người chép phim từ máy của tôi. Raspberry Pi và một ổ cứng 3,5” chỉ tốn không tới 9W điện, ổ đĩa cứng này được đặt chế độ tự giảm tốc độ quay nếu quá 3 phút không đọc/ghi, khi đó tiết kiệm được khoảng 4W điện.</p>
 
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-
 
 <p>Nói thêm về hệ thống giải trí âm thanh+hình ảnh gia đình tôi: thành phần <i>nặng ký</i> nhất trong hệ thống là màn hình plasma Panasonic Full HD 42”, thành phần trung tâm là AV Receiver Onkyo TX-SR309. AV Receiver tiếp nhận nội dung từ 3 nguồn HDMI là An Viên DTT set-top-box, máy tính để bàn, Raspberry Pi. AV Receiver Onkyo được nối với hai bộ loa: một bộ loa surround 5.1 và một bộ loa stereo. Bộ loa surround thì được đặt quanh chỗ ngồi xem TV. Bộ loa stereo thì được đặt trên gác để phát nhạc hoặc chương trình radio ra khắp nhà.</p>
 <p>Trước đây, hệ thống giải trí âm thanh+hình ảnh gia đình tôi chỉ gồm máy AMD chạy Ubuntu, TV plasma và 2 bộ loa stereo analog. Âm thanh surround được phần mềm <a href="https://www.mplayerhq.hu/" target="_blank">mplayer</a> giải nén và đưa ra:</p>
@@ -275,32 +216,6 @@ data-ad-slot="3830899615">
 <li>Raspberry Pi luôn luôn sẵn sàng để xem, chỉ cần gắn ổ đĩa cứng vào là xem ngay, không cần chờ bật máy tính để bàn, login rồi mới xem,</li>
 <li>không có tiếng quạt làm mát CPU.</li></ul>
 <p>Không những dùng Raspberry Pi để phát phim ra TV, còn có thể dùng nó như một file server, từ máy tính khác trong nhà mở phim chứa tại Raspberry Pi ra xem qua ftp, http.</p>
-
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
 
 
 <p>Mặc dù Raspberry Pi chỉ dùng điện 5V với công suất rất nhỏ nhưng nó đòi hỏi độ ổn định điện thế nguồn. Trong nhà tôi có sẵn 2 cái charger cấp được 5V cho Raspberry Pi dùng, nhưng dùng riêng từng cái charger thì không đủ để cắm thêm thiết bị USB. Mắc song song 2 charger để cấp điện cho Raspberry Pi thì nó chạy được, nhưng mỗi lần cắm thêm thiết bị USB vào thì máy bị reset do điện thế nguồn giảm xuống dưới mức đòi hỏi.

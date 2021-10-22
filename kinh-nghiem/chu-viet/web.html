@@ -15,11 +15,10 @@
 
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 
 
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 
@@ -107,29 +106,17 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
-
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
-
-  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 
 }
 
@@ -137,6 +124,9 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </head>
 
 <body>
+  
+  <amp-auto-ads type="adsense" data-ad-client="ca-pub-2242556057278004"></amp-auto-ads>
+  
   <!-- top of body -->
   <!-- sidebar menu -->
   <amp-sidebar id="sidebar" layout="nodisplay" side="left">
@@ -185,29 +175,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     </div>
   </div>
   
-  <div class="leftads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  <div class="rightads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  
 
   <div class="body">
   <div>
@@ -241,44 +208,21 @@ data-ad-slot="5275186684">
   </tr>
   </tbody>
   </table>
-
-
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-
-
   Bây giờ, Unicode đã phổ biến rồi nhưng cũng còn hiện tượng <em>nhiều kiểu chữ Việt Unicode</em>! Sao? Đã là Uni (nghĩa là duy nhất, hợp nhất) rồi mà còn nhiều Uni nữa là sao?
   <br>Đúng vậy, thật sự là đang có nhiều thứ chữ Việt <strong>được gọi là</strong> Unicode trong các server Internet; được gọi là Unicode nhưng không thật sự là Unicode.
   <p><u>Kiểu Unicode giả thứ nhất</u> là do sự lầm lẫn giữa Unicode với hai bộ chữ (character set) của Microsoft cũng có khả năng thể hiện chữ Việt. Đó là bộ chữ Windows-1252 và Windows-1258. Đây là hai bộ chữ 8-bit (tức là mỗi chữ cái được ghi trong máy tính với 8 bit). Microsoft soạn ra bộ chữ Windows-1252 dành cho các chữ viết của các ngôn ngữ Tây Âu, và bộ chữ Windows-1258 dành cho chữ Việt.</p>
+
+
+
   <p>Làm sao mà lầm được khi có nhiều người dùng đã biết là phải dùng chữ Việt Unicode?</p>
   <blockquote>Bởi vì các chương trình của Microsoft như là Microsoft Office sẽ dùng bộ chữ của Microsoft một cách mặc định để tạo ra tài liệu. Nếu chạy trên môi trường Windows tiếng Anh thì bộ chữ mặc định là Windows-1252, nếu chạy trên môi trường Windows tiếng Việt thì bộ chữ mặc định là Windows-1258. Hầu hết các máy tính ở Việt Nam dùng bản Windows tiếng Anh, rất hiếm khi thấy máy tính có bản Windows chữ Việt, nên hầu hết các tài liệu tạo ra theo bộ chữ Windows-1252.</blockquote>
   <p>Thế làm sao mà bộ chữ 8-bit lại chứa được chữ Việt Unicode 16-bit?</p>
   <blockquote>Bộ chữ Việt Windows-1258 chỉ dùng 8-bit để thể hiện chữ Việt vì nó dùng nguyên tắc tổ hợp, tức là dấu thanh rời ra khỏi nguyên âm. Theo cách tổ hợp này thì 8-bit cũng đủ để thể hiện tất cả chữ Việt có dấu. Mặc dù chữ Việt trong Unicode cũng có kiểu thể hiện dấu thanh rời ra khỏi nguyên âm nhưng chữ Việt Windows-1258 không phải là chữ Việt Unicode.</blockquote>
   <p>Thế còn bộ chữ Windows-1252 thì sao, nó đâu có được thiết kế để chứa các nguyên âm và dấu thanh chữ Việt?
   <br>Và tại sao người ta vẫn có thể gõ chữ Việt với nguyên âm và dấu thanh dựng sẵn (cần 16-bit) vào trong tài liệu Windows?</p>
+
+
+
   <blockquote>Đó là vì các chương trình ứng dụng Microsoft Office sẽ tự động ghi những chữ đó theo kiểu Unicode lẫn vào trong tài liệu kiểu Windows. Những chữ Unicode đó được ghi theo một cách riêng để chương trình Microsoft Office biết mà hiện ra cho đúng.</blockquote>
   <p>Tóm lại, hầu hết các tài liệu soạn ra trên Windows đều không phải là Unicode thuần. Có một chương trình của Microsoft trên Windows (NT, XP) soạn ra được tài liệu Unicode thuần, đó là Notepad. Khi ta gõ chữ Việt vào Notepad rồi lưu lại, nó sẽ hỏi là ta có muốn lưu lại theo dạng Unicode không. Nhưng Notepad lại rất ít được dùng để soạn tài liệu vì khả năng của nó quá hạn chế.</p>
   <p>Vậy việc gì xảy ra khi những tài liệu Unicode <em>ba rọi</em> đó được đưa lên Internet?</p>
@@ -290,6 +234,9 @@ data-ad-slot="3830899615">
   <br>và những chữ Việt trong đó sẽ được ghi theo cách đặc biệt gọi là <em>HTML entities</em> có dạng như sau: c&amp;aacute;ch thi&amp;#7871;t k&amp;#7871; ph&amp;#7847;n m&amp;#7873;m h&amp;#432;&amp;#7899;ng
   <br>với cách ghi này, hầu như chúng ta không thể đọc-hiểu được nếu không có web browser diễn dịch lại thành chữ Việt bình thường.</blockquote>
   <p>Nếu tài liệu được viết bằng đúng Unicode thuần (UCS2 hoặc UTF-8) thì không cần web browser chúng ta cũng đọc-hiểu được. Các bạn có thể thử chọn menu View source của web browser khi đang xem các trang web chữ Việt sẽ thấy một số trang viết theo kiểu Unicode thuần còn một số trang viết theo kiểu Windows-1252.</p>
+
+
+
   <p>Tuy nhiên cũng có một số trang web dùng Unicode nhưng không viết dưới dạng UTF-8 mà lại viết theo kiểu HTML entities. Đó là <u>kiểu Unicode giả thứ hai</u>.</p>
   <blockquote><u>Các web site chữ Việt dùng đúng UTF-8</u>: lhboi.homelinux.net, mail.google.com, mail.yahoo.com, vnoss.org, eab.com.vn, www.bidv.com.vn, www.baoviet.com.vn, www.manulife.com.vn, vietnamnet.vn, www.nld.com.vn, www.thanhnien.com.vn, tuoitre.com.vn, www.pcworld.com.vn, www.sgtt.com.vn…
   <br><u>Các web site chữ Việt dùng HTML entities</u>: google.com, acb.com.vn, vnexpress.net, www.htv.com.vn
@@ -302,34 +249,6 @@ data-ad-slot="3830899615">
   Nhân nói về web browser và điện thoại di động, ta cũng nhắc đến một kiểu thể hiện chữ Việt trong Internet nữa là chữ Việt không dấu. Mặc dù phần lớn các máy điện thoại di động được bán ra trong những năm gần đây trên thị trường Việt Nam đều hiện được chữ Việt Unicode, nhưng hầu hết các trang wml ở Việt Nam đều được viết dưới dạng chữ Việt không dấu, rất khó coi.
   <p>▲Các bạn sẽ hỏi làm sao server biết được điện thoại nào có chữ Việt để gửi ra đủ dấu?</p>
   <blockquote>Có đấy. Khi micro browser trong máy điện thoại gửi yêu cầu xem 1 trang đến server nó cũng cho server biết luôn là nó muốn xem ngôn ngữ gì theo bộ chữ nào, đó là các Header. Ví dụ: Accept-Language: vi, Accept-Charset: UTF-8. Nếu server làm việc đúng cách nó phải xem các Header để biết khi nào nên gửi chữ Việt cho máy điện thoại.</blockquote>
-
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-
-
   <table border="1">
   <tbody>
   <tr>
@@ -347,6 +266,8 @@ data-ad-slot="3830899615">
   </tr>
   </tbody>
   </table>
+
+
   <h3><a name="TOC-C-c-l-i-kh-c-trong-c-c-trang-web-Vi-t"></a>Các lỗi khác trong các trang web Việt</h3>
   <h4><a name="TOC-L-i-vi-t-sai-c-c-k-hi-u-superscript-v-subscript"></a>Lỗi viết sai các ký hiệu superscript và subscript</h4>
   <p>Các ký hiệu phải viết kiểu superscript và subscript như độ, mét vuông, mét khối rất thường gặp nhưng cũng rất thường bị viết một cách <strong>cẩu thả</strong> như:</p>
@@ -361,34 +282,6 @@ data-ad-slot="3830899615">
   <br>Đối với những nơi chuyên nghiệp như các báo mà cũng viết sai thì thật là đáng chê.
   <br>Có hai cách ghi đúng những ký hiệu đó. Cách thứ nhất là dùng lệnh định dạng chữ cao (superscript) hay chữ thấp (subscript). Cách thứ hai là dùng các ký hiệu có sẵn trong bộ chữ Unicode, viết theo cách này đẹp hơn.
   <div class="right">Bài này được đăng trong e-CHIP số Tháng Sáu, 2007.</div>
-
-
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-
 
   <hr>
   <div class="footer">

@@ -15,11 +15,10 @@
 
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 
 
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 
@@ -107,29 +106,17 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
-
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
-
-  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 
 }
 
@@ -137,6 +124,9 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </head>
 
 <body>
+  
+  <amp-auto-ads type="adsense" data-ad-client="ca-pub-2242556057278004"></amp-auto-ads>
+  
   <!-- top of body -->
   <!-- sidebar menu -->
   <amp-sidebar id="sidebar" layout="nodisplay" side="left">
@@ -185,29 +175,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     </div>
   </div>
   
-  <div class="leftads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  <div class="rightads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  
 
   <div class="body">
     <!-- body here -->
@@ -223,90 +190,30 @@ data-ad-slot="5275186684">
   </div>
 
 <h1>Liệt kê Thu Chi</h1>
-<p>Liệt kê thu và chi của cả gia đình bạn trong trang Thu-chi của <a href="https://docs.google.com/spreadsheets/d/1OFfRiYoJBvQlLakS4QA1RxfMsYtvn7c7FGKFmJK-at0/edit?usp=sharing" target="_blank">bảng tính</a>.<br />
-Mục đích của việc này là để biết mức chi tiêu hiện nay và dự báo số tiền phải chi hàng tháng trong tương lai để có cùng mức sống như hiện nay. Nếu bạn chưa biết rõ hiện nay bạn đã tiêu bao nhiêu tiền cho những việc gì thì bạn có thể bỏ qua bước này và tính kết quả gần đúng ở bước <a href="huu-tri">thứ hai</a>.<br />
+<p>Liệt kê thu và chi của cả gia đình bạn trong trang Thu-chi của <a href="https://docs.google.com/spreadsheets/d/1OFfRiYoJBvQlLakS4QA1RxfMsYtvn7c7FGKFmJK-at0/edit?usp=sharing" target="_blank">bảng tính</a>.
+<br>Mục đích của việc này là để biết mức chi tiêu hiện nay và dự báo số tiền phải chi hàng tháng trong tương lai để có cùng mức sống như hiện nay. Nếu bạn chưa biết rõ hiện nay bạn đã tiêu bao nhiêu tiền cho những việc gì thì bạn có thể bỏ qua bước này và tính kết quả gần đúng ở bước <a href="huu-tri">thứ hai</a>.
+<br>
 Nếu biết rõ tiền của chúng ta chạy vào những chỗ nào, khi cần giảm chi tiêu, chúng ta có thể nhanh chóng quyết định giảm chi những mục nào. Khi nào thì cần giảm chi tiêu? Khi thu nhập bị giảm, khi cần tăng tích luỹ cho một kế hoạch chi nào đó trong tương lai.</p>
 <h2>Chi</h2>
-<p>Đầu tiên liệt kê các khoản chi từ 1.1 tới 1.6, ghi khoản chi hàng tháng vào cột F, chương trình sẽ tính ra khoản chi hàng năm tương ứng. Nếu khoản chi đó không thường xuyên mỗi tháng thì ghi thẳng vào cột G mức chi hàng năm. Sáu khoản đó là những khoản
-<a href="../chi-tieu">chi theo kế hoạch khoa học</a>.</p>
+<p>Đầu tiên liệt kê các khoản chi từ 1.1 tới 1.6, ghi khoản chi hàng tháng vào cột F, chương trình sẽ tính ra khoản chi hàng năm tương ứng. Nếu khoản chi đó không thường xuyên mỗi tháng thì ghi thẳng vào cột G mức chi hàng năm. Sáu khoản đó là những khoản <a href="../chi-tieu">chi theo kế hoạch khoa học</a>.</p>
 <p>Nếu bạn đang trả nợ góp thì cũng ghi số tiền phải trả hàng tháng vào các mục thích hợp từ 1.1 tới 1.5.</p>
-<p>Nếu bạn chưa ghi chép thu chi của mình từ trước tới giờ thì bạn sẽ khó ghi được các khoản chi vào đúng chỗ 1.1 đến 1.6. Hãy ghi gần đúng đến mức có thể được, sau này sẽ điều chỉnh cho đúng hơn. Bạn hãy tập thói quen ghi chép thu chi bằng phần mềm
-<a href="/kinh-nghiem/may-tinh/gnucash">gnucash</a> để biết mình đã chi tiền vào những việc gì.</p>
-
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-
-
+<p>Nếu bạn chưa ghi chép thu chi của mình từ trước tới giờ thì bạn sẽ khó ghi được các khoản chi vào đúng chỗ 1.1 đến 1.6. Hãy ghi gần đúng đến mức có thể được, sau này sẽ điều chỉnh cho đúng hơn. Bạn hãy tập thói quen ghi chép thu chi bằng phần mềm <a href="/kinh-nghiem/may-tinh/gnucash">gnucash</a> để biết mình đã chi tiền vào những việc gì.</p>
 <h2>Thu</h2>
 <p>Kế tiếp liệt kê các khoản thu nhập. Nếu bạn đi làm để lãnh lương hàng tháng hay
-hàng tuần thì ghi lương quy về tháng vào ô F34. Nếu bạn buôn bán thì tiền lời cũng có thể xem như lương của
-bạn, ghi tiền lời hàng tháng vào ô F34 hoặc ghi tiền lời hàng năm vào ô G34.</p>
-<p>
-Nếu bạn là người chuyên mua bán chứng khoán ngắn hạn, ô F35/G35 để ghi các khoản thu nhập từ cổ phiếu: cổ tức, chênh lệch giá… Cổ tức của những cổ phiếu nắm giữ dài hạn cũng được ghi vào ô G35. Thu nhập dạng này không đều đặn, khó dự tính được.
-</p>
-<p>
-Ô F36/G36 để ghi các khoản thu nhập do đầu tư nhà, xe cho thuê. Thu nhập dạng này tương đối đều đặn. Bạn phải tốn một chút công giao dịch để có thu nhập này và tài sản có thể tăng hoặc giảm giá trị theo thời gian.
-</p>
+hàng tuần thì ghi lương quy về tháng vào ô F34. Nếu bạn buôn bán thì tiền lời cũng có thể xem như lương của bạn, ghi tiền lời hàng tháng vào ô F34 hoặc ghi tiền lời hàng năm vào ô G34.</p>
+<p>Nếu bạn là người chuyên mua bán chứng khoán ngắn hạn, ô F35/G35 để ghi các khoản thu nhập từ cổ phiếu: cổ tức, chênh lệch giá… Cổ tức của những cổ phiếu nắm giữ dài hạn cũng được ghi vào ô G35. Thu nhập dạng này không đều đặn, khó dự tính được.</p>
+
+
+<p>Ô F36/G36 để ghi các khoản thu nhập do đầu tư nhà, xe cho thuê. Thu nhập dạng này tương đối đều đặn. Bạn phải tốn một chút công giao dịch để có thu nhập này và tài sản có thể tăng hoặc giảm giá trị theo thời gian.</p>
 <p>Ô F37/G37 để ghi các khoản được cho, trợ cấp… Các khoản này không nhất thiết là tiền mặt, ví dụ như khi bạn ở chung nhà với cha mẹ hay người quen mà không phải trả tiền nhà hoặc trả ít hơn giá thị trường, bạn đã chi tiêu hết ngay khoản trợ cấp dưới dạng này nên bạn cũng sẽ ghi thêm khoản này vào mục Chi ở trên.</p>
 <p>Khoản lãi tiết kiệm và lãi từ các quỹ đầu tư không được tính trong này vì đó là khoản đầu tư cho tương lai tự do tài chính, bạn sẽ không đụng đến lãi tiết kiệm cho đến khi tự do tài chính, cứ để cho lãi nhập vào vốn.</p>
 <p>Sau khi ghi khoản thu nhập vào, chương trình sẽ tính tỉ lệ các khoản chi trên thu nhập, kết quả hiện trong cột I</p>
-<p>
-Tổng các khoản chi 1.1 tới 1.5 được hiện trong ô I31. Phải đặc biệt lưu ý nếu ô này lớn hơn 90%, khi đó khả năng tiết kiệm của bạn thấp, bạn sẽ chậm đạt đến Tự do tài chính. Nếu ô I31 lớn hơn 100% nghĩa là bạn đã chi tiêu lấn vào khoản tiền tích luỹ cho tương lai, cần phải đặc biệt lưu ý tình trạng này vì nó làm các kế hoạch tiết kiệm của bạn xấu đi.
-</p>
+<p>Tổng các khoản chi 1.1 tới 1.5 được hiện trong ô I31. Phải đặc biệt lưu ý nếu ô này lớn hơn 90%, khi đó khả năng tiết kiệm của bạn thấp, bạn sẽ chậm đạt đến Tự do tài chính. Nếu ô I31 lớn hơn 100% nghĩa là bạn đã chi tiêu lấn vào khoản tiền tích luỹ cho tương lai, cần phải đặc biệt lưu ý tình trạng này vì nó làm các kế hoạch tiết kiệm của bạn xấu đi.</p>
+
+
 <p>Sau khi liệt kê thu nhập và chi phí xong, bạn sẽ tính các khoản tiền cần dùng trong tương lai, bắt đầu là tính tiền <a href="huu-tri">hưu trí</a>.</p>
 <div class="center">trở về trang <a href="../ke-hoach-tai-chinh/">Kế hoạch tài chính</a></div>
 <div class="todiscuss">Mọi ý kiến thảo luận xin ghi vào các trang: <a href="https://twitter.com/GiauCham/status/1132799550911987712" target="_blank">Twitter</a> hoặc <a href="https://www.facebook.com/lamgiauchacchan/posts/375551315943816" rel="nofollow" target="_blank">Facebook</a></div>
-
-
-<!-- AMP In-article 1 -->
-<amp-ad
-media="(max-width: 399px)"
-height=280
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 400px) and (max-width: 499px)"
-height=250
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-<amp-ad
-media="(min-width: 500px)"
-height=100
-layout="fixed-height"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="3830899615">
-</amp-ad>
-
 
   <hr>
   <div class="footer">
