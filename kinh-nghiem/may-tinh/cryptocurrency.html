@@ -2,8 +2,8 @@
 <html amp lang="vi">
 <head>
 <title>Hỏi đáp về Cryptocurrency</title>
-<meta name="description" content="Tìm hiểu Cryptocurrency: là gì, giữ như thế nào, trao đổi như thế nào, lợi/hại" />
-<meta name="keywords" content="cryptocurrency, bitcoin">
+<meta name="description" content="Tìm hiểu Cryptocurrency: là gì, giữ như thế nào, trao đổi như thế nào, lợi và hại" />
+<meta name="keywords" content="cryptocurrency, bitcoin, wallet">
 <link rel="alternate" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/cryptocurrency">
 <link rel="canonical" href="https://lehboi.github.io/kinh-nghiem/may-tinh/cryptocurrency">
 
@@ -235,7 +235,8 @@ data-ad-slot="5275186684">
 <p>Một ứng dụng khác của chữ ký điện tử là mã hoá thông điệp để giữ bí mật. Khi A muốn gửi một thông điệp hay file m cho B mà không cho bất kỳ ai khác dùng được thì A dùng public key của B để mã hoá thông điệp m thành m'. B nhận được thông điệp m' sẽ dùng private key để giải mã trở lại thành m. Bất kỳ người nào khác chép được m' trên đường truyền đều không thể giải mã được.</p>
 <h2>Bitcoin được giữ như thế nào?</h2>
 <p>Bitcoin được 'giữ' trong các wallet. Wallet gồm một software và file dữ liệu chứa những cặp public key và private key do software tạo ra. Public key là địa chỉ của wallet.
-<br>Private key là một con số nhị phân dài 256/128/512 bit được tự động sinh ra một cách ngẫu nhiên bằng software wallet cho người chủ của wallet. Software còn giúp tạo ra một dãy từ gợi nhớ gồm những từ có trong từ điển (mnemonic phrase, recovery phrase) mà từ dãy đó tìm trở lại private key của wallet. Mnemonic phrase cần được viết ra giấy và cất kỹ ở vài nơi để có thể lấy ra dùng khi cần.</p>
+<br>Private key là một con số nhị phân dài 256/128/512 bit được tự động sinh ra một cách ngẫu nhiên bằng software wallet cho người chủ của wallet. Software còn giúp tạo ra một dãy từ gợi nhớ gồm những từ có trong từ điển (mnemonic phrase, recovery phrase) mà từ dãy đó tìm trở lại private key của wallet. Mnemonic phrase cần được viết ra giấy và cất kỹ ở vài nơi để có thể lấy ra dùng khi cần.
+<br>Software của wallet sẽ tạo ra và ký các thông báo chuyển tiền.</p>
 <p>Tiền giấy và tiền kim loại thông thường được chính phủ phát hành theo những mệnh giá cố định. Bitcoin không như vậy. Những lượng Bitcoin lớn nhỏ khác nhau lưu hành trong mạng. Mỗi lượng Bitcoin là một chuỗi data ghi những giao dịch nó đã trải qua từ lúc được tạo ra. Khi một lượng Bitcoin x được chuyển từ wallet A sang wallet B, thì x được ghi thêm địa chỉ B và được ký bằng private key của A.
 <br>Tổng số tiền có trong wallet là tổng các lượng Bitcoin mang các địa chỉ của wallet. Khi một wallet A cần chuyển một lượng Bitcoin x sang wallet B mà không có lượng Bitcoin bằng đúng x có sẵn trong wallet A thì nó lấy một hoặc nhiều lượng Bitcoin có tổng lớn hơn hoặc bằng x đưa vào giao dịch, tạo ra một lượng Bitcoin x mới mang địa chỉ B và một lượng Bitcoin mới mang địa chỉ A chứa phần dư sau khi trừ x (nếu có). Phần dư cũng có thể mang một địa chỉ khác A được tạo ra và software wallet phải ghi cặp public key và private key của lượng Bitcoin dư đó vào file dữ liệu.</p>
 
@@ -285,7 +286,7 @@ Giao dịch trên sàn thì tốn phí giao dịch, phí chuyển Bitcoin vào v
 <h2>Giữ wallet thế nào để khỏi mất?</h2>
 <p>Wallet trong web server là mục tiêu của hacker. Hacker luôn tìm cách chiếm đoạt toàn bộ wallet trong từng server. Lượng Bitcoin chưa định bán thì nên chuyển từ web wallet vào cold wallet để tránh bị hack.</p>
 <p>Wallet trong máy tính và smartphone dễ bị mất cắp qua các phần mềm gián điệp. Để an toàn hơn, người ta để wallet trong các máy tính sạch và không nối mạng, gọi là cold wallet. Người ta đặt ra các thủ tục rất chặt chẽ khi dùng cold wallet trong máy tính để tránh bị mất cắp.</p>
-<p>Một rủi ro khác là hư hoặc mất vật chứa wallet: hư đĩa cứng máy tính, hư/mất smartphone, mất USB wallet. Do đó cần phải backup wallet trên một vật chứa khác, hoặc chép public key và private key ra giấy. Luôn luôn phải backup sau mỗi giao dịch, nếu restore từ bản backup cũ có thể bị mất những lượng Bitcoin mới có sau lần backup đó. Hư/mất wallet cũng giống như khi bị rớt mất bóp tiền hoặc khi tủ tiền giấy bị cháy. Bóp tiền hay tờ tiền thật bị rớt ngoài đường thì người qua đường có thể lượm được. Bitcoin bị mất do hư file wallet thì không có người nào lượm được, nó không bao giờ được dùng nữa.</p>
+<p>Một rủi ro khác là hư hoặc mất vật chứa wallet: hư đĩa cứng máy tính, hư/mất smartphone, mất USB wallet. Do đó cần phải backup wallet trên một vật chứa khác, hoặc chép public key và private key ra giấy. Luôn luôn phải backup sau mỗi giao dịch, nếu restore từ bản backup cũ có thể bị mất những lượng Bitcoin trong những cặp public key và private mới được tạo ra sau lần backup đó. Hư/mất wallet cũng giống như khi bị rớt mất bóp tiền hoặc khi tủ tiền giấy bị cháy. Bóp tiền hay tờ tiền thật bị rớt ngoài đường thì người qua đường có thể lượm được. Bitcoin bị mất do hư file wallet thì không có người nào lượm được, nó không bao giờ được dùng nữa.</p>
 <h2>Fork là gì?</h2>
 <p>Khi một nhóm người tham gia hệ thống cryptocurrency quyết định thay đổi các thông số của thuật toán cho một nhu cầu nào đó thì một loại cryptocurrency mới ra đời từ loại cryptocurrency đang có. Điều này gọi là fork.</p>
 <p>Loại tiền mới ra đời có giá trị trao đổi ban đầu rất thấp, tuỳ theo thị hiếu mà nó tăng giá hay là bị lãng quên luôn. Thường thì sau khi fork, những người sở hữu lượng tiền gốc sẽ được tặng một lượng tiền mới.</p>
