@@ -409,6 +409,12 @@
 		<priority>1.00</priority>
 	</url>
 	<url>
+		<loc>https://lehboi.github.io/y-kien/quang-cao-lao</loc>
+		<lastmod>2021-10-25T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
 		<loc>https://lehboi.github.io/y-kien/dung-hang-viet-nam</loc>
 		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
@@ -605,7 +611,7 @@
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/vi-dien-tu</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
+		<lastmod>2021-10-25T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
