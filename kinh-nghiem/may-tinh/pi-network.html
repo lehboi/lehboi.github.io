@@ -15,7 +15,7 @@
 
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 
 
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
@@ -106,29 +106,17 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
-
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
-
-  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 
 }
 
@@ -140,6 +128,8 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 </head>
 
 <body>
+  
+  <amp-auto-ads type="adsense" data-ad-client="ca-pub-2242556057278004"></amp-auto-ads>
   
   <!-- top of body -->
   <!-- sidebar menu -->
@@ -189,29 +179,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     </div>
   </div>
   
-  <div class="leftads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  <div class="rightads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  
 
   <div class="body">
   <div>
@@ -237,21 +204,12 @@ data-ad-slot="5275186684">
 <br>Để có đồng Bitcoin, người ta phải bỏ nhiều tiền ra mua giống như mua vàng, hoặc dùng máy-tính đào giống như đào vàng. Việc đào Bitcoin thực chất là việc vô-số máy-tính (gọi là node) cùng làm công-việc xác-nhận các giao-dịch chuyển tiền Bitcoin và đóng gói các giao-dịch đó vào một block data, node nào đóng gói xong block đạt yêu-cầu sớm nhất sẽ nhận được những đồng Bitcoin trả công. Việc đóng gói bao gồm việc tính-toán thử rất nhiều lần đến khi ra kết-quả đạt yêu-cầu. Việc đào Bitcoin rất phung-phí năng-lượng vì rất nhiều node cùng làm một việc mà chỉ có một node được trả công. Máy tính để đào Bitcoin phải rất mạnh mới có cơ may tranh-giành được Bitcoin, máy mạnh thì sẽ đắt tiền. Như vậy việc đào Bitcoin hay mua Bitcoin là việc của những người nhiều tiền và có máu mạo-hiểm.</p>
 <p>Xu-hướng mới hiện nay là các chính-phủ sẽ phát-hành tiền-điện-tử để dùng song-song rồi dần-dần thay-thế tiền đang dùng. <a href="https://en.wikipedia.org/wiki/CBDC" target='_blank'>Tiền-điện-tử của chính-phủ</a> sẽ khác những đồng-tiền phi-chính-phủ nói trên và có những ưu-điểm so với tiền đang dùng, ví-dụ như chuyển tiền trực-tiếp từ tài-khoản này sang tài-khoản khác không cần ngân-hàng.</p>
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 <h2>Pi Network</h2>
 <div class="flright"><amp-img alt="Pi" src="/images/pi-networks.jpg" width="480" height="480" layout="responsive"></amp-img></div>
 <p>Trong thế-giới tự-do sáng-tạo, liên-tiếp có những người chế ra những đồng-tiền-điện-tử mới với hy-vọng một ngày nào đó giá-trị nó tăng lên nhiều lần.
-<br>Tôi vừa được biết một đồng-tiền-điện-tử mới gọi là <b>π</b> (Pi). <a href="https://minepi.com" target='_blank'>Pi Network</a> là một dự-án thí-nghiệm phát-triển một đồng-tiền được sử-dụng hàng ngày cho hàng tỷ người trên khắp thế-giới. Mọi người đều có-thể dễ-dàng sử-dụng π và tham-gia làm dịch-vụ trong Pi Network.</p>
-<p>Ý-tưởng của Pi Network là <span class="tmark">tạo ra một cộng-đồng vô-cùng đông người sở-hữu π và công-nhận giá-trị của π.</span>
+<br>Tôi vừa được biết một đồng-tiền-điện-tử mới gọi là <b>π</b> (Pi). <a href="https://minepi.com" target='_blank'>Pi Network</a> là một dự-án thí-nghiệm phát-triển một đồng-tiền được sử-dụng hàng ngày cho hàng tỷ người trên khắp thế-giới. Mọi người đều có-thể dễ-dàng sử-dụng π và tham-gia làm dịch-vụ trong Pi Network.
+<br style="clear:both">Ý-tưởng của Pi Network là <span class="tmark">tạo ra một cộng-đồng vô-cùng đông người sở-hữu π và công-nhận giá-trị của π.</span>
 <br>Mục-tiêu của Pi Network là hàng tỷ người trên thế-giới dùng π như ví-điện-tử thông-dụng MoMo, ZaloPay, AliPay, WeChat Pay để mua-bán mọi thứ hàng-hoá và dịch-vụ trong đời-sống hàng ngày cả mua-bán trực-tiếp lẫn mua-bán qua Internet. Pi không phải là đồng-tiền để đầu-cơ như Bitcoin.</p>
 
 <h3>Lộ-trình của Pi Network</h3>
@@ -270,15 +228,6 @@ Hệ-thống hoạt-động hoàn-chỉnh khi đã có khoảng vài chục tri�
 </p>
 
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 
 <h3>Tham-gia Pi Network</h3>
@@ -293,15 +242,6 @@ Hệ-thống hoạt-động hoàn-chỉnh khi đã có khoảng vài chục tri�
 <p>Rất nhiều người trên thế-giới không có passport để dùng Yoti, vì vậy Pi Network đang chuẩn-bị những cách khác để KYC ngoài cách dùng dịch-vụ Yoti.</p>
 <br style="clear:both">
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 
 <h3>Pi Node</h3>
@@ -336,15 +276,6 @@ Tác-dụng càng rõ trên những máy có ổ-đĩa chậm. Trên máy laptop
 </amp-accordion>
 <br style="clear:both">
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 
 <h2>Rủi-ro?</h2>
@@ -391,15 +322,6 @@ Có những loại ví-điện-tử blockchain thuộc loại custodial: có m�
 <p>Tóm-lại, các bạn bắt-đầu tham-gia bằng cách mở trang web <a href="https://minepi.com" target='_blank'>Pi Network</a>, cài app vào smartphone, đăng-ký tài-khoản, khi đăng-ký nhớ ghi tài-khoản của tôi (<b>lehboi</b>, là chữ LEHBOI viết thường) là invitation code để xây mạng-lưới. Kế-đó bạn mời thêm người tham-gia Pi, và xác-nhận ít nhất 5 tài-khoản của những người bạn biết.
 <br>Bạn cũng cần phải gửi SMS đến server của Pi ở Mỹ/Israel/Anh/Pháp để xác-nhận số-điện-thoại của bạn.</p>
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 <div class="todiscuss">
 Tài-liệu tham-khảo:
