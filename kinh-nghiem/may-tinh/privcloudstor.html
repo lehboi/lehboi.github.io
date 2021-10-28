@@ -16,6 +16,7 @@
 
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
+<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 
 
@@ -199,6 +200,8 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 
 <body>
   
+  <amp-auto-ads type="adsense" data-ad-client="ca-pub-2242556057278004"></amp-auto-ads>
+  
   <!-- top of body -->
   <!-- sidebar menu -->
   <amp-sidebar id="sidebar" layout="nodisplay" side="left">
@@ -301,15 +304,6 @@ data-ad-slot="5275186684">
 <p>Với cloud storage server, tất cả hình chụp bằng smartphone được tự động upload vào cloud server, tất cả các file làm việc trên các computer đều được synchronize tức thời vào cloud server. Nextcloud tự động nhớ lại từng version của file sau mỗi lần file được sửa, user có thể chọn dùng lại hoặc download lại các version cũ qua web browser.</p>
 
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 <h3>Multimedia</h3>
 <p>Các file hình được xem trực tiếp trong web browser và mobile app.
@@ -337,15 +331,6 @@ data-ad-slot="5275186684">
 <br>Từ Windows: theo hướng dẫn ở <a href="https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows#0" target="_blank">link này</a>.</p>
 
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 <h3 id="install">Boot và install</h3>
 <p>Có hai cách install Nextcloud: install Nextcloud và các thành phần kèm theo trong một gói <b>snap</b> hoặc install riêng Nextcloud và các thành phần kèm theo. Install trong gói snap thì gọn nhưng bạn không thay đổi được các thông số của Nextcloud. Tôi đã install trong snap, sau đó phải gỡ bỏ snap và install riêng Nextcloud và các thành phần kèm theo. Phần dưới đây hướng dẫn install trong snap.</p>
@@ -366,15 +351,6 @@ data-ad-slot="5275186684">
 <p>Nếu bạn đã chọn chia đĩa Manual ở bước 8 thì bạn phải đổi chỗ chứa file của Nextcloud để dùng đúng partition. Bạn phải tạo filesystem trong partition (hoặc logical volume nếu bạn dùng LVM) dành riêng cho data storage. Bạn thêm một dòng vào file /etc/fstab để mount filesystem đó vào chỗ Nextcloud chứa file là /var/snap/nextcloud/common/nextcloud. Nhưng trước khi boot lại để mount filesystem đó vào đúng chỗ, bạn cần mount filesystem đó vào một chỗ tạm và dời các file đang có trong /var/snap/nextcloud/common/nextcloud vào filesystem đó.</p>
 
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 <h4>Tạo vùng swap trong RAM</h4>
 <p>Nếu máy của bạn có ít hơn 4GB RAM hoặc có nhiều người dùng cloud server này thì sẽ có lúc server cần dùng vùng swap để phụ thêm cho RAM. Ở bước 8 phía trên, chương trình install đã tạo một vùng swap trong đĩa cứng. Đĩa cứng thì chạy chậm hơn RAM gần một trăm lần nên server sẽ rất chậm mỗi khi dùng đến vùng swap.
@@ -393,15 +369,6 @@ data-ad-slot="5275186684">
 <p>Bạn không cần NAT với IPv6 nhưng bạn cần đặt cho router mở port 80 và port 443 cho kết nối theo IPv6 từ bên ngoài vào.</p>
 
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 <h4>Dynamic DNS</h4>
 <p>Để cho dễ tìm đến server, bạn sẽ đăng ký một domain name dễ nhớ cho cloud storage server và dùng dịch vụ dynamic DNS để đổi domain name đó thành địa chỉ IPv4 toàn cầu của FTTH router. Tôi đề nghị dùng dịch vụ miễn phí dynv6.com. Dynv6.com cho phép đổi domain name của bạn thành một địa chỉ IPv4 và một địa chỉ IPv6. Bạn sẽ cho cloud server chạy một script dynv6.sh để ghi hai địa chỉ đó vào database của dynv6.com mỗi lần cổng Ethernet của server bật lên. Script dynv6.sh được download từ <a href="https://dynv6.com/docs/apis" target='_blank'>Dynv6</a> và đặt vào folder /etc/networkd-dispatcher/routable.d/. Bạn cần <code>chmod</code> để script dynv6.sh được quyền executable và bạn cũng cần phải sửa vài dòng đầu script để đặt giá trị cho các variable <var>hostname</var>, <var>device</var>, <var>token</var>. <var>Hostname</var> là domain name mà bạn đã đăng ký với dynv6.com, <var>device</var> là tên của Ethernet port (xem tên đó bằng cách đánh lệnh <code>ip addr</code>), <var>token</var> do dynv6.com cấp cho domain name của bạn.</p>
@@ -419,15 +386,6 @@ data-ad-slot="5275186684">
 <p>Mobile app cũng có chức năng synchronize file giữa client và cloud server, ngoài ra nó còn tự động upload file hình mới tạo ra trong mobile và play một số file audio và video.</p>
 
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 <h4>Web interface</h4>
 <p>Bạn có thể quản lý file của bạn trong cloud server: upload, download, delete, move, copy, rename files.
@@ -457,15 +415,6 @@ data-ad-slot="5275186684">
 <p>Thay vì streaming qua WebDAV, tôi share đĩa cứng qua NFS cho app Kodi phát thật nhẹ nhàng. Thật ra khi quyết định dùng máy laptop cũ này làm server, tôi đã nghĩ đến chức năng NFS file server, rồi tìm thấy Nextcloud với những tính năng vượt quá mong đợi. Bây giờ tôi dùng Nextcloud với những file làm việc trên máy tính và hình chụp trên smartphone, NFS để share multimedia file.</p>
 
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 <h3>Administrating</h3>
 <h4>Backup</h4>
@@ -564,15 +513,6 @@ Nếu không tìm được một máy laptop cũ để làm cloud storage server
   </div>
 
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
   <hr>
   <div class="footer">
