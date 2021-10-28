@@ -15,6 +15,7 @@
 
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 
 
@@ -106,17 +107,29 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
 
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
+
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
 
+  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
+
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+
+  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
+  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 
 }
 
@@ -174,7 +187,29 @@ div.footer { font-size: 80%; color: red; text-align: center; }
       </button>
     </div>
   </div>
-  
+
+  <div class="leftads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+
+  </div>
+  <div class="rightads">
+  <!-- AMP Responsive Skyscrapper -->
+<amp-ad
+media="(min-width: 1260px)"
+layout="fill"
+type="adsense"
+data-ad-client="ca-pub-2242556057278004"
+data-ad-slot="5275186684">
+</amp-ad>
+
+  </div>
 
 <div class="body">
   <div>
