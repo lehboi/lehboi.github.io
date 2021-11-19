@@ -227,7 +227,16 @@ data-ad-slot="5275186684">
 <!-- body here -->
   <h1>Cách bảo vệ tài sản trong thời đại số hoá</h1>
 <div class="right">Viết lần đầu trong Tháng Ba, 2020. Sửa lần cuối trong Tháng Mười Một, 2021.</div>
-<h2>Tài sản trong thời đại số hoá có gì khác?</h2>
+Dàn bài:
+<ul>
+<li><a href="#taisanso">Tài sản trong thời đại số hoá có gì khác?</a></li>
+<li><a href="#password">Bảo vệ password</a></li>
+<li><a href="#twofactor">Bảo vệ hai lớp (Two Factor Authentication)</a></li>
+<li><a href="#dsign">Digital Signing</a></li>
+<li><a href="#disanso">Di sản số</a></li>
+<li><a href="#bank">Tài khoản ở ngân hàng</a></li>
+</ul>
+<h2 id="taisanso">Tài sản trong thời đại số hoá có gì khác?</h2>
 <p>Thời nay đa số người ta đều có một thứ tài sản đặc biệt cần giữ là các file: file hình/video chụp bằng camera/phone, file nhạc để nghe bằng phone/computer, tài liệu soạn ra khi làm việc và ghi chép cá nhân… Mặc dù cách dùng các file đó khác nhau nhưng bên trong mỗi file chỉ chứa toàn các số 0 và 1 cho nên chúng ta gọi đó là <b>tài sản số hoá</b>. Những tài sản số hoá đều có một giá trị vật chất hoặc tinh thần nào đó. Chúng có giá trị vật chất khi chúng ta có thể bán, cho thuê, ví dụ như bán những tấm hình đẹp, cho người ta xem những video clip để thu tiền quảng cáo… Một vài loại tài sản số hoá có giá trị vật chất rất cụ thể là tài khoản ngân hàng, ví điện tử, giá trị của những tài sản này bằng số tiền có trong tài-khoản hoặc ví.
 <br>Những tài sản số hoá đó được tạo ra và giữ trong thẻ nhớ, USB drive, ổ đĩa cứng, smartphone… và chúng rất dễ bị mất đi vì vật chứa bị mất hay hư bất ngờ hoặc người chủ lỡ tay xoá mất.</p>
 <p>Ngoài ra, ngày càng có nhiều file do chúng ta tạo ra nhưng không được giữ trong tay chúng ta mà nằm trong các cloud server của các nhà cung cấp dịch vụ như Google, Facebook, Dropbox… Chúng ta giữ những file đó bằng password, mất password là mất hết file. Password giống như một cái chìa khoá để mở cái tủ chứa tài sản số hoá.</p>
@@ -246,8 +255,11 @@ data-ad-slot="5275186684">
 <li>tránh để smartphone bị trộm hoặc cướp. Giá trị vật chất của smartphone cũng đáng kể nhưng có khi giá trị của những file chứa trong smartphone còn cao hơn nhiều,</li>
 <li>tránh đừng để password bị lộ hoặc quên.</li>
 </ul>
+<h3>Trường hợp khác</h3>
+<p>Một trường hợp bị lộ file riêng tư một cách không ngờ đó là giao máy tính hoặc smartphone bị hư cho thợ sửa và thợ đọc được những file trong đó. Để tránh bị như vậy, bạn hãy yêu cầu thợ gỡ đĩa cứng, thẻ nhớ đưa lại cho bạn trước khi bạn rời khỏi cửa hàng.
+<br>Và bạn luôn luôn nhớ đừng để những file riêng tư không được bảo vệ bằng password trong smartphone. Ví dụ không ghi mật khẩu vào file text hoặc vào các app không có password, không chụp hình mật khẩu, hoặc những hình riêng tư… Nếu bạn lỡ để những thứ không được bảo vệ trong smartphone và bạn đánh giá rằng việc lộ những thứ đó sẽ gây thiệt hại và rác rối lớn thì bạn nên cân nhắc vứt bỏ smartphone bị hư thay vì đưa cho thợ sửa.</p>
 
-<h2>Bảo vệ password</h2>
+<h2 id="password">Bảo vệ password</h2>
 <p>Bây giờ có quá nhiều dịch vụ được cung cấp (miễn phí hoặc có thu phí) qua Internet. Để sử dụng dịch vụ thì chúng ta phải được server xác thực bằng cách trả lời password. Dùng máy tính và smartphone cá nhân cũng cần password. Một số file đặc biệt quan trọng trong máy cá nhân cũng cần password riêng để mở.</p>
 <p>Những người mới làm quen với máy tính và smartphone thường dùng những password đơn giản. Kẻ gian cũng biết điều đó nên chúng có một danh sách rất dài những password thường gặp và chúng dùng phần mềm để thử lần lượt các password đó để cố login vào các server nhằm tìm kiếm những thông tin riêng tư. Để tránh bị mất tài sản số hoá do password quá đơn giản thì mỗi người phải tập dùng password rắc rối hơn, một số server cũng chỉ cho dùng password không quá đơn giản.</p>
 <p>Làm sao nhớ hết được quá nhiều password thật rắc rối ở quá nhiều nơi như vậy?</p>
@@ -315,17 +327,17 @@ Ngoài việc dùng password để login vào các dịch vụ web, password cò
 <p>Authenticator là một máy mã hoá nhỏ như cái móng tay. Nó chứa chìa khoá riêng (private key) của người dùng trong cặp chìa khoá public-key cryptography đã đăng ký với server của dịch vụ. Mỗi khi người dùng login vào dịch vụ thì server dịch vụ gửi đến máy của người dùng một chuỗi thử thách (challenge), máy của người dùng giao chuỗi thử thách đó cho authenticator qua USB hoặc NFC hoặc Bluetooth, authenticator <a href="cryptocurrency">ký</a> chuỗi thử thách bằng private key rồi gửi trở lại server, server dùng public key của người dùng để kiểm xem chữ ký đó có khớp không. Private key của người dùng không bao giờ xuất hiện bên ngoài authenticator nên không sợ bị lộ. Authenticator có thể chứa vô số private key nên một người dùng với một authenticator có thể tạo tài khoản ở vô số dịch vụ, nhiều tài khoản ở cùng một dịch vụ. Authenticator đang dần trở nên phổ biến, đến một lúc nào đó người ta không cần password ở mọi nơi.
 <br>Biện pháp này chặt chẽ như vậy nhưng cũng không bảo vệ tuyệt đối được. Đã có trường hợp trong khi ngủ chủ tài khoản bị người cùng nhà dùng đầu ngón tay để thực hiện giao dịch chuyển tiền đi mất. Trong trường hợp không tin tưởng người cùng nhà thì nên tắt hoặc cất smartphone vào trong két sắt khi đi ngủ.</p>
 
-<h2>Digital Signing</h2>
+<h2 id="dsign">Digital Signing</h2>
 <p>Trong phần trên, chúng ta được biết authenticator hay security key chứa những cặp chìa khoá public-key cryptography của những tài khoản ở các nhà cung cấp dịch vụ, và authenticator sẽ ký chuỗi thử thách để người-dùng được login vào dịch vụ, gọi là xác thực danh tính, authentication.</p>
 <p>Cặp chìa khoá public-key cryptography còn được dùng để ký các chứng từ giao dịch, ví dụ file hợp đồng, file biên bản… Đó là ứng dụng chữ ký số. Mỗi người đều có thể tự dùng software để tạo ra cặp chìa khoá public-key cryptography, nhưng muốn cho chữ ký số được công nhận có giá trị thì phải mua từ các nhà cung cấp dịch vụ chữ ký số được cấp phép từ chính quyền và phải trả tiền hàng năm. Chữ ký số thường chứa trong một USB token hoặc chứa trong SIM điện thoại di động. Khi ký văn bản thì phần mềm ký sẽ tạo ra chuỗi hash từ văn bản, giao chuỗi hash cho USB token hoặc SIM điện thoại ký.</p>
-<p>Gần đây có một cách ký gọn hơn, đó là Remote Signing, ký trên smartphone. Khi cần ký, phần mềm ký sẽ tạo ra chuỗi hash từ văn bản, gửi chuỗi hash đó đến server của nhà cung cấp dịch vụ chữ ký số, server sẽ gửi chuỗi hash đó đến smartphone của người giữ chữ ký, smartphone ký và gửi kết quả trở lại server, server gửi kết quả trở lại cho phần mềm ký.</p>
+<p>Gần đây có một cách ký gọn hơn, đó là Remote Signing, ký trên smartphone. Khi cần ký, phần mềm ký sẽ tạo ra chuỗi hash từ văn bản, gửi chuỗi hash đó đến server của nhà cung cấp dịch vụ chữ ký số, server sẽ hỏi người giữ chữ ký qua smartphone, chủ smartphone đồng ý hoặc từ chối ký với server, server gửi kết quả trở lại cho phần mềm ký.</p>
 <p>Việc dùng chữ ký số đã rất phổ biến ở các doanh nghiệp Việt Nam vì các giấy tờ khai thuế và khai hải quan đều phải có chữ ký số để nộp qua mạng. Cá nhân thì không có nhu cầu dùng chữ ký số.</p>
 <p>Trong đại dịch Covid-19, Bộ Công An đã đưa ra app <a href="https://vneid.com" target='_blank'>VNeID</a> để người dân khai những nơi sắp đến, một việc không thực tế vì ngay cả khi đến trụ sở công an quận cũng không ai hỏi đến việc khai đó. Nhưng dường như app VNeID sẽ là một dịch vụ authentication và Remote Signing cho toàn dân. <a href="https://dichvucong.gov.vn/p/home/dvc-trang-chu.html" target='_blank'>Cổng dịch vụ công quốc gia</a> sẽ đổi sang xác thực danh tính bằng VNeID. Các ngân hàng cũng sẽ dùng VNeID để xác thực danh tính người-dùng và ký lệnh giao dịch.
-<br>Tui hình dung rằng hệ thống cung cấp dịch vụ sẽ hiện ra một QR code chứa chuỗi thử thách, người-dùng mở app VNeID scan QR-code đó, VNeID ký chuỗi thử thách bằng private key rồi gửi về hệ thống định danh điện tử, hệ thống định danh điện tử kiểm tra bằng public key rồi trả lời cho hệ thống cung cấp dịch vụ biết có đúng người hay không. Nếu mở dịch vụ trên smartphone thì app cung cấp dịch vụ sẽ gửi chuỗi thử thách thẳng qua app VNeID thay vì VNeID scan.
-<br>Khi cần ký lệnh giao dịch, hệ thống ngân hàng gửi chuỗi hash của lệnh đến server VNeID, server gửi chuỗi hash đến app VNeID, người-dùng xác nhận cho app VNeID ký chuỗi hash, chuỗi hash đã ký được gửi về server VNeID rồi gửi đến server ngân hàng để thực hiện giao dịch.</p>
+<br>Tui hình dung rằng hệ thống cung cấp dịch vụ sẽ hiện ra một QR code chứa chuỗi thử thách, người-dùng mở app VNeID scan QR-code đó, VNeID ký chuỗi thử thách bằng private key rồi gửi về hệ thống định danh điện tử, hệ thống định danh điện tử kiểm tra bằng public key rồi trả lời cho hệ thống cung cấp dịch vụ biết có đúng người hay không. Nếu dùng dịch vụ trên smartphone thì app cung cấp dịch vụ sẽ gửi chuỗi thử thách thẳng qua app VNeID thay vì app VNeID scan.
+<br>Khi cần ký lệnh giao dịch, hệ thống ngân hàng gửi chuỗi hash của lệnh đến server VNeID, server gửi chuỗi hash đến app VNeID, người-dùng đồng ý hoặc từ chối ký trên app VNeID, chuỗi hash đã ký được gửi về server VNeID rồi gửi đến server ngân hàng để thực hiện giao dịch.</p>
 
 
-<h2>Di sản số</h2>
+<h2 id="disanso">Di sản số</h2>
 <p>Những tài sản có một giá trị nào đó (vật chất hay tinh thần) đều cần phải được truyền lại khi người chủ tài sản qua đời, không nên để bị quên lãng giống như những trường hợp chôn vàng dưới nền nhà mà người nhà không biết.
 <br>Người chôn vàng dưới nền nhà nên viết rõ chỗ chôn vào di chúc. Di chúc được niêm phong và cất cẩn thận, người thân sẽ mở di chúc sau khi người viết qua đời.
 <br>Với tài sản số hoá thì viết vào di chúc như thế nào? Viết tên và password lên giấy rồi niêm phong lại ư? Mỗi khi có một password cần phải đổi thì lại phải chép lại di chúc sao? Mất công quá, hãy làm di chúc số!
@@ -336,7 +348,7 @@ Ngoài việc dùng password để login vào các dịch vụ web, password cò
 <li>Khi người thân của tôi nhận được quyền dùng gmail hoặc Google Drive của tôi sẽ mở được file KeePass đó và thấy tất cả password ở tất cả các dịch vụ tôi đã từng dùng.</li>
 </ul>
 
-<h2>Tài khoản ở ngân hàng</h2>
+<h2 id="bank">Tài khoản ở ngân hàng</h2>
 <p>Tài khoản của bạn ở ngân hàng cũng là tài sản số hoá, nhưng là số tiền, cụ thể hơn loại tài sản số hoá ở trên.</p>
 <p>Đối với loại tài sản số hoá là tài khoản trong ngân hàng thì chìa khoá gồm có một cái thẻ gắn liền với PIN (Personal Identification Number) và số điện thoại di động. Số điện thoại di động được dùng để nhận OTP (One Time Password) qua SMS khi dùng thẻ qua Internet (để trả tiền mua hàng hoặc chuyển tiền sang tài khoản khác). Kẻ gian đã tìm ra những cách để chiếm quyền sử dụng số điện thoại của chủ tài khoản, hoặc lén cài phần mềm gián điệp vào smartphone để lấy cắp OTP trong SMS và chuyển hết tiền sang tài khoản khác. Gần đây các ngân hàng đã dùng loại chìa khoá tốt hơn số điện thoại di động, đó là app tạo ra OTP trên smartphone. Tuy nhiên, kẻ gian vẫn nghĩ ra nhiều kịch bản để lừa chủ tài khoản giao OTP cho bọn chúng và các ngân-hàng đã liên-tục nhắc-nhở “không giao OTP cho bất-cứ ai, kể-cả nhân-viên ngân-hàng”.</p>
 <p>Đối với thẻ, khi dùng thẻ để rút tiền ở ATM thì máy luôn luôn hỏi PIN. Nhưng khi dùng thẻ để trả tiền mua hàng qua máy POS thì có trường hợp máy hỏi PIN (thường là thẻ debit), có trường hợp máy không hỏi PIN (thường là thẻ credit). Khi thẻ credit của bạn bị mất, kẻ gian sẽ cầm thẻ đi mua những món đắt tiền rồi đem bán lại. Ở nước ngoài, khi bạn báo cho ngân hàng biết rằng bạn bị mất thẻ thì ngân hàng không bắt bạn trả những món tiền đã chi tiêu từ lúc mất thẻ. Ở VN, bạn phải trả tiền cho ngân hàng trước rồi khiếu nại sau, do đó việc mất thẻ credit mà không kịp khoá thẻ tương đương với mất tiền. Bây giờ, các ngân hàng thường có app để khách hàng cài vào smartphone, qua app đó có thể khoá thẻ ngay lập tức mà không cần phải gọi đến ngân hàng như hồi xưa.
@@ -367,7 +379,7 @@ Có trường hợp nhân viên tính tiền ở cửa hàng cố nhớ hết th
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   </div>
   <div class="even">Trang-web này được áp-dụng <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target='_blank'>Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
-  Bạn được phép chép lại trang-web này, với điều-kiện không được thay-đổi nội-dung và không dùng cho mục-đích thu-lợi và ghi rõ nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a>. Điều kiện trên cũng áp dụng với domain name trước đây của website này là LHBOI.NAME.VN.
+  Bạn được phép chép lại trang-web này, với điều-kiện không được thay-đổi nội-dung và không dùng cho mục-đích thu-lợi và ghi rõ nguồn-gốc <a href="https://lehboi.github.io">https://LeHBoi.github.io</a>. Điều kiện trên cũng áp dụng với domain name trước đây của website này là LHBOI.NAME.VN.
   </div>
 </div>
 
