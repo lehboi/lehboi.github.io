@@ -237,28 +237,28 @@ i6300esb.ko      machzwd.ko   softdog.ko   w83977f_wdt.ko</pre>
 <p>Nếu chưa biết chip nào thì cứ thử load lần lượt từng module vào. Khi load module mà không đúng với chip thì nó sẽ báo ngay là không đúng, nếu nó không báo gì hết thì dùng lệnh <tt>dmesg</tt> xem thông báo device watchdog đã được initialize</p>
 <pre>WDT driver for the Winbond(TM) W83627HF Super I/O chip initialising.
 w83627hf WDT: initialized. timeout=60 sec (nowayout=0)</pre>
-Load module rồi thử coi module đó có dùng được không bằng lệnh <tt>echo x &gt; /dev/watchdog</tt>, rồi ngồi chờ chừng 1-2 phút, nếu máy khởi động lại tức là module đó dùng được. Máy khởi động y như bị bấm nút Reset chứ không phải là <tt>init 6</tt>, do đó nên thử ở runlevel 1 để ít ảnh hưởng tới các service của máy. Trong 1-2 phút đó có thể dùng lệnh <tt>dmesg</tt> để xem các thông báo của driver watchdog như:
+Load module rồi thử coi module đó có dùng được không bằng lệnh <tt>echo x &gt; /dev/watchdog</tt>, rồi ngồi chờ chừng một tới hai phút, nếu máy khởi động lại tức là module đó dùng được. Máy khởi động y như bị bấm nút Reset chứ không phải là <tt>init 6</tt>, do đó nên thử ở runlevel 1 để ít ảnh hưởng tới các service của máy. Trong một tới hai phút đó có thể dùng lệnh <tt>dmesg</tt> để xem các thông báo của driver watchdog như:
 <pre>w83627hf WDT: Unexpected close, not stopping watchdog!</pre>
 
 
 <p>Nhiều khi load module được nhưng máy không khởi động, đó là do mainboard có chip đó nhưng nó không nối tới mạch reset CPU. Nếu thử hết đám module đó mà vẫn chưa tìm thấy module nào dùng được thì config và build kernel lại để chọn những module khác (trong mục Device Drivers - Character devices - Watchdog Cards). Trong các module driver có một module là Software watchdog. Nó không dùng chip gì hết mà tự làm bằng code trong kernel, dùng tạm cũng được nhưng đôi khi không có tác dụng.</p>
-<p>Để dùng watchdog, ta chạy 1 script gồm 1 vòng lặp bất tận, trong vòng lặp đó làm 2 việc là ghi vào /dev/watchdog và kiểm tra một số dấu hiệu chứng tỏ là máy còn làm việc bình thường. Chu kỳ của vòng lặp đó không lớn hơn x giây (x tuỳ thuộc vào chip và thông số đặt cho watchdog, thường trong khoảng 30-60 giây). Nếu phát hiện thấy dấu hiệu bất thường thì exit khỏi vòng lặp, mạch watchdog sẽ khởi động lại máy; hoặc nếu việc kiểm tra quá lâu (cũng là dấu hiệu bất thường) thì máy cũng sẽ khởi động lại. Tuỳ theo nhiệm vụ của máy mà ta chọn kiểm tra dấu hiệu nào. Ví dụ để kiểm tra web server thì ta connect tới TCP port 80, GET về một trang html, rồi ping tới default gateway, có thể sleep 10 giây nữa; như vậy khi web server không trả lời hoặc ping không được default gateway thì máy sẽ khởi động lại.</p>
+<p>Để dùng watchdog, ta chạy một script gồm một vòng lặp bất tận, trong vòng lặp đó làm hai việc là ghi vào /dev/watchdog và kiểm tra một số dấu hiệu chứng tỏ là máy còn làm việc bình thường. Chu kỳ của vòng lặp đó không lớn hơn x giây (x tuỳ thuộc vào chip và thông số đặt cho watchdog, thường trong khoảng 30-60 giây). Nếu phát hiện thấy dấu hiệu bất thường thì exit khỏi vòng lặp, mạch watchdog sẽ khởi động lại máy; hoặc nếu việc kiểm tra quá lâu (cũng là dấu hiệu bất thường) thì máy cũng sẽ khởi động lại. Tuỳ theo nhiệm vụ của máy mà ta chọn kiểm tra dấu hiệu nào. Ví dụ để kiểm tra web server thì ta connect tới TCP port 80, GET về một trang html, rồi ping tới default gateway, có thể sleep 10 giây nữa; như vậy khi web server không trả lời hoặc ping không được default gateway thì máy sẽ khởi động lại.</p>
 <p>Các máy ATM của ngân hàng đều dùng mạch watchdog để bảo đảm là máy không bị treo quá lâu. Những máy dùng Windows thì không có sẵn driver cho chip on board như Linux mà phải mua card watchdog về cắm vào và cài driver.</p>
 <h2>Cài Linux vào software RAID0</h2>
-<p>Khi có từ 2 đĩa cứng trở lên trong máy, ta có thể ghép chúng lại thành RAID0 để tăng tốc độ đọc/ghi. RAID0 là một dãy các đĩa cứng được dùng cùng một lúc, khi ghi một file lớn vào RAID0 gồm n đĩa thì file sẽ được chia ra và ghi cùng lúc vào các block của các đĩa cứng, mỗi đĩa cứng chỉ chứa 1/n file do đó thời gian bus hệ thống chờ để ghi data sẽ giảm xuống. Thời gian khi đọc ra cũng nhanh hơn.</p>
-<p>Nếu ta có hardware RAID controller thì không cần làm gì đặc biệt ở hệ điều hành cũng cài được hệ điều hành lên RAID. Nhưng máy ở gia đình thì ít khi có hardware RAID controller mà phải dùng software RAID. Hệ điều hành phải đứng ra tổ chức việc ghi RAID. Khi máy mới boot lên, hệ điều hành chưa chạy thì không thể điều khiển RAID được. Do đó MS Windows không thể cài vào software RAID (trừ dạng đơn giản nhất là RAID1, tức là mirrored). Linux có thể cài vào software RAID bất kỳ nhờ vào việc Linux có thể để nhân hệ điều hành trong 1 file system riêng /boot. Chỉ cần để /boot trong 1 đĩa cứng thường hoặc RAID1 là đủ để Linux boot lên và dùng toàn bộ các file system khác, kể cả /, trong software RAID bất kỳ. Kích thước của /boot rất nhỏ so với toàn bộ hệ điều hành; chỉ cần 20MB là dư dùng, mặc dù khi cài thôi Fedora Core đòi /boot phải từ 75MB trở lên.</p>
-<p>Giả sử máy có 2 đĩa cứng bằng nhau hda và hdc, tạo 20MB /boot file system trên hda, tạo 250MB swap trên hda và 270MB swap trên hdc. Bây giờ, phần còn lại của hai đĩa vẫn bằng nhau. Tạo 2 RAID partition trên toàn bộ phần còn lại. Tạo một RAID0 từ 2 RAID partition đó. Tạo một physical volume trên RAID0 đó. Tạo một volume group từ physical volume. Rồi tạo các file system là các logical volume trong volume group.</p>
+<p>Khi có từ hai đĩa cứng trở lên trong máy, ta có thể ghép chúng lại thành RAID0 để tăng tốc độ đọc/ghi. RAID0 là một dãy các đĩa cứng được dùng cùng một lúc, khi ghi một file lớn vào RAID0 gồm n đĩa thì file sẽ được chia ra và ghi cùng lúc vào các block của các đĩa cứng, mỗi đĩa cứng chỉ chứa 1/n file do đó thời gian bus hệ thống chờ để ghi data sẽ giảm xuống. Thời gian khi đọc ra cũng nhanh hơn.</p>
+<p>Nếu ta có hardware RAID controller thì không cần làm gì đặc biệt ở hệ điều hành cũng cài được hệ điều hành lên RAID. Nhưng máy ở gia đình thì ít khi có hardware RAID controller mà phải dùng software RAID. Hệ điều hành phải đứng ra tổ chức việc ghi RAID. Khi máy mới boot lên, hệ điều hành chưa chạy thì không thể điều khiển RAID được. Do đó MS Windows không thể cài vào software RAID (trừ dạng đơn giản nhất là RAID1, tức là mirrored). Linux có thể cài vào software RAID bất kỳ nhờ vào việc Linux có thể để nhân hệ điều hành trong một file system riêng /boot. Chỉ cần để /boot trong một đĩa cứng thường hoặc RAID1 là đủ để Linux boot lên và dùng toàn bộ các file system khác, kể cả /, trong software RAID bất kỳ. Kích thước của /boot rất nhỏ so với toàn bộ hệ điều hành; chỉ cần 20 MB là dư dùng, mặc dù khi cài thôi Fedora Core đòi /boot phải từ 75 MB trở lên.</p>
+<p>Giả sử máy có hai đĩa cứng bằng nhau hda và hdc, tạo 20 MB /boot file system trên hda, tạo 250 MB swap trên hda và 270 MB swap trên hdc. Bây giờ, phần còn lại của hai đĩa vẫn bằng nhau. Tạo hai RAID partition trên toàn bộ phần còn lại. Tạo một RAID0 từ hai RAID partition đó. Tạo một physical volume trên RAID0 đó. Tạo một volume group từ physical volume. Rồi tạo các file system là các logical volume trong volume group.</p>
 
 
 <h2>Dùng LVM thay RAID0, RAID1</h2>
-<p>Một cách làm khác là tạo hai physical volume trên hai partition trên hai đĩa cứng, rồi tạo một volume group gồm hai physical volume đó, sau đó tạo các logical volume có hai stripe. Làm như vậy cũng có tác dụng như RAID0.<br />
-Nhưng khi đang cài đặt Linux thì không tạo được logical volume có nhiều stripe, nên cách này không làm được với / file system. / file system chỉ ở trên 1 stripe; nhưng các file system /usr, /home, /var thì có thể ở trên nhiều stripe và tác dụng cũng khá tốt vì / file system chỉ là 1 phần nhỏ trong tất cả các file system.<br />
-Muốn làm vậy thì khi cài Linux phải tạo các file system /usr, /home, /var trên các logical volume của 1 volumegroup. Sau khi cài xong, mở rộng volume group đó ra trên nhiều physical volume, rồi tạo các logical volume mới có nhiều stripe và kích thước lớn hơn hoặc bằng các file system kia, cuối cùng cp -pR tất cả các file từ các file system kia sang và sửa /etc/fstab lại để dùng các file system trên các logical mới. <br />
-LVM cũng có thể làm thay RAID1 (mirror). <br />
-</p>
+<p>Một cách làm khác là tạo hai physical volume trên hai partition trên hai đĩa cứng, rồi tạo một volume group gồm hai physical volume đó, sau đó tạo các logical volume có hai stripe. Làm như vậy cũng có tác dụng như RAID0.
+<br>Nhưng khi đang cài đặt Linux thì không tạo được logical volume có nhiều stripe, nên cách này không làm được với / file system. / file system chỉ ở trên 1 stripe; nhưng các file system /usr, /home, /var thì có thể ở trên nhiều stripe và tác dụng cũng khá tốt vì / file system chỉ là 1 phần nhỏ trong tất cả các file system.
+<br>Muốn làm vậy thì khi cài Linux phải tạo các file system /usr, /home, /var trên các logical volume của 1 volumegroup. Sau khi cài xong, mở rộng volume group đó ra trên nhiều physical volume, rồi tạo các logical volume mới có nhiều stripe và kích thước lớn hơn hoặc bằng các file system kia, cuối cùng cp -pR tất cả các file từ các file system kia sang và sửa /etc/fstab lại để dùng các file system trên các logical mới.
+<br>LVM cũng có thể làm thay RAID1 (mirror).</p>
 Dùng LVM có điểm hay là dễ thay đổi hơn RAID.
+
 <h2>Tốc độ chép file qua NFS và SMB</h2>
-<p>Thử chép 703MB của 439 file giữa 2 máy: Pentium 4 2.6GHz/NIC Intel 100Mbps, và Pentium M 1,7GHz NIC Intel 1000Mbps. 2 máy nối với nhau qua switch 100Mbps.</p>
+<p>Thử chép 703 MB của 439 file giữa hai máy: Pentium 4 2.6GHz/NIC Intel 100Mbps, và Pentium M 1,7GHz NIC Intel 1000Mbps. Hai máy nối với nhau qua switch 100Mbps.</p>
 <table class="noborder">
 <tbody>
 <tr>
@@ -305,7 +305,7 @@ Dùng LVM có điểm hay là dễ thay đổi hơn RAID.
 </ol>
 <p>Do phải umount file system nên không thể dùng cách này để tăng kích thước các file system cần thiết khi máy đang chạy là /usr, /var và nhất là /. Khi các file system này bị chật và không thể tăng kích thước thì ta có thể tạo một file system mới và dời bớt một directory nào đó từ file system bị chật sang file system mới.</p>
 <p>Lệnh resize2fs có thể dùng cho cả file system loại ext3.</p>
-<p>Logical Volume là một phần của một hay nhiều Physical Volume. Physical Volume được tạo từ một hay nhiều partition hay RAID. Vậy khi có từ 2 đĩa cứng giống nhau trở lên thì có thể kết hợp vừa RAID vừa LVM để tạo các file system một cách linh động và có tốc độ cao. Khi mới cài đặt thì chỉ tạo các file system là các logical volume với kích thước vừa đủ dùng, để lại một khoảng trống chưa dùng trong physical volume. Khi các file system bắt đầu chật mới tăng kích thước lên cho đủ.</p>
+<p>Logical Volume là một phần của một hay nhiều Physical Volume. Physical Volume được tạo từ một hay nhiều partition hay RAID. Vậy khi có từ hai đĩa cứng giống nhau trở lên thì có thể kết hợp vừa RAID vừa LVM để tạo các file system một cách linh động và có tốc độ cao. Khi mới cài đặt thì chỉ tạo các file system là các logical volume với kích thước vừa đủ dùng, để lại một khoảng trống chưa dùng trong physical volume. Khi các file system bắt đầu chật mới tăng kích thước lên cho đủ.</p>
 <p>File system nằm trực tiếp trên partition (không phải logical volume) cũng có thể tăng kích thước nếu đĩa cứng còn trống ngay sát sau partition đó.</p>
 <p>Lệnh resize2fs cũng có thể giảm kích thước file system trước khi giảm kích thước của partition hay logical volume.</p>
 
@@ -318,7 +318,7 @@ localedef --verbose --force -f UTF-8 -i vi_VN vi_VN.UTF-8</pre>
 <p>Các file trong /usr/lib/locale/vi_VN không bị thay đổi. Không rõ output vào đâu nhưng những thay đổi có tác dụng!</p>
 <h2>Configure kernel để dùng IDE ATA nhanh nhất</h2>
 <p>Phải xem tài liệu kèm theo mainboard để biết nó dùng PCI IDE chipset nào và config kernel cho đúng. Luôn luôn chọn configuration parameter CONFIG_BLK_DEV_IDEPCI=y và CONFIG_IDEDMA_PCI_AUTO=y.</p>
-<p>Với mainboard dùng chip Intel PIIX, thì chọn CONFIG_BLK_DEV_PIIX=y. Với ổ cứng Maxtor ATA-100, thì <tt>hdparm -t /dev/hda</tt> sẽ cho buffered disk read lên đến 34MB/s. Đáng lẽ ATA-100 thì phải được 100MB/sec. Nếu không dùng configuration đúng thì buffered disk read sẽ nhỏ hơn 5MB/s.</p>
+<p>Với mainboard dùng chip Intel PIIX, thì chọn CONFIG_BLK_DEV_PIIX=y. Với ổ cứng Maxtor ATA-100, thì <tt>hdparm -t /dev/hda</tt> sẽ cho buffered disk read lên đến 34 MB/s. Đáng lẽ ATA-100 thì phải được 100 MB/sec. Nếu không dùng configuration đúng thì buffered disk read sẽ nhỏ hơn 5 MB/s.</p>
 <h2>Sửa udev rule để các device node có access mode cần thiết</h2>
 <p>Sửa MODE trong các file trong /etc/udev/rules.d</p>
   <div class="todiscuss">
@@ -341,9 +341,10 @@ localedef --verbose --force -f UTF-8 -i vi_VN vi_VN.UTF-8</pre>
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   </div>
   <div class="even">Trang-web này được áp-dụng <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target='_blank'>Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
-  Bạn được phép chép lại trang-web này, với điều-kiện không được thay-đổi nội-dung và không dùng cho mục-đích thu-lợi và ghi rõ nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a>. Điều kiện trên cũng áp dụng với domain name trước đây của website này là LHBOI.NAME.VN.
+  Bạn được phép chép lại trang-web này, với điều-kiện không được thay-đổi nội-dung và không dùng cho mục-đích thu-lợi và ghi rõ nguồn-gốc <a href="https://lehboi.github.io">https://LeHBoi.github.io</a>. Điều kiện trên cũng áp dụng với domain name trước đây của website này là LHBOI.NAME.VN.
   </div>
 </div>
+
 <amp-analytics>
   <script type="application/json">
     {
@@ -372,6 +373,7 @@ localedef --verbose --force -f UTF-8 -i vi_VN vi_VN.UTF-8</pre>
   }
   </script>
 </amp-analytics>
+
 </main>
 </body>
 </html>

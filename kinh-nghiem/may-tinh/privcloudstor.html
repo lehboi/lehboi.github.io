@@ -159,7 +159,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
   "supply": {
     "@type": "HowToSupply",
     "name": "Laptop",
-    "description": "Old laptop 512MB RAM min, 240GB HDD min"
+    "description": "Old laptop 512 MB RAM min, 240 GB HDD min"
   },
   "tool": [
     {
@@ -315,11 +315,11 @@ data-ad-slot="5275186684">
 <p>Ngoài việc làm cloud storage, Nextcloud có rất nhiều <a href="https://apps.nextcloud.com/" target='_blank'>apps</a> thêm vào để trở thành cloud server đa năng: Calendar, Contacts, Mail, Talk, Office Suite, Project Management…</p>
 
 <h2>Dụng cụ cần có</h2>
-<p>Một máy tính có ít nhất 512MB RAM, dung lượng đĩa cứng tuỳ nhu cầu lưu trữ, Ethernet port. Tôi dùng một máy laptop cũ, vừa nhỏ gọn vừa ít hao điện.
+<p>Một máy tính có ít nhất 512 MB RAM, dung lượng đĩa cứng tuỳ nhu cầu lưu trữ, Ethernet port. Tôi dùng một máy laptop cũ, vừa nhỏ gọn vừa ít hao điện.
 <br>Nếu máy tính cũ mà bạn định dùng làm cloud storagre server có đĩa cứng nhỏ, bạn có thể gắn thêm một đĩa cứng nữa qua USB.</p>
 <p>Một đĩa cứng external dùng để backup file từ storage server. Dung lượng đĩa external lớn hơn gấp rưỡi cloud storage server.</p>
 <p>LAN và FTTH Internet connection để nối mạng LAN với Internet. Đặt NAT/port-forwarding ở router để nối từ bên ngoài đến cloud storage server qua IPv4. Nếu FTTH router được ISP cấp IPv6 thì càng tốt, không cần NAT.</p>
-<p>Một USB flash drive 2GB trở lên.</p>
+<p>Một USB flash drive hai GB trở lên.</p>
 
 <h2>Cài đặt server</h2>
 
@@ -336,8 +336,8 @@ data-ad-slot="5275186684">
 <p>Có hai cách install Nextcloud: install Nextcloud và các thành phần kèm theo trong một gói <b>snap</b> hoặc install riêng Nextcloud và các thành phần kèm theo. Install trong gói snap thì gọn nhưng bạn không thay đổi được các thông số của Nextcloud. Tôi đã install trong snap, sau đó phải gỡ bỏ snap và install riêng Nextcloud và các thành phần kèm theo. Phần dưới đây hướng dẫn install trong snap.</p>
 <p>Cắm USB flash drive đã làm ở bước trên vào máy để cài cloud storage server.</p>
 <p>Bật máy lên và chọn boot từ USB drive rồi lần lượt làm theo hướng dẫn ở <a href="https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-server#0" target="_blank">link này</a>.</p>
-<p>Ở bước 7, <i>Networking</i>, chương trình install sẽ tự động chọn địa chỉ DHCPv4 cho máy. Vì máy này sẽ được dùng làm server, bạn phải chọn địa chỉ IPv4 cố định bằng cách dùng phím Tab để đưa cursor đến tên Ethernet interface rồi bấm Enter, rồi chọn Edit IPv4. Bạn nên chọn một địa chỉ IPv4 nội bộ có số cuối dễ nhớ, ví dụ số cuối là 100 hoặc 200 hoặc 254.</p>
-<p>Ở bước 8, <i>Configure storage</i>, bạn có thể chọn <i>Manual</i> để chia đĩa theo cách riêng nếu bạn có nhiều kinh nghiệm với Linux, hoặc chọn default là <i>Use An Entire Disk</i>. Nếu chọn <i>Manual</i> thì bạn nên chia một partition 1GB làm boot filesystem chứa boot loader, một partition 5GB làm root filesystem chứa hệ điều hành, một partition khoảng 1GB làm swap và toàn bộ phần đĩa còn lại trong một partition làm data storage. Bạn cũng có thể chọn dùng LVM (Logical Volume Manager) khi chia đĩa, với LVM bạn có thể thêm dung lượng vào cloud storage dễ dàng. Nếu máy này có nhiều đĩa cứng thì bạn nên dùng LVM để nối các đĩa cứng đó lại.</p>
+<p>Ở bước bảy, <i>Networking</i>, chương trình install sẽ tự động chọn địa chỉ DHCPv4 cho máy. Vì máy này sẽ được dùng làm server, bạn phải chọn địa chỉ IPv4 cố định bằng cách dùng phím Tab để đưa cursor đến tên Ethernet interface rồi bấm Enter, rồi chọn Edit IPv4. Bạn nên chọn một địa chỉ IPv4 nội bộ có số cuối dễ nhớ, ví dụ số cuối là 100 hoặc 200 hoặc 254.</p>
+<p>Ở bước tám, <i>Configure storage</i>, bạn có thể chọn <i>Manual</i> để chia đĩa theo cách riêng nếu bạn có nhiều kinh nghiệm với Linux, hoặc chọn default là <i>Use An Entire Disk</i>. Nếu chọn <i>Manual</i> thì bạn nên chia một partition một GB làm boot filesystem chứa boot loader, một partition năm GB làm root filesystem chứa hệ điều hành, một partition khoảng một GB hoặc nhiều hơn số RAM trong máy làm swap và toàn bộ phần đĩa còn lại trong một partition làm data storage. Bạn cũng có thể chọn dùng LVM (Logical Volume Manager) khi chia đĩa, với LVM bạn có thể thêm dung lượng vào cloud storage dễ dàng. Nếu máy này có nhiều đĩa cứng thì bạn nên dùng LVM để nối các đĩa cứng đó lại.</p>
 <p>Bước 12, <i>Set up a Profile</i>, sẽ tạo một user account trong Linux với tên người, tên account và password. Máy Linux có một user account đặc biệt là root, root có toàn quyền làm mọi việc trong máy. Trong Ubuntu Linux, account root không có password và user không trực tiếp login vào account root mà user login vào account thường rồi dùng lệnh <code>sudo</code> để làm việc với quyền root.</p>
 <p>Ở bước 13, <i>Install software</i>, chương trình install sẽ hỏi bạn cần các software nào. Bạn cần install:</p>
 <ol>
@@ -348,13 +348,13 @@ data-ad-slot="5275186684">
 <p>Chương trình install sẽ chạy một lúc lâu để install và update hệ điều hành, sau đó bạn reboot. Lần boot đầu tiên lâu hơn bình thường vì các service phải tạo các file config trong lần chạy đầu tiên, bạn hãy chờ đến khi đĩa cứng ngừng hoạt động hẳn trong vài phút để các service đã sẵn sàng. Kế tiếp bạn làm một số việc sau.</p>
 
 <h4>Đổi storage location</h4>
-<p>Nếu bạn đã chọn chia đĩa Manual ở bước 8 thì bạn phải đổi chỗ chứa file của Nextcloud để dùng đúng partition. Bạn phải tạo filesystem trong partition (hoặc logical volume nếu bạn dùng LVM) dành riêng cho data storage. Bạn thêm một dòng vào file /etc/fstab để mount filesystem đó vào chỗ Nextcloud chứa file là /var/snap/nextcloud/common/nextcloud. Nhưng trước khi boot lại để mount filesystem đó vào đúng chỗ, bạn cần mount filesystem đó vào một chỗ tạm và dời các file đang có trong /var/snap/nextcloud/common/nextcloud vào filesystem đó.</p>
+<p>Nếu bạn đã chọn chia đĩa Manual ở bước tám thì bạn phải đổi chỗ chứa file của Nextcloud để dùng đúng partition. Bạn phải tạo filesystem trong partition (hoặc logical volume nếu bạn dùng LVM) dành riêng cho data storage. Bạn thêm một dòng vào file /etc/fstab để mount filesystem đó vào chỗ Nextcloud chứa file là /var/snap/nextcloud/common/nextcloud. Nhưng trước khi boot lại để mount filesystem đó vào đúng chỗ, bạn cần mount filesystem đó vào một chỗ tạm và dời các file đang có trong /var/snap/nextcloud/common/nextcloud vào filesystem đó.</p>
 
 
 
 <h4>Tạo vùng swap trong RAM</h4>
-<p>Nếu máy của bạn có ít hơn 4GB RAM hoặc có nhiều người dùng cloud server này thì sẽ có lúc server cần dùng vùng swap để phụ thêm cho RAM. Ở bước 8 phía trên, chương trình install đã tạo một vùng swap trong đĩa cứng. Đĩa cứng thì chạy chậm hơn RAM gần một trăm lần nên server sẽ rất chậm mỗi khi dùng đến vùng swap.
-<br>Có một cách để cải thiện đôi chút trong trường hợp này, đó là đổi vai trò của một phần RAM. Khi hệ điều hành Linux hoạt động, nó luôn luôn lấy một phần RAM để cache hệ thống file và folder trong đĩa cứng, chúng ta sẽ giảm bớt phần RAM dùng làm cache đó để lấy một ít RAM làm <i>swap nén</i>. Khi tạo swap nén rồi, lúc nào server cần swap nó sẽ nén <i>memory page</i> cần swap lại (khoảng 3 lần) và ghi vào vùng swap nén trong RAM nên sẽ nhanh hơn swap trong đĩa cứng rất nhiều.
+<p>Nếu máy của bạn có ít hơn bốn GB RAM hoặc có nhiều người dùng cloud server này thì sẽ có lúc server cần dùng vùng swap để phụ thêm cho RAM. Ở bước tám phía trên, chương trình install đã tạo một vùng swap trong đĩa cứng. Đĩa cứng thì chạy chậm hơn RAM gần một trăm lần nên server sẽ rất chậm mỗi khi dùng đến vùng swap.
+<br>Có một cách để cải thiện đôi chút trong trường hợp này, đó là đổi vai trò của một phần RAM. Khi hệ điều hành Linux hoạt động, nó luôn luôn lấy một phần RAM để cache hệ thống file và folder trong đĩa cứng, chúng ta sẽ giảm bớt phần RAM dùng làm cache đó để lấy một ít RAM làm <i>swap nén</i>. Khi tạo swap nén rồi, lúc nào server cần swap nó sẽ nén <i>memory page</i> cần swap lại (khoảng ba lần) và ghi vào vùng swap nén trong RAM nên sẽ nhanh hơn swap trong đĩa cứng rất nhiều.
 <br>Để tạo swap nén thì bạn <code>apt install zram-config</code> và điều chỉnh một số parameter của kernel Linux theo hướng dẫn ở <a href="https://haydenjames.io/linux-performance-almost-always-add-swap-part2-zram/" target='_blank'>link này</a>.
 <br>Nếu máy của bạn có quá ít RAM thì việc tạo vùng swap trong RAM cũng không loại trừ hết những lúc dùng đến vùng swap trong đĩa, máy vẫn chậm nhưng đỡ chậm hơn.</p>
 
@@ -502,7 +502,7 @@ fi
 Shutdown server bằng cách chạy lệnh <code>sudo init 0</code> ở console của server.
 
 <h3>Chi phí</h3>
-Chi phí sử dụng cloud storage server này chỉ gồm tiền điện server dùng 24/7. Máy laptop cỡ nhỏ chỉ tốn khoảng 15W-20W, mỗi ngày tốn khoảng 360Wh-480Wh, mỗi tháng tốn khoảng 10,8kWh-14,4kWh. Tính theo giá điện sinh hoạt bậc 6 là 3219,7₫/kWh thì mỗi tháng tốn khoảng 35K₫-46K₫.
+Chi phí sử dụng cloud storage server này chỉ gồm tiền điện server dùng 24/7. Máy laptop cỡ nhỏ chỉ tốn khoảng 15W-20W, mỗi ngày tốn khoảng 360Wh-480Wh, mỗi tháng tốn khoảng 10,8kWh-14,4kWh. Tính theo giá điện sinh hoạt bậc sáu là 3219,7₫/kWh thì mỗi tháng tốn khoảng 35K₫-46K₫.
 <br>Chú ý: máy desktop hao điện hơn máy laptop rất nhiều, có thể hao gấp 3-5 lần.
 
 <hr>
@@ -527,9 +527,10 @@ Nếu không tìm được một máy laptop cũ để làm cloud storage server
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   </div>
   <div class="even">Trang-web này được áp-dụng <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target='_blank'>Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
-  Bạn được phép chép lại trang-web này, với điều-kiện không được thay-đổi nội-dung và không dùng cho mục-đích thu-lợi và ghi rõ nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a>. Điều kiện trên cũng áp dụng với domain name trước đây của website này là LHBOI.NAME.VN.
+  Bạn được phép chép lại trang-web này, với điều-kiện không được thay-đổi nội-dung và không dùng cho mục-đích thu-lợi và ghi rõ nguồn-gốc <a href="https://lehboi.github.io">https://LeHBoi.github.io</a>. Điều kiện trên cũng áp dụng với domain name trước đây của website này là LHBOI.NAME.VN.
   </div>
 </div>
+
 <amp-analytics>
   <script type="application/json">
     {
@@ -558,6 +559,7 @@ Nếu không tìm được một máy laptop cũ để làm cloud storage server
   }
   </script>
 </amp-analytics>
+
 </main>
 </body>
 </html>

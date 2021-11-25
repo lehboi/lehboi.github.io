@@ -275,7 +275,7 @@ data-ad-slot="5275186684">
   <p id="chep">Các bạn có thể xem và chép <a href="https://docs.google.com/spreadsheets/d/1ZwOJE5qAzLFzQoZZci4XJGP0YN0JktclOYgJIAp6As8/edit?usp=sharing" target='_blank'>file mẫu ĐTDH</a> về tài khoản Google Drive của riêng bạn để dùng. Trong file mẫu ĐTDH này có ba ví dụ về ba cách tích luỹ: bảo hiểm nhân thọ, quỹ đầu tư, bất động sản.</p>
   <p>Mỗi khoản tích luỹ (mỗi hợp đồng bảo hiểm, mỗi tài khoản quỹ đầu tư, mỗi căn nhà, mỗi miếng đất…) được ghi thành một trang trong file ĐTDH. Cột A ghi ngày giao dịch, cột B ghi số tiền giao dịch (đưa tiền vào thì ghi số âm, rút tiền ra dùng thì ghi số dương). Ô B1 chứa kết quả của hàm XIRR, công thức trong ô này cần được bao gồm tất cả các dòng ghi giao dịch bên dưới. Ô A2 là ngày hôm nay (hàm today) hoặc ngày cuối cùng dùng hết khoản tích luỹ. Các giao dịch nên ghi theo thứ tự mới trên, cũ dưới.
   <br>Trang đầu tiên của file ĐTDH dùng để theo dõi tổng tài sản hàng năm; mỗi dòng trong trang này chứa tổng giá trị ngày cuối năm ở các trang sau.
-  <br>Mỗi ngày cuối năm, chúng ta thêm hai dòng vào dưới dòng 2 trong từng trang tài sản riêng, dòng dưới ghi giá trị của tài sản, dòng trên ghi giá trị đó với dấu trừ. Giá trị trong dòng dưới được cộng vào trang tổng tài sản.</p>
+  <br>Mỗi ngày cuối năm, chúng ta thêm hai dòng vào dưới dòng số hai trong từng trang tài sản riêng, dòng dưới ghi giá trị của tài sản, dòng trên ghi giá trị đó với dấu trừ. Giá trị trong dòng dưới được cộng vào trang tổng tài sản.</p>
   <p>Nếu cần tính hiệu quả đầu tư của một giai đoạn, ta cũng thêm vào hai dòng ngay trên dòng ghi ngày cuối giai đoạn cần tính. Cả hai dòng đều ghi ngày cuối giai đoạn, dòng dưới ghi giá trị tài khoản, dòng trên ghi giá trị tài khoản mang dấu trừ. Trong cột C ghi công thức XIRR cho giai đoạn cần tính. Hai dòng thêm vào cho phép tính kết quả từng giai đoạn mà không ảnh hưởng kết quả suốt quá trình tích luỹ. Xem dòng tô màu xanh lá trong file mẫu.</p>
 
 
@@ -290,15 +290,15 @@ data-ad-slot="5275186684">
   <h3>1.1. Bảo hiểm nhân thọ</h3>
   <p>Các giao dịch của một hợp đồng bảo hiểm nhân thọ:
   <ul>
-    <li>Đóng tiền (đóng phí định kỳ, trả khoản vay): khi đóng tiền thì ghi thêm một dòng vào dưới dòng 2 của trang của hợp đồng bảo hiểm, ghi ngày đóng tiền vào A3, số tiền (mang dấu trừ) vào B3.</li>
+    <li>Đóng tiền (đóng phí định kỳ, trả khoản vay): khi đóng tiền thì ghi thêm một dòng vào dưới dòng số hai của trang của hợp đồng bảo hiểm, ghi ngày đóng tiền vào A3, số tiền (mang dấu trừ) vào B3.</li>
     <li>Rút tiền (nhận phiếu tiền mặt, nhận bảo tức, vay từ hợp đồng, đáo hạn hợp đồng):
     <ul>
-      <li>nếu là lần rút tiền cuối cùng của hợp đồng thì sửa vào dòng 2</li>
-      <li>các trường hợp khác ghi thêm một dòng vào dưới dòng 2</li>
+      <li>nếu là lần rút tiền cuối cùng của hợp đồng thì sửa vào dòng số hai</li>
+      <li>các trường hợp khác ghi thêm một dòng vào dưới dòng số hai</li>
     </ul>
     ghi ngày rút tiền, số tiền.</li>
   </ul>
-  <p>Để kết quả XIRR trong ô B1 được đúng nhất, cần cập nhật ô B2 mỗi khi nhận được thông báo giá trị hợp đồng. Loại bảo hiểm nhân thọ truyền thống thì giá trị hợp đồng gồm giá trị hoàn lại, bảo tức tích luỹ, phiếu tiền mặt tích luỹ. Hợp đồng bảo hiểm nhân thọ truyền thống có lời rất trễ vì công ty bảo hiểm tốn nhiều chi phí trong 3 năm đầu.</p>
+  <p>Để kết quả XIRR trong ô B1 được đúng nhất, cần cập nhật ô B2 mỗi khi nhận được thông báo giá trị hợp đồng. Loại bảo hiểm nhân thọ truyền thống thì giá trị hợp đồng gồm giá trị hoàn lại, bảo tức tích luỹ, phiếu tiền mặt tích luỹ. Hợp đồng bảo hiểm nhân thọ truyền thống có lời rất trễ vì công ty bảo hiểm tốn nhiều chi phí trong ba năm đầu.</p>
   <p>Với loại bảo hiểm nhân thọ liên kết quỹ đầu tư thì chúng ta ghi theo kiểu quỹ đầu tư, không ghi kiểu bảo hiểm nhân thọ.</p>
 
 
@@ -307,18 +307,18 @@ data-ad-slot="5275186684">
   <p>Cột C của trang tính quỹ đầu tư dùng để ghi giá đơn vị quỹ. Khi chưa rút hết tiền từ tài khoản quỹ đầu tư thì ô C2 ghi giá mới nhất đơn vị quỹ, và ô B2 là công thức nhân số đơn vị quỹ với giá trong ô C2.
   <p>Các giao dịch của một tài khoản quỹ đầu tư:
   <ul>
-    <li>Mua đơn vị quỹ: thêm một dòng mới dưới dòng 2, ghi ngày nộp tiền vào ô A3, số tiền đã gửi vào quỹ (mang dấu trừ) vào B3, giá đơn vị quỹ vào C3, cập nhật số đơn vị quỹ vào công thức trong B2.</li>
-    <li>Bán đơn vị quỹ: thêm một dòng mới dưới dòng 2, cập nhật số đơn vị quỹ vào công thức trong B2, ghi ngày rút tiền vào ô A3, số tiền đã rút khỏi quỹ vào ô B3, giá đơn vị quỹ vào ô C2.</li>
+    <li>Mua đơn vị quỹ: thêm một dòng mới dưới dòng số hai, ghi ngày nộp tiền vào ô A3, số tiền đã gửi vào quỹ (mang dấu trừ) vào B3, giá đơn vị quỹ vào C3, cập nhật số đơn vị quỹ vào công thức trong B2.</li>
+    <li>Bán đơn vị quỹ: thêm một dòng mới dưới dòng số hai, cập nhật số đơn vị quỹ vào công thức trong B2, ghi ngày rút tiền vào ô A3, số tiền đã rút khỏi quỹ vào ô B3, giá đơn vị quỹ vào ô C2.</li>
   </ul>
   <p>Với tài khoản quỹ đầu tư có nhiều loại quỹ (hợp đồng bảo hiểm nhân thọ liên kết quỹ đầu tư có nhiều quỹ) cho phép chuyển quỹ dễ dàng thì ta có thể ghi chú loại quỹ của mỗi giao dịch trong cột C.
   <h3>1.3. Bất động sản</h3>
-  <p>Dòng 2 dùng để ghi giá trị sau cùng của bất động sản. Nếu ta vẫn còn nợ tiền mua bất động sản này thì giá trị B2 là giá thị trường của bất động sản trừ đi khoản nợ.
+  <p>Dòng số hai dùng để ghi giá trị sau cùng của bất động sản. Nếu ta vẫn còn nợ tiền mua bất động sản này thì giá trị B2 là giá thị trường của bất động sản trừ đi khoản nợ.
   <p>Các giao dịch liên quan:
   <ul>
-    <li>Chi tiền vào bất động sản trước khi nhận bàn giao (đặt cọc mua, trả tiền theo từng đợt) hoặc trong thời gian sở hữu nó (sửa nhà, nộp thuế…), thêm một dòng vào dưới dòng 2.</li>
-    <li>Khi bất động sản đem lại thu nhập, ví dụ như cho thuê, thì ghi thêm một dòng vào dưới dòng 2.</li>
-    <li>Khi giá trị của bất động sản thay đổi, ta thêm một dòng vào dưới dòng 2, ghi ngày cho dòng 3, chép giá trị từ B2 vào B3, cập nhật ô B2, sau đó thêm một dòng trên dòng 3 và ghi giá trị ngược với giá trị dòng 4.</li>
-    <li>Bán bất động sản: đợt nhận tiền sau cùng thì sửa vào dòng 2, các đợt trước đó thì thêm một dòng dưới dòng 2.
+    <li>Chi tiền vào bất động sản trước khi nhận bàn giao (đặt cọc mua, trả tiền theo từng đợt) hoặc trong thời gian sở hữu nó (sửa nhà, nộp thuế…), thêm một dòng vào dưới dòng số hai.</li>
+    <li>Khi bất động sản đem lại thu nhập, ví dụ như cho thuê, thì ghi thêm một dòng vào dưới dòng số hai.</li>
+    <li>Khi giá trị của bất động sản thay đổi, ta thêm một dòng vào dưới dòng số hai, ghi ngày cho dòng số ba, chép giá trị từ B2 vào B3, cập nhật ô B2, sau đó thêm một dòng trên dòng số ba và ghi giá trị ngược với giá trị dòng 4.</li>
+    <li>Bán bất động sản: đợt nhận tiền sau cùng thì sửa vào dòng số hai, các đợt trước đó thì thêm một dòng dưới dòng số hai.
   </ul>
   <p>Tương tự như quỹ đầu tư, ta cũng có thể tính hiệu quả sinh lời của bất động sản trong một giai đoạn bằng cách thêm hai dòng liên tiếp.</p>
 
@@ -345,7 +345,7 @@ data-ad-slot="5275186684">
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   </div>
   <div class="even">Trang-web này được áp-dụng <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target='_blank'>Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
-  Bạn được phép chép lại trang-web này, với điều-kiện không được thay-đổi nội-dung và không dùng cho mục-đích thu-lợi và ghi rõ nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a>. Điều kiện trên cũng áp dụng với domain name trước đây của website này là LHBOI.NAME.VN.
+  Bạn được phép chép lại trang-web này, với điều-kiện không được thay-đổi nội-dung và không dùng cho mục-đích thu-lợi và ghi rõ nguồn-gốc <a href="https://lehboi.github.io">https://LeHBoi.github.io</a>. Điều kiện trên cũng áp dụng với domain name trước đây của website này là LHBOI.NAME.VN.
   </div>
 </div>
 

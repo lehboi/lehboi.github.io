@@ -257,7 +257,7 @@ Phần dưới đây viết trong những năm 2006-2007.</p>
 </tr>
 </tbody>
 </table>
-<p>Các phần mềm trên được cắt gọt lại cho gọn để chạy tốt trên một máy Intel Pentium 100MHz với 64MByte RAM, đĩa cứng 5GB, 2 card mạng Ethernet, không có ổ đĩa mềm, ổ CD-ROM, bàn phím, chuột, VGA card và màn hình. Server này chỉ <a href="../linh-tinh/tieu-thu-dien">tốn</a> có 22W điện. <br />
+<p>Các phần mềm trên được cắt gọt lại cho gọn để chạy tốt trên một máy Intel Pentium 100 MHz với 64 MByte RAM, đĩa cứng 5 GB, hai card mạng Ethernet, không có ổ đĩa mềm, ổ CD-ROM, bàn phím, chuột, VGA card và màn hình. Server này chỉ <a href="../linh-tinh/tieu-thu-dien">tốn</a> có 22 W điện. <br />
 Hệ thống được nối mạng bằng một ADSL PPPoE bridge ZyXel và một modem voice V90 Acorp.</p>
 
 
@@ -297,19 +297,19 @@ Hệ thống được nối mạng bằng một ADSL PPPoE bridge ZyXel và mộ
 </tr>
 </tbody>
 </table>
-<p>Máy desktop được gắn card AGP 8x nVidia GeForce FX5500 có các đầu ra VGA, DVI, SVIDEO. Thêm một cái DVI-VGA adapter, tôi gắn 2 màn hình VGA vào máy desktop. Gắn thêm keyboard, mouse và audio USB vào, phần mềm <a href="https://userful.com/products/free-2-user-license" target="_blank">Desktop Multiplier</a> làm cho tôi và con gái có thể dùng máy cùng một lúc. Mỗi người có đủ một bộ màn hình, bàn phím, chuột, một người dùng loa, một người dùng headphone. Hai người cùng đọc web, xem TV, nghe nhạc, soạn tài liệu… vẫn còn dư sức cho CPU chạy BOINC. Trong máy Linux có thể chạy một máy ảo VMware là Windows. Hình chụp ở cuối trang.</p>
-<p>Linux nhìn thấy CPU Pentium 4 Hyperthread như 2 CPU, nếu có hai hay nhiều process cần dùng CPU mà CPU đang tạm thời không thể xử lý tiếp lệnh của process đang chạy (có nhiều lý do, ví dụ như gặp lệnh rẽ nhánh đến 1 đoạn code không có sẵn trong cache) thì nó sẽ đưa process khác vào làm. Thực ra thì 1 CPU hyperthread không thể làm nhiều việc như 2 CPU thật. Khi tôi chạy chương trình encode video gồm 4 process pipe với nhau; nhờ máy có nhiều RAM nên CPU không phải chờ đọc ghi đĩa, 4 process đó cần rất nhiều khả năng tính toán của CPU, trung bình có hơn 2,5 process chờ làm việc mà CPU chỉ bận rộn khoảng chừng 120-140%.</p>
+<p>Máy desktop được gắn card AGP 8x nVidia GeForce FX5500 có các đầu ra VGA, DVI, SVIDEO. Thêm một cái DVI-VGA adapter, tôi gắn hai màn hình VGA vào máy desktop. Gắn thêm keyboard, mouse và audio USB vào, phần mềm <a href="https://userful.com/products/free-2-user-license" target="_blank">Desktop Multiplier</a> làm cho tôi và con gái có thể dùng máy cùng một lúc. Mỗi người có đủ một bộ màn hình, bàn phím, chuột, một người dùng loa, một người dùng headphone. Hai người cùng đọc web, xem TV, nghe nhạc, soạn tài liệu… vẫn còn dư sức cho CPU chạy BOINC. Trong máy Linux có thể chạy một máy ảo VMware là Windows. Hình chụp ở cuối trang.</p>
+<p>Linux nhìn thấy CPU Pentium 4 Hyperthread như hai CPU, nếu có hai hay nhiều process cần dùng CPU mà CPU đang tạm thời không thể xử lý tiếp lệnh của process đang chạy (có nhiều lý do, ví dụ như gặp lệnh rẽ nhánh đến một đoạn code không có sẵn trong cache) thì nó sẽ đưa process khác vào làm. Thực ra thì một CPU hyperthread không thể làm nhiều việc như hai CPU thật. Khi tôi chạy chương trình encode video gồm bốn process pipe với nhau; nhờ máy có nhiều RAM nên CPU không phải chờ đọc ghi đĩa, bốn process đó cần rất nhiều khả năng tính toán của CPU, trung bình có hơn 2,5 process chờ làm việc mà CPU chỉ bận rộn khoảng chừng 120-140%.</p>
 <h3>Máy tính bận rộn suốt ngày</h3>
 <p>CPU Pentium không có khả năng tiết kiệm điện bằng cách tự <a href="nhiet-do">thay đổi tần số</a>. Như vậy, dù có việc làm hay đang ở không, nó cũng <a href="../linh-tinh/tieu-thu-dien">tốn điện</a> như nhau. Để khỏi phí lượng điện tốn cho server này, tôi cho nó chạy <a href="https://setiathome.berkeley.edu/" target='_blank'>SETI@home</a>. SETI@home là chương trình ít đòi hỏi nhất trong số các chương trình <a href="https://boinc.berkeley.edu/" target='_blank'>BOINC</a>. Máy server này không đủ sức chạy các chương trình BOINC khác. Bây giờ thì CPU của server này luôn luôn dùng hết khả năng của nó.</p>
 <p>Để tận dụng máy desktop, tôi cho nó chạy chương trình <a href="https://www.worldcommunitygrid.org/" target="_blank">FightAIDS@home</a> trong số các chương trình BOINC.</p>
 
 
 <h3>IPv6</h3>
-<p>Mạng gia đình của tôi dùng <a href="https://www.ipv6.org/" target="_blank">IPv6</a>. Gateway có 1 địa chỉ IPv6 và mạng gia đình có prefix 48 bit, tất cả đều là địa chỉ IPv6 global cố định được cấp (miễn phí) bởi <a href="https://www.freenet6.net/" target="_blank">Freenet6</a>. Nếu các bạn có truy xuất được vào mạng IPv6 global, xin mời thử đến <a href="https://lhboi.broker.freenet6.net/" target="_blank">server này</a>. Do tất cả đều là địa chỉ IPv6 global cố định nên nếu thích tôi có thể cho tất cả các máy trong mạng gia đình làm server, và bất kỳ máy IPv6 nào trong Internet cũng có thể liên lạc với bất kỳ máy nào trong mạng gia đình tôi. Việc liên lạc diễn ra qua tunnel của IPv6 trong IPv4 (dùng UDP port 3653), tunnel nối từ máy gateway của tôi đến 1 server của mạng Freenet6. Nếu router của ISP biết IPv6 thì dùng protocol IPv6 (41) để liên lạc thẳng. ISP Việt nam không mở protocol 41 trên firewall nên tôi dùng UDP port 3653. <br />
+<p>Mạng gia đình của tôi dùng <a href="https://www.ipv6.org/" target="_blank">IPv6</a>. Gateway có một địa chỉ IPv6 và mạng gia đình có prefix 48 bit, tất cả đều là địa chỉ IPv6 global cố định được cấp (miễn phí) bởi <a href="https://www.freenet6.net/" target="_blank">Freenet6</a>. Nếu các bạn có truy xuất được vào mạng IPv6 global, xin mời thử đến <a href="https://lhboi.broker.freenet6.net/" target="_blank">server này</a>. Do tất cả đều là địa chỉ IPv6 global cố định nên nếu thích tôi có thể cho tất cả các máy trong mạng gia đình làm server, và bất kỳ máy IPv6 nào trong Internet cũng có thể liên lạc với bất kỳ máy nào trong mạng gia đình tôi. Việc liên lạc diễn ra qua tunnel của IPv6 trong IPv4 (dùng UDP port 3653), tunnel nối từ máy gateway của tôi đến 1 server của mạng Freenet6. Nếu router của ISP biết IPv6 thì dùng protocol IPv6 (41) để liên lạc thẳng. ISP Việt nam không mở protocol 41 trên firewall nên tôi dùng UDP port 3653. <br />
 Mạng có prefix 48 bit có 2⁸⁰ (hơn 1,2*10²⁴) địa chỉ. Nó được chia thành 65.536 mạng có prefix 64 bit, mỗi mạng có 2⁶⁴ (hơn 18*10¹⁸) địa chỉ. Một mình tôi làm gì cho hết số địa chỉ này! <br />
 Tôi đang chuyển hết các hoạt động trong mạng gia đình sang IPv6: web proxy Apache và ssh chạy tốt với IPv6, time server ntpd được dịch lại để chạy được trên IPv6. Bên trong mạng gia đình chỉ có IPv6, giữa mạng gia đình và Internet thì có IPv4 và IPv6 chui trong IPv4. Tôi tin rằng đây là mạng IPv6 đầu tiên thật sự hoạt động ở Việt Nam.</p>
 <h2>Các thứ đồ chơi khác</h2>
-<p>Tôi dùng cable USB-to-serial để nối điện thoại Siemens CF62 với máy desktop, và máy desktop thấy máy điện thoại như là 1 modem cắm vào ngõ serial. Tôi viết 1 script để đồng bộ giờ trong máy điện thoại với giờ của máy desktop, và ghi các địa chỉ trong Evolution vào máy ĐT. Script đó gọi <em>chat</em> để gửi các lệnh AT xuống máy điện thoại.</p>
+<p>Tôi dùng cable USB-to-serial để nối điện thoại Siemens CF62 với máy desktop, và máy desktop thấy máy điện thoại như là một modem cắm vào ngõ serial. Tôi viết một script để đồng bộ giờ trong máy điện thoại với giờ của máy desktop, và ghi các địa chỉ trong Evolution vào máy ĐT. Script đó gọi <em>chat</em> để gửi các lệnh AT xuống máy điện thoại.</p>
 <p>Viettel đã cung cấp dịch vụ GPRS, máy Siemens CF62 có thể xem được các trang web html và wml.</p>
 <p>Trong máy desktop có gắn card TV Bt878. Tôi thử dùng <a href="https://sector17.tvand.net/cabletv/" target="_blank">CableTV</a> và <a href="https://cube.dyndns.org/~rsnel/cc2y4m/" target="_blank">cc2y4m</a> để xem HTVC nhưng không được.</p>
 <p>Đây là hình chụp những thứ kể trên. Ở giữa trên cao là máy nhạc Kenwood màu đen, âm thanh của máy tính phát qua máy này. Phía trên bên phải là máy in và scan <a href="../linh-tinh/anh">Epson CX1500</a>. Máy server nằm ở ngăn dưới và quay ngang ra (để dễ cắm dây). Máy desktop nằm bên phải, cũng quay ngang ra. Hai màn hình cùng gắn vào máy desktop, màn hình bên trái đang hiện Windows XP trong VMware, màn hình bên phải là X Window được quay 90° để hợp với khổ giấy dọc, rất tiện khi đọc web hay soạn tài liệu. MS Windows đâu dễ gì làm được như vậy!</p>
@@ -334,9 +334,10 @@ Tôi đang chuyển hết các hoạt động trong mạng gia đình sang IPv6:
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   </div>
   <div class="even">Trang-web này được áp-dụng <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target='_blank'>Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
-  Bạn được phép chép lại trang-web này, với điều-kiện không được thay-đổi nội-dung và không dùng cho mục-đích thu-lợi và ghi rõ nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a>. Điều kiện trên cũng áp dụng với domain name trước đây của website này là LHBOI.NAME.VN.
+  Bạn được phép chép lại trang-web này, với điều-kiện không được thay-đổi nội-dung và không dùng cho mục-đích thu-lợi và ghi rõ nguồn-gốc <a href="https://lehboi.github.io">https://LeHBoi.github.io</a>. Điều kiện trên cũng áp dụng với domain name trước đây của website này là LHBOI.NAME.VN.
   </div>
 </div>
+
 <amp-analytics>
   <script type="application/json">
     {
@@ -365,6 +366,7 @@ Tôi đang chuyển hết các hoạt động trong mạng gia đình sang IPv6:
   }
   </script>
 </amp-analytics>
+
 </main>
 </body>
 </html>

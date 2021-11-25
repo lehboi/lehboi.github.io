@@ -235,10 +235,10 @@ data-ad-slot="5275186684">
   <tbody>
   <tr>
     <td><h3><a name="TOC-Unicode-l-g-"></a>Unicode là gì?</h3>
-    <blockquote>Unicode là bộ chữ được thiết kế để chứa hết tất cả các chữ cái của tất cả các ngôn ngữ trên thế giới và còn chứa thêm những ký hiệu như ký hiệu toán, nhạc, kỹ thuật, chữ nổi… Theo thiết kế thì mỗi chữ cái trong Unicode được thể hiện bằng 32 bit, như vậy người ta có thể vẽ ra hơn 4 tỉ chữ cái và các ký hiệu. Hiện nay Unicode mới chỉ dùng có 3 khối 16-bit đầu tiên, tức là mới vẽ ra có chừng 190.000 chữ cái và ký hiệu, trong đó phần lớn là các chữ Hoa, Nhật, Hàn. Nhưng chỉ có 16 bit đầu tiên là thông dụng nhất, gọi là Unicode 16-bit.</blockquote>
+    <blockquote>Unicode là bộ chữ được thiết kế để chứa hết tất cả các chữ cái của tất cả các ngôn ngữ trên thế giới và còn chứa thêm những ký hiệu như ký hiệu toán, nhạc, kỹ thuật, chữ nổi… Theo thiết kế thì mỗi chữ cái trong Unicode được thể hiện bằng 32 bit, như vậy người ta có thể vẽ ra hơn bốn tỉ chữ cái và các ký hiệu. Hiện nay Unicode mới chỉ dùng có ba khối 16-bit đầu tiên, tức là mới vẽ ra có chừng 190.000 chữ cái và ký hiệu, trong đó phần lớn là các chữ Hoa, Nhật, Hàn. Nhưng chỉ có 16 bit đầu tiên là thông dụng nhất, gọi là Unicode 16-bit.</blockquote>
     <h3><a name="TOC-C-c-c-ch-th-hi-n-c-a-Unicode-trong-m-y-t-nh"></a>▲ Các cách thể hiện của Unicode trong máy tính</h3>
-    <blockquote>Với Unicode 16-bit các phần mềm mới xử lý được Unicode sẽ ghi mỗi chữ cái như là 16 bit, đó là dạng UCS2 tức là Unicode 2 byte. Một số các phần mềm khác cũng xử lý được Unicode nhưng để tương thích với những chữ cái 8-bit hồi xưa nên ghi chữ cái theo dạng UTF-8 (mỗi chữ 16-bit được đổi thành một dãy từ 1 tới 3 byte 8-bit liền nhau, phần lớn các nguyên âm Việt mang dấu thanh đều được ghi thành 3 byte trong UTF-8).
-    <br>Để ghi chữ cái 32-bit thì máy tính dùng UCS4 hoặc là UTF-16 (một chữ 32-bit được ghi thành một dãy vài chữ 16-bit, UCS2 là tập hợp con của UTF-16) hoặc là UTF-8 (mỗi chữ 32-bit được đổi thành một dãy từ 1 tới 6 byte 8-bit liền nhau). Hiện nay UTF-8 là thông dụng nhất trên Internet.
+    <blockquote>Với Unicode 16-bit các phần mềm mới xử lý được Unicode sẽ ghi mỗi chữ cái như là 16 bit, đó là dạng UCS2 tức là Unicode hai byte. Một số các phần mềm khác cũng xử lý được Unicode nhưng để tương thích với những chữ cái 8-bit hồi xưa nên ghi chữ cái theo dạng UTF-8 (mỗi chữ 16-bit được đổi thành một dãy từ một tới ba byte 8-bit liền nhau, phần lớn các nguyên âm Việt mang dấu thanh đều được ghi thành ba byte trong UTF-8).
+    <br>Để ghi chữ cái 32-bit thì máy tính dùng UCS4 hoặc là UTF-16 (một chữ 32-bit được ghi thành một dãy vài chữ 16-bit, UCS2 là tập hợp con của UTF-16) hoặc là UTF-8 (mỗi chữ 32-bit được đổi thành một dãy từ một tới sáu byte 8-bit liền nhau). Hiện nay UTF-8 là thông dụng nhất trên Internet.
     <br>Một ví dụ của UCS2 là chữ Việt trong tin nhắn SMS của điện thoại di động, khi ta soạn SMS với chữ Việt có dấu thì mỗi tin nhắn chỉ viết được chừng 70 chữ cái thay vì 160 chữ cái nếu ghi chữ Việt không dấu; dù gửi SMS với đủ dấu hơi tốn tiền nhưng dễ đọc hơn nhiều.</blockquote>
     </td>
   </tr>
@@ -246,7 +246,7 @@ data-ad-slot="5275186684">
   </table>
   Bây giờ, Unicode đã phổ biến rồi nhưng cũng còn hiện tượng <em>nhiều kiểu chữ Việt Unicode</em>! Sao? Đã là Uni (nghĩa là duy nhất, hợp nhất) rồi mà còn nhiều Uni nữa là sao?
   <br>Đúng vậy, thật sự là đang có nhiều thứ chữ Việt <strong>được gọi là</strong> Unicode trong các server Internet; được gọi là Unicode nhưng không thật sự là Unicode.
-  <p><u>Kiểu Unicode giả thứ nhất</u> là do sự lầm lẫn giữa Unicode với hai bộ chữ (character set) của Microsoft cũng có khả năng thể hiện chữ Việt. Đó là bộ chữ Windows-1252 và Windows-1258. Đây là hai bộ chữ 8-bit (tức là mỗi chữ cái được ghi trong máy tính với 8 bit). Microsoft soạn ra bộ chữ Windows-1252 dành cho các chữ viết của các ngôn ngữ Tây Âu, và bộ chữ Windows-1258 dành cho chữ Việt.</p>
+  <p><u>Kiểu Unicode giả thứ nhất</u> là do sự lầm lẫn giữa Unicode với hai bộ chữ (character set) của Microsoft cũng có khả năng thể hiện chữ Việt. Đó là bộ chữ Windows-1252 và Windows-1258. Đây là hai bộ chữ 8-bit (tức là mỗi chữ cái được ghi trong máy tính với tám bit). Microsoft soạn ra bộ chữ Windows-1252 dành cho các chữ viết của các ngôn ngữ Tây Âu, và bộ chữ Windows-1258 dành cho chữ Việt.</p>
 
 
 
@@ -284,19 +284,19 @@ data-ad-slot="5275186684">
   <br>Thậm chí một số web browser đặc biệt cũng không đọc được kiểu HTML entities trong các trang web chữ Việt theo Windows-1252 hay Windows-1258. Đó là những micro browser trong các máy điện thoại di động, do khả năng giới hạn nên nó chỉ đọc được đúng một loại Unicode. Như vậy những trang web chữ Việt theo Windows-1252 hay Windows-1258 sẽ <strong>không được xem trên các máy di động</strong>.</blockquote>
   Nhân nói về web browser và điện thoại di động, ta cũng nhắc đến một kiểu thể hiện chữ Việt trong Internet nữa là chữ Việt không dấu. Mặc dù phần lớn các máy điện thoại di động được bán ra trong những năm gần đây trên thị trường Việt Nam đều hiện được chữ Việt Unicode, nhưng hầu hết các trang wml ở Việt Nam đều được viết dưới dạng chữ Việt không dấu, rất khó coi.
   <p>▲Các bạn sẽ hỏi làm sao server biết được điện thoại nào có chữ Việt để gửi ra đủ dấu?</p>
-  <blockquote>Có đấy. Khi micro browser trong máy điện thoại gửi yêu cầu xem 1 trang đến server nó cũng cho server biết luôn là nó muốn xem ngôn ngữ gì theo bộ chữ nào, đó là các Header. Ví dụ: Accept-Language: vi, Accept-Charset: UTF-8. Nếu server làm việc đúng cách nó phải xem các Header để biết khi nào nên gửi chữ Việt cho máy điện thoại.</blockquote>
+  <blockquote>Có đấy. Khi micro browser trong máy điện thoại gửi yêu cầu xem một trang đến server nó cũng cho server biết luôn là nó muốn xem ngôn ngữ gì theo bộ chữ nào, đó là các Header. Ví dụ: Accept-Language: vi, Accept-Charset: UTF-8. Nếu server làm việc đúng cách nó phải xem các Header để biết khi nào nên gửi chữ Việt cho máy điện thoại.</blockquote>
   <table border="1">
   <tbody>
   <tr>
     <td><h3><a name="TOC-Tr-c-khi-c-Unicode-th-ch-c-th-hi-n-nh-th-n-o-trong-m-y-t-nh-"></a>▲Trước khi có Unicode thì chữ được thể hiện như thế nào trong máy tính?</h3>
-    <blockquote>Trước khi điện tín được số hoá thì người ta dùng bộ mã Morse để truyền điện tín. Trong bộ mã Morse, mỗi chữ cái hoặc số được thể hiện bằng 1 cho tới 5 tín hiệu ngắn và dài. Tín hiệu ngắn được ghi dưới dạng một dấu chấm và được truyền đi bằng một xung điện ngắn, tín hiệu dài được ghi dưới dạng một gạch ngang và được truyền đi bằng một xung điện dài. Bộ mã Morse cũng được dùng để truyền tin qua các phương tiện khác như còi, đèn chớp. Một thông báo nổi tiếng thể hiện qua bộ mã Morse là ··· --- ···, nghĩa là SOS.
-    <br>Khi mới bắt đầu số hoá điện tín (chưa có máy tính) thì người ta chỉ dùng có 5 bit để thể hiện một chữ cái (bộ chữ Baudot, theo tên nhà phát minh người Pháp Jean-Maurice-Émile Baudot). 5 bit đủ để thể hiện 26 chữ in hoa. Còn các chữ số từ 0 đến 9 thì sao? Để thể hiện thêm các chữ số và các dấu ngắt câu, bộ chữ Baudot có cơ chế dời (Shift), khi dời thì chữ cái được thay bằng chữ số, dấu ngắt câu (tương tự như phím Shift trên bàn phím hiện nay). Như vậy với 5 bit và dời thì bộ chữ Baudot thể hiện được 55 chữ và ký hiệu. Tại sao phải làm theo kiểu dời cho phiền mà không dùng luôn 6 bit? Vì lúc đó (thế kỷ 19) bàn phím để nhập điện tín là bàn phím cơ có 5 phím để ấn bằng 5 ngón tay của 1 bàn tay, việc chế tạo bàn phím sinh ra 6 bit phức tạp hơn nhiều.
-    <br>Đến thập kỷ 50 của thế kỷ 20, máy tính đã được đưa vào sử dụng làm phát sinh nhu cầu có một bộ chữ <i>đầy đủ</i> hơn bộ chữ Baudot. Cơ quan chuẩn hoá của Mỹ đề ra bộ chữ ASCII 7-bit chứa chữ Latin in hoa, chữ in thường. Tại sao lại là 7 bit mà không dùng luôn 8 bit của 1 byte? Tại vì đối với Anh ngữ thì 7 bit đã đủ rồi và người ta muốn tiết kiệm, để bit cuối cùng dùng làm parity bit, để kiểm tra xem thông tin trong byte này có đúng không hay đã bị sai khi truyền từ môi trường này qua môi trường khác.
+    <blockquote>Trước khi điện tín được số hoá thì người ta dùng bộ mã Morse để truyền điện tín. Trong bộ mã Morse, mỗi chữ cái hoặc số được thể hiện bằng một cho tới năm tín hiệu ngắn và dài. Tín hiệu ngắn được ghi dưới dạng một dấu chấm và được truyền đi bằng một xung điện ngắn, tín hiệu dài được ghi dưới dạng một gạch ngang và được truyền đi bằng một xung điện dài. Bộ mã Morse cũng được dùng để truyền tin qua các phương tiện khác như còi, đèn chớp. Một thông báo nổi tiếng thể hiện qua bộ mã Morse là ··· --- ···, nghĩa là SOS.
+    <br>Khi mới bắt đầu số hoá điện tín (chưa có máy tính) thì người ta chỉ dùng có năm bit để thể hiện một chữ cái (bộ chữ Baudot, theo tên nhà phát minh người Pháp Jean-Maurice-Émile Baudot). Năm bit đủ để thể hiện 26 chữ in hoa. Còn các chữ số từ zero đến chín thì sao? Để thể hiện thêm các chữ số và các dấu ngắt câu, bộ chữ Baudot có cơ chế dời (Shift), khi dời thì chữ cái được thay bằng chữ số, dấu ngắt câu (tương tự như phím Shift trên bàn phím hiện nay). Như vậy với năm bit và dời thì bộ chữ Baudot thể hiện được 55 chữ và ký hiệu. Tại sao phải làm theo kiểu dời cho phiền mà không dùng luôn sáu bit? Vì lúc đó (thế kỷ 19) bàn phím để nhập điện tín là bàn phím cơ có năm phím để ấn bằng năm ngón tay của một bàn tay, việc chế tạo bàn phím sinh ra sáu bit phức tạp hơn nhiều.
+    <br>Đến thập kỷ 50 của thế kỷ 20, máy tính đã được đưa vào sử dụng làm phát sinh nhu cầu có một bộ chữ <i>đầy đủ</i> hơn bộ chữ Baudot. Cơ quan chuẩn hoá của Mỹ đề ra bộ chữ ASCII 7-bit chứa chữ Latin in hoa, chữ in thường. Tại sao lại là bảy bit mà không dùng luôn tám bit của một byte? Tại vì đối với Anh ngữ thì bảy bit đã đủ rồi và người ta muốn tiết kiệm, để bit cuối cùng dùng làm parity bit, để kiểm tra xem thông tin trong byte này có đúng không hay đã bị sai khi truyền từ môi trường này qua môi trường khác.
     <br>ASCII là bộ chữ chuẩn của Mỹ, nhưng vào thời gian đó hãng IBM lại không dùng ASCII mà dùng bộ chữ 8-bit riêng là EBCDIC. Đó là một cách để ràng buộc khách hàng của IBM, đã lỡ chứa dữ liệu theo dạng EBCDIC rồi thì cứ phải tiếp tục dùng phần cứng và phần mềm của IBM để xử lý.
     <br>Khi máy tính được bán đến những nước khác nước Mỹ, bộ chữ ASCII 7-bit được mở rộng lên thành 8-bit để thêm các chữ cái Latin của các nước châu Âu. Trong khi đó IBM phải chế thêm các biến thể của EBCDIC, có tới 57 bộ EBCDIC cho các nước khác nhau! Tổ chức tiêu chuẩn quốc tế đặt ra tiêu chuẩn ISO 2022 để quy định cách chế ra các bộ chữ 7-bit và 8-bit khác, và cách chuyển từ bộ chữ này sang bộ chữ khác (trong trường hợp cần dùng nhiều bộ chữ trong một tài liệu). Từ đó các bộ chữ ISO 8859 được chế ra cho các chữ cái Latin, Hy lạp, Do thái, Ả rập, và Đông Âu. Ngoài ra các hãng phần mềm cũng liên tục đặt ra các bộ chữ theo nhu cầu của họ, ví dụ như Windows-1252 của Microsoft. 
     <<br>Còn các chữ Hoa, Nhật, Hàn thì sao? Thời gian đầu, Nhật dùng <strong>một</strong> bộ chữ 8-bit, trong đó một nửa là chữ Latin, một nửa là chữ katakana. Sau đó, Nhật soạn ra các bộ chữ 8-bit theo chuẩn ISO 2022 để chứa hết hàng ngàn chữ kanji của họ. Đó là các bộ chữ JIS. Tương tự, ở Trung quốc và Hàn quốc cũng có các bộ chữ theo tiêu chuẩn ISO 2022 của riêng mỗi nước. 
-    <br>Cuối cùng là chữ Việt! So với tiếng Anh, tiếng Việt có thêm 6 nguyên âm và 1 phụ âm và có tới 6 thanh. Tất cả những thanh và nguyên âm tổ hợp lại sinh ra thêm 134 ký tự. Và như vậy là không thể đặt một bộ chữ Việt 8-bit theo đúng chuẩn ISO 2022 (mà cần tới 2 bộ chữ 8-bit). Tuy nhiên, người Việt lại ít có phần mềm viết riêng để xử lý một bộ chữ ISO 2022 riêng giống như các nước Hoa, Nhật, Hàn. Do phải dùng đỡ các phần mềm chuyên xử lý các bộ chữ 8-bit của Mỹ và Tây Âu, nên người Việt phải cố ép tất cả chữ Việt vào một bộ chữ 8-bit, thế là không theo chuẩn ISO 2022. Và vì không có bộ nào đúng theo chuẩn nên không ai chịu nhường ai, mỗi nơi chế ra một bộ chữ Việt. Cuối cùng cũng có một bộ chữ TCVN theo chuẩn ISO 2022, nhưng vì thiếu phần mềm xử lý nên không đưa vào thực tế được.
-    <br>Có một cách để làm một bộ chữ Việt 8-bit, Microsoft đã dùng để làm bộ chữ Windows-1258, đó là cách để dấu thanh và nguyên âm là 2 ký tự riêng, khi vẽ ra màn hình hay giấy in thì đặt dấu trùng lên vị trí của nguyên âm. Nhưng cách này chỉ thực hiện được trên các phần mềm có giao diện đồ hoạ gần đây thôi, không thể thực hiện được trên các phần mềm của 10 năm về trước. 
+    <br>Cuối cùng là chữ Việt! So với tiếng Anh, tiếng Việt có thêm sáu nguyên âm và một phụ âm và có tới sáu thanh. Tất cả những thanh và nguyên âm tổ hợp lại sinh ra thêm 134 ký tự. Và như vậy là không thể đặt một bộ chữ Việt 8-bit theo đúng chuẩn ISO 2022 (mà cần tới hai bộ chữ 8-bit). Tuy nhiên, người Việt lại ít có phần mềm viết riêng để xử lý một bộ chữ ISO 2022 riêng giống như các nước Hoa, Nhật, Hàn. Do phải dùng đỡ các phần mềm chuyên xử lý các bộ chữ 8-bit của Mỹ và Tây Âu, nên người Việt phải cố ép tất cả chữ Việt vào một bộ chữ 8-bit, thế là không theo chuẩn ISO 2022. Và vì không có bộ nào đúng theo chuẩn nên không ai chịu nhường ai, mỗi nơi chế ra một bộ chữ Việt. Cuối cùng cũng có một bộ chữ TCVN theo chuẩn ISO 2022, nhưng vì thiếu phần mềm xử lý nên không đưa vào thực tế được.
+    <br>Có một cách để làm một bộ chữ Việt 8-bit, Microsoft đã dùng để làm bộ chữ Windows-1258, đó là cách để dấu thanh và nguyên âm là hai ký tự riêng, khi vẽ ra màn hình hay giấy in thì đặt dấu trùng lên vị trí của nguyên âm. Nhưng cách này chỉ thực hiện được trên các phần mềm có giao diện đồ hoạ gần đây thôi, không thể thực hiện được trên các phần mềm của mười năm về trước. 
     <br>Thế giới máy tính trước khi có Unicode thật là rối rắm phải không?</blockquote>
     </td>
   </tr>
@@ -308,13 +308,13 @@ data-ad-slot="5275186684">
   <h4><a name="TOC-L-i-vi-t-sai-c-c-k-hi-u-superscript-v-subscript"></a>Lỗi viết sai các ký hiệu superscript và subscript</h4>
   <p>Các ký hiệu phải viết kiểu superscript và subscript như độ, mét vuông, mét khối rất thường gặp nhưng cũng rất thường bị viết một cách <strong>cẩu thả</strong> như:</p>
   <ul>
-    <li>29oC hay 29OC thay vì <em>29<sup>o</sup>C</em>, hay <em>29°C</em></li>
+    <li>29oC hay 29OC thay vì <em>29 <sup>o</sup>C</em>, hay <em>29 °C</em></li>
     <li>quay 180O thay vì quay <em>180<sup>o</sup></em> hay <em>180°</em></li>
-    <li>4m2 thay vì <em>4m<sup>2</sup></em> hay <em>4m²</em>, 5 triệu đồng/m2 thay vì 5 triệu đồng/m²</li>
-    <li>12m3 thay vì <em>12m³</em></li>
+    <li>14m2 thay vì <em>14 m<sup>2</sup></em> hay <em>14 m²</em>, 15 triệu đồng/m2 thay vì 15 triệu đồng/m²</li>
+    <li>12m3 thay vì <em>12 m³</em></li>
     <li>H2O thay vì <em>H<sub>2</sub>O</em> hay <em>H₂O</em></li>
   </ul>
-  Đối với những người không chuyên soạn tài liệu trên máy tính sẽ không biết cách trình bày những ký hiệu đó cho đúng cách. Khi đó cách tốt nhất là ghi ra thành chữ thay vì ghi ký hiệu. Ví dụ như 29 độ C, quay 180 độ, 4 mét vuông, 12 mét khối. Tuy nhiên đã viết ra chữ thì phải viết đủ chứ không nên viết kiểu 4 m vuông.
+  Đối với những người không chuyên soạn tài liệu trên máy tính sẽ không biết cách trình bày những ký hiệu đó cho đúng cách. Khi đó cách tốt nhất là ghi ra thành chữ thay vì ghi ký hiệu. Ví dụ như 29 độ C, quay 180 độ, 14 mét vuông, 12 mét khối. Tuy nhiên đã viết ra chữ thì phải viết đủ chứ không nên viết kiểu 14 m vuông.
   <br>Đối với những nơi chuyên nghiệp như các báo mà cũng viết sai thì thật là đáng chê.
   <br>Có hai cách ghi đúng những ký hiệu đó. Cách thứ nhất là dùng lệnh định dạng chữ cao (superscript) hay chữ thấp (subscript). Cách thứ hai là dùng các ký hiệu có sẵn trong bộ chữ Unicode, viết theo cách này đẹp hơn.
   <div class="right">Bài này được đăng trong e-CHIP số Tháng Sáu, 2007.</div>
@@ -332,9 +332,10 @@ data-ad-slot="5275186684">
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   </div>
   <div class="even">Trang-web này được áp-dụng <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target='_blank'>Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
-  Bạn được phép chép lại trang-web này, với điều-kiện không được thay-đổi nội-dung và không dùng cho mục-đích thu-lợi và ghi rõ nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a>. Điều kiện trên cũng áp dụng với domain name trước đây của website này là LHBOI.NAME.VN.
+  Bạn được phép chép lại trang-web này, với điều-kiện không được thay-đổi nội-dung và không dùng cho mục-đích thu-lợi và ghi rõ nguồn-gốc <a href="https://lehboi.github.io">https://LeHBoi.github.io</a>. Điều kiện trên cũng áp dụng với domain name trước đây của website này là LHBOI.NAME.VN.
   </div>
 </div>
+
 <amp-analytics>
   <script type="application/json">
     {
@@ -363,6 +364,7 @@ data-ad-slot="5275186684">
   }
   </script>
 </amp-analytics>
+
 </main>
 </body>
 </html>

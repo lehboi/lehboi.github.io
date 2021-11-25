@@ -239,19 +239,19 @@ data-ad-slot="5275186684">
   </tbody>
   </table>
   <h2><a name="TOC-Unicode"></a>Unicode</h2>
-  <p>Unicode hay ISO 10646 là bộ chữ nhiều byte. Mỗi character chiếm 2 hoặc 4 byte. Hiện nay chỉ mới dùng bộ chữ 2 byte.
-  <br>Bộ chữ 2 byte có thể chứa được 65536 ký tự. Unicode hiện chứa ký tự của hầu hết các ngôn ngữ trên thế giới (Anh, Pháp, Hoa, Nhật, Hàn, Thái, Lào, Hebrew, Arab, Hy lạp…) và các ký hiệu tiền, toán học, ký tự vẽ khung… Chữ Nôm trước kia của Việt Nam cũng được đăng ký trong Unicode.
-  <br>Trong bảng Unicode, mỗi vị trí mang một hình chữ (glyph) khác nhau. Mỗi hình chữ có thể dùng trong nhiều ngôn ngữ khác nhau, nhưng dù cho dùng trong một hay nhiều ngôn ngữ nó cũng chỉ được chiếm 1 vị trí trong bảng Unicode.</p>
+  <p>Unicode hay ISO 10646 là bộ chữ nhiều byte. Mỗi character chiếm hai hoặc bốn byte. Hiện nay chỉ mới dùng bộ chữ hai byte.
+  <br>Bộ chữ hai byte có thể chứa được 65536 ký tự. Unicode hiện chứa ký tự của hầu hết các ngôn ngữ trên thế giới (Anh, Pháp, Hoa, Nhật, Hàn, Thái, Lào, Hebrew, Arab, Hy lạp…) và các ký hiệu tiền, toán học, ký tự vẽ khung… Chữ Nôm trước kia của Việt Nam cũng được đăng ký trong Unicode.
+  <br>Trong bảng Unicode, mỗi vị trí mang một hình chữ (glyph) khác nhau. Mỗi hình chữ có thể dùng trong nhiều ngôn ngữ khác nhau, nhưng dù cho dùng trong một hay nhiều ngôn ngữ nó cũng chỉ được chiếm một vị trí trong bảng Unicode.</p>
   <h2><a name="TOC-Ch-Vi-t"></a>Chữ Việt</h2>
-  <p>Chữ Việt hiện nay đã được đăng ký trong Unicode từ năm 1993. Chữ Việt trong Unicode không mang những vị trí liên tục nhau mà nằm rải ra 4 đoạn vì một số chữ cái Việt Nam giống chữ các nước khác dùng và họ đã đăng ký chỗ trong Unicode trước.
-  <br>Chữ Việt đăng ký trong Unicode theo 2 cách:</p>
-  <h3><a name="TOC-Ch-r-i"></a>Chữ tổ hợp (dạng chính tắc)</h3>
-  <p>Mỗi dấu thanh là một ký tự riêng. Nguyên âm mang dấu thanh được thể hiện bằng 1 ký tự nguyên âm và 1 ký tự dấu thanh. (Nên nhớ là trong Unicode mỗi ký tự gồm 2 byte).
+  <p>Chữ Việt hiện nay đã được đăng ký trong Unicode từ năm 1993. Chữ Việt trong Unicode không mang những vị trí liên tục nhau mà nằm rải ra bốn đoạn vì một số chữ cái Việt Nam giống chữ các nước khác dùng và họ đã đăng ký chỗ trong Unicode trước.
+  <br>Chữ Việt đăng ký trong Unicode theo hai cách:</p>
+  <h3><a name="TOC-Ch-r-i"></a>Chữ tổ hợp (dạng chính tắc)</h3>
+  <p>Mỗi dấu thanh là một ký tự riêng. Nguyên âm mang dấu thanh được thể hiện bằng một ký tự nguyên âm và một ký tự dấu thanh. (Nên nhớ là trong Unicode mỗi ký tự gồm hai byte).
   <br>Các nguyên âm gồm a, ă, â, e, ê, i, o, ô, ơ, u, ư, y.
   <br>Các dấu thanh gồm huyền, hỏi, ngã, sắc, nặng (theo thứ tự từ điển).
-  <br>Khi sửa dòng chữ tổ hợp kiểu này, chúng ta có thể sửa/xoá riêng nguyên âm và dấu thanh.</p>
+  <br>Khi sửa dòng chữ tổ hợp kiểu này, chúng ta có thể sửa/xoá riêng nguyên âm và dấu thanh.</p>
   <h3><a name="TOC-Ch-d-ng-s-n"></a>Chữ dựng sẵn</h3>
-  <p>Những nguyên âm mang dấu thanh sẽ chiếm 1 vị trí riêng trong bảng Unicode.
+  <p>Những nguyên âm mang dấu thanh sẽ chiếm một vị trí riêng trong bảng Unicode.
   <br>Khi sửa dòng chữ dựng sẵn kiểu này, chúng ta sửa/xoá nguyên âm và dấu thanh cùng lúc.
   <br>Font chữ ABC theo TCVN kiểu dựng sẵn.</p>
 
@@ -269,7 +269,7 @@ data-ad-slot="5275186684">
   <br>Nếu soạn một tài liệu mà không dùng Unicode, thì ta phải cho biết tài liệu đó dùng bộ chữ nào. Nếu dùng không đúng bộ chữ sẽ thấy những hình kỳ lạ. Ví dụ chép một file Word soạn bằng font Arial Tây Âu vào máy tính cài font Arial Đông Âu, mở file lên xem thì không ai đọc nổi mặc dù mọi chữ đều hiện ra.
   <br>Từ đó dẫn đến vấn đề đặt tên font riêng cho từng bộ chữ. Ví dụ .vnarial, .vntime, VNI-Times… Và một tài liệu có nhiều thứ chữ phải dùng nhiều font.
   <br>Nếu soạn file bằng Unicode thì sao?
-  <br>Mỗi hình chữ trong Unicode có một vị trí riêng nên không có tình trạng cùng một ký tự có thể hiện ra theo những hình khác nhau. Dùng Unicode ta có thể soạn 1 văn bản chứa chữ thuộc nhiều ngôn ngữ khác nhau mà chỉ dùng 1 font (miễn là trong file font có hình chữ của ngôn ngữ đó). Nếu đem tài liệu Unicode đó sang máy khác mở lên xem thì sao? Điều kiện là máy khác cũng phải có font Unicode, nếu font Unicode không có đủ tất cả những chữ dùng trong tài liệu thì những chữ không có đó sẽ hiện thành hình chữ nhật rỗng, không thể lộn sang hình khác được.
+  <br>Mỗi hình chữ trong Unicode có một vị trí riêng nên không có tình trạng cùng một ký tự có thể hiện ra theo những hình khác nhau. Dùng Unicode ta có thể soạn một văn bản chứa chữ thuộc nhiều ngôn ngữ khác nhau mà chỉ dùng một font (miễn là trong file font có hình chữ của ngôn ngữ đó). Nếu đem tài liệu Unicode đó sang máy khác mở lên xem thì sao? Điều kiện là máy khác cũng phải có font Unicode, nếu font Unicode không có đủ tất cả những chữ dùng trong tài liệu thì những chữ không có đó sẽ hiện thành hình chữ nhật rỗng, không thể lộn sang hình khác được.
   <br>Bây giờ chúng ta download các file font mới về và có thể soạn ra các tài liệu song ngữ Việt-Anh mà không cần phải đổi font giữa các dòng chữ nữa.</p>
 
 
@@ -287,9 +287,10 @@ data-ad-slot="5275186684">
   <a href="https://www.google.com/maps/place/L%C3%AA+H%E1%BB%93ng+B%E1%BB%99i/@10.720385,106.7007479,15z/data=!4m5!3m4!1s0x0:0x5e907d2164963e6f!8m2!3d10.720385!4d106.7007479" target='_blank'><amp-img src="/images/icons/Home_256x256.png" layout="fixed" width="40" height="40" alt="nhà"></amp-img></a>
   </div>
   <div class="even">Trang-web này được áp-dụng <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target='_blank'>Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
-  Bạn được phép chép lại trang-web này, với điều-kiện không được thay-đổi nội-dung và không dùng cho mục-đích thu-lợi và ghi rõ nguồn-gốc <a href="https://lehboi.github.io">http://LeHBoi.github.io</a>. Điều kiện trên cũng áp dụng với domain name trước đây của website này là LHBOI.NAME.VN.
+  Bạn được phép chép lại trang-web này, với điều-kiện không được thay-đổi nội-dung và không dùng cho mục-đích thu-lợi và ghi rõ nguồn-gốc <a href="https://lehboi.github.io">https://LeHBoi.github.io</a>. Điều kiện trên cũng áp dụng với domain name trước đây của website này là LHBOI.NAME.VN.
   </div>
 </div>
+
 <amp-analytics>
   <script type="application/json">
     {
@@ -318,6 +319,7 @@ data-ad-slot="5275186684">
   }
   </script>
 </amp-analytics>
+
 </main>
 </body>
 </html>
