@@ -6,606 +6,750 @@
        xmlns:video="https://www.google.com/schemas/sitemap-video/1.1">
 	<url>
 		<loc>https://lehboi.github.io/</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/sitemap</loc>
-		<lastmod>2021-09-06T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-22T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 
 	<url>
 		<loc>https://lehboi.github.io/en/fa/pfr/</loc>
-		<lastmod>2021-10-05T12:52:42+00:00</lastmod>
+		<lastmod>2021-11-25T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/en/fa/pfr/pfr1</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2021-10-28T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/en/fa/pfr/pfr2</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2021-10-28T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	
 	<url>
 		<loc>https://lehboi.github.io/download/</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/home/about</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/home/cv</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/cac-giai-doan</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/chi-tieu</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/nghi-luc</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/lam-phat-loi-song</loc>
-		<lastmod>2021-10-19T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/tich-luy</loc>
-		<lastmod>2021-10-19T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/lam-giau-khong-kho</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/de-tien-vao-dau</loc>
-		<lastmod>2021-09-24T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/cach-dau-tu</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/chi-tieu</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/de-tien-vao-dau</loc>
+		<lastmod>2022-01-09T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/dung-so-dau-tu</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/hieu-qua-dau-tu</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/lam-giau-khong-kho</loc>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/lam-phat-loi-song</loc>
+		<lastmod>2021-11-25T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/nghi-luc</loc>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/thong-ke-huu-tri-tu-nguyen-my</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.23</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/tich-luy-dai-han</loc>
-		<lastmod>2021-09-24T12:52:42+00:00</lastmod>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
-		<loc>https://lehboi.github.io/huu-ich/vao-dai-hoc</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<loc>https://lehboi.github.io/huu-ich/tich-luy</loc>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/tien-thuong-cuoi-nam</loc>
-		<lastmod>2021-10-19T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.57</priority>
 	</url>
 	<url>
-		<loc>https://lehboi.github.io/huu-ich/thong-ke-huu-tri-tu-nguyen-my</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<loc>https://lehboi.github.io/huu-ich/vao-dai-hoc</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
-		<priority>0.23</priority>
+		<priority>1.00</priority>
 	</url>
 	
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/</loc>
-		<lastmod>2021-10-05T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/khtcp1</loc>
-		<lastmod>2021-10-20T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/khtcp2</loc>
-		<lastmod>2021-09-27T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han</loc>
-		<lastmod>2021-09-29T12:52:42+00:00</lastmod>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/bao-ve</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
-		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/tang-thu-nhap</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/no-m-co-dinh</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/no-t-co-dinh</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/tk-m-co-dinh</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/tk-t-co-dinh</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/khtc1</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/thu-chi</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/dau-tu-dai-han</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/huu-tri</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/ke-hoach</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/khtc1</loc>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/khtcp1</loc>
+		<lastmod>2022-01-09T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/khtcp2</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/no-m-co-dinh</loc>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/no-t-co-dinh</loc>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/tang-thu-nhap</loc>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/thu-chi</loc>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/tk-m-co-dinh</loc>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/ke-hoach-tai-chinh/tk-t-co-dinh</loc>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/dau-tu-co-phieu/</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2021-11-25T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/dau-tu-co-phieu/quy-dau-tu</loc>
-		<lastmod>2021-09-24T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/dau-tu-co-phieu/maxx-pltv</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-22T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/dau-tu-co-phieu/so-tk-hay-dau-tu</loc>
-		<lastmod>2021-10-19T12:52:42+00:00</lastmod>
+		<lastmod>2022-01-02T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/dau-tu-co-phieu/thi-truong-xuong-doc</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/cac-loai-bao-hiem/</loc>
-		<lastmod>2021-09-24T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/cac-loai-bao-hiem/phi-bao-hiem-nhan-tho</loc>
-		<lastmod>2021-09-24T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/cac-loai-bao-hiem/bhnt-lien-ket-chung</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
-		<loc>https://lehboi.github.io/huu-ich/cac-loai-bao-hiem/diem-tua-dau-tu</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<loc>https://lehboi.github.io/huu-ich/cac-loai-bao-hiem/phi-bao-hiem-nhan-tho</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/</loc>
-		<lastmod>2021-08-17T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/bai-hoc-pho-thong</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/nhung-hon-da</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/dang-thieng-lieng</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/bat-dau-dau-tu</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/uoc-mo-thanh-ti-phu</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/kakeibo</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/nghi-huu-som</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/tranh-mang-no</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/dung-the-tin-dung-khon-ngoan</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/mua-nha-hay-dau-tu</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/bot-lo-ve-tien</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
+		<lastmod>2021-10-28T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/dang-thieng-lieng</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/dung-the-tin-dung-khon-ngoan</loc>
+		<lastmod>2021-10-28T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/kakeibo</loc>
+		<lastmod>2021-10-28T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/mua-nha-hay-dau-tu</loc>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/nghi-huu-som</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/nhung-hon-da</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/nhung-quyet-dinh-tot-cho-tuoi-gia</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/sinh-lao-benh-tu</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/tranh-mang-no</loc>
+		<lastmod>2021-10-28T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/huu-ich/cau-chuyen/uoc-mo-thanh-ti-phu</loc>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	
 	<url>
 		<loc>https://lehboi.github.io/y-kien/</loc>
-		<lastmod>2021-08-17T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/y-kien/bat-ca-hai-tay</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/y-kien/su-giau-co</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/y-kien/do-giau</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/y-kien/xa-hoi-thong-tin</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/y-kien/bi-mat-doi-tu</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/y-kien/quang-cao-lao</loc>
-		<lastmod>2021-10-25T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/y-kien/dung-hang-viet-nam</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/y-kien/muc-hay-den</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/y-kien/thanh-ngu-ve-tien</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/y-kien/tien-va-mau</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/y-kien/gia-tra</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/y-kien/nhung-cai-nem</loc>
-		<lastmod>2021-10-05T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/y-kien/khac-nguoi</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
+		<lastmod>2021-10-28T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/y-kien/da-len-bao</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/do-giau</loc>
+		<lastmod>2021-10-28T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/dung-hang-viet-nam</loc>
+		<lastmod>2021-10-28T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/gia-tra</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/khac-nguoi</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/muc-hay-den</loc>
+		<lastmod>2021-10-28T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/nhung-cai-nem</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/quang-cao-lao</loc>
+		<lastmod>2021-12-22T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/su-giau-co</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/thanh-ngu-ve-tien</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/tien-va-mau</loc>
+		<lastmod>2022-01-09T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/y-kien/xa-hoi-thong-tin</loc>
+		<lastmod>2022-01-09T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 
 	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/chu-viet/</loc>
-		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/chu-viet/ghi-dau-thanh-1</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/chu-viet/unicode</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/chu-viet/utf-8</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/chu-viet/web</loc>
-		<lastmod>2021-09-23T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 
 	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/</loc>
-		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/bep</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/ac-dc</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/tieu-thu-dien</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/dien-standby</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/magchan</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/may-lanh</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/nhiet-do</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/nong</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/tan-so-cua-tv</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/anh</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.16</priority>
 	</url>
 	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/bep</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/can-biet</loc>
+		<lastmod>2022-01-02T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/dien-standby</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/hong-ngoai</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/lau-nha</loc>
+		<lastmod>2021-12-15T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/magchan</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/may-lanh</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/nhiet-do</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/nong</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/nutrition</loc>
+		<lastmod>2021-11-25T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/tan-so-cua-tv</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/linh-tinh/tieu-thu-dien</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 
 	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/</loc>
-		<lastmod>2021-08-12T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/pi-network</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/gnucash</loc>
-		<lastmod>2021-10-05T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/bat-dau-gnucash</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/ham-tai-chinh</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/cashflow</loc>
+		<lastmod>2021-11-25T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/cloudstorage</loc>
-		<lastmod>2021-10-19T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/conferencecall</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.33</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/cryptocurrency</loc>
+		<lastmod>2021-11-25T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/fax</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.11</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/gnucash-dai-han</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/gnucash</loc>
+		<lastmod>2021-10-28T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/goi-cuoc-di-dong-noi-mang</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/googlemaps</loc>
+		<lastmod>2021-10-28T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/ham-tai-chinh</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/in-phun</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/in-sach-nho</loc>
+		<lastmod>2021-10-28T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/linux</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.14</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/nhiet-do</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.33</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/oss</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/OTT-apps</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/phan-mem-tu-do</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/pi-network</loc>
+		<lastmod>2022-01-03T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/pin-lithium-ion</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/privcloudstor</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/protect</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/raspberrypi</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/RCS</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/roaming</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/spam-call</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/spam</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/tai-khoan-google</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/tien-ich-di-dong</loc>
+		<lastmod>2021-12-31T12:52:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/toys</loc>
+		<lastmod>2021-11-25T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
@@ -614,149 +758,5 @@
 		<lastmod>2021-10-25T12:52:42+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/googlemaps</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/spam-call</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/raspberrypi</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/spam</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/toys</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/cryptocurrency</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/protect</loc>
-		<lastmod>2021-10-20T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/RCS</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/roaming</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/gnucash-dai-han</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/tien-ich-di-dong</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/OTT-apps</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/goi-cuoc-di-dong-noi-mang</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/conferencecall</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.33</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/cashflow</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/tai-khoan-google</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/oss</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/phan-mem-tu-do</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/in-phun</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/in-sach-nho</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/pin-lithium-ion</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/fax</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.11</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/linux</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.14</priority>
-	</url>
-	<url>
-		<loc>https://lehboi.github.io/kinh-nghiem/may-tinh/nhiet-do</loc>
-		<lastmod>2021-09-30T12:52:42+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.33</priority>
 	</url>
 </urlset>
