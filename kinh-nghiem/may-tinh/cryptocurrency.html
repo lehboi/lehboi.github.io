@@ -4,7 +4,6 @@
 <title>Hỏi đáp về Cryptocurrency</title>
 <meta name="description" content="Tìm hiểu Cryptocurrency: là gì, giữ như thế nào, trao đổi như thế nào, lợi và hại" />
 <meta name="keywords" content="cryptocurrency, bitcoin, wallet">
-<link rel="alternate" href="https://www.lhboi.name.vn/kinh-nghiem/may-tinh/cryptocurrency">
 <link rel="canonical" href="https://lehboi.github.io/kinh-nghiem/may-tinh/cryptocurrency">
 
 <!-- in head of html file -->
@@ -233,12 +232,12 @@ data-ad-slot="5275186684">
 <p>Khi giao-dịch tiền trong ngân hàng thường, mỗi sự chuyển dịch của tiền đều được ghi lại bằng một dòng đại khái như “An chuyển x đồng cho Bình” trong server của ngân hàng. Trong mạng ngang hàng, không có một server tập trung thông tin, mà mọi thành viên trong mạng lưới (gọi là node) đều có một bản sao tất-cả sổ-cái-ghi-chép-giao-dịch. Phát-minh của Satoshi là cách để mọi bản sao đều đồng nhất với nhau. Satoshi gọi đồng tiền điện tử mới đó là Bitcoin. Trong hệ thống Bitcoin, dòng “An chuyển x bitcoin cho Bình” phải được ký bởi chữ ký điện tử (private key) của An rồi được truyền đến tất cả các node trong mạng. Giao dịch đó còn phải chờ được các node phê-chuẩn rồi mới được thực-hiện. Các node phải kiểm-tra để chắc-chắn rằng x bitcoin thật sự là của An.</p>
 <p>Các máy tính node, còn gọi là miner, sẽ kiểm tra, xử lý các dòng giao dịch đó để gói các giao dịch vào một block theo thuật toán SHA 256 và nối block đó với các block đã có trước. Khi quá trình đó hoàn thành thì giao dịch mới được xác nhận. Miner nào gói được một block đạt yêu-cầu sớm nhất sẽ được thưởng bằng những bitcoin mới sinh ra.</p>
 <h3>Ký bằng chữ ký điện tử thế nào?</h3>
-<p><a href="https://en.wikipedia.org/wiki/Digital_signature" target='_blank'>Chữ ký điện tử</a> là một cặp hai con số rất lớn: private key và public key. Tên gọi của hai con số đó đã cho biết: phải giữ kín private key và để public key cho mọi người biết.
+<p><a href="https://en.wikipedia.org/wiki/Digital_signature" target='_blank'>Chữ ký điện tử</a> là một cặp hai số rất lớn: private key và public key. Tên gọi của hai số đó đã cho biết: phải giữ kín private key và để public key cho mọi người biết.
 <br>Khi ký một thông điệp m, máy tính sẽ tính ra một chữ ký s từ m và private key rồi gửi s kèm theo m. Bên nhận được thông điệp sẽ dùng public key và m để tính ra xem kết quả có khớp với s hay không. Nếu không khớp nghĩa là m đã bị tráo trên đường truyền.</p>
 <p>Một ứng dụng khác của chữ ký điện tử là mã hoá thông điệp để giữ bí mật. Khi A muốn gửi một thông điệp hay file m cho B mà không cho bất kỳ ai khác dùng được thì A dùng public key của B để mã hoá thông điệp m thành m'. B nhận được thông điệp m' sẽ dùng private key để giải mã trở lại thành m. Bất kỳ người nào khác chép được m' trên đường truyền đều không thể giải mã được.</p>
 <h2>Bitcoin được giữ như thế nào?</h2>
 <p>Bitcoin được 'giữ' trong các wallet. Wallet gồm một software và file dữ liệu chứa những cặp public key và private key do software tạo ra. Public key là địa chỉ của wallet.
-<br>Private key là một con số nhị phân dài 256/128/512 bit được tự động sinh ra một cách ngẫu nhiên bằng software wallet cho người chủ của wallet. Software còn giúp tạo ra một dãy từ gợi nhớ gồm những từ có trong từ điển (mnemonic phrase, recovery phrase) mà từ dãy đó tìm trở lại private key của wallet. Mnemonic phrase cần được viết ra giấy và cất kỹ ở vài nơi để có thể lấy ra dùng khi cần.
+<br>Private key là một số nhị phân dài 256/128/512 bit được tự động sinh ra một cách ngẫu nhiên bằng software wallet cho người chủ của wallet. Software còn giúp tạo ra một dãy từ gợi nhớ gồm những từ có trong từ điển (mnemonic phrase, recovery phrase) mà từ dãy đó tìm trở lại private key của wallet. Mnemonic phrase cần được viết ra giấy và cất kỹ ở vài nơi để có thể lấy ra dùng khi cần.
 <br>Software của wallet sẽ tạo ra và ký các thông báo chuyển tiền.</p>
 <p>Tiền giấy và tiền kim loại thông thường được chính phủ phát hành theo những mệnh giá cố định. Bitcoin không như vậy. Những lượng Bitcoin lớn nhỏ khác nhau lưu hành trong mạng. Mỗi lượng Bitcoin là một chuỗi data ghi những giao dịch nó đã trải qua từ lúc được tạo ra. Khi một lượng Bitcoin x được chuyển từ wallet A sang wallet B, thì x được ghi thêm địa chỉ B và được ký bằng private key của A.
 <br>Tổng số tiền có trong wallet là tổng các lượng Bitcoin mang các địa chỉ của wallet. Khi một wallet A cần chuyển một lượng Bitcoin x sang wallet B mà không có lượng Bitcoin bằng đúng x có sẵn trong wallet A thì nó lấy một hoặc nhiều lượng Bitcoin có tổng lớn hơn hoặc bằng x đưa vào giao dịch, tạo ra một lượng Bitcoin x mới mang địa chỉ B và một lượng Bitcoin mới mang địa chỉ A chứa phần dư sau khi trừ x (nếu có). Phần dư cũng có thể mang một địa chỉ khác A được tạo ra và software wallet phải ghi cặp public key và private key của lượng Bitcoin dư đó vào file dữ liệu.</p>
@@ -274,7 +273,7 @@ Giao dịch trên sàn thì tốn phí giao dịch, phí chuyển Bitcoin vào v
 <li>Mua bán trực tiếp giữa những người quen thân</li>
 </ol>
 <p>Mua bán cách nào cũng tốn phí trả cho miner.
-<br>Khi lượng Bitcoin cần chuyển ra khỏi wallet không bằng bất cứ một lượng Bitcoin nào có sẵn trong wallet thì việc chuyển Bitcoin sẽ có thêm bước tách/nhập các lượng Bitcoin có sẵn thành lượng Bitcon cần chuyển. Bước tách/nhập làm tốn công miner hơn nên tốn phí nhiều hơn.</p>
+<br>Khi lượng Bitcoin cần chuyển ra khỏi wallet không bằng bất cứ một lượng Bitcoin nào có sẵn trong wallet thì việc chuyển Bitcoin sẽ có thêm bước tách/nhập các lượng Bitcoin có sẵn thành lượng Bitcoin cần chuyển. Bước tách/nhập làm tốn công miner hơn nên tốn phí nhiều hơn.</p>
 
 <!-- AMP display ads -->
 <amp-ad width="100vw" height="320"
