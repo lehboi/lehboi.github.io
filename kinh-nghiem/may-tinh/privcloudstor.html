@@ -297,7 +297,7 @@ data-ad-slot="5275186684">
 <p>Các máy client dùng cloud storage server qua:</p>
 <ul>
 <li>Web interface (Windows, Mac, Linux, iOS, Android): upload, download, quản lý file và folder, dùng các app mở rộng tính năng,</li>
-<li>Desktop client application (Windows, Mac, Linux): synchronize file và folder giữa client và server,</li>
+<li>Desktop client application (Windows, Mac, Linux): synchronize file và folder giữa client và server. Nextcloud trên Windows cho phép dùng file trong Nextcloud server như trong một đĩa mạng: danh-sách folder và file xuất-hiện trong máy Windows nhưng nội-dung file nằm trong server Nextcloud, user dùng file khi online và cả khi ofline nếu file đó được chọn là synchronized.</li>
 <li>Mobile app (iOS, Android): upload, download, synchronize và quản lý file và folder.</li>
 </ul>
 <p>Với cloud storage server, tất cả hình chụp bằng smartphone được tự động upload vào cloud server, tất cả các file làm việc trên các computer đều được synchronize tức thời vào cloud server. Nextcloud tự động nhớ lại từng version của file sau mỗi lần file được sửa, user có thể chọn dùng lại hoặc download lại các version cũ qua web browser.</p>
@@ -336,7 +336,7 @@ data-ad-slot="5275186684">
 
 <h4>Tạo bootable USB flash drive từ file ISO</h4>
 <p>Từ Ubuntu Desktop Linux: dùng <i>Startup Disk Creator</i> trong <i>System Tools</i> menu.
-<br>Từ Windows: theo hướng dẫn ở <a href="https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows#0" target="_blank">link này</a>.</p>
+<br>Từ Windows: theo hướng dẫn ở <a href="https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows#0" target="_blank">link sau</a>.</p>
 
 
 <!-- AMP display ads -->
@@ -352,7 +352,7 @@ data-ad-slot="5275186684">
 <h3 id="install">Boot và install</h3>
 <p>Có hai cách install Nextcloud: install Nextcloud và các thành phần kèm theo trong một gói <b>snap</b> hoặc install riêng Nextcloud và các thành phần kèm theo. Install trong gói snap thì gọn nhưng bạn không thay đổi được các thông số của Nextcloud. Tôi đã install trong snap, sau đó phải gỡ bỏ snap và install riêng Nextcloud và các thành phần kèm theo. Phần dưới đây hướng dẫn install trong snap.</p>
 <p>Cắm USB flash drive đã làm ở bước trên vào máy để cài cloud storage server.</p>
-<p>Bật máy lên và chọn boot từ USB drive rồi lần lượt làm theo hướng dẫn ở <a href="https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-server#0" target="_blank">link này</a>.</p>
+<p>Bật máy lên và chọn boot từ USB drive rồi lần lượt làm theo hướng dẫn ở <a href="https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-server#0" target="_blank">link sau</a>.</p>
 <p>Ở bước bảy, <i>Networking</i>, chương trình install sẽ tự động chọn địa chỉ DHCPv4 cho máy. Vì máy này sẽ được dùng làm server, bạn phải chọn địa chỉ IPv4 cố định bằng cách dùng phím Tab để đưa cursor đến tên Ethernet interface rồi bấm Enter, rồi chọn Edit IPv4. Bạn nên chọn một địa chỉ IPv4 nội bộ có số cuối dễ nhớ, ví dụ số cuối là 100 hoặc 200 hoặc 254.</p>
 <p>Ở bước tám, <i>Configure storage</i>, bạn có thể chọn <i>Manual</i> để chia đĩa theo cách riêng nếu bạn có nhiều kinh nghiệm với Linux, hoặc chọn default là <i>Use An Entire Disk</i>. Nếu chọn <i>Manual</i> thì bạn nên chia một partition một GB làm boot filesystem chứa boot loader, một partition năm GB làm root filesystem chứa hệ điều hành, một partition khoảng một GB hoặc nhiều hơn số RAM trong máy làm swap và toàn bộ phần đĩa còn lại trong một partition làm data storage. Bạn cũng có thể chọn dùng LVM (Logical Volume Manager) khi chia đĩa, với LVM bạn có thể thêm dung lượng vào cloud storage dễ dàng. Nếu máy này có nhiều đĩa cứng thì bạn nên dùng LVM để nối các đĩa cứng đó lại.</p>
 <p>Bước 12, <i>Set up a Profile</i>, sẽ tạo một user account trong Linux với tên người, tên account và password. Máy Linux có một user account đặc biệt là root, root có toàn quyền làm mọi việc trong máy. Trong Ubuntu Linux, account root không có password và user không trực tiếp login vào account root mà user login vào account thường rồi dùng lệnh <code>sudo</code> để làm việc với quyền root.</p>
@@ -381,7 +381,7 @@ data-ad-slot="5275186684">
 <h4>Tạo vùng swap trong RAM</h4>
 <p>Nếu máy của bạn có ít hơn bốn GB RAM hoặc có nhiều người dùng cloud server này thì sẽ có lúc server cần dùng vùng swap để phụ thêm cho RAM. Ở bước tám phía trên, chương trình install đã tạo một vùng swap trong đĩa cứng. Đĩa cứng thì chạy chậm hơn RAM gần một trăm lần nên server sẽ rất chậm mỗi khi dùng đến vùng swap.
 <br>Có một cách để cải thiện đôi chút trong trường hợp này, đó là đổi vai trò của một phần RAM. Khi hệ điều hành Linux hoạt động, nó luôn luôn lấy một phần RAM để cache hệ thống file và folder trong đĩa cứng, chúng ta sẽ giảm bớt phần RAM dùng làm cache đó để lấy một ít RAM làm <i>swap nén</i>. Khi tạo swap nén rồi, lúc nào server cần swap nó sẽ nén <i>memory page</i> cần swap lại (khoảng ba lần) và ghi vào vùng swap nén trong RAM nên sẽ nhanh hơn swap trong đĩa cứng rất nhiều.
-<br>Để tạo swap nén thì bạn <code>apt install zram-config</code> và điều chỉnh một số parameter của kernel Linux theo hướng dẫn ở <a href="https://haydenjames.io/linux-performance-almost-always-add-swap-part2-zram/" target='_blank'>link này</a>.
+<br>Để tạo swap nén thì bạn <code>apt install zram-config</code> và điều chỉnh một số parameter của kernel Linux theo hướng dẫn ở <a href="https://haydenjames.io/linux-performance-almost-always-add-swap-part2-zram/" target='_blank'>link sau</a>.
 <br>Nếu máy của bạn có quá ít RAM thì việc tạo vùng swap trong RAM cũng không loại trừ hết những lúc dùng đến vùng swap trong đĩa, máy vẫn chậm nhưng đỡ chậm hơn.</p>
 
 <h3 id="account">Tạo admin account cho Nextcloud</h3>
