@@ -284,6 +284,12 @@ Dàn bài:
 <div class="flright"><amp-img alt="KeePass logo" src="/images/keepasslogo.png" width="180" height="180" layout="responsive"></amp-img></div><p>Bạn hãy dùng phần mềm quản lý password để ghi tất cả các password và các thông tin quan trọng khác (ví dụ số thẻ ngân hàng, activation key của software). Tất cả những thứ đó được ghi vào một file database, bạn bảo vệ file database đó bằng một password thật tốt và thật dài, và bạn chỉ cần nhớ một password cuối cùng đó thôi. Password thật dài đó không nhất thiết phải thật rắc rối với những ký hiệu khó nhớ như <i>!@#$%^&</i>, nó có thể là một câu thơ bạn rất thích, được viết hoa vài chữ, và được thêm vài số có ý nghĩa riêng tư nào đó. <a href="https://keepass.info/" target='_blank'>KeePass</a> là một phần mềm như vậy, nó có thể dùng được trên Linux, Windows, <a href="https://play.google.com/store/apps/details?id=keepass2android.keepass2android" target='_blank'>Android</a>, iOS.</p>
 <p>Các entry trong KeePass database được sắp xếp thành nhiều nhóm, ví dụ như nhóm công việc, nhóm ngân hàng, nhóm giải trí, nhóm mua sắm… Mỗi entry được ghi nhiều mục: title, user name, password, expires, và các mục do bạn tự đặt tên và giá trị. Tôi tự đặt thêm hai mục address và passphrase cho ví <a href="pi-network">tiền Pi</a>.
 <br>Tất cả thông tin ghi trong file KeePass database được mã hoá bằng password của file nên dù kẻ gian có chép được file database và đọc từng byte trong file database đó cũng không thể thấy được những gì ghi trong đó. KeePass có một password generator để tạo ra những password khó đoán để bạn dùng ở những server có yêu cầu cao, tôi tin rằng các password đó là không thể đoán được và cũng không thể nhớ được, để dùng những password đó bạn chỉ có cách mở KeePass ra và copy rồi paste. KeePass giữ lại lịch sử những lần sửa đổi của từng entry.</p>
+<h5>Dùng chung một file KeePass ở nhiều máy</h5>
+<p>App KeePass trong smartphone Android mở được file trong các cloud storage server Dropbox, Google Drive, OneDrive, OwnCloud, Nextcloud, pCloud và WebDav, SSH, FTP. KeePass tự động sao một bản của database trong smartphone và làm việc trên bản sao đó. Bạn chọn <i>Synchronize database</i> trong menu ba chấm <b>⁝</b> để đồng-bộ bản sao đó với bản chính trong cloud storage server. Như vậy bạn không cần đồng-bộ bằng các app cloud storage client.
+<br>Để dùng như vậy bạn hãy chép file KeePass của bạn vào một cloud storage, đồng-bộ giữa cloud và tất cả các máy tính, mở file đó từ cloud strorage bằng app KeePass trong smartphone.
+<br>Chú-ý: bạn cần phải đồng-bộ database với cloud storage ngay sau khi sửa ở một máy để tránh bị mất thông tin, xem thêm trong bài <a href="cloudstorage">Kinh nghiệm dùng cloud storage</a>.</p>
+<p>Tôi đang dùng phần mềm KeePass để giữ tất cả thông tin như vậy. Để tiện dùng những thông tin đó mọi lúc và mọi nơi, tôi để file KeePass database của tôi trong một <a href="cloudstorage">cloud storage</a> và đồng-bộ nó về máy tính cũng như smartphone. Mặc dù để file KeePass trong Internet nhưng tôi không lo ngại gì hết vì kẻ gian phải qua hai lớp khoá mới lấy được file đó: password của cloud storage và password của file đó (ai mà biết được tôi thích câu thơ nào).</p>
+<h5>KeePass trong Android</h5>
 <p>Khi dùng app KeePass trong smartphone Android, bạn không cần copy và paste. App tạo ra sẵn một bàn phím ảo, bàn phím ảo này tự động chứa các mục của entry bạn đang mở trong KeePass. Ví-dụ bạn cần login vào website Dynv6 từ smartphone, bạn làm theo các bước:</p>
 <ol>
 <li>mở app Firefox,</li>
@@ -296,9 +302,7 @@ Dàn bài:
 <li>app Firefox hiện ra, với các tên mục để chọn, nếu chiều ngang màn hình không đủ chỗ để hiện tất cả các mục, sẽ có dấu <b>></b> để lần lượt xem các mục, bạn chọn <i>URL</i> để dán URL của Dynv6 vào, bấm Go để mở trang web,</li>
 <li>chọn Sign in trong trang web rồi chọn mục <i>User</i> để dán user name, chọn mục <i>password</i> để dán password vào đúng ô.</li>
 </ol>
-Sau vài chục giây thì app KeePass sẽ tự xoá hết các mục thông tin trong bàn phím ảo và trở về bàn phím default, bạn cũng có thể trở về bàn phím default bằng cách bấm phím hình ổ khoá mờ ở góc bên phải.
-<p>App KeePass trong smartphone Android mở được file trong các cloud storage server Dropbox, Google Drive, OneDrive, OwnCloud, Nextcloud, pCloud và WebDav, SSH, FTP. KeePass tự động sao một bản của database trong smartphone và làm việc trên bản sao đó. Bạn chọn <i>Synchronize database</i> trong menu ba chấm <b>⁝</b> để đồng-bộ bản sao đó với bản chính trong cloud storage server. Như vậy bạn không cần đồng-bộ bằng các app cloud storage client. Chú-ý: bạn cần phải đồng-bộ database ra tất cả các máy ngay sau khi sửa ở một máy để tránh bị mất thông tin, xem thêm trong bài <a href="cloudstorage">Kinh nghiệm dùng cloud storage</a>.</p>
-<p>Tôi đang dùng phần mềm KeePass để giữ tất cả thông tin như vậy. Để tiện dùng những thông tin đó mọi lúc và mọi nơi, tôi để file KeePass database của tôi trong một <a href="cloudstorage">cloud storage</a> và đồng-bộ nó về máy tính cũng như smartphone. Mặc dù để file KeePass trong Internet nhưng tôi không lo ngại gì hết vì kẻ gian phải qua hai lớp khoá mới lấy được file đó: password của cloud storage và password của file đó (ai mà biết được tôi thích câu thơ nào).</p>
+<p>Sau vài chục giây thì app KeePass sẽ tự xoá hết các mục thông tin trong bàn phím ảo và trở về bàn phím default, bạn cũng có thể trở về bàn phím default bằng cách bấm phím hình ổ khoá mờ ở góc bên phải.</p>
 
 
 <!-- AMP display ads -->
@@ -439,35 +443,6 @@ Có trường hợp nhân viên tính tiền ở cửa hàng cố nhớ hết th
   Bạn được phép chép lại trang-web này, với điều-kiện không được thay-đổi nội-dung và không dùng cho mục-đích thu-lợi và ghi rõ nguồn-gốc <a href="https://lehboi.github.io">https://LeHBoi.github.io</a>. Điều kiện trên cũng áp dụng với domain name trước đây của website này là LHBOI.NAME.VN.
   </div>
 </div>
-
-<amp-analytics>
-  <script type="application/json">
-    {
-      "requests": {
-        "pageview": "https://c.statcounter.com/12598906/0/9a8e736a/1/"
-      },
-      "triggers": {
-        "trackPageview": {
-          "on": "visible",
-          "request": "pageview"
-        }
-      }
-    }
-  </script>
-</amp-analytics>
-<amp-analytics type="googleanalytics">
-  <script type="application/json">
-  {
-  "vars": { "account": "UA-25268996-1" },
-  "triggers": {
-  "trackPageview": {
-  "on": "visible",
-  "request": "pageview"
-    }
-   }
-  }
-  </script>
-</amp-analytics>
 
 </main>
 </body>
