@@ -106,29 +106,17 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
-
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
-
-  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 
 }
 
@@ -187,29 +175,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     </div>
   </div>
   
-  <div class="leftads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  <div class="rightads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  
 
   <div class="body">
   <div>
@@ -239,15 +204,6 @@ w83627hf WDT: initialized. timeout=60 sec (nowayout=0)</pre>
 Load module rồi thử coi module đó có dùng được không bằng lệnh <tt>echo x &gt; /dev/watchdog</tt>, rồi ngồi chờ chừng một tới hai phút, nếu máy khởi động lại tức là module đó dùng được. Máy khởi động y như bị bấm nút Reset chứ không phải là <tt>init 6</tt>, do đó nên thử ở runlevel 1 để ít ảnh hưởng tới các service của máy. Trong một tới hai phút đó có thể dùng lệnh <tt>dmesg</tt> để xem các thông báo của driver watchdog như:
 <pre>w83627hf WDT: Unexpected close, not stopping watchdog!</pre>
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 <p>Nhiều khi load module được nhưng máy không khởi động, đó là do mainboard có chip đó nhưng nó không nối tới mạch reset CPU. Nếu thử hết đám module đó mà vẫn chưa tìm thấy module nào dùng được thì config và build kernel lại để chọn những module khác (trong mục Device Drivers - Character devices - Watchdog Cards). Trong các module driver có một module là Software watchdog. Nó không dùng chip gì hết mà tự làm bằng code trong kernel, dùng tạm cũng được nhưng đôi khi không có tác dụng.</p>
 <p>Để dùng watchdog, ta chạy một script gồm một vòng lặp bất tận, trong vòng lặp đó làm hai việc là ghi vào /dev/watchdog và kiểm tra một số dấu hiệu chứng tỏ là máy còn làm việc bình thường. Chu kỳ của vòng lặp đó không lớn hơn x giây (x tuỳ thuộc vào chip và thông số đặt cho watchdog, thường trong khoảng 30-60 giây). Nếu phát hiện thấy dấu hiệu bất thường thì exit khỏi vòng lặp, mạch watchdog sẽ khởi động lại máy; hoặc nếu việc kiểm tra quá lâu (cũng là dấu hiệu bất thường) thì máy cũng sẽ khởi động lại. Tuỳ theo nhiệm vụ của máy mà ta chọn kiểm tra dấu hiệu nào. Ví dụ để kiểm tra web server thì ta connect tới TCP port 80, GET về một trang html, rồi ping tới default gateway, có thể sleep 10 giây nữa; như vậy khi web server không trả lời hoặc ping không được default gateway thì máy sẽ khởi động lại.</p>
@@ -257,15 +213,6 @@ Load module rồi thử coi module đó có dùng được không bằng lệnh 
 <p>Nếu ta có hardware RAID controller thì không cần làm gì đặc biệt ở hệ điều hành cũng cài được hệ điều hành lên RAID. Nhưng máy ở gia đình thì ít khi có hardware RAID controller mà phải dùng software RAID. Hệ điều hành phải đứng ra tổ chức việc ghi RAID. Khi máy mới boot lên, hệ điều hành chưa chạy thì không thể điều khiển RAID được. Do đó MS Windows không thể cài vào software RAID (trừ dạng đơn giản nhất là RAID1, tức là mirrored). Linux có thể cài vào software RAID bất kỳ nhờ vào việc Linux có thể để nhân hệ điều hành trong một file system riêng /boot. Chỉ cần để /boot trong một đĩa cứng thường hoặc RAID1 là đủ để Linux boot lên và dùng toàn bộ các file system khác, kể cả /, trong software RAID bất kỳ. Kích thước của /boot rất nhỏ so với toàn bộ hệ điều hành; chỉ cần 20 MB là dư dùng, mặc dù khi cài thôi Fedora Core đòi /boot phải từ 75 MB trở lên.</p>
 <p>Giả sử máy có hai đĩa cứng bằng nhau hda và hdc, tạo 20 MB /boot file system trên hda, tạo 250 MB swap trên hda và 270 MB swap trên hdc. Bây giờ, phần còn lại của hai đĩa vẫn bằng nhau. Tạo hai RAID partition trên toàn bộ phần còn lại. Tạo một RAID0 từ hai RAID partition đó. Tạo một physical volume trên RAID0 đó. Tạo một volume group từ physical volume. Rồi tạo các file system là các logical volume trong volume group.</p>
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 <h2>Dùng LVM thay RAID0, RAID1</h2>
 <p>Một cách làm khác là tạo hai physical volume trên hai partition trên hai đĩa cứng, rồi tạo một volume group gồm hai physical volume đó, sau đó tạo các logical volume có hai stripe. Làm như vậy cũng có tác dụng như RAID0.
@@ -326,15 +273,6 @@ Dùng LVM có điểm hay là dễ thay đổi hơn RAID.
 <p>File system nằm trực tiếp trên partition (không phải logical volume) cũng có thể tăng kích thước nếu đĩa cứng còn trống ngay sát sau partition đó.</p>
 <p>Lệnh resize2fs cũng có thể giảm kích thước file system trước khi giảm kích thước của partition hay logical volume.</p>
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 <h2>Tạo các file định tính địa phương trong Linux</h2>
 <p>Trong Linux, biến môi trường LANG dùng để thay đổi các tính chất địa phương (kiểu ngày tháng, tên tháng, ký hiệu tiền, thứ tự từ điển…) của môi trường làm việc. Để chọn địa phương Việt nam thì ta đặt LANG=vi_VN.UTF-8.<br />
@@ -353,15 +291,6 @@ localedef --verbose --force -f UTF-8 -i vi_VN vi_VN.UTF-8</pre>
   </div>
 
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
   <hr>
   <div class="footer">
@@ -378,35 +307,6 @@ localedef --verbose --force -f UTF-8 -i vi_VN vi_VN.UTF-8</pre>
   Bạn được phép chép lại trang-web này, với điều-kiện không được thay-đổi nội-dung và không dùng cho mục-đích thu-lợi và ghi rõ nguồn-gốc <a href="https://lehboi.github.io">https://LeHBoi.github.io</a>. Điều kiện trên cũng áp dụng với domain name trước đây của website này là LHBOI.NAME.VN.
   </div>
 </div>
-
-<amp-analytics>
-  <script type="application/json">
-    {
-      "requests": {
-        "pageview": "https://c.statcounter.com/12598906/0/9a8e736a/1/"
-      },
-      "triggers": {
-        "trackPageview": {
-          "on": "visible",
-          "request": "pageview"
-        }
-      }
-    }
-  </script>
-</amp-analytics>
-<amp-analytics type="googleanalytics">
-  <script type="application/json">
-  {
-  "vars": { "account": "UA-25268996-1" },
-  "triggers": {
-  "trackPageview": {
-  "on": "visible",
-  "request": "pageview"
-    }
-   }
-  }
-  </script>
-</amp-analytics>
 
 </main>
 </body>

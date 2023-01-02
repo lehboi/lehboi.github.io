@@ -106,29 +106,17 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
-
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
 
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
 
-  .leftads {position:absolute;top:0;left:0;height:600px;width:0px;margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:600px;width:0px;margin:0;}
-
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
-
-  .leftads {position:absolute;top:0;left:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;align:right;}
-  .rightads {position:absolute;top:0;right:0;height:100vh;width: calc((100% - 1020px)/2);margin:0;}
 
 }
 
@@ -187,29 +175,6 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     </div>
   </div>
   
-  <div class="leftads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  <div class="rightads">
-  <!-- AMP Responsive Skyscrapper -->
-<amp-ad
-media="(min-width: 1260px)"
-layout="fill"
-type="adsense"
-data-ad-client="ca-pub-2242556057278004"
-data-ad-slot="5275186684">
-</amp-ad>
-
-  </div>
-  
 
   <div class="body">
   <div>
@@ -264,15 +229,6 @@ Dàn bài:
 <p>Làm sao nhớ hết được quá nhiều password thật rắc rối ở quá nhiều nơi như vậy?</p>
 
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 <h3>Chống quên</h3>
 <p>Một cách đơn giản để nhớ hết password là dùng chung một password ở tất cả các nơi 😉.
@@ -306,15 +262,6 @@ Dàn bài:
 <p>Sau vài chục giây thì app KeePass sẽ tự xoá hết các mục thông tin trong bàn phím ảo và trở về bàn phím default, bạn cũng có thể trở về bàn phím default bằng cách bấm phím hình ổ khoá mờ ở góc bên phải.</p>
 
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 <h3>Đề phòng bị trộm password</h3>
 <p>Ngoài rủi ro quên mất password, còn có rủi ro bị người khác biết được password. Việc mất trộm password thường là do bị lừa:</p>
@@ -341,15 +288,6 @@ Ngoài việc dùng password để login vào các dịch vụ web, password cò
 </ul>
 
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 <h2 id="twofactor">Bảo vệ hai lớp (Two Factor Authentication)</h2>
 <p>Một số dịch vụ tăng mức độ bảo vệ lên bằng cách dùng thêm password thứ hai, sau khi server đã nhận được password thứ nhất đúng rồi, nó hỏi thêm password thứ hai để chắc chắn rằng người trả lời thật sự là chủ tài khoản, <i>không những <b>biết</b> password mà còn đang <b>giữ</b> một vật của riêng chủ tài khoản</i>. Password thứ hai thay đổi liên tục theo thời gian và mỗi password chỉ có hiệu lực trong vài phút, nó gọi là One Time Password. Có hai cách để có OTP mà gõ vào.</p>
@@ -381,15 +319,6 @@ Ngoài việc dùng password để login vào các dịch vụ web, password cò
 <br>Tôi hình dung rằng hệ thống cung cấp dịch vụ sẽ hiện ra một QR-code chứa chuỗi thử thách, người-dùng mở app VNeID scan QR-code đó, VNeID ký chuỗi thử thách bằng private key rồi gửi về hệ thống định danh điện tử, hệ thống định danh điện tử kiểm tra bằng public key rồi trả lời cho hệ thống cung cấp dịch vụ biết có đúng người hay không. Nếu dùng dịch vụ trên smartphone thì app cung cấp dịch vụ sẽ gửi chuỗi thử thách thẳng qua app VNeID thay vì app VNeID scan.
 <br>Khi cần ký lệnh giao dịch, hệ thống ngân hàng gửi chuỗi hash của lệnh đến server VNeID, server gửi chuỗi hash đến app VNeID, người-dùng đồng ý hoặc từ chối ký trên app VNeID, chuỗi hash đã ký được gửi về server VNeID rồi gửi đến server ngân hàng để thực hiện giao dịch.</p>
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
 <h2 id="disanso">Di sản số</h2>
 <p>Những tài sản có một giá trị nào đó (vật chất hay tinh thần) đều cần phải được truyền lại khi người chủ tài sản qua đời, không nên để bị quên lãng giống như những trường hợp chôn vàng dưới nền nhà mà người nhà không biết.
@@ -419,15 +348,6 @@ Có trường hợp nhân viên tính tiền ở cửa hàng cố nhớ hết th
   <br>* <a href="/kinh-nghiem/may-tinh/">Những kinh nghiệm khác</a>
   </div>
 
-<!-- AMP display ads -->
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2242556057278004"
-     data-ad-slot="4706617992"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 
   <hr>
   <div class="footer">
