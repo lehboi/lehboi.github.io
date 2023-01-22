@@ -193,35 +193,52 @@ div.footer { font-size: 80%; color: red; text-align: center; }
   </div>
 
 <h1>Tìm-hiểu về Cryptocurrency</h1>
+  <h2>Dàn bài</h2>
+  <blockquote>
+    <a href="#bitcoin">Tìm-hiểu về Bitcoin</a>
+    <blockquote>
+      <a href="#signing">Chữ-ký điện-tử</a>
+      <br><a href="#storage">Giữ bitcoin</a>
+      <br><a href="#trade">Mua-bán bitcoin</a>
+      <br><a href="#keep">Giữ wallet cho an-toàn</a>
+      <br><a href="#back">Mặt trái của Bitcoin</a>
+    </blockquote>
+    <a href="#free">Tiền-điện-tử miễn-phí</a>
+    <blockquote>
+      <a href="#sweat">Sweat Economy</a>
+      <br><a href="#brave">Brave Browser</a>
+      <br><a href="#pi">Pi Network</a>
+    </blockquote>
+  </blockquote>
 
-<h2>Cryptocurrency là gì?</h2>
+<h2 id="bitcoin">Cryptocurrency là gì?</h2>
 <div class="inlineleft"><amp-img alt="Bitcoin" width="200" src="/images/bitcoin-chip.jpg" height="128" layout="fixed"></amp-img></div>
 
 <p>Cryptocurrency (tiền-điện-tử) là một phát-minh của Satoshi Nakamoto trong năm 2008 về tiền-điện-tử trong mạng-ngang-hàng (A Peer-to-Peer Electronic Cash System.)</p>
-<p>Khi giao-dịch tiền trong ngân-hàng thường, mỗi sự chuyển-dịch của tiền đều được ghi lại bằng một dòng đại khái như “An chuyển x đồng cho Bình” trong server của ngân hàng. Trong mạng-ngang-hàng, không có một server tập-trung thông-tin, mà mọi thành-viên trong mạng (gọi là node) đều có một bản-sao tất-cả sổ-cái-ghi-chép-giao-dịch. Phát-minh của Satoshi là cách để mọi bản-sao đều đồng-nhất với nhau. Satoshi gọi đồng tiền-điện-tử mới đó là Bitcoin. Trong hệ-thống Bitcoin, dòng “An chuyển x bitcoin cho Bình” phải được ký bởi chữ-ký điện-tử (private key) của An rồi được truyền đến tất cả các node trong mạng. Giao-dịch đó còn phải chờ được các node phê-chuẩn rồi mới được thực-hiện. Các node phải kiểm-tra để chắc-chắn rằng x bitcoin thật-sự là của An.</p>
-<p>Các máy-tính node, còn gọi là miner, sẽ kiểm-tra, xử-lý các lệnh-giao-dịch đó để gói các giao-dịch vào một block theo thuật toán SHA 256 và nối block đó với các block đã có trước. Khi quá-trình đó hoàn thành thì giao-dịch mới được xác-nhận. Miner nào gói được một block đạt yêu-cầu sớm nhất sẽ được thưởng bằng những bitcoin mới sinh ra.</p>
-<h3>Ký bằng chữ-ký điện-tử thế nào?</h3>
+<p>Khi giao-dịch tiền trong ngân-hàng thường, mỗi sự chuyển-dịch của tiền đều được ghi lại bằng một dòng đại-khái như “chuyển x đồng từ tài-khoản của An đến tài-khoản của Bình” trong server của ngân-hàng. Trong mạng-ngang-hàng, không có một server tập-trung thông-tin, mà mọi thành-viên trong mạng (gọi là node, còn gọi là miner) đều có một bản-sao tất-cả sổ-cái-ghi-chép-giao-dịch—ledger. Phát-minh của Satoshi là cách để mọi bản-sao ở tất-cả các node đều đồng-nhất với nhau. Satoshi gọi đồng tiền-điện-tử mới đó là Bitcoin. Trong hệ-thống Bitcoin, dòng “chuyển x bitcoin từ tài-khoản A đến tài-khoản B” phải được ký bởi chữ-ký điện-tử (private key) của A rồi được truyền đến tất cả các node trong mạng. Giao-dịch đó còn phải chờ được các node phê-chuẩn rồi mới được thực-hiện. Các node phải kiểm-tra để chắc-chắn rằng x bitcoin thật-sự là của A.</p>
+<p>Các máy-tính node sẽ kiểm-tra, xử-lý các lệnh-giao-dịch đó để gói các giao-dịch vào một block theo thuật toán SHA 256 và nối block đó với các block đã có trước. Khi quá-trình đó hoàn-thành thì giao-dịch mới được xác-nhận. Miner nào gói được một block đạt yêu-cầu sớm nhất sẽ được thưởng bằng những bitcoin mới sinh ra.</p>
+<h3 id="signing">Ký bằng chữ-ký điện-tử thế nào?</h3>
 <p><a href="https://en.wikipedia.org/wiki/Digital_signature" target='_blank'>Chữ-ký điện-tử</a> là một cặp hai số rất lớn: private key và public key. Tên gọi của hai số đó đã cho biết: phải giữ kín private key và để public key cho mọi người biết.
-<br>Khi ký một thông-điệp m, máy-tính sẽ tính ra một chữ ký s từ m và private key rồi gửi s kèm theo m. Bên nhận được thông điệp sẽ dùng public key và m để tính ra xem kết quả có khớp với s hay không. Nếu không khớp nghĩa là m đã bị tráo trên đường truyền.</p>
-<p>Một ứng-dụng khác của chữ-ký điện-tử là mã-hoá thông-điệp để giữ bí-mật. Khi A muốn gửi một thông-điệp hay file m cho B mà không cho bất-kỳ ai khác dùng được thì A dùng public key của B để mã-hoá thông-điệp m thành m'. B nhận được thông-điệp m' sẽ dùng private key để giải-mã trở lại thành m. Bất-kỳ người nào khác chép được m' trên đường truyền đều không thể giải-mã được.</p>
+<br>Khi ký một thông-điệp m, máy-tính sẽ tính ra một chữ-ký s từ m và private key rồi gửi s kèm theo m. Bên nhận được thông-điệp sẽ dùng public key và m để tính ra xem kết-quả có khớp với s hay không. Nếu không khớp nghĩa là m đã bị tráo trên đường truyền.</p>
+<p>Một ứng-dụng khác của chữ-ký điện-tử là mã-hoá thông-điệp để giữ bí-mật. Khi A muốn gửi một thông-điệp hay file m cho B mà không cho bất-kỳ ai khác biết được nội-dung thì A dùng public key của B để mã-hoá thông-điệp m thành m'. B nhận được thông-điệp m' sẽ dùng private key để giải-mã trở lại thành m. Bất-kỳ người nào khác chép được m' trên đường truyền đều không thể giải-mã được.</p>
 
-<h2>Bitcoin được giữ như thế nào?</h2>
-<p>Bitcoin được giữ trong các tài-khoản. Mỗi tài-khoản gồm một cặp hai con-số rất lớn là public key và private key, hai con-số này là duy-nhất trong toàn blockchain, không có tài-khoản nào có key giống tài-khoản khác. Public key là địa-chỉ của tài-khoản—tương-đương với số-tài-khoản.
-<br>Để chuyển tiền-điện-tử từ tài-khoản của bạn sang tài-khoản của người khác thì bạn cần phần-mềm wallet. Wallet là file ghi một hay nhiều cặp public key và private key của các tài-khoản. Phần-mềm wallet sẽ dùng private key để ký lệnh-chuyển-tiền rồi gửi lệnh đó đến các máy-tính node của hệ-thống blockchain. Các node sẽ cùng nhau kiểm-tra lệnh-chuyển-tiền, nếu lệnh hợp-lệ thì ghi việc-chuyển-tiền vào sổ-cái. Mỗi lần chuyển-tiền phải trả phí—gọi là gas. Lệnh-chuyển-tiền có đặc-tính là không-thể sửa được. Lệnh-chuyển-tiền cũng không-thể làm giả được nếu không có người thứ hai biết private key của tài-khoản. Bất-kỳ người nào biết được private key của tài-khoản đều có thể dùng phần-mềm wallet để chuyển tiền sang tài-khoản khác, vì vậy <b>người chủ wallet phải giữ kín các private key của mình</b>.
-<br>Phần-mềm wallet còn giúp đổi private key ra một dãy từ-gợi-nhớ gồm những từ có trong từ-điển (gọi là mnemonic phrase, recovery phrase, passphrase). Do chỉ gồm những từ có trong từ-điển nên passphrase khó bị sai hơn private key. Bạn hãy ghi địa-chỉ và passphrase của các tài-khoản của bạn trong file <a href="protect">KeePass</a> để tránh bị quên hoặc bị lộ.
-<br>Tổng-số tiền có trong tài-khoản là tổng các lượng bitcoin mang địa-chỉ của tài-khoản. Khi một tài-khoản A cần chuyển một lượng bitcoin x sang tài-khoản B mà không có lượng bitcoin bằng đúng x có sẵn trong tài-khoản A thì nó lấy một hoặc nhiều lượng bitcoin có tổng lớn hơn hoặc bằng x đưa vào giao dịch, tạo ra một lượng bitcoin x mới mang địa-chỉ B và một lượng bitcoin mới mang địa-chỉ A chứa phần-dư sau khi trừ x (nếu có).</p>
+<h3 id="storage">Bitcoin được giữ như thế nào?</h3>
+<p>Bitcoin được giữ trong các tài-khoản. Mỗi tài-khoản có một cặp hai con-số rất lớn là public key và private key, hai con-số này là duy-nhất trong toàn blockchain, không có tài-khoản nào có key giống tài-khoản khác. Public key là địa-chỉ của tài-khoản—tương-đương với số-tài-khoản ngân-hàng.</p>
+<p>Để chuyển tiền-điện-tử từ tài-khoản của bạn sang tài-khoản của người-khác thì bạn cần phần-mềm wallet. Wallet là file ghi một hay nhiều cặp public key và private key của các tài-khoản. Để mở file wallet thì cần có mật-khẩu của người-chủ, hoặc dùng dấu-vân-tay hay khuôn-mặt để mở file wallet. Phần-mềm wallet sẽ dùng private key để ký lệnh-chuyển-tiền rồi gửi lệnh đó đến các máy-tính node của hệ-thống blockchain. Các node sẽ cùng nhau kiểm-tra lệnh-chuyển-tiền, nếu lệnh hợp-lệ thì ghi việc-chuyển-tiền vào sổ-cái. Mỗi lần chuyển-tiền phải trả phí—gọi là gas. Lệnh-chuyển-tiền có đặc-tính là không-thể-sửa-được. Lệnh-chuyển-tiền cũng không-thể làm giả được nếu không có người-thứ-hai biết private key của tài-khoản. Bất-kỳ người nào biết được private key của tài-khoản hoặc mật-khẩu của wallet đều có thể dùng phần-mềm wallet để chuyển tiền sang tài-khoản khác, vì vậy <b>người chủ wallet phải giữ kín các private key và mật-khẩu của mình</b>.
+<br>Phần-mềm wallet còn giúp đổi private key ra một dãy từ-gợi-nhớ gồm những từ có trong từ-điển (gọi là mnemonic phrase, recovery phrase, passphrase). Do chỉ gồm những từ có trong từ-điển nên passphrase khó bị sai hơn private key. Bạn hãy ghi các mật-khẩu, địa-chỉ và passphrase của các tài-khoản của bạn trong file <a href="protect">KeePass</a> để tránh bị quên hoặc bị lộ.</p>
+<p>Tổng-số tiền có trong tài-khoản là tổng các lượng bitcoin mang địa-chỉ của tài-khoản. Khi một tài-khoản A cần chuyển một lượng bitcoin x sang tài-khoản B mà không có một lượng bitcoin bằng đúng x có sẵn trong tài-khoản A thì nó lấy một hoặc nhiều lượng bitcoin có tổng lớn hơn hoặc bằng x đưa vào giao dịch, tạo ra một lượng bitcoin x mới mang địa-chỉ B và một lượng bitcoin mới mang địa-chỉ A chứa phần-dư sau khi trừ x (nếu có).</p>
 <p>Tiền giấy và tiền kim-loại thông-thường được chính-phủ phát-hành theo những mệnh-giá cố-định. Bitcoin không giống như vậy. Những lượng bitcoin lớn nhỏ  khác nhau lưu-hành trong mạng. Mỗi lượng bitcoin là một chuỗi data ghi những giao-dịch nó đã trải qua từ lúc được tạo ra. Khi một lượng bitcoin x được chuyển từ tài-khoản A sang tài-khoản B, thì x được ghi thêm địa chỉ B và được ký bằng private key của A. Tất-cả những lượng bitcoin đều được giữ trong blockchain, là những file trong các máy-tính node.</p>
 
 
-<p>Có hai cách quản-lý các tài-khoản là custodial và non-custodial (hoặc self-custodial). Không có tổ-chức nào quản-lý các tài-khoản non-custodial, vì-vậy người chủ của tài-khoản phải tự giữ kỹ private key, nếu lỡ quên private key thì không có cách gì để dùng được tài-khoản. Tài-khoản Custodial do các sàn-giao-dịch tập-trung tạo ra cho khách-hàng sau khi đã KYC—xác-thực-danh-tính-khách-hàng. Trong trường-hợp quên, khách-hàng có-thể hỏi private key từ sàn-giao-dịch.</p>
+<p>Trong mỗi blockchain, có hai cách quản-lý các tài-khoản là custodial và non-custodial (hoặc self-custodial). Không có tổ-chức nào quản-lý các tài-khoản non-custodial, vì-vậy người chủ của tài-khoản phải tự giữ kỹ private key, nếu lỡ quên private key thì không có cách gì để dùng được tài-khoản. Tài-khoản custodial do các sàn-giao-dịch tập-trung tạo ra cho khách-hàng sau khi đã KYC—xác-thực-danh-tính-khách-hàng. Trong trường-hợp quên, khách-hàng có-thể hỏi private key từ sàn-giao-dịch.</p>
 <p>Các dạng phần-mềm wallet.
 <br>Phần-mềm wallet có-thể là một app trong smartphone, trong máy-tính cá-nhân hoặc trong server. Phần-mềm wallet cũng có-thể là một phần của web browser chạy trong smartphone hoặc máy-tính cá-nhân. Phần-mềm wallet cũng có-thể chạy trong một cái máy-tính đặc-biệt dưới-dạng một thiết-bị USB, gọi là hardware wallet. Ưu-điểm của hardware wallet là các private key của tài-khoản chỉ tồn-tại trong thiết-bị USB đó, không sợ bị các phần-mềm gián-điệp trong smartphone hoặc máy-tính lấy trộm.
-<br>Người-ta cũng thường gọi tắt phần-mềm wallet là wallet.</p>
+<br>Người-ta cũng thường gọi tắt phần-mềm wallet là wallet, vì-vậy bạn cần phân-biệt giữa file wallet và phần-mềm wallet.</p>
 <p>Bạn có-thể dùng phần-mềm wallet tạo ra vô-số tài-khoản cho riêng bạn. Tuy-nhiên, bạn không cần nhiều tài-khoản, bạn chỉ cần có tiền-điện-tử trong tài-khoản. Có nhiều tài-khoản chỉ thêm tốn công ghi nhớ địa-chỉ và private key của tài-khoản.</p>
 
 <p>Ở hệ-thống ngân-hàng thường, tiền nằm trong các file trong hệ-thống máy-tính còn chữ-ký thì nằm trên tay chủ-tài-khoản hoặc OTP nằm trong smartphone do chủ-tài-khoản giữ. Tiền và chữ-ký ở hai nơi khác nhau. Hacker phải biết được địa-chỉ của tiền (số-tài-khoản) và chữ-ký thì mới chuyển tiền đi nơi khác được.
-<br>Trong hệ-thống Bitcoin, hacker chỉ cần mnemonic phrase là trở thành chủ của số bitcoin; hacker sẽ nhanh-chóng chuyển hết bitcoin trong tài-khoản sang chỗ khác trước khi chủ wallet kịp biết.</p>
-<h2>Mua-bán Bitcoin như thế nào?</h2>
+<br>Trong hệ-thống Bitcoin, hacker chỉ cần passphrase là trở thành chủ của số bitcoin; hacker sẽ nhanh-chóng chuyển hết bitcoin trong tài-khoản sang chỗ khác trước khi chủ wallet kịp biết.</p>
+<h3 id="trade">Mua-bán Bitcoin như thế nào?</h3>
 <p>Người mua chuyển tiền cho người bán rồi người bán chuyển lượng bitcoin vào địa-chỉ tài-khoản của người mua. Bên mua bitcoin chỉ cần cho biết địa-chỉ dưới dạng dãy chữ-số hoặc một QR code là đủ.
 <br>Nếu bên bán bitcoin gõ dãy chữ-số địa-chỉ sai thì bitcoin sẽ quay trở lại tài-khoản của bên bán trong hầu-hết các trường-hợp, có một xác-suất rất nhỏ là địa-chỉ gõ sai đó có thật và địa-chỉ đó sẽ nhận được lượng bitcoin thay vì người mua nhận được. Việc này tương-tự như chuyển-khoản giữa hai ngân-hàng khác nhau: hầu-hết các lệnh chuyển sai tên hoặc số-tài-khoản bên nhận đều không được thực-hiện, chỉ có trường-hợp tình-cờ mà tên và số-tài-khoản sai lại trùng với một tài-khoản thật thì tiền sẽ chuyển cho người đó. Người-chuyển-khoản sai có thể nhờ ngân-hàng thu-hồi lại tiền, chuyển sai bitcoin thì không thể thu-hồi lại được. Trong những hệ-thống cryptocurrency không có cơ-chế kiểm-tra địa-chỉ như Ethereum thì gửi tiền gửi sai địa-chỉ luôn-luôn đi mất.</p>
 <p>Việc ghi-nhận bitcoin chuyển địa-chỉ khá chậm cho nên chỉ giao-dịch với đối-tác tin-cậy để tránh mất tiền vì bị lừa.</p>
@@ -235,53 +252,54 @@ Giao-dịch trên sàn thì tốn phí-giao-dịch, phí chuyển bitcoin vào v
 <br>Khi lượng bitcoin cần chuyển ra khỏi tài-khoản không bằng bất cứ một lượng bitcoin nào có sẵn trong tài-khoản thì việc chuyển bitcoin sẽ có thêm bước tách/nhập các lượng bitcoin có sẵn thành lượng bitcoin cần chuyển. Bước tách/nhập làm tốn công miner hơn nên tốn phí nhiều hơn.</p>
 
 
-<h2>Giữ wallet thế nào để khỏi mất?</h2>
+<h3 id="keep">Giữ wallet thế nào để khỏi mất?</h3>
 <p>Custodial wallet trong các sàn-giao-dịch là mục-tiêu của hacker. Hacker luôn tìm cách chiếm-đoạt toàn-bộ wallet trong server của sàn. Lượng bitcoin chưa định bán thì nên chuyển từ sàn vào cold wallet để tránh bị hack.</p>
 <p>Wallet trong máy-tính và smartphone dễ bị mất-cắp qua các phần mềm gián điệp. Phần-mềm gián-điệp tìm cách trộm private key của tài-khoản rồi gửi về cho kẻ-cắp. Để an-toàn hơn, người ta để wallet trong các máy-tính sạch và không nối mạng, gọi là cold wallet. Người ta đặt ra các thủ-tục rất chặt-chẽ khi dùng cold wallet trong máy-tính để tránh bị mất-cắp.</p>
-<p>Trong nhiều trường-hợp, người chủ wallet sơ-suất để lộ passphrase của tài-khoản.</p>
-<p>Một rủi-ro khác là hư hoặc mất vật chứa private key: hư đĩa-cứng máy-tính, hư/mất smartphone hoặc USB flash drive. Do-đó cần phải backup các private key của wallet trên một vật chứa khác. Hư/mất wallet cũng giống như khi bị rớt mất bóp-tiền hoặc khi tủ tiền giấy bị cháy. Bóp-tiền hay tờ tiền thật bị rớt ngoài đường thì người-qua-đường có thể lượm được. Bitcoin bị mất do mất private key thì không có người nào lượm được, nó không-bao-giờ được dùng nữa.</p>
+<p>Trong nhiều trường-hợp, người chủ wallet sơ-suất để lộ passphrase của tài-khoản, ví-dụ như ghi vào file rồi không giữ kỹ, ghi vào sổ rồi để người khác thấy, chụp màn-hình rồi để lộ file hình…</p>
+<p>Một rủi-ro khác là hư hoặc mất vật chứa wallet hoặc chứa private key: hư đĩa-cứng máy-tính, hư/mất smartphone hoặc USB flash drive. Do-đó cần phải backup các file wallet trên một vật chứa khác, tốt nhất là backup tự-động vào <a href="cloudstorage">cloud storage</a>. Hư/mất wallet cũng giống như khi bị rớt mất bóp-tiền hoặc khi tủ tiền giấy bị cháy. Bóp-tiền hay tờ tiền thật bị rớt ngoài đường thì người-qua-đường có thể lượm được. Bitcoin bị mất do mất private key thì không có người nào lượm được, nó không-bao-giờ được dùng nữa.</p>
 
-<h2>Mặt trái của Bitcoin</h2>
+<h3 id="back">Mặt trái của Bitcoin</h3>
 <h3>Sự-đầu-cơ</h3>
 <p>Mặc-dù nó được gọi là currency, coin nhưng tôi thấy hiện-nay nó không phải là một loại tiền vì không tiện để dùng nó mua các thứ khác. Mỗi lần chuyển một lượng bitcoin dù nhỏ hay lớn đều tốn trung bình 10 phút, lâu hơn việc thanh-toán bằng thẻ. Tôi cho rằng Bitcoin là một loại tài-sản để <a href="/huu-ich/cach-dau-tu">đầu-cơ</a>.</p>
+<p>Gần-đây các hãng thẻ-thanh-toán như VISA, MasterCard đã hợp-tác với các sàn-giao-dịch tiền-điện-tử để phát-hành thẻ-thanh-toán cho chủ-thẻ đổi tiền-điện-tử ra các loại tiền fiat ngay khi thanh-toán. Loại thẻ đó tương-tự như thẻ-thanh-toán quốc-tế do các ngân-hàng Việt-Nam phát-hành, chủ-thẻ mua hàng bằng ngoại-tệ nhưng trả VND cho ngân-hàng.</p> 
 
 
 <h3>Hao-tốn năng-lượng</h3>
 <p>Các máy-tính miner tranh nhau xử-lý các giao-dịch để cuối-cùng chỉ có một miner được thưởng bitcoin mới, việc tranh-giành làm hao-tốn rất nhiều điện-năng. Có người tính rằng hiện-nay để xử-lý một giao-dịch bitcoin thì hao mất 200 KWh điện. Và lượng điện đó ngày càng tăng vì càng có nhiều miner mới tham-gia.</p>
 <p>Các blockchain sau này đã thay-đổi để không hao-tốn năng-lượng như Bitcoin.</p>
 
-<h2>Làm-quen với tiền-điện-tử—cryptocurrency miễn-phí</h2>
+<h2 id="free">Làm-quen với tiền-điện-tử—cryptocurrency miễn-phí</h2>
 <p>Sau khi Bitcoin trở nên hấp-dẫn, tiền-điện-tử—cryptocurrency dựa trên blockchain là một xu-hướng mới của xã-hội loài-người. Rất nhiều tổ-chức đã tự phát-hành tiền-điện-tử, gọi là coin hoặc token. Coin là tiền-điện-tử có blockchain của riêng nó, token dùng blockchain của một coin đã có. Trên thị-trường đang có hàng ngàn loại token như vậy. Mỗi loại token có một mục-đích sử-dụng riêng trong một phạm-vi nhất-định, và có giá-trị quy ra tiền fiat. Vì có giá-trị đổi được ra tiền fiat nên người-ta mua-bán token để đầu-cơ giống như đầu-cơ ngoại-tệ.</p>
 <p>Bạn có-thể có được một vài loại token một cách hoàn-toàn miễn-phí và làm-quen với cách-dùng token. Vì miễn-phí nên giá trị của những token này không lớn, mục-đích chính chỉ là để làm-quen với tiền-điện-tử.</p>
 <p><a href="https://vi.wikipedia.org/wiki/Ti%E1%BB%81n_%C4%91%E1%BB%8Bnh_danh" target='_blank'>Tiền fiat—tiền-định-danh</a> do các chính-phủ phát-hành cũng có-thể được thanh-toán qua những phương-tiện điện-tử như thẻ-thanh-toán, chuyển-khoản… nhưng nó không phải là tiền-điện-tử.</p>
-<p>Tiếp-theo tiền-điện-tử là <b>NFT</b>—Non-Fungible Token, là những token có tính duy-nhất trong blockchain, nó khác với những tiền-điện-tử đã nêu ở trên. NFT có-thể là một dạng giấy-chứng-nhận kỹ-thuật-số, chứa thông-tin về một đối-tượng trong thế-giới thật; ví-dụ như số seri của một đôi-giày trong một đợt sản-xuất hạn-chế, quyền sở-hữu một mảnh-đất, vé dự sự-kiện. Hoặc NFT là một sản-phẩm dạng số như một file ghi-âm giọng nói người, một file hình. Các nghệ-sĩ có-thể bán file nhạc, file hình dưới dạng NFT. Mỗi NFT có một key riêng để xác-định chủ sở-hữu, không thể làm giả được. NFT có-thể được chuyển-nhượng bằng cách dùng private key ký lệnh giống như chuyển tiền-điện-tử.</p>
+<p>Tiếp-theo tiền-điện-tử là <b>NFT</b>—Non-Fungible Token, là những token có tính duy-nhất trong blockchain, nó khác với những tiền-điện-tử đã nêu ở trên. NFT có-thể là một dạng giấy-chứng-nhận kỹ-thuật-số, chứa thông-tin về một đối-tượng trong thế-giới thật; ví-dụ như số seri của một đôi-giày trong một đợt sản-xuất hạn-chế, quyền sở-hữu một mảnh-đất, vé dự sự-kiện. Hoặc NFT là một sản-phẩm dạng số như một file ghi-âm giọng nói người, một file hình. Các nghệ-sĩ có-thể bán file nhạc, file hình dưới dạng NFT. Các file hình hay file nhạc đó có thể được sao-chép ra nhiều bản nhưng những bản-sao không phải là NFT, không có giá-trị cao. Mỗi NFT có một key riêng để xác-định chủ sở-hữu, không thể làm giả được. NFT có-thể được chuyển-nhượng bằng cách dùng private key ký lệnh giống như chuyển tiền-điện-tử.</p>
 <p>Sau-đây là một vài cách miễn-phí để có tiền-điện-tử.</p>
 
-<h2>Sweat Economy</h2>
-<p>Sweat Economy là một token dựa trên blockchain NEAR. Mọi người đều có thể nhận được Sweat miễn-phí bằng cách đi-bộ. Khi đã có Sweat rồi, bạn có thể đem đổi ra tiền fiat ở các sàn-giao-dịch, hoặc đem staking (tương-tự như gửi tiết-kiệm để lấy lời). Tài-khoản của Sweat dùng nền-tảng blockchain của NEAR, mọi giao-dịch liên-quan đến tài-khoản Sweat phải trả phí—gas bằng NEAR token.</p>
+<h3 id="sweat">Sweat Economy</h3>
+<p>Sweat Economy là một token dựa trên blockchain <a href="https://near.org" target='_blank'>NEAR</a>. Mọi người đều có thể nhận được Sweat miễn-phí bằng cách đi-bộ. Khi đã có Sweat rồi, bạn có thể đem đổi ra tiền fiat ở các sàn-giao-dịch, hoặc đem staking (tương-tự như gửi tiết-kiệm để lấy lời). Tài-khoản của Sweat dùng nền-tảng blockchain của NEAR, mọi giao-dịch liên-quan đến tài-khoản Sweat phải trả phí—gas bằng NEAR token.</p>
 <p>Bạn cần hai app Sweatcoin và Sweat Wallet trong smartphone để nhận Sweat. App Sweatcoin đếm số bước-chân bằng sensor của smartphone. Mỗi ngày Sweatcoin sẽ chuyển cho Sweat Wallet 5000 bước-chân đầu-tiên, số bước-chân từ 5001 trở đi được đổi thành Sweatcoin. Sweatcoin được dùng để đổi phiếu-giảm-giá ở các đối-tác của Sweat, hoặc được dùng để góp quỹ-từ-thiện.
 <br>App Sweat Wallet ghi số bước-chân và thời-gian đi vào blockchain, đổi số bước-chân ra Sweat token. Số bước-chân cho một Sweat tăng dần theo thời-gian để làm cho Sweat ngày càng hiếm, càng có giá. Vào ngày 18/01/2023 phải đi 2500 bước mới được một Sweat. Đến năm 2028 thì phải đi 80.200 bước mới được một Sweat. Hiện-nay giá Sweat token chỉ khoảng một cent Mỹ, không đáng để đổi Sweat token lấy tiền fiat nhưng dùng để có kinh-nghiệm với tiền-điện-tử thì tốt.</p>
-<h3>Cài app</h3>
-<p>Bạn bắt-đầu bằng-cách cài app Sweatcoin vào smartphone qua <a href="https://sweatco.in/hi/bile44591842225" target='_blank'>link sau</a>. Khi bạn cài app qua link đó, tôi được thưởng năm Sweatcoin, tôi sẽ dùng số Sweatcoin đó để góp các quỹ từ-thiện.</p>
+<h4>Cài app</h4>
+<p>Bạn bắt-đầu bằng-cách cài app Sweatcoin vào smartphone qua <a href="https://sweatco.in/app/sf/bile44591842225" target='_blank'>link sau</a>. Khi bạn cài app qua link đó, tôi được thưởng năm Sweatcoin, tôi sẽ dùng số Sweatcoin đó để góp các quỹ từ-thiện.</p>
 <p>Sau khi cài app Sweatcoin, bạn mở app và tạo tài-khoản. Sweatcoin cần có quyền dùng sensor để đếm bước-chân. Bạn hãy để smartphone trong túi áo, hoặc túi quần, hoặc túi đeo bên người, hoặc để trong một cái bao đeo ở bắp-tay khi đi lại trong nhà hoặc ngoài trời. App Sweatcoin cũng đếm được số vòng đạp xe đạp nếu bạn để smartphone trong túi quần.</p>
 <p>Sau khi dùng Sweatcoin được nửa ngày, bạn đã có một số Sweatcoin từ số bước-chân, bạn hãy cài thêm app Sweat Wallet để mở wallet. App Sweat Wallet chính là phần-mềm wallet.</p>
-<h3>Chuyển tiền Sweat</h3>
+<h4>Chuyển tiền Sweat</h4>
 <p>Bạn có-thể dùng app Sweat Wallet để chuyển Sweat cho người khác. Bạn cần phải biết tên tài-khoản hoặc địa-chỉ tài-khoản của người kia. Nếu người kia là bạn bè trong trong app Sweatcoin thì bạn có-thể đọc được tên tài-khoản của họ.
 <br>Người kia cũng có-thể gửi địa-chỉ tài-khoản của họ cho bạn qua chức-năng Request trong app Sweat Wallet.</p>
-<h3>Staking</h3>
+<h4>Staking</h4>
 <p>Staking là gửi token trong một thời-hạn để được thưởng giống như gửi tiết-kiệm ở ngân-hàng. Trong app Sweat Wallet gọi là Grow Jar. Bạn có thể tạo nhiều Grow Jar. Mỗi lần tạo một Grow Jar bạn phải tốn một ít phí.</p>
-<h3>Swap</h3>
+<h4>Swap</h4>
 <p>Khi bạn cài app Sweatcoin thì Sweat thật-sự tạo cho bạn một tài-khoản NEAR để chứa Sweat token, và tặng cho bạn 0,05 NEAR token để thực-hiện một số giao-dịch đầu-tiên, mỗi giao-dịch tốn gas từ 0,00004 đến 0,00177 NEAR token. Sau nhiều lần staking thì tôi còn lại 0,01965 NEAR token và không giao-dịch được nữa vì phải Reserved for storage 0,00476 NEAR và Reserved for transactions 0,01489 NEAR. Để có thêm NEAR token, tôi phải swap—đổi-tiền từ Sweat sang NEAR tại <a href="https://ref.finance" target='_blank'>ref.finance</a></p>
 
-<h3>Tương-lai</h3>
+<h4>Tương-lai</h4>
 <p>Sweatcoin sẽ ghi nhận được thêm các kiểu hoạt-động cơ-thể khác ngoài bước-chân.
 <br>Sweat đặt kế-hoạch biến số-liệu hoạt-động cơ-thể của từng người thành hàng-hoá của riêng mỗi người—dưới dạng NFT, và mỗi người có-thể bán những NFT của mình cho các công-ty nghiên-cứu và sản-xuất các dụng-cụ liên-quan đến sức-khoẻ.</p>
 
-<h2>Brave Rewards</h2>
+<h3 id="brave">Brave Rewards</h3>
 <p>Brave là một phần-mềm web browser với đặc-điểm cho phép bạn kiểm-soát việc xem quảng-cáo. Brave sẽ lọc bỏ phần-lớn quảng-cáo trong các trang web và đề-nghị bạn xem những quảng-cáo từ những nguồn chọn-lọc. Brave hiện ra một dòng tóm-tắt về quảng-cáo, bạn tự quyết-định xem hay không xem quảng-cáo đó. Khi xem một quảng-cáo, bạn được tặng một ít BAT—Basic Attention Token. BAT là token dựa trên blockchain Ethereum. BAT hiện đang có giá 23 cent Mỹ.</p>
 <p>Sẽ được viết tiếp.</p>
 
-<h2>Pi Network—một loại tiền-điện-tử cho mọi người</h2>
+<h3 id="pi">Pi Network—một loại tiền-điện-tử cho mọi người</h3>
 <p>Pi rất khác các loại tiền-điện-tử còn lại. Pi được xây-dựng để trở-thành phương-tiện trao-đổi hàng-hoá và dịch-vụ toàn-cầu. Khác với hai loại trên, Pi chưa hoàn-thiện nhưng giá-trị của Pi cao hơn.
 <br>Bạn hãy là <a href="pi-app">người-tiên-phong</a> xây-dựng cộng-đồng và tạo giá-trị cho đồng tiền-điện-tử Pi.</p>
 
