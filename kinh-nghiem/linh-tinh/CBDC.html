@@ -105,18 +105,22 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 
 @media (max-width: 399px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:10px; }
+  .portimg { width:100%; }
 
 }
 @media (min-width: 400px) and (max-width: 499px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:20px; }
+  .portimg { width:100%; }
 
 }
 @media (min-width: 500px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+  .portimg { margin: auto; width:45%; }
 
 }
 @media (min-width: 1260px) {
   .mbutton { display:inline;float:left;padding-top:7px;padding-right:40px; }
+  .portimg { margin: auto; width:45%; }
 
 }
 
@@ -191,15 +195,16 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 <h1>Tìm-hiểu Tiền-điện-tử do chính-phủ phát-hành<br>Central Bank Digital Currency</h1>
 <div class="right">Viết lần đầu trong Tháng Tư, 2022.</div>
 <!-- body here -->
-<p>Ở các nước đã-phát-triển, việc không cần tiền-mặt (tiền giấy, tiền polyme, tiền kim-loại) trong thanh-toán đã rất phổ-biến. Với những món tiền lớn, người-ta chuyển qua ngân-hàng bằng séc hoặc lệnh-chuyển-tiền. Với những món tiền vừa phải, người ta dùng thẻ-thanh-toán (debit hoặc credit). Ví-điện-tử đã phổ-biến ở một số nơi để thanh-toán những món tiền lẻ hàng ngày. Tuy-nhiên tiền-mặt vẫn còn được dùng nhiều ở đa-số các nước. Ngoài-ra, <a href="../may-tinh/vi-dien-tu">ví-điện-tử</a> cũng chưa phải là giải-pháp hoàn-hảo, vì nó cần phải có mạng Internet mới thanh-toán được và cần một tổ-chức làm trung-gian (vì vậy sẽ tốn phí).</p>
+<p>Ở các nước đã-phát-triển, việc không cần tiền-mặt (tiền-giấy, tiền-polyme, tiền-kim-loại) trong thanh-toán đã rất phổ-biến. Với những món-tiền lớn, người-ta chuyển qua ngân-hàng bằng séc hoặc lệnh-chuyển-tiền. Với những món-tiền vừa phải, người ta dùng thẻ-thanh-toán (debit hoặc credit). Ví-điện-tử đã phổ-biến ở một số nơi để thanh-toán những món tiền lẻ hàng ngày. Tuy-nhiên tiền-mặt vẫn còn được dùng nhiều ở đa-số các nước. Ngoài-ra, <a href="../may-tinh/vi-dien-tu">ví-điện-tử</a> cũng chưa phải là giải-pháp hoàn-hảo, vì nó cần phải có mạng Internet mới thanh-toán được và cần một tổ-chức làm trung-gian (vì-vậy sẽ tốn phí).</p>
 <p>Chính-phủ các nước đang tìm cách thay-thế tiền-mặt để không tốn chi-phí in tiền và đúc tiền, đồng-thời tìm cách loại-bỏ trung-gian trong thanh-toán tiền lẻ. Đó là Central Bank Digital Currency—Tiền-điện-tử do chính-phủ phát-hành. Gọi tên dài như vậy để phân-biệt với các loại tiền-điện-tử do các tổ-chức tư-nhân tạo ra gần-đây dựa trên kỹ-thuật <a href="../may-tinh/cryptocurrency">blockchain</a>.</p>
 <p>Hiện-nay vẫn chưa có một định-nghĩa thống-nhất và chi-tiết các tính-chất của CBDC. Một vài nước đã bắt-đầu dùng thử CBDC, ví-dụ như China. Nhiều nước vẫn còn đang định-nghĩa hoặc đánh-giá các kỹ-thuật để thực-hiện.</p>
 <p>Nhiều tính-chất của CBDC được nêu ra, có những tính-chất trái-ngược nhau giữa các nước, như-là:</p>
 <ul>
 	<li>dùng được trên toàn thế-giới</li>
+	<li>dùng được offline trong giao-dịch nhỏ</li>
 	<li>miễn phí-thanh-toán phải trả cho tổ-chức trung-gian</li>
-	<li>ví tiền vô-danh hay định-danh</li>
-	<li>ghi sổ mọi giao-dịch hoặc không ghi</li>
+	<li>ví tiền ẩn-danh hay định-danh</li>
+	<li>ghi sổ mọi giao-dịch hoặc không ghi sổ những giao-dịch nhỏ</li>
 </ul>
 <p>CBDC được chia làm hai lớp:</p>
 <dl>
@@ -210,7 +215,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 	<dd>được các tổ-chức tài-chính dùng trong những giao-dịch rất lớn, gồm cả chuyển tiền xuyên-biên-giới,
 	<br>Hiện-nay, việc chuyển tiền xuyên-biên-giới đã không dùng tiền-mặt, tuy-nhiên phải tốn nhiều thời-gian và chi-phí trung-gian. Wholesale CBDC sẽ cải-thiện tình-trạng đó.</dd>
 </dl>
-<p>Ngoài-ra, hoạt-động chuyển tiền xuyên-biên-giới trong bán-lẻ vốn đang nằm trong tay các công-ty thẻ-thanh-toán quốc-tế và một vài ví-điện-tử quốc-tế như PayPal chưa được nêu ra trong giải-pháp retail CBDC. Có-lẽ giải-pháp sẽ là các loại tiền-điện-tử phi-chính-phủ, ví-dụ như <a href="../may-tinh/pi-network">Pi Network</a>?</p>
+<p>Ngoài-ra, hoạt-động chuyển tiền xuyên-biên-giới trong bán-lẻ vốn đang nằm trong tay các công-ty thẻ-thanh-toán quốc-tế và một vài ví-điện-tử quốc-tế như PayPal chưa được nêu ra trong giải-pháp retail CBDC. Làm sao để người Việt có ví USD CBDC một cách dễ-dàng? Có-lẽ giải-pháp sẽ là các loại tiền-điện-tử phi-chính-phủ, ví-dụ như <a href="../may-tinh/pi-network">Pi Network</a>?</p>
 <p>Phần sau đây là một số thông-tin về retail CBDC ở các nước.</p>
 <h2>China</h2>
 <p>China đã phát-hành <a href="https://en.wikipedia.org/wiki/Digital_renminbi" target='_blank'>e-CNY để dùng thử từ Tháng Tư, 2020</a>. Nó là một dạng tài-khoản tiền có định-danh cá-nhân mở tại các ngân-hàng thương-mại. Có-thể dùng smartphone nối Internet để chuyển e-CNY giữa các tài-khoản qua sóng NFC hoặc QR code. Hoặc một loại thẻ thông-minh chuyển một vài lần offline sau đó đồng-bộ các giao-dịch với hệ-thống sổ.
@@ -222,12 +227,12 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 	<li>e-cash phải an-toàn, ẩn-danh</li>
 	<li>e-cash phải hoạt-động được với các hệ-thống tài-chính hiện có</li>
 	<li>e-cash phải dùng được trong thanh-toán offline giữa người dân với nhau</li>
-	<li>e-cash phải phù hợp với các quy-định chống rửa tiền, chống khủng-bố hiện có</li>
+	<li>e-cash phải phù hợp với các quy-định chống rửa-tiền, chống khủng-bố hiện có</li>
 	<li>thử-nghiệm e-cash với ít nhất hai loại hardware: thẻ chip hoặc điện-thoại di-động</li>
 	<li>e-cash không có thông-tin định-danh cá-nhân, không thu-thập thông-tin giao-dịch</li>
 </ul>
-<p>Dự-luật đó còn khá sơ-sài, nó chưa nêu ra cách các doanh-nghiệp dùng e-cash như-thế-nào, doanh-nghiệp thì không thể ẩn-danh.</p>
-<p>E-cash hoạt-động được với hệ-thống tài-chính hiện có tức là việc chuyển-tiền gián-tiếp vẫn qua hệ-thống ngân-hàng hiện nay, và vẫn bị ghi sổ. Chính-phủ Mỹ chỉ theo-dõi tiền với mục-đích chống rửa-tiền và chống khủng-bố, Chính-phủ Mỹ không cần theo dõi việc dân Mỹ dùng vài ngàn đô-la mua quà tặng bồ hay ăn-tiệc ở nhà-hàng nào.</p>
+<p>Dự-luật đó còn khá sơ-sài, nó chỉ mới đề-cập đến tiền-lẻ, chưa nêu ra cách kiểm-soát những món tiền lớn để chống rửa-tiền, các doanh-nghiệp dùng e-cash như-thế-nào, doanh-nghiệp thì không thể ẩn-danh.</p>
+<p>E-cash hoạt-động được với hệ-thống tài-chính hiện có tức-là các ngân-hàng chưa bị đào-thải. Chính-phủ Mỹ chỉ theo-dõi tiền với mục-đích chống rửa-tiền và chống khủng-bố, Chính-phủ Mỹ không cần theo dõi việc dân Mỹ dùng vài ngàn đô-la mua quà tặng bồ hay ăn-tiệc ở nhà-hàng nào.</p>
 <p>Mục-đích của e-cash trong dự-luật này là để tạo ra tiện-nghi cho dân-chúng, giảm chi-phí thanh-toán không tiền-mặt, tiết-kiệm chi-phí in tiền. Không có mục-đích quản-lý tất-cả mọi khoản tiền lẻ như e-CNY của TQ.</p>
 
 <p>Có-thể thấy rằng e-cash của Mỹ gần giống tiền-mặt và có những điểm hay hơn tiền-mặt. Trong khi đó e-CNY giống như một tài-khoản ngân-hàng bỏ bớt đi khoản phí-chuyển-tiền.
