@@ -311,7 +311,7 @@ Số Node sẽ tăng theo số giao-dịch để giữ cho tốc-độ xử-lý 
 <h5 id="chinh_may">Chỉnh máy</h5>
 <p>Để máy chạy Pi Node tốt hơn, chúng ta phải chỉnh vài chỗ.</p>
 <h6>RAM</h6>
-<p><del>Máy-ảo Consensus chỉ cần khoảng 700 MB để chạy các process và thêm khoảng vài trăm megabyte làm cache file. RAM để cache file trong máy-ảo là một sự lãng-phí vì file trong máy-ảo cũng được chứa trong đĩa-cứng của máy-thật và được máy-thật cache trong RAM tức là mỗi file được giữ hai nơi trong RAM. Sự lãng-phí đó có-thể tránh khỏi bằng cách dùng tool nocache trong máy-ảo, việc này phải do những người làm ra image Consensus làm. Tôi đã gửi ý kiến này đến Pi Core Team. Trong khi chờ đợi nocache thì phải chỉnh WSL để tiết kiệm RAM. Windows mặc nhiên cho phép máy-ảo dùng đến 80% RAM của máy-thật. Để giảm lượng RAM cho máy-ảo thì tạo file config theo hướng dẫn ở <a href="https://docs.microsoft.com/en-us/windows/wsl/wsl-config#configure-global-options-with-wslconfig" target='_blank'>Microsoft</a>. Đơn vị memory dùng trong file config đó là MB hoặc GB, tôi cho máy-ảo dùng 1250 MB memory và 1 GB swap, khi đó máy-ảo Consensus dùng khoảng 200 MB swap, đó là những vùng memory ít dùng tới. 200 MB đó được ghi vào một file trong Windows.</del></p>
+<p>Máy-ảo Consensus chỉ cần khoảng 700 MB để chạy các process và thêm khoảng vài trăm megabyte làm cache file. RAM để cache file trong máy-ảo là một sự lãng-phí vì file trong máy-ảo cũng được chứa trong đĩa-cứng của máy-thật và được máy-thật cache trong RAM tức là mỗi file được giữ hai nơi trong RAM. Đối với máy có ít RAM thì phải chỉnh WSL để tiết kiệm RAM. Windows mặc nhiên cho phép máy-ảo dùng đến 80% RAM của máy-thật. Để giảm lượng RAM cho máy-ảo thì tạo file config theo hướng dẫn ở <a href="https://docs.microsoft.com/en-us/windows/wsl/wsl-config#configure-global-options-with-wslconfig" target='_blank'>Microsoft</a>. Đơn vị memory dùng trong file config đó là MB hoặc GB, tôi cho máy-ảo dùng 2000 MB memory và 1 GB swap, khi đó máy-ảo Consensus dùng khoảng 200 MB swap, đó là những vùng memory ít dùng tới. 200 MB đó được ghi vào một file trong Windows.</p>
 <h6>Đĩa-cứng</h6>
 <p>Máy-ảo Consensus liên-tục nhận được các block chứa giao-dịch mới và ghi vào database. Việc ghi đĩa nhiều lần làm ảnh-hưởng đến hoạt-động của máy, để giảm số lần ghi đĩa xuống thì mở Device Manager của Windows, bấm vào dấu-hiệu bên trái Disk drives để hiện ra tất cả các ổ-đĩa, chọn ổ-đĩa-cứng rồi bấm Enter để mở Properties của ổ-đĩa đó. Chọn tab Policies, trong đó chọn "Enable write caching on the device" (default Windows đã chọn rồi), và chọn tiếp "Turn off Windows write cache buffer flushing on the device".
 <br>Nếu máy có nhiều ổ-đĩa-cứng thì chỉnh hết trên tất cả các ổ đĩa, nhưng đừng chỉnh trên những đĩa USB.
@@ -319,11 +319,52 @@ Số Node sẽ tăng theo số giao-dịch để giữ cho tốc-độ xử-lý 
 Tác-dụng càng rõ trên những máy có ổ-đĩa chậm. Trên máy laptop của tôi gắn HDD, sau khi chỉnh thì Active time đã giảm từ 50%-100% xuống chỉ còn 10%-15%.
 <br>Rủi-ro của việc này là khi máy bị mất điện thì có thể bị hư file.</p>
 <h6>Tắt bớt các service của Windows</h6>
-<p>Các service có-thể tắt là Bluetooth, Data Usage, Display Enhancement Service, Display Policy Service, Geolocation Service, Payment and NFC, Print Spooler, Smart Card, SSDP Dicovery, SysMain, Themes, Touch Keyboard, Windows Search, Windows Update, Prefetch.</p>
+<p>Các service có-thể tắt là Bluetooth, Data Usage, Diagnostic Policy Service,  Display Enhancement Service, Display Policy Service, Geolocation Service, Payment and NFC, Print Spooler, Smart Card, SSDP Dicovery, SysMain, Themes, Windows Search, Windows Update, Prefetch.</p>
 <h6>Tắt các background app của Windows</h6>
 <p>Tắt các background app bằng Control Panel.</p>
 <h6>Antivirus</h6>
 Chương-trình antivirus của Microsoft là Windows Security rất hao CPU. Tôi cài Avast vào để đỡ hao. Sau-đó tôi tắt luôn antivirus.
+<h6>Giảm tải CPU</h6>
+<div>
+<p>App Pi_Node trên Windows đều-đặn mở task để lấy thông-tin từ Docker container pi-consensus rồi update vào window của app. Nhưng chúng-ta đâu có ngồi nhìn màn-hình suốt-ngày nên không cần nó update.
+<br>Tôi đã thử close window Pi Node bằng cách bấm Ctrl-W, close window chứ không exit nên nó vẫn chạy ngầm mà không mở task để lấy thông-tin từ Docker container pi-consensus. Miễn là đừng exit Pi Node thì vẫn có bonus. Bonus vẫn tăng hàng-ngày, tăng nhanh hay chậm so với khi Pi Node chạy trên màn-hình thì không biết vì bonus vốn là một điều bí-ẩn.
+<br>Làm-như-vậy sẽ tiết-kiệm được một chút xíu điện. Đối-với những trại hàng trăm node thì sẽ tiết-kiệm được đáng-kể. Đối-với những máy yếu thì việc này giảm tải cho CPU đáng-kể.</p>
+<p>Rồi đôi-khi cần nhìn đến màn-hình để xem node có đồng-bộ không thì làm sao?
+<br>Sau khi close window Pi Node, tôi mở một Command Prompt hoặc Power Shell rồi chạy lệnh <pre>docker exec -it pi-consensus bash</pre> để connect vào container.
+<br>Trong container tôi chạy hai lệnh:
+<pre>export TZ="Asia/Ho_Chi_Minh"
+while (true) do
+ stellar-core http-command info;
+ date; sleep 120;
+done</pre>
+Hai lệnh đó sẽ đều-đặn hiện trạng-thái của node, kèm theo giờ  trên màn-hình mỗi hai phút.
+<br>Khi nhìn vào cửa-sổ màn-hình, chúng ta xem giờ trong dòng cuối, nếu nó không cũ hơn hai phút thì node còn đang chạy. Nếu giờ đó trễ hơn hai phút thì gõ Enter vài cái xem nó có cuộn đến giờ mới nhất không. Nếu nó không cuộn đến giờ mới nhất thì gõ Ctrl-C để chấm dứt lệnh, rồi chạy lại lệnh trên. Để chạy lại lệnh cũ thì chỉ cần bấm dấu ⏶ (lên) trên bàn-phím đến khi thấy lệnh cũ rồi bấm Enter.
+<br>Kế-đó nhìn lên dòng state, nếu nó có chữ Synced là tốt. Nếu state là Joining SCP, có nghĩa là node bị trễ, chúng ta cuộn lên xem lại tình-trạng của vài phút trước xem lần Synced cuối là lúc nào. Nếu lần Synced cuối không quá xa thì cũng bình-thường.
+<br>Nếu node bị trễ nhiều thì state là Catching up và có thêm một dòng chữ status khá dài, cho biết nó đang xử-lý được bao nhiêu phần-trăm số block tính từ lúc bị trễ tới block mới nhất. Số-phần-trăm đó sẽ tăng dần sau vài phút. Nếu quá lâu mà số-phần-trăm không tăng thì vấn-đề nặng rồi.
+<br>Để biết số connection thì cuộn cửa sổ lên, nhìn mục authenticated_count trong phần peers, đó là tổng outgoing connections và incoming connections. Nếu authenticated_count bằng zero thì không bình-thường.</p>
+</div>
+<h5>Vấn-đề của Pi Node</h5>
+<p>Pi Node có vấn-đề khi trạng-thái không Synced trong một thời-gian dài hơn một giờ. Các nguyên-nhân có-thể gây ra vấn-đề đó là:</p>
+<ol>
+<li>máy không nối vào Internet,</li>
+<li>máy bị sai giờ,</li>
+<li>máy yếu,</li>
+<li>database bị hư,</li>
+<li>các lỗi không rõ lý-do trong máy,</li>
+<li>các lỗi không rõ lý-do trong Pi Network.</li>
+</ol>
+<p>Khi Pi Node gặp vấn-đề, ta phải kiểm-tra ngay hai nguyên-nhân trên cùng, nếu mắc phải thì phải sửa ngay.
+<br>Task Manager sẽ cho thấy các dấu-hiệu của máy yếu: Active time của đĩa-cứng cao liên-tục, dùng nhiều virtual memory, CPU liên-tục chạy nhiều. Việc chỉnh máy ở trên sẽ giảm tải cho máy yếu. Nếu đã chỉnh máy rồi mà các dấu-hiệu của máy yếu vẫn thường xuất-hiện thì cần đổi SSD, thêm RAM hoặc đổi máy mạnh hơn.</p>
+<p>Sau khi đã loại-trừ ba nguyên-nhân đầu rồi mà Pi Node vẫn bị trễ nhiều thì sẽ thử tiếp các bước sau để loại-bỏ các tình-trạng lỗi không rõ lý-do trong máy:</p>
+<ol>
+<li>Restart container bằng lệnh sau trong Power Shell 
+<pre>docker container pi-consensus stop
+docker container pi-consensus start</pre></li>
+<li>Restart Docker com.docker.service trong Services</li>
+<li>Restart Windows</li>
+</ol>
+<p>Làm các bước trên cách nhau 30 phút, nếu tình-trạng node không tốt hơn sau 30 phút thì mới làm bước tiếp-theo. Nếu sau khi làm bước ba mà tình-trạng không tốt hơn thì có-lẽ lỗi không rõ lý-do trong Pi Network, phải chờ PCT sửa.</p>
+<p>Lỗi database bị hư rất hiếm khi xảy ra nhưng rất dễ sửa. Dấu-hiệu của lỗi này là  lệnh stellar-core báo lỗi do container không start database được. Để sửa lỗi này thì chọn Remove all blockchain data trong màn hình Troubleshooting của Pi Node.</p>
 </div>
 </section>
 </amp-accordion>
