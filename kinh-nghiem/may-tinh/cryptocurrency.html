@@ -199,6 +199,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
     <blockquote>
       <a href="#signing">Chữ-ký điện-tử</a>
       <br><a href="#storage">Giữ bitcoin</a>
+      <br><a href="#tradeplatform">Sàn-giao-dịch</a>
       <br><a href="#trade">Mua-bán bitcoin</a>
       <br><a href="#keep">Giữ wallet cho an-toàn</a>
       <br><a href="#back">Mặt trái của Bitcoin</a>
@@ -232,7 +233,7 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 <p>Bitcoin được giữ trong các tài-khoản—account. Mỗi tài-khoản có một cặp hai con-số rất lớn là public key và private key, hai con-số này là duy-nhất trong toàn blockchain, không có tài-khoản nào có key giống tài-khoản khác. Public key là địa-chỉ của tài-khoản—tương-đương với số-tài-khoản ngân-hàng. Private key là khoá-bí-mật, dùng để thực-hiện giao-dịch trên tài-khoản.</p>
 <p>Tiền giấy và tiền kim-loại thông-thường được chính-phủ phát-hành theo những mệnh-giá cố-định. Bitcoin không giống như-vậy. Những lượng bitcoin lớn nhỏ  tuỳ nhu-cầu lưu-hành trong mạng. Mỗi lượng bitcoin là một chuỗi data ghi những giao-dịch nó đã trải qua từ lúc được tạo ra. Khi một lượng bitcoin x được chuyển từ tài-khoản A sang tài-khoản B, thì x được ghi thêm địa-chỉ B, và được ký bằng khoá-bí-mật của A. Tất-cả những lượng bitcoin đều được giữ trong blockchain, là những file trong các máy-tính node.</p>
 <p>Tổng-số tiền có trong tài-khoản là tổng các lượng bitcoin mang địa-chỉ của tài-khoản. Khi một tài-khoản A cần chuyển một lượng bitcoin x sang tài-khoản B mà không có một lượng bitcoin bằng đúng x có sẵn trong tài-khoản A thì nó lấy một hoặc nhiều lượng bitcoin có tổng lớn hơn hoặc bằng x đưa vào giao-dịch, tạo ra một lượng bitcoin x mới mang địa-chỉ B, và một lượng bitcoin mới mang địa-chỉ A chứa phần-dư sau khi trừ x (nếu có).</p>
-<p>Trong mỗi blockchain, có hai cách quản-lý các tài-khoản là custodial và non-custodial (hoặc self-custodial). Không có tổ-chức nào quản-lý các tài-khoản non-custodial, vì-vậy người chủ của tài-khoản phải tự giữ kỹ khoá-bí-mật, nếu lỡ quên khoá-bí-mật thì không có cách gì để dùng được tài-khoản. Tài-khoản custodial do các sàn-giao-dịch tập-trung tạo ra cho khách-hàng sau khi đã KYC—xác-thực-danh-tính-khách-hàng. Trong trường-hợp quên, khách-hàng có-thể hỏi khoá-bí-mật từ sàn-giao-dịch.</p>
+<p>Trong mỗi blockchain, có một trong hai cách quản-lý các tài-khoản là custodial và non-custodial (hoặc self-custodial). Không có tổ-chức nào quản-lý các tài-khoản non-custodial, vì-vậy người chủ của tài-khoản phải tự giữ kỹ khoá-bí-mật, nếu lỡ quên khoá-bí-mật thì không có cách gì để dùng được tài-khoản. Tài-khoản custodial do các sàn-giao-dịch tập-trung tạo ra cho khách-hàng sau khi đã KYC—xác-thực-danh-tính-khách-hàng. Trong trường-hợp quên, khách-hàng có-thể hỏi khoá-bí-mật từ sàn-giao-dịch.</p>
 <h4>Wallet</h4>
 <p>Để chuyển tiền-điện-tử từ tài-khoản của bạn sang tài-khoản của người-khác thì bạn cần phần-mềm wallet. Wallet là file ghi một hay nhiều cặp địa-chỉ và khoá-bí-mật của các tài-khoản. Để mở file wallet thì cần có mật-khẩu của người-chủ, hoặc dùng dấu-vân-tay hay khuôn-mặt để mở file wallet. Phần-mềm wallet sẽ dùng khoá-bí-mật để ký lệnh-chuyển-tiền rồi gửi lệnh đó đến các máy-tính node của hệ-thống blockchain. Các node sẽ cùng nhau kiểm-tra lệnh-chuyển-tiền, nếu lệnh hợp-lệ thì ghi việc-chuyển-tiền vào sổ-cái. Mỗi lần chuyển-tiền phải trả phí—gọi là gas.
 <br>Lệnh-chuyển-tiền có đặc-tính là không-thể-sửa-được. Lệnh-chuyển-tiền cũng không-thể làm giả được nếu không có người-thứ-hai biết khoá-bí-mật của tài-khoản. Bất-kỳ người nào biết được khoá-bí-mật của tài-khoản hoặc mật-khẩu của wallet đều có thể dùng phần-mềm wallet để chuyển tiền sang tài-khoản khác, vì vậy <b>người chủ wallet phải giữ kín các khoá-bí-mật và mật-khẩu của mình</b>.</p>
@@ -245,15 +246,21 @@ div.footer { font-size: 80%; color: red; text-align: center; }
 <p>Ở hệ-thống ngân-hàng thường, tiền nằm trong các file trong hệ-thống máy-tính còn chữ-ký thì nằm trên tay chủ-tài-khoản hoặc OTP nằm trong smartphone do chủ-tài-khoản giữ. Tiền và chữ-ký ở hai nơi khác nhau. Hacker phải biết được địa-chỉ của tiền (tức là số-tài-khoản) và chữ-ký thì mới chuyển tiền đi nơi khác được.
 <br>Trong hệ-thống Bitcoin, hacker chỉ cần khoá-bí-mật là trở thành chủ của số bitcoin trong tài-khoản; hacker sẽ nhanh-chóng chuyển hết bitcoin trong tài-khoản sang chỗ khác trước khi chủ wallet kịp biết.</p>
 
+<h3 id="tradeplatform">Sàn-giao-dịch</h3>
+<p>Sàn-giao-dịch cryptocurrency hoạt-động như một ngân-hàng. Khách-hàng mở tài-khoản trong sàn, nộp cryptocurrency vào, đổi từ tiền này sang tiền khác, mua-bán tiền.</p>
+<p>Tài-khoản tiền trong blockchain phi-tập-trung tương-đương với tiền trong túi của bạn. Bạn hoàn-toàn kiểm-soát tiền đó.
+<br>Tài-khoản tiền trong sàn-giao-dịch tương-đương với tài-khoản tiền của bạn trong ngân-hàng. Bạn phụ-thuộc vào dịch-vụ của ngân-hàng khi dùng tiền đó.</p>
+<p>Do sàn-giao-dịch tương-đương ngân-hàng nên các công-ty dịch-vụ thẻ-thanh-toán quốc-tế như VISA, MasterCard đã liên-kết với các sàn-giao-dịch để phát-hành thẻ debit liên-kết với tài-khoản của khách-hàng. Khi khách-hàng mua-sắm tiền fiat qua thẻ thì sàn sẽ bán cryptocurrency của khách thành tiền fiat trả cho bên-bán-hàng.</p>
+<p><a href="#pi">Pi Network</a> là một loại cryptocurrency hướng tới khả-năng giao-dịch thuận-tiện cho mọi-người nên không cần đến sàn-giao-dịch. Khi dùng Pi để mua-sám, người-mua scan QR code tài-khoản Pi của người-bán để trả Pi trong tích-tắc. Chủ-tài-khoản Pi cũng có-thể dùng sàn-giao-dịch để mua-bán Pi với các loại tiền khác.</p>
+
 <h3 id="trade">Mua-bán Bitcoin như thế nào?</h3>
 <p>Người mua chuyển tiền cho người bán rồi người bán chuyển lượng bitcoin vào địa-chỉ tài-khoản của người mua. Bên mua bitcoin chỉ cần cho biết địa-chỉ dưới dạng dãy chữ-số hoặc một QR code là đủ.
 <br>Nếu bên bán bitcoin gõ dãy chữ-số địa-chỉ sai thì bitcoin sẽ quay trở lại tài-khoản của bên bán trong hầu-hết các trường-hợp, có một xác-suất rất nhỏ là địa-chỉ gõ sai đó có thật thì địa-chỉ đó sẽ nhận được lượng bitcoin thay vì người mua nhận được. Việc này tương-tự như chuyển-khoản giữa hai ngân-hàng khác nhau: hầu-hết các lệnh chuyển sai tên hoặc số-tài-khoản bên nhận đều không được thực-hiện, chỉ có trường-hợp tình-cờ mà tên và số-tài-khoản sai lại trùng với một tài-khoản thật thì tiền sẽ chuyển cho người đó. Người-chuyển-khoản sai có thể nhờ ngân-hàng thu-hồi lại tiền, chuyển sai bitcoin thì không thể thu-hồi lại được. Trong những hệ-thống cryptocurrency không có cơ-chế kiểm-tra địa-chỉ như Ethereum thì gửi tiền gửi sai địa-chỉ luôn-luôn đi mất.</p>
-<p>Việc ghi-nhận bitcoin chuyển địa-chỉ khá chậm cho nên chỉ giao-dịch với đối-tác tin-cậy để tránh mất tiền vì bị lừa.</p>
 <ol>
 <li>Mua-bán trên sàn-giao-dịch
 <br>Mua-bán giữa các tài-khoản đặt trong cùng một sàn-giao-dịch.
 Giao-dịch trên sàn thì tốn phí-giao-dịch, phí chuyển bitcoin vào và ra. Ví dụ mỗi lần rút bitcoin từ sàn Remitano ra đều tốn 0,0005 Bitcoin.</li>
-<li>Mua-bán trực-tiếp giữa những người quen thân</li>
+<li>Mua-bán trực-tiếp. Việc ghi-nhận bitcoin chuyển địa-chỉ khá chậm cho nên chỉ giao-dịch với đối-tác tin-cậy để tránh mất tiền vì bị lừa.</li>
 </ol>
 <p>Mua-bán cách nào cũng tốn phí trả cho miner.
 <br>Khi lượng bitcoin cần chuyển ra khỏi tài-khoản không bằng bất cứ một lượng bitcoin nào có sẵn trong tài-khoản thì việc chuyển bitcoin sẽ có thêm bước tách/nhập các lượng bitcoin có sẵn thành lượng bitcoin cần chuyển. Bước tách/nhập làm tốn công miner hơn nên tốn phí nhiều hơn.</p>
@@ -323,7 +330,7 @@ Giao-dịch trên sàn thì tốn phí-giao-dịch, phí chuyển bitcoin vào v
 <p>Từ đầu-năm 2024, Brave bắt-đầu thử chuyển BAT đến các ví self-custody trong blockchain Solana. Trong <a href="https://brave.com/blog/rewards-solana/" target='_blank'>giai-đoạn thử</a>, Brave chỉ mời một-số người tham-gia.</p>
 
 <h3 id="pi">Pi Network—một loại tiền-điện-tử cho mọi người</h3>
-<p>Pi rất khác các loại tiền-điện-tử còn lại. Pi được xây-dựng để trở-thành phương-tiện trao-đổi hàng-hoá và dịch-vụ toàn-cầu. Khác với hai loại trên, Pi chưa hoàn-thiện nhưng giá-trị của Pi cao hơn.
+<p>Pi rất khác các loại tiền-điện-tử còn lại. Pi được xây-dựng để trở-thành phương-tiện trao-đổi hàng-hoá và dịch-vụ toàn-cầu. Pi đang hoàn-thiện dần hệ-sinh-thái: các nhà-bán-lẻ chấp-nhận Pi, các mobile app chấp-nhận Pi.
 <br>Bạn hãy là <a href="pi-app">người-tiên-phong</a> xây-dựng cộng-đồng và tạo giá-trị cho đồng tiền-điện-tử Pi.</p>
 
 <h2>Tài liệu tham khảo</h2>
