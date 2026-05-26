@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công cụ tính toán RFV - Dự báo tương lai</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #64748b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            width: 100%;
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            color: var(--secondary-color);
+            font-weight: 600;
+            transition: all 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav button.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* Content Container */
+        .container {
+            max-width: 800px;
+            width: 90%;
+            margin: 2rem 0;
+        }
+
+        .page {
+            display: none; /* Ẩn tất cả các trang mặc định */
+            animation: fadeIn 0.5s ease;
+        }
+
+        .page.active {
+            display: block; /* Chỉ hiện trang có class active */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Card Style */
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        button.btn-calculate {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 1rem;
+        }
+
+        button.btn-calculate:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* Result Style */
+        .result-container {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #f0fdf4;
+            border-radius: 8px;
+            border: 1px solid #bbf7d0;
+            display: none; /* Ẩn cho đến khi có kết quả */
+        }
+
+        .result-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #166534;
+        }
+
+        /* Explanation Styles */
+        .explanation-item {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .explanation-item strong {
+            color: var(--primary-color);
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <button id="nav-calc" class="active" onclick="showPage('calc')">Máy tính RFV</button>
+    <button id="nav-info" onclick="showPage('info')">Giải thích ý nghĩa</button>
+</nav>
+
+<div class="container">
+    <!-- TRANG TÍNH TOÁN -->
+    <div id="page-calc" class="page active">
+        <div class="card">
+            <h1>Tính Giá Trị Tương Lai (RFV)</h1>
+            <p>Nhập các thông số bên dưới để dự báo số tiền bạn sẽ có trong tương lai.</p>
+            
+            <div class="form-group">
+                <label for="rir">Tỷ lệ tăng trưởng tiền gửi mỗi kỳ (rir) - %/năm</label>
+                <input type="number" id="rir" step="0.01" placeholder="Ví dụ: 5 (tương ứng 5%)">
+            </div>
+
+            <div class="form-group">
+                <label for="roi">Tỷ suất lợi nhuận đầu tư (roi) - %/năm</label>
+                <input type="number" id="roi" step="0.01" placeholder="Ví dụ: 8 (tương ứng 8%)">
+            </div>
+
+            <div class="form-group">
+                <label for="nper">Số chu kỳ tiết kiệm (nper) - Số năm/tháng</label>
+                <input type="number" id="nper" placeholder="Ví dụ: 10">
+            </div>
+
+            <div class="form-group">
+                <label for="pmt">Số tiền tiết kiệm kỳ đầu tiên (pmt)</label>
+                <input type="number" id="pmt" placeholder="Ví dụ: 1000000">
+            </div>
+
+            <div class="form-group">
+                <label for="pv">Số tiền có sẵn ban đầu (pv)</label>
+                <input type="number" id="pv" placeholder="Ví dụ: 50000000">
+            </div>
+
+            <div class="form-group">
+                <label for="type">Thời điểm gửi tiền (type)</label>
+                <select id="type">
+                    <option value="1">Đầu mỗi kỳ (Pay at beginning)</option>
+                    <option value="0">Cuối mỗi kỳ (Pay at end)</option>
+                </select>
+            </div>
+
+            <button class="btn-calculate" onclick="handleCalculate()">Tính toán kết quả</button>
+
+            <div id="result-box" class="result-container">
+                <div style="font-size: 0.9rem; color: #166534;">Số tiền dự kiến nhận được:</div>
+                <div id="result-display" class="result-value">0</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TRANG GIẢI THÍCH -->
+    <div id="page-info" class="page">
+        <div class="card">
+            <h1>Giải thích hàm RFV</h1>
+            <p>Hàm <strong>RFV</strong> được dùng để tính toán giá trị tương lai của một khoản đầu tư theo hình thức niên kim (annuity) với đặc điểm: <strong>Số tiền gửi vào mỗi kỳ không cố định mà tăng dần theo một tỷ lệ nhất định.</strong></p>
+            
+            <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 1.5rem 0;">
+
+            <div class="explanation-item">
+                <strong>1. Mục đích của phép tính:</strong>
+                <p>Thông thường, các công thức tính giá trị tương lai giả định bạn gửi một số tiền cố định mỗi năm. Tuy nhiên, thực tế thu nhập của bạn thường tăng lên theo thời gian (do thăng tiến hoặc bù lạm phát). Hàm này giúp bạn mô phỏng chính xác hơn việc: "Nếu mỗi năm tôi tiết kiệm nhiều hơn năm trước X%, thì sau N năm tôi có bao nhiêu tiền?"</p>
+            </div>
+
+            <div class="explanation-item">
+                <strong>2. Ý nghĩa các thông số:</strong>
+                <ul>
+                    <li><code>rir</code> (Reserve Increasing Rate): Tỷ lệ tăng trưởng của số tiền gửi. Ví dụ nếu bạn muốn mỗi năm gửi thêm 5% so với năm trước, hãy nhập 5.</li>
+                    <li><code>roi</code> (Return on Investment): Lãi suất kỳ vọng từ việc đầu tư số tiền đó.</li>
+                    <li><code>nper</code> (Number of Periods): Tổng số kỳ hạn (ví dụ 10 năm, 20 năm).</li>
+                    <li><code>pmt</code> (First Amount): Số tiền bạn sẽ gửi vào <b>kỳ đầu tiên</b>.</li>
+                    <li><code>pv</code> (Present Value): Số tiền vốn bạn đã có sẵn trong tài khoản ngay từ thời điểm bắt đầu.</li>
+                    <li><code>type</code>: 
+                        <ul>
+                            <li>Nếu chọn <b>Đầu kỳ</b>: Tiền được gửi vào ngay khi bắt đầu năm, nên sẽ hưởng lãi trọn vẹn năm đó.</li>
+                            <li>Nếu chọn <b>Cuối kỳ</b>: Tiền được gửi vào cuối năm, nên năm đầu tiên sẽ chưa được tính lãi ngay.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="explanation-item">
+                <strong>3. Công thức hoạt động:</strong>
+                <p>Hàm sẽ tính toán tổng của: <br>
+                <em>(Giá trị tương lai của các khoản gửi tăng dần) + (Giá trị tương lai của số vốn ban đầu)</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Chuyển đổi giữa các trang
+    function showPage(pageId) {
+        // Ẩn tất cả các trang
+        document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+        // Bỏ active ở các nút menu
+        document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+
+        // Hiện trang được chọn
+        document.getElementById('page-' + pageId).classList.add('active');
+        // Active nút tương ứng
+        document.getElementById('nav-' + pageId).classList.add('active');
+    }
+
+    // Hàm RFV gốc của bạn (đã điều chỉnh chia cho 100 nếu người dùng nhập dạng %)
+    function rfv(rir, roi, nper, pmt, pv, type) {
+        // Chuyển đổi từ % sang số thập phân
+        let r_rate = rir / 100;
+        let i_rate = roi / 100;
+
+        if (nper < 1 || pmt <= 0) return 0;
+
+        let savingRatio = 0;
+        for (let y = 1; y <= nper; y++) {
+            // Logic: Math.pow(1+rir, y-1) * Math.pow(1+roi, type + nper - y)
+            savingRatio += Math.pow(1 + r_rate, y - 1) * Math.pow(1 + i_rate, type + nper - y);
+        }
+
+        let fv = pmt * savingRatio + pv * Math.pow(1 + i_rate, nper);
+        return fv;
+    }
+
+    // Hàm xử lý khi bấm nút tính toán
+    function handleCalculate() {
+        // Lấy giá trị từ input
+        const rir = parseFloat(document.getElementById('rir').value) || 0;
+        const roi = parseFloat(document.getElementById('roi').value) || 0;
+        const nper = parseInt(document.getElementById('nper').value) || 0;
+        const pmt = parseFloat(document.getElementById('pmt').value) || 0;
+        const pv = parseFloat(document.getElementById('pv').value) || 0;
+        const type = parseInt(document.getElementById('type').value);
+
+        // Tính toán
+        const result = rfv(rir, roi, nper, pmt, pv, type);
+
+        // Hiển thị kết quả
+        const resultBox = document.getElementById('result-box');
+        const resultDisplay = document.getElementById('result-display');
+
+        if (result <= 0 && nper > 0) {
+            resultDisplay.innerText = "Không thể tính toán. Vui lòng kiểm tra lại dữ liệu đầu vào.";
+            resultDisplay.style.color = "red";
+        } else {
+            // Định dạng số tiền theo chuẩn VNĐ (hoặc số lớn)
+            resultDisplay.innerText = result.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+            resultDisplay.style.color = "#166534";
+        }
+        
+        resultBox.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
